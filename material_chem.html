@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o softveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sve o umrežavanju</h1>
+<nav>
+
+
+<!-- Left Side List -->
+<div class="side-list left-list">
+    <button onclick="showSection('chemistry_atoms_molecules')">Atomi i molekule, jednostavne kemijske tvari</button>
+    <button onclick="showSection('chemistry_periodic_table')">Periodni sustav elemenata</button>
+    <button onclick="showSection('chemistry_symbols_formulas')">Pisanje kemijskih simbola i formula</button>
+    <button onclick="showSection('chemistry_molecules_ionic')">Razlikovanje molekula i ionskih spojeva</button>
+    <button onclick="showSection('chemistry_reaction_types')">Osnovni tipovi kemijskih reakcija</button>
+    <button onclick="showSection('chemistry_law_mass_conservation')">Zakon očuvanja mase</button>
+    <button onclick="showSection('chemistry_properties')">Fizikalna i kemijska svojstva tvari</button>
+    <button onclick="showSection('chemistry_acids_bases_salts')">Razlikovanje kiselina, baza i soli</button>
+    <button onclick="showSection('chemistry_ph_balance')">Osnove pH skale i kiselinsko-bazna ravnoteža</button>
+    <button onclick="showSection('chemistry_reaction_laws')">Zakoni kemijskih reakcija</button>
+    <button onclick="showSection('chemistry_energy_changes')">Energetske promjene u kemijskim reakcijama</button>
+    <button onclick="showSection('chemistry_compounds_types')">Kemijski spojevi i njihove vrste</button>
+    <button onclick="showSection('chemistry_natural_processes')">Osnovni kemijski procesi u prirodi</button>
+</div>
+
+<!-- Right Side List -->
+<div class="side-list right-list">
+    <button onclick="showSection('chemistry_atoms_molecules')">Atomi i molekule, jednostavne kemijske tvari</button>
+    <button onclick="showSection('chemistry_periodic_table')">Periodni sustav elemenata</button>
+    <button onclick="showSection('chemistry_symbols_formulas')">Pisanje kemijskih simbola i formula</button>
+    <button onclick="showSection('chemistry_molecules_ionic')">Razlikovanje molekula i ionskih spojeva</button>
+    <button onclick="showSection('chemistry_reaction_types')">Osnovni tipovi kemijskih reakcija</button>
+    <button onclick="showSection('chemistry_law_mass_conservation')">Zakon očuvanja mase</button>
+    <button onclick="showSection('chemistry_properties')">Fizikalna i kemijska svojstva tvari</button>
+    <button onclick="showSection('chemistry_acids_bases_salts')">Razlikovanje kiselina, baza i soli</button>
+    <button onclick="showSection('chemistry_ph_balance')">Osnove pH skale i kiselinsko-bazna ravnoteža</button>
+    <button onclick="showSection('chemistry_reaction_laws')">Zakoni kemijskih reakcija</button>
+    <button onclick="showSection('chemistry_energy_changes')">Energetske promjene u kemijskim reakcijama</button>
+    <button onclick="showSection('chemistry_compounds_types')">Kemijski spojevi i njihove vrste</button>
+    <button onclick="showSection('chemistry_natural_processes')">Osnovni kemijski procesi u prirodi</button>
+
+</nav>
+<!-- 1️⃣ Atomi i molekule, jednostavne kemijske tvari -->
+<div id="chemistry_atoms_molecules" class="section">
+  <h2>Atomi i molekule, jednostavne kemijske tvari</h2>
+  <p>Atom je osnovna jedinica kemijskog elementa i najmanja čestica tvari koja zadržava kemijska svojstva tog elementa. Svaki atom sastoji se od jezgre i elektronskog omotača. U jezgri se nalaze protoni (pozitivno nabijene čestice) i neutroni (neutralne čestice), dok elektroni (negativno nabijene čestice) kruže oko jezgre po različitim energetskim razinama. Broj protona u jezgri određuje o kojem se elementu radi, pa se prema njemu elementima dodjeljuje atomski broj.</p>
+  <p>Molekule nastaju kada se dva ili više atoma povežu kemijskim vezama. Te veze mogu biti kovalentne (dijeljenje elektrona), ionske (prijenos elektrona s jednog atoma na drugi) ili metalne (delokalizirani elektroni koji se slobodno kreću kroz metalnu rešetku). Molekule mogu biti jednostavne (npr. O2 – kisik, N2 – dušik) ili složene (npr. H2O – voda, CO2 – ugljikov dioksid). Jednostavne kemijske tvari sastoje se od istih atoma ili molekula i ne mogu se dalje razlagati na jednostavnije kemijskim putem.</p>
+  <ul>
+    <li>Atomi istog elementa imaju isti broj protona, ali se mogu razlikovati po broju neutrona – takve se varijante nazivaju izotopi.</li>
+    <li>Molekule mogu sadržavati dva atoma (dvoatomne molekule poput O2) ili više njih (polimeri, bjelančevine, složeni organski spojevi).</li>
+    <li>Kemijske veze nastaju zbog tendencije atoma da postignu stabilnu elektronsku konfiguraciju (pravilo okteta).</li>
+    <li>Primjeri jednostavnih tvari uključuju elementarni kisik, dušik, sumpor, fosfor i plemenite plinove poput helija i neona.</li>
+    <li>Osnovno razumijevanje atoma i molekula čini temelj ne samo za kemiju, već i za biologiju, fiziku i materijalne znanosti.</li>
+  </ul>
+  <p><strong>Povijesna napomena:</strong> Pojam atoma potječe još iz antičke Grčke, gdje su filozofi poput Demokrita tvrdili da postoji najmanja, nedjeljiva čestica. Tek u 19. i 20. stoljeću razvoj kemije i fizike potvrdio je postojanje atoma i otkrio njihovu strukturu.</p>
+  <p><strong>Praktična primjena:</strong> Znanje o atomima i molekulama koristi se u farmaciji (formuliranje lijekova), industriji (proizvodnja novih materijala), medicini (radioterapija i dijagnostika) te svakodnevnom životu (razumijevanje goriva, hrane i zraka koji udišemo).</p>
+</div>
+
+<!-- 2️⃣ Periodni sustav elemenata -->
+<div id="chemistry_periodic_table" class="section">
+  <h2>Periodni sustav elemenata</h2>
+  <p>Periodni sustav elemenata predstavlja sistematski prikaz svih poznatih kemijskih elemenata poredanih prema rastućem atomskom broju. Elementi su organizirani u periode (vodoravne redove) i grupe (okomite stupce) tako da elementi u istoj grupi imaju slična kemijska svojstva. Sustav je prvi put izradio Dmitrij Mendeljejev 1869. godine, a njegova najveća prednost bila je predviđanje svojstava tada još neotkrivenih elemenata.</p>
+  <p>Periodni sustav omogućuje uvid u mnoge važne kemijske zakonitosti: elektronsku konfiguraciju, veličinu atoma, elektronegativnost i kemijsku reaktivnost. Na primjer, u grupi alkalijskih metala svi elementi imaju jedan valentni elektron i vrlo su reaktivni, dok su plemeniti plinovi u zadnjoj grupi gotovo potpuno nereaktivni jer imaju stabilnu elektronsku konfiguraciju.</p>
+  <ul>
+    <li>Periode označavaju broj energetskih razina (ljuski) koje atom ima. Npr. elementi druge periode imaju dva elektronska sloja.</li>
+    <li>Grupe (stupci) otkrivaju koliko valentnih elektrona element ima, što određuje njegovu kemijsku reaktivnost.</li>
+    <li>Trendovi u periodnom sustavu uključuju smanjenje atomskog radijusa s lijeva na desno i povećanje od vrha prema dnu.</li>
+    <li>Elektronegativnost (sposobnost privlačenja elektrona) raste s lijeva na desno u periodi, a opada prema dolje u grupi.</li>
+    <li>Periodni sustav obuhvaća metale, nemetale, polumetale i prijelazne elemente.</li>
+  </ul>
+  <p><strong>Primjeri iz života:</strong> Halogeni elementi (fluor, klor, brom, jod) često se koriste kao dezinficijensi i u medicini, dok su plemeniti plinovi poput helija i argona važni u industriji svjetiljki i rashladnih sustava.</p>
+  <p><strong>Praktična primjena:</strong> Periodni sustav je nezamjenjiv alat za kemičare, omogućuje predviđanje reakcija i svojstava nepoznatih spojeva te se koristi u istraživanju, obrazovanju i industriji.</p>
+</div>
+
+<!-- 3️⃣ Pisanje kemijskih simbola i formula -->
+<div id="chemistry_symbols_formulas" class="section">
+  <h2>Pisanje kemijskih simbola i formula</h2>
+  <p>Kemijski simboli i formule čine osnovni jezik kemije. Svaki element ima jedinstveni simbol koji se sastoji od jednog ili dva slova (prvo uvijek veliko, drugo malo). Na primjer, H označava vodik, O označava kisik, a Na natrij. Simboli su univerzalni i koriste se u cijelom svijetu, bez obzira na jezik.</p>
+  <p>Kemijske formule opisuju sastav molekula ili ionskih spojeva. Indeksi u formuli (npr. H<sub>2</sub>O) pokazuju broj atoma pojedinog elementa u molekuli. Ovaj način zapisivanja omogućuje jednostavno razumijevanje složenih reakcija i odnosa među tvarima.</p>
+  <ul>
+    <li>Kemijski simboli služe za brzo prepoznavanje i bilježenje elemenata.</li>
+    <li>Molekularne formule prikazuju stvarni broj atoma u molekuli (npr. C6H12O6 za glukozu).</li>
+    <li>Empirijske formule pokazuju najjednostavniji omjer atoma u spoju (npr. CH2O za glukozu).</li>
+    <li>Strukturne formule otkrivaju način povezivanja atoma, što je ključno u organskoj kemiji.</li>
+    <li>Balansirane jednadžbe moraju poštovati zakon očuvanja mase – broj atoma prije i poslije reakcije mora biti isti.</li>
+  </ul>
+  <p><strong>Praktična primjena:</strong> U industriji i laboratorijima pravilno zapisivanje formula važno je za pripremu otopina, izračunavanje količina reagensa i planiranje sinteze spojeva. Primjerice, farmaceutska industrija se oslanja na točne kemijske formule prilikom izrade lijekova.</p>
+</div>
+
+<!-- 4️⃣ Razlikovanje molekula i ionskih spojeva -->
+<div id="chemistry_molecules_ionic" class="section">
+  <h2>Razlikovanje molekula i ionskih spojeva</h2>
+  <p>Molekule su čestice sastavljene od dva ili više atoma povezanih kovalentnim vezama, dok su ionski spojevi građeni od pozitivnih (kationa) i negativnih iona (aniona) povezanih elektrostatskim privlačenjem. Razlikovanje između molekularnih i ionskih spojeva ključno je za razumijevanje njihovih svojstava i primjena.</p>
+  <ul>
+    <li>Molekule se obično sastoje od nemetalnih elemenata, dok ionski spojevi nastaju kombinacijom metala i nemetala.</li>
+    <li>Molekularne tvari često su plinovi, tekućine ili niskotaljivi krutine, dok su ionski spojevi obično krute kristalne tvari s visokim talištem.</li>
+    <li>Molekule u čistom obliku ne provode električnu struju, dok otopine ionskih spojeva (npr. kuhinjska sol u vodi) provode struju jer ioni postaju pokretni.</li>
+    <li>Primjeri molekula: H2O (voda), CO2 (ugljikov dioksid), NH3 (amonijak). Primjeri ionskih spojeva: NaCl (kuhinjska sol), CaCO3 (vapnenac), KNO3 (salitra).</li>
+    <li>Ionski spojevi igraju važnu ulogu u elektrokemiji, dok su molekule temelj organskih i bioloških procesa.</li>
+  </ul>
+  <p><strong>Praktična primjena:</strong> Razlikovanje molekula i ionskih spojeva važno je u farmaciji (izbor otapala i formulacija lijekova), u industriji (proizvodnja gnojiva, deterdženata, građevinskih materijala) i u biologiji (razumijevanje prijenosa iona kroz membrane).</p>
+</div>
+
+<!-- 5️⃣ Osnovni tipovi kemijskih reakcija -->
+<div id="chemistry_reaction_types" class="section">
+  <h2>Osnovni tipovi kemijskih reakcija</h2>
+  <p>Kemijske reakcije predstavljaju procese u kojima se postojeće tvari (reaktanti) pretvaraju u nove tvari (produkte). Tijekom reakcije dolazi do promjene u rasporedu elektrona i kemijskih veza. Razumijevanje osnovnih tipova reakcija ključno je za predviđanje produkata i kontrolu procesa u laboratoriju i industriji.</p>
+  <ul>
+    <li><strong>Sinteza (spajanje):</strong> dvije ili više jednostavnih tvari spajaju se u složeniju, npr. 2H2 + O2 → 2H2O.</li>
+    <li><strong>Analiza (raspadanje):</strong> složena tvar razgrađuje se na jednostavnije, npr. 2H2O2 → 2H2O + O2.</li>
+    <li><strong>Jednostavna zamjena:</strong> jedan element zamjenjuje drugi u spoju, npr. Zn + 2HCl → ZnCl2 + H2.</li>
+    <li><strong>Dvostruka zamjena:</strong> dva spoja međusobno razmjenjuju ione, npr. AgNO3 + NaCl → AgCl + NaNO3.</li>
+    <li><strong>Izgaranje:</strong> reakcija s kisikom koja oslobađa energiju u obliku topline i svjetlosti, npr. CH4 + 2O2 → CO2 + 2H2O.</li>
+  </ul>
+  <p><strong>Praktična primjena:</strong> Razumijevanje tipova reakcija koristi se u industriji (proizvodnja amonijaka, plastike, goriva), medicini (metabolizam, reakcije u tijelu), kao i u svakodnevnom životu (kuhanje, sagorijevanje goriva, čišćenje).</p>
+</div>
+
+<!-- 6️⃣ Zakon očuvanja mase -->
+<div id="chemistry_law_mass_conservation" class="section">
+  <h2>Zakon očuvanja mase</h2>
+  <p>Zakon očuvanja mase jedan je od temeljnih prirodnih zakona u kemiji i fizici. Antoine Lavoisier ga je prvi jasno formulirao u 18. stoljeću, tvrdeći da masa tvari koja ulazi u reakciju mora biti jednaka masi tvari koja iz reakcije izlazi. Drugim riječima, tijekom kemijske reakcije atomi se ne stvaraju niti nestaju, već se samo preraspoređuju.</p>
+  <ul>
+    <li>Svaka uravnotežena kemijska jednadžba odražava zakon očuvanja mase.</li>
+    <li>Ukupan broj atoma svake vrste jednak je prije i poslije reakcije.</li>
+    <li>Eksperimenti pokazuju da masa posude s tvarima ostaje ista prije i poslije reakcije ako nema gubitaka plinova ili tvari.</li>
+    <li>Zakon je ključan za razvoj stehiometrije i precizno izračunavanje količina tvari u kemijskim procesima.</li>
+  </ul>
+  <p><strong>Praktična primjena:</strong> U kemijskoj industriji i farmaciji ovaj zakon omogućuje planiranje procesa s minimalnim otpadom, kontrolu proizvodnje i izračunavanje potrebnih količina reagensa za postizanje optimalnih rezultata.</p>
+</div>
+
+<!-- 7️⃣ Fizikalna i kemijska svojstva tvari -->
+<div id="chemistry_properties" class="section">
+  <h2>Fizikalna i kemijska svojstva tvari</h2>
+  <p>Svojstva tvari možemo podijeliti na fizikalna i kemijska. Fizikalna svojstva mogu se promatrati ili mjeriti bez promjene kemijskog sastava tvari, dok kemijska svojstva opisuju način na koji se tvar ponaša tijekom kemijskih reakcija.</p>
+  <ul>
+    <li><strong>Fizikalna svojstva:</strong> gustoća, tvrdoća, boja, miris, točka taljenja i vrenja, topljivost u vodi, električna i toplinska vodljivost, agregatno stanje.</li>
+    <li><strong>Kemijska svojstva:</strong> reaktivnost s kisikom (izgaranje), kiselinama, bazama i drugim tvarima; sposobnost oksidacije ili redukcije.</li>
+    <li>Primjeri: voda ima gustoću od 1 g/cm³, vrelište od 100 °C i kemijsko svojstvo reagiranja s metalima poput natrija uz oslobađanje vodika.</li>
+    <li>Drugi primjer: željezo je tvrdo i provodi električnu struju (fizikalna svojstva), ali može zahrđati u prisutnosti vlage i kisika (kemijsko svojstvo).</li>
+  </ul>
+  <p><strong>Praktična primjena:</strong> Razlikovanje fizikalnih i kemijskih svojstava važno je u svakodnevnom životu (odabir materijala, kuhanje, konzerviranje hrane), industriji (izbor materijala za gradnju, transport, elektroniku) i znanstvenim istraživanjima.</p>
+</div>
+
+<!-- Sekcije za kemiju (8–13) -->
+<div id="chemistry_acids_bases_salts" class="section" >
+  <h2>Razlikovanje kiselina, baza i soli</h2>
+  <p>
+    Kiseline, baze i soli predstavljaju temeljne skupine kemijskih spojeva koje imaju važno mjesto u svakodnevnom životu i industriji.
+    Kiseline su tvari koje u vodenoj otopini otpuštaju ione vodika (H⁺). One imaju kiseli okus, korozivne su i reagiraju s metalima oslobađajući
+    vodik, a s bazama neutralizacijom stvaraju soli i vodu. Primjeri su klorovodična kiselina (HCl) i sumporna kiselina (H₂SO₄).
+  </p>
+  <p>
+    Baze su tvari koje u vodi otpuštaju hidroksidne ione (OH⁻). Gorkog su okusa, klizave na dodir i neutraliziraju kiseline. Primjeri su natrijev
+    hidroksid (NaOH) i kalcijev hidroksid (Ca(OH)₂).
+  </p>
+  <p>
+    Soli nastaju neutralizacijom kiseline i baze ili reakcijama metala s kiselinama. One se sastoje od kationa metala i aniona kiseline.
+    NaCl (kuhinjska sol) tipičan je primjer. Razlikovanje ovih skupina temelji se na njihovim svojstvima, reakcijama i pH vrijednostima.
+  </p>
+</div>
+
+<div id="chemistry_ph_balance" class="section" >
+  <h2>Osnove pH skale i kiselinsko-bazna ravnoteža</h2>
+  <p>
+    pH skala je mjera kiselosti ili bazičnosti otopine i proteže se od 0 do 14. Vrijednosti manje od 7 označavaju kiselu otopinu, vrijednost 7 neutralnu,
+    a vrijednosti veće od 7 baznu. Skala je logaritamska, što znači da je svaka promjena za jednu jedinicu deseterostruka u koncentraciji iona H⁺.
+  </p>
+  <p>
+    Kiselinsko-bazna ravnoteža ključna je za održavanje stabilnih uvjeta u biološkim sustavima i industrijskim procesima. U ljudskom tijelu, primjerice,
+    pH krvi održava se između 7,35 i 7,45. Održavanje ravnoteže postiže se pufernim otopinama koje ublažavaju nagle promjene pH vrijednosti.
+  </p>
+  <p>
+    Razumijevanje pH i ravnoteže od velike je važnosti za kemiju okoliša, poljoprivredu, medicinu i prehrambenu industriju.
+  </p>
+</div>
+
+<div id="chemistry_reaction_laws" class="section" >
+  <h2>Zakoni kemijskih reakcija</h2>
+  <p>
+    Kemijske reakcije odvijaju se prema određenim zakonima koji osiguravaju predvidljivost i pravilnost u kemiji. Najvažniji zakoni uključuju:
+  </p>
+  <ul>
+    <li><strong>Zakon očuvanja mase:</strong> masa reaktanata jednaka je masi produkata.</li>
+    <li><strong>Zakon stalnih omjera:</strong> kemijski spojevi uvijek sadrže elemente u stalnom masenom omjeru, neovisno o načinu dobivanja.</li>
+    <li><strong>Zakon višestrukih omjera:</strong> kada dva elementa tvore više spojeva, omjeri masa jednog elementa koji se veže na istu masu drugog izraženi su kao mali cijeli brojevi.</li>
+    <li><strong>Avogadrov zakon:</strong> jednaki volumeni plinova pri istim uvjetima sadrže jednak broj čestica.</li>
+  </ul>
+  <p>
+    Ovi zakoni čine temelj razumijevanja reakcija, određivanja formula i izvođenja kemijskih jednadžbi.
+  </p>
+</div>
+
+<div id="chemistry_energy_changes" class="section" >
+  <h2>Energetske promjene u kemijskim reakcijama</h2>
+  <p>
+    Svaka kemijska reakcija uključuje promjene energije. U nekim reakcijama energija se oslobađa, dok je u drugima potrebna za odvijanje procesa.
+  </p>
+  <p>
+    <strong>Egzotermne reakcije:</strong> oslobađaju energiju, najčešće u obliku topline ili svjetlosti (npr. izgaranje goriva, neutralizacija kiseline i baze).  
+    <strong>Endotermne reakcije:</strong> apsorbiraju energiju iz okoline (npr. fotosinteza, razgradnja kalcijevog karbonata pri zagrijavanju).
+  </p>
+  <p>
+    Promjene energije prikazuju se pomoću energetskih dijagrama koji pokazuju razliku između energije reaktanata i produkata. Proučavanje ovih promjena važno je za razumijevanje termodinamike,
+    učinkovitosti procesa i razvoja novih tehnologija.
+  </p>
+</div>
+
+<div id="chemistry_compounds_types" class="section" >
+  <h2>Kemijski spojevi i njihove vrste</h2>
+  <p>
+    Kemijski spojevi nastaju povezivanjem atoma različitih elemenata u stalnim omjerima. Mogu se podijeliti prema vrsti kemijske veze:
+  </p>
+  <ul>
+    <li><strong>Ionski spojevi:</strong> nastaju prijenosom elektrona između atoma (npr. NaCl). Često imaju visoka tališta, topljivi su u vodi i provode električnu struju kada su otopljeni ili rastaljeni.</li>
+    <li><strong>Kovalentni spojevi:</strong> nastaju dijeljenjem elektronskih parova (npr. H₂O, CO₂). Mogu biti jednostavni molekularni ili složeniji mrežasti spojevi.</li>
+    <li><strong>Kovinski spojevi:</strong> karakterizira ih "morski model" slobodnih elektrona, zbog čega metali provode toplinu i električnu energiju te su savitljivi.</li>
+  </ul>
+  <p>
+    Razumijevanje vrsta spojeva pomaže u predviđanju svojstava, primjena i ponašanja tvari u različitim uvjetima.
+  </p>
+</div>
+
+<div id="chemistry_natural_processes" class="section" >
+  <h2>Osnovni kemijski procesi u prirodi</h2>
+  <p>
+    Kemija prirode objašnjava brojne procese bez kojih život ne bi mogao postojati. Fotosinteza je jedan od najvažnijih procesa u kojem biljke koriste sunčevu energiju za
+    pretvaranje ugljikova dioksida i vode u glukozu i kisik. Disanje je proces suprotan fotosintezi, gdje živa bića razgrađuju glukozu radi dobivanja energije.
+  </p>
+  <p>
+    Drugi važni procesi uključuju koroziju metala, razgradnju organskih tvari, ciklus vode i dušika, te kemijske promjene u tlu koje omogućuju rast biljaka.
+  </p>
+  <p>
+    Razumijevanje ovih procesa ključno je za ekologiju, poljoprivredu i očuvanje okoliša.
+  </p>
+</div>
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

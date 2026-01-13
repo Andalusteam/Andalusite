@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stres</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+<nav>
+
+
+<!-- Left Side List -->
+<button onclick="showSection('sta_je_stres')">Šta je stres i zašto nastaje?</button>
+<button onclick="showSection('uzroci_stresa')">Koji su najčešći uzroci stresa u svakodnevnom životu?</button>
+<button onclick="showSection('stres_uticaj_telo')">Kako stres utiče na telo i zdravlje?</button>
+<button onclick="showSection('prvi_znaci_stres')">Koji su prvi znaci da sam pod stresom?</button>
+<button onclick="showSection('stres_anksioznost')">Kako razlikovati stres od anksioznosti?</button>
+<button onclick="showSection('dobar_stres')">Da li je sav stres štetan ili postoji i „dobar“ stres?</button>
+<button onclick="showSection('razlike_u_podnosenju')">Zašto neki ljudi lakše podnose stres od drugih?</button>
+<button onclick="showSection('stres_spavanje')">Kako stres utiče na spavanje?</button>
+<button onclick="showSection('stres_glavobolje')">Zašto se javljaju glavobolje i bolovi pod stresom?</button>
+<button onclick="showSection('stres_probava')">Da li stres može izazvati probleme sa probavom?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('tehnike_smanjenje_stres')">Koje su efikasne tehnike za smanjenje stresa?</button>
+<button onclick="showSection('disanje_protiv_stresa')">Kako pravilno disanje pomaže protiv stresa?</button>
+<button onclick="showSection('fizicka_aktivnost')">Da li fizička aktivnost smanjuje stres?</button>
+<button onclick="showSection('ishrana_i_stres')">Kako ishrana utiče na nivo stresa?</button>
+<button onclick="showSection('kafa_alkohol_stres')">Da li kafa i alkohol povećavaju stres?</button>
+<button onclick="showSection('opustanje_pre_spavanja')">Kako se opustiti pre spavanja?</button>
+
+<button onclick="showSection('organizacija_vremena')">Kako organizacija vremena utiče na stres?</button>
+<button onclick="showSection('stres_posao')">Šta raditi kada me stres preplavi na poslu?</button>
+<button onclick="showSection('stres_skola')">Kako smanjiti stres u školi ili na fakultetu?</button>
+
+
+</nav>
+
+<!-- 1. Šta je stres i zašto nastaje -->
+<div id="sta_je_stres" class="section">
+  <h2>Šta je stres i zašto nastaje?</h2>
+  <p>Stres je prirodna reakcija tijela i uma na zahtjeve, izazove ili prijetnje iz okoline. To nije nužno negativno – tijelo proizvodi stresne hormone (kortizol, adrenalin) kako bi se pripremilo za akciju, poznatu kao „bori se ili bježi“. Problem nastaje kada stres postane hroničan ili prejak, što može štetiti zdravlju.</p>
+
+  <h3>Kako stres nastaje</h3>
+  <ul>
+    <li> <strong>Mentalna percepcija:</strong> Mozak procjenjuje situaciju kao opasnu, zahtjevnu ili nepredvidivu.</li>
+    <li> <strong>Fizička reakcija:</strong> Povećava se brzina otkucaja srca, krvni pritisak, dolazi do napetosti mišića i ubrzanog disanja.</li>
+    <li> <strong>Prilagodba:</strong> Kratkoročni stres može poboljšati fokus, motivaciju i sposobnost rješavanja problema.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>📚 Ispitni rokovi mogu uzrokovati privremeni stres koji povećava koncentraciju.</li>
+    <li>💼 Radni zadaci s kratkim rokovima aktiviraju tijelo da radi efikasnije.</li>
+    <li> Sportske aktivnosti ili fizički izazovi aktiviraju isti stresni mehanizam, ali na koristan način.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prepoznavanje prirode stresa pomaže u njegovom upravljanju i smanjenju negativnog utjecaja na tijelo i psihu.
+  </div>
+</div>
+
+<!-- 2. Koji su najčešći uzroci stresa u svakodnevnom životu -->
+<div id="uzroci_stresa" class="section">
+  <h2>Koji su najčešći uzroci stresa u svakodnevnom životu?</h2>
+  <p>Stres može nastati zbog raznih faktora, a najčešće je kombinacija više njih. U svakodnevnom životu ljudi često doživljavaju stres zbog posla, škole, ličnih odnosa, financija i promjena u životnom okruženju.</p>
+
+  <h3>Najčešći uzroci stresa</h3>
+  <ul>
+    <li>💼 <strong>Posao i škola:</strong> Rokovi, testovi, zahtjevi nadređenih ili profesorā, velike odgovornosti i promjene zadataka.</li>
+    <li> <strong>Porodica i odnosi:</strong> Sukobi s partnerom, roditeljima, djecom ili prijateljima, osjećaj nedostatka podrške i neriješeni konflikti.</li>
+    <li>💰 <strong>Finansije:</strong> Dugovi, nesigurnost prihoda ili briga o troškovima života mogu izazvati dugotrajan stres.</li>
+    <li> <strong>Životne promjene:</strong> Selidba, smjena škole, početak novog posla, bolest ili gubitak voljene osobe.</li>
+    <li> <strong>Digitalni stres:</strong> Konstantna dostupnost putem telefona i e-maila, socijalni mediji i preopterećenost informacijama.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>📅 Osjećaj preopterećenosti zbog kombinacije posla i privatnih obaveza.</li>
+    <li>🧾 Briga oko financijskih problema i nepredviđenih troškova.</li>
+    <li>🏫 Dijete koje ima puno školskih obaveza i dodatne aktivnosti može osjećati kronični stres.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Identificiranje izvora stresa prvi je korak u njegovom smanjenju i učinkovitom upravljanju.
+  </div>
+</div>
+
+<!-- 3. Kako stres utiče na telo i zdravlje -->
+<div id="stres_uticaj_telo" class="section">
+  <h2>Kako stres utiče na telo i zdravlje?</h2>
+  <p>Hronični stres može značajno narušiti fizičko i mentalno zdravlje. Kratkoročni stres povećava energiju i fokus, dok dugotrajni stres oslabljuje imuni sistem, povećava rizik od srčanih bolesti, depresije, anksioznosti i problema sa spavanjem.</p>
+
+  <h3>Fizički simptomi</h3>
+  <ul>
+    <li> Povećan broj otkucaja srca i krvni pritisak.</li>
+    <li> Glavobolje, napetost mišića, bolovi u leđima i vratu.</li>
+    <li> Problemi sa spavanjem i umor.</li>
+    <li>🍽️ Probavne smetnje, nadutost, mučnina ili poremećaji apetita.</li>
+  </ul>
+
+  <h3>Psihički simptomi</h3>
+  <ul>
+    <li> Anksioznost, zabrinutost i osjećaj preopterećenosti.</li>
+    <li> Depresivno raspoloženje ili gubitak interesa za aktivnosti.</li>
+    <li> Razdražljivost, ljutnja ili impulzivno ponašanje.</li>
+    <li>🧩 Poteškoće u koncentraciji i donošenju odluka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prepoznavanje simptoma stresa omogućava pravovremeno reagiranje i sprječavanje negativnih posljedica na zdravlje.
+  </div>
+</div>
+
+<!-- 4. Koji su prvi znaci da sam pod stresom -->
+<div id="prvi_znaci_stres" class="section">
+  <h2>Koji su prvi znaci da sam pod stresom?</h2>
+  <p>Stres se često javlja postupno, a tijelo šalje signale da je pod pritiskom. Prepoznavanje ranih znakova može pomoći u brzom djelovanju prije nego što stres postane ozbiljan problem.</p>
+
+  <h3>Fizički znaci</h3>
+  <ul>
+    <li> Napetost u mišićima, posebno vratu i ramenima.</li>
+    <li> Znojenje, ubrzan rad srca, osjećaj napetosti u prsima.</li>
+    <li> Umor, nesanica ili poremećaj spavanja.</li>
+    <li>🍽️ Promjene u apetitu, nadutost ili probavni problemi.</li>
+  </ul>
+
+  <h3>Psihički i emocionalni znaci</h3>
+  <ul>
+    <li> Briga, zabrinutost, osjećaj preopterećenosti.</li>
+    <li> Ljutnja, razdražljivost, impulzivno ponašanje.</li>
+    <li> Teškoće u koncentraciji, pamćenju i donošenju odluka.</li>
+    <li> Povećana napetost i osjećaj anksioznosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kada prepoznate rane znakove stresa, pokušajte napraviti kratku pauzu, disati duboko i reorganizirati obaveze.
+  </div>
+</div>
+
+<!-- 5. Kako razlikovati stres od anksioznosti -->
+<div id="stres_anksioznost" class="section">
+  <h2>Kako razlikovati stres od anksioznosti?</h2>
+  <p>I stres i anksioznost mogu imati slične simptome, ali postoje bitne razlike. Stres je obično uzrokovan konkretnim događajem ili pritiskom, dok anksioznost može biti prisutna i bez jasnog uzroka i često je dugotrajnija.</p>
+
+  <h3>Karakteristike stresa</h3>
+  <ul>
+    <li>🕒 Obično je povezan s konkretnim događajem ili zadatkom.</li>
+    <li>⚡ Fizički simptomi nestaju nakon što se stresor ukloni.</li>
+    <li> Fokusiran na rješavanje problema ili izvršavanje zadatka.</li>
+  </ul>
+
+  <h3>Karakteristike anksioznosti</h3>
+  <ul>
+    <li> Osjećaj straha ili zabrinutosti koji traje dulje vremena.</li>
+    <li> Može se pojaviti i bez jasnog uzroka.</li>
+    <li> Često ometa svakodnevni život i sposobnost koncentracije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako anksioznost traje duže vrijeme ili ometa funkcionalnost, korisno je potražiti stručnu pomoć.
+  </div>
+</div>
+
+<!-- 6. Da li je sav stres štetan ili postoji i „dobar“ stres -->
+<div id="dobar_stres" class="section">
+  <h2>Da li je sav stres štetan ili postoji i „dobar“ stres?</h2>
+  <p>Stres nije uvijek negativan. Postoji tzv. eustres ili „dobar stres“ koji motivira, poboljšava koncentraciju i priprema nas za izazove. Problem nastaje kada stres postane prejak ili hroničan, što može imati štetne posljedice.</p>
+
+  <h3>Dobar stres (eustres)</h3>
+  <ul>
+    <li>🎯 Povećava fokus i motivaciju za zadatke.</li>
+    <li> Pomaže u pripremi za izazove, kao što su ispiti, natjecanja ili javni nastupi.</li>
+    <li>⏱️ Obično je kratkotrajan i ima jasan cilj.</li>
+  </ul>
+
+  <h3>Štetni stres (distres)</h3>
+  <ul>
+    <li> Dugotrajan ili hroničan stres.</li>
+    <li> Negativno utječe na raspoloženje, koncentraciju i zdravlje.</li>
+    <li> Može uzrokovati probleme sa srcem, imunološkim sistemom i mentalnim zdravljem.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Cilj je prepoznati kada stres prelazi granicu i primijeniti tehnike upravljanja stresom za očuvanje zdravlja.
+  </div>
+</div>
+
+<!-- 7. Zašto neki ljudi lakše podnose stres od drugih -->
+<div id="razlike_u_podnosenju" class="section">
+  <h2>Zašto neki ljudi lakše podnose stres od drugih?</h2>
+  <p>Podnošenje stresa ovisi o genetskim predispozicijama, iskustvima iz djetinjstva, ličnosti, socijalnoj podršci i strategijama suočavanja. Ljudi koji razviju emocionalnu otpornost lakše se nose s izazovima.</p>
+
+  <h3>Faktori otpornosti</h3>
+  <ul>
+    <li> <strong>Psihološka otpornost:</strong> Sposobnost fleksibilnog razmišljanja i prilagodbe.</li>
+    <li> <strong>Socijalna podrška:</strong> Imati prijatelje, porodicu ili mentore koji pružaju emocionalnu podršku.</li>
+    <li> <strong>Zdrav način života:</strong> Redovan san, ishrana, fizička aktivnost i opuštanje.</li>
+    <li>📚 <strong>Strategije suočavanja:</strong> Planiranje, postavljanje prioriteta i svjesna kontrola emocija.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razvijanjem otpornosti i učinkovitih strategija suočavanja svatko može poboljšati sposobnost podnošenja stresa.
+  </div>
+</div>
+
+<!-- 8. Kako stres utiče na spavanje -->
+<div id="stres_spavanje" class="section">
+  <h2>Kako stres utiče na spavanje?</h2>
+  <p>Stres može otežati uspavljivanje, uzrokovati nemiran san ili buđenje usred noći. Hronični stres smanjuje kvalitet sna, što dodatno povećava umor i pogoršava sposobnost koncentracije.</p>
+
+  <h3>Na što treba obratiti pažnju</h3>
+  <ul>
+    <li><strong>Teškoće sa uspavljivanjem:</strong> Misli o problemima i zadacima otežavaju opuštanje.</li>
+    <li> <strong>Nesanica i nemiran san:</strong> Česta buđenja i plitak san smanjuju oporavak tijela.</li>
+    <li> <strong>Ciklus kortizola:</strong> Hronični stres povećava kortizol, što remeti prirodni ritam spavanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Veče pred spavanje provodite u opuštajućim aktivnostima: čitanje, meditacija ili lagana šetnja.
+  </div>
+</div>
+
+<!-- 9. Zašto se javljaju glavobolje i bolovi pod stresom -->
+<div id="stres_glavobolje" class="section">
+  <h2>Zašto se javljaju glavobolje i bolovi pod stresom?</h2>
+  <p>Stres uzrokuje napetost mišića, promjene protoka krvi i povećanje napetosti u tijelu, što može dovesti do glavobolja i bolova u leđima, vratu i ramenima.</p>
+
+  <h3>Mehanizmi nastanka</h3>
+  <ul>
+    <li> Napetost mišića uzrokuje bol i pritisak u glavi.</li>
+    <li> Hormonske promjene povećavaju osjetljivost na bol.</li>
+    <li> Povećan krvni pritisak može izazvati glavobolje kod hroničnog stresa.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovno istezanje, fizička aktivnost i tehnike opuštanja mogu smanjiti napetost i bol.
+  </div>
+</div>
+
+<!-- 10. Da li stres može izazvati probleme sa probavom -->
+<div id="stres_probava" class="section">
+  <h2>Da li stres može izazvati probleme sa probavom?</h2>
+  <p>Da, stres može utjecati na probavni sistem izazivajući nadutost, mučninu, grčeve, proljev ili zatvor. Hormoni stresa mijenjaju rad crijeva i smanjuju efikasnost probave.</p>
+
+  <h3>Primjeri utjecaja stresa na probavu</h3>
+  <ul>
+    <li>🍽️ Povećana kiselina u želucu može izazvati žgaravicu.</li>
+    <li>💨 Nadutost i gasovi uslijed promjena u probavnom ritmu.</li>
+    <li> Stres može pogoršati sindrom iritabilnog crijeva ili druge kronične probavne probleme.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovna prehrana, opuštanje prije obroka i smanjenje hroničnog stresa mogu poboljšati probavu.
+  </div>
+</div>
+
+<!-- 11. Koje su efikasne tehnike za smanjenje stresa -->
+<div id="tehnike_smanjenje_stres" class="section">
+  <h2>Koje su efikasne tehnike za smanjenje stresa?</h2>
+  <p>Stres je prirodna reakcija tijela i uma na zahtjeve i pritiske iz okoline. Iako se ne može uvijek izbjeći, postoje brojne tehnike koje pomažu da ga bolje kontroliramo, smanjimo negativan utjecaj i poboljšamo emocionalnu otpornost. Cilj je osloboditi napetost u tijelu, smiriti um i razviti zdrav odnos prema izazovima.</p>
+
+  <h3>Najefikasnije tehnike</h3>
+  <ul>
+    <li> <strong>Meditacija i mindfulness:</strong> Fokusiranje na sadašnji trenutak bez prosuđivanja smanjuje brige i osjećaj preopterećenosti. Redovno prakticiranje meditacije može smanjiti anksioznost i poboljšati koncentraciju.</li>
+    <li> <strong>Fizička aktivnost:</strong> Trčanje, šetnje, plivanje, biciklizam ili bilo koji oblik tjelesnog kretanja oslobađa endorfine, hormone sreće, smanjuje napetost mišića i pomaže tijelu da se bolje nosi sa stresom.</li>
+    <li> <strong>Tehnike opuštanja:</strong> Progresivno opuštanje mišića, joga, istezanje i duboko disanje pomažu smiriti tijelo i smanjiti napetost.</li>
+    <li>📝 <strong>Dnevnik i zapisivanje:</strong> Bilježenje misli i osjećaja pomaže u prepoznavanju uzroka stresa, organizaciji problema i smanjenju mentalnog opterećenja.</li>
+    <li> <strong>Razgovor i socijalna podrška:</strong> Dijeljenje problema s prijateljima, porodicom ili terapeutom olakšava stres i pomaže u pronalasku rješenja.</li>
+    <li> <strong>Kreativnost i hobiji:</strong> Aktivnosti poput crtanja, slikanja, sviranja ili pisanja mogu smiriti um i pružiti osjećaj kontrole i zadovoljstva.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>📅 Svakodnevno odvojite 10–15 minuta za meditaciju ili svjesno disanje, npr. odmah nakon buđenja ili prije spavanja.</li>
+    <li> Redovno se bavite fizičkom aktivnošću, čak i kratke šetnje od 15–20 minuta više puta tjedno smanjuju napetost.</li>
+    <li>💬 Razgovarajte s prijateljem ili članom porodice o problemu koji vas opterećuje umjesto da ga potiskujete.</li>
+    <li>📝 Vodite dnevnik osjećaja – zapisivanje misli pomaže vam da sagledate uzroke stresa i planirate rješenja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kombinirajte više tehnika – disanje, fizičku aktivnost i vođenje dnevnika – kako bi smanjenje stresa bilo najefikasnije.
+  </div>
+</div>
+
+<!-- 12. Kako pravilno disanje pomaže protiv stresa -->
+<div id="disanje_protiv_stresa" class="section">
+  <h2>Kako pravilno disanje pomaže protiv stresa?</h2>
+  <p>Disanje je jedno od najmoćnijih oruđa za smirivanje tijela i uma. Kada smo pod stresom, tijelo često previše plitko diše, što aktivira simpatički živčani sustav i pojačava napetost. Pravilno disanje aktivira parasimpatički sustav koji smiruje tijelo, smanjuje napetost i olakšava koncentraciju.</p>
+
+  <h3>Tehnike disanja</h3>
+  <ul>
+    <li>🌬️ <strong>Duboko dijafragmalno disanje:</strong> Udahnite polako kroz nos, ispunjavajući trbuh zrakom, zadržite dah 2–3 sekunde i polako izdahnite kroz usta. Ponovite 5–10 puta.</li>
+    <li>⏱️ <strong>Disanje 4-7-8:</strong> Udah 4 sekunde, zadržavanje 7 sekundi, izdah 8 sekundi. Pomaže smanjenju tjeskobe i opuštanju tijela.</li>
+    <li> <strong>Mindful disanje:</strong> Fokusirajte se na ritam disanja, opažajte osjećaje i misli, ali ih ne prosuđujte. Ova tehnika pomaže smirivanju uma i povratku kontrole.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>🕒 Kada osjećate stres na poslu ili u školi, zatvorite oči i posvetite 2–5 minuta dubokom disanju.</li>
+    <li>💼 Prije važnog sastanka ili ispita, napravite nekoliko minuta svjesnog disanja kako biste se smirili i povećali koncentraciju.</li>
+    <li>🏠 Kod kuće možete prakticirati disanje ujutro prije doručka ili navečer prije spavanja za postepeno smanjenje napetosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Disanje je dostupno svuda i bilo kada – to je najjednostavnija, besplatna i efikasna metoda smanjenja stresa.
+  </div>
+</div>
+
+<!-- 13. Da li fizička aktivnost smanjuje stres -->
+<div id="fizicka_aktivnost" class="section">
+  <h2>Da li fizička aktivnost smanjuje stres?</h2>
+  <p>Da, fizička aktivnost je jedna od najsnažnijih metoda za smanjenje stresa. Kretanje oslobađa endorfine i serotonin, hormone sreće, smanjuje napetost mišića, poboljšava cirkulaciju i pomaže tijelu da se nosi sa stresom. Također pomaže boljoj regulaciji sna i povećava otpornost na buduće stresore.</p>
+
+  <h3>Primjeri aktivnosti</h3>
+  <ul>
+    <li> Trčanje, brzo hodanje ili biciklizam 20–30 minuta dnevno smanjuje napetost i pomaže mentalnom „pražnjenju“.</li>
+    <li> Teretana ili kućne vježbe snage 3–4 puta tjedno poboljšavaju fizičku snagu i samopouzdanje.</li>
+    <li> Yoga i pilates spajaju fizičko istezanje i disanje, što smiruje um i tijelo.</li>
+    <li>⚽ Sportske aktivnosti s prijateljima pomažu i socijalnoj podršci, dodatno smanjujući stres.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Konzistentnost je ključna – čak i 15 minuta dnevno kretanja može imati značajan pozitivan učinak na stres.
+  </div>
+</div>
+
+<!-- 14. Kako ishrana utiče na nivo stresa -->
+<div id="ishrana_i_stres" class="section">
+  <h2>Kako ishrana utiče na nivo stresa?</h2>
+  <p>Ishrana ima direktan utjecaj na mentalno zdravlje. Pravilna, nutritivno bogata hrana može smanjiti stres, poboljšati raspoloženje i povećati energiju. S druge strane, brza hrana, puno šećera i kofeina povećavaju napetost, umor i razdražljivost.</p>
+
+  <h3>Preporuke</h3>
+  <ul>
+    <li>🥦 Puno voća, povrća i cjelovitih žitarica za stabilnu energiju i ravnotežu hormona.</li>
+    <li> Omega-3 masne kiseline iz ribe i orašastih plodova pomažu smanjenju anksioznosti i poboljšavaju raspoloženje.</li>
+    <li>💧 Hidratacija je ključna – dehidracija pojačava stres i umor.</li>
+    <li>☕ Smanjite unos kafe i šećera – nagli skokovi energije i padovi doprinose stresu.</li>
+    <li>🍵 Biljni čajevi poput kamilice ili mente umiruju tijelo i smiruju um.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovni obroci i uravnotežena prehrana stabiliziraju raspoloženje i pomažu tijelu da bolje podnosi stres.
+  </div>
+</div>
+
+<!-- 15. Da li kafa i alkohol povećavaju stres -->
+<div id="kafa_alkohol_stres" class="section">
+  <h2>Da li kafa i alkohol povećavaju stres?</h2>
+  <p>Kofein stimulira središnji živčani sustav i može povećati osjećaj napetosti, ubrzati rad srca i pogoršati tjeskobu kod osjetljivih osoba. Alkohol privremeno smiruje, ali dugoročno remeti san, povećava emocionalnu nestabilnost i može pogoršati stres.</p>
+
+  <h3>Preporuke</h3>
+  <ul>
+    <li>☕ Ograničite unos kafe na 1–2 šoljice dnevno, posebno ako ste pod stresom ili imate tjeskobu.</li>
+    <li> Izbjegavajte alkohol kao „lijek za stres“ jer može narušiti san i pogoršati raspoloženje.</li>
+    <li>💧 Bolje je piti vodu, biljne čajeve ili prirodne sokove za opuštanje i hidrataciju tijela.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Promjena navika u ispijanju kafe i alkohola može dugoročno smanjiti učinke stresa i poboljšati kvalitet sna.
+  </div>
+</div>
+
+<!-- 16. Kako se opustiti pre spavanja -->
+<div id="opustanje_pre_spavanja" class="section">
+  <h2>Kako se opustiti pre spavanja?</h2>
+  <p>Pravilno opuštanje prije spavanja pomaže tijelu da se regenerira, smanjuje stres i povećava kvalitet sna. Rutina opuštanja stvara signal tijelu da je vrijeme za odmor i potiče emocionalnu ravnotežu.</p>
+
+  <h3>Metode opuštanja</h3>
+  <ul>
+    <li>📚 Čitanje lagane knjige ili slušanje umirujuće muzike za smirenje uma.</li>
+    <li> Kratka meditacija, svjesno disanje ili progresivno opuštanje mišića prije spavanja.</li>
+    <li> Topla kupka ili tuš opuštaju mišiće i smanjuju napetost u tijelu.</li>
+    <li>📵 Izbjegavanje ekrana najmanje 30 minuta prije spavanja jer plavo svjetlo remeti proizvodnju melatonina i opuštanje tijela.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Stvaranje rutine opuštanja svaku večer pomaže tijelu i umu da se pripreme za san, smanjujući stres i poboljšavajući kvalitet sna.
+  </div>
+</div>
+
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

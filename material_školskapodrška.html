@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Školska podrška</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Školska podrška</h1>
+<nav>
+
+
+  <!-- Left Side List -->
+<button onclick="showSection('radne_navike')">Kako pomoći djetetu da razvije radne navike i organizaciju za školu?</button>
+<button onclick="showSection('motivacija_skola')">Kako motivisati dijete koje gubi interes za školu?</button>
+<button onclick="showSection('lose_ocjene')">Kako da reagujem kada dijete donosi loše ocjene?</button>
+<button onclick="showSection('fokus_domaca')">Kako pomoći djetetu da se bolje fokusira na domaću zadaću?</button>
+<button onclick="showSection('poteskoce_ucenje')">Kako prepoznati poteškoće u učenju (npr. disleksiju)?</button>
+<button onclick="showSection(' škola ')">Kako da dijete nauči upravljati svojim vremenom u školskom danu?</button>
+<button onclick="showSection('stres_ocjene')">Kako razgovarati s djetetom o pritisku i stresu zbog ocjena?</button>
+<button onclick="showSection('strah_testovi')">Kako podržati dijete koje ima strah od odgovaranja ili testova?</button>
+<button onclick="showSection('saradnja_skola')">Kako roditelji mogu sarađivati sa školom i nastavnicima?</button>
+<button onclick="showSection('dodatna_pomoc')">Kada je pravo vrijeme da angažujemo dodatnu pomoć ili instrukcije?</button>
+<button onclick="showSection('prelazak_skola')">Kako pomoći djetetu da se snađe prilikom prelaska u novu školu?</button>
+<button onclick="showSection('samostalnost_ucenje')">Kako poticati samostalnost u učenju bez preuzimanja kontrole?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('koncentracija_razred')">Kako pomoći kad ima poteškoće s koncentracijom u razredu?</button>
+<button onclick="showSection('ne_zeli_skola')">Šta učiniti ako dijete ne želi da ide u školu?</button>
+<button onclick="showSection('samopouzdanje_skola')">Kako pomoći djetetu razviti samopouzdanje u školskoj sredini?</button>
+<button onclick="showSection('vrsnjacki_sukobi')">Kako se nositi s vršnjačkim sukobima i zadirkivanjem u školi?</button>
+<button onclick="showSection('emocionalni_problemi')">Kako da prepoznamo emocionalne probleme povezane sa školom?</button>
+<button onclick="showSection('preoptereceno')">Što kad ima previše obaveza i osjeća se preopterećeno?</button>
+<button onclick="showSection('pozitivan_stav')">Kako razviti pozitivan stav prema učenju i znanju?</button>
+<button onclick="showSection('izostanci')">Šta učiniti ako dijete izostaje često bez valjanog razloga?</button>
+<button onclick="showSection('navike_ucenje')">Kako uspostaviti zdrave navike u vezi s učenjem kod kuće?</button>
+<button onclick="showSection('razgovor_nastavnici')">Kako razgovarati s nastavnicima ako primijetimo problem?</button>
+<button onclick="showSection('tesko_uklapanje')">Kako pomoći djetetu koje se teško uklapa u razrednu sredinu?</button>
+<button onclick="showSection('skolska_rutina')">Koji su najbolji načini da podržimo djetetovu školsku rutinu?</button>
+<button onclick="showSection('pratiti_napredak')">Kako da pratimo školski napredak djeteta bez stvaranja pritiska?</button>
+
+</nav>
+
+
+<!-- 1 -->
+<div id="radne_navike" class="section">
+  <h2>Kako pomoći djetetu da razvije radne navike i organizaciju za školu?</h2>
+  <p>Dijete koje ima dobre radne navike i organizaciju bolje se nosi s obavezama i manje je pod stresom. Organizacija uključuje planiranje zadataka, praćenje rokova i održavanje reda u školskim materijalima.</p>
+
+  <h3>Strategije za razvoj radnih navika</h3>
+  <ul>
+    <li>🗂️ <strong>Postavljanje rasporeda:</strong> Napravite dnevni ili tjedni plan zadataka zajedno s djetetom.</li>
+    <li>📋 <strong>Popisi zadataka:</strong> Pomozite djetetu da vodi popis obaveza i provjerava napredak.</li>
+    <li>🎯 <strong>Mali koraci:</strong> Velike zadatke podijelite na manje, lako ostvarive ciljeve.</li>
+    <li> <strong>Praćenje i podrška:</strong> Budite uz dijete dok uči planirati i organizirati, ali mu ne radite zadatke umjesto njega.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svakog jutra zajedno provjerite raspored za školu i domaće zadatke.</li>
+    <li>✔️ Na kraju dana pogledajte što je završeno i što ostaje za sutra.</li>
+    <li>✔️ Pohvalite dijete kada uspješno završi zadatak prema planu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kontinuirana praksa i pohvala razvijaju trajne radne navike i osjećaj odgovornosti.
+  </div>
+</div>
+
+<!-- 2 -->
+<div id="motivacija_skola" class="section">
+  <h2>Kako motivisati dijete koje gubi interes za školu?</h2>
+  <p>Gubitak interesa za školu može nastati zbog težine gradiva, dosade ili socijalnih problema. Ključno je razumjeti uzrok i potaknuti dijete kroz zanimljive aktivnosti i pohvalu.</p>
+
+  <h3>Strategije za motivaciju</h3>
+  <ul>
+    <li> <strong>Pronađite interes:</strong> Povežite školu s nečim što dijete voli.</li>
+    <li>💬 <strong>Razgovor:</strong> Pitajte dijete što mu smeta i slušajte njegove razloge bez kritike.</li>
+    <li>🎯 <strong>Postavljanje malih ciljeva:</strong> Fokusirajte se na male uspjehe koji grade samopouzdanje.</li>
+    <li> <strong>Pohvala i nagrada:</strong> Pohvalite trud, a ne samo ocjene ili rezultat.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Uključite dijete u projekt koji ga zanima, povezan sa školskim gradivom.</li>
+    <li>✔️ Postavite tjedne ciljeve: „Ovaj tjedan ćemo završiti zadatak iz matematike i dobiti malu nagradu.“</li>
+    <li>✔️ Redovno razgovarajte o napretku i problemima u školi.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Motivacija dolazi kroz razumijevanje i povezivanje školskih aktivnosti s djetetovim interesima.
+  </div>
+</div>
+
+<!-- 3 -->
+<div id="lose_ocjene" class="section">
+  <h2>Kako da reagujem kada dijete donosi loše ocjene?</h2>
+  <p>Loše ocjene nisu kraj svijeta, već prilika za učenje. Važno je reagovati smireno i konstruktivno, bez ljutnje ili kritike koja može demotivirati dijete.</p>
+
+  <h3>Strategije za reakciju</h3>
+  <ul>
+    <li>💬 <strong>Mirno razgovarajte:</strong> Pitajte dijete što misli da je razlog ocjene.</li>
+    <li> <strong>Pomoć i podrška:</strong> Ponudite pomoć u učenju i organizaciji.</li>
+    <li>🎯 <strong>Postavite plan:</strong> Zajedno osmislite kako poboljšati rezultate idući put.</li>
+    <li> <strong>Pohvalite trud:</strong> Fokusirajte se na napor i napredak, a ne samo rezultat.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete ima lošu ocjenu iz matematike, zajedno provjerite gdje su nastali problemi i napravite plan vježbanja.</li>
+    <li>✔️ Pohvalite svaki napredak, iako ocjena još nije savršena.</li>
+    <li>✔️ Izbjegavajte uspoređivanje s drugom djecom; fokus je na napretku djeteta.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Smirena i konstruktivna reakcija pomaže djetetu da razvije otpornost i samopouzdanje.
+  </div>
+</div>
+
+<!-- 4 -->
+<div id="fokus_domaca" class="section">
+  <h2>Kako pomoći djetetu da se bolje fokusira na domaću zadaću?</h2>
+  <p>Dobar fokus na domaću zadaću omogućava brže i kvalitetnije učenje, smanjuje stres i frustraciju. Ključno je stvoriti odgovarajuće uvjete i rutinu za koncentraciju.</p>
+
+  <h3>Strategije za bolji fokus</h3>
+  <ul>
+    <li>📚 <strong>Mirno okruženje:</strong> Odaberite mjesto bez distrakcija, sa svjetlom i potrebnim materijalima.</li>
+    <li>⏱️ <strong>Vrijeme u blokovima:</strong> Podijelite zadaću na kraće periode rada s pauzama.</li>
+    <li>🎯 <strong>Postavljanje ciljeva:</strong> Svaki zadatak započnite s jasnim ciljem: „Danas ćemo riješiti 5 zadataka iz matematike.“</li>
+    <li> <strong>Pohvala i nagrada:</strong> Pohvalite fokus i trud, ne samo ispravne odgovore.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Prije početka zadaće uklonite mobitel i druge distrakcije.</li>
+    <li>✔️ Pauza nakon 20–30 minuta koncentracije za osvježenje i smanjenje zamora.</li>
+    <li>✔️ Pratite djetetov napredak i pohvalite svaki završen zadatak.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Rutina, mirno okruženje i pohvala pomažu djetetu da razvije trajni fokus na učenje.
+  </div>
+</div>
+
+<!-- 5 -->
+<div id="poteskoce_ucenje" class="section">
+  <h2>Kako prepoznati poteškoće u učenju (npr. disleksiju)?</h2>
+  <p>Poteškoće u učenju su specifični problemi koji otežavaju stjecanje znanja. Disleksija je najčešća i odnosi se na teškoće u čitanju i razumijevanju pisanog teksta, dok dijete može imati normalnu inteligenciju. Rano prepoznavanje znakova omogućuje pravovremenu podršku i strategije učenja.</p>
+
+  <h3>Tipični znakovi poteškoća u učenju</h3>
+  <ul>
+    <li>📖 <strong>Sporo čitanje:</strong> Dijete često preskače slova ili riječi, čitanje je otežano i sporo.</li>
+    <li>✏️ <strong>Problemi s pisanjem:</strong> Česte pravopisne greške i zamjene slova.</li>
+    <li> <strong>Teškoće u pamćenju i koncentraciji:</strong> Dijete brzo gubi fokus tijekom zadataka.</li>
+    <li> <strong>Frustracija:</strong> Osjećaj stresa i tjeskobe kod obavljanja školskih zadataka.</li>
+    <li>📊 <strong>Razlika u sposobnostima:</strong> Postignuća djeteta nisu u skladu s njegovim potencijalom.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete miješa slova "b" i "d" ili "m" i "n" dok čita.</li>
+    <li>✔️ Prilikom pisanja rečenica stalno ponavlja iste pravopisne greške unatoč ispravkama.</li>
+  </ul>
+
+  <h3>Zadatak za roditelje i nastavnike</h3>
+  <p>Napravite popis aktivnosti u kojima dijete pokazuje poteškoće (čitanje, pisanje, zadaci s brojevima). Zabilježite koliko mu vremena treba i koliko je frustrirajuće za njega.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako dijete stalno pokazuje ove znakove, moguće je da ima disleksiju ili neku drugu poteškoću u učenju. Preporuča se stručna procjena kod pedagoga, logopeda ili psihologa, te primjena strategija kao što su individualizirani plan učenja, vizualni i multisenzorni materijali, prilagođeni zadaci i pohvala.
+  </div>
+</div>
+
+
+<!-- 6 -->
+<div id=" škola " class="section">
+  <h2>Kako da dijete nauči upravljati svojim vremenom u školskom danu?</h2>
+  <p>Upravljanje vremenom pomaže djetetu da završi obaveze na vrijeme, smanji stres i ima više vremena za igru i odmor. Ključno je učiti dijete planiranju, prioritetima i realnim procjenama trajanja zadataka.</p>
+
+  <h3>Strategije upravljanja vremenom</h3>
+  <ul>
+    <li>🗓️ <strong>Dnevni raspored:</strong> Zajedno napravite raspored školskih i slobodnih aktivnosti.</li>
+    <li>⏱️ <strong>Blokovi vremena:</strong> Podijelite zadatke u vremenske intervale s kratkim pauzama.</li>
+    <li>🎯 <strong>Prioriteti:</strong> Naučite dijete da razlikuje važne od manje važnih zadataka.</li>
+    <li>📋 <strong>Praćenje napretka:</strong> Označavanje završenih zadataka pomaže motivaciji i boljoj organizaciji.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svakodnevno provjerite plan zadataka i obaveza.</li>
+    <li>✔️ Naučite dijete da prvo riješi najvažnije zadatke, a zatim manje hitne.</li>
+    <li>✔️ Pohvalite uspješno završene zadatke i planiranje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Postupno uvođenje rasporeda i praćenje rezultata pomažu djetetu da razvije trajne vještine upravljanja vremenom.
+  </div>
+</div>
+
+<!-- 7 -->
+<div id="stres_ocjene" class="section">
+  <h2>Kako razgovarati s djetetom o pritisku i stresu zbog ocjena?</h2>
+  <p>Stres i pritisak zbog ocjena mogu negativno utjecati na motivaciju i emocionalno zdravlje djeteta. Važno je otvoreno razgovarati, smireno objasniti očekivanja i pružiti podršku.</p>
+
+  <h3>Strategije razgovora</h3>
+  <ul>
+    <li>💬 <strong>Otvorena pitanja:</strong> Pitajte dijete kako se osjeća u vezi ocjena i školskih obaveza.</li>
+    <li> <strong>Validacija emocija:</strong> Potvrdite da je normalno osjećati stres, bez omalovažavanja osjećaja.</li>
+    <li>🎯 <strong>Fokus na trud:</strong> Pohvaljujte trud, planiranje i rad, a ne samo rezultat.</li>
+    <li> <strong>Podrška i rješenja:</strong> Zajedno osmislite strategije za smanjenje stresa, poput pauza i organizacije vremena.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete ima strah od loše ocjene, razgovarajte o koracima za poboljšanje.</li>
+    <li>✔️ Naučite dijete tehnike opuštanja, disanja ili kratke pauze tijekom učenja.</li>
+    <li>✔️ Pohvalite napore i napredak, a ne samo konačnu ocjenu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Fokus na trud i podrška smanjuju stres i pomažu djetetu da razvije otpornost prema školskim pritiscima.
+  </div>
+</div>
+
+<!-- 8 -->
+<div id="strah_testovi" class="section">
+  <h2>Kako podržati dijete koje ima strah od odgovaranja ili testova?</h2>
+  <p>Dijete koje osjeća strah od testova često pati od tjeskobe i smanjenog samopouzdanja. Ključno je pružiti emocionalnu podršku, pripremu i tehnike smanjenja straha.</p>
+
+  <h3>Strategije za prevladavanje straha</h3>
+  <ul>
+    <li>🌱 <strong>Priprema:</strong> Redovno vježbanje gradiva smanjuje neizvjesnost i strah.</li>
+    <li>💬 <strong>Razgovor:</strong> Pitajte dijete što ga plaši i slušajte bez kritike.</li>
+    <li> <strong>Tehnike opuštanja:</strong> Naučite dijete disati duboko i smirivati napetost prije testa.</li>
+    <li> <strong>Pohvala i podrška:</strong> Pohvalite trud i učenje, bez obzira na rezultat.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Prije testa, napravite kratki pregled gradiva zajedno s djetetom.</li>
+    <li>✔️ Ohrabrite dijete: „Bitno je da daš sve od sebe, rezultat nije jedino važan.“</li>
+    <li>✔️ Nakon testa razgovarajte o iskustvu i osjećajima, ne samo o ocjeni.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strah se smanjuje kroz pripremu, podršku i pozitivno usmjeravanje djetetovih emocija.
+  </div>
+</div>
+
+<!-- 9 -->
+<div id="saradnja_skola" class="section">
+  <h2>Kako roditelji mogu sarađivati sa školom i nastavnicima?</h2>
+  <p>Efikasna suradnja roditelja i škole jača obrazovni uspjeh djeteta i olakšava rješavanje problema. Komunikacija, poštovanje i zajednički ciljevi su ključni.</p>
+
+  <h3>Strategije suradnje</h3>
+  <ul>
+    <li>💬 <strong>Redovna komunikacija:</strong> Pratite djetetov napredak i obavijesti od škole.</li>
+    <li> <strong>Aktivno sudjelovanje:</strong> Posjetite roditeljske sastanke i sudjelujte u školskim aktivnostima.</li>
+    <li>🌱 <strong>Rješavanje problema:</strong> Ako primijetite poteškoće, razgovarajte s nastavnicima i tražite savjet.</li>
+    <li>📋 <strong>Zajednički ciljevi:</strong> Dogovorite se oko očekivanja i podrške kod kuće i u školi.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete ima teškoće u određenom predmetu, dogovorite sastanak s nastavnikom i plan dodatne pomoći.</li>
+    <li>✔️ Redovno pratite bilješke i zadatke, te komunicirajte o problemima prije nego eskaliraju.</li>
+    <li>✔️ Pohvalite dijete kada ostvaruje napredak, uz suradnju škole i roditelja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Proaktivna i otvorena komunikacija jača povjerenje i olakšava razvoj djeteta.
+  </div>
+</div>
+
+<!-- 10 -->
+<div id="dodatna_pomoc" class="section">
+  <h2>Kada je pravo vrijeme da angažujemo dodatnu pomoć ili instrukcije?</h2>
+  <p>Dodatna pomoć ili instrukcije mogu biti korisne kada dijete ne razumije gradivo ili kasni u određenim predmetima. Važno je prepoznati pravi trenutak i izabrati kvalitetnu podršku, bez pritiska ili stresa.</p>
+
+  <h3>Kako prepoznati potrebu</h3>
+  <ul>
+    <li>⚠️ <strong>Trajni problemi:</strong> Ako dijete stalno ne razumije gradivo unatoč vašoj pomoći.</li>
+    <li>📈 <strong>Pad ocjena:</strong> Ako ocjene značajno opadaju i ne popravlja se.</li>
+    <li>💬 <strong>Frustracija ili stres:</strong> Dijete se osjeća preopterećeno ili obeshrabreno.</li>
+    <li> <strong>Kvalitetni instruktori:</strong> Potražite stručnu pomoć koja razumije djetetove potrebe.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete ne razumije matematiku, angažirajte instruktora koji će raditi male korake i prilagoditi tempo.</li>
+    <li>✔️ Pratite napredak i povratne informacije instruktora prije nego nastavite ili mijenjate pristup.</li>
+    <li>✔️ Pohvalite trud djeteta i osigurajte da dodatna pomoć bude pozitivno iskustvo.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dodatna pomoć treba biti podrška, a ne pritisak, i uključuje aktivnu suradnju roditelja.
+  </div>
+</div>
+
+
+<!-- 11 -->
+<div id="prelazak_skola" class="section">
+  <h2>Kako pomoći djetetu da se snađe prilikom prelaska u novu školu?</h2>
+  <p>Promjena škole može biti stresna i zbunjujuća za dijete. Važno je pružiti emocionalnu podršku, upoznati dijete s novim okruženjem i potaknuti socijalne kontakte.</p>
+
+  <h3>Strategije za lakši prelazak</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o promjeni:</strong> Pitajte dijete kako se osjeća i slušajte njegove strahove.</li>
+    <li> <strong>Upoznavanje okoline:</strong> Posjetite školu prije početka nastave i pokažite mu učionice, dvorište i dvorane.</li>
+    <li> <strong>Poticanje prijateljstava:</strong> Ohrabrite dijete da razgovara i druži se s vršnjacima.</li>
+    <li>🌱 <strong>Postupna adaptacija:</strong> Dajte djetetu vremena da se prilagodi novoj rutini i pravilima.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Prvi dan pratite dijete i razgovarajte o dojmovima nakon škole.</li>
+    <li>✔️ Potaknite dijete da sudjeluje u aktivnostima koje mu pomažu da se poveže s novim prijateljima.</li>
+    <li>✔️ Pohvalite svaku pozitivnu interakciju i korak naprijed u prilagodbi.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strpljenje, podrška i otvoren razgovor ključni su za uspješnu adaptaciju u novoj školi.
+  </div>
+</div>
+
+<!-- 12 -->
+<div id="samostalnost_ucenje" class="section">
+  <h2>Kako poticati samostalnost u učenju bez preuzimanja kontrole?</h2>
+  <p>Samostalno učenje razvija odgovornost, samopouzdanje i sposobnost rješavanja problema. Roditelj treba biti podrška, ali ne preuzimati zadatke djeteta.</p>
+
+  <h3>Strategije za poticanje samostalnosti</h3>
+  <ul
+    <li>🤝 <strong>Pružanje smjernica:</strong> Dajte upute i savjete, ali dopustite djetetu da odluči kako će ih primijeniti.</li>
+    <li>🎯 <strong>Postavljanje ciljeva:</strong> Zajedno odredite ciljeve, ali djetetu prepustite način postizanja.</li>
+    <li>💬 <strong>Podrška i savjet:</strong> Budite dostupni za pitanja, bez da stalno kontrolirate napredak.</li>
+    <li> <strong>Pohvala za trud:</strong> Fokusirajte se na napor i rješenja, a ne samo na rezultat.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Neka dijete samo odluči kojim redom će riješiti zadatke.</li>
+    <li>✔️ Ohrabrite ga da traži pomoć kada je potrebna, ali neka sam pokuša riješiti problem.</li>
+    <li>✔️ Pohvalite svaki uspješan pokušaj i samostalni korak u učenju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Samostalnost se razvija postupno, kroz podršku i slobodu da dijete sam donosi odluke u učenju.
+  </div>
+</div>
+
+<!-- 13 -->
+<div id="koncentracija_razred" class="section">
+  <h2>Kako pomoći djetetu koje ima poteškoće s koncentracijom u razredu?</h2>
+  <p>Poteškoće s koncentracijom mogu ometati učenje i socijalne interakcije. Važno je prepoznati uzroke i primijeniti strategije koje pomažu fokus i pažnju.</p>
+
+  <h3>Strategije za poboljšanje koncentracije</h3>
+  <ul>
+    <li> <strong>Tehnike fokusiranja:</strong> Naučite dijete kratkim vježbama disanja ili pauzama za smanjenje distrakcija.</li>
+    <li>📚 <strong>Organizacija radnog prostora:</strong> Osigurajte mirno i uredno mjesto za rad kod kuće.</li>
+    <li>⏱️ <strong>Podjela zadataka:</strong> Kratki zadaci olakšavaju održavanje pažnje i koncentracije.</li>
+    <li> <strong>Suradnja s nastavnikom:</strong> Razgovarajte o strategijama u učionici koje pomažu djetetu.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Razbijte domaću zadaću u manje dijelove s kratkim pauzama.</li>
+    <li>✔️ Pratite kada dijete najbolje uči i tada planirajte zahtjevnije zadatke.</li>
+    <li>✔️ Pohvalite uspjehe u koncentraciji i dovršavanju zadataka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strpljenje, rutine i prilagodba zadataka ključni su za razvoj koncentracije kod djeteta.
+  </div>
+</div>
+
+<!-- 14 -->
+<div id="ne_zeli_skola" class="section">
+  <h2>Šta učiniti ako dijete ne želi da ide u školu?</h2>
+  <p>Odbijanje škole može biti znak stresa, problema u razredu ili neugodnih iskustava. Važno je razgovarati i razumjeti razlog prije nego se reaguje kaznom ili prisilom.</p>
+
+  <h3>Strategije za rješavanje problema</h3>
+  <ul>
+    <li>💬 <strong>Razgovor:</strong> Pitajte dijete zašto ne želi ići u školu i slušajte bez kritike.</li>
+    <li> <strong>Identifikacija problema:</strong> Provjerite socijalne, akademske ili emocionalne razloge.</li>
+    <li> <strong>Podrška i rješenja:</strong> Zajedno osmislite strategije za prevazilaženje problema.</li>
+    <li>📚 <strong>Suradnja s nastavnikom:</strong> Ako je potrebno, uključite učitelje ili školskog psihologa.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Razgovarajte o strahovima i ponudite rješenja, npr. kratke stanke ili pomoć u socijalnoj integraciji.</li>
+    <li>✔️ Postavite realna očekivanja i naglasite pozitivne aspekte škole.</li>
+    <li>✔️ Pohvalite dijete kada prihvati male korake u odlasku u školu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razumijevanje i zajedničko rješavanje problema jača povjerenje i smanjuje otpor prema školi.
+  </div>
+</div>
+
+<!-- 15 -->
+<div id="samopouzdanje_skola" class="section">
+  <h2>Kako pomoći djetetu da razvije samopouzdanje u školskoj sredini?</h2>
+  <p>Samopouzdanje u školi pomaže djetetu da se aktivno uključi u nastavu, razvije socijalne vještine i bolje uči. Roditelji igraju ključnu ulogu u jačanju pozitivne slike o sebi.</p>
+
+  <h3>Strategije za jačanje samopouzdanja</h3>
+  <ul>
+    <li> <strong>Pohvala i priznanje:</strong> Fokusirajte se na trud, napredak i postignuća.</li>
+    <li>💬 <strong>Razgovor i podrška:</strong> Ohrabrujte dijete da izrazi mišljenje i sudjeluje u nastavi.</li>
+    <li> <strong>Socijalne vještine:</strong> Podržite druženje, grupne aktivnosti i timski rad.</li>
+    <li>🎯 <strong>Postavljanje realnih ciljeva:</strong> Pomozite djetetu da postavlja i ostvaruje male, realne ciljeve.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Pohvalite dijete kada aktivno sudjeluje u nastavi ili prezentira svoje ideje.</li>
+    <li>✔️ Potičite dijete da se uključi u aktivnosti koje voli i gdje može pokazati svoje sposobnosti.</li>
+    <li>✔️ Razgovarajte o izazovima i ponudite podršku u prevazilaženju problema.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kontinuirana podrška i pozitivna povratna informacija grade trajno samopouzdanje u školi.
+  </div>
+</div>
+
+<!-- 1 -->
+<div id="vrsnjacki_sukobi" class="section">
+  <h2>Kako se nositi s vršnjačkim sukobima i zadirkivanjem u školi?</h2>
+  <p>Vršnjački sukobi i zadirkivanje su česti u školama i mogu ozbiljno utjecati na emocionalno stanje djeteta. Rano prepoznavanje i aktivno reagiranje ključno je za zaštitu djetetovog samopouzdanja i socijalnog razvoja.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li> <strong>Otvoren razgovor:</strong> Razgovarajte s djetetom o njegovim osjećajima i iskustvima u školi.</li>
+    <li> <strong>Postavljanje granica:</strong> Naučite dijete kako reći „ne“ i tražiti pomoć odraslih.</li>
+    <li> <strong>Surađujte sa školom:</strong> Obavijestite nastavnike ili pedagoga o problemu i zatražite podršku.</li>
+    <li> <strong>Razvijanje samopouzdanja:</strong> Pohvaljujte dijete za socijalne vještine i pozitivno ponašanje.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete doživi zadirkivanje na igralištu, zabilježite situaciju i razgovarajte o strategijama rješavanja.</li>
+    <li>✔️ Učite dijete kako tražiti pomoć učitelja kada se sukobi ponavljaju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Rano prepoznavanje vršnjačkog nasilja i aktivno uključivanje roditelja i škole pomaže u smanjenju stresa i razvoja sigurnog okruženja za dijete.
+  </div>
+</div>
+
+<!-- 2 -->
+<div id="emocionalni_problemi" class="section">
+  <h2>Kako da prepoznamo emocionalne probleme povezane sa školom?</h2>
+  <p>Emocionalni problemi u školi mogu uključivati anksioznost, depresiju, nisko samopouzdanje ili strah od neuspjeha. Prepoznavanje znakova omogućuje pravovremenu podršku i sprječavanje pogoršanja.</p>
+
+  <h3>Znakovi na koje treba obratiti pažnju</h3>
+  <ul>
+    <li> <strong>Promjene raspoloženja:</strong> Dijete je često tužno, nervozno ili ljutito.</li>
+    <li>📚 <strong>Pad u školi:</strong> Naglo smanjenje uspjeha ili gubitak interesa za učenje.</li>
+    <li> <strong>Problemi sa spavanjem:</strong> Teškoće s uspavljivanjem ili noćne more povezane sa školom.</li>
+    <li>💬 <strong>Izolacija:</strong> Dijete izbjegava prijatelje ili aktivnosti u školi.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete pokazuje tjeskobu prije ispitivanja ili prezentacije.</li>
+    <li>✔️ Izbjegava odlazak u školu ili učionicu određenog predmeta ili učitelja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako znakovi traju dulje vrijeme, preporučuje se razgovor sa školskim psihologom ili stručnjakom za mentalno zdravlje kako bi se dijete pravovremeno podržalo.
+  </div>
+</div>
+
+<!-- 3 -->
+<div id="preoptereceno" class="section">
+  <h2>Što kad ima previše obaveza i osjeća se preopterećeno?</h2>
+  <p>Dijete se može osjećati preopterećeno zbog školske zadaće, izvanškolskih aktivnosti i društvenih obaveza. Dugotrajno preopterećenje vodi do stresa, umora i pada motivacije.</p>
+
+  <h3>Strategije za smanjenje opterećenja</h3>
+  <ul>
+    <li>🗂️ <strong>Planiranje vremena:</strong> Podijelite obaveze u dnevne i tjedne blokove s jasno definiranim pauzama.</li>
+    <li>❌ <strong>Prioriteti:</strong> Pomozite djetetu da prepozna najvažnije zadatke i smanji nepotrebne aktivnosti.</li>
+    <li> <strong>Vrijeme za opuštanje:</strong> Uključite sport, hobije i vrijeme za igru u dnevnu rutinu.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Napravite zajedno tjedni plan s jasno raspoređenim obavezama i slobodnim vremenom.</li>
+    <li>✔️ Postavite realne ciljeve za domaću zadaću i pohvalite svaki napor, ne samo rezultat.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovito provjeravajte kako se dijete osjeća, smanjujte preopterećenje i učite ga strategijama organizacije i odmora.
+  </div>
+</div>
+
+<!-- 4 -->
+<div id="pozitivan_stav" class="section">
+  <h2>Kako razviti pozitivan stav prema učenju i znanju?</h2>
+  <p>Pozitivan stav prema učenju pomaže djetetu da bude motivirano, samopouzdano i spremno na izazove. Djeca koja vjeruju u svoje sposobnosti lakše savladavaju nove vještine i znanje.</p>
+
+  <h3>Strategije za pozitivan stav</h3>
+  <ul>
+    <li> <strong>Pohvala i poticaj:</strong> Pohvaljujte trud i napredak, a ne samo rezultat.</li>
+    <li>📖 <strong>Učenje kroz igru:</strong> Pretvorite zadatke u zanimljive izazove ili igre.</li>
+    <li> <strong>Uključivanje roditelja:</strong> Učinite učenje zajedničkim iskustvom i pokažite entuzijazam.</li>
+    <li>🎯 <strong>Postavljanje ciljeva:</strong> Pomozite djetetu da postavlja male, ostvarive ciljeve u učenju.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Zajednički rješavanje problema iz matematike uz pohvalu svakog pokušaja.</li>
+    <li>✔️ Pretvorite čitanje ili istraživanje u igru: „Tko pronađe više zanimljivih činjenica?“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovita pohvala, uključivanje roditelja i stvaranje pozitivnog okruženja pomažu djetetu razviti dugotrajan pozitivan stav prema učenju.
+  </div>
+</div>
+
+<!-- 5 -->
+<div id="izostanci" class="section">
+  <h2>Šta učiniti ako dijete izostaje često bez valjanog razloga?</h2>
+  <p>Česti izostanci iz škole mogu utjecati na znanje, socijalni razvoj i samopouzdanje djeteta. Važno je razumjeti uzrok i pravovremeno reagirati kako bi se spriječile negativne posljedice.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Razgovor:</strong> Pitajte dijete o razlozima izostanka i slušajte bez osuđivanja.</li>
+    <li> <strong>Suradnja sa školom:</strong> Upoznajte nastavnike i pedagoge s problemom i zatražite savjet.</li>
+    <li>🗓️ <strong>Rutina:</strong> Uspostavite jasnu jutarnju i večernju rutinu koja olakšava dolazak u školu.</li>
+    <li> <strong>Motivacija:</strong> Nagradite redovito prisustvo i trud.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Zabilježite kada i zbog čega dijete izostaje te identificirajte obrazac.</li>
+    <li>✔️ Razgovarajte s djetetom o važnosti prisustva i mogućim posljedicama izostanaka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pravovremena reakcija, otvorena komunikacija i suradnja sa školom pomažu u smanjenju izostanaka i podršci djetetu.
+  </div>
+</div>
+
+
+<!-- 21 -->
+<div id="navike_ucenje" class="section">
+  <h2>Kako uspostaviti zdrave navike u vezi s učenjem kod kuće?</h2>
+  <p>Uspostavljanje zdravih navika u učenju pomaže djetetu da razvije disciplinu, odgovornost i dugoročnu učinkovitost. Redovna rutina i pravilna organizacija prostora i vremena ključni su za uspjeh.</p>
+
+  <h3>Strategije za zdrave navike</h3>
+  <ul>
+    <li>📅 <strong>Rutina:</strong> Postavite redovno vrijeme za učenje svaki dan, uključujući kratke pauze i slobodno vrijeme. Rutina pruža sigurnost i predvidljivost.</li>
+    <li> <strong>Organizacija materijala:</strong> Održavajte radni prostor urednim i jasno organiziranim kako bi dijete imalo sve što mu treba pri ruci.</li>
+    <li>⏱️ <strong>Podjela zadataka:</strong> Velike zadatke podijelite na manje dijelove. To pomaže djetetu da se fokusira i izbegne osjećaj preopterećenosti.</li>
+    <li>🌱 <strong>Samostalnost:</strong> Dajte djetetu slobodu da samo odluči kojim redoslijedom će obaviti zadatke, dok vi nudite podršku i savjet kad je potrebno.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svakodnevno provjerite raspored, ali dopustite djetetu da samo odluči kako će ga pratiti.</li>
+    <li>✔️ Pohvalite dijete za završene zadatke i za trud, a ne samo za konačni rezultat.</li>
+    <li>✔️ Postavite "mini-ciljeve" koji se mogu ostvariti u kratkom vremenu, čime se razvija osjećaj postignuća i motivacija.</li>
+    <li>✔️ Koristite vizualne podsjetnike, kalendare ili planere kako bi dijete pratilo svoje obaveze i napredak.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Zdrave navike se grade postupno, kroz rutinu, redovno praćenje i pohvalu. Važno je izbjegavati prisilu i stres jer dugoročno mogu narušiti motivaciju za učenje.
+  </div>
+</div>
+
+<!-- 22 -->
+<div id="razgovor_nastavnici" class="section">
+  <h2>Kako razgovarati s nastavnicima ako primijetimo problem?</h2>
+  <p>Pravovremena i konstruktivna komunikacija s nastavnicima ključna je za rješavanje problema u učenju, ponašanju ili socijalnoj integraciji djeteta. Važno je pristupiti s ciljem razumijevanja i suradnje, a ne optuživanja.</p>
+
+  <h3>Strategije razgovora</h3>
+  <ul>
+    <li>💬 <strong>Priprema:</strong> Prikupite informacije o problemu, bilježite primjere i pripremite pitanja unaprijed.</li>
+    <li> <strong>Suradnički pristup:</strong> Pristupite razgovoru s ciljem zajedničkog rješavanja problema, a ne traženja krivca.</li>
+    <li>📋 <strong>Jasnoća i konkretni primjeri:</strong> Iznesite konkretne situacije i zapažanja kako bi nastavnik bolje razumio problem.</li>
+    <li> <strong>Plan akcije:</strong> Dogovorite zajedničke korake i strategije podrške djetetu, uključujući praćenje napretka.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Redovno komunicirajte, ne čekajte dok problem eskalira.</li>
+    <li>✔️ Zajedno s nastavnikom osmislite plan podrške, primjerice dodatnu pomoć ili prilagođene zadatke.</li>
+    <li>✔️ Pohvalite dijete kada primjenjuje strategije koje su dogovorene sa školom.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Otvorena i konstruktivna komunikacija s nastavnicima omogućava pravovremenu podršku i rješavanje problema bez stresa za dijete.
+  </div>
+</div>
+
+<!-- 23 -->
+<div id="tesko_uklapanje" class="section">
+  <h2>Kako pomoći djetetu koje se teško uklapa u razrednu sredinu?</h2>
+  <p>Dijete koje ima poteškoće u socijalnoj integraciji može osjećati izolaciju i nesigurnost. Podrška roditelja i strategije za jačanje socijalnih vještina ključni su za uspješnu integraciju.</p>
+
+  <h3>Strategije za socijalnu integraciju</h3>
+  <ul>
+    <li> <strong>Podrška u prijateljstvima:</strong> Potaknite dijete da se druži s vršnjacima i sudjeluje u grupnim aktivnostima.</li>
+    <li>💬 <strong>Razgovor o osjećajima:</strong> Pitajte dijete kako se osjeća u grupi i slušajte njegove brige.</li>
+    <li> <strong>Učenje socijalnih vještina:</strong> Vježbajte komunikaciju, rješavanje sukoba i izražavanje mišljenja kod kuće.</li>
+    <li> <strong>Suradnja sa školom:</strong> Ako je potrebno, razgovarajte s učiteljem kako bi se dijete podržalo u razredu.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Organizirajte male grupne aktivnosti ili igru s vršnjacima.</li>
+    <li>✔️ Pohvalite dijete kada pokaže inicijativu za druženje ili izrazi svoje mišljenje.</li>
+    <li>✔️ Podržite dijete u prevazilaženju socijalne nesigurnosti postupno, korak po korak.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strpljenje, podrška i konkretne socijalne vježbe pomažu djetetu da se osjeća sigurnije i uklopi u razrednu sredinu.
+  </div>
+</div>
+
+<!-- 24 -->
+<div id="skolska_rutina" class="section">
+  <h2>Koji su najbolji načini da podržimo djetetovu školsku rutinu?</h2>
+  <p>Rutina pomaže djetetu da se osjeća sigurno, organizirano i smanjuje stres. Dobro strukturiran dan uključuje vrijeme za školu, učenje, igru i odmor.</p>
+
+  <h3>Strategije za rutinu</h3>
+  <ul>
+    <li>📅 <strong>Redovni raspored:</strong> Svaki dan određeno vrijeme za školu, domaće zadatke i slobodne aktivnosti.</li>
+    <li>⏱️ <strong>Planiranje zadataka:</strong> Podijelite obaveze u manje dijelove i koristite vizualne podsjetnike.</li>
+    <li> <strong>Prilagodba djetetovim potrebama:</strong> Fleksibilnost je važna kako bi rutina bila održiva i motivirajuća.</li>
+    <li>💬 <strong>Praćenje i razgovor:</strong> Redovno razgovarajte o tome što dijete postiže i gdje ima poteškoća, bez stvaranja pritiska.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Zajedno osmislite raspored i označite vrijeme za sve obaveze.</li>
+    <li>✔️ Povremeno prilagodite rutinu ako dijete pokazuje znakove umora ili stresa.</li>
+    <li>✔️ Pohvalite dijete kada uspješno slijedi dnevnu rutinu i završava obaveze.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Rutina kombinira predvidljivost, fleksibilnost i pohvalu, što doprinosi emocionalnoj sigurnosti i boljoj organizaciji djeteta.
+  </div>
+</div>
+
+<!-- 25 -->
+<div id="pratiti_napredak" class="section">
+  <h2>Kako da pratimo školski napredak djeteta bez stvaranja pritiska?</h2>
+  <p>Praćenje napretka djeteta važno je za pravovremenu podršku i motivaciju. Ključno je pratiti rezultate i trud na način koji ne stvara stres ili osjećaj pritiska.</p>
+
+  <h3>Strategije praćenja napretka</h3>
+  <ul>
+    <li>📋 <strong>Bilježenje postignuća:</strong> Vodite dnevnik ili tablicu zadataka i napretka.</li>
+    <li>💬 <strong>Redovni razgovori:</strong> Pitajte dijete kako napreduje, slušajte i savjetujte bez kritike.</li>
+    <li> <strong>Pohvala za trud:</strong> Fokusirajte se na trud i proces, a ne samo konačne ocjene.</li>
+    <li> <strong>Suradnja sa školom:</strong> Redovno pratite ocjene i komentare nastavnika, te tražite savjete ako primijetite poteškoće.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Pohvalite svaki trud i napredak, bez obzira na konačan rezultat.</li>
+    <li>✔️ Zajedno analizirajte izazove i planirajte strategije za poboljšanje.</li>
+    <li>✔️ Koristite vizualne prikaze napretka poput grafikona ili listi za motivaciju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Praćenje napretka treba biti podrška i motivacija, a ne izvor stresa. Fokus na proces i trud gradi trajnu motivaciju i samopouzdanje kod djeteta.
+  </div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('prepoznati_problem'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

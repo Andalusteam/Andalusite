@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: goldenrod;
+      margin-bottom: 20px;
+    }
+
+    .profile-field {
+      margin-bottom: 15px;
+    }
+
+    .profile-field label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .profile-field input {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .profile-field input[readonly] {
+      background-color: #eee;
+      cursor: not-allowed;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      background: goldenrod;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .buttons button:hover {
+      background: darkgoldenrod;
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-container">
+  <h2>Moj Profil</h2>
+
+  <div class="profile-field">
+    <label for="name">Name</label>
+    <input type="text" id="name" value="John Doe" readonly>
+  </div>
+
+  <div class="profile-field">
+    <label for="email">Email</label>
+    <input type="email" id="email" value="johndoe@example.com" readonly>
+  </div>
+
+  <div class="profile-field">
+    <label for="password">Password</label>
+    <input type="password" id="password" value="password123" readonly>
+  </div>
+
+  <div class="buttons">
+    <button id="editBtn">Edit</button>
+    <button id="saveBtn" style="display:none;">Save</button>
+    <button id="cancelBtn" style="display:none;">Cancel</button>
+    <button id="homeBtn">Go Home</button>
+  </div>
+
+  <p id="popup-copy-status" style="display:none; color:green; text-align:center; margin-top:10px;">Profile updated!</p>
+</div>
+
+<script>
+  const editBtn = document.getElementById('editBtn');
+  const saveBtn = document.getElementById('saveBtn');
+  const cancelBtn = document.getElementById('cancelBtn');
+  const homeBtn = document.getElementById('homeBtn');
+
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const statusMsg = document.getElementById('popup-copy-status');
+
+  // Store original values for cancel
+  let originalValues = {
+    name: nameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value
+  };
+
+  // Edit button
+  editBtn.addEventListener('click', () => {
+    nameInput.removeAttribute('readonly');
+    emailInput.removeAttribute('readonly');
+    passwordInput.removeAttribute('readonly');
+
+    editBtn.style.display = 'none';
+    saveBtn.style.display = 'inline-block';
+    cancelBtn.style.display = 'inline-block';
+  });
+
+  // Save button
+  saveBtn.addEventListener('click', () => {
+    nameInput.setAttribute('readonly', true);
+    emailInput.setAttribute('readonly', true);
+    passwordInput.setAttribute('readonly', true);
+
+    originalValues = {
+      name: nameInput.value,
+      email: emailInput.value,
+      password: passwordInput.value
+    };
+
+    editBtn.style.display = 'inline-block';
+    saveBtn.style.display = 'none';
+    cancelBtn.style.display = 'none';
+
+    // Show temporary success message
+    statusMsg.textContent = 'Profile updated successfully!';
+    statusMsg.style.display = 'block';
+    setTimeout(() => {
+      statusMsg.style.display = 'none';
+    }, 2000);
+  });
+
+  // Cancel button
+  cancelBtn.addEventListener('click', () => {
+    nameInput.value = originalValues.name;
+    emailInput.value = originalValues.email;
+    passwordInput.value = originalValues.password;
+
+    nameInput.setAttribute('readonly', true);
+    emailInput.setAttribute('readonly', true);
+    passwordInput.setAttribute('readonly', true);
+
+    editBtn.style.display = 'inline-block';
+    saveBtn.style.display = 'none';
+    cancelBtn.style.display = 'none';
+  });
+
+  // Go Home button
+  homeBtn.addEventListener('click', () => {
+    window.location.href = "index.html"; // Redirect to home page
+  });
+</script>
+
+</body>
+</html>

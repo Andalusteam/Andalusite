@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o softveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sve o umrežavanju</h1>
+<nav>
+<!-- Left Side List -->
+<button onclick="showSection('sto_je_networking')">Što je umrežavanje i zašto je važno?</button>
+<button onclick="showSection('kako_poceti')">Kako započeti s umrežavanjem?</button>
+<button onclick="showSection('osobno_vs_online')">Razlika između online i osobnog networkinga?</button>
+<button onclick="showSection('predstavljanje')">Kako se predstaviti na događaju?</button>
+<button onclick="showSection('linkedin')">Koje su najbolje platforme za networking?</button>
+<button onclick="showSection('prvi_dojam')">Kako ostaviti dobar dojam?</button>
+<button onclick="showSection('odrzavanje_kontakata')">Kako održavati kontakte?</button>
+<button onclick="showSection('umrezavanje_student')">Kako se umrežavati kao student?</button>
+<button onclick="showSection('nema_iskustva')">Što ako nemam iskustva ni poznanstava?</button>
+<button onclick="showSection('intimnost_i_pristojnost')">Kako ne biti nametljiv u kontaktu?</button>
+<button onclick="showSection('zatrazi_pomoc')">Kako zatražiti savjet od nepoznatih osoba?</button>
+<button onclick="showSection('networking_email')">Kako napisati dobru poruku za networking?</button>
+<button onclick="showSection('strah_i_odbijanje')">Što ako me netko odbije ili ignorira?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('introvert_networking')">Što ako sam sramežljiv ili introvertiran?</button>
+<button onclick="showSection('neugodne_situacije')">Kako se nositi s neugodnim situacijama?</button>
+<button onclick="showSection('iskrenost_vs_interes')">Kako razlikovati iskreni interes od koristi?</button>
+<button onclick="showSection('preuporan')">Kako znati jesam li previše uporan?</button>
+<button onclick="showSection('nema_vremena')">Što ako nemam vremena za networking?</button>
+<button onclick="showSection('student_praksa')">Kako tražiti praksu preko mreže kontakata?</button>
+<button onclick="showSection('online_eventi')">Kako sudjelovati u online eventima?</button>
+<button onclick="showSection('personal_brand')">Što je personal brand i zašto je važan?</button>
+<button onclick="showSection('linkedin_poruka')">Je li u redu pisati nepoznatima na LinkedInu?</button>
+<button onclick="showSection('pitanja_na_dogadjaju')">Koja pitanja postaviti na događaju?</button>
+<button onclick="showSection('kako_zadrzati_kontakt')">Kako zadržati kontakt dugoročno?</button>
+<button onclick="showSection('networking_zasto')">Zašto je networking važan za karijeru?</button>
+</nav>
+
+<div id="sto_je_networking" class="section">
+  <h2>Što je umrežavanje i zašto je važno?</h2>
+  <p><strong>Umrežavanje (networking)</strong> je proces stvaranja i održavanja profesionalnih i osobnih kontakata koji mogu pomoći u razmjeni informacija, iskustava, resursa i prilika. To nije samo razmjena vizitki – radi se o izgradnji odnosa temeljenih na povjerenju i zajedničkim interesima.</p>
+
+  <h3>Zašto je networking važan?</h3>
+  <ul>
+    <li><strong>Pristup informacijama:</strong> Kroz kontakte možete dobiti vrijedne informacije o industriji, poslovima, prilikama i trendovima.</li>
+    <li><strong>Karierni razvoj:</strong> Networking povećava šanse za pronalazak posla, prakse ili partnera za projekte.</li>
+    <li><strong>Razmjena iskustava:</strong> Kontakt s iskusnijim profesionalcima omogućava učenje iz tuđih iskustava i izbjegavanje uobičajenih pogrešaka.</li>
+    <li><strong>Osnaživanje profesionalnog ugleda:</strong> Aktivno umrežavanje pomaže u izgradnji reputacije i kredibiliteta u industriji.</li>
+    <li><strong>Povezivanje s mentorima:</strong> Networking može dovesti do pronalaska mentora koji će pružiti smjernice i savjete.</li>
+    <li><strong>Podrška i suradnja:</strong> Kontakti često nude podršku ili suradnju na projektima, što olakšava ostvarenje ciljeva.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Studenti se umrežavaju s profesorima i alumnijima kako bi dobili praksu ili posao.</li>
+    <li>Poduzetnici koriste networking događaje kako bi pronašli investitore ili partnere.</li>
+    <li>Profesionalci koriste LinkedIn za povezivanje s kolegama iz industrije i pronalazak poslovnih prilika.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Umrežavanje je dugoročan proces. Fokusiraj se na izgradnju kvalitetnih odnosa, a ne samo na količinu kontakata.
+  </div>
+</div>
+
+<div id="kako_poceti" class="section">
+  <h2>Kako započeti s umrežavanjem?</h2>
+  <p>Početak umrežavanja može biti zastrašujuć, ali uz pravilan pristup, brzo se mogu izgraditi vrijedni kontakti. Ključ je u strategiji i postepenom pristupu.</p>
+
+  <h3>Koraci za početak</h3>
+  <ul>
+    <li><strong>Definiraj ciljeve:</strong> Odredi što želiš postići – posao, praksu, mentorstvo, poslovnu suradnju ili nova znanja.</li>
+    <li><strong>Identificiraj relevantne ljude:</strong> Istraži tko u tvojoj industriji ili zajednici može biti od pomoći ili imati slične interese.</li>
+    <li><strong>Kreni s malim koracima:</strong> Počni s prijateljima, kolegama, profesorima ili poznanicima koji ti mogu dati uvod u širu mrežu.</li>
+    <li><strong>Pridruži se događajima i grupama:</strong> Posjećuj konferencije, seminare, online grupe i lokalne meetupe relevantne za tvoju industriju.</li>
+    <li><strong>Pripremi se:</strong> Imati jasnu priču o sebi, svojim interesima i ciljevima olakšava prvi kontakt.</li>
+    <li><strong>Koristi online platforme:</strong> LinkedIn, Twitter, Slack zajednice i forumi mogu pomoći u početku umrežavanja bez fizičkog kontakta.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student se povezuje s alumnijima putem LinkedIn-a kako bi dobio savjete o praksi.</li>
+    <li>Mlađi profesionalac prisustvuje lokalnoj konferenciji i razgovara s predavačima nakon prezentacija.</li>
+    <li>Poduzetnik se pridružuje Facebook grupama ili Slack zajednicama relevantnim za njegovu industriju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Početak ne znači imati tisuće kontakata. Fokusiraj se na kvalitetne i relevantne kontakte, a mreža će se s vremenom širiti prirodno.
+  </div>
+</div>
+
+<div id="osobno_vs_online" class="section">
+  <h2>Razlika između online i osobnog networkinga</h2>
+  <p>Networking se može odvijati <strong>online</strong> i <strong>osobno</strong>. Obje metode imaju prednosti i izazove, a uspješan networker koristi kombinaciju obiju.</p>
+
+  <h3>Osobni networking</h3>
+  <ul>
+    <li><strong>Direktan kontakt:</strong> Osobni susreti omogućuju bolje razumijevanje neverbalne komunikacije, poput izraza lica, gestikulacije i tona glasa.</li>
+    <li><strong>Jača emocionalna povezanost:</strong> Lica u lice susreti često stvaraju jači osjećaj povjerenja i odnosa.</li>
+    <li><strong>Veće prilike za spontanost:</strong> Sudjelovanje na događajima, konferencijama ili radionicama omogućuje neplanirane kontakte i prilike.</li>
+    <li><strong>Primjeri:</strong> Networking događaji, profesionalne konferencije, poslovni ručkovi ili studentske radionice.</li>
+  </ul>
+
+  <h3>Online networking</h3>
+  <ul>
+    <li><strong>Šira dostupnost:</strong> Online platforme omogućuju povezivanje s ljudima globalno, bez geografskih ograničenja.</li>
+    <li><strong>Fleksibilnost:</strong> Možeš graditi mrežu u bilo kojem trenutku putem LinkedIn-a, Twitter-a, foruma ili Slack grupa.</li>
+    <li><strong>Pisanjem do izražaja:</strong> Online komunikacija često se oslanja na jasne i profesionalne poruke ili postove.</li>
+    <li><strong>Primjeri:</strong> LinkedIn, profesionalni Facebook i Discord grupe, online webinari i forumi.</li>
+  </ul>
+
+  <h3>Prednosti i izazovi</h3>
+  <ul>
+    <li>Osobni networking gradi dublje odnose, ali zahtijeva više vremena i fizičku prisutnost.</li>
+    <li>Online networking omogućuje brzu povezanost i širok doseg, ali ponekad je teže stvoriti osobni kontakt i povjerenje.</li>
+    <li>Uspješni networkeri kombiniraju obje metode: osobni susreti jačaju odnose, a online prisutnost proširuje mrežu i održava kontakte.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nemoj zanemariti nijednu metodu. Koristi online networking za inicijalni kontakt i održavanje veze, a osobne susrete za jačanje povjerenja i dubljih odnosa.
+  </div>
+</div>
+
+<div id="predstavljanje" class="section">
+  <h2>Kako se predstaviti na događaju?</h2>
+  <p>Pravilno predstavljanje na događaju ključno je za dobar prvi dojam i uspješno umrežavanje. Važno je biti jasan, profesionalan i pristupačan.</p>
+
+  <h3>Koraci za uspješno predstavljanje</h3>
+  <ul>
+    <li><strong>Pripremi kratku prezentaciju:</strong> Osmisli „elevator pitch“ od 30–60 sekundi u kojem predstaviš tko si, čime se baviš i što tražiš.</li>
+    <li><strong>Osmijeh i kontakt očima:</strong> Pokazuje prijateljstvo i samopouzdanje, a povećava šanse da osoba zapamti tvoj susret.</li>
+    <li><strong>Prijateljski ton i pristup:</strong> Budi pristupačan, slušaj i postavljaj pitanja kako bi pokazao interes za drugu osobu.</li>
+    <li><strong>Ne pretjeruj:</strong> Nemoj previše govoriti o sebi – fokusiraj se na kvalitetan i kratak uvod.</li>
+    <li><strong>Razmjena kontakata:</strong> Ponudi vizitku ili poveži se putem LinkedIn-a nakon razgovora.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Na studentskoj konferenciji, student se predstavi profesorima i alumnijima kratkim opisom studija i interesa.</li>
+    <li>Na poslovnoj radionici, mlad poduzetnik predstavi svoj startup i što traži od potencijalnih investitora ili partnera.</li>
+    <li>Na meetup-u, profesionalac predstavi sebe i svoj projekt, a zatim postavi pitanje osobi s kojom razgovara kako bi pokazao interes.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Vježbaj svoj „elevator pitch“ i prilagodi ga publici. Budi prirodan i pokaži iskreni interes za osobu s kojom razgovaraš.
+  </div>
+</div>
+
+<div id="linkedin" class="section">
+  <h2>Koje su najbolje platforme za networking?</h2>
+  <p>Platforme za networking omogućuju povezivanje s profesionalcima, mentorima i potencijalnim poslodavcima. Pravilno korištenje ovih alata može značajno proširiti tvoju mrežu i karijerne prilike.</p>
+
+  <h3>Najpopularnije i učinkovite platforme</h3>
+  <ul>
+    <li><strong>LinkedIn:</strong> Najpoznatija profesionalna mreža. Omogućuje kreiranje profesionalnog profila, povezivanje s kolegama, alumni, mentorima i sudjelovanje u grupama i diskusijama.</li>
+    <li><strong>Twitter:</strong> Kroz profesionalne teme i praćenje stručnjaka možeš učiti, komentirati i povezivati se s ljudima iz industrije.</li>
+    <li><strong>Facebook grupe:</strong> Postoje mnoge profesionalne i studentske grupe fokusirane na razmjenu informacija, savjeta i prilika.</li>
+    <li><strong>Slack zajednice:</strong> Online chat platforme često imaju zajednice fokusirane na tehnologiju, startupove, marketing i druge industrije.</li>
+    <li><strong>Meetup:</strong> Organizacija i pronalazak lokalnih događaja i meetup-a za profesionalno umrežavanje.</li>
+    <li><strong>Eventbrite i Zoom webinari:</strong> Online događaji i webinari pružaju mogućnost sudjelovanja u globalnim diskusijama i povezivanja s predavačima.</li>
+  </ul>
+
+  <h3>Savjeti za korištenje platformi</h3>
+  <ul>
+    <li>Redovito ažuriraj profil i istakni vještine, projekte i postignuća.</li>
+    <li>Prati i poveži se s ljudima iz tvoje industrije i interesa.</li>
+    <li>Sudjeluj u grupama, diskusijama i događajima kako bi povećao vidljivost.</li>
+    <li>Pošalji personaliziranu poruku pri povezivanju – izbjegavaj generičke pozive.</li>
+    <li>Koristi platforme za učenje, traženje prakse i pronalazak mentora, a ne samo za dodavanje kontakata.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student povezuje se s alumnijima preko LinkedIn-a i traži savjet za praksu.</li>
+    <li>Junior developer sudjeluje u Slack zajednicama i dobiva preporuke za online tečajeve i projekte.</li>
+    <li>Poduzetnik koristi Meetup za pronalazak potencijalnih partnera i sudjelovanje u lokalnim startup događajima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kombiniraj više platformi. LinkedIn je ključan za profesionalni image, dok Slack, Twitter i lokalni eventi pomažu u održavanju i proširenju mreže.
+  </div>
+</div>
+
+<div id="prvi_dojam" class="section">
+  <h2>Kako ostaviti dobar dojam?</h2>
+  <p>Prvi dojam je često ključan u umrežavanju. Ljudi pamte tvoju komunikaciju, ponašanje i energiju tijekom prvog susreta, što može utjecati na dugoročne profesionalne odnose.</p>
+
+  <h3>Koraci za ostavljanje dobrog dojma</h3>
+  <ul>
+    <li><strong>Profesionalni izgled:</strong> Odjeni se prikladno događaju ili industriji i pokaži da ozbiljno pristupaš susretu.</li>
+    <li><strong>Samopouzdanje:</strong> Stoj uspravno, osmjehni se i ostavi dojam otvorene i prijateljske osobe.</li>
+    <li><strong>Jasan i kratak uvod:</strong> Predstavi se sa svojim imenom, pozicijom ili studijem i svojim ciljem na događaju.</li>
+    <li><strong>Aktivno slušanje:</strong> Pokazuj interes postavljanjem pitanja i potvrđivanjem onoga što druga osoba govori.</li>
+    <li><strong>Neverbalna komunikacija:</strong> Kontakt očima, osmijeh i otvorena držanja tijela stvaraju pozitivnu energiju.</li>
+    <li><strong>Prilagodba razgovoru:</strong> Prilagodi ton, brzinu i sadržaj razgovora osobi s kojom razgovaraš.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student na karijernom sajmu pristupi predavaču s osmijehom, predstavi se i postavi pametno pitanje – ostavlja pozitivan dojam.</li>
+    <li>Mlad profesionalac na meetupu razgovara s kolegom iz industrije, pokazuje slušanje i zabilježi važnu informaciju – stvara dugoročan dojam.</li>
+    <li>Poduzetnik na konferenciji koristi vizitke i povezuje se s ljudima nakon kratkog, jasnog predstavljanja – učinkovito širi mrežu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Fokusiraj se na kvalitetu interakcije, a ne količinu kontakata. Dobar dojam dolazi iz samopouzdanja, profesionalnosti i iskrenog interesa za druge.
+  </div>
+</div>
+
+<div id="odrzavanje_kontakata" class="section">
+  <h2>Kako održavati kontakte?</h2>
+  <p>Stvaranje kontakata samo je prvi korak u umrežavanju. Održavanje veza ključno je za dugoročne profesionalne odnose i mogućnosti suradnje.</p>
+
+  <h3>Strategije za održavanje kontakata</h3>
+  <ul>
+    <li><strong>Redovita komunikacija:</strong> Povremeno šalji poruke, čestitke ili ažuriranja kako bi ostao prisutan u mreži.</li>
+    <li><strong>Koristi društvene mreže:</strong> LinkedIn, e-mail ili profesionalni forumi omogućuju praćenje aktivnosti i održavanje veze.</li>
+    <li><strong>Ponuda vrijednosti:</strong> Dijeli korisne informacije, članke ili prilike s kontaktima – ne traži samo sebi korist.</li>
+    <li><strong>Pridruži se zajedničkim događajima:</strong> Sudjelovanje na webinarima, konferencijama i radionicama pomaže u održavanju odnosa.</li>
+    <li><strong>Podsjeti se na zajedničke interese:</strong> Spomeni projekte, teme ili iskustva koja ste dijelili kako bi veza bila prirodna i iskrena.</li>
+    <li><strong>Planiraj povremene susrete:</strong> Ako je moguće, osobni susreti ili pozivi jačaju odnose i povjerenje.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje alumniju LinkedIn poruku jednom mjesečno s pitanjem ili zanimljivim člankom iz industrije.</li>
+    <li>Profesionalac prisustvuje godišnjoj konferenciji i ponovno se povezuje s poznatim kolegama iz prethodnih godina.</li>
+    <li>Poduzetnik dijeli informacije o novim projektima ili startup natječajima s partnerima iz mreže kontakata.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Održavanje kontakata nije jednokratna aktivnost. Redovito komuniciraj, dijeli vrijednost i pokaži iskreni interes za druge kako bi mreža bila snažna i korisna dugoročno.
+  </div>
+</div>
+
+<div id="umrezavanje_student" class="section">
+  <h2>Kako se umrežavati kao student?</h2>
+  <p>Umrežavanje kao student ključno je za stjecanje iskustva, pronalazak prakse, poslova i mentora. Iako možda nemaš puno profesionalnih kontakata, postoje strategije koje ti mogu pomoći.</p>
+
+  <h3>Koraci za studentski networking</h3>
+  <ul>
+    <li><strong>Iskoristi fakultetske resurse:</strong> Poveži se s profesorima, asistentima i alumnijima. Oni često imaju informacije o praksama i poslovima.</li>
+    <li><strong>Sudjeluj u studentskim organizacijama:</strong> Klubovi, udruge i studentske sekcije odlični su za upoznavanje ljudi sličnih interesa.</li>
+    <li><strong>Posjećuj događaje i karijerne sajmove:</strong> Mogućnost izravnog susreta s profesionalcima i poslodavcima pruža prve kontakte u industriji.</li>
+    <li><strong>Kombiniraj online i offline:</strong> Poveži se s alumnijima i profesionalcima preko LinkedIn-a ili fakultetskih grupa online.</li>
+    <li><strong>Postavljaj pitanja i traži savjete:</strong> Nemoj se bojati tražiti pomoć i informacije – većina iskusnijih osoba želi pomoći studentima.</li>
+    <li><strong>Prati i održavaj kontakte:</strong> Nakon prvog kontakta, šalji zahvalne poruke ili ažuriranja o svom napretku.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student pridruži LinkedIn grupi fakulteta i povezuje se s alumnijima kako bi dobio savjete o praksi.</li>
+    <li>Sudjeluje u studentskom klubu IT-a i upoznaje profesionalce na tematskim radionicama.</li>
+    <li>Na karijernom sajmu predstavlja svoj projekt i razmjenjuje kontakte s poslodavcima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Počni s malim koracima i fokusiraj se na kvalitetne kontakte. Aktivno sudjelovanje u fakultetskim i online zajednicama otvara prilike koje kasnije mogu prerasti u praksu ili posao.
+  </div>
+</div>
+
+<div id="nema_iskustva" class="section">
+  <h2>Što ako nemam iskustva ni poznanstava?</h2>
+  <p>Mnogi studenti i početnici u karijeri suočavaju se s izazovom nedostatka iskustva i profesionalnih kontakata. Ipak, postoje strategije koje mogu pomoći u umrežavanju i otvaranju prilika.</p>
+
+  <h3>Kako nadoknaditi nedostatak iskustva i kontakata</h3>
+  <ul>
+    <li><strong>Počni s učenjem i projektima:</strong> Aktivno sudjeluj u fakultetskim projektima, volontiraj ili radi na osobnim projektima kako bi stekao praktično iskustvo.</li>
+    <li><strong>Koristi online zajednice:</strong> Pridruži se LinkedIn grupama, forumima i profesionalnim Slack zajednicama gdje možeš učiti i povezati se s iskusnijima.</li>
+    <li><strong>Traži mentore:</strong> Obrati se profesorima, alumni ili stručnjacima iz industrije za savjete i smjernice – mnogi su voljni pomoći početnicima.</li>
+    <li><strong>Sudjeluj na događajima:</strong> Karijerni sajmovi, konferencije i radionice odlična su prilika za prve kontakte, čak i bez prethodnog iskustva.</li>
+    <li><strong>Pripremi dobar „elevator pitch“:</strong> Jasno predstavi svoje interese, motivaciju i ciljeve – iskren entuzijazam često ostavlja dobar dojam bez obzira na iskustvo.</li>
+    <li><strong>Kombiniraj online i osobni pristup:</strong> Počni s online povezivanjem, a kasnije dogovori kratke razgovore ili sastanke uživo.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student bez radnog iskustva pridruži se LinkedIn grupama vezanim uz IT i postavlja pitanja stručnjacima, dobivajući savjete i preporuke.</li>
+    <li>Početnik volontira u studentskom klubu, što mu omogućuje izgradnju portfelja i stjecanje prvih kontakata.</li>
+    <li>Mlada osoba šalje poruke alumnijima i traži kratak savjet – takvi kontakti često prerastu u mentorstvo ili preporuke za praksu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nedostatak iskustva nije prepreka – iskazivanje entuzijazma, aktivno učenje i inicijativa često otvaraju vrata koja formalno iskustvo još ne može.
+  </div>
+</div>
+
+<div id="intimnost_i_pristojnost" class="section">
+  <h2>Kako ne biti nametljiv u kontaktu?</h2>
+  <p>Prilikom umrežavanja važno je uspostaviti profesionalan i prijateljski odnos bez da osoba osjeća pritisak ili nelagodu. Nametljivost može stvoriti negativan dojam i otežati daljnju suradnju.</p>
+
+  <h3>Strategije za pristojan kontakt</h3>
+  <ul>
+    <li><strong>Poštuj vrijeme druge osobe:</strong> Budi kratak i jasan u komunikaciji, posebno pri prvom kontaktu.</li>
+    <li><strong>Personaliziraj poruke:</strong> Umjesto generičkih poruka, spomeni zajedničke interese ili kontekst u kojem ste se upoznali.</li>
+    <li><strong>Pitanja umjesto zahtjeva:</strong> Postavljaj pitanja i traži savjete, umjesto da odmah tražiš usluge ili prednosti.</li>
+    <li><strong>Ne pritiskaj:</strong> Ako osoba ne odgovori odmah, nemoj slati višestruke poruke ili zvati više puta – strpljenje je ključno.</li>
+    <li><strong>Pratite tijek razgovora:</strong> Ako primijetiš da osoba nije zainteresirana, nemoj forsirati daljnju komunikaciju.</li>
+    <li><strong>Održavaj profesionalni ton:</strong> Budi ljubazan, zahvalan i iskren u svim kontaktima.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje alumniju LinkedIn poruku s pitanjem o karijeri i zahvaljuje se na odgovoru, bez dodatnog pritiska za nastavak komunikacije.</li>
+    <li>Mlad profesionalac upita kolegu za savjet nakon konferencije, a potom strpljivo čeka odgovor, ne šaljući višestruke poruke.</li>
+    <li>Poduzetnik kontaktira potencijalnog investitora s jasno definiranim pitanjem, bez pretjeranog insistiranja ili nametljivih zahtjeva.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Fokusiraj se na kvalitetu, a ne kvantitetu kontakata. Budi pristojan, strpljiv i iskren – takav pristup gradi dugoročno povjerenje.
+  </div>
+</div>
+
+<div id="zatrazi_pomoc" class="section">
+  <h2>Kako zatražiti savjet od nepoznatih osoba?</h2>
+  <p>Traženje savjeta od osoba koje ne poznaješ može biti učinkovito, ali zahtijeva taktičnost i profesionalni pristup kako bi ostavio pozitivan dojam i dobio korisne informacije.</p>
+
+  <h3>Koraci za traženje savjeta</h3>
+  <ul>
+    <li><strong>Pripremi se:</strong> Istraži osobu i njezin rad, kako bi mogao postaviti relevantno pitanje.</li>
+    <li><strong>Personaliziraj poruku:</strong> Objasni tko si, zašto se obraćaš i što konkretno želiš saznati ili naučiti.</li>
+    <li><strong>Budi kratak i jasan:</strong> Postavi jedno ili dva specifična pitanja – izbjegavaj preopširne poruke.</li>
+    <li><strong>Prikaži zahvalnost:</strong> Zahvali osobi unaprijed za vrijeme i savjet koji će ti pružiti.</li>
+    <li><strong>Ne traži usluge odmah:</strong> Fokusiraj se na učenje i savjet, a ne na traženje posla ili direktne koristi.</li>
+    <li><strong>Održi kontakt:</strong> Ako osoba odgovori, zahvali se i, ako je prikladno, prati s kratkom porukom o napretku ili rezultatima primljenih savjeta.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje LinkedIn poruku alumni stručnjaku: „Zanima me vaš pristup u projektu X, možete li podijeliti savjet kako ste riješili izazove?“</li>
+    <li>Mlad profesionalac pita iskusnog kolegu na konferenciji za kratku preporuku o alatu koji koristi u industriji.</li>
+    <li>Poduzetnik traži mentorstvo i šalje personaliziranu poruku objašnjavajući svoj projekt i konkretno pitanje za savjet.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Budi iskren, konkretan i profesionalan. Takav pristup povećava šanse za pozitivan odgovor i dugoročno kvalitetan kontakt.
+  </div>
+</div>
+
+<div id="networking_email" class="section">
+  <h2>Kako napisati dobru poruku za networking?</h2>
+  <p>Dobra poruka za networking ključna je za uspostavljanje profesionalnog kontakta i ostavljanje pozitivnog prvog dojma. Poruka mora biti jasna, pristojna i personalizirana.</p>
+
+  <h3>Koraci za pisanje učinkovite poruke</h3>
+  <ul>
+    <li><strong>Personalizacija:</strong> Spomeni ime osobe i kontekst u kojem se obraćaš, npr. zajednički događaj, članak ili industrija.</li>
+    <li><strong>Kratko predstavljanje:</strong> Ukratko reci tko si, što radiš ili studiraš i zašto se obraćaš toj osobi.</li>
+    <li><strong>Jasno pitanje ili cilj:</strong> Definiraj što tražiš – savjet, preporuku, informaciju ili potencijalnu suradnju.</li>
+    <li><strong>Pristojan ton:</strong> Budi ljubazan, zahvalan i profesionalan, izbjegavaj zahtjeve i agresivan ton.</li>
+    <li><strong>Zahvala:</strong> Uvijek završi poruku zahvalom i, po mogućnosti, otvorenom završnom rečenicom za daljnju komunikaciju.</li>
+    <li><strong>Kratko i sažeto:</strong> Idealno poruka ne bi trebala biti duža od 5–7 rečenica.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>„Poštovani [Ime], vidio sam vaš članak o [tema]. Ja sam student [smjer] i zanima me vaš savjet o [konkretno pitanje]. Hvala unaprijed na vašem vremenu!“</li>
+    <li>„Bok [Ime], sudjelovao sam na konferenciji [naziv] gdje ste govorili o [tema]. Zanima me vaš pristup rješavanju [problem]. Rado bih čuo vaš savjet!“</li>
+    <li>„Pozdrav [Ime], vidio sam vaš projekt [naziv]. Ja sam početnik u [industrija] i bilo bi mi dragocjeno ako biste podijelili nekoliko savjeta.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Provjeri poruku prije slanja – ispravan pravopis, profesionalan ton i personalizacija povećavaju šanse za pozitivan odgovor.
+  </div>
+</div>
+
+<div id="strah_i_odbijanje" class="section">
+  <h2>Što ako me netko odbije ili ignorira?</h2>
+  <p>Odbijanje ili ignoriranje prirodni su dio umrežavanja. Čak i iskusni profesionalci ponekad ne odgovore zbog zauzetosti ili prioriteta. Ključno je ne osobno uzimati takve situacije i koristiti ih za učenje i rast.</p>
+
+  <h3>Kako se nositi s odbijanjem ili ignoriranjem</h3>
+  <ul>
+    <li><strong>Ne shvaćaj osobno:</strong> Razlozi odbijanja često nisu povezani s tobom osobno, već s rasporedom ili interesom druge osobe.</li>
+    <li><strong>Sačuvaj profesionalizam:</strong> Ako odgovore, zahvaliti se i nastavi održavati profesionalni ton; ako ne odgovore, ne šalji višestruke poruke ili pritiske.</li>
+    <li><strong>Analiziraj poruku:</strong> Provjeri možeš li poboljšati način komunikacije ili personalizaciju poruke za sljedeći put.</li>
+    <li><strong>Nastavi dalje:</strong> Umrežavanje je dugoročan proces; odbijanje nije kraj, nego prilika da kontaktiraš druge relevantne osobe.</li>
+    <li><strong>Uči iz iskustva:</strong> Bilježi što je dobro funkcioniralo, a što ne, i primijeni naučeno u budućim kontaktima.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student pošalje poruku alumniju koji je zauzet i ne odgovori – student nastavlja tražiti savjete od drugih stručnjaka i sudjeluje na događajima.</li>
+    <li>Mlad profesionalac kontaktira mentoricu koja ne odgovori – koristi iskustvo za bolje formuliranje poruka sljedeći put.</li>
+    <li>Poduzetnik dobije negativan odgovor od investitora – koristi povratnu informaciju da poboljša pitch i kontaktira druge potencijalne investitore.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Odbijanje nije znak neuspjeha. Ostani strpljiv, profesionalan i uporni u izgradnji mreže kontakata – dugoročno će donijeti rezultate.
+  </div>
+</div>
+
+<div id="introvert_networking" class="section">
+  <h2>Što ako sam sramežljiv ili introvertiran?</h2>
+  <p>Biti sramežljiv ili introvertiran nije prepreka za uspješno umrežavanje. Postoje strategije koje omogućuju efektivnu komunikaciju i izgradnju kontakata bez osjećaja nelagode.</p>
+
+  <h3>Strategije za introverte</h3>
+  <ul>
+    <li><strong>Priprema prije događaja:</strong> Osmisli nekoliko pitanja ili tema o kojima možeš razgovarati – to smanjuje anksioznost.</li>
+    <li><strong>Počni s malim grupama:</strong> Umjesto velikih događaja, fokusiraj se na manje sastanke ili radione gdje je lakše uspostaviti razgovor.</li>
+    <li><strong>Koristi online networking:</strong> Introverti često bolje komuniciraju pisanim putem – LinkedIn, e-mail ili forumi omogućuju postavljanje pitanja i povezivanje bez direktnog pritiska.</li>
+    <li><strong>Aktivno slušanje:</strong> Fokusiraj se na slušanje i postavljanje pitanja – to ostavlja dobar dojam, a ne zahtijeva dominantno izlaganje.</li>
+    <li><strong>Postupno proširivanje mreže:</strong> Počni s poznanicima ili kolegama, a zatim polako gradi kontakte s novim ljudima.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student introvert koristi LinkedIn da postavi pitanja alumniju prije konferencije, a nakon toga se upoznaje osobno s nekoliko ljudi koje je online već kontaktirao.</li>
+    <li>Mlad profesionalac na malom meetup-u razgovara s dvije-tri osobe umjesto da pokušava pristupiti cijeloj grupi.</li>
+    <li>Početnik u industriji priprema unaprijed pitanja i bilježi bilješke kako bi lakše započeo razgovor s mentorom ili predavačem.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Introverti mogu uspješno umrežavati koristeći pripremu, slušanje i online platforme. Kvaliteta kontakata je važnija od kvantitete.
+  </div>
+</div>
+
+<div id="neugodne_situacije" class="section">
+  <h2>Kako se nositi s neugodnim situacijama?</h2>
+  <p>Neugodne situacije tijekom networking događaja mogu uključivati prekid razgovora, nesporazume ili neugodnu tišinu. Ključno je ostati smiren, profesionalan i prilagoditi pristup situaciji.</p>
+
+  <h3>Strategije za rješavanje neugodnih situacija</h3>
+  <ul>
+    <li><strong>Ostani smiren:</strong> Ne paničari i ne reagiraj impulzivno – kontrola emocija pokazuje profesionalnost.</li>
+    <li><strong>Prilagodi ton i sadržaj:</strong> Ako osjetiš da druga osoba nije zainteresirana, promijeni temu ili smanji intenzitet razgovora.</li>
+    <li><strong>Koristi humor:</strong> Lagani humor može razbiti napetost, ali ga koristi suptilno i primjereno.</li>
+    <li><strong>Pozitivan završetak:</strong> Ako razgovor ne ide, završi ga zahvalom i osmijehom – ostavljaš dobar dojam i mogućnost budućeg kontakta.</li>
+    <li><strong>Uči iz situacije:</strong> Analiziraj što je uzrok neugode i koristi iskustvo za buduće događaje.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student osjeti da je tema razgovora dosadna drugoj osobi – promijeni pitanje i uključi zajedničke interese.</li>
+    <li>Mlad profesionalac se na konferenciji suoči s tišinom – koristi osmijeh i postavi otvoreno pitanje kako bi pokrenuo razgovor.</li>
+    <li>Poduzetnik doživljava nesporazum u razgovoru – ispravi nesporazum smireno i zahvaljuje se na razgovoru, održavajući profesionalni dojam.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Neugodnosti su normalne. Profesionalan, smiren i prilagodljiv pristup pomaže u održavanju dobrog dojma i izgradnji dugoročnih kontakata.
+  </div>
+</div>
+
+<div id="iskrenost_vs_interes" class="section">
+  <h2>Kako razlikovati iskreni interes od koristi?</h2>
+  <p>U networking situacijama važno je prepoznati kada netko iskreno pokazuje interes za suradnju ili razgovor, a kada je motiviran isključivo osobnom koristi. Prepoznavanje razlike pomaže u usmjeravanju energije i izgradnji kvalitetnih odnosa.</p>
+
+  <h3>Kako prepoznati iskreni interes?</h3>
+  <ul>
+    <li><strong>Aktivno slušanje:</strong> Osoba postavlja pitanja i pokazuje stvarni interes za tvoje projekte, iskustva i ciljeve.</li>
+    <li><strong>Pristup bez pritiska:</strong> Ne očekuje odmah neku uslugu ili koristi od tebe.</li>
+    <li><strong>Dijeljenje iskustava:</strong> Daje savjete i informacije koje su korisne i relevantne bez ikakvih skrivenih motiva.</li>
+    <li><strong>Stvaranje dugoročnog odnosa:</strong> Fokus je na međusobnom učenju, suradnji i podršci, a ne na kratkoročnoj koristi.</li>
+  </ul>
+
+  <h3>Kako prepoznati motiviranu osobnu korist</h3>
+  <ul>
+    <li><strong>Brzo traženje usluge:</strong> Osoba odmah pita za preporuke, poslove ili resurse bez upoznavanja ili razgovora.</li>
+    <li><strong>Ograničen interes:</strong> Postavljaju minimalna pitanja ili pokazuju interes samo za specifične koristi.</li>
+    <li><strong>Neodržavanje kontakta:</strong> Nakon što dobije ono što želi, komunikacija prestaje.</li>
+    <li><strong>Naglašena vlastita korist:</strong> Fokus razgovora je pretežno na tome što oni mogu dobiti od tebe, a ne na zajedničkom rastu.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Alumni dijeli savjete studentu o karijeri bez ikakvih očekivanja – iskreni interes.</li>
+    <li>Osoba na konferenciji traži preporuku ili kontakt odmah, bez prethodnog razgovora – motivirana osobnom koristi.</li>
+    <li>Mentor nudi smjernice i resurse te prati napredak mentee-a – iskreni interes i dugoročna podrška.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Fokusiraj se na kvalitetne kontakte i uči prepoznati motivaciju drugih. Iskreni kontakti dugoročno donose više koristi od onih usmjerenih samo na kratkoročne koristi.
+  </div>
+</div>
+
+<div id="preuporan" class="section">
+  <h2>Kako znati jesam li previše uporan?</h2>
+  <p>Upornost je važna u umrežavanju, ali postoji granica kada može postati nametljiva ili neugodno utjecati na odnose. Prepoznavanje znakova prekomjerne upornosti pomaže u održavanju profesionalnog i prijateljskog dojma.</p>
+
+  <h3>Znakovi da si previše uporan</h3>
+  <ul>
+    <li><strong>Česte poruke bez odgovora:</strong> Ako osoba ne odgovara, višestruko slanje poruka može biti nametljivo.</li>
+    <li><strong>Neprestano traženje usluge:</strong> Ako stalno tražiš pomoć ili kontakte bez uzajamne vrijednosti, to može biti previše.</li>
+    <li><strong>Nepoznavanje granica:</strong> Ignoriranje signala da osoba nije zainteresirana ili preopterećena.</li>
+    <li><strong>Neprilagođena komunikacija:</strong> Previše dugih ili nepersonaliziranih poruka može umanjiti profesionalni dojam.</li>
+  </ul>
+
+  <h3>Kako održati zdravu upornost</h3>
+  <ul>
+    <li><strong>Strpljenje:</strong> Daj ljudima vremena za odgovor i ne očekuj odmah reakciju.</li>
+    <li><strong>Kvaliteta, a ne kvantiteta:</strong> Fokusiraj se na pažljivo osmišljene poruke i kontakte koji imaju potencijal dugoročne suradnje.</li>
+    <li><strong>Pratite signale:</strong> Ako osoba pokazuje nezainteresiranost, prestani inzistirati i preusmjeri energiju na druge kontakte.</li>
+    <li><strong>Postavi granice:</strong> Definiraj koliko ćeš puta kontaktirati istu osobu i drži se toga.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje alumniju jedno kratko pitanje, a ako nema odgovora, čeka tjedan dana prije ponovnog kontaktiranja – zdrava upornost.</li>
+    <li>Mlad profesionalac konstantno traži mentorstvo od iste osobe bez obzira na signal nezainteresiranosti – previše uporan.</li>
+    <li>Početnik analizira feedback nakon događaja i kontaktira nove ljude s pažljivo pripremljenim porukama – učinkovita i uravnotežena upornost.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Upornost je vrijedna ako je strateška, strpljiva i profesionalna. Uvijek poštuj granice i fokusiraj se na kvalitetu kontakata.
+  </div>
+</div>
+
+<div id="nema_vremena" class="section">
+  <h2>Što ako nemam vremena za networking?</h2>
+  <p>Mnogi studenti i profesionalci osjećaju da nemaju dovoljno vremena za networking zbog školskih, poslovnih ili privatnih obaveza. Ipak, postoje strategije koje omogućuju učinkovito umrežavanje čak i uz ograničeno vrijeme.</p>
+
+  <h3>Strategije za networking uz ograničeno vrijeme</h3>
+  <ul>
+    <li><strong>Prioritiziraj kontakte:</strong> Fokusiraj se na najvažnije događaje, osobe i prilike koje donose najveću vrijednost.</li>
+    <li><strong>Iskoristi online platforme:</strong> LinkedIn, e-mail i profesionalni forumi omogućuju brzo i učinkovito povezivanje bez fizičkog prisustva događajima.</li>
+    <li><strong>Kratke i jasne poruke:</strong> Pošalji sažet e-mail ili poruku s konkretnim pitanjem ili ciljem.</li>
+    <li><strong>Kombiniraj networking s dnevnim aktivnostima:</strong> Primjerice, sudjelovanje u webinarima ili čitanje članaka s komentarima i pitanjima.</li>
+    <li><strong>Planiraj male, ali redovite aktivnosti:</strong> 15–30 minuta tjedno može biti dovoljno za održavanje mreže.</li>
+    <li><strong>Kvaliteta prije kvantitete:</strong> Bolje je održavati nekoliko važnih kontakata nego imati mnogo površnih veza.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student koristi LinkedIn 15 minuta tjedno da se poveže s alumnijima i prati industrijske vijesti.</li>
+    <li>Mlad profesionalac šalje kratke poruke s pitanjima mentorima ili kolegama umjesto da prisustvuje svakom događaju uživo.</li>
+    <li>Poduzetnik koristi online webinare i forume za umrežavanje dok istovremeno radi na projektu, maksimizirajući dostupno vrijeme.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nemoj čekati da imaš „puno vremena“. Redovito i strateško umrežavanje, čak i u malim intervalima, može donijeti dugoročne profesionalne koristi.
+  </div>
+</div>
+
+<div id="student_praksa" class="section">
+  <h2>Kako tražiti praksu preko mreže kontakata?</h2>
+  <p>Mreža kontakata može biti vrlo korisna za pronalaženje studentske prakse ili prvih profesionalnih prilika. Ključno je pristupiti na profesionalan i strateški način.</p>
+
+  <h3>Koraci za traženje prakse preko kontakata</h3>
+  <ul>
+    <li><strong>Identificiraj relevantne kontakte:</strong> Profesor, alumnij, kolega ili profesionalac iz industrije koji može dati savjet ili preporuku.</li>
+    <li><strong>Pripremi profesionalnu poruku:</strong> Ukratko predstavi sebe, svoje akademske ciljeve, interese i objasni da tražiš praksu.</li>
+    <li><strong>Postavi konkretno pitanje:</strong> Npr. „Zanima me imate li savjet ili preporuku gdje bih mogao obaviti praksu u [industrija]?“</li>
+    <li><strong>Budi pristojan i zahvalan:</strong> Zahvali unaprijed za vrijeme i pomoć, čak i ako osoba ne može direktno pomoći.</li>
+    <li><strong>Prati napredak:</strong> Ako dobiješ preporuku ili kontakt, javi se kratkim ažuriranjem ili zahvalom kada započneš praksu.</li>
+    <li><strong>Održavaj dugoročne veze:</strong> Čak i nakon završetka prakse, ostani u kontaktu s mentorima i kolegama.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje alumniju LinkedIn poruku: „Pozdrav [Ime], student sam [smjer] i tražim praksu u [industrija]. Biste li mi mogli dati savjet ili preporuku?“</li>
+    <li>Mlad profesionalac kontaktira profesora za mogućnost preporuke u firmi gdje profesor poznaje menadžere.</li>
+    <li>Student nakon radionice prati kontakte i šalje zahvalnu poruku, tražeći eventualnu praksu ili smjernice za daljnji razvoj.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pristupi profesionalno, budi jasan i zahvalan. Networking često otvara vrata za praksu koja nisu oglašena javno.
+  </div>
+</div>
+
+<div id="online_eventi" class="section">
+  <h2>Kako sudjelovati u online događajima??</h2>
+  <p>Online eventi, poput webinara, virtualnih konferencija i profesionalnih radionica, odlična su prilika za networking, učenje i stjecanje kontakata bez potrebe za fizičkim prisustvom.</p>
+
+  <h3>Koraci za učinkovito sudjelovanje</h3>
+  <ul>
+    <li><strong>Prijava unaprijed:</strong> Registriraj se na vrijeme i provjeri tehničke zahtjeve platforme (Zoom, Teams, Webex itd.).</li>
+    <li><strong>Priprema i istraživanje:</strong> Informiraj se o govornicima, temama i sudionicima kako bi mogao postavljati relevantna pitanja i uključiti se u razgovor.</li>
+    <li><strong>Aktivno sudjelovanje:</strong> Postavljaj pitanja, komentiraj u chat-u i pridruži se diskusijama – pokaži interes i stručnost.</li>
+    <li><strong>Povezivanje s sudionicima:</strong> Koristi chat ili platforme za networking da se povežeš s drugim sudionicima ili govornicima.</li>
+    <li><strong>Follow-up:</strong> Nakon eventa, pošalji zahvalnu poruku kontaktima koje si stekao i zadrži vezu za buduće prilike.</li>
+    <li><strong>Organiziraj bilješke i materijale:</strong> Zapiši ključne informacije i korisne kontakte za kasniju upotrebu.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student sudjeluje u webinaru o digitalnom marketingu i nakon toga povezuje se s predavačem na LinkedInu za dodatne savjete.</li>
+    <li>Mlad profesionalac koristi chat funkciju na virtualnoj konferenciji da postavi pitanje govorniku i uspostavi kontakt s kolegom iz iste industrije.</li>
+    <li>Početnik zapisuje ključne ideje i kontakte iz online radionice i kasnije ih kontaktira za savjet ili mentorstvo.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Aktivno sudjelovanje i pravovremeni follow-up čine online evente učinkovitima za networking. Iskoristi digitalne alate za održavanje i proširenje mreže kontakata.
+  </div>
+</div>
+
+<div id="personal_brand" class="section">
+  <h2>Što je personal brand i zašto je važan?</h2>
+  <p>Personal brand ili osobni brend predstavlja način na koji se predstavljaš profesionalno i osobno prema drugima. To je kombinacija tvojih vještina, iskustava, vrijednosti i reputacije, koja utječe na to kako te drugi percipiraju.</p>
+
+  <h3>Zašto je personal brand važan</h3>
+  <ul>
+    <li><strong>Izgradnja profesionalnog identiteta:</strong> Jasno pokazuje tvoje kompetencije i područja interesa.</li>
+    <li><strong>Povećava vidljivost:</strong> Osobni brend pomaže da te primijete poslodavci, mentori i kolege u industriji.</li>
+    <li><strong>Olakšava networking:</strong> Kada ljudi razumiju tvoje vrijednosti i stručnost, lakše uspostavljaju kontakt s tobom.</li>
+    <li><strong>Podrška karijernom rastu:</strong> Snažan osobni brend može otvoriti prilike za praksu, posao ili suradnju.</li>
+    <li><strong>Povjerenje i kredibilitet:</strong> Dosljedan i autentičan brend stvara povjerenje kod kontakata i potencijalnih suradnika.</li>
+  </ul>
+
+  <h3>Kako izgraditi personal brand</h3>
+  <ul>
+    <li><strong>Definiraj svoje vrijednosti i ciljeve:</strong> Jasno znaš tko si, čime se želiš baviti i koje vještine želiš istaknuti.</li>
+    <li><strong>Dosljedna online prisutnost:</strong> LinkedIn, portfolio web stranica i društvene mreže trebaju reflektirati tvoje profesionalne kvalitete.</li>
+    <li><strong>Sudjeluj u projektima i događajima:</strong> Aktivno pokazivanje stručnosti kroz projekte i konferencije jača osobni brend.</li>
+    <li><strong>Stalno učenje i razvoj:</strong> Nadograđuj znanja i vještine – osobni brend raste s tvojim kompetencijama.</li>
+    <li><strong>Autentičnost:</strong> Budi iskren i dosljedan u prikazu sebe – autentičnost gradi povjerenje i dugoročne kontakte.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student stvara LinkedIn profil s projektima, objavama i stručnim člancima vezanim uz svoje područje studija – vidljiv je profesionalcima i alumnijima.</li>
+    <li>Mlad profesionalac sudjeluje na konferencijama i dijeli svoja znanja, jačajući reputaciju u industriji.</li>
+    <li>Poduzetnik vodi blog ili društvene mreže gdje dijeli iskustva i savjete – time gradi kredibilitet i prepoznatljivost.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Personal brand se gradi postupno, kroz dosljednost, autentičnost i aktivno pokazivanje svojih vještina i vrijednosti. To je ključ za dugoročni profesionalni uspjeh.
+  </div>
+</div>
+
+<div id="linkedin_poruka" class="section">
+  <h2>Je li u redu pisati nepoznatima na LinkedInu?</h2>
+  <p>Da, u redu je kontaktirati nepoznate osobe na LinkedInu, ali važno je pristupiti profesionalno i s poštovanjem kako bi ostavio dobar dojam i povećao šanse za pozitivan odgovor.</p>
+
+  <h3>Kako pristupiti nepoznatoj osobi</h3>
+  <ul>
+    <li><strong>Personaliziraj poruku:</strong> Spomeni ime osobe i razlog zbog kojeg joj se obraćaš, npr. zajednički interes, industrija ili događaj.</li>
+    <li><strong>Budi kratak i jasan:</strong> Poruka ne bi trebala biti duža od nekoliko rečenica – jasno predstavi tko si i što tražiš.</li>
+    <li><strong>Profesionalni ton:</strong> Ljubazan i pristojan ton povećava šanse za odgovor.</li>
+    <li><strong>Konkretnost:</strong> Postavi konkretno pitanje ili zatraži savjet, umjesto općenitih poruka.</li>
+    <li><strong>Zahvali unaprijed:</strong> Uvijek završi poruku zahvalom za vrijeme i razmatranje.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje poruku alumniju: „Pozdrav [Ime], vidio sam vaš profil i rad u [industrija]. Zanima me kako ste započeli karijeru u ovom području. Hvala unaprijed na vašem savjetu!“</li>
+    <li>Mlad profesionalac kontaktira stručnjaka s konferencije: „Bok [Ime], sudjelovao sam na vašoj prezentaciji na [događaj] i zanima me vaš pristup rješavanju [problem].“</li>
+    <li>Početnik u industriji traži preporuke za resurse: „Pozdrav [Ime], primijetio sam da radite na [projekt]. Biste li mogli podijeliti savjet za početnike?“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ključno je biti profesionalan, jasan i pristojan. Prilagođena poruka koja pokazuje interes i istraživanje povećava šanse za uspješan networking na LinkedInu.
+  </div>
+</div>
+
+<div id="pitanja_na_dogadjaju" class="section">
+  <h2>Koja pitanja postaviti na događaju?</h2>
+  <p>Postavljanje pravih pitanja na networking događajima pomaže u izgradnji kontakata, pokazivanju interesa i ostavljanju pozitivnog dojma. Ključno je da pitanja budu relevantna, profesionalna i otvorena za razgovor.</p>
+
+  <h3>Primjeri pitanja za networking događaje</h3>
+  <ul>
+    <li><strong>O iskustvu i karijeri:</strong> „Kako ste započeli svoju karijeru u [industrija]?“ ili „Koji je bio najvažniji korak u vašem profesionalnom razvoju?“</li>
+    <li><strong>O industriji i trendovima:</strong> „Koji trendovi trenutno oblikuju vašu industriju?“ ili „Koje vještine smatrate ključnima za uspjeh u ovom području?“</li>
+    <li><strong>O projektima i uspjesima:</strong> „Na kojem projektu trenutno radite i što je bilo najizazovnije?“</li>
+    <li><strong>O savjetima i preporukama:</strong> „Koji resursi ili alati su vam pomogli da napredujete?“ ili „Koji bi savjet dali nekome tko tek započinje?“</li>
+    <li><strong>O umrežavanju:</strong> „Koje metode networking-a smatrate najučinkovitijima?“ ili „Kako održavate kontakte u industriji?“</li>
+  </ul>
+
+  <h3>Savjeti za postavljanje pitanja</h3>
+  <ul>
+    <li><strong>Budite aktivni slušatelj:</strong> Postavljajte pitanja koja proizlaze iz prethodnog razgovora, ne samo općenita pitanja.</li>
+    <li><strong>Održavajte profesionalni ton:</strong> Pitanja trebaju biti pristojna i relevantna za situaciju.</li>
+    <li><strong>Ne preopteretite sugovornika:</strong> Postavljajte jedno pitanje odjednom i dajte priliku za odgovor.</li>
+    <li><strong>Zabilježite odgovore:</strong> Bilježenje ključnih informacija pomaže u budućim kontaktima i follow-up porukama.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Priprema pitanja unaprijed i aktivno slušanje omogućuju kvalitetan razgovor i ostavljaju dobar dojam, čime se povećava učinkovitost networking-a.
+  </div>
+</div>
+
+<div id="kako_zadrzati_kontakt" class="section">
+  <h2>Kako zadržati kontakt dugoročno?</h2>
+  <p>Dugoročno održavanje kontakata ključ je uspješnog networkinga. Ne radi se samo o prvom susretu, već o kontinuiranoj komunikaciji i izgradnji povjerenja i suradnje.</p>
+
+  <h3>Strategije za dugoročno održavanje kontakata</h3>
+  <ul>
+    <li><strong>Redoviti follow-up:</strong> Nakon prvog susreta pošalji kratku poruku zahvalnosti i povremeno ažuriraj kontakt o svojim aktivnostima ili pitanjima.</li>
+    <li><strong>Dijeljenje korisnih informacija:</strong> Ako pronađeš članak, webinar ili priliku relevantnu za osobu, podijeli je – pokazuješ vrijednost i brigu.</li>
+    <li><strong>Sudjelovanje u zajedničkim projektima:</strong> Ako postoji prilika za suradnju, to jača vezu i gradi međusobno povjerenje.</li>
+    <li><strong>Korištenje društvenih mreža:</strong> LinkedIn ili profesionalne platforme omogućuju praćenje aktivnosti kontakata i interakciju putem komentara ili poruka.</li>
+    <li><strong>Budite autentični:</strong> Održavajte komunikaciju prirodnom, bez pretjeranog interesa ili nametljivosti.</li>
+    <li><strong>Planiranje kratkih sastanaka:</strong> Povremeno dogovori kratke virtualne ili osobne razgovore kako biste obnovili vezu i razgovarali o aktualnim temama.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student šalje alumniju zahvalnu poruku nakon događaja i povremeno dijeli zanimljiv članak vezan uz industriju.</li>
+    <li>Mlad profesionalac sudjeluje u zajedničkom projektu s kontaktom kojeg je upoznao na konferenciji, čime jača mrežu.</li>
+    <li>Početnik održava kontakt putem LinkedIna, komentira postove i čestita uspjehe kontaktima – održava dugoročne odnose bez napora.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Održavanje kontakata dugoročno zahtijeva pažnju, autentičnost i redovitu interakciju. Kvalitetni odnosi vode do profesionalnih prilika i uzajamne podrške.
+  </div>
+</div>
+
+<div id="networking_zasto" class="section">
+  <h2>Zašto je networking važan za karijeru?</h2>
+  <p>Networking je ključni alat za razvoj karijere jer omogućuje pristup informacijama, resursima i prilikama koje nisu uvijek javno dostupne. Kroz kvalitetne kontakte, možete unaprijediti svoje vještine, pronaći mentore i otvoriti vrata za profesionalni razvoj.</p>
+
+  <h3>Glavni razlozi za važnost networkinga</h3>
+  <ul>
+    <li><strong>Pristup informacijama:</strong> Networking omogućuje dobivanje savjeta, preporuka i informacija o industriji koje se ne nalaze online ili u službenim izvorima.</li>
+    <li><strong>Otkrivanje prilika:</strong> Kroz kontakte često se saznaje za poslove, prakse ili projekte prije nego što budu oglašeni javno.</li>
+    <li><strong>Mentorstvo i podrška:</strong> Iskusniji kontakti mogu pružiti smjernice, savjete i podršku u karijernim odlukama.</li>
+    <li><strong>Razvoj vještina:</strong> Umrežavanje omogućuje učenje od drugih profesionalaca, razmjenu iskustava i poboljšanje vlastitih kompetencija.</li>
+    <li><strong>Građenje reputacije:</strong> Aktivno sudjelovanje u mreži povećava vidljivost, kredibilitet i osobni brend.</li>
+    <li><strong>Dugoročne profesionalne veze:</strong> Kontakti mogu postati partneri, kolege ili prijatelji koji podržavaju karijeru kroz vrijeme.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student kroz networking s alumnijima saznaje o neobjavljenim praksama i stječe mentorstvo.</li>
+    <li>Mlad profesionalac preko LinkedIna dobiva preporuke za posao u struci prije nego što je otvoren natječaj.</li>
+    <li>Poduzetnik proširuje mrežu kontakata na konferencijama, što mu omogućuje suradnju i pristup novim tržištima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Networking nije samo traženje koristi; to je ulaganje u dugoročne odnose koji unapređuju profesionalni rast, otvaraju prilike i jačaju osobni brend.
+  </div>
+</div>
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('sto_je_networking'); // default first section
+    }
+});
+</script>
+
+
+</body>
+</html>

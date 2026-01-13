@@ -1,0 +1,17 @@
+<h2>Welcome, <span id="username"></span></h2>
+<h3>Your Search History:</h3>
+<ul id="historyList"></ul>
+
+<script>
+  // This assumes you're storing username + history in session/localStorage
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) location.href = 'login.html';
+  document.getElementById('username').textContent = user.username;
+
+  // Display search history
+  user.history.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    document.getElementById('historyList').appendChild(li);
+  });
+</script>

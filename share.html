@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podijeli stranicu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    /* Overlay background */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex; /* show immediately since this is a dedicated page */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Popup box */
+    .share-popup {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .share-popup h2 {
+      margin: 0 0 10px;
+      color: goldenrod;
+    }
+
+    .share-link-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 10px;
+      background: #f9f9f9;
+    }
+
+    .share-link-box input {
+      border: none;
+      background: transparent;
+      width: 80%;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .copy-btn {
+      background: goldenrod;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .copy-btn:hover {
+      background: darkgoldenrod;
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      background: #ccc;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      background: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Overlay and Popup -->
+  <div class="overlay" id="overlay">
+    <div class="share-popup">
+      <h2>Podijeli ovu stranicu</h2>
+      <div class="share-link-box">
+        <input type="text" id="shareLink" readonly>
+        <button class="copy-btn" onclick="copyLink()">Copy</button>
+      </div>
+      <button class="close-btn" onclick="goBack()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Automatically put current page link
+    document.getElementById("shareLink").value = window.location.href;
+
+    // Copy link using modern Clipboard API
+    function copyLink() {
+      const link = document.getElementById("shareLink").value;
+      navigator.clipboard.writeText(link).then(() => {
+        alert("Link copied: " + link);
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+        alert("Failed to copy link. Please copy manually.");
+      });
+    }
+
+    // Go back to index.html when closing
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

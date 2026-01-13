@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pro Cost Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #f7f9fc;
+    }
+    input, select, button {
+      margin: 5px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      font-size: 0.95em;
+    }
+    button {
+      background-color: #2196f3;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    button:hover {
+      background-color: #1976d2;
+    }
+    h2 { font-size: 1.8em; margin-bottom: 20px; }
+    table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+    th {
+      background: #e3f2fd;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .total-bar {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 12px 20px;
+      border-bottom: 2px solid #000;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3em;
+      color: #2e7d32;
+    }
+    .flex { display: flex; gap: 20px; flex-wrap: wrap; }
+    .column { flex: 1; min-width: 300px; background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    canvas { max-width: 400px; margin-top: 20px; }
+    #controls { margin-top: 20px; }
+    #comparisonSummary { margin-top: 20px; font-size: 1.1em; background: #fffde7; padding: 15px; border-left: 5px solid #fbc02d; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+<h2>🎯 Pro Cost Calculator (Editable + Drag + Undo)</h2>
+
+<div class="flex">
+  <div class="column">
+    <label>📝 Koliko te košta?</label>
+    <input type="text" id="itemName">
+    <label>🔢 Koliko (toga nečega)?</label>
+    <input type="number" id="itemQty" min="1">
+    <label> Valuta (€)</label>
+    <input type="number" id="itemCost" min="0">
+    <label>⏱ Sati (Opcijski)</label>
+    <input type="number" id="itemHours">
+    <label>💼 Satnica (€)</label>
+    <input type="number" id="itemRate">
+    <label>📁 Kategorija</label>
+    <select id="itemCategory">
+      <option value="Labor">Rad</option>
+      <option value="Materials">Materijali</option>
+      <option value="Services">Usluge</option>
+      <option value="Misc">Razno</option>
+    </select>
+    <label>📌 Scenarij</label>
+    <select id="itemScenario">
+      <option value="A">Opcija A</option>
+      <option value="B">Opcija B</option>
+    </select>
+    <button onclick="addItem()">➕ Dodaj procjeni</button>
+  </div>
+</div>
+
+<div id="controls">
+  <button onclick="undo()">↩️ poništi promjenu</button>
+  <button onclick="redo()">🔁 ponovi </button>
+</div>
+
+<div class="total-bar">
+  <div id="totalA">Ukupno (Opcija A): €0.00</div>
+  <div id="totalB">Ukupno (Opcija B): €0.00</div>
+</div>
+
+<div id="comparisonSummary"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenarij</th>
+      <th>Artikal</th>
+      <th>Količina</th>
+      <th>Cijena</th>
+      <th>Satnica</th>
+      <th>Kategorija</th>
+      <th style="background:#f3e5f5">Međuzbroj</th>
+    </tr>
+  </thead>
+  <tbody id="costTableBody"></tbody>
+</table>
+
+<canvas id="categoryChart"></canvas>
+<canvas id="compareChart"></canvas>
+
+<script>
+  let items = [];
+  let undoStack = [];
+  let redoStack = [];
+
+  window.onload = () => document.getElementById('itemName').focus();
+
+  function saveState() {
+    undoStack.push(JSON.stringify(items));
+    if (undoStack.length > 50) undoStack.shift();
+    redoStack = [];
+  }
+
+  function undo() {
+    if (undoStack.length) {
+      redoStack.push(JSON.stringify(items));
+      items = JSON.parse(undoStack.pop());
+      updateTable();
+    }
+  }
+
+  function redo() {
+    if (redoStack.length) {
+      undoStack.push(JSON.stringify(items));
+      items = JSON.parse(redoStack.pop());
+      updateTable();
+    }
+  }
+
+  function addItem() {
+    const name = document.getElementById('itemName').value;
+    const qty = parseInt(document.getElementById('itemQty').value) || 0;
+    const cost = parseFloat(document.getElementById('itemCost').value) || 0;
+    const hours = parseFloat(document.getElementById('itemHours').value) || 0;
+    const rate = parseFloat(document.getElementById('itemRate').value) || 0;
+    const category = document.getElementById('itemCategory').value;
+    const scenario = document.getElementById('itemScenario').value;
+    const subtotal = qty * cost + hours * rate;
+
+    if (!name) return alert("Item name is required");
+
+    saveState();
+    items.push({ name, qty, cost, hours, rate, category, scenario, subtotal });
+    updateTable();
+    clearInputs();
+  }
+
+  function clearInputs() {
+    ['itemName', 'itemQty', 'itemCost', 'itemHours', 'itemRate'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('itemName').focus();
+  }
+
+  function updateTable() {
+    const tbody = document.getElementById('costTableBody');
+    tbody.innerHTML = '';
+    let totalA = 0, totalB = 0;
+    const categoryTotals = {};
+    const categoryA = {}, categoryB = {};
+
+    items.forEach((item, index) => {
+      const row = document.createElement('tr');
+      row.setAttribute('data-index', index);
+      row.innerHTML = `
+        <td>${item.scenario}</td>
+        <td contenteditable="true" onblur="editCell(${index}, 'name', this.innerText)">${item.name}</td>
+        <td contenteditable="true" onblur="editCell(${index}, 'qty', this.innerText)">${item.qty}</td>
+        <td contenteditable="true" onblur="editCell(${index}, 'cost', this.innerText)">${item.cost}</td>
+        <td contenteditable="true" onblur="editCell(${index}, 'rate', this.innerText); editCell(${index}, 'hours', ${item.hours})">${item.hours}h × $${item.rate}</td>
+        <td contenteditable="true" onblur="editCell(${index}, 'category', this.innerText)">${item.category}</td>
+        <td style="background:#f3e5f5">$${item.subtotal.toFixed(2)}</td>
+      `;
+      tbody.appendChild(row);
+
+      if (item.scenario === 'A') {
+        totalA += item.subtotal;
+        categoryA[item.category] = (categoryA[item.category] || 0) + item.subtotal;
+      } else {
+        totalB += item.subtotal;
+        categoryB[item.category] = (categoryB[item.category] || 0) + item.subtotal;
+      }
+
+      categoryTotals[item.category] = (categoryTotals[item.category] || 0) + item.subtotal;
+    });
+
+    document.getElementById('totalA').innerText = `Total (Option A): €€{totalA.toFixed(2)}`;
+    document.getElementById('totalB').innerText = `Total (Option B): €€{totalB.toFixed(2)}`;
+
+    const summary = totalA === totalB
+      ? '⚖️ Both options cost the same.'
+      : totalA < totalB
+        ? `🟢 Option A is more cost-effective by €€{(totalB - totalA).toFixed(2)}`
+        : `🟢 Option B is more cost-effective by €€{(totalA - totalB).toFixed(2)}`;
+    document.getElementById('comparisonSummary').innerText = summary;
+
+    updateChart(categoryTotals);
+    updateCompareChart(categoryA, categoryB);
+  }
+
+  function editCell(index, field, value) {
+    saveState();
+    let item = items[index];
+    if (field === 'qty' || field === 'cost' || field === 'rate' || field === 'hours') {
+      item[field] = parseFloat(value) || 0;
+    } else {
+      item[field] = value.trim();
+    }
+    item.subtotal = item.qty * item.cost + item.hours * item.rate;
+    updateTable();
+  }
+
+  function updateChart(data) {
+    const ctx = document.getElementById('categoryChart').getContext('2d');
+    if (window.pieChart) window.pieChart.destroy();
+    window.pieChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: Object.keys(data),
+        datasets: [{
+          data: Object.values(data),
+          backgroundColor: ['#4caf50', '#2196f3', '#ffc107', '#e91e63']
+        }]
+      },
+      options: {
+        plugins: {
+          title: { display: true, text: '📊 Category Breakdown' },
+          legend: { position: 'right' }
+        }
+      }
+    });
+  }
+
+  function updateCompareChart(catA, catB) {
+    const ctx = document.getElementById('compareChart').getContext('2d');
+    if (window.compareChart) window.compareChart.destroy();
+
+    const allCats = Array.from(new Set([...Object.keys(catA), ...Object.keys(catB)]));
+    const dataA = allCats.map(cat => catA[cat] || 0);
+    const dataB = allCats.map(cat => catB[cat] || 0);
+
+    window.compareChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: allCats,
+        datasets: [
+          { label: 'Option A', data: dataA, backgroundColor: '#4caf50' },
+          { label: 'Option B', data: dataB, backgroundColor: '#f44336' }
+        ]
+      },
+      options: {
+        plugins: {
+          title: { display: true, text: '🔍 Scenario Comparison by Category' },
+        },
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  }
+
+  new Sortable(document.getElementById('costTableBody'), {
+    animation: 150,
+    onEnd: function (evt) {
+      saveState();
+      const movedItem = items.splice(evt.oldIndex, 1)[0];
+      items.splice(evt.newIndex, 0, movedItem);
+      updateTable();
+    }
+  });
+</script>
+
+</body>
+</html>s

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informatika</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Informatika</h1>
+<nav>
+
+<!-- Left Side Buttons -->
+<div class="side-list left-list">
+    <button onclick="showSection('it_basics')">Osnovni pojmovi informatike</button>
+    <button onclick="showSection('it_data_measurement')">Mjerenje podataka</button>
+    <button onclick="showSection('it_hardware')">Osnovni uređaji računala</button>
+    <button onclick="showSection('it_os')">Rad u operacijskom sustavu</button>
+    <button onclick="showSection('it_apps')">Upoznavanje s aplikacijama</button>
+    <button onclick="showSection('it_security')">Sigurnost na internetu, zaštita privatnosti</button>
+    <button onclick="showSection('it_internet')">Osnovna načela rada interneta</button>
+    <button onclick="showSection('it_web_search')">Pretraživanje interneta</button>
+    <button onclick="showSection('it_email')">Osnove e-pošte i komunikacije putem interneta</button>
+    <button onclick="showSection('it_graphics')">Upoznavanje s osnovama računalne grafike</button>
+    <button onclick="showSection('it_drawing_tools')">Korištenje alata za crtanje i oblikovanje</button>
+    <button onclick="showSection('it_office_advanced')">Upoznavanje s naprednijim mogućnostima uredskih programa</button>
+    <button onclick="showSection('it_online_tools')">Korištenje internetskih alata</button>
+    <button onclick="showSection('it_programming_basics')">Razumijevanje osnovnih pojmova u programiranju</button>
+    <button onclick="showSection('it_simple_programming')">Učenje jednostavnih programskih jezika</button>
+    <button onclick="showSection('it_algorithms')">Razumijevanje algoritama i osnovnih struktura podataka</button>
+    <button onclick="showSection('it_simple_projects')">Razvoj jednostavnih programa</button>
+    <button onclick="showSection('it_databases_basics')">Osnovni pojmovi baza podataka</button>
+</div>
+
+<!-- Right Side Buttons -->
+<div class="side-list right-list">
+    <button onclick="showSection('it_databases_tools')">Upoznavanje s alatima za rad s bazama podataka</button>
+    <button onclick="showSection('it_databases_usage')">Korištenje baza podataka za pohranu podataka</button>
+    <button onclick="showSection('it_ethics')">Razumijevanje etičkih pitanja u informatici</button>
+    <button onclick="showSection('it_advanced_programming')">Razumijevanje viših koncepata u programiranju</button>
+    <button onclick="showSection('it_python_projects')">Razvoj složenijih programa u Pythonu</button>
+    <button onclick="showSection('it_advanced_algorithms')">Napredni algoritmi i strukture podataka</button>
+    <button onclick="showSection('it_database_theory')">Teorija baze podataka</button>
+    <button onclick="showSection('it_javascript')">Programiranje u JavaScriptu</button>
+    <button onclick="showSection('it_web_apps')">Razvoj web aplikacija</button>
+    <button onclick="showSection('it_data_processing')">Upoznavanje s umjetničkom obradom podataka</button>
+    <button onclick="showSection('it_image_sound')">Obrada slika i zvuka u Pythonu</button>
+    <button onclick="showSection('it_network_security')">Razumijevanje sigurnosti u računalnim mrežama</button>
+    <button onclick="showSection('it_storage_devices')">Praktični rad s uređajima za pohranu podataka</button>
+    <button onclick="showSection('it_mobile_apps')">Kreiranje jednostavnih mobilnih aplikacija</button>
+    <button onclick="showSection('it_digital_literacy')">Digitalna pismenost i e-učenje</button>
+    <button onclick="showSection('it_computational_learning')">Prvi koraci u računalnom učenju</button>
+</div>
+
+</nav>
+
+<!-- 1. Osnovni pojmovi informatike -->
+<div id="it_basics" class="section" s">
+  <h2>Osnovni pojmovi informatike</h2>
+  <p>
+    Informatika je znanost o obradi podataka pomoću računala.  
+    Obuhvaća hardver, softver, algoritme, baze podataka i mreže.  
+    Ključni pojmovi: podaci, informacije, program, uređaji, digitalni svijet.
+  </p>
+  <p><b>Primjer:</b> Pretvaranje podataka o temperaturi u grafički prikaz na računalu.</p>
+  <p><b>Zadatak:</b> Napiši tri primjera informatičkih uređaja koje koristiš svaki dan.</p>
+  <div id="it_basics_answer" style="display:none;">
+    <p><b>Rješenje:</b> 1. Laptop, 2. Smartphone, 3. Tablet</p>
+  </div>
+  <button onclick="document.getElementById('it_basics_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 2. Mjerenje podataka -->
+<div id="it_data_measurement" class="section" >
+  <h2>Mjerenje podataka</h2>
+  <p>
+    Podaci se mjere u bitovima i bajtovima.  
+    Osnovne jedinice: bit (0 ili 1), byte (8 bitova), kilobyte, megabyte, gigabyte.  
+    Znanje o veličini podataka važno je za pohranu i prijenos informacija.
+  </p>
+  <p><b>Primjer:</b> Fotografija visoke rezolucije može zauzimati 5 MB.</p>
+  <p><b>Zadatak:</b> Pretvori 2048 KB u MB.</p>
+  <div id="it_data_measurement_answer" style="display:none;">
+    <p><b>Rješenje:</b> 2048 KB = 2 MB</p>
+  </div>
+  <button onclick="document.getElementById('it_data_measurement_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 3. Osnovni uređaji računala -->
+<div id="it_hardware" class="section" >
+  <h2>Osnovni uređaji računala</h2>
+  <p>
+    Računalo se sastoji od hardvera i softvera.  
+    Hardver: CPU, RAM, tvrd disk, grafička kartica, periferija (tipkovnica, miš, monitor).  
+    Svaka komponenta ima specifičnu funkciju: CPU procesira podatke, RAM pohranjuje privremene podatke, disk trajno pohranjuje informacije.
+  </p>
+  <p><b>Primjer:</b> Tipkovnica i miš služe za unos podataka, monitor za prikaz.</p>
+  <p><b>Zadatak:</b> Navedite tri primarna dijela računala i njihovu funkciju.</p>
+  <div id="it_hardware_answer" style="display:none;">
+    <p><b>Rješenje:</b> 1. CPU – procesiranje, 2. RAM – privremena pohrana, 3. HDD/SSD – trajna pohrana</p>
+  </div>
+  <button onclick="document.getElementById('it_hardware_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 4. Rad u operacijskom sustavu -->
+<div id="it_os" class="section" >
+  <h2>Rad u operacijskom sustavu</h2>
+  <p>
+    Operacijski sustav (OS) je softver koji upravlja hardverom i aplikacijama.  
+    Najpoznatiji OS: Windows, macOS, Linux.  
+    Funkcije: upravljanje datotekama, uređajima, memorijom, sigurnosnim postavkama.
+  </p>
+  <p><b>Primjer:</b> Otvaranje mape, instalacija programa, promjena pozadine radne površine.</p>
+  <p><b>Zadatak:</b> Otvori svoj OS i pronađi gdje se pohranjuju dokumenti i slike.</p>
+  <div id="it_os_answer" style="display:none;">
+    <p><b>Rješenje:</b> U Windowsu: "Dokumenti" i "Slike"; u macOS: "Documents" i "Pictures"</p>
+  </div>
+  <button onclick="document.getElementById('it_os_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 5. Upoznavanje s aplikacijama -->
+<div id="it_apps" class="section">
+  <h2>Upoznavanje s aplikacijama</h2>
+  <p>
+    Aplikacije su softverski programi za specifične zadatke.  
+    Primjeri: tekst procesori (Word), tablični kalkulatori (Excel), preglednici (Chrome), komunikacijski alati (Teams, Zoom).  
+    Razumijevanje različitih aplikacija pomaže u produktivnosti i učenju.
+  </p>
+  <p><b>Primjeri zadataka:</b> Pisanje dokumenta, izrada tablice, slanje e-maila.</p>
+  <p><b>Zadatak:</b> Otvori Word ili Google Docs i napiši kratki tekst od 5 rečenica o svojoj školi.</p>
+  <div id="it_apps_answer" style="display:none;">
+    <p><b>Rješenje:</b> Očekuje se da učenik napiše 5 rečenica o svojoj školi, npr.: "Moja škola je velika. Ima puno učionica..."</p>
+  </div>
+  <button onclick="document.getElementById('it_apps_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 6. Sigurnost na internetu, zaštita privatnosti -->
+<div id="it_security" class="section" >
+  <h2>Sigurnost na internetu, zaštita privatnosti</h2>
+  <p>
+    Internet može biti opasan bez odgovarajuće sigurnosti.  
+    Osnovna pravila: koristiti jake lozinke, ne dijeliti osobne podatke, koristiti antivirus i firewall, paziti na sumnjive linkove.  
+    Zaštita privatnosti ključna je za sprječavanje krađe identiteta i neželjenog nadzora.
+  </p>
+  <p><b>Primjer:</b> Ne otvarati e-mail od nepoznatog pošiljatelja s privicima.</p>
+  <p><b>Zadatak:</b> Provjeri lozinku na svom računu i napiši tri savjeta kako bi je učinio/la sigurnijom.</p>
+  <div id="it_security_answer" style="display:none;">
+    <p><b>Rješenje:</b> 1. Koristi minimalno 12 znakova, 2. Kombiniraj velika i mala slova + brojeve, 3. Ne koristi iste lozinke na više mjesta.</p>
+  </div>
+  <button onclick="document.getElementById('it_security_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 7. Osnovna načela rada interneta -->
+<div id="it_internet" class="section" >
+  <h2>Osnovna načela rada interneta</h2>
+  <p>
+    Internet je globalna mreža računala povezana protokolima (TCP/IP).  
+    Svaki uređaj dobiva jedinstvenu IP adresu.  
+    Informacije putuju u paketima i prolaze kroz različite poslužitelje i rutere prije nego stignu do korisnika.
+  </p>
+  <p><b>Primjer:</b> Slanje e-maila → paket putuje od vašeg računala do servera primatelja.</p>
+  <p><b>Zadatak:</b> Nacrtaj jednostavnu shemu: tvoje računalo → router → internet → server primatelja.</p>
+  <div id="it_internet_answer" style="display:none;">
+    <p><b>Rješenje:</b> Shema bi trebala pokazivati strelice od računala do routera, zatim do interneta, i do servera primatelja.</p>
+  </div>
+  <button onclick="document.getElementById('it_internet_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 8. Pretraživanje interneta -->
+<div id="it_web_search" class="section" >
+  <h2>Pretraživanje interneta</h2>
+  <p>
+    Internet je prepun informacija, ali važno je znati kako ih pravilno tražiti.  
+    Koristimo tražilice poput Google, Bing ili Yahoo.  
+    Ključne riječi, operatori (npr. "site:", "filetype:") i filteri pomažu u preciznom traženju.
+  </p>
+  <p><b>Primjer:</b> Traženje PDF-a o solarnoj energiji: "solar energy filetype:pdf".</p>
+  <p><b>Zadatak:</b> Pronađi tri pouzdana izvora o klimatskim promjenama koristeći Google tražilicu.</p>
+  <div id="it_web_search_answer" style="display:none;">
+    <p><b>Rješenje:</b> Mogući izvori: 1. nasa.gov, 2. unesco.org, 3. ipcc.ch</p>
+  </div>
+  <button onclick="document.getElementById('it_web_search_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 9. Osnove e-pošte i komunikacije putem interneta -->
+<div id="it_email" class="section" >
+  <h2>Osnove e-pošte i komunikacije putem interneta</h2>
+  <p>
+    E-mail je najrašireniji način elektroničke komunikacije.  
+    Osnovni dijelovi: primatelj, naslov, tijelo poruke, privici.  
+    Pravila dobre prakse: jasna tema, sažet tekst, provjera pravopisa, ne otvarati sumnjive privitke.
+  </p>
+  <p><b>Primjer:</b> Slanje e-maila učitelju s pitanjem o domaćem zadatku.</p>
+  <p><b>Zadatak:</b> Pošalji e-mail svom učitelju s pitanjem o nadolazećem testu (možeš koristiti vlastiti primjer). </p>
+  <div id="it_email_answer" style="display:none;">
+    <p><b>Rješenje:</b> E-mail treba imati jasan naslov, pristojan ton i konkretno pitanje.</p>
+  </div>
+  <button onclick="document.getElementById('it_email_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 10. Upoznavanje s osnovama računalne grafike -->
+<div id="it_graphics" class="section" >
+  <h2>Upoznavanje s osnovama računalne grafike</h2>
+  <p>
+    Računalna grafika koristi se za prikaz vizualnih podataka na ekranu.  
+    Postoje dvije glavne vrste: vektorska i raster grafika.  
+    Softver za grafiku uključuje Paint, Photoshop, GIMP ili Illustrator.  
+    Bitno je razumjeti piksle, boje, rezoluciju i dimenzije.
+  </p>
+  <p><b>Primjer:</b> Crtanje jednostavne ikone u Paintu ili stvaranje vektorske ilustracije u Illustratoru.</p>
+  <p><b>Zadatak:</b> Napravi jednostavnu ikonu (npr. sunce) koristeći Paint ili neki besplatni grafički alat.</p>
+  <div id="it_graphics_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ikona bi trebala imati osnovni oblik, pravilne boje i jednostavnu strukturu.</p>
+  </div>
+  <button onclick="document.getElementById('it_graphics_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 11. Korištenje alata za crtanje i oblikovanje -->
+<div id="it_drawing_tools" class="section" >
+  <h2>Korištenje alata za crtanje i oblikovanje</h2>
+  <p>
+    Alati za crtanje pomažu u izradi ilustracija, grafova i dizajna.  
+    Primjeri: olovka, kist, oblikovanje figura, boje, slojevi.  
+    Napredni alati omogućuju precizno uređivanje, transparentnost i efekt sjena.
+  </p>
+  <p><b>Primjer:</b> Napravi jednostavan logotip koristeći kružne i pravokutne oblike.</p>
+  <p><b>Zadatak:</b> Kreiraj digitalnu oznaku za svoj projekt koristeći besplatni grafički alat (Canva, GIMP).</p>
+  <div id="it_drawing_tools_answer" style="display:none;">
+    <p><b>Rješenje:</b> Očekuje se jednostavan dizajn s jasno vidljivim oblicima i tekstom.</p>
+  </div>
+  <button onclick="document.getElementById('it_drawing_tools_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 12. Upoznavanje s naprednijim mogućnostima uredskih programa -->
+<div id="it_office_advanced" class="section" >
+  <h2>Upoznavanje s naprednijim mogućnostima uredskih programa</h2>
+  <p>
+    Uredski programi (Word, Excel, PowerPoint) imaju mnoge napredne funkcije:  
+    - Formatiranje teksta i tablica  
+    - Grafički prikaz podataka  
+    - Makroi i formule  
+    - Predlošci i suradnja u realnom vremenu
+  </p>
+  <p><b>Primjer:</b> Korištenje Excel funkcije SUM za zbrajanje više vrijednosti u tablici.</p>
+  <p><b>Zadatak:</b> Napravi jednostavnu tablicu u Excelu i izračunaj ukupnu vrijednost pomoću SUM funkcije.</p>
+  <div id="it_office_advanced_answer" style="display:none;">
+    <p><b>Rješenje:</b> Tablica s nekoliko brojeva i SUM formula koja daje njihov zbroj.</p>
+  </div>
+  <button onclick="document.getElementById('it_office_advanced_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 13. Korištenje internetskih alata -->
+<div id="it_online_tools" class="section" >
+  <h2>Korištenje internetskih alata</h2>
+  <p>
+    Internet nudi brojne alate za produktivnost, učenje i suradnju.  
+    Primjeri: Google Docs, Sheets, Slides, Trello, Zoom, Kahoot.  
+    Alati omogućuju jednostavan pristup datotekama i suradnju s drugima u realnom vremenu.
+  </p>
+  <p><b>Primjer:</b> Dijeljenje Google dokumenta s kolegom radi zajedničkog uređivanja.</p>
+  <p><b>Zadatak:</b> Otvori Google Docs i napravi zajednički dokument s prijateljem ili kolegom.</p>
+  <div id="it_online_tools_answer" style="display:none;">
+    <p><b>Rješenje:</b> Dokument bi trebao biti dostupan obojici i omogućiti uređivanje u realnom vremenu.</p>
+  </div>
+  <button onclick="document.getElementById('it_online_tools_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 14. Razumijevanje osnovnih pojmova u programiranju -->
+<div id="it_programming_basics" class="section" >
+  <h2>Razumijevanje osnovnih pojmova u programiranju</h2>
+  <p>
+    Programiranje je proces pisanja uputa koje računalo izvršava.  
+    Osnovni pojmovi uključuju varijable, tipove podataka, petlje, uvjetne naredbe i funkcije.  
+    Programi se pišu u različitim jezicima poput Python, Java, C++.
+  </p>
+  <p><b>Primjer:</b> Varijabla x koja pohranjuje broj 5 i petlja koja ispisuje brojeve od 1 do 5.</p>
+  <p><b>Zadatak:</b> Napiši mali program u Pythonu koji ispisuje sve parne brojeve od 2 do 10.</p>
+  <div id="it_programming_basics_answer" style="display:none;">
+    <p><b>Rješenje:</b> <code>for i in range(2, 11, 2): print(i)</code></p>
+  </div>
+  <button onclick="document.getElementById('it_programming_basics_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 15. Učenje jednostavnih programskih jezika -->
+<div id="it_simple_programming" class="section">
+  <h2>Učenje jednostavnih programskih jezika</h2>
+  <p>
+    Jednostavni jezici poput Scratch-a ili Python-a idealni su za početnike.  
+    Omogućuju vizualno ili tekstualno kodiranje i lakše razumijevanje logike programa.
+  </p>
+  <p><b>Primjer:</b> Scratch program koji pomiče lik kada klikneš tipku strelice.</p>
+  <p><b>Zadatak:</b> Napiši kratki program u Pythonu koji traži ime korisnika i pozdravlja ga.</p>
+  <div id="it_simple_programming_answer" style="display:none;">
+    <p><b>Rješenje:</b> <code>ime = input("Unesi svoje ime: ")<br>print("Pozdrav, " + ime + "!")</code></p>
+  </div>
+  <button onclick="document.getElementById('it_simple_programming_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 16. Razumijevanje algoritama i osnovnih struktura podataka -->
+<div id="it_algorithms" class="section" >
+  <h2>Razumijevanje algoritama i osnovnih struktura podataka</h2>
+  <p>
+    Algoritam je niz koraka za rješavanje problema.  
+    Osnovne strukture podataka uključuju liste, nizove, stogove i redove.  
+    Poznavanje ovih struktura važno je za efikasno programiranje.
+  </p>
+  <p><b>Primjer:</b> Algoritam za pronalaženje najvećeg broja u listi.</p>
+  <p><b>Zadatak:</b> Napiši Python program koji pronalazi najmanji broj u listi [5, 3, 8, 1, 6].</p>
+  <div id="it_algorithms_answer" style="display:none;">
+    <p><b>Rješenje:</b> <code>lista = [5,3,8,1,6]<br>print(min(lista))</code></p>
+  </div>
+  <button onclick="document.getElementById('it_algorithms_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 17. Razvoj jednostavnih programa -->
+<div id="it_simple_projects" class="section" >
+  <h2>Razvoj jednostavnih programa</h2>
+  <p>
+    Jednostavni programi mogu uključivati kalkulatore, mini igre ili obrasce za unos podataka.  
+    Prilikom razvoja bitno je planirati korake, koristiti varijable i funkcije te testirati rezultate.
+  </p>
+  <p><b>Primjer:</b> Kalkulator za zbrajanje dva broja u Pythonu.</p>
+  <p><b>Zadatak:</b> Napiši Python program koji traži od korisnika dva broja i ispisuje njihov zbroj.</p>
+  <div id="it_simple_projects_answer" style="display:none;">
+    <p><b>Rješenje:</b> <code>a = int(input("Unesi prvi broj: "))<br>b = int(input("Unesi drugi broj: "))<br>print("Zbroj:", a+b)</code></p>
+  </div>
+  <button onclick="document.getElementById('it_simple_projects_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 18. Osnovni pojmovi baza podataka -->
+<div id="it_databases_basics" class="section" >
+  <h2>Osnovni pojmovi baza podataka</h2>
+  <p>
+    Baza podataka je organizirani skup podataka koji omogućuje jednostavan pristup i upravljanje.  
+    Glavne komponente: tablice, polja, zapisi, primarni ključ.  
+    SQL je najčešće korišten jezik za rad s bazama podataka.
+  </p>
+  <p><b>Primjer:</b> Tablica "Učenici" s poljima: ID, ime, prezime, razred.</p>
+  <p><b>Zadatak:</b> Napravi malu tablicu u Excelu ili Google Sheets koja imitira bazu podataka s 3 učenika.</p>
+  <div id="it_databases_basics_answer" style="display:none;">
+    <p><b>Rješenje:</b> Tablica s redovima za svakog učenika i stupcima: ID, ime, prezime, razred.</p>
+  </div>
+  <button onclick="document.getElementById('it_databases_basics_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 19. Upoznavanje s alatima za rad s bazama podataka -->
+<div id="it_databases_tools" class="section">
+  <h2>Upoznavanje s alatima za rad s bazama podataka</h2>
+  <p>
+    Alati za baze podataka omogućuju pregled, unos i uređivanje podataka.  
+    Primjeri: Microsoft Access, MySQL Workbench, phpMyAdmin.  
+    Bitno je razumjeti kreiranje tablica, upite i relacije između podataka.
+  </p>
+  <p><b>Primjer:</b> Kreiranje tablice "Knjige" u Accessu s poljima: ID, naslov, autor, godina.</p>
+  <p><b>Zadatak:</b> Napravi bazu podataka za svoju školu s tablicom "Učenici" i barem 3 polja.</p>
+  <div id="it_databases_tools_answer" style="display:none;">
+    <p><b>Rješenje:</b> Tablica s poljima: ID, ime, prezime, razred. Kreirana je u odabranom alatu za baze.</p>
+  </div>
+  <button onclick="document.getElementById('it_databases_tools_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+
+<!-- 20. Korištenje baza podataka za pohranu podataka -->
+<div id="it_databases_usage" class="section" >
+  <h2>Korištenje baza podataka za pohranu podataka</h2>
+  <p>
+    Baze podataka omogućuju sigurno i organizirano pohranjivanje podataka, što je ključno za tvrtke, škole i projekte.  
+    Pristup podacima vrši se putem upita (query), aplikacija ili web sučelja.  
+    Prednosti: brzo pronalaženje podataka, filtriranje, sortiranje, generiranje izvještaja, smanjenje pogrešaka pri ručnom unosu.
+  </p>
+  <p><b>Primjer:</b> U školskoj bazi podataka, učitelji mogu brzo pronaći sve učenike iz 7. razreda i generirati izvještaje o njihovim ocjenama.</p>
+  <p><b>Zadatak:</b> Napravi jednostavan upit u Excelu, Google Sheets ili SQL alatu koji iz tablice "Učenici" filtrira sve učenike koji su položili ispit s ocjenom 5.</p>
+  <div id="it_databases_usage_answer" style="display:none;">
+    <p><b>Rješenje:</b> <br>
+      - U Excelu/Sheets: koristi filter i odaberi ocjene = 5. <br>
+      - U SQL-u: <code>SELECT * FROM Ucenici WHERE Ocjena=5;</code>
+    </p>
+  </div>
+  <button onclick="document.getElementById('it_databases_usage_answer').style.display='block'" 
+          style="background-color:goldenrod; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('prepoznati_problem'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

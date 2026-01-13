@@ -1,0 +1,648 @@
+ <!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kemija</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kemija</h1>
+<nav>
+<!-- Left Side List -->
+<button onclick="showSection('chemistry_atoms_molecules')">Atomi i molekule, jednostavne kemijske tvari</button>
+<button onclick="showSection('chemistry_periodic_table')">Periodni sustav elemenata</button>
+<button onclick="showSection('chemistry_symbols_formulas')">Pisanje kemijskih simbola i formula</button>
+<button onclick="showSection('chemistry_molecules_ionic')">Razlikovanje molekula i ionskih spojeva</button>
+<button onclick="showSection('chemistry_reaction_types')">Osnovni tipovi kemijskih reakcija</button>
+<button onclick="showSection('chemistry_law_mass_conservation')">Zakon očuvanja mase</button>
+<button onclick="showSection('chemistry_properties')">Fizikalna i kemijska svojstva tvari</button>
+<button onclick="showSection('chemistry_acids_bases_salts')">Razlikovanje kiselina, baza i soli</button>
+<button onclick="showSection('chemistry_ph_balance')">Osnove pH skale i kiselinsko-bazna ravnoteža</button>
+<button onclick="showSection('chemistry_reaction_laws')">Zakoni kemijskih reakcija</button>
+<button onclick="showSection('chemistry_energy_changes')">Energetske promjene u kemijskim reakcijama</button>
+<button onclick="showSection('chemistry_compounds_types')">Kemijski spojevi i njihove vrste</button>
+<button onclick="showSection('chemistry_natural_processes')">Osnovni kemijski procesi u prirodi</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('chemistry_atoms_molecules')">Atomi i molekule, jednostavne kemijske tvari</button>
+<button onclick="showSection('chemistry_periodic_table')">Periodni sustav elemenata</button>
+<button onclick="showSection('chemistry_symbols_formulas')">Pisanje kemijskih simbola i formula</button>
+<button onclick="showSection('chemistry_molecules_ionic')">Razlikovanje molekula i ionskih spojeva</button>
+<button onclick="showSection('chemistry_reaction_types')">Osnovni tipovi kemijskih reakcija</button>
+<button onclick="showSection('chemistry_law_mass_conservation')">Zakon očuvanja mase</button>
+<button onclick="showSection('chemistry_properties')">Fizikalna i kemijska svojstva tvari</button>
+<button onclick="showSection('chemistry_acids_bases_salts')">Razlikovanje kiselina, baza i soli</button>
+<button onclick="showSection('chemistry_ph_balance')">Osnove pH skale i kiselinsko-bazna ravnoteža</button>
+<button onclick="showSection('chemistry_reaction_laws')">Zakoni kemijskih reakcija</button>
+<button onclick="showSection('chemistry_energy_changes')">Energetske promjene u kemijskim reakcijama</button>
+<button onclick="showSection('chemistry_compounds_types')">Kemijski spojevi i njihove vrste</button>
+<button onclick="showSection('chemistry_natural_processes')">Osnovni kemijski procesi u prirodi</button>
+
+</nav>
+
+
+<!-- 1. Atomi i molekule -->
+<div id="chemistry_atoms_molecules" class="section">
+  <h2>Atomi i molekule, jednostavne kemijske tvari</h2>
+  <p>
+    <b>Atom</b> je najmanja čestica kemijskog elementa koja zadržava njegova kemijska svojstva. 
+    Građen je od <b>jezgre</b> (protoni i neutroni) i <b>elektrona</b> koji kruže oko jezgre. 
+    Proton nosi pozitivni naboj, elektron negativni, a neutron je neutralan.
+  </p>
+  <p>
+    <b>Molekula</b> je stabilna skupina atoma međusobno povezanih kemijskim vezama. 
+    Može biti elementarna (npr. O<sub>2</sub>, N<sub>2</sub>) ili spojevna (npr. H<sub>2</sub>O, CO<sub>2</sub>).
+  </p>
+  <p>
+    <b>Jednostavne kemijske tvari</b> su one koje se sastoje samo od atoma jednog elementa, 
+    dok <b>spojevi</b> sadrže atome različitih elemenata.
+  </p>
+  <p><b>Primjer:</b> Kisik (O<sub>2</sub>) i vodik (H<sub>2</sub>) su elementarne tvari, dok je voda (H<sub>2</sub>O) spoj.</p>
+  <p><b>Zadatak:</b> Odredi koliko atoma ukupno sadrži molekula H<sub>2</sub>SO<sub>4</sub>.</p>
+  <div id="chemistry_atoms_molecules_answer" style="display:none;">
+    <p><b>Rješenje:</b> H<sub>2</sub>SO<sub>4</sub> → 2 H + 1 S + 4 O = ukupno 7 atoma.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_atoms_molecules_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 2. Periodni sustav elemenata -->
+<div id="chemistry_periodic_table" class="section">
+  <h2>Periodni sustav elemenata</h2>
+  <p>
+    <b>Periodni sustav</b> je tablica u kojoj su kemijski elementi raspoređeni prema rastućem atomskom broju i 
+    sličnim kemijskim svojstvima. Elementi su raspoređeni u <b>periode (redci)</b> i <b>grupe (stupci)</b>.
+  </p>
+  <p>
+    Elementi iste grupe imaju slična kemijska svojstva jer imaju jednak broj elektrona u vanjskoj ljusci. 
+    Na primjer, svi alkalijski metali (1. grupa: Li, Na, K) burno reagiraju s vodom.
+  </p>
+  <p><b>Primjer:</b> Klor (Cl) i fluor (F) pripadaju halogenima, koji su jaki oksidansi.</p>
+  <p><b>Zadatak:</b> U kojem periodu i grupi se nalazi kisik (O, Z=8)?</p>
+  <div id="chemistry_periodic_table_answer" style="display:none;">
+    <p><b>Rješenje:</b> Kisik je u 2. periodu i 16. grupi (VI A).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_periodic_table_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 3. Pisanje kemijskih simbola i formula -->
+<div id="chemistry_symbols_formulas" class="section">
+  <h2>Pisanje kemijskih simbola i formula</h2>
+  <p>
+    <b>Kemijski simbol</b> je jedno- ili dvoslovna oznaka elementa (npr. H – vodik, O – kisik, Na – natrij). 
+    <b>Kemijska formula</b> pokazuje sastav molekule ili spoja (npr. H<sub>2</sub>O – voda, CO<sub>2</sub> – ugljikov dioksid).
+  </p>
+  <p>
+    U formulama se koriste indeksi (brojevi dolje) za broj atoma. 
+    Ako ispred formule stoji koeficijent, on označava broj molekula.
+  </p>
+  <p><b>Primjer:</b> 2H<sub>2</sub>O znači dvije molekule vode, svaka sadrži 2 atoma H i 1 atom O → ukupno 4 H i 2 O.</p>
+  <p><b>Zadatak:</b> Koliko atoma ima u formuli Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>?</p>
+  <div id="chemistry_symbols_formulas_answer" style="display:none;">
+    <p><b>Rješenje:</b> 2 Al + 3 S + 12 O = ukupno 17 atoma.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_symbols_formulas_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 4. Molekule i ionski spojevi -->
+<div id="chemistry_molecules_ionic" class="section">
+  <h2>Razlikovanje molekula i ionskih spojeva</h2>
+  <p>
+    <b>Molekule</b> nastaju kad se atomi povežu <b>kovalentnim vezama</b> (zajedničkim elektronima). 
+    Obično su plinovite ili tekuće tvari s niskim talištima. Primjeri: H<sub>2</sub>O, CO<sub>2</sub>, O<sub>2</sub>.
+  </p>
+  <p>
+    <b>Ionski spojevi</b> nastaju kad se atomi spajaju prijenosom elektrona (metal + nemetal). 
+    Grade ionsku rešetku i najčešće su krutine visokog tališta. Primjeri: NaCl, CaCO<sub>3</sub>.
+  </p>
+  <p><b>Primjer:</b> Kuhinjska sol (NaCl) je ionski spoj, dok je šećer (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) molekula.</p>
+  <p><b>Zadatak:</b> Odredi je li spoj MgO ionski ili molekulski.</p>
+  <div id="chemistry_molecules_ionic_answer" style="display:none;">
+    <p><b>Rješenje:</b> Mg (metal) + O (nemetal) → ionski spoj.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_molecules_ionic_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 5. Osnovni tipovi kemijskih reakcija -->
+<div id="chemistry_reaction_types" class="section">
+  <h2>Osnovni tipovi kemijskih reakcija</h2>
+  <p>
+    Kemijske reakcije su procesi u kojima se tvari pretvaraju u nove tvari. 
+    Glavni tipovi reakcija su:
+    <ul>
+      <li><b>Sinteza:</b> A + B → AB</li>
+      <li><b>Razlaganje:</b> AB → A + B</li>
+      <li><b>Zamjena:</b> A + BC → AC + B</li>
+      <li><b>Dvostruka zamjena:</b> AB + CD → AD + CB</li>
+      <li><b>Izgaranje:</b> gorivo + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</li>
+    </ul>
+  </p>
+  <p><b>Primjer:</b> 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O (reakcija sinteze i izgaranja).</p>
+  <p><b>Zadatak:</b> Odredi tip reakcije: CaCO<sub>3</sub> → CaO + CO<sub>2</sub>.</p>
+  <div id="chemistry_reaction_types_answer" style="display:none;">
+    <p><b>Rješenje:</b> To je reakcija razlaganja (dekompozicija).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_reaction_types_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 6. Zakon očuvanja mase -->
+<div id="chemistry_law_mass_conservation" class="section">
+  <h2>Zakon očuvanja mase</h2>
+  <p>
+    <b>Zakon očuvanja mase</b> kaže da se u kemijskim reakcijama masa reaktanata uvijek jednaka masi produkata. 
+    Ništa se ne stvara ni ne uništava, već se atomi samo preslaguju.
+  </p>
+  <p><b>Primjer:</b> Reakcija 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O. 
+    4 atoma H i 2 atoma O ostaju isti prije i poslije reakcije.</p>
+  <p><b>Zadatak:</b> Provjeri zakon očuvanja mase u reakciji: 2Mg + O<sub>2</sub> → 2MgO.</p>
+  <div id="chemistry_law_mass_conservation_answer" style="display:none;">
+    <p><b>Rješenje:</b> Lijevo: 2 Mg, 2 O. Desno: 2 Mg, 2 O. → Masa se očuvala.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_law_mass_conservation_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 7. Fizikalna i kemijska svojstva tvari -->
+<div id="chemistry_properties" class="section">
+  <h2>Fizikalna i kemijska svojstva tvari</h2>
+  <p>
+    <b>Fizikalna svojstva</b> su ona koja možemo mjeriti ili promatrati bez promjene sastava tvari 
+    (boja, gustoća, talište, vrelište, vodljivost).  
+    <b>Kemijska svojstva</b> opisuju sposobnost tvari da se pretvara u druge tvari (gorivost, reaktivnost s kiselinama, oksidacija).
+  </p>
+  <p><b>Primjer fizikalnog svojstva:</b> Led se topi na 0 °C (promjena agregatnog stanja).  
+     <b>Primjer kemijskog svojstva:</b> Željezo hrđa u dodiru s kisikom i vlagom.</p>
+  <p><b>Zadatak:</b> Označi svojstvo: "Aluminij provodi električnu struju".</p>
+  <div id="chemistry_properties_answer" style="display:none;">
+    <p><b>Rješenje:</b> To je fizikalno svojstvo (vodljivost).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_properties_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 8. Kiseline, baze i soli -->
+<div id="chemistry_acids_bases_salts" class="section">
+  <h2>Razlikovanje kiselina, baza i soli</h2>
+  <p>
+    <b>Kiseline</b> su tvari koje u vodi otpuštaju H<sup>+</sup> ione (npr. HCl, H<sub>2</sub>SO<sub>4</sub>). 
+    Imaju kiseli okus, pH < 7 i nagrizaju metale.  
+    <b>Baze</b> su tvari koje u vodi otpuštaju OH<sup>-</sup> ione (npr. NaOH, KOH). Klizave su na dodir, pH > 7.  
+    <b>Sol</b> nastaje neutralizacijom kiseline i baze (npr. NaCl iz HCl + NaOH).
+  </p>
+  <p><b>Primjer:</b> HCl + NaOH → NaCl + H<sub>2</sub>O (neutralizacija).</p>
+  <p><b>Zadatak:</b> Odredi je li Ca(OH)<sub>2</sub> kiselina, baza ili sol.</p>
+  <div id="chemistry_acids_bases_salts_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ca(OH)<sub>2</sub> je baza (sadrži OH<sup>-</sup>).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_acids_bases_salts_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 9. Osnove pH skale -->
+<div id="chemistry_ph_balance" class="section">
+  <h2>Osnove pH skale i kiselinsko-bazna ravnoteža</h2>
+  <p>
+    <b>pH skala</b> mjeri kiselost ili bazičnost otopine:  
+    - pH 0–6: kiselo  
+    - pH 7: neutralno (čista voda)  
+    - pH 8–14: bazično  
+  </p>
+  <p>
+    <b>Kiselinsko-bazna ravnoteža</b> važna je u kemiji i biologiji. Ljudska krv ima pH oko 7,4 i mora ostati stabilna.
+  </p>
+  <p><b>Primjer:</b> Sok od limuna ima pH ≈ 2, soda bikarbona ≈ 9.</p>
+  <p><b>Zadatak:</b> Ima li otopina pH 11 kisela ili bazična svojstva?</p>
+  <div id="chemistry_ph_balance_answer" style="display:none;">
+    <p><b>Rješenje:</b> pH 11 → bazična otopina.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_ph_balance_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 10. Zakoni kemijskih reakcija -->
+<div id="chemistry_reaction_laws" class="section">
+  <h2>Zakoni kemijskih reakcija</h2>
+  <p>
+    Kemijske reakcije poštuju određene zakone:  
+    - <b>Zakon očuvanja mase:</b> masa se ne gubi ni ne stvara.  
+    - <b>Zakon stalnih omjera:</b> tvari uvijek reagiraju u stalnim masenim omjerima.  
+    - <b>Zakon višestrukih omjera:</b> elementi se mogu spajati u različitim omjerima, ali u cijelim brojevima.  
+  </p>
+  <p><b>Primjer:</b> H<sub>2</sub> i O<sub>2</sub> uvijek tvore vodu u omjeru 2:1.</p>
+  <p><b>Zadatak:</b> Ako 12 g ugljika reagira s 32 g kisika, koliko grama CO<sub>2</sub> nastaje?</p>
+  <div id="chemistry_reaction_laws_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ukupna masa = 12 g + 32 g = 44 g CO<sub>2</sub>.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_reaction_laws_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 11. Energetske promjene u reakcijama -->
+<div id="chemistry_energy_changes" class="section">
+  <h2>Energetske promjene u kemijskim reakcijama</h2>
+  <p>
+    Reakcije mogu biti:  
+    - <b>Egzotermne</b> (oslobađaju energiju, npr. izgaranje).  
+    - <b>Endotermne</b> (upijaju energiju, npr. fotosinteza).  
+  </p>
+  <p>
+    Energija se oslobađa ili troši zbog promjene u kemijskim vezama. 
+    To je važno u industriji (peći, eksplozivi, baterije).
+  </p>
+  <p><b>Primjer:</b> CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O + energija (egzotermna).</p>
+  <p><b>Zadatak:</b> Je li proces topljenja leda egzoterman ili endoterman?</p>
+  <div id="chemistry_energy_changes_answer" style="display:none;">
+    <p><b>Rješenje:</b> Endoterman (potrebna je toplina).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_energy_changes_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 12. Kemijski spojevi i njihove vrste -->
+<div id="chemistry_compounds_types" class="section">
+  <h2>Kemijski spojevi i njihove vrste</h2>
+  <p>
+    <b>Kemijski spojevi</b> su tvari koje se sastoje od atoma različitih elemenata povezanih kemijskim vezama.  
+    Vrste spojeva:
+    <ul>
+      <li><b>Ionski spojevi:</b> NaCl, CaO</li>
+      <li><b>Molekulski spojevi:</b> H<sub>2</sub>O, CO<sub>2</sub></li>
+      <li><b>Kovalentni mrežasti spojevi:</b> dijamant (C), silicijev dioksid (SiO<sub>2</sub>)</li>
+    </ul>
+  </p>
+  <p><b>Zadatak:</b> Odredi kojoj vrsti spojeva pripada CO<sub>2</sub>.</p>
+  <div id="chemistry_compounds_types_answer" style="display:none;">
+    <p><b>Rješenje:</b> CO<sub>2</sub> je molekulski spoj.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_compounds_types_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 13. Osnovni kemijski procesi u prirodi -->
+<div id="chemistry_natural_processes" class="section">
+  <h2>Osnovni kemijski procesi u prirodi</h2>
+  <p>
+    U prirodi stalno teku kemijski procesi:  
+    - <b>Fotosinteza:</b> 6CO<sub>2</sub> + 6H<sub>2</sub>O → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub>  
+    - <b>Stanično disanje:</b> glukoza + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O + energija  
+    - <b>Korozija:</b> oksidacija metala (hrđanje željeza)  
+    - <b>Kružno kretanje tvari:</b> ciklusi ugljika, dušika, vode
+  </p>
+  <p><b>Primjer:</b> Biljke proizvode kisik koji koriste životinje, dok životinje ispuštaju CO<sub>2</sub> za biljke.</p>
+  <p><b>Zadatak:</b> Koji je kemijski proces obrnut od fotosinteze?</p>
+  <div id="chemistry_natural_processes_answer" style="display:none;">
+    <p><b>Rješenje:</b> Stanično disanje.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_natural_processes_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+
+<!-- 14. Kiseline i baze u svakodnevnom životu -->
+<div id="chemistry_acids_bases_daily" class="section">
+  <h2>Kiseline i baze u svakodnevnom životu</h2>
+  <p>
+    Kiseline i baze su svuda oko nas:  
+    - Limun, ocat → kiseline  
+    - Sapun, soda bikarbona → baze  
+    Koriste se za čišćenje, kuhanje, u industriji i u ljudskom tijelu (želučana kiselina, krv).  
+  </p>
+  <p><b>Primjeri:</b>  
+    1. Limun (C6H8O7) s vodom → pH ≈ 2  
+    2. Soda bikarbona (NaHCO3) otopljena u vodi → pH ≈ 8
+  </p>
+  <p><b>Zadatak:</b> Napiši dva primjera kiseline i dvije baze koje koristiš kod kuće.</p>
+  <div id="chemistry_acids_bases_daily_answer" style="display:none;">
+    <p><b>Rješenje:</b> Kiseline: limun, ocat; baze: soda bikarbona, sapun.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_acids_bases_daily_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 15. Voda i njena svojstva -->
+<div id="chemistry_water_properties" class="section">
+  <h2>Voda i njena svojstva</h2>
+  <p>
+    Voda je ključna za život. Svojstva:
+    <ul>
+      <li>Polarno otapalo</li>
+      <li>Visoka toplinska sposobnost</li>
+      <li>Kapilarna svojstva</li>
+      <li>Sudjeluje u kemijskim reakcijama (hidroliza, fotosinteza)</li>
+    </ul>
+  </p>
+  <p><b>Primjeri:</b> Led plutajući na vodi, isparavanje, kondenzacija, kapilarni uspon u biljkama.</p>
+  <p><b>Zadatak:</b> Objasni zašto led plutajući na vodi pomaže životu u jezerima zimi.</p>
+  <div id="chemistry_water_properties_answer" style="display:none;">
+    <p><b>Rješenje:</b> Led je lakši od vode → pluta → izolira vodu ispod i štiti organizme od smrzavanja.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_water_properties_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 16. Kemijski spojevi u hrani -->
+<div id="chemistry_food_compounds" class="section">
+  <h2>Kemijski spojevi u hrani</h2>
+  <p>
+    Hrana sadrži: ugljikohidrate, proteine, masti, vitamine, minerale.  
+    Svaki spoj ima funkciju: energija, izgradnja stanica, enzimske reakcije.  
+  </p>
+  <p><b>Primjeri:</b>  
+    1. Šećer → monosaharid → energija  
+    2. Sol → NaCl → elektroliti
+  </p>
+  <p><b>Zadatak:</b> Napiši tri primjera hrane i spojeva koji se u njoj nalaze.</p>
+  <div id="chemistry_food_compounds_answer" style="display:none;">
+    <p><b>Rješenje:</b> Banane → glukoza, mlijeko → proteini, maslac → masti.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_food_compounds_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 17. Plinovi u atmosferi -->
+<div id="chemistry_gases_atmosphere" class="section">
+  <h2>Plinovi u atmosferi</h2>
+  <p>
+    Atmosfera sadrži plinove:
+    <ul>
+      <li>Dušik (N2) 78%</li>
+      <li>Kisik (O2) 21%</li>
+      <li>Argon 0.93%</li>
+      <li>Ugljični dioksid i drugi plinovi</li>
+    </ul>
+    Plinovi sudjeluju u fotosintezi, disanju i kemijskim reakcijama u prirodi.
+  </p>
+  <p><b>Zadatak:</b> Koji plin je najvažniji za disanje ljudi?</p>
+  <div id="chemistry_gases_atmosphere_answer" style="display:none;">
+    <p><b>Rješenje:</b> Kisik (O2).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_gases_atmosphere_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 18. Kemijske reakcije u svakodnevnom životu -->
+<div id="chemistry_daily_reactions" class="section">
+  <h2>Kemijske reakcije u svakodnevnom životu</h2>
+  <p>
+    Primjeri reakcija koje svakodnevno vidimo:
+    <ul>
+      <li>Rđa na željezu → oksidacija</li>
+      <li>Kuhanje jaja → denaturacija proteina</li>
+      <li>Izgaranje drveta → egzotermna reakcija</li>
+    </ul>
+  </p>
+  <p><b>Zadatak:</b> Navedite dvije kemijske reakcije koje ste danas vidjeli kod kuće.</p>
+  <div id="chemistry_daily_reactions_answer" style="display:none;">
+    <p><b>Rješenje:</b> Primjeri: kuhanje kave, pečenje kruha.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_daily_reactions_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 19. Vezanje atoma u molekule -->
+<div id="chemistry_bonding_atoms" class="section">
+  <h2>Vezanje atoma u molekule</h2>
+  <p>
+    Atomi se vežu kemijskim vezama:
+    <ul>
+      <li>Kovalentna veza → dijeljenje elektrona (H2O)</li>
+      <li>Ionska veza → prijenos elektrona (NaCl)</li>
+      <li>Metalna veza → slobodni elektroni u metalu</li>
+    </ul>
+    Vezanje određuje svojstva tvari: topljivost, taljenje, čvrstoću.
+  </p>
+  <p><b>Zadatak:</b> Odredi tip veze u HCl.</p>
+  <div id="chemistry_bonding_atoms_answer" style="display:none;">
+    <p><b>Rješenje:</b> Kovalentna veza.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_bonding_atoms_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 20. Molekularna geometrija -->
+<div id="chemistry_molecular_geometry" class="section">
+  <h2>Molekularna geometrija</h2>
+  <p>
+    Oblik molekula ovisi o rasporedu atoma i elektronskih parova:
+    <ul>
+      <li>Linearno → CO2</li>
+      <li>Kutno → H2O</li>
+      <li>Trigonalan → BF3</li>
+      <li>Tetraedarsko → CH4</li>
+    </ul>
+    Geometrija utječe na polaritet i reaktivnost molekula.
+  </p>
+  <p><b>Zadatak:</b> Odredi geometriju molekule H2O.</p>
+  <div id="chemistry_molecular_geometry_answer" style="display:none;">
+    <p><b>Rješenje:</b> Kutna (V-oblik).</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_molecular_geometry_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+
+<!-- 21. Organska kemija – ugljikohidrati -->
+<div id="chemistry_organic_carbs" class="section">
+  <h2>Organska kemija – ugljikohidrati</h2>
+  <p>
+    Ugljikohidrati su spojevi ugljika, vodika i kisika (C, H, O).  
+    Funkcija: glavni izvor energije u tijelu.  
+    Dijelimo ih na:
+    <ul>
+      <li>Monosaharidi – glukoza, fruktoza</li>
+      <li>Disaharidi – saharoza, laktoza</li>
+      <li>Polisaharidi – škrob, celuloza</li>
+    </ul>
+  </p>
+  <p><b>Primjeri:</b> Šećer, riža, krumpir, kruh.</p>
+  <p><b>Zadatak:</b> Napiši primjer monosaharida, disaharida i polisaharida.</p>
+  <div id="chemistry_organic_carbs_answer" style="display:none;">
+    <p><b>Rješenje:</b> Monosaharid: glukoza; Disaharid: saharoza; Polisaharid: škrob.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_organic_carbs_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 22. Organska kemija – lipidi i proteini -->
+<div id="chemistry_organic_lipids_proteins" class="section">
+  <h2>Organska kemija – lipidi i proteini</h2>
+  <p>
+    Lipidi: masti i ulja, funkcija → energija, zaštita organa.  
+    Proteini: gradivni blokovi tijela, enzimi, hormoni.  
+    Sastavljeni od aminokiselina (proteini) i glicerola + masnih kiselina (lipidi).
+  </p>
+  <p><b>Primjeri:</b> Maslac, sir, meso, riba.</p>
+  <p><b>Zadatak:</b> Navedite jedan primjer lipida i jednog proteina u hrani koju jedete.</p>
+  <div id="chemistry_organic_lipids_proteins_answer" style="display:none;">
+    <p><b>Rješenje:</b> Lipid: maslinovo ulje; Protein: jaje, meso.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_organic_lipids_proteins_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 23. Fotosinteza i stanično disanje -->
+<div id="chemistry_photosynthesis_respiration" class="section">
+  <h2>Fotosinteza i stanično disanje</h2>
+  <p>
+    Fotosinteza: proces u biljkama gdje CO2 i H2O uz pomoć svjetlosti proizvode glukozu i kisik.  
+    Stanično disanje: proces pretvaranja glukoze u energiju (ATP) u svim stanicama.  
+    Povezanost: fotosinteza proizvodi kisik i glukozu → stanično disanje koristi za energiju.
+  </p>
+  <p><b>Primjeri:</b> Biljke proizvode kisik → životinje ga koriste za disanje.</p>
+  <p><b>Zadatak:</b> Napiši kemijsku jednadžbu fotosinteze.</p>
+  <div id="chemistry_photosynthesis_respiration_answer" style="display:none;">
+    <p><b>Rješenje:</b> 6 CO2 + 6 H2O + svjetlost → C6H12O6 + 6 O2</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_photosynthesis_respiration_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 24. Katalizatori i enzimi -->
+<div id="chemistry_catalysts_enzymes" class="section">
+  <h2>Katalizatori i enzimi</h2>
+  <p>
+    Katalizatori ubrzavaju kemijske reakcije bez da se sami troše.  
+    Enzimi su biokatalizatori u organizmima → omogućuju brže reakcije na tjelesnoj temperaturi.  
+  </p>
+  <p><b>Primjeri:</b> Enzimi u želucu, katalizator u industrijskoj proizvodnji amonijaka.</p>
+  <p><b>Zadatak:</b> Navedite primjer katalizatora iz svakodnevnog života.</p>
+  <div id="chemistry_catalysts_enzymes_answer" style="display:none;">
+    <p><b>Rješenje:</b> Katalizator u autocestama za čišćenje ispušnih plinova → platina u katalizatoru.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_catalysts_enzymes_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 25. Elektrohemijske reakcije -->
+<div id="chemistry_electrochemistry" class="section">
+  <h2>Elektrohemijske reakcije</h2>
+  <p>
+    Reakcije gdje dolazi do prijenosa elektrona → stvaranje struje.  
+    Primjena: baterije, elektroliza, galvanizacija.  
+  </p>
+  <p><b>Primjeri:</b> Baterija AA, galvanizacija željeza cinkom.</p>
+  <p><b>Zadatak:</b> Objasni što se događa u bateriji tijekom pražnjenja.</p>
+  <div id="chemistry_electrochemistry_answer" style="display:none;">
+    <p><b>Rješenje:</b> Elektroni se kreću iz anode prema katodi → struja → kemijska energija pretvara se u električnu.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_electrochemistry_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 26. Kemija okoliša i zagađenje -->
+<div id="chemistry_environmental_chemistry" class="section">
+  <h2>Kemija okoliša i zagađenje</h2>
+  <p>
+    Industrijska i kućna kemija može zagađivati okoliš.  
+    Primjeri: CO2 → globalno zatopljenje, SO2 → kiselinske kiše, otpadne kemikalije u vodi.  
+    Važno: recikliranje, pravilno odlaganje kemikalija, smanjenje emisija.  
+  </p>
+  <p><b>Primjeri:</b> Recikliranje plastike, čišćenje otpadnih voda, solarni paneli smanjuju CO2.</p>
+  <p><b>Zadatak:</b> Napiši tri načina kako smanjiti kemijsko zagađenje okoliša.</p>
+  <div id="chemistry_environmental_chemistry_answer" style="display:none;">
+    <p><b>Rješenje:</b> 1. Recikliranje, 2. Korištenje ekoloških proizvoda, 3. Smanjenje emisija iz industrije.</p>
+  </div>
+  <button onclick="document.getElementById('chemistry_environmental_chemistry_answer').style.display='block'">
+    Pokaži rješenje
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

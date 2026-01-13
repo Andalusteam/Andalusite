@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Savjetovanje</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Savjetovanje</h1>
+<nav>
+<!-- Left Side List -->
+<button onclick="showSection('sta_je_savjetovanje')">Što je savjetovanje i kako izgleda taj proces?</button>
+<button onclick="showSection('pravo_vrijeme_savjetovanje')">Kada je pravo vrijeme za potražiti psihološko savjetovanje?</button>
+<button onclick="showSection('trebam_li_savjetnik')">Kako da znam treba li meni ili mom djetetu savjetnik?</button>
+<button onclick="showSection('prvi_susret')">Što mogu očekivati na prvom susretu sa savjetnikom?</button>
+<button onclick="showSection('psiholog_psihijatar_savjetnik')">Koja je razlika između psihologa, psihijatra i savjetnika?</button>
+<button onclick="showSection('nelagoda_prije_pomoci')">Je li normalno osjećati nelagodu prije traženja pomoći?</button>
+<button onclick="showSection('ucestalost_savjetovanje')">Koliko često trebam dolaziti na savjetovanje i koliko traje jedan susret?</button>
+<button onclick="showSection('razgovor_bilo_sto')">Mogu li s savjetnikom razgovarati o bilo čemu?</button>
+<button onclick="showSection('povjerljivost')">Je li sve što kažem povjerljivo?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('pokrenuti_razgovor')">Kako započeti razgovor s nekim tko izbjegava terapiju?</button>
+<button onclick="showSection('neugoda_prvi_susret')">Što učiniti ako se ne osjećam ugodno na svom prvom savjetovanju?</button>
+<button onclick="showSection('podrska_osobi_savjetovanje')">Kako podržati nekoga tko ide na savjetovanje?</button>
+<button onclick="showSection('obiteljsko_savjetovanje')">Što mogu očekivati na obiteljskom savjetovanju?</button>
+<button onclick="showSection('savjetovanje_veza')">Može li savjetovanje pomoći kod problema u vezi?</button>
+<button onclick="showSection('odrzati_napredak')">Kako održati napredak nakon savjetovanja?</button>
+<button onclick="showSection('online_savjetovanje')">Mogu li pohađati savjetovanje online?</button>
+<button onclick="showSection('prednosti_dugorocno')">Koje su prednosti dugoročnog savjetovanja?</button>
+
+
+
+</nav>
+
+<!-- 1. Što je savjetovanje i kako izgleda taj proces? -->
+<div id="sta_je_savjetovanje" class="section">
+  <h2>Što je savjetovanje i kako izgleda taj proces?</h2>
+  <p>Savjetovanje je profesionalni proces podrške u kojem stručnjak pomaže osobi da razumije svoje misli, emocije i ponašanja te razvije strategije za suočavanje s izazovima u životu. To nije terapija koja uvijek rješava duboke psihičke probleme, već vodi osobu prema boljoj samosvijesti i praktičnim rješenjima.</p>
+
+  <h3>Kako proces obično izgleda:</h3>
+  <ul>
+    <li>💬 <strong>Upoznavanje i razgovor:</strong> Savjetnik sluša vaše trenutne probleme i potrebe.</li>
+    <li>📝 <strong>Postavljanje ciljeva:</strong> Zajedno se definiraju ciljevi savjetovanja.</li>
+    <li>🔄 <strong>Strategije i alati:</strong> Savjetnik daje praktične smjernice i tehnike za rješavanje problema.</li>
+    <li>📈 <strong>Praćenje napretka:</strong> Tijekom nekoliko susreta prati se napredak i prilagođavaju se metode.
+    </li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Budite otvoreni i iskreni jer što više dijelite, savjetovanje može biti učinkovitije.
+  </div>
+</div>
+
+<!-- 2. Kada je pravo vrijeme za potražiti psihološko savjetovanje? -->
+<div id="pravo_vrijeme_savjetovanje" class="section">
+  <h2>Kada je pravo vrijeme za potražiti psihološko savjetovanje?</h2>
+  <p>Pravo vrijeme je kad osjećate da sami ne možete riješiti probleme, kada stres, tjeskoba, depresija ili konflikti u odnosima postaju preteški ili dugotrajni. Također, potražiti savjetovanje može biti korisno preventivno, radi osobnog razvoja ili bolje emocionalne stabilnosti.</p>
+
+  <h3>Znakovi da je vrijeme:</h3>
+  <ul>
+    <li> Dugotrajna tuga ili osjećaj praznine.</li>
+    <li> Osjećaj preplavljenosti ili tjeskobe koji ometa svakodnevni život.</li>
+    <li> Problemi u odnosima ili komunikaciji s drugima.</li>
+    <li>⚠️ Ponavljajuće negativne misli ili samokritičnost.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Potražiti savjetovanje ne znači da ste „slabi“, već da želite bolje razumjeti sebe i situaciju.
+  </div>
+</div>
+
+<!-- 3. Kako da znam treba li meni ili mom djetetu savjetnik? -->
+<div id="trebam_li_savjetnik" class="section">
+  <h2>Kako da znam treba li meni ili mom djetetu savjetnik?</h2>
+  <p>Odluka o savjetovanju temelji se na težini problema i utjecaju na svakodnevni život. Ako stres, tjeskoba, depresija ili ponašanja vašeg djeteta ometaju funkcioniranje u školi, poslu ili kod kuće, savjetnik može pomoći u pronalaženju rješenja i strategija za prevladavanje.</p>
+
+  <h3>Indikatori potrebe za savjetnikom</h3>
+  <ul>
+    <li>💭 Dugotrajne emocionalne poteškoće ili promjene raspoloženja.</li>
+    <li>🛑 Povlačenje iz društva, problemi u školskim ili obiteljskim aktivnostima.</li>
+    <li> Osjećaj preopterećenosti koji se ne smanjuje samostalnim naporima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Bolje je potražiti pomoć ranije nego čekati da problem postane ozbiljniji.
+  </div>
+</div>
+
+<!-- 4. Što mogu očekivati na prvom susretu sa savjetnikom? -->
+<div id="prvi_susret" class="section">
+  <h2>Što mogu očekivati na prvom susretu sa savjetnikom?</h2>
+  <p>Prvi susret je uglavnom uvodni, s ciljem upoznavanja, razumijevanja vaših problema i postavljanja ciljeva. Savjetnik će objasniti proces savjetovanja, pravila povjerljivosti i što možete očekivati u budućim susretima.</p>
+
+  <h3>Tipični dijelovi prvog susreta</h3>
+  <ul>
+    <li>💬 Razgovor o trenutnim problemima i osjećajima.</li>
+    <li>📝 Pitanja o povijesti problema, životnim okolnostima i ciljevima.</li>
+    <li>📌 Postavljanje plana daljnjih susreta i dogovor o učestalosti.</li>
+    <li>❓ Mogućnost postavljanja vlastitih pitanja o procesu i očekivanjima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Budite iskreni i otvoreni, jer to povećava učinkovitost savjetovanja.
+  </div>
+</div>
+
+<!-- 5. Koja je razlika između psihologa, psihijatra i savjetnika? -->
+<div id="psiholog_psihijatar_savjetnik" class="section">
+  <h2>Koja je razlika između psihologa, psihijatra i savjetnika?</h2>
+  <p>Ova tri stručnjaka pomažu ljudima u mentalnom zdravlju, ali imaju različite uloge:</p>
+
+  <h3>Razlike:</h3>
+  <ul>
+    <li> <strong>Psiholog:</strong> Stručnjak za ljudsko ponašanje i emocije, pruža terapiju i savjetovanje, ne propisuje lijekove.</li>
+    <li> <strong>Psihijatar:</strong> Liječnik specijaliziran za mentalne poremećaje, može propisivati lijekove i kombinirati terapiju s medicinskim tretmanom.</li>
+    <li>💬 <strong>Savjetnik:</strong> Stručnjak koji pruža podršku, vodi razgovor, pomaže u rješavanju problema i razvoju strategija, ali ne dijagnosticira ili propisuje lijekove.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Odabir stručnjaka ovisi o problemu i potrebama – ponekad je kombinacija najbolje rješenje.
+  </div>
+</div>
+
+<!-- 6. Je li normalno osjećati nelagodu prije traženja pomoći? -->
+<div id="nelagoda_prije_pomoci" class="section">
+  <h2>Je li normalno osjećati nelagodu prije traženja pomoći?</h2>
+  <p>Da, potpuno je normalno osjećati strah, sumnju ili nelagodu prije prvog susreta. Mnogi ljudi brinu hoće li biti osuđeni, razumljeni ili hoće li razgovor pomoći. Ovi osjećaji su prirodni, a savjetnici su navikli raditi s takvim reakcijama.</p>
+
+  <h3>Kako prevladati nelagodu</h3>
+  <ul>
+    <li>💬 Pripremite pitanja ili teme koje želite obraditi.</li>
+    <li> Duboko dišite i podsjetite se da je ovo sigurno okruženje.</li>
+    <li>📅 Postavite male ciljeve – fokusirajte se na jedan susret i iskustvo, bez prevelikih očekivanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nelagoda je često znak da ste svjesni problema i da želite raditi na sebi, što je pozitivan korak.
+  </div>
+</div>
+
+<!-- 7. Koliko često trebam dolaziti na savjetovanje i koliko traje jedan susret? -->
+<div id="ucestalost_savjetovanje" class="section">
+  <h2>Koliko često trebam dolaziti na savjetovanje i koliko traje jedan susret?</h2>
+  <p>Uobičajeno je da susreti traju 45–60 minuta. Učestalost ovisi o prirodi problema, ali većina ljudi dolazi jednom tjedno na početku, a kasnije se susreti mogu smanjiti.</p>
+
+  <h3>Preporuke:</h3>
+  <ul>
+    <li>📆 Početna faza: jednom tjedno ili češće, ovisno o hitnosti problema.</li>
+    <li>🔄 Napredak: kako se situacija poboljšava, susreti mogu postati rjeđi – svaka dva tjedna ili mjesečno.</li>
+    <li>⏱️ Trajanje: tipični susret traje 45–60 minuta, ali može biti prilagođen potrebama klijenta.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljednost je važnija od učestalosti – redoviti susreti pomažu bržem napretku.
+  </div>
+</div>
+
+<!-- 8. Mogu li s savjetnikom razgovarati o bilo čemu? -->
+<div id="razgovor_bilo_sto" class="section">
+  <h2>Mogu li s savjetnikom razgovarati o bilo čemu?</h2>
+  <p>Da, možete razgovarati o bilo kojoj temi koja vas muči ili je važna za vaše emocionalno zdravlje. Savjetnici pružaju sigurno i povjerljivo okruženje u kojem možete otvoreno izražavati misli, osjećaje i zabrinutosti.</p>
+
+  <h3>Primjeri tema:</h3>
+  <ul>
+    <li>💭 Emocionalni problemi: tuga, ljutnja, tjeskoba.</li>
+    <li> Odnosi: obiteljski, prijateljski ili partnerski konflikti.</li>
+    <li>📚 Škola ili posao: stres, motivacija, karijerni izazovi.</li>
+    <li>💡 Osobni razvoj: samopouzdanje, ciljevi, strategije suočavanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nemojte se bojati postaviti pitanja ili govoriti o “teškim” temama – to je dio procesa savjetovanja.
+  </div>
+</div>
+
+<!-- 9. Je li sve što kažem povjerljivo? -->
+<div id="povjerljivost" class="section">
+  <h2>Je li sve što kažem povjerljivo?</h2>
+  <p>Da, povjerljivost je temelj savjetovanja. Informacije koje dijelite s profesionalcem ne smiju se dijeliti bez vašeg pristanka, osim u iznimnim slučajevima kada postoji rizik od štete vama ili drugima.</p>
+
+  <h3>Primjeri povjerljivosti:</h3>
+  <ul>
+    <li>💬 Sve što govorite u savjetovanju ostaje između vas i savjetnika.</li>
+    <li>⚠️ Izuzeci uključuju opasnost za život ili sigurnost (vašu ili tuđu), kada stručnjak mora reagirati prema zakonu.</li>
+    <li>📝 Informacije se mogu koristiti anonimno za statistiku ili evaluaciju programa, ali nikada s osobnim podacima bez pristanka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Povjerljivost vam omogućuje otvorenost i iskrenost, što je ključno za uspješno savjetovanje.
+  </div>
+</div>
+
+<!-- 10. Kako započeti razgovor s nekim tko izbjegava terapiju? -->
+<div id="pokrenuti_razgovor" class="section">
+  <h2>Kako započeti razgovor s nekim tko izbjegava terapiju?</h2>
+  <p>Razgovor s osobom koja izbjegava savjetovanje zahtijeva strpljenje, empatiju i pažljiv pristup. Važno je stvoriti sigurno okruženje i pokazati razumijevanje, a ne pritiskati ili osuđivati.</p>
+
+  <h3>Strategije:</h3>
+  <ul>
+    <li>💬 Počnite s brigom: „Primijetio/la sam da se osjećaš loše, želiš li razgovarati?“</li>
+    <li> Aktivno slušajte i ne prekidajte.</li>
+    <li> Ponudite informacije o savjetovanju, ali bez prisile.</li>
+    <li> Pokažite podršku i spremnost da budete uz njih kroz proces.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Fokusirajte se na osjećaje i iskustva osobe, a ne na „prisilu“ odlaska na savjetovanje.
+  </div>
+</div>
+
+<!-- 11. Što učiniti ako se ne osjećam ugodno na svom prvom savjetovanju? -->
+<div id="neugoda_prvi_susret" class="section">
+  <h2>Što učiniti ako se ne osjećam ugodno na svom prvom savjetovanju?</h2>
+  <p>Osjećaj nelagode na prvom susretu je čest i normalan. To može biti zbog nepoznatog okruženja, novih ljudi ili otvaranja osobnih tema.</p>
+
+  <h3>Kako prevladati nelagodu:</h3>
+  <ul>
+    <li> Razgovarajte s savjetnikom o svojim osjećajima.</li>
+    <li>📌 Postavite male ciljeve za prvi susret, npr. samo podijelite jednu brigu.</li>
+    <li> Koristite tehnike smirenja poput dubokog disanja ili kratke meditacije prije susreta.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nelagoda je normalna i obično se smanjuje nakon nekoliko susreta, kako se razvija povjerenje.
+  </div>
+</div>
+
+<!-- 12. Kako podržati nekoga tko ide na savjetovanje? -->
+<div id="podrska_osobi_savjetovanje" class="section">
+  <h2>Kako podržati nekoga tko ide na savjetovanje?</h2>
+  <p>Podrška prijatelja ili članova obitelji može povećati učinkovitost savjetovanja. Važno je biti empatičan, slušati i pokazati razumijevanje bez osuđivanja.</p>
+
+  <h3>Načini podrške:</h3>
+  <ul>
+    <li>💬 Pitajte kako se osjeća i pokažite spremnost za razgovor.</li>
+    <li> Poštujte odluku osobe da potraži pomoć i nemojte umanjivati važnost procesa.</li>
+    <li>📅 Pomozite im da zadrže dosljednost u dolascima ako je potrebno.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Najvažnije je biti prisutan i pružiti emocionalnu sigurnost, bez savjetovanja u zamjenu za profesionalca.
+  </div>
+</div>
+
+<!-- 13. Što mogu očekivati na obiteljskom savjetovanju? -->
+<div id="obiteljsko_savjetovanje" class="section">
+  <h2>Što mogu očekivati na obiteljskom savjetovanju?</h2>
+  <p>Obiteljsko savjetovanje uključuje sve članove obitelji kako bi se poboljšala komunikacija, rješavali konflikti i razvijala međusobna podrška. Savjetnik vodi razgovor, usmjerava diskusiju i predlaže strategije za rješavanje problema.</p>
+
+  <h3>Tipični dijelovi savjetovanja:</h3>
+  <ul>
+    <li>💬 Svaki član obitelji izražava svoja osjećanja i perspektive.</li>
+    <li>🧩 Analiza problema i identifikacija uzroka konflikata.</li>
+    <li>🔄 Razvoj strategija za bolju komunikaciju i suradnju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Budite otvoreni za dijalog i spremni slušati tuđe perspektive bez prekidanja ili osuđivanja.
+  </div>
+</div>
+
+<!-- 14. Može li savjetovanje pomoći kod problema u vezi? -->
+<div id="savjetovanje_veza" class="section">
+  <h2>Može li savjetovanje pomoći kod problema u vezi?</h2>
+  <p>Da, parovi ili pojedinci u vezi mogu koristiti savjetovanje za poboljšanje komunikacije, rješavanje sukoba i jačanje emocionalne povezanosti. Savjetnik pruža neutralnu perspektivu i pomaže u razvoju učinkovitih strategija.</p>
+
+  <h3>Primjeri intervencija:</h3>
+  <ul>
+    <li>💬 Aktivno slušanje i izražavanje osjećaja bez optuživanja.</li>
+    <li>📝 Vježbe rješavanja konflikata i postavljanje zajedničkih ciljeva.</li>
+    <li> Tehnike smirivanja i upravljanja emocijama u trenucima nesuglasica.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Otvorenost i spremnost na promjenu ključni su za učinkovitost savjetovanja u vezi.
+  </div>
+</div>
+
+<!-- 15. Kako održati napredak nakon savjetovanja? -->
+<div id="odrzati_napredak" class="section">
+  <h2>Kako održati napredak nakon savjetovanja?</h2>
+  <p>Nakon savjetovanja važno je primijeniti naučene strategije i redovito pratiti vlastiti napredak. Kontinuirana praksa i samopraćenje pomažu u dugoročnom održavanju emocionalne stabilnosti.</p>
+
+  <h3>Strategije:</h3>
+  <ul>
+    <li>📝 Vodite dnevnik osjećaja i napretka.</li>
+    <li>📅 Primjenjujte tehnike koje ste naučili tijekom savjetovanja.</li>
+    <li> Povremeno se savjetujte ili provjerite s profesionalcem ako se pojave novi izazovi.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljednost i samosvijest ključni su za održavanje trajnih rezultata.
+  </div>
+</div>
+
+<!-- 16. Mogu li pohađati savjetovanje online? -->
+<div id="online_savjetovanje" class="section">
+  <h2>Mogu li pohađati savjetovanje online?</h2>
+  <p>Da, online savjetovanje je sve češće dostupno i pruža fleksibilnost u rasporedu. Može se obaviti putem videopoziva, telefona ili chat platformi, a proces je sličan kao u osobnom savjetovanju.</p>
+
+  <h3>Prednosti:</h3>
+  <ul>
+    <li> Fleksibilnost i dostupnost bez potrebe za putovanjem.</li>
+    <li>💻 Sigurno i privatno okruženje.</li>
+    <li>🕒 Veća mogućnost prilagodbe termina i trajanja susreta.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pobrinite se za privatnost prostora kod kuće i stabilnu internetsku vezu kako bi se osjećali sigurno i koncentrirano.
+  </div>
+</div>
+
+<!-- 17. Koje su prednosti dugoročnog savjetovanja? -->
+<div id="prednosti_dugorocno" class="section">
+  <h2>Koje su prednosti dugoročnog savjetovanja?</h2>
+  <p>Dugoročno savjetovanje pomaže u razvijanju trajnih strategija za upravljanje emocijama, stresom i međuljudskim odnosima. Također povećava samosvijest, otpornost i emocionalnu stabilnost.</p>
+
+  <h3>Prednosti:</h3>
+  <ul>
+    <li> Duboko razumijevanje vlastitih misli i ponašanja.</li>
+    <li> Dugoročno smanjenje stresa i tjeskobe.</li>
+    <li>💬 Poboljšanje komunikacijskih vještina i odnosa s drugima.</li>
+    <li> Jačanje samopouzdanja i otpornosti na životne izazove.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dugoročno savjetovanje nije samo rješavanje problema – to je investicija u emocionalno zdravlje i osobni razvoj.
+  </div>
+</div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

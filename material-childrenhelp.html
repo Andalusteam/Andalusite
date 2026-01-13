@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomoć</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pomoć</h1>
+<nav>
+  <!-- Left Side List -->
+<button onclick="showSection('prepoznati_problem')">Kako mogu prepoznati kada moje dijete ima problem s ponašanjem?</button>
+<button onclick="showSection('granice_disciplina')">Kako mogu postaviti granice i disciplinu bez da povredim emocionalno zdravlje djeteta?</button>
+<button onclick="showSection('kontrola_impulsa')">Kako da se nosim sa djecom koja imaju problema sa kontrolisanjem impulsa?</button>
+<button onclick="showSection('anksioznost_depresija')">Koji su znakovi da dijete možda pati od anksioznosti ili depresije?</button>
+<button onclick="showSection('motivacija')">Kako motivisati dijete koje pokazuje mali interes za školu ili aktivnosti?</button>
+<button onclick="showSection('pozitivno_roditeljstvo')">Šta znači "pozitivno roditeljstvo" i kako mogu primijeniti tu metodu?</button>
+<button onclick="showSection('nagradjivanje')">Koji su najbolji načini za nagrađivanje pozitivnog ponašanja kod djece?</button>
+<button onclick="showSection('ovisnost_tehnologija')">Šta učiniti ako dijete pokazuje znakove ovisnosti o tehnologiji ili društvenim mrežama?</button>
+<button onclick="showSection('emocionalne_teme')">Kada je pravo vrijeme za razgovor sa djetetom o emocionalnim temama?</button>
+<button onclick="showSection('problemi_skola')">Kako se nositi sa djecom koja imaju problema u školi, kao što su loši rezultati ili socijalna izolacija?</button>
+<button onclick="showSection('trauma_gubitak')">Kako pomoći djetetu koje je u prošlosti doživjelo traumu ili gubitak?</button>
+<button onclick="showSection('odgovornost')">Kako pomoći djetetu da razvije odgovornost i samodisciplinu?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('uzroci_loseg_ponasanja')">Šta uzrokuje loše ponašanje kod djece?</button>
+<button onclick="showSection('smanjenje_agresije')">Koji su najefikasniji načini da se smanji agresivno ponašanje kod djece?</button>
+<button onclick="showSection('stidljivo_dijete')">Kako pomoći djetetu koje je veoma povučeno ili stidljivo?</button>
+<button onclick="showSection('agresija_vrsnjaci')">Kako da se nosim sa djecom koja imaju problema sa agresijom prema vršnjacima?</button>
+<button onclick="showSection('socijalne_vjestine')">Kako pomoći djetetu da razvije socijalne vještine i da se bolje uklopi u društvo?</button>
+<button onclick="showSection('izljevi_bijesa')">Kako pomoći djetetu koje često ima izlive bijesa?</button>
+<button onclick="showSection('emocionalna_inteligencija')">Kako da pomognem djetetu da razvije emocionalnu inteligenciju?</button>
+<button onclick="showSection('tvrdoglavost')">Kako da se nosim s djecom koja su tvrdoglava ili ne žele da slušaju?</button>
+<button onclick="showSection('nesigurnost')">Kako da pomognem djetetu koje se osjeća nesigurno u sebi?</button>
+<button onclick="showSection('izražavanje_osjecaja')">Kako da dijete nauči da izražava svoje osjećaje na zdrav način?</button>
+<button onclick="showSection('samopouzdanje')">Šta treba učiniti ako dijete ima problema sa samopouzdanjem ili se osjeća nesigurno u društvu?</button>
+<button onclick="showSection('rizik_adolescencija')">Koji su znakovi da je dijete u riziku od razvoja problema sa ponašanjem u adolescenciji?</button>
+<button onclick="showSection('zdrav_odnos')">Kako izgraditi zdrav odnos sa djetetom koje se povremeno povlači u sebe?</button>
+</nav>
+
+<div id="prepoznati_problem" class="section">
+  <h2>Kako mogu prepoznati kada moje dijete ima problem s ponašanjem?</h2>
+  <p>Svako dijete prolazi kroz faze u kojima testira granice i pokazuje različite obrasce ponašanja. Međutim, važno je znati razlikovati normalne razvojne faze od problema u ponašanju koji zahtijevaju dodatnu pažnju. Problemi u ponašanju se javljaju kada obrasci postanu učestali, intenzivni i ometaju svakodnevni život djeteta, porodice ili škole.</p>
+
+  <h3>Najčešći znakovi problema u ponašanju</h3>
+  <ul>
+    <li>⚠️ <strong>Česti ispadi bijesa:</strong> Ako dijete često gubi kontrolu, viče, baca predmete ili fizički ispoljava ljutnju.</li>
+    <li>🚫 <strong>Ignorisanje autoriteta:</strong> Namjerno nepoštovanje pravila kod kuće ili u školi.</li>
+    <li>🤝 <strong>Problemi u socijalnim odnosima:</strong> Teškoće u sklapanju prijateljstava, izolacija ili sukobi sa vršnjacima.</li>
+    <li>📉 <strong>Pad u školskom uspjehu:</strong> Nagli gubitak interesa za školu, zadatke ili aktivnosti koje su ranije bile zanimljive.</li>
+    <li>😔 <strong>Promjene raspoloženja:</strong> Pretjerana razdražljivost, povlačenje u sebe, tuga ili anksioznost.</li>
+    <li>💤 <strong>Poremećaji spavanja ili ishrane:</strong> Noćne more, nesanica, odbijanje hrane ili prejedanje.</li>
+    <li>💥 <strong>Agresivno ponašanje:</strong> Učestale svađe, fizički sukobi ili nanošenje štete sebi i drugima.</li>
+  </ul>
+
+  <h3>Kada se zabrinuti?</h3>
+  <p>Roditelji bi trebali da se zabrinu kada problemi traju duže od nekoliko sedmica, postaju sve intenzivniji i utiču na školu, prijateljstva ili porodični život. Ako dijete pokazuje ponašanja koja prijete njegovom zdravlju ili sigurnosti drugih, potrebno je odmah potražiti stručnu pomoć.</p>
+
+  <h3>Šta roditelj može učiniti?</h3>
+  <ul>
+    <li>📋 Voditi dnevnik ponašanja – bilježiti kada i u kojim okolnostima dolazi do problema.</li>
+    <li> Razgovarati s djetetom mirno i bez osuđivanja, pokušavajući razumjeti njegove emocije.</li>
+    <li>🏫 Konsultovati nastavnike i školskog psihologa o ponašanju djeteta u školi.</li>
+    <li> Obratiti se pedijatru ili dječjem psihologu ako problemi traju i pogoršavaju se.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Svako dijete povremeno pokazuje izazovno ponašanje. Ključ je u učestalosti, intenzitetu i uticaju na svakodnevni život. Ako primijetite da dijete ne može da funkcioniše normalno zbog ponašanja, vrijeme je da potražite stručnu pomoć.
+  </div>
+</div>
+
+
+<div id="granice_disciplina" class="section">
+  <h2>Kako mogu postaviti granice i disciplinu bez da povrijedim emocionalno zdravlje djeteta?</h2>
+  <p>Djeca trebaju granice kako bi se osjećala sigurno i znala šta je prihvatljivo, ali način na koji se granice postavljaju može značajno uticati na njihovo emocionalno zdravlje. Disciplinovanje ne znači kažnjavanje, već vođenje djeteta ka odgovornom ponašanju.</p>
+
+  <h3>Principi zdrave discipline</h3>
+  <ul>
+    <li>💡 <strong>Konzistentnost:</strong> Pravila trebaju biti jasna i uvijek ista. Djeca se osjećaju sigurno kada znaju šta mogu očekivati.</li>
+    <li> <strong>Pozitivan ton:</strong> Umjesto stalnog „ne smiješ“, koristite fraze koje naglašavaju poželjno ponašanje, npr. „Pokušaj da uradiš ovako...“</li>
+    <li>🤝 <strong>Poštovanje:</strong> Djeca uče kroz primjer. Ako roditelj poštuje dijete, dijete će lakše razviti poštovanje prema drugima.</li>
+    <li>📋 <strong>Jasna pravila:</strong> Pravila trebaju biti razumljiva, primjerena uzrastu i objašnjena djetetu.</li>
+    <li>⏸️ <strong>Prirodne posljedice:</strong> Umjesto kažnjavanja, pustite da dijete osjeti posljedice svojih izbora (npr. ako zaboravi igračku, neće je imati za igru).</li>
+  </ul>
+
+  <h3>Primjeri zdrave discipline</h3>
+  <ul>
+    <li>✔️ <em>Umjesto vikanja:</em> mirno objašnjenje zašto je nešto neprihvatljivo.</li>
+    <li>✔️ <em>Umjesto kazne:</em> zajednički dogovor oko posljedica ako se pravilo prekrši.</li>
+    <li>✔️ <em>Umjesto prijetnje:</em> davanje izbora („Možeš sada pospremiti igračke ili nakon večere – ti biraš“).</li>
+  </ul>
+
+  <h3>Kada disciplina postaje štetna?</h3>
+  <p>Disciplina postaje problem kada uključuje ponižavanje, fizičko kažnjavanje ili ignorisanje djetetovih emocija. Takvi postupci mogu narušiti povjerenje i ostaviti dugoročne emocionalne posljedice.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Najefikasnija disciplina je kombinacija topline i jasnoće. Dijete koje osjeća ljubav i sigurnost lakše prihvata granice i razvija unutrašnju samokontrolu.
+  </div>
+</div>
+
+<div id="kontrola_impulsa" class="section">
+  <h2>Kako da se nosim sa djecom koja imaju problema sa kontrolisanjem impulsa?</h2>
+  <p>Problemi sa kontrolom impulsa su česti kod djece, posebno u ranijem uzrastu. Djeca često djeluju prije nego što razmisle, što može dovesti do problema u školi, u društvu ili kod kuće. Roditelji mogu pomoći razvijanjem strpljenja i učenjem djeteta strategijama samokontrole.</p>
+
+  <h3>Zašto se javlja impulsivno ponašanje?</h3>
+  <ul>
+    <li>🧠 Mozak djece još uvijek nije u potpunosti razvijen, posebno dio zadužen za planiranje i kontrolu.</li>
+    <li>⚡ Emocije često „preplave“ dijete pa reaguje bez razmišljanja.</li>
+    <li>📈 Neka djeca mogu imati poteškoće povezane s poremećajem pažnje (ADHD) ili povećanom osjetljivošću.</li>
+  </ul>
+
+  <h3>Strategije za roditelje</h3>
+  <ul>
+    <li>⏸️ <strong>Učite dijete pauzi:</strong> Naučite ga da napravi mali predah („Udahni i izbroj do 5“).</li>
+    <li>🎯 <strong>Postavite jasna pravila:</strong> Djeca trebaju znati šta je prihvatljivo, a šta nije.</li>
+    <li>🔄 <strong>Modelirajte ponašanje:</strong> Pokažite kroz primjer kako se vi nosite sa stresnim situacijama.</li>
+    <li>🏆 <strong>Nagradite napredak:</strong> Pohvalite dijete kada uspije da se kontroliše.</li>
+    <li>🧩 <strong>Razbijte zadatke:</strong> Umjesto velikih zadataka, ponudite male i dostižne korake.</li>
+  </ul>
+
+  <h3>Praktične tehnike</h3>
+  <ul>
+    <li>✔️ Igrajte igre koje razvijaju strpljenje („Čekaj na red“, slagalice, igre memorije).</li>
+    <li>✔️ Koristite vizualne podsjetnike (plakati sa pravilima, piktogrami).</li>
+    <li>✔️ Razvijajte rutine koje smanjuju stres (dovoljno sna, zdrava ishrana, fizička aktivnost).</li>
+  </ul>
+
+  <h3>Kada potražiti stručnu pomoć?</h3>
+  <p>Ako impulsivnost dovodi do ozbiljnih problema u školi, kod kuće ili u društvu, ili ako je praćena agresivnošću i poteškoćama u učenju, preporučuje se savjetovanje sa psihologom ili pedijatrom.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Djeca ne uče kontrolu impulsa preko noći – potrebno je strpljenje, ponavljanje i podrška okoline.
+  </div>
+</div>
+
+<div id="anksioznost_depresija" class="section">
+  <h2>Koji su znakovi da dijete možda pati od anksioznosti ili depresije?</h2>
+  <p>Anksioznost i depresija nisu problemi koji pogađaju samo odrasle – djeca i adolescenti ih takođe mogu iskusiti. Prepoznavanje ranih znakova je ključno kako bi im se pružila podrška na vrijeme.</p>
+
+  <h3>Znakovi anksioznosti kod djece</h3>
+  <ul>
+    <li>😟 Pretjerana zabrinutost (za školu, porodicu, zdravlje, budućnost).</li>
+    <li>🚫 Izbjegavanje situacija (npr. odlazak u školu, druženja).</li>
+    <li>🤢 Fizički simptomi: glavobolje, bol u stomaku, ubrzano lupanje srca.</li>
+    <li>💤 Problemi sa spavanjem ili noćne more.</li>
+  </ul>
+
+  <h3>Znakovi depresije kod djece</h3>
+  <ul>
+    <li> Stalna tuga ili razdražljivost.</li>
+    <li>📉 Gubitak interesa za aktivnosti koje su ranije voljeli.</li>
+    <li> Povlačenje iz društva i porodice.</li>
+    <li> Umor, manjak energije ili pretjerano spavanje.</li>
+    <li>🍽️ Promjene u apetitu (previše ili premalo jedenja).</li>
+    <li>📚 Poteškoće u koncentraciji i padu školskog uspjeha.</li>
+  </ul>
+
+  <h3>Kada reagovati?</h3>
+  <p>Ako ovi simptomi traju <strong>duže od dvije sedmice</strong> i značajno utiču na svakodnevno funkcionisanje djeteta, važno je razgovarati sa stručnjakom (psiholog, pedijatar, psihijatar).</p>
+
+  <h3>Kako roditelj može pomoći?</h3>
+  <ul>
+    <li>👂 Aktivno slušajte dijete i pokažite razumijevanje bez osuđivanja.</li>
+    <li>❤️ Pružite podršku i sigurnost – dijete mora znati da nije samo.</li>
+    <li> Ohrabrujte fizičku aktivnost i zdrave navike spavanja i ishrane.</li>
+    <li>🗓️ Održavajte rutinu – stabilno okruženje pomaže djeci da se osjećaju sigurnije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Rani razgovor i podrška su ključni – traženje stručne pomoći nije znak slabosti, već korak ka zdravlju.
+  </div>
+</div>
+
+<div id="motivacija" class="section">
+  <h2>Kako motivisati dijete koje pokazuje mali interes za školu ili aktivnosti?</h2>
+  <p>Nedostatak motivacije može biti posljedica dosade, nedostatka samopouzdanja, preopterećenosti ili problema u socijalnim odnosima. Pristup motivaciji treba biti strpljiv, kreativan i prilagođen individualnim potrebama djeteta.</p>
+
+  <h3>Strategije za motivaciju</h3>
+  <ul>
+    <li>🌟 <strong>Postavljanje realnih ciljeva:</strong> Podijelite veće zadatke na manje, dostižne korake kako bi dijete osjetilo uspjeh.</li>
+    <li>💬 <strong>Razgovor i slušanje:</strong> Saznajte šta dijete zanima, čega se boji i šta ga frustrira.</li>
+    <li>🎯 <strong>Prilagodite aktivnosti interesima:</strong> Povežite učenje ili zadatke sa stvarima koje dijete voli ili izazivaju radoznalost.</li>
+    <li>🏆 <strong>Nagrada i pohvala:</strong> Pohvalite trud, a ne samo rezultate. To razvija osjećaj postignuća i samopouzdanja.</li>
+    <li>📅 <strong>Rutina i struktura:</strong> Redovan raspored pomaže djetetu da se fokusira i razvija odgovornost.</li>
+    <li>🤝 <strong>Uključivanje u odluke:</strong> Dajte djetetu izbor u aktivnostima ili zadacima da osjeti kontrolu i motivaciju iznutra.</li>
+  </ul>
+
+  <h3>Praktične metode</h3>
+  <ul>
+    <li>✔️ Koristite vizualne podsjetnike i liste zadataka kako bi dijete pratilo svoj napredak.</li>
+    <li>✔️ Igrajte edukativne igre i aktivnosti koje uče kroz zabavu.</li>
+    <li>✔️ Organizujte kratke pauze između zadataka kako bi se izbjeglo preopterećenje.</li>
+    <li>✔️ Razvijajte pozitivnu atmosferu u kući – pohvala i podrška potiču motivaciju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Motivacija nije prisilna – ključ je u pronalaženju unutrašnjih interesa djeteta i povezivanju aktivnosti sa njihovim stvarnim željama i potrebama.
+  </div>
+</div>
+
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

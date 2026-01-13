@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o softveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Roditeljstvo</h1>
+<nav>
+  <!-- Left Column -->
+<div class="side-list left-list">
+  <button onclick="showSection('parent_odnos')">Kako izgraditi snažan i zdrav odnos s djetetom?</button>
+  <button onclick="showSection('parent_samostalnost')">Kako razvijati djetetovu samostalnost kroz aktivnosti?</button>
+  <button onclick="showSection('parent_balans')">Kako balansirati roditeljsku ulogu između discipline i nježnosti?</button>
+  <button onclick="showSection('parent_samopouzdanje')">Kako svakodnevno jačati samopouzdanje djeteta?</button>
+  <button onclick="showSection('parent_navike')">Koje navike mogu pomoći u odgoju emocionalno stabilnog djeteta?</button>
+  <button onclick="showSection('parent_odgovornost')">Kako potaknuti dijete da bude odgovorno bez stalnog nadzora?</button>
+  <button onclick="showSection('parent_ocekivanja')">Koja su očekivanja realna u određenoj dobi djeteta?</button>
+  <button onclick="showSection('parent_podrska')">Kako podržati djetetov razvoj bez prevelikog pritiska?</button>
+  <button onclick="showSection('parent_rutine')">Kako stvoriti rutine koje djeci pružaju sigurnost?</button>
+  <button onclick="showSection('parent_pitanja')">Koja su najvažnija pitanja koja dijete treba čuti svakog dana?</button>
+  <button onclick="showSection('parent_vrijeme')">Kako uskladiti roditeljske obaveze i kvalitetno vrijeme s djecom?</button>
+
+
+
+<!-- Right Column -->
+<div class="side-list right-list">
+  <button onclick="showSection('parent_rituali')">Kako uvesti porodične rituale koji povezuju?</button>
+  <button onclick="showSection('parent_zahvalnost')">Kako razviti kod djeteta osjećaj zahvalnosti i suosjećanja?</button>
+  <button onclick="showSection('parent_pohvala')">Kako koristiti pohvalu na način koji motivira dijete?</button>
+  <button onclick="showSection('parent_obaveze')">Kako pomoći djetetu da razvije zdrav odnos prema obavezama i radu?</button>
+  <button onclick="showSection('parent_dostupnost')">Kako da roditelji budu emocionalno dostupni djeci, čak i kad su umorni?</button>
+    <button onclick="showSection('parent_komunikacija')">Kako komunicirati s djetetom tako da se osjeća shvaćeno i podržano?</button>
+
+  <button onclick="showSection('parent_brigestress')">Kako razgovarati s djetetom o svakodnevnim brigama ?</button>
+  <button onclick="showSection('parent_sigurnost')">Kako razviti kod djeteta osjećaj sigurnosti i pripadnosti u obitelji?</button>
+  <button onclick="showSection('parent_odluke')">Kako da dijete nauči donositi odluke i preuzimati odgovornost za njih?</button>
+
+  <button onclick="showSection('parent_granice')">Kako razgovarati o granicama i pravilima bez vike i kažnjavanja?</button>
+  <button onclick="showSection('parent_talenti')">Kako pratiti djetetove interese i talente bez da ga opteretimo?</button>
+  <button onclick="showSection('parent_strucna_podrska')">Kako prepoznati kada roditelj treba tražiti podršku ili savjet?</button>
+
+</nav>
+
+<!-- 1. Kako izgraditi snažan i zdrav odnos s djetetom? -->
+<div id="parent_odnos" class="section" >
+  <h2>Kako izgraditi snažan i zdrav odnos s djetetom?</h2>
+  <p>
+    Snažan odnos temelji se na <b>povjerenju, iskrenosti i zajedničkom vremenu</b>. Dijete mora znati da ga voliš bezuvjetno – i kada pogriješi, i kada uspije. 
+    Važno je slušati ga bez prekidanja, postavljati otvorena pitanja i pokazati iskren interes za njegove misli, osjećaje i aktivnosti. 
+    Ako roditelj gradi odnos samo kroz kritike ili zadatke, dijete može steći dojam da nije dovoljno dobro.
+  </p>
+  <p>
+    <b>Primjer:</b> Umjesto da pitaš: <i>"Kako je bilo u školi?"</i> – što često dobije odgovor "Dobro", pitaj: 
+    <i>"Što ti je danas bilo najzabavnije?"</i> ili <i>"Tko te danas nasmijao?"</i>. Takva pitanja otvaraju razgovor.
+  </p>
+  <p>
+    <b>Zadatak:</b> Večeras provedite barem 15 minuta <u>bez mobitela ili TV-a</u>, samo u razgovoru s djetetom o njegovom danu. 
+    Pokaži mu da ti je važno i najmanje što ima za ispričati.
+  </p>
+  <div id="parent_odnos_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete spomene sitnicu (npr. da je crtalo mačku), pohvali ga: <i>"Baš bih volio vidjeti tu mačku, možeš mi nacrtati još jednu?"</i>. 
+    Time dijete osjeća da je vrijedno i da mu posvećuješ pažnju.</p>
+  </div>
+  <button onclick="document.getElementById('parent_odnos_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 2. Kako razvijati djetetovu samostalnost kroz svakodnevne aktivnosti? -->
+<div id="parent_samostalnost" class="section" >
+  <h2>Kako razvijati djetetovu samostalnost kroz svakodnevne aktivnosti?</h2>
+  <p>
+    Djeca postaju samostalna kroz male, svakodnevne zadatke. Ako roditelj sve radi umjesto njih, šalje poruku da nisu sposobna. 
+    Umjesto toga, daj im priliku da uče kroz pokušaje i pogreške. Samostalnost nije isto što i "odraslost" – ona se razvija postupno.
+  </p>
+  <p>
+    <b>Primjer:</b> Dijete od 5 godina može složiti igračke, 
+    dijete od 8 godina može pripremiti odjeću za školu, 
+    dok dijete od 12 godina može samostalno spremati jednostavne obroke.
+  </p>
+  <p>
+    <b>Zadatak:</b> Daj djetetu zadatak koji obično ti radiš (npr. složi ruksak, postavi stol). 
+    Umjesto da ispravljaš svaku sitnicu, pohvali trud i daj mali savjet samo ako je nužno.
+  </p>
+  <div id="parent_samostalnost_answer" style="">
+    <p><b>Rješenje:</b> Ako zaboravi knjigu u torbi, nemoj mu ti dodati. 
+    Pitanjem: <i>"Što ti još treba za sutra?"</i> navodiš ga na razmišljanje i preuzimanje odgovornosti.</p>
+  </div>
+  <button onclick="document.getElementById('parent_samostalnost_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 3. Kako balansirati roditeljsku ulogu između discipline i nježnosti? -->
+<div id="parent_balans" class="section">
+  <h2>Kako balansirati roditeljsku ulogu između discipline i nježnosti?</h2>
+  <p>
+    Disciplina i nježnost nisu suprotnosti – one se nadopunjuju. Djeci trebaju <b>jasne granice</b> kako bi se osjećala sigurno, 
+    ali i <b>toplina i razumijevanje</b> kako bi znala da su voljena. 
+    Ako je roditelj previše strog, dijete će ga se bojati, a ako je previše popustljiv, dijete neće naučiti odgovornost.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako dijete ne pospremi igračke, posljedica može biti gubitak gledanja crtića. 
+    No i dalje mu reci: <i>"Znam da si umoran, ali dogovor je da se igračke pospreme. Sutra možeš ponovo gledati crtić."</i>. 
+    Dakle, pravila postoje, ali bez vikanja.
+  </p>
+  <p>
+    <b>Zadatak:</b> Osmisli jedno kućno pravilo i zajedno s djetetom dogovorite logičnu posljedicu ako ga ne ispoštuje.
+  </p>
+  <div id="parent_balans_answer" style="display:none;">
+    <p><b>Rješenje:</b> Pravilo: "Igračke se pospremaju prije večere".  
+       Posljedica: Ako ne pospremi, taj dan neće se koristiti novim igračkama. 
+       Dijete uči da postupci imaju posljedice, ali i da je roditelj pravedan.</p>
+  </div>
+  <button onclick="document.getElementById('parent_balans_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 4. Kako svakodnevno jačati samopouzdanje djeteta? -->
+<div id="parent_samopouzdanje" class="section" >
+  <h2>Kako svakodnevno jačati samopouzdanje djeteta?</h2>
+  <p>
+    Samopouzdanje raste kad dijete osjeti da vrijedi i da se njegov trud priznaje. 
+    Nije dovoljno hvaliti samo rezultate ("Bravo za peticu"), već i proces ("Sviđa mi se kako si se potrudio učiti"). 
+    Tako dijete uči da vrijedi i kad pogriješi.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako dijete ne pobijedi na natjecanju, reci: 
+    <i>"Ponosan sam jer nisi odustao, dao si sve od sebe."</i> – to je jednako važno kao i pobjeda.
+  </p>
+  <p>
+    <b>Zadatak:</b> Svaki dan reci djetetu jednu pohvalu vezanu uz trud, a ne samo uz uspjeh.
+  </p>
+  <div id="parent_samopouzdanje_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete vježba gitaru i pogriješi, reci: 
+    <i>"Čujem da si puno vježbao, zvuči sve bolje!"</i> – to jača unutarnju motivaciju.</p>
+  </div>
+  <button onclick="document.getElementById('parent_samopouzdanje_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 5. Koje svakodnevne navike mogu pomoći u odgoju emocionalno stabilnog djeteta? -->
+<div id="parent_navike" class="section" >
+  <h2>Koje svakodnevne navike mogu pomoći u odgoju emocionalno stabilnog djeteta?</h2>
+  <p>
+    Djeca trebaju <b>rutinu, dosljednost i emocionalnu sigurnost</b>. Male navike svakodnevno grade stabilnost: zajednički obroci, vrijeme za razgovor, 
+    rutine prije spavanja i izražavanje zahvalnosti. Kada zna što može očekivati, dijete se osjeća sigurno.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako svaku večer čitate knjigu prije spavanja, dijete razvija osjećaj sigurnosti i bliskosti. 
+    To postaje "sidro" kojem se uvijek može vratiti.
+  </p>
+  <p>
+    <b>Zadatak:</b> Uvedi barem jednu dnevnu naviku (npr. 5 minuta razgovora prije spavanja) i njeguj je svakog dana.
+  </p>
+  <div id="parent_navike_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete zna da ga svaku večer pitaš "Što je bilo najbolje u tvom danu?", to jača njegovu emocionalnu sigurnost.</p>
+  </div>
+  <button onclick="document.getElementById('parent_navike_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 6. Kako potaknuti dijete da bude odgovorno bez stalnog nadzora? -->
+<div id="parent_odgovornost" class="section" >
+  <h2>Kako potaknuti dijete da bude odgovorno bez stalnog nadzora?</h2>
+  <p>
+    Odgovornost se uči kada dijete osjeti da mu roditelj vjeruje. Ako ga stalno kontroliraš, šalješ poruku da ne vjeruješ njegovoj sposobnosti. 
+    Postavljanje dogovora, jasnih očekivanja i logičnih posljedica jača unutarnju disciplinu.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako dijete treba naučiti pjesmicu za školu, umjesto da ga stalno podsjećaš, dogovorite da će ti je samo doći recitirati u dogovoreno vrijeme.
+  </p>
+  <p>
+    <b>Zadatak:</b> Daj mu zadatak (npr. da nahrani kućnog ljubimca) i ne provjeravaj odmah. 
+    Pokaži povjerenje, a poslije ga pitaj kako se osjećao kad je sam obavio zadatak.
+  </p>
+  <div id="parent_odgovornost_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako je zaboravio, reci: <i>"Što misliš da se događa kad zaboraviš nahraniti psa?"</i>. 
+    Dijete uči odgovornost kroz posljedice, ne kroz strah.</p>
+  </div>
+  <button onclick="document.getElementById('parent_odgovornost_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 7. Koja su očekivanja realna u određenoj dobi djeteta? -->
+<div id="parent_ocekivanja" class="section" >
+  <h2>Koja su očekivanja realna u određenoj dobi djeteta?</h2>
+  <p>
+    Roditelji često griješe jer očekuju previše ili premalo od djece. 
+    Svaka dob nosi svoje mogućnosti i granice: 
+    <ul>
+      <li><b>Predškolska djeca</b> mogu učiti jednostavne rutine (pospremiti igračke).</li>
+      <li><b>Osnovnoškolci</b> mogu preuzeti sitne odgovornosti (spremanje torbe, briga o ljubimcu).</li>
+      <li><b>Tinejdžeri</b> trebaju učiti planirati vrijeme i donositi odluke uz posljedice.</li>
+    </ul>
+  </p>
+  <p>
+    <b>Primjer:</b> Ne očekuj od šestogodišnjaka da sjedi sat vremena i uči, ali može učiti 10 minuta u kraćim intervalima.
+  </p>
+  <p>
+    <b>Zadatak:</b> Zapiši jedno očekivanje koje imaš od svog djeteta i procijeni je li u skladu s njegovom dobi.
+  </p>
+  <div id="parent_ocekivanja_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako tražiš od trogodišnjaka da se sam obuče od glave do pete, to je preveliko očekivanje. 
+    Ali ako očekuješ da obuče čarape – to je realno.</p>
+  </div>
+  <button onclick="document.getElementById('parent_ocekivanja_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 8. Kako podržati djetetov razvoj bez prevelikog pritiska? -->
+<div id="parent_podrska" class="section" >
+  <h2>Kako podržati djetetov razvoj bez prevelikog pritiska?</h2>
+  <p>
+    Djeca najbolje napreduju kad osjećaju podršku, a ne teret roditeljskih očekivanja. 
+    Ako roditelj stalno traži savršenstvo, dijete može razviti strah od pogreške i prestati pokušavati. 
+    Umjesto da namećeš ciljeve, pruži poticaj i ohrabrenje. 
+    Fokus treba biti na <b>procesu učenja i iskustvu</b>, a ne samo na rezultatima.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako dijete voli crtati, dopusti mu da uživa u tome bez pitanja "Hoćeš li jednog dana biti slikar?". 
+    Radost učenja važnija je od konačnog cilja.
+  </p>
+  <p>
+    <b>Zadatak:</b> Umjesto da pitaš dijete "Zašto nisi dobio bolju ocjenu?", pitaj ga: 
+    <i>"Što si naučio iz ovog zadatka?"</i>. 
+  </p>
+  <div id="parent_podrska_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete donese četvorku iz matematike, reci: 
+    <i>"Super je što si riješio većinu zadatka. Hajde da vidimo zajedno gdje je bio problem, pa će idući put biti još bolje."</i>. 
+    Time mu pokazuješ da je greška prilika za učenje.</p>
+  </div>
+  <button onclick="document.getElementById('parent_podrska_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 9. Kako stvoriti rutine koje djeci pružaju sigurnost? -->
+<div id="parent_rutine" class="section" >
+  <h2>Kako stvoriti rutine koje djeci pružaju sigurnost?</h2>
+  <p>
+    Djeca vole predvidljivost – rutine im daju osjećaj kontrole i smirenosti. 
+    Kada dijete zna što slijedi, smanjuje se stres i nesigurnost. 
+    Rutine nisu krut raspored, već <b>okvir koji daje stabilnost</b>.
+  </p>
+  <p>
+    <b>Primjer:</b> Večernja rutina može izgledati ovako: večera → tuširanje → čitanje knjige → spavanje. 
+    Ako se to ponavlja svakodnevno, dijete će lakše utonuti u san.
+  </p>
+  <p>
+    <b>Zadatak:</b> Osmisli jednu jutarnju ili večernju rutinu i uvedi je kao zajednički ritual.
+  </p>
+  <div id="parent_rutine_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete svako jutro ima 10 minuta za razgovor uz doručak, 
+    počet će dan mirnije i osjećati da je važno.</p>
+  </div>
+  <button onclick="document.getElementById('parent_rutine_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 10. Koja su najvažnija pitanja koja dijete treba čuti svakog dana? -->
+<div id="parent_pitanja" class="section" >
+  <h2>Koja su najvažnija pitanja koja dijete treba čuti svakog dana?</h2>
+  <p>
+    Djeca trebaju znati da su voljena, važna i prihvaćena. 
+    To se najbolje prenosi kroz jednostavna, ali značajna pitanja. 
+    Ona otvaraju prostor za iskren razgovor i jačaju emocionalnu povezanost.
+  </p>
+  <p>
+    <b>Primjeri pitanja:</b>
+    <ul>
+      <li>"Kako si se osjećao danas?"</li>
+      <li>"Što te danas najviše nasmijalo?"</li>
+      <li>"Treba li ti moja pomoć u nečemu?"</li>
+      <li>"Na što si danas ponosan?"</li>
+    </ul>
+  </p>
+  <p>
+    <b>Zadatak:</b> Svaki dan pitaj barem jedno pitanje koje se odnosi na djetetove emocije, a ne samo na događaje.
+  </p>
+  <div id="parent_pitanja_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete odgovori: <i>"Bio sam tužan jer me prijatelj nije htio u igru"</i>, 
+    reci: <i>"Žao mi je što se to dogodilo. Hoćeš li da smislimo što možeš reći sljedeći put?"</i>. 
+    Time učiš dijete da su osjećaji normalni i da imaju rješenje.</p>
+  </div>
+  <button onclick="document.getElementById('parent_pitanja_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 11. Kako uskladiti roditeljske obaveze i kvalitetno vrijeme s djecom? -->
+<div id="parent_vrijeme" class="section" >
+  <h2>Kako uskladiti roditeljske obaveze i kvalitetno vrijeme s djecom?</h2>
+  <p>
+    Mnogi roditelji osjećaju krivnju jer nemaju dovoljno vremena. 
+    No, važnija je <b>kvaliteta vremena</b> nego količina. 
+    Dijete pamti trenutke kada si bio prisutan, a ne samo sate provedene zajedno. 
+    Čak i 15 minuta pune pažnje može biti snažnije od sat vremena u kojem si stalno na mobitelu.
+  </p>
+  <p>
+    <b>Primjer:</b> Ako kuhaš večeru, uključi dijete da pomogne. 
+    Tako obavljaš obavezu i provodiš zajedničko vrijeme.
+  </p>
+  <p>
+    <b>Zadatak:</b> Odredi barem 10 minuta dnevno kada ćeš biti 100% posvećen djetetu, bez distrakcija.
+  </p>
+  <div id="parent_vrijeme_answer" style="display:none;">
+    <p><b>Rješenje:</b> Isključi TV i mobitel, a djetetu reci: 
+    <i>"Ovih 10 minuta je samo za nas. Što želiš da radimo?"</i>. 
+    Dijete će zapamtiti osjećaj da je važno.</p>
+  </div>
+  <button onclick="document.getElementById('parent_vrijeme_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 12. Kako uvesti porodične rituale koji povezuju? -->
+<div id="parent_rituali" class="section">
+  <h2>Kako uvesti porodične rituale koji povezuju?</h2>
+  <p>
+    Porodični rituali stvaraju osjećaj pripadnosti i zajedništva. 
+    Oni mogu biti jednostavni, ali postaju posebni jer se ponavljaju i imaju značenje. 
+    Djeca koja odrastaju s ritualima osjećaju veću sigurnost i povezanost s obitelji.
+  </p>
+  <p>
+    <b>Primjeri rituala:</b> Nedjeljni zajednički ručak, filmska večer petkom, 
+    zahvalnost prije spavanja ili obiteljska šetnja svake subote.
+  </p>
+  <p>
+    <b>Zadatak:</b> Dogovori s obitelji jedan mali ritual i počnite ga prakticirati svake sedmice.
+  </p>
+  <div id="parent_rituali_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete zna da svake subote imate "večer društvenih igara", 
+    veselit će se tom trenutku i osjećati pripadnost.</p>
+  </div>
+  <button onclick="document.getElementById('parent_rituali_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 13. Kako razviti kod djeteta osjećaj zahvalnosti i suosjećanja? -->
+<div id="parent_zahvalnost" class="section">
+  <h2>Kako razviti kod djeteta osjećaj zahvalnosti i suosjećanja?</h2>
+  <p>
+    Zahvalnost i suosjećanje ne dolaze prirodno – djeca ih uče promatrajući roditelje. 
+    Ako ti pokazuješ zahvalnost, dijete će je usvajati. 
+    Također, uči ga da prepoznaje potrebe drugih i da pomaže kada može.
+  </p>
+  <p>
+    <b>Primjer:</b> Kada dijete dobije poklon, podsjeti ga da kaže "Hvala". 
+    Ili, ako brat padne, pitaj ga: <i>"Kako mu možemo pomoći da se osjeća bolje?"</i>.
+  </p>
+  <p>
+    <b>Zadatak:</b> Svaku večer pitaj dijete da kaže barem jednu stvar na kojoj je zahvalno tog dana.
+  </p>
+  <div id="parent_zahvalnost_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete kaže: "Zahvalan sam jer sam se igrao s prijateljem", 
+    reci mu: "Baš je lijepo što cijeniš prijateljstvo. To znači da znaš koliko je važno imati nekoga uz sebe."</p>
+  </div>
+  <button onclick="document.getElementById('parent_zahvalnost_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 14. Kako koristiti pohvalu na način koji motivira dijete? -->
+<div id="parent_pohvala" class="section">
+  <h2>Kako koristiti pohvalu na način koji motivira dijete?</h2>
+  <p>
+    Pohvala je snažan alat, ali ako se koristi pogrešno, može smanjiti motivaciju. 
+    Najbolje je hvaliti <b>trud, upornost i proces</b>, a ne samo rezultat. 
+    Tako dijete razvija unutarnju motivaciju i ne radi stvari samo zbog odobravanja.
+  </p>
+  <p>
+    <b>Primjer:</b> Umjesto da kažeš: <i>"Bravo, ti si pametan!"</i>, reci: 
+    <i>"Odlično si se potrudio da riješiš ovaj zadatak."</i>. 
+    Dijete tada uči da je trud jednako važan kao i uspjeh.
+  </p>
+  <p>
+    <b>Zadatak:</b> Sljedeći put kad dijete nešto napravi, umjesto generičke pohvale, naglasi što je konkretno dobro napravilo.
+  </p>
+  <div id="parent_pohvala_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete nacrta crtež, reci: 
+    <i>"Sviđa mi se kako si koristio puno boja – to pokazuje tvoju maštu."</i>. 
+    Takva pohvala potiče kreativnost i motivaciju.</p>
+  </div>
+  <button onclick="document.getElementById('parent_pohvala_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">
+    Pokaži rješenje
+  </button>
+</div>
+
+<!-- 15. Kako pomoći djetetu da razvije zdrav odnos prema obavezama i radu? -->
+<div id="parent_obaveze" class="section">
+  <h2>Kako pomoći djetetu da razvije zdrav odnos prema obavezama i radu?</h2>
+  <p>
+    Djeca trebaju učiti da su obaveze sastavni dio života, ali to ne znači da ih treba opterećivati. 
+    Ključ je u <b>balansu između igre i odgovornosti</b>. 
+    Ako se zadaci prikazuju kao kazna, dijete će razviti otpor. 
+    Ako se predstave kao prilika za doprinos i samostalnost, dijete će ih lakše prihvatiti.
+  </p>
+  <p><b>Primjer:</b> Umjesto da kažeš: <i>"Moraš pospremiti sobu"</i>, reci: 
+    <i>"Hajde da zajedno složimo igračke pa će soba izgledati još ljepše."</i></p>
+  <p><b>Zadatak:</b> Podijeli kućanske poslove tako da dijete ima svoj mali doprinos svaki dan.</p>
+  <div id="parent_obaveze_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete svaki dan hrani kućnog ljubimca, naučit će da obaveze nisu teret, nego znak odgovornosti.</p>
+  </div>
+  <button onclick="document.getElementById('parent_obaveze_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 16. Kako da roditelji budu emocionalno dostupni djeci, čak i kad su umorni? -->
+<div id="parent_dostupnost" class="section" >
+  <h2>Kako da roditelji budu emocionalno dostupni djeci, čak i kad su umorni?</h2>
+  <p>
+    Roditelji često dolaze umorni s posla i teško nalaze energiju za razgovor. 
+    Ipak, djetetu je dovoljno <b>par minuta iskrene pažnje</b> da se osjeća voljeno. 
+    Nije važno koliko dugo, nego koliko kvalitetno slušaš.
+  </p>
+  <p><b>Primjer:</b> Kad se vratiš kući, možeš reći: <i>"Sad sam jako umoran, ali imam 10 minuta samo za tebe. Što želiš da mi ispričaš?"</i></p>
+  <p><b>Zadatak:</b> Odredi kratko vrijeme u danu (npr. večer prije spavanja) kada ćeš uvijek biti prisutan za dijete.</p>
+  <div id="parent_dostupnost_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete zna da će svaku večer imati tvoju pažnju makar 10 minuta, osjeća sigurnost i povezanost.</p>
+  </div>
+  <button onclick="document.getElementById('parent_dostupnost_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 17. Kako komunicirati s djetetom tako da se osjeća shvaćeno i podržano? -->
+<div id="parent_komunikacija" class="section" >
+  <h2>Kako komunicirati s djetetom tako da se osjeća shvaćeno i podržano?</h2>
+  <p>
+    Djeca žele da ih roditelji <b>slušaju bez osude</b>. 
+    Najbolja komunikacija je kada pokazuješ razumijevanje i strpljenje. 
+    Umjesto da odmah daješ rješenja, prvo pokaži da razumiješ osjećaje.
+  </p>
+  <p><b>Primjer:</b> Ako dijete kaže: <i>"Nisam htio ići na trening, bilo mi je dosadno"</i>, odgovori: 
+    <i>"Razumijem, ponekad nam se svima ne da. Hoćeš li da razmislimo zajedno kako da ti bude zanimljivije?"</i></p>
+  <p><b>Zadatak:</b> Kada dijete priča, nemoj ga prekidati – ponovi mu vlastitim riječima ono što si čuo.</p>
+  <div id="parent_komunikacija_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete kaže da ga je prijatelj povrijedio, možeš reći: 
+    <i>"Znači osjetio si se tužno jer te isključio iz igre. Želiš li da smislimo što možeš reći idući put?"</i></p>
+  </div>
+  <button onclick="document.getElementById('parent_komunikacija_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 18. Kako razgovarati s djetetom o svakodnevnim brigama i emocijama? -->
+<div id="parent_brigestress" class="section" >
+  <h2>Kako razgovarati s djetetom o svakodnevnim brigama i emocijama?</h2>
+  <p>
+    Djeca često ne znaju imenovati emocije i trebaju roditeljsku pomoć. 
+    Razgovor o brigama pokazuje djetetu da je <b>normalno osjećati strah, ljutnju ili tugu</b>. 
+    Kad se o emocijama otvoreno priča, one postaju lakše za podnijeti.
+  </p>
+  <p><b>Primjer:</b> Ako dijete kaže: <i>"Bojim se testa"</i>, reci: <i>"Razumijem te. Svi se ponekad bojimo. Hajde da zajedno ponovimo gradivo pa ćeš se osjećati sigurnije."</i></p>
+  <p><b>Zadatak:</b> Pomozi djetetu da svaki dan imenuje barem jednu emociju koju je osjetilo.</p>
+  <div id="parent_brigestress_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete kaže: "Danas sam bio ljut", reci: "Dobro je da si prepoznao svoju ljutnju. Hoćeš li da pričamo što ju je izazvalo?"</p>
+  </div>
+  <button onclick="document.getElementById('parent_brigestress_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 19. Kako razviti kod djeteta osjećaj sigurnosti i pripadnosti u obitelji? -->
+<div id="parent_sigurnost" class="section">
+  <h2>Kako razviti kod djeteta osjećaj sigurnosti i pripadnosti u obitelji?</h2>
+  <p>
+    Osjećaj sigurnosti proizlazi iz ljubavi, rutine i dosljednosti roditelja. 
+    Kada dijete zna da je prihvaćeno bez obzira na greške, osjeća se sigurno. 
+    Također, važno je da dijete osjeti da je <b>važan dio obitelji</b>.
+  </p>
+  <p><b>Primjer:</b> Ako dijete razbije čašu, reci: <i>"Dogodi se svima. Važno je da se nisi ozlijedio. Hajde da zajedno očistimo."</i></p>
+  <p><b>Zadatak:</b> Uključi dijete u donošenje barem jedne obiteljske odluke tjedno (npr. što će se kuhati za vikend).</p>
+  <div id="parent_sigurnost_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete odluči što ćete kuhati, osjeća da je važno i prihvaćeno u obitelji.</p>
+  </div>
+  <button onclick="document.getElementById('parent_sigurnost_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 20. Kako da dijete nauči donositi odluke i preuzimati odgovornost za njih? -->
+<div id="parent_odluke" class="section">
+  <h2>Kako da dijete nauči donositi odluke i preuzimati odgovornost za njih?</h2>
+  <p>
+    Djeca uče donošenje odluka kroz male izbore. 
+    Ako roditelji uvijek odlučuju umjesto njih, djeca neće razviti sigurnost u svoje odluke. 
+    Zato je važno pružiti im <b>mogućnost izbora</b> i pustiti ih da iskuse posljedice.
+  </p>
+  <p><b>Primjer:</b> Pitaj dijete: <i>"Želiš li obući plavu ili crvenu majicu?"</i> – oba izbora su dobra, ali dijete ima osjećaj kontrole.</p>
+  <p><b>Zadatak:</b> Svaki dan daj djetetu barem jedan mali izbor.</p>
+  <div id="parent_odluke_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete odluči igrati nogomet umjesto da piše zadaću, podsjeti ga da će morati zadaću odraditi kasnije. Tako uči da odluke nose posljedice.</p>
+  </div>
+  <button onclick="document.getElementById('parent_odluke_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 21. Kako razgovarati o granicama i pravilima bez vike i kažnjavanja? -->
+<div id="parent_granice" class="section" >
+  <h2>Kako razgovarati o granicama i pravilima bez vike i kažnjavanja?</h2>
+  <p>
+    Djeci trebaju granice, ali one se mogu postaviti mirno i dosljedno. 
+    Vikanje i kažnjavanje stvaraju strah, dok mirno objašnjavanje gradi <b>poštovanje i povjerenje</b>. 
+    Pravila treba objašnjavati tako da dijete shvati razlog, a ne samo naredbu.
+  </p>
+  <p><b>Primjer:</b> Umjesto da vičeš: <i>"Odmah prestani!"</i>, reci: <i>"Ne možeš skakati po kauču jer se možeš ozlijediti. Hajde da skačemo na podu gdje je sigurno."</i></p>
+  <p><b>Zadatak:</b> Kada postavljaš pravilo, uvijek objasni razlog iza njega.</p>
+  <div id="parent_granice_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete ne želi prati zube, reci: <i>"Peremo zube da budu zdravi i da ne bole. Hoćeš li da ti pustim pjesmu dok pereš?"</i>. Pravilo postaje jasnije i prihvatljivije.</p>
+  </div>
+  <button onclick="document.getElementById('parent_granice_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 22. Kako pratiti djetetove interese i talente bez da ga opteretimo? -->
+<div id="parent_talenti" class="section" >
+  <h2>Kako pratiti djetetove interese i talente bez da ga opteretimo?</h2>
+  <p>
+    Djeca prirodno pokazuju znatiželju i talente, ali roditelji ponekad stavljaju prevelik pritisak. 
+    Umjesto forsiranja, važno je <b>promatrati</b> i pružiti podršku kada dijete samo pokazuje interes. 
+    Cilj je da dijete <b>uživa u učenju</b>, a ne da osjeća obavezu.
+  </p>
+  <p><b>Primjer:</b> Ako dijete voli crtati, nemoj ga odmah upisivati na 5 tečajeva, nego ga pusti da crta iz zadovoljstva. 
+  Kasnije možeš ponuditi radionicu ako ono pokaže interes.</p>
+  <p><b>Zadatak:</b> Svakog tjedna promatraj u čemu dijete uživa i pitaj ga želi li nastaviti s tim aktivnostima.</p>
+  <div id="parent_talenti_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako dijete stalno pjeva, podrži ga riječima: 
+    <i>"Baš mi se sviđa kako pjevaš. Želiš li da zajedno poslušamo neku pjesmu i naučimo je?"</i>. 
+    Tako osjeća tvoju podršku, a ne pritisak.</p>
+  </div>
+  <button onclick="document.getElementById('parent_talenti_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 23. Kako prepoznati kada roditelj treba tražiti podršku ili savjet stručnjaka? -->
+<div id="parent_strucna_podrska" class="section" >
+  <h2>Kako prepoznati kada roditelj treba tražiti podršku ili savjet stručnjaka?</h2>
+  <p>
+    Roditelji ne moraju imati sve odgovore – ponekad je <b>stručna pomoć najbolja odluka</b>. 
+    Ako dijete pokazuje dugotrajne poteškoće u ponašanju, učenju ili emocijama, 
+    važno je ne čekati nego potražiti savjet. 
+    To nije znak slabosti roditelja, već <b>odgovornosti i brige</b>.
+  </p>
+  <p><b>Primjer:</b> Ako dijete nekoliko mjeseci odbija ići u školu zbog straha, to je znak da je potrebna stručna podrška psihologa.</p>
+  <p><b>Zadatak:</b> Ako osjetiš da se mučiš u komunikaciji ili disciplini, podijeli to s pedagogom ili stručnjakom u školi.</p>
+  <div id="parent_strucna_podrska_answer" style="display:none;">
+    <p><b>Rješenje:</b> Razgovor sa stručnjakom može roditelju dati nove alate, a djetetu olakšati nošenje s problemom. 
+    Npr. logoped može pomoći u govornim poteškoćama koje roditelj sam ne može riješiti.</p>
+  </div>
+  <button onclick="document.getElementById('parent_strucna_podrska_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+<!-- 24. Kako uskladiti roditeljsku brigu s vlastitim potrebama za odmorom i slobodom? -->
+<div id="parent_balans_selfcare" class="section" >
+  <h2>Kako uskladiti roditeljsku brigu s vlastitim potrebama za odmorom i slobodom?</h2>
+  <p>
+    Da bi roditelj mogao biti strpljiv i podržavajući, mora <b>brinuti i o sebi</b>. 
+    Ako je roditelj stalno iscrpljen, dijete to osjeti i veća je šansa za konflikte. 
+    Zato je važno naći vrijeme za <b>odmor i osobne aktivnosti</b> bez osjećaja krivnje.
+  </p>
+  <p><b>Primjer:</b> Ako roditelj svaki tjedan izdvoji 1 sat za šetnju ili čitanje knjige, 
+  vraća se djetetu odmorniji i smireniji.</p>
+  <p><b>Zadatak:</b> Napravi mali raspored – kad je dijete kod bake ili prijatelja, iskoristi vrijeme za vlastiti odmor.</p>
+  <div id="parent_balans_selfcare_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ako roditelj nađe vremena za sebe (npr. vježbanje, druženje), 
+    šalje djetetu važnu poruku – da je <b>briga o sebi jednako važna kao i briga o drugima</b>.</p>
+  </div>
+  <button onclick="document.getElementById('parent_balans_selfcare_answer').style.display='block'" 
+          style="background-color:teal; color:white; padding:5px 10px; border:none; border-radius:5px;">Pokaži rješenje</button>
+</div>
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('prepoznati_problem'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

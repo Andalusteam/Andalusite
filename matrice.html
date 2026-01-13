@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matrice – Učenje Matematike</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    a {
+      color: #daa520;
+      text-decoration: none;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .example, .task, .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+
+    .example {
+      background-color: #fff8dc;
+    }
+
+    .task {
+      background-color: #fff3b0;
+    }
+
+    .tip {
+      background-color: #faf0e6;
+    }
+
+    .task strong, .example strong, .tip strong {
+      color: #b8860b;
+    }
+
+    code {
+      background-color: #fff7e6;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #daa520;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #fff8dc;
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Matrice</h1>
+
+  <div class="section">
+    <p><strong>Uvod:</strong><br>
+      Matrica je pravokutna tablica brojeva, simbola ili izraza raspoređenih u retke i stupce. Koriste se u linearnim jednadžbama, transformacijama i drugim granama matematike.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Osnovni pojmovi</h2>
+    <ul>
+      <li><strong>Dimenzije matrice:</strong> broj redaka × broj stupaca (npr. 2×3)</li>
+      <li><strong>Element matrice:</strong> pojedinačni broj unutar matrice, označen kao <code>a<sub>ij</sub></code> gdje su i redak, a j stupac</li>
+      <li><strong>Jedinična matrica:</strong> kvadratna matrica sa 1 na glavnoj dijagonali, 0 ostalo</li>
+      <li><strong>Nula matrica:</strong> matrica u kojoj su svi elementi nula</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Operacije s matricama</h2>
+    <ul>
+      <li>Zbrajanje i oduzimanje matrica – element po element</li>
+      <li>Množenje matrice skalarom – svaki element se množi tim brojem</li>
+      <li>Množenje matrica – redak prve matrice sa stupcem druge matrice</li>
+      <li>Transponiranje matrice – zamjena redaka i stupaca</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Primjeri</h2>
+
+    <div class="example">
+      <strong>Primjer 1:</strong><br>
+      Zbroj matrica<br>
+      <table>
+        <tr><td>1</td><td>2</td></tr>
+        <tr><td>3</td><td>4</td></tr>
+      </table>
+      +
+      <table>
+        <tr><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td></tr>
+      </table>
+      <br>
+      Rješenje:<br>
+      <table>
+        <tr><td>6</td><td>8</td></tr>
+        <tr><td>10</td><td>12</td></tr>
+      </table>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 2:</strong><br>
+      Množenje matrice skalarom 3:<br>
+      <table>
+        <tr><td>1</td><td>2</td></tr>
+        <tr><td>3</td><td>4</td></tr>
+      </table>
+      <br>
+      Rješenje:<br>
+      <table>
+        <tr><td>3</td><td>6</td></tr>
+        <tr><td>9</td><td>12</td></tr>
+      </table>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 3:</strong><br>
+      Transponiranje matrice:<br>
+      <table>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+      </table>
+      <br>
+      Rješenje:<br>
+      <table>
+        <tr><td>1</td><td>4</td></tr>
+        <tr><td>2</td><td>5</td></tr>
+        <tr><td>3</td><td>6</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadaci za vježbu</h2>
+
+    <div class="task"><strong>Zadatak 1:</strong> Zbroji matrice <code>[[2, 3], [1, 4]]</code> i <code>[[5, 1], [0, 2]]</code></div>
+    <div class="task"><strong>Zadatak 2:</strong> Pomnoži matricu <code>[[1, 2], [3, 4]]</code> sa skalarom 4</div>
+    <div class="task"><strong>Zadatak 3:</strong> Transponiraj matricu <code>[[7, 8, 9], [4, 5, 6]]</code></div>
+    <div class="task"><strong>Zadatak 4:</strong> Pomnoži matrice <code>[[1, 2], [3, 4]]</code> i <code>[[2, 0], [1, 2]]</code></div>
+    <div class="task"><strong>Zadatak 5:</strong> Provjeri je li matrica <code>[[1, 0], [0, 1]]</code> jedinična matrica</div>
+  </div>
+
+  <div class="section">
+    <h2>Savjeti</h2>
+
+    <div class="tip">
+      <strong>✔️ Korisni savjeti:</strong><br>
+      • Nauči osnovna pravila množenja matrica<br>
+      • Vježbaj zbrajanje i transponiranje<br>
+      • Koristi dijagrame da bolje razumiješ strukturu matrice<br>
+      • Provjeri dimenzije prije množenja matrica
+    </div>
+  </div>
+
+</body>
+</html>

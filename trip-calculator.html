@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Cost Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: goldenrod;
+    }
+    .calculator {
+      max-width: 600px;
+      background: white;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #daa520;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trip Cost Calculator</h1>
+  <div class="calculator">
+    <label for="destination">Destination</label>
+    <select id="destination">
+      <option value="100">City A ($100/day)</option>
+      <option value="150">City B ($150/day)</option>
+      <option value="200">City C ($200/day)</option>
+    </select>
+
+    <label for="transport">Transportation</label>
+    <select id="transport">
+      <option value="50">Bus ($50)</option>
+      <option value="100">Train ($100)</option>
+      <option value="300">Flight ($300)</option>
+    </select>
+
+    <label for="accommodation">Accommodation Type</label>
+    <select id="accommodation">
+      <option value="50">Budget (€50/night)</option>
+      <option value="100">Standard (€100/night)</option>
+      <option value="200">Luxury (€200/night)</option>
+    </select>
+
+    <label for="days">Number of Days</label>
+    <input type="number" id="days" min="1" value="1" />
+
+    <label for="people">Number of People</label>
+    <input type="number" id="people" min="1" value="1" />
+
+    <label><input type="checkbox" id="meals" /> Include Meals ($25/day/person)</label>
+
+    <button onclick="calculateTripCost()">Calculate Total Cost</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateTripCost() {
+      const destinationCost = parseInt(document.getElementById("destination").value);
+      const transportCost = parseInt(document.getElementById("transport").value);
+      const accommodationCost = parseInt(document.getElementById("accommodation").value);
+      const days = parseInt(document.getElementById("days").value);
+      const people = parseInt(document.getElementById("people").value);
+      const includeMeals = document.getElementById("meals").checked;
+
+      const baseCostPerPerson = (destinationCost * days) + (accommodationCost * days);
+      const mealsCost = includeMeals ? (25 * days * people) : 0;
+      const total = (baseCostPerPerson * people) + (transportCost * people) + mealsCost;
+
+      document.getElementById("result").innerHTML = `
+        <strong>Total Trip Cost: $${total.toLocaleString()}</strong><br>
+        <ul>
+          <li>Destination: $${destinationCost}/day</li>
+          <li>Accommodation: $${accommodationCost}/night</li>
+          <li>Transportation: $${transportCost}/person</li>
+          <li>Meals: ${includeMeals ? "$25/day/person" : "Not Included"}</li>
+        </ul>
+      `;
+    }
+  </script>
+</body>
+</html>

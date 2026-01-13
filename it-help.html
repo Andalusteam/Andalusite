@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Help</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* prevent scrolling */
+      font-family: Arial, sans-serif;
+      background-color: white;
+      position: fixed; /* fix the whole page */
+    }
+
+    body {
+      text-align: center;
+    }
+
+    .title-container {
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-container h1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .title-container h2 {
+      font-size: 50px;
+      font-weight: bold;
+      color: goldenrod;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .categories-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 16px;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 1;
+      position: relative;
+    }
+
+    .category {
+      background-color: white;
+      padding: 14px 22px;
+      border-radius: 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      min-width: 140px;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: gray;
+      font-weight: bold;
+    }
+
+    .category:hover {
+      background-color: #f2f2f2;
+      transform: translateY(-4px);
+      color: gray;
+    }
+
+    .additional-message {
+      font-size: 16px;
+      font-weight: bold;
+      color: #444;
+      margin-top: 35px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .question-box {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .question-box textarea {
+      width: 350px;
+      height: 80px;
+      padding: 8px;
+      font-size: 14px;
+      border: 0.5px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+      outline: none;
+      background-color: white;
+    }
+
+    .submit-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: bold;
+      text-transform: lowercase;
+    }
+
+    .submit-btn::first-letter {
+      text-transform: uppercase;
+    }
+
+    .submit-btn:hover {
+      background-color: #daa520;
+    }
+
+    .background-image {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 290px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    
+    /* Lower-left corner questions container */
+.questions-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      max-width: 300px;
+      max-height: 50%;
+      overflow-y: auto;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      font-size: 14px;
+      z-index: 999;
+    }
+
+    /* Individual question styling (modern rectangle) */
+    .question-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 15px;
+      background-color: #e0e0e0; /* smooth grey */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .question-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    .question-item span {
+      flex: 1;
+      margin-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .answer-btn {
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .answer-btn:hover {
+      background-color: #daa520;
+    }
+
+    #send-arrow {
+      position: fixed;
+      top: 19px;
+      right: 230px;
+      width: 27px;
+      height: auto;
+      cursor: pointer;
+      z-index: 1001;
+      transition: transform 0.2s ease;
+    }
+
+    #send-arrow:hover {
+      transform: scale(1.1) translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="desktop.png" alt="Desktop" class="background-image">
+
+  <div class="title-container">
+    <h1>Dobrodošli na dio stranice s pruženom pomoći u:</h1>
+    <h2>IT(kompjuterom)</h2>
+  </div>
+
+  <div class="categories-container">
+    <a href="software-help.html" class="category">Softverska pomoć</a>
+    <a href="networking.html" class="category">Umrežavanje</a>
+    <a href="hardware-help.html" class="category">Hardverska pomoć</a>
+    <a href="basic-support.html" class="category">Osnovna podrška</a>
+  </div>
+
+  <p class="additional-message">
+     Ako pomoć koja vam je potrebna nije nigdje navedena, napišite konkretno pitanje ili zadatak u vezi nečega zašto biste željeli da vam se pomogne.
+  </p>
+
+  <div class="question-box">
+    <textarea id="user-question" placeholder="Postavite svoje pitanje ovdje..."></textarea>
+  </div>
+
+  <div class="submit-container">
+    <button class="submit-btn" onclick="addQuestion()">Pošalji</button>
+  </div>
+
+  <!-- Questions Container (lower-left corner) -->
+  <div class="questions-container" id="questions-container">
+    <!-- User questions will appear here -->
+  </div>
+<script>
+  const isAdmin = true; // admin can delete
+
+  function addQuestion() {
+    const textarea = document.getElementById('user-question');
+    const questionText = textarea.value.trim();
+    if (!questionText) return;
+
+    const container = document.getElementById('questions-container');
+
+    const questionItem = document.createElement('div');
+    questionItem.className = 'question-item';
+    questionItem.style.flexDirection = 'column';
+
+    const topRow = document.createElement('div');
+    topRow.style.display = 'flex';
+    topRow.style.alignItems = 'center';
+    topRow.style.justifyContent = 'space-between';
+    topRow.style.width = '100%';
+
+    const span = document.createElement('div');
+    span.textContent = questionText;
+    span.style.whiteSpace = 'pre-wrap'; // wrap long text
+    span.style.wordBreak = 'break-word'; // break long words
+    span.style.flex = '1';
+
+    const btnBox = document.createElement('div');
+    btnBox.style.display = 'flex';
+    btnBox.style.gap = '6px';
+
+    const answerBtn = document.createElement('button');
+    answerBtn.className = 'answer-btn';
+    answerBtn.textContent = 'Odgovori';
+    answerBtn.onclick = () => showAnswerBox(questionItem);
+
+    btnBox.appendChild(answerBtn);
+
+    if (isAdmin) {
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.textContent = 'Obriši';
+      deleteBtn.style.background = 'red';
+      deleteBtn.style.color = 'white';
+      deleteBtn.style.border = 'none';
+      deleteBtn.style.borderRadius = '6px';
+      deleteBtn.style.padding = '6px 10px';
+      deleteBtn.style.cursor = 'pointer';
+      deleteBtn.onclick = () => {
+        if (confirm('Jeste li sigurni da želite obrisati ovo pitanje?')) {
+          questionItem.remove();
+        }
+      };
+      btnBox.appendChild(deleteBtn);
+    }
+
+    topRow.appendChild(span);
+    topRow.appendChild(btnBox);
+    questionItem.appendChild(topRow);
+
+    container.appendChild(questionItem);
+    textarea.value = ''; // clear textarea
+  }
+
+  function showAnswerBox(questionItem) {
+    if (questionItem.querySelector('.answer-box')) return;
+
+    const answerBox = document.createElement('div');
+    answerBox.className = 'answer-box';
+    answerBox.style.marginTop = '6px';
+    answerBox.style.display = 'flex';
+    answerBox.style.flexDirection = 'column';
+
+    const textarea = document.createElement('textarea');
+    textarea.rows = 2;
+    textarea.style.resize = 'none';
+    textarea.style.marginBottom = '4px';
+    textarea.style.width = '100%';
+    textarea.style.wordBreak = 'break-word';
+    textarea.style.whiteSpace = 'pre-wrap';
+
+    const submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Pošalji odgovor';
+    submitBtn.className = 'answer-btn';
+    submitBtn.style.alignSelf = 'flex-start';
+
+    submitBtn.onclick = () => {
+      const answerText = textarea.value.trim();
+      if (!answerText) return;
+
+      // answer container with coin
+      const answerContainer = document.createElement('div');
+      answerContainer.style.display = 'flex';
+      answerContainer.style.alignItems = 'center';
+      answerContainer.style.gap = '6px';
+      answerContainer.style.marginTop = '4px';
+      answerContainer.style.flexWrap = 'wrap';
+
+      // coin image
+      const coin = document.createElement('img');
+      coin.src = 'Screenshot_68.png';
+      coin.style.width = '20px';
+      coin.style.height = '20px';
+      coin.style.transition = 'transform 1.2s ease-out, opacity 1.2s ease-out';
+      answerContainer.appendChild(coin);
+
+      // answer text
+      const answerDiv = document.createElement('div');
+      answerDiv.textContent = answerText;
+      answerDiv.style.color = 'green';
+      answerDiv.style.fontWeight = 'bold';
+      answerDiv.style.whiteSpace = 'pre-wrap'; // wrap
+      answerDiv.style.wordBreak = 'break-word';
+      answerDiv.style.flex = '1';
+
+      answerContainer.appendChild(answerDiv);
+
+      questionItem.appendChild(answerContainer);
+      answerBox.remove();
+
+      // animate coin
+      setTimeout(() => {
+        coin.style.transform = 'translateY(-10px)';
+        coin.style.opacity = '0';
+        setTimeout(() => coin.remove(), 1200);
+      }, 50);
+    };
+
+    answerBox.appendChild(textarea);
+    answerBox.appendChild(submitBtn);
+
+    questionItem.appendChild(answerBox);
+  }
+</script>

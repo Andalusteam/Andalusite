@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretraga Poslova</title>
+    <style>
+        /* General Layout and Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .sidebar select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .sidebar label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+            margin-left: 20px;
+            max-width: 800px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #jobListings {
+            margin-top: 20px;
+        }
+
+        .job-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+
+        .job-item h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .job-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .job-item a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar with categories -->
+        <div class="sidebar">
+            <h3>Filtriraj Pretragu</h3>
+
+            <!-- Job Type Filter -->
+            <label for="jobType">Vrsta posla</label>
+            <select id="jobType" onchange="filterJobs()">
+                <option value="All">Svi</option>
+                <option value="Full-Time">Puno radno vrijeme</option>
+                <option value="Part-Time">Poloveno radno vrijeme</option>
+            </select>
+
+            <!-- Industry Filter (New Category) -->
+            <label for="industry">Industrija</label>
+            <select id="industry" onchange="filterJobs()">
+                <option value="All">Sve</option>
+                <option value="Tech">Tehnologija</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Product">Proizvod</option>
+            </select>
+
+            <!-- Experience Level Filter (New Category) -->
+            <label for="experience">Razina Iskustva</label>
+            <select id="experience" onchange="filterJobs()">
+                <option value="All">Sve</option>
+                <option value="Junior">Junior</option>
+                <option value="Mid">Srednji</option>
+                <option value="Senior">Senior</option>
+            </select>
+        </div>
+
+        <!-- Main Content with Search Bar and Job Listings -->
+        <div class="main-content">
+            <h1>Pretraga Poslova</h1>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pretraži poslove..." onkeyup="filterJobs()">
+            </div>
+
+            <!-- Job Listings -->
+            <div id="jobListings">
+                <!-- Job items will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample job data tailored for Croatia with more listings
+        const jobs = [
+            { title: "Softverski Inženjer", company: "TechCroatia", location: "Zagreb", type: "Full-Time", industry: "Tech", experience: "Senior", url: "https://techcroatia.com/jobs/123" },
+            { title: "Podatkovni Znanstvenik", company: "DataX", location: "Split", type: "Part-Time", industry: "Tech", experience: "Junior", url: "https://datax.com/jobs/456" },
+            { title: "Voditelj Proizvoda", company: "ProdCo", location: "Zagreb", type: "Full-Time", industry: "Product", experience: "Mid", url: "https://prodco.com/jobs/789" },
+            { title: "Web Developer", company: "WebWorks", location: "Rijeka", type: "Full-Time", industry: "Tech", experience: "Junior", url: "https://webworks.com/jobs/101" },
+            { title: "Specijalist za Marketing", company: "MarketCo", location: "Osijek", type: "Part-Time", industry: "Marketing", experience: "Mid", url: "https://marketco.com/jobs/202" },
+            { title: "Računovodstveni Specijalist", company: "AccuPlus", location: "Zagreb", type: "Full-Time", industry: "Finance", experience: "Senior", url: "https://accuplus.com/jobs/303" },
+            { title: "Dizajner Grafike", company: "DesignWorks", location: "Split", type: "Part-Time", industry: "Design", experience: "Junior", url: "https://designworks.com/jobs/404" },
+            { title: "Menadžer Projekta", company: "ProjectCo", location: "Osijek", type: "Full-Time", industry: "Tech", experience: "Mid", url: "https://projectco.com/jobs/505" },
+            { title: "Pomoćni Programer", company: "TechStudio", location: "Zadar", type: "Part-Time", industry: "Tech", experience: "Junior", url: "https://techstudio.com/jobs/606" },
+            { title: "Marketing Koordinator", company: "MarketVision", location: "Zagreb", type: "Full-Time", industry: "Marketing", experience: "Senior", url: "https://marketvision.com/jobs/707" },
+            { title: "UX/UI Dizajner", company: "DesignFlow", location: "Rijeka", type: "Full-Time", industry: "Design", experience: "Mid", url: "https://designflow.com/jobs/808" },
+            { title: "IT Podrška", company: "SupportTech", location: "Zagreb", type: "Full-Time", industry: "Tech", experience: "Junior", url: "https://supporttech.com/jobs/909" },
+            { title: "SEO Specijalist", company: "WebGuru", location: "Split", type: "Part-Time", industry: "Marketing", experience: "Mid", url: "https://webguru.com/jobs/1010" },
+            { title: "Data Analyst", company: "DataTech", location: "Osijek", type: "Full-Time", industry: "Tech", experience: "Senior", url: "https://datatech.com/jobs/1111" },
+            { title: "Prodajni Menadžer", company: "SalesForce", location: "Zagreb", type: "Full-Time", industry: "Sales", experience: "Mid", url: "https://salesforce.com/jobs/1212" },
+            { title: "Administrator Sustava", company: "SystemAdmin", location: "Zadar", type: "Part-Time", industry: "Tech", experience: "Junior", url: "https://systemadmin.com/jobs/1313" }
+        ];
+
+        // Display all jobs initially
+        function displayJobs(jobsToDisplay) {
+            const jobListings = document.getElementById('jobListings');
+            jobListings.innerHTML = ''; // Clear any previous listings
+
+            jobsToDisplay.forEach(job => {
+                const jobDiv = document.createElement('div');
+                jobDiv.classList.add('job-item');
+                jobDiv.innerHTML = `
+                    <h2>${job.title}</h2>
+                    <p><strong>Tvrtka:</strong> ${job.company}</p>
+                    <p><strong>Lokacija:</strong> ${job.location}</p>
+                    <p><strong>Vrsta posla:</strong> ${job.type}</p>
+                    <p><strong>Industrija:</strong> ${job.industry}</p>
+                    <p><strong>Razina Iskustva:</strong> ${job.experience}</p>
+                    <a href="${job.url}" target="_blank">Prijavi se sada</a>
+                `;
+                jobListings.appendChild(jobDiv);
+            });
+        }
+
+        // Function to filter jobs based on search input and selected filters
+        function filterJobs() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const jobType = document.getElementById('jobType').value;
+            const industry = document.getElementById('industry').value;
+            const experience = document.getElementById('experience').value;
+
+            const filteredJobs = jobs.filter(job => {
+                const matchesSearch = job.title.toLowerCase().includes(searchInput) || job.company.toLowerCase().includes(searchInput);
+                const matchesType = jobType === 'All' || job.type === jobType;
+                const matchesIndustry = industry === 'All' || job.industry === industry;
+                const matchesExperience = experience === 'All' || job.experience === experience;
+
+                return matchesSearch && matchesType && matchesIndustry && matchesExperience;
+            });
+
+            displayJobs(filteredJobs);
+        }
+
+        // Call displayJobs to show all jobs initially
+        displayJobs(jobs);
+    </script>
+
+</body>
+</html>

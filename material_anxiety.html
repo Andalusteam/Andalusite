@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anksioznost</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+<nav>
+
+<button onclick="showSection('sta_je_anksioznost')">Što je anksioznost i kako prepoznati njene simptome?</button>
+<button onclick="showSection('anksioznost_vs_stres')">Kako razlikovati anksioznost od običnog stresa?</button>
+<button onclick="showSection('stalni_nemir')">Zašto osjećam stalan nemir i zabrinutost bez razloga?</button>
+<button onclick="showSection('uticaj_anksioznost_na_telo')">Kako anksioznost utječe na moje tijelo i zdravlje?</button>
+<button onclick="showSection('vrste_anksioznost')">Koje su najčešće vrste anksioznih poremećaja?</button>
+<button onclick="showSection('samosmanjenje_tjeskobe')">Kako mogu sam/a smanjiti osjećaj tjeskobe?</button>
+<button onclick="showSection('strucna_pomoc')">Trebam li potražiti stručnu pomoć zbog anksioznosti?</button>
+<button onclick="showSection('tehnike_opustanja')">Koje tehnike opuštanja pomažu kod anksioznosti?</button>
+
+
+
+<button onclick="showSection('strah_budućnost')">Kako prevladati strah od budućnosti i neizvjesnosti?</button>
+<button onclick="showSection('anksioznost_vs_depresija')">Kako razlikovati anksioznost od depresije?</button>
+<button onclick="showSection('fizicki_simptomi')">Zašto imam fizičke simptome poput ubrzanog srca, ali su nalazi u redu?</button>
+<button onclick="showSection('uticaj_na_odnose')">Kako anksioznost utječe na odnose s ljudima?</button>
+<button onclick="showSection('pomoc_partneru')">Kako pomoći partneru koji se bori s anksioznošću?</button>
+<button onclick="showSection('paraliza_tjeskoba')">Što kada me tjeskoba paralizira i ne mogu ništa obaviti?</button>
+<button onclick="showSection('gubitak_kontrole')">Može li anksioznost uzrokovati osjećaj gubitka kontrole?</button>
+
+</nav>
+
+
+<!-- 1. Što je anksioznost i kako prepoznati njene simptome? -->
+<div id="sta_je_anksioznost" class="section">
+  <h2>Što je anksioznost i kako prepoznati njene simptome?</h2>
+  <p>Anksioznost je složen emocionalni i fiziološki odgovor tijela na percipiranu opasnost, prijetnju ili stresnu situaciju. U umjerenoj mjeri, anksioznost je potpuno normalna i čak korisna – pomaže nam da se pripremimo na izazove, da ostanemo fokusirani i da reagiramo kada je potrebno. Međutim, kada anksioznost postane preintenzivna, traje dugo i javlja se i u situacijama koje objektivno nisu opasne, tada govorimo o anksioznom poremećaju.</p>
+  <p>Za razliku od trenutne zabrinutosti ili straha koji su vezani uz određeni događaj (npr. ispit, razgovor za posao), anksioznost može biti prisutna stalno, kao osjećaj unutrašnje napetosti i nemira, čak i kada nema realnog povoda. Ljudi koji se bore s anksioznošću često opisuju osjećaj kao da su "na rubu" ili kao da im tijelo i um nikad ne pronalaze mir.</p>
+  <p><strong>Najčešći simptomi anksioznosti mogu biti psihološki i fizički:</strong></p>
+  <ul>
+    <li><strong>Psihološki:</strong> stalna briga, osjećaj da će se dogoditi nešto loše, teškoće s koncentracijom, osjećaj gubitka kontrole, pretjerano analiziranje situacija, nemogućnost da se “isključe misli”.</li>
+    <li><strong>Fizički:</strong> ubrzan rad srca, osjećaj pritiska u grudima, drhtanje, pojačano znojenje, probavne tegobe, nesanica, napetost mišića (posebno vrata i ramena), vrtoglavice, glavobolje.</li>
+  </ul>
+  <p>Važno je naglasiti da anksioznost nije znak slabosti niti “izmišljeni problem”. Ona je stvarna i može značajno utjecati na kvalitet života, ali je i stanje koje se može uspješno liječiti i kontrolirati.</p>
+</div>
+
+<!-- 2. Kako razlikovati anksioznost od običnog stresa? -->
+<div id="anksioznost_vs_stres" class="section">
+  <h2>Kako razlikovati anksioznost od običnog stresa?</h2>
+  <p><strong>Stres</strong> i <strong>anksioznost</strong> na prvi pogled mogu izgledati slično jer oba uključuju nervozu, napetost i osjećaj pritiska. Međutim, razlike su značajne. Stres je prirodna reakcija na konkretne vanjske okolnosti – npr. rok na poslu, važan ispit ili konfliktna situacija. Kada se taj događaj završi, stres obično nestaje.</p>
+  <p><strong>Anksioznost</strong>, s druge strane, nije uvijek povezana s određenim događajem. Osoba može osjećati intenzivnu zabrinutost i fizičke simptome čak i kada nema realnog razloga za strah. Ona često traje dugo (sedmicama, mjesecima ili godinama) i može se pojavljivati iznenada.</p>
+  <p><strong>Usporedba:</strong></p>
+  <ul>
+    <li>Stres je vezan uz vanjski povod; anksioznost može nastati bez ikakvog povoda.</li>
+    <li>Stres obično prestaje kad problem nestane; anksioznost traje i kad realne prijetnje nema.</li>
+    <li>Stres može motivirati (npr. priprema za ispit), dok anksioznost često paralizira i otežava funkcioniranje.</li>
+    <li>Stres može biti jednokratan, anksioznost postaje kronična.</li>
+  </ul>
+  <p>Ako osjećaš da tvoj nemir ne prestaje i kada nema razloga za zabrinutost, moguće je da se radi o anksioznosti, a ne samo o stresu.</p>
+</div>
+
+<!-- 3. Zašto osjećam stalan nemir i zabrinutost bez razloga? -->
+<div id="stalni_nemir" class="section">
+  <h2>Zašto osjećam stalan nemir i zabrinutost bez razloga?</h2>
+  <p>Stalan osjećaj unutrašnje napetosti, zabrinutosti ili "unutarnjeg nemira" bez jasnog razloga često ukazuje na <strong>generalizirani anksiozni poremećaj (GAP)</strong>. Kod ovog poremećaja osoba osjeća pretjeranu zabrinutost za svakodnevne stvari, čak i kada nema realnih prijetnji ili kada su problemi minimalni.</p>
+  <p><strong>Mogući uzroci ovog stanja:</strong></p>
+  <ul>
+    <li><strong>Biološki faktori</strong> – neuravnoteženost neurotransmitera u mozgu (serotonin, dopamin, GABA).</li>
+    <li><strong>Genetska predispozicija</strong> – veća vjerovatnost ako je neko u porodici imao anksiozne poremećaje.</li>
+    <li><strong>Traume i stres</strong> – stresna ili traumatična iskustva iz prošlosti mogu ostaviti dugoročne posljedice.</li>
+    <li><strong>Perfekcionizam i pretjerana odgovornost</strong> – ljudi skloni da žele sve držati pod kontrolom češće razvijaju anksioznost.</li>
+  </ul>
+  <p>Osoba često osjeća da "nešto nije u redu", ali ne može jasno reći šta. To stanje iscrpljuje tijelo i um, smanjuje koncentraciju, remeti spavanje i može voditi u depresiju. Ako nemir traje mjesecima i remeti život, najbolje je potražiti stručnu pomoć.</p>
+</div>
+
+<!-- 4. Kako anksioznost utječe na moje tijelo i zdravlje? -->
+<div id="uticaj_anksioznost_na_telo" class="section">
+  <h2>Kako anksioznost utječe na moje tijelo i zdravlje?</h2>
+  <p>Kada je tijelo pod anksioznošću, aktivira se tzv. <strong>“bori se ili bježi” odgovor</strong>. To znači da mozak šalje signale tijelu da se pripremi na opasnost, čak i ako ta opasnost nije stvarna. To dovodi do povećanog lučenja hormona stresa (adrenalin i kortizol), što na duge staze iscrpljuje organizam.</p>
+  <p><strong>Najčešći fizički učinci anksioznosti:</strong></p>
+  <ul>
+    <li>Ubrzan rad srca, preskakanje otkucaja, povišen krvni tlak.</li>
+    <li>Problemi sa spavanjem, nesanica ili nemiran san.</li>
+    <li>Stalne glavobolje, migrene i vrtoglavice.</li>
+    <li>Napetost mišića, bol u vratu, leđima i ramenima.</li>
+    <li>Probavne tegobe (mučnina, proljev, zatvor, nadutost).</li>
+    <li>Slabljenje imuniteta, česta obolijevanja.</li>
+  </ul>
+  <p>Dugotrajna anksioznost može povećati rizik od ozbiljnijih bolesti – srčanih oboljenja, čira na želucu, sindroma iritabilnog crijeva pa čak i autoimunih poremećaja. Zbog toga je važno anksioznost tretirati ozbiljno, a ne ignorirati.</p>
+</div>
+
+<!-- 5. Koje su najčešće vrste anksioznih poremećaja? -->
+<div id="vrste_anksioznost" class="section">
+  <h2>Koje su najčešće vrste anksioznih poremećaja?</h2>
+  <p>Anksioznost se ne javlja uvijek na isti način. Postoji nekoliko klinički prepoznatih oblika anksioznih poremećaja:</p>
+  <ul>
+    <li><strong>Generalizirani anksiozni poremećaj (GAP)</strong> – stalna i pretjerana zabrinutost za svakodnevne stvari.</li>
+    <li><strong>Panični poremećaj</strong> – ponavljajući napadi panike, osjećaj gušenja, strah od smrti ili gubitka kontrole.</li>
+    <li><strong>Socijalna anksioznost</strong> – strah od negativne procjene, izbjegavanje društvenih situacija, javnog nastupa.</li>
+    <li><strong>Specifične fobije</strong> – intenzivan strah od određenih objekata ili situacija (visina, pauci, avioni...).</li>
+    <li><strong>Opsesivno-kompulzivni poremećaj (OKP)</strong> – opsesivne misli koje izazivaju tjeskobu i kompulzivne radnje radi njenog smanjenja.</li>
+    <li><strong>Posttraumatski stresni poremećaj (PTSP)</strong> – posljedica traume; uključuje flashbackove, noćne more i izbjegavanje podsjetnika na događaj.</li>
+  </ul>
+  <p>Svaki od ovih poremećaja ima svoje specifične simptome, ali zajedničko im je da značajno narušavaju svakodnevni život i zahtijevaju pažnju.</p>
+</div>
+
+<!-- 6. Kako mogu sam/a smanjiti osjećaj tjeskobe? -->
+<div id="samosmanjenje_tjeskobe" class="section">
+  <h2>Kako mogu sam/a smanjiti osjećaj tjeskobe?</h2>
+  <p>Iako je stručna pomoć vrlo važna kod težih oblika anksioznosti, postoje mnoge tehnike koje možeš primijeniti sam/a i koje daju odlične rezultate:</p>
+  <ul>
+    <li><strong>Vježbe disanja</strong> – duboko disanje (4-7-8 tehnika) usporava rad srca i smiruje nervni sistem.</li>
+    <li><strong>Fizička aktivnost</strong> – redovno kretanje oslobađa endorfine i smanjuje nivo hormona stresa.</li>
+    <li><strong>Ograničavanje stimulansa</strong> – smanji unos kofeina, alkohola i nikotina jer pogoršavaju simptome.</li>
+    <li><strong>Dnevnik briga</strong> – zapisuj svoje misli, što pomaže da ih objektiviziraš.</li>
+    <li><strong>Rutina spavanja</strong> – odlazak u krevet i buđenje u isto vrijeme pomaže tijelu da se oporavi.</li>
+    <li><strong>Mindfulness i meditacija</strong> – učenje da se fokusiraš na sadašnji trenutak umjesto na brige o budućnosti.</li>
+  </ul>
+</div>
+
+<!-- 7. Trebam li potražiti stručnu pomoć zbog anksioznosti? -->
+<div id="strucna_pomoc" class="section">
+  <h2>Trebam li potražiti stručnu pomoć zbog anksioznosti?</h2>
+  <p>Ako anksioznost postane toliko jaka da ti remeti svakodnevni život, odnose, posao ili školu, tada je vrijeme da se obratiš stručnjaku. Potražiti pomoć nije znak slabosti, već hrabrosti.</p>
+  <p><strong>Vrijeme za stručnu pomoć je ako:</strong></p>
+  <ul>
+    <li>Tjeskoba traje duže od 6 mjeseci.</li>
+    <li>Napadi panike su učestali i javljaju se bez razloga.</li>
+    <li>Izbjegavaš društvo, posao ili školu zbog straha.</li>
+    <li>Osjećaš da gubiš kontrolu nad vlastitim mislima ili tijelom.</li>
+    <li>Imaš tjelesne simptome (lupanje srca, bolove, probavne probleme) a nalazi su uredni.</li>
+  </ul>
+  <p>Stručnjak može pomoći kroz terapiju razgovorom (psihoterapija), lijekove ako je potrebno, te učenje strategija suočavanja s anksioznošću.</p>
+</div>
+
+<!-- 8. Koje tehnike opuštanja pomažu kod anksioznosti? -->
+<div id="tehnike_opustanja" class="section">
+  <h2>Koje tehnike opuštanja pomažu kod anksioznosti?</h2>
+  <p>Postoje brojne provjerene tehnike koje pomažu da se smanji intenzitet anksioznosti:</p>
+  <ul>
+    <li><strong>Progresivna mišićna relaksacija</strong> – naizmjenično napinjanje i opuštanje mišića od glave do pete.</li>
+    <li><strong>Meditacija i mindfulness</strong> – fokusiranje na disanje i sadašnji trenutak umjesto na negativne misli.</li>
+    <li><strong>Vizualizacija</strong> – zamišljanje sigurnog i ugodnog mjesta koje stvara osjećaj mira.</li>
+    <li><strong>Disanje u ritmu</strong> – produženi izdasi aktiviraju parasimpatički nervni sistem i smiruju tijelo.</li>
+    <li><strong>Joga i lagano istezanje</strong> – kombinacija pokreta, disanja i meditacije smanjuje napetost.</li>
+    <li><strong>Aromaterapija i muzika</strong> – eterična ulja (lavanda, kamilica) i umirujuća muzika mogu pomoći u relaksaciji.</li>
+  </ul>
+</div>
+
+<!-- 9. Kako prevladati strah od budućnosti i neizvjesnosti? -->
+<div id="strah_budućnost" class="section">
+  <h2>Kako prevladati strah od budućnosti i neizvjesnosti?</h2>
+  <p>Strah od budućnosti i onoga što tek dolazi je vrlo čest kod osoba s anksioznošću. Mozak neprestano stvara scenarije “što ako”, što dovodi do začaranog kruga brige. Najvažniji korak je naučiti kako ostati u sadašnjem trenutku i prihvatiti činjenicu da budućnost nikada ne možemo u potpunosti kontrolirati.</p>
+  <p><strong>Strategije:</strong></p>
+  <ul>
+    <li>Postavi male, dostižne ciljeve – fokus na korake koje možeš napraviti sada.</li>
+    <li>Prakticiraj zahvalnost – zapisuj 3 stvari na kojima si zahvalan/na svaki dan.</li>
+    <li>Prihvati da je neizvjesnost dio života – nitko ne zna budućnost sa sigurnošću.</li>
+    <li>Koristi mindfulness meditaciju za vraćanje pažnje na sadašnji trenutak.</li>
+    <li>Razgovaraj s osobom od povjerenja ili stručnjakom o svojim strahovima.</li>
+  </ul>
+</div>
+
+<!-- 10. Kako razlikovati anksioznost od depresije? -->
+<div id="anksioznost_vs_depresija" class="section">
+  <h2>Kako razlikovati anksioznost od depresije?</h2>
+  <p>Iako se anksioznost i depresija često javljaju zajedno i mogu dijeliti neke simptome, radi se o dva različita stanja:</p>
+  <p><strong>Anksioznost:</strong></p>
+  <ul>
+    <li>Glavni osjećaj je <em>strah i zabrinutost</em>.</li>
+    <li>Osoba je stalno u napetosti, očekuje loše ishode.</li>
+    <li>Fizički simptomi: lupanje srca, znojenje, napetost, nesanica.</li>
+  </ul>
+  <p><strong>Depresija:</strong></p>
+  <ul>
+    <li>Glavni osjećaj je <em>tuga, praznina i bezvoljnost</em>.</li>
+    <li>Osoba gubi interes za stvari koje su joj prije bile važne.</li>
+    <li>Česti simptomi: umor, osjećaj bezvrijednosti, beznađe, usporenost.</li>
+  </ul>
+  <p>Važno je naglasiti da anksioznost i depresija mogu postojati istovremeno. U tom slučaju simptomi se preklapaju i liječenje zahtijeva posebnu pažnju i kombinaciju pristupa.</p>
+</div>
+
+
+<!-- 11 -->
+<div id="fizicki_simptomi" class="section">
+  <h2>Zašto imam fizičke simptome poput ubrzanog srca, ali su nalazi u redu?</h2>
+  <p>
+    Anksioznost često izaziva snažne tjelesne simptome koji mogu izgledati kao znak ozbiljne bolesti.
+    Kada se nađemo u anksioznom stanju, aktivira se mehanizam "bori se ili bježi" — tijelo otpušta
+    hormone stresa (adrenalin, kortizol) i pokreće niz fizioloških reakcija: ubrzano srčano
+    lupanje, znojenje, ubrzano disanje, vrtoglavicu i napetost mišića.
+  </p>
+  <p>
+    Liječnički nalazi često su uredni jer uzrok simptoma nije organska bolest (srce, pluća),
+    već pretjerana aktivacija autonomnog živčanog sustava. Takvi se simptomi nazivaju
+    somatskim manifestacijama anksioznosti — nisu opasni sami po sebi, ali mogu biti vrlo neugodni
+    i zastrašujući. Često nastane začarani krug: simptomi stvaraju strah, a strah pojačava simptome.
+  </p>
+  <h3>Što može pomoći?</h3>
+  <ul>
+    <li>Prakticiranje tehnika disanja (npr. abdominalno disanje, 4-6-8 ili 4-7-8 metoda).</li>
+    <li>Vježbe prizemljivanja (grounding) kako bi se preusmjerila pažnja na sadašnji trenutak.</li>
+    <li>Progresivna relaksacija mišića ili lagana tjelovježba.</li>
+    <li>Konzultacija sa stručnjakom (psiholog/psihijatar) ako se simptomi često ponavljaju.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Kada liječnik isključi organski uzrok, fokus je na tehnikama upravljanja stresom i/ili terapiji; to u većini slučajeva značajno smanjuje simptome.</div>
+</div>
+
+<!-- 12 -->
+<div id="uticaj_na_odnose" class="section">
+  <h2>Kako anksioznost utječe na odnose s ljudima?</h2>
+  <p>
+    Anksioznost može imati značajan utjecaj na međuljudske odnose. Osoba s anksioznošću često je
+    zabrinuta, nesigurna ili sklona izbjegavanju socijalnih situacija — što može dovesti do
+    povlačenja, nerazumijevanja i napetosti u obitelji, prijateljstvima i vezama.
+  </p>
+  <p>
+    Pojave koje se često događaju:
+  </p>
+  <ul>
+    <li>Izbjegavanje društvenih događaja ili aktivnosti iz straha od neugode.</li>
+    <li>Potreba za stalnim traženjem potvrde ili uvjeravanja od partnera.</li>
+    <li>Česte frustracije u partnerstvu jer druga strana možda ne razumije intenzitet straha.</li>
+    <li>Osjećaj usamljenosti i nerazumijevanja, što dodatno pojačava anksioznost.</li>
+  </ul>
+  <h3>Kako poboljšati odnose?</h3>
+  <ul>
+    <li>Otvorena komunikacija: pokušajte objasniti partneru/obitelji što doživljavate.</li>
+    <li>Postavite granice i pitajte što vam pomaže u trenucima anksioznosti.</li>
+    <li>Potražite zajedničke strategije (kratke pauze, dogovorene rituale smirivanja).</li>
+    <li>Uključite partnera u neki dio terapije ili edukacije (ako se oboje slažete).</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Podrška bliskih ljudi je vrlo korisna, ali je važno da i osoba s anksioznošću radi na strategijama suočavanja kako bi odnos bio izbalansiran.</div>
+</div>
+
+<!-- 13 -->
+<div id="pomoc_partneru" class="section">
+  <h2>Kako pomoći partneru koji se bori s anksioznošću?</h2>
+  <p>
+    Pomoć partneru zahtijeva strpljenje, empatiju i jasne granice. Najvažnije je pokazati da su osjećaji
+    stvarni i važni, bez umanjivanja: <em>"Vidio/la sam da ti je teško, želim biti uz tebe."</em>
+  </p>
+  <h3>Praktični koraci:</h3>
+  <ul>
+    <li>Slušajte aktivno i bez osuđivanja — ponekad je jednostavno slušanje najveća pomoć.</li>
+    <li>Pitajte što im trenutno pomaže (mir, razgovor, šetnja) i prilagodite se tome.</li>
+    <li>Potičite stručnu pomoć i ponudite podršku u pronalasku terapeuta ili termina.</li>
+    <li>Brinite i o svojim granicama — podrška ne znači da morate preuzeti cijeli teret.</li>
+    <li>U kriznim trenucima imajte dogovoreni plan (npr. tehnika disanja, mjesto za smirivanje ili broj hitne pomoći ako je potrebno).</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Educirajte se o anksioznosti — razumijevanje mehanizama smanjuje strah i pomaže da bolje reagirate u teškim momentima.</div>
+</div>
+
+<!-- 14 -->
+<div id="paraliza_tjeskoba" class="section">
+  <h2>Što kada me tjeskoba paralizira i ne mogu ništa obaviti?</h2>
+  <p>
+    Ponekad anksioznost može postati toliko intenzivna da osoba osjeća „paralizu“ — teško donosi odluke,
+    ne može započeti zadatke ili jednostavno stoji i čeka. To je znak preopterećenosti živčanog sustava.
+  </p>
+  <h3>Brze tehnike koje pomažu odmah:</h3>
+  <ul>
+    <li>Disanje: polako udahnite 4 sekunde, zadržite 4, izdahnite 6–8 sekundi.</li>
+    <li>Grounding (5-4-3-2-1): imenujte 5 stvari koje vidite, 4 koje možete dotaknuti, 3 koje čujete, 2 koje možete
+        mirisati i 1 okus koji osjećate.</li>
+    <li>Podjela zadatka: razbijte posao na najmanji mogući korak (npr. "otvoriti ladicu" umjesto "srediti kuću").</li>
+    <li>Fizička aktivnost: kratka šetnja ili istezanje često „resetira“ tijelo.</li>
+  </ul>
+  <p>
+    Ako se paralizirajuće epizode ponavljaju, važno je potražiti terapiju (CBT, EMDR ili druge strategije) i razviti plan prevencije.
+  </p>
+  <div class="tip"><strong>✔️ Savjet:</strong> Prvo uspori i fokusiraj se na jedno malo djelo — često je to ključ za ponovno pokretanje i povratak kontrole.</div>
+</div>
+
+<!-- 15 -->
+<div id="gubitak_kontrole" class="section">
+  <h2>Može li anksioznost uzrokovati osjećaj gubitka kontrole?</h2>
+  <p>
+    Da. Osjećaj gubitka kontrole čest je kod intenzivne anksioznosti. Tijekom jakih epizoda mozak prelazi
+    u preživljavanje (amigdala aktivnija), a racionalno razmišljanje postaje otežano — to stvara dojam
+    da se sami "gubimo".
+  </p>
+  <h3>Kako vratiti osjećaj kontrole:</h3>
+  <ul>
+    <li>Prakticirajte kratke rituale koji stvaraju predvidivost (npr. jutarnja rutina).</li>
+    <li>Koristite tehnike disanja i prizemljivanja da smirite tijelo prije nego što pokušate rješavati problem.</li>
+    <li>Fokus na ono što možete kontrolirati sada (dnevni zadaci, voda, obrok, kratka šetnja).</li>
+    <li>Razvijte plan za krizne trenutke koji uključuje konkretne korake i kontakte za podršku.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Osjećaj gubitka kontrole nije trajan; uz vježbu i strategije uči se povratiti stabilnost i spokoj.</div>
+</div>
+
+<!-- 16 -->
+<div id="strah_budućnost2" class="section">
+  <h2>Kako prevladati strah od budućnosti i neizvjesnosti?</h2>
+  <p>
+    Strah od budućnosti često proizlazi iz mentalnih scenarija „što ako…“ koje mozak nesvjesno reproducira.
+    Rješenje nije potpuno ukloniti neizvjesnost (to nije moguće), već naučiti upravljati načinom na koji reagiramo.
+  </p>
+  <h3>Koraci koji pomažu:</h3>
+  <ul>
+    <li>Postavljajte konkretne, kratkoročne ciljeve umjesto da opterećujete dalekom budućnošću.</li>
+    <li>Vježbajte zahvalnost i bilježite male uspjehe — to preusmjerava fokus s prijetnji na resurse.</li>
+    <li>Mindfulness tehnike pomažu vratiti pažnju na sadašnji trenutak umjesto na zamišljene prijetnje.</li>
+    <li>Razgovor s terapeutom za strukturirano rješavanje brižnih obrazaca razmišljanja.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Neizvjesnost je dio života; cilj je izgraditi otpornost i navike koje umanjuju paralizirajući efekt straha.</div>
+</div>
+
+<!-- 17 -->
+<div id="paraliza_tjeskoba2" class="section">
+  <h2>Što učiniti ako me tjeskoba često paralizira — kada trebam potražiti pomoć?</h2>
+  <p>
+    Ako se epizode paralize ili intenzivne anksioznosti ponavljaju i utječu na posao, školu, odnose ili sigurnost,
+    vrijeme je za stručnu procjenu. Terapija (CBT, terapija izlaganjem, ponekad medikacija) može pružiti trajne strategije
+    i olakšanje.
+  </p>
+  <h3>Indikatori da trebate pomoć:</h3>
+  <ul>
+    <li>Epizode su česte i dugotrajne.</li>
+    <li>Izbjegavate važne obaveze zbog straha.</li>
+    <li>Postoji samooštećujuće ponašanje ili suicidalne misli — potražite hitnu pomoć odmah.</li>
+    <li>Samostalne tehnike više ne daju olakšanje kao prije.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Potražiti pomoć je hrabar i pametan korak. Stručnjaci mogu pomoći identificirati uzrok i ponuditi ciljani plan tretmana.</div>
+</div>
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

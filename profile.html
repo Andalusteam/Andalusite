@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaš profil</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .profile-initial {
+      width: 60px;
+      height: 60px;
+      background-color: lightgoldenrodyellow;
+      color: grey;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+    }
+
+    .profile-info p {
+      font-size: 16px;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    .profile-info label {
+      font-weight: bold;
+    }
+
+    .edit-btn, .home-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 141px;
+    }
+
+    .edit-btn:hover, .home-btn:hover {
+      background-color: #daa520;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-initial" id="profile-initial">U</div>
+    <div class="profile-info">
+      <p><label>Ime:</label> <span id="user-name">user</span></p>
+      <p><label>Email:</label> <span id="user-email">user@example.com</span></p>
+      <p><label>Starost računa:</label> <span id="account-age">2 weeks</span></p>
+      <p><label>Bodovi:</label> <span id="user-points">0</span></p> <!-- NEW -->
+    </div>
+    <!-- Buttons -->
+    <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+    <br/>
+    <button class="home-btn" onclick="goHome()">Go Home</button>
+  </div>
+
+  <script>
+    // Placeholder user data (can be fetched from backend later)
+    const user = {
+      name: "user",
+      email: "user@example.com",
+      joined: new Date("2024-05-01"), // simulate account creation
+      points: 2000 // 🔹 Example: user collected points
+    };
+
+    // Set UI content
+    document.getElementById("profile-initial").textContent = user.name.charAt(0).toUpperCase();
+    document.getElementById("user-name").textContent = user.name;
+    document.getElementById("user-email").textContent = user.email;
+    document.getElementById("user-points").textContent = user.points;
+
+    // Calculate account age
+    const daysSince = Math.floor((new Date() - user.joined) / (1000 * 60 * 60 * 24));
+    document.getElementById("account-age").textContent = 
+      daysSince < 30 ? `${daysSince} days` : `${Math.floor(daysSince / 30)} months`;
+
+    // Redirect to changeprofile.html when clicking Edit
+    function editProfile() {
+      window.location.href = "changeprofile.html";
+    }
+
+    // Go Home button function
+    function goHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

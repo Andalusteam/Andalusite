@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o hardveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sve o hardveru</h1>
+<nav>
+  <!-- Left Side List -->
+<button onclick="showSection('ssd_vs_hdd')">Šta je osnovna razlika između SSD i HDD diskova?</button>
+<button onclick="showSection('graficka_karta')">Kako da izaberem odgovarajuću grafičku kartu za svoj računar?</button>
+<button onclick="showSection('ram')">Koliko RAM memorije mi je potrebno za osnovni rad, a koliko za igranje igara?</button>
+<button onclick="showSection('maticna_ploča')">Kako da proverim da li je moja matična ploča kompatibilna sa procesorom?</button>
+<button onclick="showSection('napajanje')">Koji su znaci da napajanje u računaru ne radi ispravno?</button>
+<button onclick="showSection('odrzavanje_racunara')">Kako pravilno očistiti i održavati računar?</button>
+<button onclick="showSection('overklokovanje')">Šta znači overklokovanje procesora i da li je bezbedno?</button>
+<button onclick="showSection('eksterni_hard_disk')">Koje su prednosti i mane eksternog hard diska?</button>
+<button onclick="showSection('kuciste')">Kako da izaberem odgovarajuće kućište za računar?</button>
+<button onclick="showSection('bios')">Šta je BIOS i kako utiče na rad računara?</button>
+<button onclick="showSection('nadogradnja')">Kako da nadogradim računar da radi brže?</button>
+<button onclick="showSection('pregrevanje')">Koji su najčešći uzroci pregrevanja računarskih komponenti?</button>
+<button onclick="showSection('vise_monitora')">Kako povezati više monitora na jedan računar?</button>
+<button onclick="showSection('raid')">Šta je RAID i kada se koristi?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('graficka_ispravna')">Kako da proverim da li je moja grafička karta ispravna?</button>
+<button onclick="showSection('32_vs_64')">Koja je razlika između 32-bitnog i 64-bitnog procesora?</button>
+<button onclick="showSection('drajveri')">Kako instalirati nove drajvere za hardver?</button>
+<button onclick="showSection('alat_dijagnostika')">Koji su osnovni alati za dijagnostiku hardverskih problema?</button>
+<button onclick="showSection('rastavljanje')">Kako bezbedno rasklopiti i sklopiti računar?</button>
+<button onclick="showSection('zastareo_hardver')">Kako da znam da li je moj hardver zastareo i treba li ga menjati?</button>
+<button onclick="showSection('termalna_pasta')">Kako pravilno koristiti termalnu pastu prilikom zamene procesora?</button>
+<button onclick="showSection('simptomi_ram')">Koji su simptomi oštećenja RAM memorije?</button>
+<button onclick="showSection('hladjenje_kuciste')">Kako da optimizujem hlađenje u kućištu računara?</button>
+<button onclick="showSection('napajajuci_uredaj')">Kako odabrati odgovarajući napajajući uređaj za moj sistem?</button>
+<button onclick="showSection('pcie_slotovi')">Šta su PCIe slotovi i kako se koriste?</button>
+<button onclick="showSection('ssd_radi')">Kako radi SSD i kako se razlikuje od tradicionalnog hard diska?</button>
+<button onclick="showSection('neodgovarajuci_hardver')">Koje su posledice korišćenja neodgovarajućih hardverskih komponenti?</button>
+<button onclick="showSection('praćenje_hardvera')">Kako da pratimo zdravlje i performanse hardvera u realnom vremenu?</button>
+</nav>
+
+<div id="ssd_vs_hdd" class="section">
+  <h2>Šta je osnovna razlika između SSD i HDD diskova?</h2>
+  <p>SSD (Solid State Drive) i HDD (Hard Disk Drive) su vrste pohrane podataka za računare, ali rade na različitim principima i imaju različite karakteristike.</p>
+
+  <h3>HDD (Hard Disk Drive)</h3>
+  <ul>
+    <li><strong>Mehanički uređaj:</strong> Sadrži rotirajuće diskove i pokretne glave za čitanje/pisanje podataka.</li>
+    <li><strong>Brzina:</strong> Sporiji u odnosu na SSD, zbog mehaničkog pristupa podacima.</li>
+    <li><strong>Kapacitet:</strong> Obično nudi veći prostor po nižoj cijeni.</li>
+    <li><strong>Otpornost:</strong> Podložniji oštećenju uslijed udaraca i vibracija.</li>
+    <li><strong>Cijena:</strong> Jeftiniji po gigabajtu u odnosu na SSD.</li>
+  </ul>
+
+  <h3>SSD (Solid State Drive)</h3>
+  <ul>
+    <li><strong>Bez pokretnih dijelova:</strong> Podaci se pohranjuju u flash memoriji.</li>
+    <li><strong>Brzina:</strong> Znatno brži od HDD-a – brže podizanje sustava, pokretanje programa i prijenos podataka.</li>
+    <li><strong>Otpornost:</strong> Manje osjetljiv na udarce i vibracije.</li>
+    <li><strong>Cijena:</strong> Skuplji po gigabajtu u odnosu na HDD, ali cijene stalno padaju.</li>
+    <li><strong>Tiši rad:</strong> Ne proizvodi buku jer nema pokretnih dijelova.</li>
+  </ul>
+
+  <h3>Primjena</h3>
+  <ul>
+    <li>HDD je dobar za pohranu velikih količina podataka poput filmova, fotografija ili arhiva.</li>
+    <li>SSD je idealan za operativne sustave, igre i programe jer ubrzava učitavanje i rad računara.</li>
+    <li>Često se koristi kombinacija – SSD za sistem i programe, HDD za pohranu velikih datoteka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako želiš brzinu i performanse, koristi SSD. Ako ti je potreban veći kapacitet po nižoj cijeni, HDD je bolji izbor. Kombinacija oba je najpraktičnije rješenje za većinu korisnika.
+  </div>
+</div>
+
+<div id="graficka_karta" class="section">
+  <h2>Kako da izaberem odgovarajuću grafičku kartu za svoj računar?</h2>
+  <p>Grafička karta (GPU) je ključna komponenta za prikaz slike na monitoru i za performanse u igrama, radu s grafikom ili profesionalnim softverom. Odabir odgovarajuće kartice zavisi od tvojih potreba, budžeta i kompatibilnosti s računarom.</p>
+
+  <h3>Ključni faktori pri izboru grafičke kartice</h3>
+  <ul>
+    <li><strong>Svrha korištenja:</strong>
+      <ul>
+        <li>Za svakodnevni rad i multimediju: integrirana ili osnovna grafička karta je dovoljna.</li>
+        <li>Za igranje igara: biraj moderne GPU-ove s dovoljno VRAM-a (4GB ili više) i podrškom za DirectX 12.</li>
+        <li>Za profesionalni rad (CAD, video obrada, 3D modeliranje): potraži profesionalne ili high-end GPU-ove poput NVIDIA Quadro ili RTX serija.</li>
+      </ul>
+    </li>
+    <li><strong>Kompatibilnost:</strong> Provjeri da li tvoja matična ploča ima odgovarajući PCIe slot i dovoljno prostora u kućištu.</li>
+    <li><strong>Snaga napajanja:</strong> Provjeri da li napajanje može podržati grafičku kartu i da li ima odgovarajuće konektore.</li>
+    <li><strong>RAM grafičke kartice (VRAM):</strong> Više VRAM-a je važno za zahtjevne igre i profesionalne aplikacije.</li>
+    <li><strong>Hlađenje i buka:</strong> Provjeri broj ventilatora, tip hladnjaka i koliko je kartica tiha pri radu.</li>
+    <li><strong>Budžet:</strong> Moderni GPU-ovi mogu biti skupi; balansiraj performanse i cijenu prema svojim potrebama.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student koji koristi računar za Office i pregled weba može koristiti integriranu grafiku Intel UHD ili AMD Vega.</li>
+    <li>Gamer bira NVIDIA GeForce RTX 3060 ili AMD Radeon RX 6700 XT za igranje modernih igara u 1080p ili 1440p rezoluciji.</li>
+    <li>Video editor bira GPU s 8GB+ VRAM-a i stabilnim driverima za Adobe Premiere ili DaVinci Resolve.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije kupnje provjeri potrebe svog softvera, kompatibilnost matične ploče i napajanja te balansiraj performanse i budžet. Često se isplati investirati u GPU koji će zadovoljiti tvoje potrebe nekoliko godina.
+  </div>
+</div>
+
+
+<div id="ram" class="section">
+  <h2>Koliko RAM memorije mi je potrebno za osnovni rad, a koliko za igranje igara?</h2>
+  <p>RAM (Random Access Memory) je radna memorija računara koja omogućuje brzo čuvanje i pristup podacima koji se trenutno koriste. Količina RAM-a direktno utiče na brzinu i performanse računara.</p>
+
+  <h3>Preporučena količina RAM-a</h3>
+  <ul>
+    <li><strong>Osnovni rad i svakodnevne aktivnosti:</strong> 4–8 GB RAM-a je dovoljno za pregled weba, Office aplikacije, gledanje videa i jednostavne zadatke.</li>
+    <li><strong>Umjereni multitasking:</strong> 8–16 GB RAM-a omogućuje rad s više otvorenih aplikacija, preglednika s više tabova i osnovnu obradu fotografija ili videa.</li>
+    <li><strong>Igranje modernih igara:</strong> 16 GB RAM-a je standard za većinu današnjih igara, dok neke zahtjevnije igre i profesionalni softver za obradu videa ili 3D modeliranje mogu tražiti 32 GB ili više.</li>
+    <li><strong>Profesionalni rad i specijalizirani softver:</strong> 32 GB ili više preporučuje se za video editing, 3D rendering, CAD aplikacije i virtualne mašine.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student koristi 8 GB RAM-a za Office aplikacije, pregled weba i online nastavu bez usporavanja.</li>
+    <li>Gamer koristi 16 GB RAM-a za igranje novih igara poput Cyberpunk 2077 ili Fortnite u 1080p i 1440p rezoluciji.</li>
+    <li>Video editor ili 3D umjetnik koristi 32 GB ili više za rad s velikim projektima i renderiranje bez zastajkivanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Za većinu korisnika 16 GB RAM-a je optimalno i pruža dovoljno prostora za multitasking i igre. Ako planiraš profesionalni rad s velikim projektima, investiraj u 32 GB ili više.
+  </div>
+</div>
+
+<div id="maticna_ploča" class="section">
+  <h2>Kako da proverim da li je moja matična ploča kompatibilna sa procesorom?</h2>
+  <p>Kompatibilnost procesora i matične ploče ključna je za stabilan rad računara. Nepodudaranje može spriječiti pokretanje sistema ili ograničiti performanse.</p>
+
+  <h3>Koraci za provjeru kompatibilnosti</h3>
+  <ul>
+    <li><strong>Provjeri socket:</strong> Socket je fizički priključak na matičnoj ploči za procesor. Na primjer, Intel LGA1200, AMD AM4. Procesor i matična ploča moraju imati isti socket.</li>
+    <li><strong>Provjeri chipset:</strong> Chipset određuje koje funkcionalnosti matična ploča podržava. Provjeri podržava li chipset tvoju generaciju procesora.</li>
+    <li><strong>Provjeri TDP i napajanje:</strong> Provjeri može li matična ploča i napajanje podržati TDP (thermal design power) procesora.</li>
+    <li><strong>Provjeri BIOS verziju:</strong> Neki procesori zahtijevaju ažurirani BIOS za kompatibilnost. Provjeri web stranicu proizvođača matične ploče za listu podržanih CPU-a i potrebnu verziju BIOS-a.</li>
+    <li><strong>Korištenje službenih alata:</strong> Proizvođači matičnih ploča često nude listu kompatibilnih procesora ili online alate za provjeru kompatibilnosti.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Korisnik želi ugraditi Intel i7 10. generacije – provjerava da li matična ploča ima LGA1200 socket i podržava tu generaciju chipset-a.</li>
+    <li>AMD korisnik želi nadograditi Ryzen 5000 seriju – provjerava da matična ploča s AM4 socketom ima BIOS verziju koja podržava ovu seriju.</li>
+    <li>Student koristi online alat proizvođača matične ploče i dobija listu kompatibilnih procesora prije kupnje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije kupnje ili nadogradnje procesora uvijek provjeri socket, chipset i BIOS verziju matične ploče. To sprječava probleme i osigurava stabilan rad računara.
+  </div>
+</div>
+
+<div id="napajanje" class="section">
+  <h2>Koji su znaci da napajanje u računaru ne radi ispravno?</h2>
+  <p>Napajanje (PSU – Power Supply Unit) je komponenta koja osigurava stabilnu električnu energiju svim dijelovima računara. Problemi s napajanjem mogu uzrokovati nestabilan rad, oštećenje komponenti ili potpuni prestanak rada računara.</p>
+
+  <h3>Uobičajeni znakovi problema s napajanjem</h3>
+  <ul>
+    <li><strong>Računar se ne uključuje:</strong> Ako pritisneš tipku za uključivanje, a računalo se ne pali, napajanje može biti oštećeno.</li>
+    <li><strong>Neočekivano isključivanje:</strong> Računar se sam od sebe isključuje ili restartuje tijekom rada.</li>
+    <li><strong>Buka ili miris iz PSU-a:</strong> Svi zvukovi ventilatora ili mirisi paljenja mogu ukazivati na problem.</li>
+    <li><strong>Nestabilan rad komponenti:</strong> Grafička karta ili procesor mogu se rušiti ili pokazivati greške zbog nedostatka stabilnog napajanja.</li>
+    <li><strong>Problemi s periferijom:</strong> USB uređaji ili hard diskovi mogu prestati raditi ili se ne prepoznaju.</li>
+    <li><strong>Vidljivi znakovi oštećenja:</strong> Napukli kondenzatori, tamni tragovi ili curenje tekućine u PSU-u.</li>
+  </ul>
+
+  <h3>Šta učiniti ako primijetiš probleme</h3>
+  <ul>
+    <li>Provjeri sve kablove i konektore – labavi kontakti mogu izazvati nestabilnost.</li>
+    <li>Testiraj napajanje pomoću PSU testera ili multimetra.</li>
+    <li>Zamijeni napajanje ako se problemi ponavljaju ili postoje vizualni znakovi oštećenja.</li>
+    <li>Uvijek koristi napajanje odgovarajuće snage za tvoju konfiguraciju računara.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Stabilno i kvalitetno napajanje ključno je za dugovječnost i pouzdan rad računara. Ako sumnjaš na kvar PSU-a, ne čekaj – zamijeni ga kako bi spriječio oštećenje drugih komponenti.
+  </div>
+</div>
+
+<div id="odrzavanje_racunara" class="section">
+  <h2>Kako pravilno očistiti i održavati računar?</h2>
+  <p>Redovno čišćenje i održavanje računara produžuje životni vijek komponenti, poboljšava performanse i smanjuje rizik od pregrijavanja ili kvara.</p>
+
+  <h3>Osnovni koraci za čišćenje računara</h3>
+  <ul>
+    <li><strong>Isključi računar:</strong> Prije čišćenja uvijek isključi računar iz struje i ukloni sve kablove.</li>
+    <li><strong>Uklanjanje prašine:</strong> Koristi komprimirani zrak ili blower za uklanjanje prašine iz ventilatora, hladnjaka, kućišta i tipkovnice.</li>
+    <li><strong>Čišćenje ventilatora i hladnjaka:</strong> Prašina može smanjiti učinkovitost hlađenja. Pažljivo očisti ventilatore i hladnjake procesora i grafičke kartice.</li>
+    <li><strong>Čišćenje ekrana i periferije:</strong> Koristi mekane krpe i sredstvo za čišćenje ekrana, tipkovnice i miša. Nemoj nanositi tekućine direktno na uređaje.</li>
+    <li><strong>Provjera kablova i konektora:</strong> Provjeri labave kablove, konektore i kontakte. Očisti kontakte od prljavštine i oksidacije ako je potrebno.</li>
+  </ul>
+
+  <h3>Održavanje i nadzor</h3>
+  <ul>
+    <li><strong>Ažuriranje softvera:</strong> Redovno instaliraj ažuriranja operativnog sustava i drajvera kako bi hardver radio optimalno.</li>
+    <li><strong>Praćenje temperature:</strong> Koristi softver za praćenje temperature procesora, grafičke kartice i diska kako bi spriječio pregrijavanje.</li>
+    <li><strong>Provjera napajanja:</strong> Povremeno testiraj PSU i kablove za stabilno napajanje.</li>
+    <li><strong>Organizacija kablova:</strong> Održavaj uredan raspored kablova u kućištu radi bolje cirkulacije zraka i estetike.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Čišćenje računara najmanje jednom u 3–6 mjeseci smanjuje rizik od kvarova i pregrijavanja. Koristi antistatičke narukvice i pazi da ne oštetiš osjetljive komponente.
+  </div>
+</div>
+
+<div id="overklokovanje" class="section">
+  <h2>Šta znači overklokovanje procesora i da li je bezbedno?</h2>
+  <p>Overklokovanje (overclocking) je proces povećanja radnog takta procesora (CPU) iznad tvorničkih specifikacija kako bi se poboljšale performanse računara. To može ubrzati rad aplikacija, igranje igara i druge zahtjevne zadatke.</p>
+
+  <h3>Prednosti overklokovanja</h3>
+  <ul>
+    <li>Povećava performanse procesora u igrama i zahtjevnim aplikacijama.</li>
+    <li>Može produžiti životni vijek starijeg računara ako je potrebno dodatno ubrzanje.</li>
+    <li>Omogućuje entuzijastima da istražuju potencijal svog hardvera.</li>
+  </ul>
+
+  <h3>Rizici i sigurnosna pitanja</h3>
+  <ul>
+    <li>Povećano zagrijavanje – overklokovani procesor generira više topline, što može smanjiti životni vijek komponenti ako hlađenje nije adekvatno.</li>
+    <li>Potencijalna nestabilnost – sistem se može rušiti ili zamrzavati ako overklok nije pravilno podešen.</li>
+    <li>Poništavanje garancije – neki proizvođači ne pokrivaju štetu nastalu overklokovanjem.</li>
+  </ul>
+
+  <h3>Savjeti za sigurno overklokovanje</h3>
+  <ul>
+    <li>Koristi kvalitetno hlađenje (zračno ili vodenim sistemom) kako bi temperatura procesora ostala u sigurnim granicama.</li>
+    <li>Povećavaj takt postepeno i testiraj stabilnost sistema nakon svake promjene pomoću benchmark i stress test softvera.</li>
+    <li>Prati temperature i napon procesora kako bi izbjegao pregrijavanje ili oštećenje.</li>
+    <li>Koristi pouzdane vodiče i preporuke proizvođača ili zajednice overklokera.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Overklokovanje može biti korisno, ali zahtijeva znanje i pažnju. Ako nisi siguran, radije izaberi procesor s većim tvorničkim taktom i kvalitetno hlađenje.
+  </div>
+</div>
+
+<div id="eksterni_hard_disk" class="section">
+  <h2>Koje su prednosti i mane eksternog hard diska?</h2>
+  <p>Eksterni hard disk (external HDD/SSD) je prijenosni uređaj za pohranu podataka koji se spaja na računar putem USB, Thunderbolt ili drugih sučelja. Idealni su za backup, dodatnu pohranu i prijenos podataka između računara.</p>
+
+  <h3>Prednosti eksternog hard diska</h3>
+  <ul>
+    <li><strong>Prijenosivost:</strong> Možeš ga koristiti na više računara i lako nositi sa sobom.</li>
+    <li><strong>Dodatni kapacitet:</strong> Omogućuje pohranu velikih količina podataka bez zamjene internog diska.</li>
+    <li><strong>Backup podataka:</strong> Idealan za sigurnosne kopije važnih fajlova.</li>
+    <li><strong>Jednostavna upotreba:</strong> Plug-and-play funkcionalnost omogućuje brzo povezivanje i korištenje.</li>
+    <li><strong>SSD verzije:</strong> Eksterni SSD-ovi nude brži pristup podacima i manju osjetljivost na udarce u odnosu na HDD.</li>
+  </ul>
+
+  <h3>Mane eksternog hard diska</h3>
+  <ul>
+    <li><strong>Manja brzina (kod HDD):</strong> Tradicionalni eksterni HDD je sporiji od internog SSD-a, posebno za velike fajlove.</li>
+    <li><strong>Rizik od gubitka ili oštećenja:</strong> Fizički udarci ili gubitak uređaja mogu rezultirati gubitkom podataka.</li>
+    <li><strong>Potrebno napajanje (kod nekih modela):</strong> Veći eksterni diskovi zahtijevaju dodatno napajanje, što može biti nepraktično u pokretu.</li>
+    <li><strong>Cijena (kod SSD):</strong> Eksterni SSD-ovi su skuplji po gigabajtu u odnosu na HDD verzije.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student koristi eksterni HDD od 2TB za pohranu projekata, filmova i fotografija.</li>
+    <li>Profesionalac koristi eksterni SSD od 1TB za brzi prijenos video datoteka između uređaja.</li>
+    <li>Korisnik radi backup važnih dokumenata na eksterni disk kako bi izbjegao gubitak podataka zbog kvara računara.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako ti je brzina važnija, koristi eksterni SSD. Ako je prioritet kapacitet i niža cijena, HDD verzija je dobar izbor. Uvijek imaj backup važnih podataka na barem dva mjesta.
+  </div>
+</div>
+
+<div id="kuciste" class="section">
+  <h2>Kako da izaberem odgovarajuće kućište za računar?</h2>
+  <p>Kućište računara (case) nije samo estetski element – ono igra ključnu ulogu u hlađenju, zaštiti komponenti i organizaciji unutrašnjeg prostora. Odabir odgovarajućeg kućišta zavisi od veličine, kompatibilnosti i namjene računara.</p>
+
+  <h3>Ključni faktori pri izboru kućišta</h3>
+  <ul>
+    <li><strong>Veličina i format:</strong> Provjeri da li kućište podržava formate matičnih ploča kao što su ATX, Micro-ATX, Mini-ITX.</li>
+    <li><strong>Kompatibilnost s komponentama:</strong> Provjeri prostor za grafičku karticu, procesor s hladnjakom i broj diskova.</li>
+    <li><strong>Hlađenje:</strong> Provjeri koliko ventilatora može primiti i podršku za vodenje hlađenja. Dobra cirkulacija zraka sprječava pregrijavanje.</li>
+    <li><strong>Prostor za kablove:</strong> Odaberi kućište koje omogućuje uredno vođenje kablova, što poboljšava protok zraka i estetiku.</li>
+    <li><strong>Eksterne priključke:</strong> Provjeri USB portove, audio izlaze i druge konektore na prednjoj ili gornjoj strani kućišta.</li>
+    <li><strong>Estetika i materijal:</strong> Ako ti je važno vizualno, biraj kućište s prozirnom bočnom stranicom, RGB osvjetljenjem ili kvalitetnim materijalima.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer bira ATX kućište s podrškom za više ventilatora i vodenog hlađenja za optimalne performanse.</li>
+    <li>Student koristi Micro-ATX kućište za kompaktan i praktičan desktop računar.</li>
+    <li>Profesionalac bira kućište s dovoljno mjesta za nekoliko diskova i uredno vođenje kablova za radnu stanicu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije kupnje provjeri sve dimenzije komponenti i planiraj hlađenje. Kućište nije samo za estetiku – ono direktno utječe na performanse i trajnost računara.
+  </div>
+</div>
+
+<div id="bios" class="section">
+  <h2>Šta je BIOS i kako utiče na rad računara?</h2>
+  <p>BIOS (Basic Input/Output System) je osnovni softver koji se nalazi na matičnoj ploči i omogućava komunikaciju između hardvera i operativnog sistema. BIOS pokreće sistem, inicijalizira komponente i pruža osnovne funkcionalnosti prije učitavanja operativnog sistema.</p>
+
+  <h3>Funkcije BIOS-a</h3>
+  <ul>
+    <li><strong>POST (Power-On Self Test):</strong> Testira ključne komponente računara pri pokretanju, poput RAM-a, procesora i diskova.</li>
+    <li><strong>Inicijalizacija hardvera:</strong> Aktivira procesor, memoriju, grafičku karticu i druge komponente prije učitavanja OS-a.</li>
+    <li><strong>Upravljanje uređajima:</strong> Omogućava komunikaciju između operativnog sistema i hardverskih komponenti, poput tipkovnice, miša i diskova.</li>
+    <li><strong>Postavke sistema:</strong> Korisnik može promijeniti redoslijed bootanja, overklokovati CPU, postaviti lozinke ili omogućiti/isključiti integrirane uređaje.</li>
+    <li><strong>Ažuriranje BIOS-a:</strong> Novi BIOS može poboljšati kompatibilnost, sigurnost i stabilnost računara.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Računar ne prepoznaje novi SSD – ažuriranje BIOS-a može riješiti problem kompatibilnosti.</li>
+    <li>Overklokovanje procesora zahtijeva pristup BIOS-u za podešavanje taktova i napona.</li>
+    <li>Promjena boot reda za instalaciju novog operativnog sistema također se radi kroz BIOS.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> BIOS je ključan za rad računara i njegovo pravilno podešavanje može poboljšati performanse i stabilnost. Ažuriranja BIOS-a uvijek preuzimaj s web stranice proizvođača matične ploče i pažljivo slijedi upute.
+  </div>
+</div>
+
+<div id="nadogradnja" class="section">
+  <h2>Kako da nadogradim računar da radi brže?</h2>
+  <p>Nadogradnja računara može značajno poboljšati performanse, produžiti životni vijek i omogućiti glatko izvođenje modernih aplikacija i igara. Postoji nekoliko ključnih komponenti koje najčešće utiču na brzinu sistema.</p>
+
+  <h3>Najvažnije nadogradnje</h3>
+  <ul>
+    <li><strong>RAM memorija:</strong> Dodavanje RAM-a omogućuje bolje multitasking performanse i smanjuje zastajkivanja pri radu s velikim fajlovima ili igrama.</li>
+    <li><strong>SSD disk:</strong> Zamjena starog HDD-a SSD-om ubrzava učitavanje operativnog sistema, aplikacija i fajlova.</li>
+    <li><strong>Grafička kartica:</strong> Nadogradnja GPU-a poboljšava performanse u igrama, video obradi i 3D aplikacijama.</li>
+    <li><strong>Procesor (CPU):</strong> Jači procesor povećava brzinu izvođenja programskih operacija, posebno u zahtjevnim aplikacijama.</li>
+    <li><strong>Nadogradnja softvera:</strong> Redovno ažuriranje operativnog sistema i drajvera optimizira rad računara.</li>
+    <li><strong>Čišćenje i hlađenje:</strong> Uklanjanje prašine i poboljšano hlađenje sprječava usporavanje i pregrijavanje komponenti.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student nadograđuje RAM s 8GB na 16GB kako bi glatko radio s više otvorenih aplikacija i tabova u pregledniku.</li>
+    <li>Gamer zamjenjuje HDD s SSD-om kako bi igre i sistem učitavao znatno brže.</li>
+    <li>Profesionalac nadograđuje grafičku karticu i procesor za obradu 4K videa i 3D modeliranje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije nadogradnje provjeri kompatibilnost svih komponenti s matičnom pločom i napajanjem. Planiraj nadogradnje prema potrebama – često je kombinacija SSD-a i RAM-a najefikasniji način za ubrzanje starijeg računara.
+  </div>
+</div>
+
+<div id="pregrevanje" class="section">
+  <h2>Koji su najčešći uzroci pregrevanja računarskih komponenti?</h2>
+  <p>Pregrevanje računarskih komponenti može dovesti do nestabilnog rada, smanjenja performansi, pa čak i trajnog oštećenja procesora, grafičke kartice ili matične ploče. Razumijevanje uzroka pregrijavanja pomaže u prevenciji i pravilnom održavanju računara.</p>
+
+  <h3>Najčešći uzroci pregrevanja</h3>
+  <ul>
+    <li><strong>Prašina i prljavština:</strong> Naslage prašine na ventilatorima, hladnjacima i rebrima hlađenja smanjuju protok zraka i otežavaju hlađenje.</li>
+    <li><strong>Nedovoljno ili loše hlađenje:</strong> Mali ili neefikasni ventilatori, manjak kućišta s dobrim protokom zraka ili nepostojanje vodenog hlađenja kod zahtjevnih sistema.</li>
+    <li><strong>Previsok radni takt (overklok):</strong> Overklokovani procesor ili grafička kartica generira više topline i zahtijeva bolje hlađenje.</li>
+    <li><strong>Loša termalna pasta:</strong> Stara ili nepravilno nanesena termalna pasta između procesora i hladnjaka smanjuje prijenos topline.</li>
+    <li><strong>Neadekvatno kućište:</strong> Mala ili zatvorena kućišta ograničavaju protok zraka i mogu uzrokovati nagomilavanje topline.</li>
+    <li><strong>Visoke ambijentalne temperature:</strong> Ako je prostorija vruća, hlađenje računara je manje učinkovito.</li>
+  </ul>
+
+  <h3>Kako spriječiti pregrevanje</h3>
+  <ul>
+    <li>Redovno čistiti računalo od prašine i prljavštine.</li>
+    <li>Provjeriti da ventilatori pravilno rade i po potrebi ih zamijeniti ili dodati dodatne ventilatore.</li>
+    <li>Koristiti kvalitetnu termalnu pastu i pravilno je nanositi.</li>
+    <li>Održavati adekvatnu ventilaciju kućišta i prostorije.</li>
+    <li>Pratiti temperature komponenti pomoću softvera i po potrebi smanjiti takt procesora ili grafičke kartice.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pregrevanje može ozbiljno oštetiti računar. Redovito održavanje, kvalitetno hlađenje i praćenje temperatura sprječavaju probleme i produžuju životni vijek komponenti.
+  </div>
+</div>
+
+<div id="vise_monitora" class="section">
+  <h2>Kako povezati više monitora na jedan računar?</h2>
+  <p>Povezivanje više monitora na jedan računar povećava produktivnost, olakšava multitasking i omogućuje bolje iskustvo u igrama i profesionalnim aplikacijama. Postoje različiti načini i faktori koje treba razmotriti prilikom konfiguracije više monitora.</p>
+
+  <h3>Koraci za povezivanje više monitora</h3>
+  <ul>
+    <li><strong>Provjeri izlaze na grafičkoj kartici:</strong> Moderni GPU-i obično imaju HDMI, DisplayPort, DVI ili VGA izlaze. Broj dostupnih izlaza određuje koliko monitora možeš direktno spojiti.</li>
+    <li><strong>Provjeri podršku operativnog sistema:</strong> Windows, macOS i Linux podržavaju konfiguraciju više monitora s opcijama proširenog ili dupliciranog prikaza.</li>
+    <li><strong>Odaberi prave kablove i adaptere:</strong> Ako tvoj monitor i grafička kartica imaju različite portove, koristi odgovarajući adapter (npr. DisplayPort na HDMI).</li>
+    <li><strong>Podesi raspored monitora:</strong> U postavkama ekrana možeš odabrati koji monitor je primarni i kako su raspoređeni (lijevo, desno, iznad, ispod).</li>
+    <li><strong>Provjeri rezoluciju i osvježavanje:</strong> Podesi optimalnu rezoluciju i frekvenciju osvježavanja za svaki monitor kako bi dobio glatku i jasnu sliku.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Programer koristi dva monitora – jedan za kodiranje, drugi za pregled dokumentacije ili testiranje aplikacija.</li>
+    <li>Gamer koristi tri monitora za širi vidni kut u simulacijskim i trkaćim igrama.</li>
+    <li>Student povezuje laptop na vanjski monitor za bolju produktivnost pri radu s više otvorenih prozora i prezentacija.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prilikom kupnje dodatnih monitora provjeri kompatibilnost s grafičkom karticom i osiguraj dovoljno prostora na stolu. Za profesionalni rad razmotri modele s tankim okvirima za bolju estetiku i kontinuirani prikaz slike.
+  </div>
+</div>
+
+<div id="raid" class="section">
+  <h2>Šta je RAID i kada se koristi?</h2>
+  <p>RAID (Redundant Array of Independent/Inexpensive Disks) je metoda kombiniranja više tvrdih diskova u jednu logičku jedinicu radi povećanja performansi, sigurnosti podataka ili oboje. RAID se koristi u serverima, radnim stanicama i ponekad u kućnim računalima za bolje performanse i zaštitu podataka.</p>
+
+  <h3>Najčešći RAID nivoi</h3>
+  <ul>
+    <li><strong>RAID 0 (striping):</strong> Podaci se raspoređuju na dva ili više diskova radi veće brzine čitanja i pisanja. Nema zaštite podataka – gubitak jednog diska znači gubitak svih podataka.</li>
+    <li><strong>RAID 1 (mirroring):</strong> Podaci se dupliciraju na dva diska. Ako jedan disk otkaže, podaci su sačuvani na drugom. Manja brzina pisanja, ali veća sigurnost.</li>
+    <li><strong>RAID 5:</strong> Podaci i paritet distribuirani su na najmanje tri diska. Omogućuje zaštitu podataka i dobru brzinu čitanja. Ako jedan disk otkaže, podaci se mogu obnoviti.</li>
+    <li><strong>RAID 10 (1+0):</strong> Kombinacija mirroringa i stripinga. Omogućuje visoku brzinu i zaštitu podataka, ali zahtijeva najmanje četiri diska.</li>
+  </ul>
+
+  <h3>Kada koristiti RAID</h3>
+  <ul>
+    <li>Povećanje brzine čitanja/pisanja podataka, npr. u uređivanju video sadržaja ili radu s velikim bazama podataka.</li>
+    <li>Zaštita podataka kod kritičnih sustava ili servera (RAID 1, RAID 5, RAID 10).</li>
+    <li>Kombinacija performansi i sigurnosti za profesionalne korisnike koji obrađuju velike količine podataka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> RAID nije zamjena za backup. Uvijek imaj dodatne sigurnosne kopije podataka. Odabir RAID konfiguracije treba prilagoditi potrebama – brzina, sigurnost ili kombinacija oboje.
+  </div>
+</div>
+
+<div id="graficka_ispravna" class="section">
+  <h2>Kako da proverim da li je moja grafička karta ispravna?</h2>
+  <p>Grafička kartica (GPU) je ključna za prikaz slike, igranje igara i rad s grafikom ili video sadržajem. Problemi s grafičkom karticom mogu uzrokovati artefakte, pad sistema ili nedovoljnu brzinu u aplikacijama.</p>
+
+  <h3>Načini provjere ispravnosti grafičke kartice</h3>
+  <ul>
+    <li><strong>Vizualni pregled:</strong> Provjeri ventilatore, konektore i hladnjak. Prašina, oštećenja ili neispravan ventilator mogu uzrokovati probleme.</li>
+    <li><strong>Softverski testovi:</strong> Koristi programe poput GPU-Z, MSI Afterburner, FurMark ili 3DMark za provjeru performansi, temperature i stabilnosti.</li>
+    <li><strong>Provjera drajvera:</strong> Instaliraj najnovije drajvere s web stranice proizvođača (npr. NVIDIA, AMD). Zastarjeli ili oštećeni drajveri mogu uzrokovati padove sustava.</li>
+    <li><strong>Testiranje u igri ili aplikaciji:</strong> Pokreni zahtjevne igre ili aplikacije i provjeri pojavu artefakata, zamrzavanja ili pada sistema.</li>
+    <li><strong>Provjera putem drugog računara:</strong> Ako je moguće, testiraj grafičku karticu u drugom sistemu kako bi se isključio problem s matičnom pločom ili napajanjem.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer primjećuje artefakte i nestabilnost u igrama – koristi FurMark za stres test i provjeru temperature GPU-a.</li>
+    <li>Profesionalac u 3D modeliranju testira performanse GPU-a kroz benchmark softver prije kupnje ili nadogradnje.</li>
+    <li>Korisnik zamjenjuje stare drajvere i prati rezultate u aplikacijama za video obradu kako bi osigurao stabilan rad.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovno prati temperaturu i performanse grafičke kartice, čisti ventilatore i koristi pouzdane drajvere. Pravovremena provjera sprječava oštećenje i gubitak podataka.
+  </div>
+</div>
+
+<div id="32_vs_64" class="section">
+  <h2>Koja je razlika između 32-bitnog i 64-bitnog procesora?</h2>
+  <p>Procesor (CPU) može biti 32-bitni ili 64-bitni, što se odnosi na veličinu registara, adresni prostor memorije i kapacitet za obradu podataka. Ova razlika utječe na performanse, kompatibilnost softvera i količinu memorije koju računar može koristiti.</p>
+
+  <h3>Osnovne razlike</h3>
+  <ul>
+    <li><strong>Adresni prostor:</strong> 32-bitni procesor može adresirati maksimalno 4 GB RAM-a, dok 64-bitni procesor može koristiti znatno više memorije (teoretski do 16 exabajta, praktično do limita matične ploče i OS-a).</li>
+    <li><strong>Veličina registara:</strong> 64-bitni procesor obrađuje veće blokove podataka odjednom, što može poboljšati performanse u zahtjevnim aplikacijama.</li>
+    <li><strong>Kompatibilnost softvera:</strong> 32-bitni softver može raditi na 64-bitnom procesoru (uz 64-bitni OS), ali 64-bitni softver ne radi na 32-bitnom procesoru.</li>
+    <li><strong>Performanse:</strong> 64-bitni procesori bolje rade s modernim operativnim sustavima, velikim bazama podataka, video obradom i 3D aplikacijama.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Stari računar s 32-bitnim procesorom i 4 GB RAM-a ograničen je u korištenju modernih programa i igara.</li>
+    <li>Noviji računar s 64-bitnim procesorom omogućuje korištenje više RAM-a, što je korisno za profesionalnu obradu videa ili 3D modeliranje.</li>
+    <li>Većina modernih operativnih sistema (Windows 10, Linux distribucije) i softverskih aplikacija razvijena je za 64-bitne procesore radi bolje performanse i kompatibilnosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako planiraš nadogradnju ili kupnju novog računara, biraj 64-bitni procesor i operativni sistem. Omogućuje bolju iskorištenost memorije i dugoročnu kompatibilnost sa softverom.
+  </div>
+</div>
+
+<div id="drajveri" class="section">
+  <h2>Kako instalirati nove drajvere za hardver?</h2>
+  <p>Drajveri su softverske komponente koje omogućuju operativnom sistemu da pravilno komunicira s hardverom. Redovno ažuriranje drajvera poboljšava performanse, stabilnost i kompatibilnost sustava.</p>
+
+  <h3>Koraci za instalaciju novih drajvera</h3>
+  <ul>
+    <li><strong>Identificiraj hardver:</strong> Provjeri točno ime i model uređaja za koji želiš instalirati drajver. To može biti grafička kartica, zvučna kartica, mrežni adapter ili printer.</li>
+    <li><strong>Preuzmi drajvere:</strong> Posjeti službenu web stranicu proizvođača i preuzmi najnoviju verziju drajvera za svoj operativni sistem.</li>
+    <li><strong>Sigurnosna provjera:</strong> Provjeri digitalni potpis i pouzdanost izvora prije instalacije kako bi izbjegao zlonamjerni softver.</li>
+    <li><strong>Instalacija:</strong> Pokreni instalacijski program i slijedi upute. Ponekad je potrebno ponovno pokrenuti računar nakon instalacije.</li>
+    <li><strong>Provjera:</strong> Nakon instalacije, provjeri u "Upravitelju uređaja" (Device Manager) da li je drajver ispravno instaliran i uređaj radi kako treba.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer instalira najnoviji NVIDIA ili AMD drajver za bolju kompatibilnost s najnovijim igrama.</li>
+    <li>Student instalira drajvere za printer kako bi osigurao pravilno funkcioniranje uređaja u školskoj mreži.</li>
+    <li>Profesionalac nadograđuje drajvere mrežne kartice i zvučne kartice radi optimalne performanse i stabilnosti računara.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovno provjeravaj ažuriranja drajvera, posebno za grafičku karticu i matičnu ploču. To poboljšava performanse, kompatibilnost i sigurnost sustava.
+  </div>
+</div>
+
+<div id="alat_dijagnostika" class="section">
+  <h2>Koji su osnovni alati za dijagnostiku hardverskih problema?</h2>
+  <p>Dijagnostika hardvera pomaže u otkrivanju kvarova ili problema u računaru prije nego što uzrokuju ozbiljnije kvarove ili gubitak podataka. Postoji nekoliko softverskih i hardverskih alata koji olakšavaju identifikaciju problema.</p>
+
+  <h3>Softverski alati</h3>
+  <ul>
+    <li><strong>CPU-Z:</strong> Prikazuje informacije o procesoru, matičnoj ploči i memoriji. Korisno za provjeru specifikacija i stabilnosti sustava.</li>
+    <li><strong>GPU-Z:</strong> Omogućuje detaljne informacije o grafičkoj kartici, temperaturama i radnim taktovima.</li>
+    <li><strong>MemTest86:</strong> Testira RAM memoriju na greške koje mogu uzrokovati pad sistema ili nestabilnost.</li>
+    <li><strong>CrystalDiskInfo / HD Tune:</strong> Provjerava stanje hard diska, temperature i eventualne greške sektora.</li>
+    <li><strong>HWMonitor:</strong> Prati temperature, napone i brzinu ventilatora u realnom vremenu.</li>
+  </ul>
+
+  <h3>Hardverski alati</h3>
+  <ul>
+    <li><strong>POST kartica (PCI/PCIe diagnostic card):</strong> Koristi se za detekciju grešaka tijekom pokretanja računara.</li>
+    <li><strong>Tester napajanja:</strong> Provjerava ispravnost PSU-a i napon koji se isporučuje komponentama.</li>
+    <li><strong>Spajanje rezervnih komponenti:</strong> Zamjena RAM-a, grafičke kartice ili napajanja kako bi se utvrdilo koja komponenta uzrokuje problem.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Računar se često restartuje – koristi se MemTest86 da se provjeri RAM memorija.</li>
+    <li>Grafički artefakti u igrama – testira se grafička kartica s GPU-Z i stress testom.</li>
+    <li>Hard disk proizvodi čudne zvukove – CrystalDiskInfo pokazuje zdravlje diska i SMART status.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije nego što počneš s dijagnostikom, napravi backup važnih podataka. Kombinacija softverskih i hardverskih alata omogućuje preciznu identifikaciju problema i sprječava nepotrebnu zamjenu komponenti.
+  </div>
+</div>
+
+<div id="rastavljanje" class="section">
+  <h2>Kako bezbedno rasklopiti i sklopiti računar?</h2>
+  <p>Rasklapanje i sklapanje računara zahtijeva pažnju i preciznost kako bi se spriječilo oštećenje komponenti i statički električni udar. Pravilna metoda omogućuje zamjenu dijelova, čišćenje i nadogradnju bez rizika za hardver.</p>
+
+  <h3>Koraci za sigurno rasklapanje</h3>
+  <ul>
+    <li><strong>Isključi računar i odspoji sve kablove:</strong> Uvijek prvo isključi napajanje i ukloni naponske kabele, perifernu opremu i baterije (ako je laptop).</li>
+    <li><strong>Koristi antistatičku zaštitu:</strong> Nosite antistatičku narukvicu ili redovito dodirujte metalni dio kućišta kako bi se ispraznila statička električna energija.</li>
+    <li><strong>Pažljivo uklanjanje komponenti:</strong> Skidajte diskove, RAM, grafičku karticu i matičnu ploču prema uputama proizvođača. Zabilježite redoslijed vijaka i konektora.</li>
+    <li><strong>Održavanje i čišćenje:</strong> Koristite komprimirani zrak za uklanjanje prašine, provjerite termalnu pastu i ventilatore.</li>
+  </ul>
+
+  <h3>Koraci za sklapanje</h3>
+  <ul>
+    <li>Vratite komponente u obrnutom redoslijedu od rasklapanja, pazeći da svi konektori budu pravilno spojeni.</li>
+    <li>Provjerite da su svi vijci učvršćeni, ali ne prejako kako ne bi oštetili ploče ili kućište.</li>
+    <li>Priključite kablove i periferiju te uključite napajanje za testiranje rada računara.</li>
+    <li>Provjerite da se svi ventilatori pokreću i da nema čudnih zvukova prije zatvaranja kućišta.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Korisnik zamjenjuje stari HDD s SSD-om – pažljivo uklanja stari disk i pravilno ga povezuje s matičnom pločom i napajanjem.</li>
+    <li>"Gameri" nadograđuje grafičku karticu – koristi antistatičku narukvicu i provjerava prostor u kućištu prije postavljanja kartice.</li>
+    <li>Student čisti prašinu iz kućišta – uklanja komponente, koristi komprimirani zrak i ponovno ih montira bez oštećenja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije bilo kakvog rasklapanja napravi fotografije ili zabilježi redoslijed komponenti. To olakšava ponovno sastavljanje i smanjuje rizik od pogrešaka.
+  </div>
+</div>
+
+<div id="zastareo_hardver" class="section">
+  <h2>Kako da znam da li je moj hardver zastareo i treba li ga menjati?</h2>
+  <p>Hardver s vremenom zastarijeva, što može uzrokovati sporo izvođenje programa, nemogućnost instalacije novih softverskih verzija ili prekide u radu modernih aplikacija i igara. Prepoznavanje znakova zastarjelog hardvera pomaže u planiranju nadogradnje ili zamjene.</p>
+
+  <h3>Znaci da je hardver zastareo</h3>
+  <ul>
+    <li><strong>Sporo učitavanje i izvođenje programa:</strong> Ako operativni sustav i aplikacije rade sporo čak i nakon čišćenja i optimizacije, to može biti znak zastarjelog procesora ili RAM-a.</li>
+    <li><strong>Nemogućnost instalacije novih softverskih verzija:</strong> Ako moderni softver ili igre ne mogu raditi zbog minimalnih sistemskih zahtjeva, hardver je zastario.</li>
+    <li><strong>Kompatibilnost s novim komponentama:</strong> Matična ploča ne podržava novije procesore, RAM ili grafičke kartice.</li>
+    <li><strong>Problemi s prikazom ili performansama u igrama:</strong> Grafička kartica ili procesor ne mogu pratiti zahtjeve novih igara ili 3D aplikacija.</li>
+    <li><strong>Fizičko oštećenje ili habanje:</strong> Stariji ventilatori, diskovi ili napajanje mogu stvarati buku, pregrijavati se ili raditi nestabilno.</li>
+  </ul>
+
+  <h3>Kada razmotriti zamjenu ili nadogradnju</h3>
+  <ul>
+    <li>Nadogradnja RAM-a ili SSD-a često značajno poboljšava performanse starijih računara.</li>
+    <li>Zamjena procesora ili grafičke kartice može biti isplativa ako je matična ploča kompatibilna.</li>
+    <li>Kada kombinacija starog hardvera i softverskih zahtjeva stalno stvara probleme, razmisli o kupnji novog računara.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student primjećuje da laptop ne može pokrenuti najnovije aplikacije – nadograđuje RAM i SSD, što poboljšava performanse.</li>
+    <li>Gamer stari desktop ne podržava moderne igre – zamjenjuje GPU i procesor unutar kompatibilnog matičnog sistema.</li>
+    <li>Korisnik starijeg računara stalno ima pad sistema i spor rad – odlučuje se za kupnju novog računara radi dugoročne stabilnosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije nadogradnje ili zamjene hardvera, provjeri kompatibilnost novih komponenti s postojećim sistemom i prioritiziraj nadogradnje koje će donijeti najveću razliku u performansama.
+  </div>
+</div>
+
+<div id="termalna_pasta" class="section">
+  <h2>Kako pravilno koristiti termalnu pastu prilikom zamene procesora?</h2>
+  <p>Termalna pasta je materijal koji poboljšava prijenos topline između procesora (CPU) i hladnjaka. Pravilna primjena je ključna za učinkovito hlađenje i sprečavanje pregrijavanja procesora.</p>
+
+  <h3>Koraci za pravilnu primjenu termalne paste</h3>
+  <ul>
+    <li><strong>Priprema procesora i hladnjaka:</strong> Očisti stari sloj termalne paste s procesora i hladnjaka koristeći izopropilni alkohol i meku krpu ili papir.</li>
+    <li><strong>Odabir količine paste:</strong> Nanesite malu količinu paste veličine zrna graška ili zrna riže na centar procesora. Previše paste može smanjiti učinkovitost hlađenja, a premalo neće pokriti cijelu površinu.</li>
+    <li><strong>Postavljanje hladnjaka:</strong> Pažljivo postavi hladnjak na procesor i lagano ga pritisni kako bi se pasta ravnomjerno rasporedila. Ne podiži hladnjak nakon što je postavljen jer može stvoriti mjehuriće zraka.</li>
+    <li><strong>Provjera i učvršćivanje:</strong> Pričvrsti hladnjak prema uputama proizvođača i provjeri da ventilatori pravilno rade.</li>
+    <li><strong>Testiranje temperature:</strong> Nakon pokretanja računara, pomoću softvera poput HWMonitor ili CPU-Z provjeri temperaturu procesora kako bi bila unutar optimalnog raspona.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Nadogradnja procesora u desktop računaru – pravilna primjena termalne paste smanjuje temperaturu CPU-a za 10–15°C u odnosu na staru pastu.</li>
+    <li>Student čisti laptop ventilatore i nanosi novu pastu – sprječava pregrijavanje i smanjuje buku ventilatora.</li>
+    <li>"Gamer" zamjenjuje hladnjak na grafičkoj kartici – koristi pastu za optimalno hlađenje GPU-a tijekom zahtjevnih igara.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Koristi kvalitetnu termalnu pastu, nanesi umjereno i ravnomjerno. Redovito provjeravaj temperature nakon nekoliko mjeseci kako bi osigurao dugotrajno i sigurno hlađenje procesora.
+  </div>
+</div>
+
+<div id="simptomi_ram" class="section">
+  <h2>Koji su simptomi oštećenja RAM memorije?</h2>
+  <p>RAM (Random Access Memory) je ključna komponenta računara za privremeno pohranjivanje podataka koji se trenutno obrađuju. Oštećen RAM može uzrokovati nestabilnost sistema, padove programa i gubitak podataka.</p>
+
+  <h3>Uobičajeni simptomi oštećenog RAM-a</h3>
+  <ul>
+    <li><strong>Plavi ekran smrti (BSOD):</strong> Računar se neočekivano restartuje s greškama u Windows-u, često označenim kodovima vezanim uz memoriju.</li>
+    <li><strong>Pad sistema ili zamrzavanje:</strong> Računar se često zamrzava ili ponovno pokreće bez jasnog razloga.</li>
+    <li><strong>Greške pri pokretanju programa:</strong> Aplikacije se ne otvaraju ili se sruše tijekom rada, posebno zahtjevni softveri poput igara ili video editora.</li>
+    <li><strong>Artefakti na ekranu:</strong> Povremene nepravilnosti u prikazu mogu ukazivati na probleme s RAM-om.</li>
+    <li><strong>Problemi s čitanjem/pisanjem datoteka:</strong> Nestabilnost u radu s dokumentima ili bazama podataka.</li>
+  </ul>
+
+  <h3>Kako testirati RAM</h3>
+  <ul>
+    <li><strong>MemTest86:</strong> Pokreni bootabilni test memorije koji provjerava RAM modul po modul.</li>
+    <li><strong>Windows Memory Diagnostic:</strong> Ugrađeni alat u Windows-u koji provjerava memoriju na greške.</li>
+    <li><strong>Zamjena modula:</strong> Ako sumnjaš na oštećen RAM, testiraj module pojedinačno kako bi identificirao neispravni modul.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student primjećuje pad sistema dok radi na zahtjevnom programu – MemTest86 otkriva oštećen RAM modul.</li>
+    <li>Gamer dobiva plavi ekran tijekom igranja – zamjena neispravnog RAM-a rješava problem.</li>
+    <li>Korisnik računara primjećuje slučajne zamrzavanja i artefakte – testiranje memorije pomaže identificirati problematične module.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovno provjeravaj stanje RAM memorije ako primijetiš nestabilnost računara. Održavanje i zamjena oštećenih modula sprječava gubitak podataka i osigurava stabilan rad.
+  </div>
+</div>
+
+<div id="hladjenje_kuciste" class="section">
+  <h2>Kako da optimizujem hlađenje u kućištu računara?</h2>
+  <p>Pravilno hlađenje računara je ključno za dugotrajni rad i optimalne performanse komponenti. Neadekvatno hlađenje može uzrokovati pregrijavanje procesora, grafičke kartice i drugih komponenti, što smanjuje performanse i može oštetiti hardver.</p>
+
+  <h3>Koraci za optimizaciju hlađenja</h3>
+  <ul>
+    <li><strong>Organizacija kablova:</strong> Pospremi kablove unutar kućišta kako ne bi ometali protok zraka.</li>
+    <li><strong>Postavljanje ventilatora:</strong> Osiguraj dobar protok zraka – prednji ventilatori uvlače hladan zrak, stražnji i gornji ventilatori izbacuju topao zrak.</li>
+    <li><strong>Čišćenje prašine:</strong> Redovito uklanjaj prašinu s ventilatora, hladnjaka i mrežica kućišta. Prašina značajno smanjuje učinkovitost hlađenja.</li>
+    <li><strong>Kvalitetni hladnjaci i ventilatori:</strong> Ako je potrebno, zamijeni stock hladnjak boljim aftermarket rješenjem ili dodaj dodatne ventilatore.</li>
+    <li><strong>Termalna pasta:</strong> Provjeri stanje termalne paste na procesoru i GPU-u i po potrebi je zamijeni radi bolje disipacije topline.</li>
+  </ul>
+
+  <h3>Napredni savjeti</h3>
+  <ul>
+    <li>Korištenje ventilatora s PWM kontrolom za automatsko podešavanje brzine prema temperaturi.</li>
+    <li>Instalacija senzora temperature i softversko praćenje kako bi se spriječilo pregrijavanje.</li>
+    <li>Razmještaj komponenti u kućištu da se najtopliji dijelovi ne preklapaju i da zrak cirkulira slobodno.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer dodaje dodatne ventilatore i zamjenjuje termalnu pastu – temperature GPU-a i CPU-a padaju za 10–15°C.</li>
+    <li>Student redovito čisti prašinu iz kućišta i ventilatora – računar radi tiše i stabilnije.</li>
+    <li>Profesionalac koristi softver za monitoring temperature i automatski prilagođava brzinu ventilatora prema opterećenju sistema.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dobro hlađenje produžuje životni vijek komponenti, smanjuje buku i poboljšava performanse. Planiraj protok zraka unaprijed prilikom nadogradnje kućišta ili dodavanja novih komponenti.
+  </div>
+</div>
+
+<div id="napajajuci_uredaj" class="section">
+  <h2>Kako odabrati odgovarajući napajajući uređaj za moj sistem?</h2>
+  <p>Napajajući uređaj (PSU) je ključna komponenta koja osigurava stabilno napajanje svih dijelova računara. Odabir pravog PSU-a sprječava nestabilnost sustava, oštećenje komponenti i pregrijavanje.</p>
+
+  <h3>Koraci za odabir napajanja</h3>
+  <ul>
+    <li><strong>Procjena snage:</strong> Izračunaj ukupnu potrošnju svih komponenti računara (CPU, GPU, RAM, diskovi). Koristi online kalkulatore snage za precizan odabir.</li>
+    <li><strong>Certifikati učinkovitosti:</strong> Biraj napajanja s certifikatom 80 PLUS (Bronze, Silver, Gold, Platinum) koji osigurava energetsku učinkovitost i stabilno napajanje.</li>
+    <li><strong>Kvaliteta i marka:</strong> Pouzdani proizvođači (npr. Corsair, Seasonic, EVGA, be quiet!) pružaju stabilnije napajanje i duži vijek trajanja.</li>
+    <li><strong>Modularni kablovi:</strong> Modularna PSU olakšava upravljanje kablovima i poboljšava protok zraka unutar kućišta.</li>
+    <li><strong>Rezervna snaga:</strong> Odaberi PSU s 20–30% većom snagom od trenutnih potreba radi budućih nadogradnji i stabilnog rada pod opterećenjem.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer nadograđuje GPU – bira PSU s dovoljno snage i 80 PLUS Gold certifikatom kako bi izbjegao nestabilnost u igrama.</li>
+    <li>Student slaže kućište za školsku upotrebu – koristi pouzdani 500W PSU s modularnim kablovima radi lakšeg upravljanja prostorom.</li>
+    <li>Profesionalac u 3D renderiranju bira 650–750W PSU da podrži moćni CPU i dual GPU setup bez rizika od pada sistema.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Nikada ne štedite na napajanju. Stabilan i kvalitetan PSU štiti cijeli računar, produžuje vijek trajanja komponenti i omogućuje sigurno nadograđivanje u budućnosti.
+  </div>
+</div>
+
+<div id="pcie_slotovi" class="section">
+  <h2>Šta su PCIe slotovi i kako se koriste?</h2>
+  <p>PCIe (Peripheral Component Interconnect Express) slotovi su sučelja na matičnoj ploči koja omogućuju povezivanje dodatnih komponenti kao što su grafičke kartice, SSD diskovi, zvučne kartice i mrežni adapteri. PCIe nudi visoke brzine prijenosa podataka i fleksibilnost u nadogradnji računara.</p>
+
+  <h3>Vrste PCIe slotova</h3>
+  <ul>
+    <li><strong>PCIe x16:</strong> Najčešće se koristi za grafičke kartice. Omogućuje maksimalnu propusnost podataka i najbolje performanse za 3D aplikacije i igre.</li>
+    <li><strong>PCIe x4 / x8:</strong> Koristi se za SSD diskove, mrežne kartice i dodatne kontrolere. Omogućuje umjerenu brzinu prijenosa podataka.</li>
+    <li><strong>PCIe x1:</strong> Pogodan za manje dodatke poput zvučnih kartica, TV tunera ili Wi-Fi adaptera.</li>
+  </ul>
+
+  <h3>Kako koristiti PCIe slotove</h3>
+  <ul>
+    <li>Provjeri kompatibilnost komponente s tipom PCIe slota na matičnoj ploči.</li>
+    <li>Pažljivo umetni komponentu u PCIe slot dok ne čuješ klik ili ne osjetiš da je dobro pričvršćena.</li>
+    <li>Pričvrsti vijcima ili mehaničkim blokadama prema uputama proizvođača.</li>
+    <li>Instaliraj odgovarajuće drajvere kako bi operativni sistem prepoznao novu komponentu.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Gamer instalira novu grafičku karticu u PCIe x16 slot za bolje performanse u igrama.</li>
+    <li>Student dodaje NVMe SSD adapter u PCIe x4 slot radi bržeg učitavanja podataka.</li>
+    <li>Profesionalac koristi PCIe x1 za Wi-Fi karticu i dodatnu zvučnu karticu radi proširenih funkcionalnosti računara.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije umetanja komponente provjeri manual matične ploče i vodi računa o redoslijedu slotova i maksimalnom broju linija (lanes) koje podržava matična ploča kako bi postigao optimalne performanse.
+  </div>
+</div>
+
+<div id="ssd_radi" class="section">
+  <h2>Kako radi SSD i kako se razlikuje od tradicionalnog hard diska?</h2>
+  <p>SSD (Solid State Drive) je vrsta skladišnog uređaja koja koristi flash memoriju za pohranu podataka, dok tradicionalni HDD (Hard Disk Drive) koristi rotirajuće magnetne diskove i mehaničku glavu za čitanje/pisanje podataka.</p>
+
+  <h3>Kako SSD radi</h3>
+  <ul>
+    <li>SSD koristi NAND flash čipove za pohranu podataka, što omogućuje brži pristup i prijenos podataka bez pokretnih dijelova.</li>
+    <li>Brzo učitavanje operativnog sustava, aplikacija i igara zbog niske latencije i velike brzine čitanja/pisanja.</li>
+    <li>Otpornost na udarce i vibracije, jer nema mehaničkih dijelova koji se mogu oštetiti.</li>
+  </ul>
+
+  <h3>Razlike između SSD i HDD</h3>
+  <ul>
+    <li><strong>Brzina:</strong> SSD je znatno brži u čitanju i pisanju podataka.</li>
+    <li><strong>Otpornost:</strong> SSD je otporniji na fizičke udarce i vibracije.</li>
+    <li><strong>Šum:</strong> HDD proizvodi buku zbog rotirajućih diskova, SSD je potpuno tih.</li>
+    <li><strong>Vijek trajanja:</strong> SSD ima ograničen broj ciklusa pisanja, ali moderni SSD-ovi su dovoljno izdržljivi za većinu korisnika.</li>
+    <li><strong>Kapacitet i cijena:</strong> HDD nudi veće kapacitete po nižoj cijeni, dok SSD-ovi pružaju brži rad po višoj cijeni po gigabajtu.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student zamjenjuje HDD s SSD-om u laptopu – operativni sustav i aplikacije učitavaju se mnogo brže.</li>
+    <li>Gamer koristi NVMe SSD za pohranu igara – smanjuje vrijeme učitavanja i poboljšava performanse u igrama.</li>
+    <li>Profesionalac u video montaži koristi SSD za radne datoteke – brži prijenos velikih video datoteka i stabilniji rad softvera.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Za maksimalne performanse računara preporučuje se kombinacija SSD-a za operativni sustav i aplikacije te HDD-a za pohranu velikih datoteka i arhiva.
+  </div>
+</div>
+
+<div id="neodgovarajuci_hardver" class="section">
+  <h2>Koje su posledice korišćenja neodgovarajućih hardverskih komponenti?</h2>
+  <p>Korištenje neodgovarajućih ili nespojivih hardverskih komponenti može uzrokovati niz problema, od sporog rada računara do trajnog oštećenja dijelova. Važno je razumjeti kompatibilnost i preporuke proizvođača prilikom nadogradnje ili sastavljanja računara.</p>
+
+  <h3>Moguće posljedice</h3>
+  <ul>
+    <li><strong>Neučinkovit rad:</strong> Procesor, RAM ili grafička kartica ne mogu raditi optimalno, što uzrokuje sporo izvođenje programa i igara.</li>
+    <li><strong>Nestabilnost sustava:</strong> Računar se neočekivano restartuje, zamrzava ili pokazuje plavi ekran (BSOD) zbog nespojivih komponenti.</li>
+    <li><strong>Oštećenje hardvera:</strong> Preveliko napajanje, nepravilno hlađenje ili nekompatibilna matična ploča može trajno oštetiti CPU, GPU ili memoriju.</li>
+    <li><strong>Problemi s drajverima:</strong> Neodgovarajući hardver može uzrokovati konflikte drajvera i softverske greške.</li>
+    <li><strong>Nemogućnost nadogradnje:</strong> Neodgovarajuće komponente ograničavaju buduće nadogradnje i smanjuju fleksibilnost sistema.</li>
+  </ul>
+
+  <h3>Kako izbjeći probleme</h3>
+  <ul>
+    <li>Provjeri kompatibilnost komponenti s matičnom pločom i napajanjem.</li>
+    <li>Koristi preporučene specifikacije proizvođača prilikom kupnje GPU-a, RAM-a i procesora.</li>
+    <li>Provjeri snagu i certifikate napajanja (PSU) da podrži sve komponente.</li>
+    <li>Redovito nadograđuj drajvere i prati temperaturu komponenti kako bi izbjegao pregrijavanje.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student instalira RAM koji nije kompatibilan s matičnom pločom – računar se ne pokreće ili pokazuje greške pri radu.</li>
+    <li>Gamer koristi GPU koji prema napajanju ili kućištu nije podržan – dolazi do nestabilnosti i oštećenja komponenti.</li>
+    <li>Korisnik nadograđuje procesor, ali matična ploča ne podržava taj model – računar ne prepoznaje CPU.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije nadogradnje uvijek provjeri kompatibilnost komponenti, koristi kvalitetan hardver i prati upute proizvođača kako bi osigurao stabilan i dugotrajan rad računara.
+  </div>
+</div>
+
+<div id="neodgovarajuci_hardver" class="section">
+  <h2>Koje su posledice korišćenja neodgovarajućih hardverskih komponenti?</h2>
+  <p>Korištenje neodgovarajućih ili nespojivih hardverskih komponenti može uzrokovati niz problema, od sporog rada računara do trajnog oštećenja dijelova. Važno je razumjeti kompatibilnost i preporuke proizvođača prilikom nadogradnje ili sastavljanja računara.</p>
+
+  <h3>Moguće posljedice</h3>
+  <ul>
+    <li><strong>Neučinkovit rad:</strong> Procesor, RAM ili grafička kartica ne mogu raditi optimalno, što uzrokuje sporo izvođenje programa i igara.</li>
+    <li><strong>Nestabilnost sustava:</strong> Računar se neočekivano restartuje, zamrzava ili pokazuje plavi ekran (BSOD) zbog nespojivih komponenti.</li>
+    <li><strong>Oštećenje hardvera:</strong> Preveliko napajanje, nepravilno hlađenje ili nekompatibilna matična ploča može trajno oštetiti CPU, GPU ili memoriju.</li>
+    <li><strong>Problemi s drajverima:</strong> Neodgovarajući hardver može uzrokovati konflikte drajvera i softverske greške.</li>
+    <li><strong>Nemogućnost nadogradnje:</strong> Neodgovarajuće komponente ograničavaju buduće nadogradnje i smanjuju fleksibilnost sistema.</li>
+  </ul>
+
+  <h3>Kako izbjeći probleme</h3>
+  <ul>
+    <li>Provjeri kompatibilnost komponenti s matičnom pločom i napajanjem.</li>
+    <li>Koristi preporučene specifikacije proizvođača prilikom kupnje GPU-a, RAM-a i procesora.</li>
+    <li>Provjeri snagu i certifikate napajanja (PSU) da podrži sve komponente.</li>
+    <li>Redovito nadograđuj drajvere i prati temperaturu komponenti kako bi izbjegao pregrijavanje.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Student instalira RAM koji nije kompatibilan s matičnom pločom – računar se ne pokreće ili pokazuje greške pri radu.</li>
+    <li>Gamer koristi GPU koji prema napajanju ili kućištu nije podržan – dolazi do nestabilnosti i oštećenja komponenti.</li>
+    <li>Korisnik nadograđuje procesor, ali matična ploča ne podržava taj model – računar ne prepoznaje CPU.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prije nadogradnje uvijek provjeri kompatibilnost komponenti, koristi kvalitetan hardver i prati upute proizvođača kako bi osigurao stabilan i dugotrajan rad računara.
+  </div>
+</div>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

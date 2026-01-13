@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Materijal za učenje</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: goldenrod;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      font-weight: bold;
+      text-decoration: none;
+      color: #555;
+    }
+
+    .back-link:hover {
+      color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="topic-title">Učitavanje...</h1>
+    <div class="content" id="topic-content">
+      <p>Molimo pričekaj dok se učita sadržaj...</p>
+    </div>
+    <a href="math.html" class="back-link">← Povratak na popis tema</a>
+  </div>
+
+  <script>
+    const topics = {
+      math: {
+        "roman-numerals": {
+          title: "Rimski brojevi",
+          content: `<p>Rimski brojevi koriste slova (I, V, X, L, C, D, M) za predstavljanje brojeva. Na primjer, IV = 4, X = 10.</p>`
+        },
+        "fractions": {
+          title: "Razlomci",
+          content: `<p>Razlomci prikazuju dio cjeline. Na primjer, 1/2 znači pola. Možemo ih zbrajati, oduzimati i množiti.</p>`
+        },
+        "decimals": {
+          title: "Decimalni brojevi",
+          content: `<p>Decimalni brojevi koriste decimalnu točku za razdvajanje cijelog i decimalnog dijela, npr. 3.14.</p>`
+        },
+        "percentages": {
+          title: "Postotci",
+          content: `<p>Postotak prikazuje dio od 100. Na primjer, 25% znači 25 od 100.</p>`
+        },
+        "equations": {
+          title: "Jednadžbe",
+          content: `<p>Jednadžbe su izrazi koji sadrže znak jednakosti. Cilj je pronaći vrijednost nepoznanice.</p>`
+        },
+        "geometry": {
+          title: "Geometrija",
+          content: `<p>Geometrija proučava oblike i njihove osobine. Uključuje točke, linije, kutove i površine.</p>`
+        },
+        "area-perimeter": {
+          title: "Opseg i površina",
+          content: `<p>Opseg je duljina ruba oblika, a površina je veličina prostora unutar oblika.</p>`
+        },
+        "measurements": {
+          title: "Zbrajanje mjera",
+          content: `<p>U matematici često zbrajamo duljine, mase ili zapremine koristeći jednake mjerne jedinice.</p>`
+        },
+        "statistics": {
+          title: "Statistika",
+          content: `<p>Statistika uključuje prikupljanje, analiziranje i predstavljanje podataka.</p>`
+        },
+        "algebra": {
+          title: "Algebra",
+          content: `<p>Algebra koristi varijable za predstavljanje brojeva u formulama i jednadžbama.</p>`
+        },
+        "functions": {
+          title: "Funkcije",
+          content: `<p>Funkcija povezuje svaki ulaz s jednim izlazom. Primjer: f(x) = x + 2.</p>`
+        },
+        "polynomials": {
+          title: "Polinomi",
+          content: `<p>Polinomi su izrazi sastavljeni od više članova koji uključuju varijable i koeficijente.</p>`
+        },
+        "trigonometry": {
+          title: "Trigonometrija",
+          content: `<p>Trigonometrija proučava odnose između kutova i stranica trokuta.</p>`
+        },
+        "matrices": {
+          title: "Matrice",
+          content: `<p>Matrice su tablice brojeva koje se koriste za prikazivanje i računanje podataka.</p>`
+        },
+        "vectors": {
+          title: "Vektori",
+          content: `<p>Vektori imaju veličinu i smjer, koriste se u fizici i geometriji.</p>`
+        },
+        "3d-geometry": {
+          title: "Geometrija u prostoru",
+          content: `<p>Geometrija u prostoru proučava trodimenzionalne oblike poput kocke, kugle i piramide.</p>`
+        },
+        "calculus": {
+          title: "Derivacije i integrali",
+          content: `<p>Derivacije pokazuju brzinu promjene, a integrali izračunavaju površine i zapremine.</p>`
+        },
+        "combinatorics": {
+          title: "Kombinatorika",
+          content: `<p>Kombinatorika proučava koliko načina možemo slagati ili birati objekte.</p>`
+        },
+        "advanced-statistics": {
+          title: "Napredna statistika",
+          content: `<p>Napredna statistika uključuje rad s varijablama, distribucijama i regresijama.</p>`
+        }
+      }
+    };
+
+    function getParam(key) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(key);
+    }
+
+    const subject = getParam("subject");
+    const topic = getParam("topic");
+
+    const titleEl = document.getElementById("topic-title");
+    const contentEl = document.getElementById("topic-content");
+
+    if (subject && topic && topics[subject] && topics[subject][topic]) {
+      titleEl.textContent = topics[subject][topic].title;
+      contentEl.innerHTML = topics[subject][topic].content;
+    } else {
+      titleEl.textContent = "Greška";
+      contentEl.innerHTML = `<p>Tema nije pronađena ili nije dostupna.</p>`;
+    }
+  </script>
+</body>
+</html>

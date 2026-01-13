@@ -1,0 +1,535 @@
+ <!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biologija</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('biology_five_kingdoms')">Podjela živih bića na 5 carstava</button>
+<button onclick="showSection('biology_microscope_basics')">Osnove mikroskopa i mikroskopiranja</button>
+<button onclick="showSection('biology_cell_components')">Stanične komponente</button>
+<button onclick="showSection('biology_animal_vs_plant_cells')">Razlika između životinjskih i biljnih stanica</button>
+<button onclick="showSection('biology_growth_reproduction')">Razmnožavanje, rast, prehrana, disanje</button>
+<button onclick="showSection('biology_microbes')">Virusi, bakterije, protisti, gljive</button>
+<button onclick="showSection('biology_uni_vs_multicellular')">Razlike između jednostaničnih i višestaničnih organizama</button>
+<button onclick="showSection('biology_plant_structure')">Građa i funkcija biljaka</button>
+<button onclick="showSection('biology_plant_classification')">Klasifikacija biljaka</button>
+<button onclick="showSection('biology_photosynthesis_respiration')">Fotosinteza, proces disanja u biljkama</button>
+<button onclick="showSection('biology_animal_structure')">Građa životinja</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('biology_animal_groups')">Razlike između različitih skupina životinja</button>
+<button onclick="showSection('biology_vertebrates')">Različite vrste kralježnjaka</button>
+<button onclick="showSection('biology1')">Građa, razmnožavanje i prehrambeni sustav kod različitih životinja</button>
+<button onclick="showSection('biology_ecosystems')">Ekosustavi</button>
+<button onclick="showSection('biology_food_in_nature')">Hrana u prirodi</button>
+<button onclick="showSection('biology2')">Okrugli ciklusi</button>
+<button onclick="showSection('biology_human_body')">Građa ljudskog tijela</button>
+<button onclick="showSection('biology_human_reproduction')">Razmnožavanje i ljudski razvoj</button>
+<button onclick="showSection('biology_immunity_health')">Imunitet, zdravlje i bolesti</button>
+<button onclick="showSection('biology_ecological_terms')">Ekološki pojmovi</button>
+<button onclick="showSection('biology_environmental_conservation')">Očuvanje prirodnih resursa i ekološki problemi</button>
+
+
+</nav>
+
+
+<!-- Podjela živih bića na 5 carstava -->
+<div id="biology_five_kingdoms" class="section">
+  <h2>Podjela živih bića na 5 carstava</h2>
+  <p>Živa bića se klasificiraju u pet carstava: Bakterije, Protisti, Gljive, Biljke i Životinje. Ova podjela pomaže znanstvenicima da proučavaju sličnosti i razlike među organizmima.</p>
+  <ul>
+    <li>Bakterije: jednostanične, prokarioti, razmnožavanje dijeljenjem.</li>
+    <li>Protisti: većinom jednostanični, eukarioti, žive u vodi.</li>
+    <li>Gljive: heterotrofi, razmnožavaju se sporama, važni razlagači.</li>
+    <li>Biljke: autotrofi, fotosinteza, višestanične.</li>
+    <li>Životinje: heterotrofi, složene organske strukture, višestanične.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjer organizma za svako od 5 carstava i objasni zašto pripada tom carstvu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('five_kingdoms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="five_kingdoms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Bakterije – Escherichia coli; Protisti – Ameba; Gljive – Kvasac; Biljke – Hrast; Životinje – Lav.</p>
+  </div>
+</div>
+
+<!-- Osnove mikroskopa i mikroskopiranja -->
+<div id="biology_microscope_basics" class="section">
+  <h2>Osnove mikroskopa i mikroskopiranja</h2>
+  <p>Mikroskop omogućuje promatranje sitnih struktura koje se ne mogu vidjeti golim okom. Postoje svjetlosni i elektronski mikroskopi.</p>
+  <ul>
+    <li>Svjetlosni mikroskop: koristi svjetlost za uvećanje uzoraka, uvećanje do 1000x.</li>
+    <li>Elektronski mikroskop: koristi elektronke snopove, uvećanje do 1,000,000x, prikazuje sitne strukture stanica.</li>
+    <li>Pravila mikroskopiranja: pažljivo postavljanje stakalca, pravilno fokusiranje, čišćenje objektiva.</li>
+  </ul>
+  <p><b>Zadatak:</b> Pripremi jednostavan uzorak (list ili luk) i nacrtaj što vidiš kroz mikroskop. Zatim usporedi s crtežom u udžbeniku.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('microscope_basics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="microscope_basics_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Promatrajući list luka vidi se stanica s jasnom staničnom membranom i jezgrom, kloroplasti se mogu vidjeti kod biljnih stanica.</p>
+  </div>
+</div>
+
+<!-- Stanične komponente -->
+<div id="biology_cell_components" class="section">
+  <h2>Stanične komponente</h2>
+  <p>Stanica je osnovna jedinica života. Svaka stanica ima organele koje obavljaju specifične funkcije.</p>
+  <ul>
+    <li>Jezgra: sadrži DNK, kontrolira stanične procese.</li>
+    <li>Mitohondriji: energija stanice (ATP).</li>
+    <li>Ribosomi: sinteza proteina.</li>
+    <li>Endoplazmatski retikulum: transport i sinteza proteina/lipida.</li>
+    <li>Golgi aparat: pakiranje i transport tvari iz stanice.</li>
+    <li>Membrana: štiti stanice, kontrolira ulaz i izlaz tvari.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj stanicu i označi sve organele. Objasni funkciju svake od njih.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('cell_components_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="cell_components_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Nacrt je uključivao jezgru, mitohondrije, ribosome, ER, Golgi aparat i membranu. Funkcije: jezgra – kontrola; mitohondriji – energija; ribosomi – proteini; ER – transport; Golgi – pakiranje; membrana – zaštita i regulacija ulaza/izlaza.</p>
+  </div>
+</div>
+
+<!-- Razlika između životinjskih i biljnih stanica -->
+<div id="biology_animal_vs_plant_cells" class="section">
+  <h2>Razlika između životinjskih i biljnih stanica</h2>
+  <p>Biljne i životinjske stanice dijele osnovne organele, ali imaju i ključne razlike:</p>
+  <ul>
+    <li>Biljne stanice: imaju staničnu stijenku, kloroplaste, veće vakuole.</li>
+    <li>Životinjske stanice: nemaju staničnu stijenku ni kloroplaste, male vakuole.</li>
+    <li>Obje imaju jezgru, ribosome, mitohondrije i membranu.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj biljnu i životinjsku stanicu i označi razlike. Napiši funkciju kloroplasta i vakuola.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('animal_vs_plant_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="animal_vs_plant_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Biljna stanica – stanična stijenka, kloroplasti, velika vakuola; Životinjska – nema stijenku, nema kloroplaste, male vakuole. Kloroplasti – fotosinteza; vakuola – skladištenje tvari.</p>
+  </div>
+</div>
+
+<!-- Razmnožavanje, rast, prehrana, disanje -->
+<div id="biology_growth_reproduction" class="section">
+  <h2>Razmnožavanje, rast, prehrana i disanje</h2>
+  <p>Živa bića održavaju život kroz osnovne životne funkcije:</p>
+  <ul>
+    <li>Razmnožavanje: stvaranje novih jedinki (seksualno ili aseksualno).</li>
+    <li>Rast: povećanje veličine i složenosti stanica i organizama.</li>
+    <li>Prehrana: uzimanje tvari za energiju i gradivne materijale.</li>
+    <li>Disanje: kemijski proces kojim se oslobađa energija iz hrane (aerobno i anaerobno).</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjere biljaka i životinja za seksualno i aseksualno razmnožavanje. Objasni kako dobivaju energiju za rast.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('growth_reproduction_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="growth_reproduction_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Seksualno: čovjek, ptice, cvijet ruže; Aseksualno: kvasac, krumpir (iz gomolja), lišajevi. Energiju dobivaju fotosintezom (biljke) ili razgradnjom hrane (životinje).</p>
+  </div>
+</div>
+
+<!-- Virusi, bakterije, protisti, gljive -->
+<div id="biology_microbes" class="section">
+  <h2>Virusi, bakterije, protisti, gljive</h2>
+  <p>Mikroorganizmi imaju različite uloge u prirodi i zdravlju ljudi:</p>
+  <ul>
+    <li>Virusi: neovisni reprodukcijski elementi, uzrokuju bolesti.</li>
+    <li>Bakterije: jednostanične, važne za probavu, proizvodnju hrane i razgradnju.</li>
+    <li>Protisti: jednostanični eukarioti, neki paraziti, neki fotosintetski.</li>
+    <li>Gljive: heterotrofi, razgradnja organske tvari, prehrambena uloga.</li>
+  </ul>
+  <p><b>Zadatak:</b> Navedi po jedan primjer virusa, bakterije, protista i gljive i napiši gdje se nalaze i koja im je funkcija.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('microbes_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="microbes_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Virus – grip (parazit), Bakterija – Lactobacillus (probiotik u jogurtu), Protist – Ameba (slatkovodna), Gljiva – Kvasac (kruh, fermentacija).</p>
+  </div>
+</div>
+
+<!-- Razlike između jednostaničnih i višestaničnih organizama -->
+<div id="biology_uni_vs_multicellular" class="section">
+  <h2>Razlike između jednostaničnih i višestaničnih organizama</h2>
+  <p>Jednostanični organizmi se sastoje od jedne stanice koja obavlja sve životne funkcije, dok višestanični organizmi imaju specijalizirane stanice koje zajedno čine tkiva i organe.</p>
+  <ul>
+    <li>Jednostanični: bakterije, amebe – jedna stanica sve obavlja.</li>
+    <li>Višestanični: biljke, životinje – specijalizirane stanice za različite funkcije.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjer jednostaničnog i višestaničnog organizma te objasni zašto višestanični organizmi mogu imati veće tijelo i kompleksnije funkcije.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('uni_vs_multicellular_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="uni_vs_multicellular_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Jednostanični – Paramecium; Višestanični – Lav. Višestanični organizmi imaju specijalizirane stanice i organe, pa mogu biti veći i složeniji.</p>
+  </div>
+</div>
+
+<!-- Građa i funkcija biljaka -->
+<div id="biology_plant_structure" class="section">
+  <h2>Građa i funkcija biljaka</h2>
+  <p>Biljke imaju različite organe koji im omogućuju život i rast:</p>
+  <ul>
+    <li>Korijen: upija vodu i minerale iz tla.</li>
+    <li>Stabljika: prenosi tvari između korijena i listova, drži biljku uspravnom.</li>
+    <li>List: fotosinteza, razmjena plinova.</li>
+    <li>Cvijet: reproduktivni organ biljke.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj biljku i označi korijen, stabljiku, list i cvijet. Objasni funkciju svakog organa.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('plant_structure_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="plant_structure_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Korijen – upija vodu; Stabljika – transport; List – fotosinteza; Cvijet – reprodukcija.</p>
+  </div>
+</div>
+
+<!-- Klasifikacija biljaka -->
+<div id="biology_plant_classification" class="section">
+  <h2>Klasifikacija biljaka</h2>
+  <p>Biljke se dijele prema strukturi, reprodukciji i razvoju:</p>
+  <ul>
+    <li>Mahovine – jednostavne, ne razvijaju sjemenke.</li>
+    <li>Papratnjače – razvijaju spore.</li>
+    <li>Golosemenke – sjemenke ne zaštićene plodom.</li>
+    <li>Pokosmenke – sjemenke unutar ploda, najrazvijenije biljke.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjer biljke za svaku skupinu i objasni kako se razmnožava.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('plant_classification_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="plant_classification_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Mahovine – sphagnum; Papratnjače – paprat; Golosemenke – bor; Pokosmenke – jabuka. Razmnožavanje: Mahovine i papratnjače – spore; Golosemenke i pokosmenke – sjemenke.</p>
+  </div>
+</div>
+
+<!-- Fotosinteza, proces disanja u biljkama -->
+<div id="biology_photosynthesis_respiration" class="section">
+  <h2>Fotosinteza i proces disanja u biljkama</h2>
+  <p>Biljke proizvode vlastitu hranu fotosintezom i oslobađaju energiju disanjem:</p>
+  <ul>
+    <li>Fotosinteza: CO₂ + H₂O + sunčeva energija → Glukoza + O₂.</li>
+    <li>Disanje: Glukoza + O₂ → energija (ATP) + CO₂ + H₂O.</li>
+    <li>Fotosinteza se odvija u kloroplastima, disanje u mitohondrijima.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj shemu fotosinteze i disanja u biljkama i objasni kako su procesi povezani.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('photosynthesis_respiration_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="photosynthesis_respiration_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Fotosinteza proizvodi glukozu i kisik, što biljka koristi za disanje; disanje oslobađa energiju potrebnu za rast i razvoj.</p>
+  </div>
+</div>
+
+<!-- Građa životinja -->
+<div id="biology_animal_structure" class="section">
+  <h2>Građa životinja</h2>
+  <p>Životinje imaju različite organe i sustave koji omogućuju život:</p>
+  <ul>
+    <li>Mišićni sustav – pokret.</li>
+    <li>Živčani sustav – kontrola i koordinacija.</li>
+    <li>Probavni sustav – hranjive tvari i energija.</li>
+    <li>Dišni sustav – kisik i otpadni CO₂.</li>
+    <li>Krvožilni sustav – transport tvari po tijelu.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj životinju (npr. psa) i označi glavne sustave. Objasni funkciju svakog sustava.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('animal_structure_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="animal_structure_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Mišićni – pokret; Živčani – kontrola; Probavni – hranjive tvari; Dišni – kisik i CO₂; Krvožilni – transport tvari.</p>
+  </div>
+</div>
+
+<!-- Virusi, bakterije, protisti, gljive (napredno) -->
+<div id="biology_microbes_advanced" class="section">
+  <h2>Virusi, bakterije, protisti, gljive (napredno)</h2>
+  <p>Ove skupine mikroorganizama imaju složene uloge u prirodi i medicini:</p>
+  <ul>
+    <li>Virusi – obligatni paraziti, nemaju vlastitu staničnu strukturu.</li>
+    <li>Bakterije – mogu biti korisne (probiotici) ili patogene (infekcije).</li>
+    <li>Protisti – različite prehrambene strategije, fotosintetski ili heterotrofi.</li>
+    <li>Gljive – razgradnja organske tvari, važni za ekosustave i industriju.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratki izvještaj o mikroorganizmima koje svakodnevno susrećeš (npr. u hrani, okolišu) i objasni njihovu ulogu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('microbes_advanced_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="microbes_advanced_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Jogurt – Lactobacillus (korisna bakterija); Plijesan na kruhu – gljiva; Voda iz jezera – protisti; Gripa – virus. Svi utječu na prehranu, zdravlje i ekosustave.</p>
+  </div>
+</div>
+
+<!-- Razlike između različitih skupina životinja -->
+<div id="biology_animal_groups" class="section">
+  <h2>Razlike između različitih skupina životinja</h2>
+  <p>Životinje se dijele u različite skupine prema karakteristikama tijela, načinu razmnožavanja i okolišu:</p>
+  <ul>
+    <li>Beskičmenjaci: nemaju kralježnicu (npr. kukci, školjke).</li>
+    <li>Kičmenjaci: imaju kralježnicu (npr. ribe, ptice, sisavci).</li>
+    <li>Vodozemci: žive i u vodi i na kopnu.</li>
+    <li>Gmazovi, ptice, sisavci – prilagođeni životu na kopnu.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napravi tablicu s primjerima za svaku skupinu i napiši po jednu karakteristiku koja ih razlikuje.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('animal_groups_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="animal_groups_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Beskičmenjaci – kukci, školjke; Kičmenjaci – riba, ptica; Vodozemci – žaba; Gmazovi – gušter. Razlika – kralježnica i način života.</p>
+  </div>
+</div>
+
+<!-- Različite vrste kralježnjaka -->
+<div id="biology_vertebrates" class="section">
+  <h2>Različite vrste kralježnjaka</h2>
+  <p>Kralježnjaci se dijele na:</p>
+  <ul>
+    <li>Ribe – dišu škrgama, žive u vodi.</li>
+    <li>Vodozemci – dišu plućima i kožom, razvijaju se u vodi i na kopnu.</li>
+    <li>Gmazovi – dišu plućima, pokriveni ljuskama.</li>
+    <li>Ptice – perje, let, toplokrvne.</li>
+    <li>Sisavci – dlaka, dojke, toplokrvni.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj dijagram životinjskog stabla kralježnjaka i označi svaku skupinu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('vertebrates_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="vertebrates_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Dijagram s ribama, vodozemcima, gmazovima, pticama i sisavcima. Svaka grupa označena bojom i karakteristikom (npr. dišni sustav, pokrivač tijela).</p>
+  </div>
+</div>
+
+<!-- Građa, razmnožavanje i prehrambeni sustav kod različitih životinja -->
+<div id="biology1" class="section">
+  <h2>Građa, razmnožavanje i prehrambeni sustav kod različitih životinja</h2>
+  <p>Sve životinje imaju sustave za preživljavanje, ali se razlikuju:</p>
+  <ul>
+    <li>Građa – tijelo prilagođeno okolišu.</li>
+    <li>Razmnožavanje – spolno ili nespolno, jajorodno ili živorodno.</li>
+    <li>Prehrambeni sustav – biljojedi, mesožderi, svejedi.</li>
+  </ul>
+  <p><b>Zadatak:</b> Izaberi tri životinje i napiši njihov tip prehrane i način razmnožavanja.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('animal_nutrition_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="animal_nutrition_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Lav – mesožder, spolno, živorodno; Krava – biljojed, spolno, živorodno; Riba – različno, spolno, jajorodno.</p>
+  </div>
+</div>
+
+<!-- Ekosustavi -->
+<div id="biology_ecosystems" class="section">
+  <h2>Ekosustavi</h2>
+  <p>Ekosustav je zajednica živih bića i njihovog okoliša koji međusobno djeluju:</p>
+  <ul>
+    <li>Šumski ekosustav – drveće, životinje, tlo, voda.</li>
+    <li>Vodni ekosustav – ribe, plankton, voda, dno jezera ili mora.</li>
+    <li>Travnjaci – biljke i životinje koje ovise o otvorenom prostoru i travi.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj jednostavan ekosustav (npr. šumski) i označi proizvođače, potrošače i razlagače.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('ecosystems_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="ecosystems_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Proizvođači – drveće; Potrošači – srne, lisice; Razlagači – gljive, bakterije.</p>
+  </div>
+</div>
+
+<!-- Hrana u prirodi -->
+<div id="biology_food_in_nature" class="section">
+  <h2>Hrana u prirodi </h2>
+  <p>Hrana u prirodi stvara mrežu hrana koja povezuje sve organizme:</p>
+  <ul>
+    <li>Proizvođači – biljke koje proizvode hranu fotosintezom.</li>
+    <li>Potrošači – životinje koje jedu biljke ili druge životinje.</li>
+    <li>Razlagači – mikroorganizmi koji razgrađuju mrtvu tvar i vraćaju hranjive tvari u tlo.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj prehrambeni lanac s najmanje 4 organizma i označi tko je proizvođač, potrošač i razlagač.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('food_in_nature_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="food_in_nature_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Trava → Zec → Lisica → Bakterije/Gljive. Proizvođač: trava; Potrošači: zec, lisica; Razlagači: bakterije, gljive.</p>
+  </div>
+</div>
+
+
+<!-- Okrugli ciklusi -->
+<div id="biology_biogeochemical_cycles" class="section">
+  <h2>Okrugli ciklusi</h2>
+  <p>Okrugli ciklusi prikazuju kružni tok tvari i energije kroz ekosustave. Primjeri uključuju:</p>
+  <ul>
+    <li>Vodeni ciklus – isparavanje, kondenzacija, oborine i otjecanje vode.</li>
+    <li>Ugljikov ciklus – fotosinteza, disanje, raspadanje i sagorijevanje fosilnih goriva.</li>
+    <li>Dušikov ciklus – fiksacija dušika, nitrifikacija, denitrifikacija i povratak dušika u tlo.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj jednostavan dijagram vodenog ciklusa i označi sve ključne procese.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('biogeochemical_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="biogeochemical_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Sunce → Isparavanje → Oblaci → Oborine → Rijeke → Povratak u more. Svaki korak označen strelicom i opisom.</p>
+  </div>
+</div>
+
+<!-- Građa ljudskog tijela -->
+<div id="biology_human_body" class="section">
+  <h2>Građa ljudskog tijela</h2>
+  <p>Ljudsko tijelo sastoji se od različitih sustava koji surađuju:</p>
+  <ul>
+    <li>Koštani sustav – pruža strukturu i zaštitu unutarnjih organa.</li>
+    <li>Mišićni sustav – omogućuje kretanje i održavanje posture.</li>
+    <li>Krvožilni sustav – transportira kisik, hranjive tvari i otpadne tvari.</li>
+    <li>Probavni sustav – obrađuje hranu i apsorbira hranjive tvari.</li>
+    <li>Živčani sustav – kontrolira sve funkcije tijela i povezuje ga s okolišem.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj ljudsko tijelo i označi najmanje 5 sustava.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('human_body_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="human_body_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Označeno tijelo s koštanim, mišićnim, krvožilnim, probavnim i živčanim sustavom.</p>
+  </div>
+</div>
+
+<!-- Razmnožavanje i ljudski razvoj -->
+<div id="biology_human_reproduction" class="section">
+  <h2>Razmnožavanje i ljudski razvoj</h2>
+  <p>Ljudski razvoj obuhvaća:</p>
+  <ul>
+    <li>Spolno razmnožavanje – spajanje muške i ženske gamete.</li>
+    <li>Trudnoća – razvoj embrija i fetusa u maternici (9 mjeseci).</li>
+    <li>Porod i rani razvoj – novorođenče raste, uči i razvija osnovne vještine.</li>
+    <li>Pubertet – spolna zrelost, hormonalne promjene.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratki opis faza ljudskog razvoja od rođenja do odrasle dobi.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('human_reproduction_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="human_reproduction_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Novorođenče → Djetinjstvo → Adolescencija → Odrasla dob. Kratki opis tjelesnih i psihičkih promjena u svakoj fazi.</p>
+  </div>
+</div>
+
+<!-- Imunitet, zdravlje i bolesti -->
+<div id="biology_immunity_health" class="section">
+  <h2>Imunitet, zdravlje i bolesti</h2>
+  <p>Imunitet štiti tijelo od bolesti i infekcija. Postoje:</p>
+  <ul>
+    <li>Prirodni imunitet – urođeni obrambeni mehanizmi (koža, bijele krvne stanice).</li>
+    <li>Stečeni imunitet – nastaje nakon izlaganja bolesti ili cijepljenjem.</li>
+    <li>Bolesti – uzročnici bolesti su virusi, bakterije, gljive i paraziti.</li>
+    <li>Prevencija – higijena, cijepljenje, zdrava prehrana i tjelovježba.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj dijagram imunološkog sustava, te objasni razliku između prirodnog i stečenog imuniteta.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('immunity_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="immunity_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Prikaz bijelih krvnih stanica, antitijela i imunoloških reakcija; prirodni imunitet – koža i fagociti; stečeni imunitet – antitijela nastala nakon bolesti ili cijepljenja.</p>
+  </div>
+</div>
+
+<!-- Ekološki pojmovi -->
+<div id="biology_ecological_terms" class="section">
+  <h2>Ekološki pojmovi</h2>
+  <p>Ekologija proučava odnose živih organizama s okolišem i međusobno. Ključni pojmovi uključuju:</p>
+  <ul>
+    <li><b>Ekosustav:</b> zajednica živih bića i neživih čimbenika u određenom području.</li>
+    <li><b>Populacija:</b> skupina jedinki iste vrste u određenom području.</li>
+    <li><b>Biotop:</b> fizičko okruženje u kojem organizmi žive.</li>
+    <li><b>Bioraznolikost:</b> raznolikost vrsta, genetska raznolikost i raznolikost ekosustava.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši 3 primjera ekosustava i za svaki navedi barem 2 organizma koja ga naseljavaju.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('ecological_terms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="ecological_terms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> 
+      1. Jezero – ribe, žabe;<br>
+      2. Šuma – jelena, ptice;<br>
+      3. Travnjak – zec, pčele.
+    </p>
+  </div>
+</div>
+
+<!-- Očuvanje prirodnih resursa i ekološki problemi -->
+<div id="biology_environmental_conservation" class="section">
+  <h2>Očuvanje prirodnih resursa i ekološki problemi</h2>
+  <p>Prirodni resursi su elementi okoliša koje ljudi koriste, poput vode, tla, šuma i ruda. Ekološki problemi uključuju:</p>
+  <ul>
+    <li>Onečišćenje zraka, vode i tla.</li>
+    <li>Krčenje šuma i gubitak bioraznolikosti.</li>
+    <li>Klimatske promjene i globalno zatopljenje.</li>
+    <li>Nerazmjerno iskorištavanje resursa.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši 3 mjere koje mogu smanjiti ekološke probleme u tvom gradu ili školi.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('environmental_conservation_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="environmental_conservation_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> 
+      1. Smanjiti korištenje plastike;<br>
+      2. Reciklirati otpad;<br>
+      3. Saditi stabla i čuvati zelene površine.
+    </p>
+  </div>
+</div>
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

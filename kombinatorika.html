@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kombinatorika – Učenje Matematike</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    a {
+      color: #daa520;
+      text-decoration: none;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .example, .task, .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+
+    .example {
+      background-color: #fff8dc;
+    }
+
+    .task {
+      background-color: #fff3b0;
+    }
+
+    .tip {
+      background-color: #faf0e6;
+    }
+
+    .task strong, .example strong, .tip strong {
+      color: #b8860b;
+    }
+
+    code {
+      background-color: #fff7e6;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kombinatorika</h1>
+
+  <div class="section">
+    <p><strong>Uvod:</strong><br>
+      Kombinatorika je grana matematike koja proučava način na koji se elementi mogu slagati, birati i raspoređivati.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Osnovni pojmovi</h2>
+    <ul>
+      <li><strong>Permutacije:</strong> rasporedi svih elemenata (n!)</li>
+      <li><strong>Kombinacije:</strong> izbor podskupova bez reda (<code>nCr = \frac{n!}{r!(n-r)!}</code>)</li>
+      <li><strong>Variacije:</strong> izbor i raspored elemenata (različite vrste)</li>
+      <li><strong>Faktorijal (n!):</strong> proizvod svih pozitivnih cijelih brojeva do n</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Formule</h2>
+    <ul>
+      <li><strong>Permutacije:</strong> <code>P_n = n!</code></li>
+      <li><strong>Permutacije s ponavljanjem:</strong> <code>\frac{n!}{n_1! n_2! \cdots}</code></li>
+      <li><strong>Kombinacije:</strong> <code>C_n^r = \frac{n!}{r!(n-r)!}</code></li>
+      <li><strong>Variacije bez ponavljanja:</strong> <code>V_n^r = \frac{n!}{(n-r)!}</code></li>
+      <li><strong>Variacije s ponavljanjem:</strong> <code>n^r</code></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Primjeri</h2>
+
+    <div class="example">
+      <strong>Primjer 1:</strong><br>
+      Koliko je permutacija slova u riječi "MATEMATIKA"?<br>
+      Rješenje: <code>\frac{10!}{2!2!2!} = 907200</code>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 2:</strong><br>
+      Koliko kombinacija od 3 elementa možemo izabrati iz skupa od 5?<br>
+      Rješenje: <code>C_5^3 = \frac{5!}{3!2!} = 10</code>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 3:</strong><br>
+      Koliko je varijacija bez ponavljanja 3 elementa iz skupa od 5?<br>
+      Rješenje: <code>V_5^3 = \frac{5!}{(5-3)!} = 60</code>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadaci za vježbu</h2>
+
+    <div class="task"><strong>Zadatak 1:</strong> Izračunaj koliko permutacija ima riječ "RIM"</div>
+    <div class="task"><strong>Zadatak 2:</strong> Izračunaj koliko kombinacija od 4 elementa možemo izabrati iz 7</div>
+    <div class="task"><strong>Zadatak 3:</strong> Koliko je varijacija s ponavljanjem 2 elementa iz skupa od 4?</div>
+    <div class="task"><strong>Zadatak 4:</strong> Izračunaj faktorijal od 6</div>
+    <div class="task"><strong>Zadatak 5:</strong> Izračunaj permutacije slova u riječi "KOMBINATORIKA"</div>
+  </div>
+
+  <div class="section">
+    <h2>Savjeti</h2>
+
+    <div class="tip">
+      <strong>✔️ Korisni savjeti:</strong><br>
+      • Nauči osnovne formule i pojmove<br>
+      • Vježbaj rješavanje problema korak po korak<br>
+      • Razumi razliku između permutacija, kombinacija i varijacija<br>
+      • Crtaj dijagrame za bolje razumijevanje
+    </div>
+  </div>
+
+</body>
+</html>

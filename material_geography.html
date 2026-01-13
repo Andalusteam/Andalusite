@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geografija</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emocionalna podrška</h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('geography_atmosphere_climate')">Atmosfera, klima i vrijeme</button>
+<button onclick="showSection('geography_landforms')">Oblikovanje površine Zemlje</button>
+<button onclick="showSection('geography_hydrosphere')">Hidrosfera</button>
+<button onclick="showSection('geography_solar_system')">Planeti, Sunčev sustav</button>
+<button onclick="showSection('geography_maps')">Zemljopisne karte, vrste karata</button>
+<button onclick="showSection('geography_grid')">Geografska mreža</button>
+<button onclick="showSection('geography_surface_division')">Podjela Zemljine površine</button>
+<button onclick="showSection('geography_climate_zones')">Klimatske zone</button>
+<button onclick="showSection('geography_natural_regions')">Prirodne regije</button>
+<button onclick="showSection('geography_continents')">Afrika, Azija, Australija, Europa</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('geography_location_population')">Geografski položaj, stanovništvo</button>
+<button onclick="showSection('geography_political_economic')">Političke i ekonomske značajke</button>
+<button onclick="showSection('geography_rivers_mountains')">Rijeke, planine, prirodne ljepote Hrvatske</button>
+<button onclick="showSection('geography_admin_division')">Prostorno ustrojstvo i administrativna podjela Hrvatske</button>
+<button onclick="showSection('geography_landforms_planets')">Planine, rijeke, mora, jezera, pustinje</button>
+<button onclick="showSection('geography_ecological_problems')">Ekološki problemi</button>
+<button onclick="showSection('geography_industry_agriculture')">Industrija, poljoprivreda, turizam</button>
+<button onclick="showSection('geography_transport_trade')">Uloga transporta, trgovine i komunikacija</button>
+<button onclick="showSection('geography_world_economies')">Svjetska gospodarstva i regionalni razvoj</button>
+
+
+
+</nav>
+
+<!-- Atmosfera, klima i vrijeme -->
+<div id="geography_atmosphere_climate" class="section">
+  <h2>Atmosfera, klima i vrijeme</h2>
+  <p>Atmosfera je sloj plinova koji okružuje Zemlju i štiti je od Sunčevog zračenja. Klima se odnosi na dugoročne vremenske uvjete na određenom području, dok je vrijeme trenutno stanje atmosfere u određenom trenutku.</p>
+  <ul>
+    <li>Atmosfera: troposfera, stratosfera, mezosfera, termosfera.</li>
+    <li>Vrijeme: temperatura, oborine, vjetar, tlak zraka.</li>
+    <li>Klima: ekvatorska, suptropska, umjerena, polarna.</li>
+  </ul>
+  <p><b>Zadatak:</b> Zabilježi vremenske uvjete u tvojoj okolini tri dana zaredom i odredi kojoj klimi pripada tvoje područje.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('atmosphere_climate_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="atmosphere_climate_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Danas je sunčano i 22°C, sutra oblačno i 18°C, prekosutra kiša i 20°C. Područje ima umjerenu klimu.</p>
+  </div>
+</div>
+
+<!-- Oblikovanje površine Zemlje -->
+<div id="geography_landforms" class="section">
+  <h2>Oblikovanje površine Zemlje</h2>
+  <p>Površina Zemlje stalno se mijenja zbog prirodnih procesa poput erozije, vulkanske aktivnosti i tektonskih pomaka. Oblikovanje površine uključuje stvaranje planina, dolina, rijeka i jezera.</p>
+  <ul>
+    <li>Tektonske aktivnosti – stvaranje planina i potresa.</li>
+    <li>Vulkanizam – nastanak otoka i vulkanskih planina.</li>
+    <li>Erozija i sedimentacija – oblikovanje dolina i riječnih tokova.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj dijagram toka rijeke i označi područja erozije, sedimentacije i transporta materijala.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('landforms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="landforms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> U gornjem toku rijeke prikazana je erozija, u srednjem toku transport, a u donjem toku sedimentacija materijala.</p>
+  </div>
+</div>
+
+<!-- Hidrosfera -->
+<div id="geography_hydrosphere" class="section">
+  <h2>Hidrosfera</h2>
+  <p>Hidrosfera obuhvaća svu vodu na Zemlji – mora, rijeke, jezera, podzemne vode i ledenjake. Voda pokriva oko 71% Zemljine površine i ključna je za život.</p>
+  <ul>
+    <li>Morska voda: oceani i mora – izvor soli i bioraznolikosti.</li>
+    <li>Slatka voda: rijeke, jezera, podzemne vode – korištenje za piće, navodnjavanje i industriju.</li>
+    <li>Ledenjaci i snijeg: akumulacija slatke vode.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nabroji tri rijeke u tvojoj zemlji i opiši njihove izvore i ušća.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('hydrosphere_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="hydrosphere_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Rijeka Sava – izvor u Sloveniji, ušće u Dunav u Hrvatskoj. Rijeka Drava – izvor u Italiji, ušće u Dunav. Rijeka Kupa – izvor u Sloveniji, ušće u Savu.</p>
+  </div>
+</div>
+
+<!-- Planeti, Sunčev sustav -->
+<div id="geography_solar_system" class="section">
+  <h2>Planeti, Sunčev sustav</h2>
+  <p>Sunčev sustav sastoji se od Sunca i svih nebeskih tijela koja ga okružuju: planeta, patuljastih planeta, mjeseca, asteroida i kometa.</p>
+  <ul>
+    <li>Planeti – Merkur, Venera, Zemlja, Mars, Jupiter, Saturn, Uran, Neptun.</li>
+    <li>Patuljasti planeti – Pluton i dr.</li>
+    <li>Asteroidi i kometi – sitna tijela koja kruže oko Sunca, mogu utjecati na Zemlju.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj Sunčev sustav i označi sve planete po udaljenosti od Sunca.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('solar_system_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="solar_system_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Sunce u sredini, zatim Merkur, Venera, Zemlja, Mars, Jupiter, Saturn, Uran, Neptun u kružnim orbitama.</p>
+  </div>
+</div>
+
+<!-- Zemljopisne karte, vrste karata -->
+<div id="geography_maps" class="section">
+  <h2>Zemljopisne karte, vrste karata</h2>
+  <p>Zemljopisne karte su prikazi Zemljine površine u smanjenom obliku. Postoje različite vrste karata, ovisno o namjeni:</p>
+  <ul>
+    <li>Topografske karte – detalji terena, visine i objekte.</li>
+    <li>Tematske karte – prikaz specifičnih tema (klima, stanovništvo, industrija).</li>
+    <li>Fizičke i političke karte – prikaz reljefa i državnih granica.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odaberi svoju županiju i nacrtaj jednostavnu topografsku kartu s rijekama, planinama i gradovima.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('maps_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="maps_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Rijeke označene plavom, planine smeđom, gradovi crvenom točkom.</p>
+  </div>
+</div>
+
+<!-- Geografska mreža -->
+<div id="geography_grid" class="section">
+  <h2>Geografska mreža</h2>
+  <p>Geografska mreža sastoji se od paralela (linija širine) i meridijana (linija dužine) koja pomaže u određivanju položaja točaka na Zemlji.</p>
+  <ul>
+    <li>Paralele – vodoravne linije, npr. ekvator, sjeverni i južni pol.</li>
+    <li>Meridijani – okomite linije, npr. nulti meridijan kroz Greenwich.</li>
+    <li>Koordinate – kombinacija širine i dužine za precizno određivanje lokacije.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odredi koordinate svog grada i označi ih na jednostavnoj karti svijeta.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('grid_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="grid_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Zagreb – približno 45.8150°N, 15.9819°E.</p>
+  </div>
+</div>
+
+<!-- Podjela Zemljine površine -->
+<div id="geography_surface_division" class="section">
+  <h2>Podjela Zemljine površine</h2>
+  <p>Zemljina površina podijeljena je na kontinente i oceane. Kontinenti su velike kopnene mase, a oceani ogromna vodena prostranstva koja ih razdvajaju.</p>
+  <ul>
+    <li>Kontinenti: Afrika, Azija, Europa, Sjeverna i Južna Amerika, Australija, Antarktika.</li>
+    <li>Oceani: Tihi, Atlantski, Indijski, Južni i Arktički ocean.</li>
+    <li>Granice između kontinenta često određene prirodnim barijerama – planinama i rijekama.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj jednostavnu kartu svijeta i označi kontinente i oceane.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('surface_division_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="surface_division_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Kontinenti označeni različitim bojama, oceani plavom bojom.</p>
+  </div>
+</div>
+
+<!-- Klimatske zone -->
+<div id="geography_climate_zones" class="section">
+  <h2>Klimatske zone</h2>
+  <p>Klimatske zone dijele Zemlju prema prosječnim klimatskim uvjetima. Glavne zone su ekvatorska, suptropska, umjerena, subpolarna i polarna.</p>
+  <ul>
+    <li>Ekvatorska zona – visoke temperature, obilne kiše, prašume.</li>
+    <li>Umjerena zona – četiri godišnja doba, šumski i poljoprivredni krajevi.</li>
+    <li>Polarna zona – niske temperature, snijeg i led.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odredi kojoj klimatskoj zoni pripada tvoja država i opiši tipične vremenske uvjete.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('climate_zones_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="climate_zones_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hrvatska se nalazi u umjerenoj zoni – četiri godišnja doba, ljeto toplo, zima hladna.</p>
+  </div>
+</div>
+
+<!-- Prirodne regije -->
+<div id="geography_natural_regions" class="section">
+  <h2>Prirodne regije</h2>
+  <p>Prirodne regije oblikovane su geografski i klimatski. One uključuju planine, ravnice, obale i unutrašnjost kontinenta.</p>
+  <ul>
+    <li>Planinske regije – visok teren, hladnija klima, šume.</li>
+    <li>Ravnice – pogodne za poljoprivredu, manja nadmorska visina.</li>
+    <li>Obalne regije – utjecaj mora, blaža klima, turizam.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nabroji i označi tri prirodne regije u svojoj zemlji ili okolini.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('natural_regions_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="natural_regions_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hrvatska: Dinaridi (planine), Panonska nizina (ravnice), Jadranska obala (obalna regija).</p>
+  </div>
+</div>
+
+<!-- Afrika, Azija, Australija, Europa -->
+<div id="geography_continents" class="section">
+  <h2>Afrika, Azija, Australija, Europa</h2>
+  <p>Ovi kontinenti razlikuju se po veličini, broju stanovnika, prirodnim resursima i klimatskim uvjetima.</p>
+  <ul>
+    <li>Afrika – druga po veličini, saharski pustinja, savane, veliki broj rijeka.</li>
+    <li>Azija – najveći kontinent, Himalaja, Gobi pustinja, gusto naseljena područja.</li>
+    <li>Australija – najmanji kontinent, unutrašnjost pustinja, obalni pojas plodna područja.</li>
+    <li>Europa – srednje velika, raznovrsna klima, gusto naseljena, industrijska i kulturna središta.</li>
+  </ul>
+  <p><b>Zadatak:</b> Na karti svijeta označi svaki od ovih kontinenata i napiši po jednu karakteristiku.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('continents_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="continents_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Afrika – Sahara, Azija – Himalaja, Australija – pustinje, Europa – gusto naseljena.</p>
+  </div>
+</div>
+
+<!-- Geografski položaj, stanovništvo -->
+<div id="geography_location_population" class="section">
+  <h2>Geografski položaj, stanovništvo</h2>
+  <p>Geografski položaj određuje gdje se država ili regija nalazi na karti svijeta, dok stanovništvo uključuje broj, gustoću, raspodjelu i demografske karakteristike ljudi.</p>
+  <ul>
+    <li>Položaj – kontinent, granice s drugim državama, udaljenost od mora.</li>
+    <li>Stanovništvo – broj stanovnika, gustoća naseljenosti, dobna struktura.</li>
+    <li>Demografske promjene – migracije, urbanizacija, natalitet i mortalitet.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši geografski položaj svoje zemlje i procijenjeni broj stanovnika.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('location_population_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="location_population_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hrvatska se nalazi u jugoistočnoj Europi, na Balkanskom poluotoku, s obalom na Jadranskom moru. Broj stanovnika cca 3,8 milijuna.</p>
+  </div>
+</div>
+
+<!-- Političke i ekonomske značajke -->
+<div id="geography_political_economic" class="section">
+  <h2>Političke i ekonomske značajke</h2>
+  <p>Političke značajke obuhvaćaju način upravljanja državom, politički sustav i međunarodne odnose. Ekonomske značajke uključuju gospodarstvo, industriju, poljoprivredu, usluge i trgovinu.</p>
+  <ul>
+    <li>Politički sustavi: demokracija, monarhija, republika.</li>
+    <li>Ekonomske djelatnosti: primarna (poljoprivreda, rudarstvo), sekundarna (industrija), tercijarna (usluge i turizam).</li>
+    <li>Utjecaj geografskog položaja na trgovinu i ekonomiju.</li>
+  </ul>
+  <p><b>Zadatak:</b> Istraži politički sustav i glavne gospodarske djelatnosti svoje zemlje te ih napiši u bilježnicu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('political_economic_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="political_economic_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hrvatska je parlamentarna republika. Glavne gospodarske djelatnosti: turizam, brodogradnja, poljoprivreda, IT sektor.</p>
+  </div>
+</div>
+
+<!-- Rijeke, planine, prirodne ljepote Hrvatske -->
+<div id="geography_rivers_mountains" class="section">
+  <h2>Rijeke, planine, prirodne ljepote Hrvatske</h2>
+  <p>Hrvatska ima raznoliku prirodu: planine, rijeke, jezera i obalu Jadranskog mora. Poznate rijeke su Dunav, Sava i Drava. Najviše planine su Dinara, Velebit i Biokovo.</p>
+  <ul>
+    <li>Rijeke: važan izvor vode i transporta.</li>
+    <li>Planine: šume, nacionalni parkovi, turizam i rekreacija.</li>
+    <li>Prirodne ljepote: Plitvička jezera, Paklenica, Krka – očuvani ekosustavi.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj kartu Hrvatske i označi glavne rijeke i planine.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('rivers_mountains_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="rivers_mountains_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Rijeke – Dunav, Sava, Drava; Planine – Dinara, Velebit, Biokovo.</p>
+  </div>
+</div>
+
+<!-- Prostorno ustrojstvo i administrativna podjela Hrvatske -->
+<div id="geography_admin_division" class="section">
+  <h2>Prostorno ustrojstvo i administrativna podjela Hrvatske</h2>
+  <p>Hrvatska je podijeljena na županije, gradove i općine. Administrativna podjela važna je za lokalnu samoupravu, obrazovanje, zdravstvo i javne službe.</p>
+  <ul>
+    <li>Županije: 20 + Grad Zagreb s posebnim statusom.</li>
+    <li>Gradovi i općine: osnovne jedinice lokalne samouprave.</li>
+    <li>Uloga prostornog planiranja: urbanizam, zaštita okoliša, infrastruktura.</li>
+  </ul>
+  <p><b>Zadatak:</b> Na karti Hrvatske označi sve županije i glavni grad svake županije.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('admin_division_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="admin_division_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Zagrebačka, Splitsko-dalmatinska, Primorsko-goranska… Glavni grad svake županije označen točkom ili nazivom.</p>
+  </div>
+</div>
+
+<!-- Planine, rijeke, mora, jezera, pustinje -->
+<div id="geography_landforms_planets" class="section">
+  <h2>Planine, rijeke, mora, jezera, pustinje</h2>
+  <p>Ovo su osnovni oblici Zemljine površine. Razumijevanje geografskih obilježja pomaže u proučavanju ekosustava, klime i ljudskih aktivnosti.</p>
+  <ul>
+    <li>Planine – povišeni dijelovi, šumska i alpska područja.</li>
+    <li>Rijeke i jezera – izvor vode i prirodne granice.</li>
+    <li>Mora – obala i plovni putevi.</li>
+    <li>Pustinje – suha područja s malo vegetacije, npr. Sahara ili Gobi.</li>
+  </ul>
+  <p><b>Zadatak:</b> Nacrtaj shemu gdje su planine, rijeke, mora, jezera i pustinje na svijetu ili svojoj regiji.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('landforms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="landforms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Planine – Alpi, Himalaja; Rijeke – Nil, Dunav; Mora – Jadransko, Sredozemno; Jezera – Balaton, Ohridsko; Pustinje – Sahara, Gobi.</p>
+  </div>
+</div>
+
+<!-- Ekološki problemi -->
+<div id="geography_ecological_problems" class="section">
+  <h2>Ekološki problemi</h2>
+  <p>Ekološki problemi uključuju zagađenje zraka, vode i tla, krčenje šuma, klimatske promjene i gubitak bioraznolikosti. Oni utječu na zdravlje ljudi, biljaka i životinja te na stabilnost ekosustava.</p>
+  <ul>
+    <li>Zagađenje zraka – smog, emisije industrije i vozila.</li>
+    <li>Zagađenje vode – otpadne vode, kemikalije, plastika.</li>
+    <li>Krčenje šuma – gubitak staništa i klimatske promjene.</li>
+    <li>Klimatske promjene – porast temperatura, suše, poplave.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši tri ekološka problema u svojoj regiji i predloži moguća rješenja.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('ecological_problems_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="ecological_problems_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> 1. Zagađenje zraka – smanjenje emisija; 2. Plastika u rijekama – reciklaža; 3. Krčenje šuma – zaštita šumskih područja i sadnja drveća.</p>
+  </div>
+</div>
+
+<!-- Industrija, poljoprivreda, turizam -->
+<div id="geography_industry_agriculture" class="section">
+  <h2>Industrija, poljoprivreda i turizam</h2>
+  <p>Gospodarstvo svake zemlje temelji se na tri glavne djelatnosti: industriji, poljoprivredi i turizmu. Industrija uključuje proizvodnju i preradu sirovina, poljoprivreda osigurava hranu, dok turizam donosi značajne prihode i zapošljava lokalno stanovništvo.</p>
+  <ul>
+    <li>Industrija: metalna, prehrambena, tekstilna, IT sektor.</li>
+    <li>Poljoprivreda: ratarstvo, stočarstvo, voćarstvo i vinogradarstvo.</li>
+    <li>Turizam: kulturni, ekološki, ruralni i rekreativni turizam.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjere industrijskih djelatnosti, tipove poljoprivrede i turističke atrakcije u svojoj regiji.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('industry_agriculture_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="industry_agriculture_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Industrija – prehrambena (mljekare), metalna (brodogradnja); Poljoprivreda – vinogradarstvo, voćarstvo; Turizam – Plitvička jezera, Dubrovnik, ruralni turizam u Slavoniji.</p>
+  </div>
+</div>
+
+<!-- Uloga transporta, trgovine i komunikacija -->
+<div id="geography_transport_trade" class="section">
+  <h2>Uloga transporta, trgovine i komunikacija</h2>
+  <p>Transport, trgovina i komunikacija ključni su za ekonomski razvoj, povezivanje regija i međunarodne odnose. Dobra prometna infrastruktura i efikasna komunikacija omogućavaju brži protok ljudi, robe i informacija.</p>
+  <ul>
+    <li>Transport: ceste, željeznice, zračne luke, luka.</li>
+    <li>Trgovina: lokalna, nacionalna i međunarodna trgovina.</li>
+    <li>Komunikacije: internet, mobilne mreže, poštanske usluge.</li>
+  </ul>
+  <p><b>Zadatak:</b> Istraži kako se roba i ljudi prevoze u tvojoj regiji i napiši primjere glavnih prometnih pravaca i luka.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('transport_trade_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="transport_trade_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Glavne ceste – A1, A3; luka – Rijeka, Split; željeznica – Zagreb–Split; transport ljudi – javni prijevoz i zračne linije.</p>
+  </div>
+</div>
+
+<!-- Svjetska gospodarstva i regionalni razvoj -->
+<div id="geography_world_economies" class="section">
+  <h2>Svjetska gospodarstva i regionalni razvoj</h2>
+  <p>Svjetska gospodarstva dijele se na razvijena i nerazvijena područja. Regionalni razvoj označava ravnomjernu raspodjelu gospodarskog rasta, infrastrukture i resursa kako bi se smanjile razlike između regija unutar države ili svijeta.</p>
+  <ul>
+    <li>Razvijena gospodarstva: SAD, Njemačka, Japan – visoka tehnologija i industrija.</li>
+    <li>Nerazvijena gospodarstva: dijelovi Afrike i Azije – poljoprivreda i prirodni resursi.</li>
+    <li>Regionalni razvoj: urbanizacija, industrijski parkovi, financijska i obrazovna ulaganja.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odaberi dvije zemlje, jednu razvijenu i jednu nerazvijenu, i usporedi njihov BDP, industrijske sektore i životni standard.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('world_economies_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="world_economies_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> SAD (razvijena) – BDP visok, industrija i IT sektor dominantni, visok životni standard. Nigerija (nerazvijena) – BDP nizak, poljoprivreda i nafta glavni sektor, niži životni standard.</p>
+  </div>
+</div>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andalus</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* === Your Symbol Styles === */
+    .rotate-90 {
+      transform: rotate(90deg);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .second-box-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    .section {
+      width: 100px;
+      height: 80px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+
+    .symbol {
+      height: 80px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .symbol1 { width: 70px; filter: drop-shadow(2px 2px 2px gray); }
+    .symbol2 { width: 90px; opacity: 0.8; }
+    .symbol3 { width: 80px; transform: rotate(10deg); border: 2px solid goldenrod; border-radius: 10px; }
+    .symbol4 { width: 85px; filter: drop-shadow(0 0 5px goldenrod); }
+    .symbol5 { width: 75px; opacity: 0.9; border-radius: 50%; border: 1px solid #ccc; }
+    .symbol6 { width: 80px; transform: rotate(-5deg); box-shadow: 0 0 8px #daa520; }
+
+    .symbol:hover {
+      transform: scale(1.1) rotate(0deg);
+      filter: drop-shadow(0 0 8px goldenrod);
+      border-color: goldenrod;
+    }
+
+    .symbol-row {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .symbol-container {
+      position: relative;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 110px;
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+
+    .symbol-container:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #ccc;
+    }
+
+    .symbol-label {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #444;
+      font-family: sans-serif;
+    }
+
+    .symbol-action {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #444;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    /* === Popup Styling === */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* above other content */
+    }
+  </style>
+</head>
+<body>
+  <!-- Your page content will go here -->
+</body>
+</html>
+
+<!-- Send Arrow Image linking to share.html -->
+<a href="share.html">
+  <img src="sendd.png" alt="Pošalji" id="send-arrow" style="cursor:pointer;" />
+</a>
+
+
+
+  </div>
+</div>
+
+<div class="top-left-auth-links">
+  <div class="profile-circle" onclick="window.location.href='profile.html'">U</div>
+  <a href="signup.html">Registriraj se</a>
+  <a href="login.html">Prijavi se</a>
+</div>
+<iframe
+  src="chart.html"
+  class="gaoh-frame"
+  scrolling="no"
+  frameborder="0"
+  allowtransparency="true"
+></iframe>
+
+<!-- Help Section -->
+<div class="help-section">
+  <p class="coming-soon">Još kategorija uskoro..</p>
+  <p class="help-intro">namijenjeno za pružanje pomoći</p>
+  <p class="help-title">Pomoć sa:</p>
+  <div class="help-list">
+    <a href="it-help.html" class="help-item"><p>IT(kompjuter)</p></a>
+    <a href="parenting-help.html" class="help-item"><p>Roditeljstvo</p></a>
+    <a href="mental-health.html" class="help-item"><p>Psihičko zdravlje</p></a>
+    <a href="school-help.html" class="help-item"><p>Škola</p></a>
+  </div>
+  <p class="help-note">
+    Ako pomoć koja vam je potrebna nije navedena, slobodno napišite konkretno pitanje ili zahtjev u vezi bilo čega.
+  </p>
+  <div class="inline-question-box">
+    <textarea id="userQuestion" placeholder="Postavite svoje pitanje ovdje..."></textarea>
+    <button onclick="saveQuestion()">Pošalji</button>
+  </div>
+</div>
+<p class="potential-note">(potencijalno..)</p>
+
+<!-- Header -->
+<header>
+  <h1><span class="gold-a">Andalus</span></h1>
+  <hr class="title-divider" />
+  <img src="designidea.png" alt="Design Idea" class="design-image" />
+</header>
+
+<!-- Help Suggestion Sentence -->
+<p class="help-suggestion-text">
+  Provjeri postoje li pitanja na koja bi mogao odgovoriti.
+</p>
+
+<!-- doznaj-vise.. -->
+<a href="more.html" class="doznaj-vise">doznaj više</a>
+
+<a href="pitanjapage.html" class="rectangle-link">
+  <div class="rectangle-box">
+    <p>Sva pitanja</p>
+  </div>
+</a>
+
+<!-- Cart Icon -->
+<div class="cart-container">
+  <img src="cart.png" alt="Shopping Cart" onclick="addToCart()" />
+  <div class="cart-count">0</div>
+</div>
+
+<!-- Second Box -->
+<div class="second-box">
+  <div class="symbol-row">
+    <div class="symbol-container">
+      <p class="symbol-label">Muči te hrvatski?</p>
+      <img src="symbol1.png" class="symbol-img" alt="Hrvatski" />
+      <div class="symbol-action"><a href="croatian.html" class="action-link">Stisni ovdje</a></div>
+    </div>
+    <div class="symbol-container">
+      <p class="symbol-label">Problemi na kompjuteru?</p>
+      <img src="symbol2.png" class="symbol-img" alt="Kompjuter" />
+      <div class="symbol-action"><a href="it-help.html" class="action-link">Stisni ovdje</a></div>
+    </div>
+    <div class="symbol-container">
+      <p class="symbol-label">Tražiš savjet u vezi roditeljstva?</p>
+      <img src="symbol3.png" class="symbol-img" alt="Roditeljstvo" />
+      <div class="symbol-action"><a href="parenting-help.html" class="action-link">Stisni ovdje</a></div>
+    </div>
+    <div class="symbol-container">
+      <p class="symbol-label">Ometaju te razne misli ili stres?</p>
+      <img src="symbol4.png" class="symbol-img" alt="Misli" />
+      <div class="symbol-action"><a href="mental-health.html" class="action-link">Stisni ovdje</a></div>
+    </div>
+
+    <div class="symbol-container">
+      <p class="symbol-label">Tražiš posao?</p>
+      <img src="symbol5.png" class="symbol-img" alt="Posao" />
+      <div class="symbol-action"><a href="jobsearch.html" class="action-link">Stisni ovdje</a></div>
+      <div class="feature-blocker"></div>
+      <div class="uskoro-label">Uskoro</div>
+    </div>
+
+    <div class="symbol-container">
+      <p class="symbol-label">Putuješ? Pomogni si.</p>
+      <img src="symbol6.png" class="symbol-img" alt="Putovanje" />
+      <div class="symbol-action"><a href="travel.html" class="action-link">Stisni ovdje</a></div>
+      <div class="feature-blocker"></div>
+      <div class="uskoro-label">Uskoro</div>
+    </div>
+  </div>
+
+  <p class="feature-box-message">Isprobajte jednu od naših usluga...</p>
+</div>
+
+<p class="unemployed-note">za nezaposlene</p>
+
+<a href="job-search.html">
+  <div class="job-search">
+    <p>Traži posao</p>
+    
+  </div>
+</a>
+
+<a href="employee-search.html">
+  <div class="employee-search">
+    <p>Potraži radnike</p>
+     <div class="cover-blocker"></div>       
+
+ 
+  </div>
+
+  <!-- COVER BLOCKER -->
+
+  <p class="cover2-message">Dolazi uskoro</p>
+</div>
+</a>
+
+<p class="looking-for-workers">za one koji traže radnike</p>
+
+<div class="top-right">
+  <div class="buy-products-wrapper">
+    <a href="buythe-products.html">Kupi proizvode</a>
+  </div>
+  <a href="calculator.html">Kalkulator troškova</a>
+  <a href="trip-calculator.html">Kalkulator za putovanja</a>
+  <a href="tourist-attractions.html">Turističke atrakcije</a>
+</div>
+
+<!-- COVER BLOCKER -->
+<div class="top-right-cover">
+  <p class="cover-message">Dolazi uskoro</p>
+</div>
+
+<!-- Bottom Left Navigation -->
+<div class="bottom-left">
+  <a href="about.html">O ovoj stranici</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Andalus</p>
+</footer>
+
+<script>
+  function saveQuestion() {
+    const textarea = document.getElementById('userQuestion');
+    const question = textarea.value.trim();
+
+    if (question === "") {
+      alert("Unesite pitanje!");
+      return;
+    }
+
+    // Get existing questions
+    let questions = JSON.parse(localStorage.getItem("questions")) || [];
+
+    // Add new question
+    questions.push(question);
+
+    // Save back
+    localStorage.setItem("questions", JSON.stringify(questions));
+
+    // Clear textarea
+    textarea.value = "";
+
+    // Redirect to Sva pitanja page
+    window.location.href = "pitanjapage.html";
+  }
+</script>

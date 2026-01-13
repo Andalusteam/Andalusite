@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Savjeti</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Savjeti za roditelje</h1>
+<nav>
+  <!-- Left Column -->
+<div class="side-list left-list">
+  <button onclick="showSection('zdrav_odnos')">Kako izgraditi snažan i zdrav odnos s djetetom?</button>
+  <button onclick="showSection('samostalnost')">Kako razvijati djetetovu samostalnost kroz svakodnevne aktivnosti?</button>
+  <button onclick="showSection('disciplina_njeznos')">Kako balansirati roditeljsku ulogu između discipline i nježnosti?</button>
+  <button onclick="showSection('samopouzdanje')">Kako svakodnevno jačati samopouzdanje djeteta?</button>
+  <button onclick="showSection('emocionalna_stabilnost')">Koje svakodnevne navike mogu pomoći u odgoju emocionalno stabilnog djeteta?</button>
+  <button onclick="showSection('odgovornost')">Kako potaknuti dijete da bude odgovorno bez stalnog nadzora?</button>
+  <button onclick="showSection('realna_ocekivanja')">Koja su očekivanja realna u određenoj dobi djeteta?</button>
+  <button onclick="showSection('podrska_bez_pritiska')">Kako podržati djetetov razvoj bez prevelikog pritiska?</button>
+  <button onclick="showSection('rutine')">Kako stvoriti rutine koje djeci pružaju sigurnost?</button>
+  <button onclick="showSection('najvaznija_pitanja')">Koja su najvažnija pitanja koja dijete treba čuti svakog dana?</button>
+  <button onclick="showSection('vrijeme_s_djecom')">Kako uskladiti roditeljske obaveze i kvalitetno vrijeme s djecom?</button>
+  <button onclick="showSection('komunikacija')">Kako komunicirati s djetetom tako da se osjeća shvaćeno i podržano?</button>
+</div>
+
+<!-- Right Column -->
+<div class="side-list right-list">
+  <button onclick="showSection('porodicni_rituali')">Kako uvesti porodične rituale koji povezuju?</button>
+  <button onclick="showSection('zahvalnost_suosjecanje')">Kako razviti kod djeteta osjećaj zahvalnosti i suosjećanja?</button>
+  <button onclick="showSection('pohvala')">Kako koristiti pohvalu na način koji motivira dijete?</button>
+  <button onclick="showSection('odnos_prema_obavezama')">Kako pomoći djetetu da razvije zdrav odnos prema obavezama i radu?</button>
+  <button onclick="showSection('emocionalna_dostupnost')">Kako da roditelji budu emocionalno dostupni djeci, čak i kad su umorni?</button>
+ 
+  <button onclick="showSection('sigurnost_pripadnost')">Kako razviti kod djeteta osjećaj sigurnosti i pripadnosti u obitelji?</button>
+  <button onclick="showSection('odlucivanje')">Kako da dijete nauči donositi odluke i preuzimati odgovornost za njih?</button>
+  <button onclick="showSection('stilovi_roditeljstva')">Kako uskladiti različite stilove roditeljstva unutar jedne obitelji?</button>
+
+</div>
+</nav>
+
+
+<div id="zdrav_odnos" class="section">
+  <h2>Kako izgraditi snažan i zdrav odnos s djetetom?</h2>
+  <p>Odnos roditelja i djeteta temelj je njegovog emocionalnog razvoja. Zdrav odnos stvara osjećaj sigurnosti, povjerenja i bliskosti, što djetetu omogućava da razvije samopouzdanje i sposobnost povezivanja s drugima. Izgradnja takvog odnosa zahtijeva vrijeme, strpljenje i dosljednost.</p>
+
+  <h3>Ključni elementi zdravog odnosa</h3>
+  <ul>
+    <li>❤️ <strong>Bezuvjetna ljubav:</strong> Dijete treba znati da je voljeno bez obzira na uspjehe ili pogreške.</li>
+    <li>👂 <strong>Aktivno slušanje:</strong> Kada dijete govori, posvetite mu punu pažnju i pokažite da vam je važno što osjeća.</li>
+    <li>🤝 <strong>Povjerenje:</strong> Obećanja ispunjavajte, jer time učite dijete da može računati na vas.</li>
+    <li>📅 <strong>Kvalitetno vrijeme:</strong> I kratki trenuci pažnje mogu biti dragocjeni – zajednički obrok, razgovor prije spavanja ili igra.</li>
+    <li>🌱 <strong>Podrška i ohrabrenje:</strong> Djeca trebaju osjetiti da roditelji vjeruju u njihove sposobnosti i snove.</li>
+  </ul>
+
+  <h3>Primjeri svakodnevnih postupaka</h3>
+  <ul>
+    <li>✔️ <em>Umjesto kritike:</em> istaknite trud i mali napredak („Vidim da si se potrudio, bravo!“).</li>
+    <li>✔️ <em>Umjesto ignoriranja:</em> pokažite interes za djetetove priče i pitanja.</li>
+    <li>✔️ <em>Umjesto žurbe:</em> odvojite nekoliko minuta dnevno samo za dijete, bez mobitela i ometanja.</li>
+  </ul>
+
+  <h3>Kada odnos postaje narušen?</h3>
+  <p>Odnos može oslabjeti kada roditelji provode premalo vremena s djetetom, kada ga često kritiziraju ili ignoriraju njegove emocije. Takva dinamika može stvoriti osjećaj nesigurnosti i udaljenosti.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Najsnažniji odnos s djetetom gradi se kroz male, svakodnevne geste – osmijeh, zagrljaj ili zajednički razgovor čine čuda za osjećaj povezanosti.
+  </div>
+</div>
+
+
+<div id="samostalnost" class="section">
+  <h2>Kako razvijati djetetovu samostalnost kroz svakodnevne aktivnosti?</h2>
+  <p>Samostalnost je vještina koja djetetu daje osjećaj kompetencije i sigurnosti. Kada dijete može samo obaviti određene zadatke, razvija vjeru u vlastite sposobnosti i postaje spremnije nositi se s izazovima u životu. Roditelji imaju ključnu ulogu u tome da mu omoguće prostor za učenje i pokušaje.</p>
+
+  <h3>Kako poticati samostalnost</h3>
+  <ul>
+    <li>🧩 <strong>Mali koraci:</strong> Ne tražite od djeteta previše odjednom – počnite s jednostavnim zadacima kao što su oblačenje, slaganje igračaka ili pomaganje u kuhinji.</li>
+    <li>💡 <strong>Pohvalite trud, ne samo rezultat:</strong> Kada dijete pokuša, recite: „Vidim da si se potrudio“, čak i ako nije uspjelo savršeno.</li>
+    <li>🤲 <strong>Pravo na pogrešku:</strong> Dopustite djetetu da uči iz iskustva. Ako prospe sok, neka sudjeluje u brisanju – to je važna lekcija.</li>
+    <li>🎯 <strong>Dajte izbor:</strong> Pitajte: „Želiš li obući plavu ili crvenu majicu?“ – tako dijete uči donositi odluke.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete može pospremiti igračke prije spavanja.</li>
+    <li>✔️ Uključite ga u kuhanje: neka miješa juhu ili slaže pribor za jelo.</li>
+    <li>✔️ Pustite ga da samo napravi sendvič, iako će možda biti neuredan.</li>
+  </ul>
+
+  <h3>Kada samostalnost postaje izazov?</h3>
+  <p>Ako roditelj previše štiti dijete i obavlja sve umjesto njega, ono može razviti osjećaj nesigurnosti i manjak vjere u sebe. S druge strane, ako mu se odjednom nametne previše odgovornosti, može se osjećati preplavljeno i nesigurno.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dajte djetetu prostor za učenje, ali budite uz njega – samostalnost se najbolje razvija uz podršku i ohrabrenje.
+  </div>
+</div>
+
+<div id="disciplina_njeznos" class="section">
+  <h2>Kako balansirati roditeljsku ulogu između discipline i nježnosti?</h2>
+  <p>Disciplina i nježnost često se doživljavaju kao suprotnosti, no u zdravom roditeljstvu one se nadopunjuju. Disciplina pruža strukturu i sigurnost, dok nježnost daje osjećaj prihvaćenosti i ljubavi. Kada su obje u ravnoteži, dijete raste u odgovornu i emocionalno stabilnu osobu.</p>
+
+  <h3>Načela zdrave ravnoteže</h3>
+  <ul>
+    <li>⚖️ <strong>Dosljednost:</strong> Pravila trebaju biti jasna i uvijek ista – djeca se osjećaju sigurno kad znaju što očekivati.</li>
+    <li>❤️ <strong>Nježan pristup:</strong> I u trenutku kada ispravljate ponašanje, ton glasa i način obraćanja neka budu smireni.</li>
+    <li>🧠 <strong>Razumijevanje:</strong> Disciplina ne znači ignoriranje emocija – dijete treba čuti da razumijete njegovu ljutnju ili tugu.</li>
+    <li>🌱 <strong>Primjer:</strong> Djeca uče promatrajući roditelje. Ako roditelj poštuje pravila i druge ljude, i dijete će učiti isto.</li>
+  </ul>
+
+  <h3>Primjeri ravnoteže u praksi</h3>
+  <ul>
+    <li>✔️ Umjesto kazne, dogovorite posljedice („Ako ne pospremiš igračke sada, nećeš se moći igrati njima sutra“).</li>
+    <li>✔️ Umjesto vikanja, objasnite smireno zašto je određeno ponašanje neprihvatljivo.</li>
+    <li>✔️ Nakon postavljene granice, pokažite nježnost zagrljajem ili riječima: „Znam da ti je teško, ali ovo je važno.“</li>
+  </ul>
+
+  <h3>Kada ravnoteža izostaje?</h3>
+  <p>Ako roditelj naglašava samo disciplinu bez nježnosti, dijete može postati povučeno ili buntovno. Ako je naglasak samo na nježnosti bez pravila, dijete može razviti nesigurnost i osjećaj da nema jasne granice. Potrebno je spojiti oboje.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Najbolja kombinacija je čvrst okvir pravila i puno ljubavi unutar njega – tako dijete osjeća sigurnost i toplinu istovremeno.
+  </div>
+</div>
+
+<!-- 4 -->
+<div id="samopouzdanje" class="section">
+  <h2>Kako svakodnevno jačati samopouzdanje djeteta?</h2>
+  <p>Samopouzdanje je osjećaj da dijete vrijedi, da je sposobno i da ga drugi prihvaćaju. Ono se ne stvara samo velikim uspjesima, već kroz svakodnevne male poruke koje dijete dobiva od roditelja i okoline. Kada roditelj vjeruje u dijete, ono polako počinje vjerovati i samo u sebe.</p>
+
+  <h3>Načini jačanja samopouzdanja</h3>
+  <ul>
+    <li>👏 <strong>Pohvalite trud, a ne samo rezultat:</strong> Umjesto „Bravo za peticu“, recite „Ponosan sam na trud koji si uložio“.</li>
+    <li>💬 <strong>Dajte mu glas:</strong> Uključite dijete u donošenje odluka – čak i malih, poput izbora odjeće ili igre.</li>
+    <li>🌱 <strong>Podržite ga u izazovima:</strong> Kada pogriješi, naglasite da je greška prilika za učenje, a ne znak slabosti.</li>
+    <li>🤝 <strong>Uvažavajte njegove osjećaje:</strong> Kad se dijete osjeća shvaćeno, raste mu sigurnost u sebe.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Kada dijete nešto ne zna, recite: „Znam da možeš naučiti, hajde da probamo zajedno.“</li>
+    <li>✔️ Potaknite ga da sam prezentira svoj crtež, pjesmu ili ideju pred obitelji.</li>
+    <li>✔️ Kada se obeshrabri, podsjetite ga na ranije uspjehe: „Sjećaš se kako si uspio složiti onu slagalicu?“</li>
+  </ul>
+
+  <h3>Kada samopouzdanje slabi?</h3>
+  <p>Samopouzdanje djeteta može biti narušeno ako ga se stalno uspoređuje s drugima, ako se kritizira bez pohvale ili ako roditelji preuzimaju sve zadatke umjesto njega. Takvo dijete često razvija osjećaj da „nije dovoljno dobro“.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dijete kojem se daje prilika da proba, pogriješi i opet pokuša, uz roditeljsku podršku, razvija istinsko i trajno samopouzdanje.
+  </div>
+</div>
+
+<!-- 5 -->
+<div id="emocionalna_stabilnost" class="section">
+  <h2>Koje svakodnevne navike mogu pomoći u odgoju emocionalno stabilnog djeteta?</h2>
+  <p>Emocionalna stabilnost nije nešto što se razvija preko noći – ona se gradi kroz rutinu, ljubav i osjećaj sigurnosti. Djeca koja imaju stabilnu obiteljsku atmosferu lakše se nose sa stresom, konflikte rješavaju mirnije i imaju zdraviji odnos prema sebi i drugima.</p>
+
+  <h3>Navike koje potiču stabilnost</h3>
+  <ul>
+    <li>📅 <strong>Dnevna rutina:</strong> Redovito vrijeme obroka i spavanja pomaže djetetu da se osjeća sigurno i predvidljivo.</li>
+    <li>💬 <strong>Razgovor o emocijama:</strong> Naučite dijete da imenuje svoje osjećaje („osjećam ljutnju“, „osjećam sreću“) – to smanjuje frustracije.</li>
+    <li>🤗 <strong>Fizička bliskost:</strong> Zagrljaji, poljupci i osmijesi prenose poruku ljubavi i sigurnosti.</li>
+    <li>⚽ <strong>Aktivnost i igra:</strong> Tjelesna aktivnost i slobodna igra smanjuju stres i potiču veselje.</li>
+    <li>📖 <strong>Obiteljski rituali:</strong> Večernje čitanje priče ili zajednički obrok gradi osjećaj pripadnosti.</li>
+  </ul>
+
+  <h3>Primjeri svakodnevne prakse</h3>
+  <ul>
+    <li>✔️ Svake večeri pitajte dijete: „Koji ti je bio najbolji dio dana?“</li>
+    <li>✔️ Kada je ljuto, ponudite mu da duboko udahne s vama ili da nacrta kako se osjeća.</li>
+    <li>✔️ Organizirajte barem jedan obrok dnevno koji se jede zajedno, bez mobitela i televizije.</li>
+  </ul>
+
+  <h3>Kada stabilnost izostaje?</h3>
+  <p>Djeca koja nemaju rutinu, koja se često suočavaju s napetom ili konfliktom atmosferom, ili koja nemaju priliku izraziti svoje emocije, mogu razviti nesigurnost i emocionalne poteškoće. Stabilnost nije odsutnost problema, već prisutnost sigurnog i podržavajućeg okvira.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Male navike – zajednički obrok, zagrljaj prije spavanja ili kratki razgovor – dugoročno su najvažniji temelj emocionalne stabilnosti.
+  </div>
+</div>
+
+<!-- 6 -->
+<div id="odgovornost" class="section">
+  <h2>Kako potaknuti dijete da bude odgovorno bez stalnog nadzora?</h2>
+  <p>Odgovornost se ne stvara prisilom ili stalnim nadgledanjem, već povjerenjem i postupnim davanjem slobode. Kada dijete osjeti da mu roditelj vjeruje i da ima priliku pokazati svoju zrelost, razvija unutarnju motivaciju da bude odgovorno.</p>
+
+  <h3>Kako razvijati odgovornost</h3>
+  <ul>
+    <li>🧩 <strong>Mali zadaci:</strong> Povjerite djetetu jednostavne obaveze, primjerene njegovoj dobi (npr. zalijevanje cvijeća).</li>
+    <li>🤝 <strong>Povjerenje:</strong> Vjerujte da će ispuniti zadatak – nemojte stalno provjeravati.</li>
+    <li>💡 <strong>Dogovor, a ne naredba:</strong> Kada dijete sudjeluje u postavljanju pravila, lakše ih prihvaća.</li>
+    <li>📋 <strong>Prirodne posljedice:</strong> Ako dijete ne obavi zadatak (npr. ne pospremi igračke), neka iskusi posljedicu (nema igračaka idući dan).</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Neka samo pripremi torbu za školu, a vi provjerite tek ako vas zamoli.</li>
+    <li>✔️ Povjerite mu vođenje malog kućnog zadatka, npr. da svake večeri ugasi svjetla.</li>
+    <li>✔️ Dogovorite posljedice umjesto kazni: „Ako ne opereš zube, osjećat ćeš neugodan zadah i može te boljeti.“</li>
+  </ul>
+
+  <h3>Kada odgovornost izostaje?</h3>
+  <p>Ako roditelji stalno nadziru, ispravljaju i rade sve umjesto djeteta, ono neće razviti unutarnji osjećaj odgovornosti. Također, prevelika odgovornost prerano može stvoriti stres i otpor. Potrebna je ravnoteža – dovoljno slobode uz jasne granice.</p>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Odgovornost raste kada dijete osjeća da je dio obitelji i da njegove male obaveze imaju stvarnu vrijednost.
+  </div>
+</div>
+
+<!-- 7 -->
+<div id="realna_ocekivanja" class="section">
+  <h2>Koja su očekivanja realna u određenoj dobi djeteta?</h2>
+  <p>Postavljanje realnih očekivanja ključno je za razvoj djeteta. Ako su očekivanja preniska, dijete se može osjećati nedovoljno izazvano; ako su previsoka, može razviti osjećaj nesigurnosti i frustracije. Pravilno postavljena očekivanja pomažu djetetu da uči, napreduje i gradi samopouzdanje.</p>
+
+  <h3>Kako postaviti realna očekivanja</h3>
+  <ul>
+    <li>🧠 <strong>Upoznajte razvojne faze:</strong> Pratite što je uobičajeno za dob djeteta i prilagodite zadatke i zahtjeve.</li>
+    <li>🎯 <strong>Postavite jasne ciljeve:</strong> Neka očekivanja budu konkretna, mjerljiva i ostvariva.</li>
+    <li>🤝 <strong>Uključite dijete:</strong> Pitajte ga što misli da može učiniti – time potičete samoprocjenu i odgovornost.</li>
+    <li>💬 <strong>Fleksibilnost:</strong> Budite spremni prilagoditi očekivanja ako dijete pokazuje poteškoće ili interes za druga područja.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Za predškolca, očekivanje da pospremi igračke i opere ruke prije jela je realno.</li>
+    <li>✔️ Za školarca, redovito domaće zadaće i manja pomoć pri organizaciji su primjer realnog zahtjeva.</li>
+    <li>✔️ Za tinejdžera, očekivati samostalno planiranje vremena za učenje i hobije je prikladno.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Postavljajte očekivanja koja motiviraju, a ne obeshrabruju. Razgovor s djetetom pomaže da razumije zašto je određeno ponašanje ili zadatak važan.
+  </div>
+</div>
+
+<!-- 8 -->
+<div id="podrska_bez_pritiska" class="section">
+  <h2>Kako podržati djetetov razvoj bez prevelikog pritiska?</h2>
+  <p>Podrška djetetu znači biti uz njega i pružiti mu resurse, ali ne pritiskati ga da postigne više nego što je sposobno. Prevelik pritisak može izazvati stres, strah od neuspjeha i smanjiti motivaciju. Cilj je stvarati okruženje u kojem dijete uči, istražuje i razvija svoje talente vlastitim tempom.</p>
+
+  <h3>Načini podrške bez pritiska</h3>
+  <ul>
+    <li>🌱 <strong>Pratite, ali ne nadgledajte:</strong> Dopustite djetetu da samostalno istražuje i donosi odluke.</li>
+    <li>💬 <strong>Komunicirajte očekivanja:</strong> Umjesto da nametnete cilj, objasnite zašto je određena aktivnost važna.</li>
+    <li>🤗 <strong>Ohrabrenje:</strong> Pohvalite trud i proces, ne samo uspjeh.</li>
+    <li>🎯 <strong>Realni ciljevi:</strong> Podijelite veće zadatke na manje korake kako bi dijete osjetilo napredak.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Kada dijete radi projekt za školu, pružite pomoć samo kada zatraži, umjesto da radite umjesto njega.</li>
+    <li>✔️ Ohrabrite ga da proba nove aktivnosti, čak i ako nije savršeno uspješan.</li>
+    <li>✔️ Razgovarajte o pogreškama kao o prilici za učenje, a ne razlogu za kritiku.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Cilj je stvarati osjećaj sigurnosti i samopouzdanja, ne natjecanja i uspoređivanja s drugima.
+  </div>
+</div>
+
+<!-- 9 -->
+<div id="rutine" class="section">
+  <h2>Kako stvoriti rutine koje djeci pružaju sigurnost?</h2>
+  <p>Rutine djeci daju predvidljivost i osjećaj kontrole nad vlastitim životom. Kada dijete zna što može očekivati u svakodnevici, osjeća se sigurnije i stabilnije. Rutine ne moraju biti stroge; važno je dosljedno ih provoditi i uključiti ih u obiteljski život.</p>
+
+  <h3>Kako uspostaviti sigurne rutine</h3>
+  <ul>
+    <li>📅 <strong>Dosljednost:</strong> Vrijeme spavanja, obroka i igre neka bude otprilike u isto vrijeme svaki dan.</li>
+    <li>🌱 <strong>Fleksibilnost:</strong> Rutine trebaju biti prilagodljive – ponekad se događaju iznimke, važno je da dijete razumije razlog.</li>
+    <li>🤝 <strong>Uključivanje djeteta:</strong> Dopustite mu da sudjeluje u planiranju aktivnosti – npr. redoslijed obroka ili igara.</li>
+    <li>💬 <strong>Objašnjenje:</strong> Djeca bolje prihvaćaju rutine ako razumiju zašto su važne.</li>
+  </ul>
+
+  <h3>Primjeri svakodnevnih rutinskih aktivnosti</h3>
+  <ul>
+    <li>✔️ Svako jutro zajedno pripremite torbu i odjeću za školu.</li>
+    <li>✔️ Večerajte zajedno, bez ometanja mobitelima ili televizijom.</li>
+    <li>✔️ Prije spavanja kratki ritual – čitanje priče, razgovor o danu ili zajednički zagrljaj.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Rutina pruža okvir, a roditeljska prisutnost i toplina daju dijete osjećaj sigurnosti i pripadnosti.
+  </div>
+</div>
+
+
+<!-- 10 -->
+<div id="najvaznija_pitanja" class="section">
+  <h2>Koja su najvažnija pitanja koja dijete treba čuti svakog dana?</h2>
+  <p>Postavljanjem pravih pitanja roditelji pomažu djetetu da se osjeća voljeno, shvaćeno i sigurno. Svakodnevna pitanja usmjerena na emocije i doživljaje pomažu u jačanju povezanosti, samopouzdanja i emocionalne inteligencije.</p>
+
+  <h3>Primjeri ključnih pitanja</h3>
+  <ul>
+    <li>💬 <strong>Kako si danas?</strong> – Otvara prostor za razgovor o osjećajima.</li>
+    <li>🌟 <strong>Što ti je danas bilo najzanimljivije?</strong> – Potiče dijete na refleksiju i izražavanje doživljaja.</li>
+    <li>🤗 <strong>Što ti treba da se osjećaš dobro?</strong> – Pomaže djetetu da prepozna i izrazi svoje potrebe.</li>
+    <li>💡 <strong>Što si naučio/la danas?</strong> – Potiče učenje i samoprocjenu.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svakog jutra pitajte: „Što te veseli danas?“</li>
+    <li>✔️ Prije spavanja: „Što ti je bilo najzabavnije ili najteže danas?“</li>
+    <li>✔️ Kada dijete doživi neuspjeh: „Što misliš, što bi mogao/la sljedeći put drugačije?“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pitanja trebaju biti iskrena i otvorena – cilj nije kontrola, već komunikacija i povezivanje.
+  </div>
+</div>
+
+<!-- 11 -->
+<div id="vrijeme_s_djecom" class="section">
+  <h2>Kako uskladiti roditeljske obaveze i kvalitetno vrijeme s djecom?</h2>
+  <p>Mnogi roditelji osjećaju pritisak zbog posla, kućanskih obaveza i drugih zadataka, ali kvalitetno provedeno vrijeme s djecom ključno je za njihov razvoj i za odnos. Bitno je ne samo provoditi vrijeme zajedno, već biti u potpunosti prisutan u tim trenucima.</p>
+
+  <h3>Strategije za balans</h3>
+  <ul>
+    <li>🕰️ <strong>Planiranje:</strong> Odredite redovne trenutke za obiteljsku aktivnost ili igru.</li>
+    <li>📵 <strong>Isključite distrakcije:</strong> Mobitel, TV i druge ometajuće stvari ostavite po strani dok ste s djetetom.</li>
+    <li>🎯 <strong>Kvaliteta, ne količina:</strong> Čak i 15–20 minuta koncentrirane pažnje može imati velik utjecaj.</li>
+    <li>🤝 <strong>Uključite dijete u obaveze:</strong> Neka kućanski poslovi budu prilika za zajedničko vrijeme i igru.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svaki dan prije spavanja kratki razgovor o danu.</li>
+    <li>✔️ Vikendom zajednička aktivnost – šetnja, igra ili kreativni projekt.</li>
+    <li>✔️ Uključivanje djeteta u kuhanje ili pospremanje kao zajednički zadatak, a ne obavezu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Djeca pamtiti ne količinu vremena, već koliko su roditelji bili prisutni i uključeni u interakciju.
+  </div>
+</div>
+
+<!-- 12 -->
+<div id="komunikacija" class="section">
+  <h2>Kako komunicirati s djetetom tako da se osjeća shvaćeno i podržano?</h2>
+  <p>Način komunikacije roditelja oblikuje djetetovu emocionalnu sigurnost i samopouzdanje. Kada dijete osjeti da ga roditelj sluša i razumije, lakše dijeli svoje misli, strahove i radosti. Komunikacija uključuje ton glasa, pažnju i aktivno slušanje, a ne samo riječi.</p>
+
+  <h3>Načela podržavajuće komunikacije</h3>
+  <ul>
+    <li>👂 <strong>Aktivno slušanje:</strong> Pokažite da razumijete što dijete govori i osjećate.</li>
+    <li>💬 <strong>Jasna i mirna poruka:</strong> Izbjegavajte vikanje, kritiku ili sarkazam.</li>
+    <li>🤝 <strong>Empatija:</strong> Uvažite djetetove emocije, čak i kada ne razumijete u potpunosti njegove reakcije.</li>
+    <li>🌱 <strong>Pitanja koja potiču dijalog:</strong> Umjesto naredbi, pitajte: „Što misliš o ovome?“ ili „Kako se osjećaš?“</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Kada dijete plače zbog neuspjeha, recite: „Vidim da ti je teško, želim te slušati“.</li>
+    <li>✔️ Umjesto „Prestani biti ljut“, pitajte: „Što te sada ljuti?“</li>
+    <li>✔️ Kada dijete želi nešto podijeliti, odvojite vrijeme da ga slušate bez prekidanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Djetetova komunikacija je ogledalo njegovih osjećaja – aktivno slušanje i empatija grade povjerenje i sigurnost.
+  </div>
+</div>
+
+<!-- 13 -->
+<div id="porodicni_rituali" class="section">
+  <h2>Kako uvesti porodične rituale koji povezuju?</h2>
+  <p>Porodični rituali stvaraju osjećaj zajedništva i pripadnosti. Djeca kroz njih uče vrijednosti, komunikaciju i povezanost. Ritual može biti bilo što – zajednički obroci, šetnje, igranje društvenih igara ili čitanje priča – važno je da se redovno provodi i da je uključena cijela obitelj.</p>
+
+  <h3>Načela uspješnih rituala</h3>
+  <ul>
+    <li>📅 <strong>Dosljednost:</strong> Ritual se provodi u određenim intervalima, bilo dnevno, tjedno ili mjesečno.</li>
+    <li>🤝 <strong>Sudjelovanje svih članova:</strong> Svaki član obitelji doprinosi i osjeća se uključenim.</li>
+    <li>❤️ <strong>Povezanost:</strong> Ritual treba jačati osjećaj ljubavi i zajedništva, a ne biti obaveza.</li>
+    <li>🌱 <strong>Prilagodljivost:</strong> Ritual se može mijenjati kako djeca rastu ili se mijenjaju obiteljske okolnosti.</li>
+  </ul>
+
+  <h3>Primjeri rituala</h3>
+  <ul>
+    <li>✔️ Svaki dan zajedno večerajte i podijelite tri stvari koje su vam bile najljepše tog dana.</li>
+    <li>✔️ Vikendom zajednička šetnja ili kreativna aktivnost – crtanje, slaganje puzzli ili kuhanje.</li>
+    <li>✔️ Prije spavanja čitanje priče i razgovor o osjećajima i događajima dana.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ritual je uspješan kada ga dijete doživljava radosnim i sigurnim, a ne kao obavezu. Male, redovne aktivnosti grade snažnu povezanost.
+  </div>
+</div>
+
+<!-- 14 -->
+<div id="zahvalnost_suosjecanje" class="section">
+  <h2>Kako razviti kod djeteta osjećaj zahvalnosti i suosjećanja?</h2>
+  <p>Osjećaj zahvalnosti i suosjećanja pomaže djetetu da razvije empatičnost, pozitivno gledište i bolju sposobnost povezivanja s drugima. Djeca koja redovno vježbaju zahvalnost lakše cijene ono što imaju, a suosjećanje ih potiče da pomažu i razumiju tuđe osjećaje.</p>
+
+  <h3>Načini razvijanja zahvalnosti i suosjećanja</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o osjećajima:</strong> Pitajte dijete kako se osjeća i kako misli da se drugi osjećaju u određenim situacijama.</li>
+    <li>🌱 <strong>Primjer roditelja:</strong> Djeca uče kroz promatranje – pokažite zahvalnost i suosjećanje u svakodnevnom životu.</li>
+    <li>🤝 <strong>Podrška drugima:</strong> Potaknite dijete da pomaže prijateljima, članovima obitelji ili životinjama.</li>
+    <li>📖 <strong>Knjige i priče:</strong> Priče koje potiču empatiju i zahvalnost pomažu djetetu da razumije osjećaje drugih.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svaki dan pitajte dijete: „Na što si danas zahvalan/a?“</li>
+    <li>✔️ Kada dijete vidi nekoga u nevolji, pitajte: „Kako bi se ti osjećao/la da si na njegovom mjestu?“</li>
+    <li>✔️ Pohvalite djelo suosjećanja: „Ponosan sam što si pomogao prijatelju kada mu je trebalo.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razvijanje zahvalnosti i suosjećanja traje, ali kroz svakodnevne male primjere i razgovore dijete postaje empatičnije i zadovoljnije.
+  </div>
+</div>
+
+<!-- 15 -->
+<div id="pohvala_motivacija" class="section">
+  <h2>Kako koristiti pohvalu na način koji motivira dijete?</h2>
+  <p>Pohvala je snažan alat za motivaciju, ali je važno kako se koristi. Fokusiranje samo na rezultat ili uspjeh može dovesti do straha od neuspjeha, dok pohvala usmjerena na trud i napor potiče učenje i samopouzdanje.</p>
+
+  <h3>Načela učinkovite pohvale</h3>
+  <ul>
+    <li>💡 <strong>Pohvaljujte trud:</strong> „Vidim da si se stvarno potrudio/la“ umjesto samo „Bravo“.</li>
+    <li>🎯 <strong>Specifičnost:</strong> Pohvala koja opisuje što je dijete učinilo dobro je učinkovitija od općih komentara.</li>
+    <li>🤝 <strong>Uključite emocije:</strong> Recite kako vas je djetetov trud usrećio ili ponosan učinio.</li>
+    <li>🌱 <strong>Potaknite samoprocjenu:</strong> Pitajte dijete što misli da je učinilo dobro i gdje može napredovati.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ „Ponosan sam što si sam složio sve igračke i još si provjerio sobu.“</li>
+    <li>✔️ „Vidim da si puno vježbao crtanje – jako se vidi napredak.“</li>
+    <li>✔️ „Hvala što si pomogao mlađem bratu – to pokazuje tvoju pažnju i suosjećanje.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pohvala koja ističe trud i proces pomaže djetetu da razvije unutarnju motivaciju, samopouzdanje i želju za učenjem.
+  </div>
+</div>
+
+<!-- 16 -->
+<div id="odnos_prema_obavezama" class="section">
+  <h2>Kako pomoći djetetu da razvije zdrav odnos prema obavezama i radu?</h2>
+  <p>Dijete koje razumije svrhu i vrijednost obaveza razvija osjećaj odgovornosti i samostalnosti. Zdrav odnos prema radu ne znači da dijete treba biti savršeno ili stalno produktivno, već da nauči cijeniti trud i planirati vrijeme.</p>
+
+  <h3>Načini poticanja zdravog odnosa prema obavezama</h3>
+  <ul>
+    <li>📋 <strong>Jasne obaveze:</strong> Dijete treba znati što se od njega očekuje i u kojem roku.</li>
+    <li>🎯 <strong>Razbijanje zadataka:</strong> Velike zadatke podijelite na manje, upravljive korake.</li>
+    <li>🤝 <strong>Pohvala i podrška:</strong> Pohvaljujte trud i napredak, a ne samo rezultat.</li>
+    <li>⏱️ <strong>Učenje planiranja:</strong> Pomoću rasporeda ili popisa zadataka dijete može vizualizirati i pratiti svoj napredak.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Prije škole, zajedno napravite plan domaćih zadataka i raspored vremena za igru.</li>
+    <li>✔️ Kada dijete završi zadatak, pohvalite trud: „Vidim da si se stvarno potrudio/la.“</li>
+    <li>✔️ Ako se zadatak čini težak, ponudite pomoć, ali ne obavljajte ga umjesto djeteta.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Zdrav odnos prema radu razvija se kroz podršku, ohrabrenje i realna očekivanja – dijete uči da je trud važniji od savršenstva.
+  </div>
+</div>
+
+<!-- 17 -->
+<div id="emocionalna_dostupnost" class="section">
+  <h2>Kako da roditelji budu emocionalno dostupni djeci, čak i kad su umorni?</h2>
+  <p>Emocionalna dostupnost roditelja znači da dijete osjeća da je podržano i voljeno, čak i kada roditelj prolazi kroz stres ili umor. Ključno je pronaći ravnotežu između vlastitih potreba i potreba djeteta, te pokazati pažnju, empatiju i prisutnost.</p>
+
+  <h3>Strategije emocionalne dostupnosti</h3>
+  <ul>
+    <li>💬 <strong>Kratki trenutci pažnje:</strong> Nekoliko minuta aktivnog slušanja ili zagrljaja dnevno može učvrstiti vezu.</li>
+    <li>🤝 <strong>Iskrenost:</strong> Djeca cijene kada roditelj iskreno kaže da je umoran, ali da je tu za njih.</li>
+    <li>🌱 <strong>Rutine emocionalne povezanosti:</strong> Večernji razgovori, zajednička igra ili čitanje priče pomažu u održavanju veze.</li>
+    <li>🧘 <strong>Samopomoć roditelja:</strong> Kratke pauze, meditacija ili disanje pomažu roditelju da bude prisutan bez obzira na umor.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Kada ste umorni, sjednite s djetetom i pitajte: „Kako ti je prošao dan?“ – nekoliko minuta pažnje čini čuda.</li>
+    <li>✔️ Kratki rituali: zajednički čaj ili vođenje dnevnika zahvalnosti prije spavanja.</li>
+    <li>✔️ Iskreno priznajte osjećaje: „Danas sam jako umoran, ali želim čuti što ti se dogodilo.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prisutnost i pažnja, čak i u malim količinama, grade povjerenje i emocionalnu sigurnost djeteta.
+  </div>
+</div>
+
+<!-- 18 -->
+<div id="razgovor_brige" class="section">
+  <h2>Kako razgovarati s djetetom o svakodnevnim brigama i emocijama?</h2>
+  <p>Dijete treba mjesto gdje može izraziti svoje brige i emocije bez straha od kritike ili odbacivanja. Otvoren i podržavajući razgovor pomaže djetetu da razvije emocionalnu inteligenciju, snalaženje u problemima i povjerenje prema roditeljima.</p>
+
+  <h3>Načela razgovora o brigama</h3>
+  <ul>
+    <li>👂 <strong>Aktivno slušanje:</strong> Pokažite da uistinu slušate i razumijete što dijete govori.</li>
+    <li>💬 <strong>Potvrdite osjećaje:</strong> Umjesto da minimizirate brigu, recite: „Razumijem da ti je teško.“</li>
+    <li>🌱 <strong>Pitajte otvorena pitanja:</strong> „Što te brine?“ ili „Kako bi htio/la da to riješimo?“</li>
+    <li>🤝 <strong>Pomozite u rješavanju problema:</strong> Umjesto da odmah dajete rješenje, potaknite dijete na razmišljanje i donošenje odluka.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Kada dijete osjeća strah pred školsku aktivnost, razgovarajte o njemu i predložite moguće korake za prevladavanje straha.</li>
+    <li>✔️ Ako dijete ima nesigurnosti, pitajte: „Što ti najviše smeta u ovoj situaciji?“ i zajedno pronađite rješenje.</li>
+    <li>✔️ Ohrabrite dijete da izrazi emocije kroz crtanje, igru ili razgovor.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razgovor o brigama i emocijama treba biti redovan, a ne samo u kriznim situacijama – to gradi povjerenje i sigurnost.
+  </div>
+</div>
+
+
+<!-- 19 -->
+<div id="sigurnost_pripadnost" class="section">
+  <h2>Kako razviti kod djeteta osjećaj sigurnosti i pripadnosti u obitelji?</h2>
+  <p>Osjećaj sigurnosti i pripadnosti ključan je za emocionalni razvoj djeteta. Kada dijete zna da je voljeno i da ima mjesto u obitelji, razvija samopouzdanje, otpornost na stres i sposobnost za kvalitetne međuljudske odnose.</p>
+
+  <h3>Načini jačanja sigurnosti i pripadnosti</h3>
+  <ul>
+    <li>🤗 <strong>Toplina i prisutnost:</strong> Redovni zagrljaji, osmijesi i aktivna pažnja stvaraju osjećaj sigurnosti.</li>
+    <li>📅 <strong>Dosljedne rutine:</strong> Predvidljivost obroka, spavanja i aktivnosti pomaže djetetu da se osjeća sigurno.</li>
+    <li>💬 <strong>Uvažavanje mišljenja:</strong> Uključite dijete u odluke koje ga se tiču, čak i male svakodnevne odluke.</li>
+    <li>🎯 <strong>Izgradnja zajedničkih rituala:</strong> Obiteljski obroci, igre i aktivnosti jačaju osjećaj pripadnosti.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Svakodnevno provedite barem 15 minuta u razgovoru ili igri s djetetom.</li>
+    <li>✔️ Pitajte dijete za mišljenje pri planiranju vikenda ili aktivnosti kod kuće.</li>
+    <li>✔️ Pohvalite dijete kada pokaže inicijativu i uključi se u obiteljske aktivnosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Osjećaj sigurnosti i pripadnosti ne dolazi iz materijalnih stvari, već iz topline, prisutnosti i uvažavanja djetetovih potreba.
+  </div>
+</div>
+
+<!-- 20 -->
+<div id="odlucivanje" class="section">
+  <h2>Kako da dijete nauči donositi odluke i preuzimati odgovornost za njih?</h2>
+  <p>Davanje prilike djetetu da donosi odluke i preuzima odgovornost ključno je za razvoj samostalnosti i samopouzdanja. Važno je postupno povećavati razinu odgovornosti prema dobi i sposobnostima djeteta, uz roditeljsku podršku i savjete.</p>
+
+  <h3>Načini razvoja donošenja odluka</h3>
+  <ul>
+    <li>🧩 <strong>Mali izbori:</strong> Počnite s jednostavnim odlukama, npr. izbor odjeće ili vrste aktivnosti.</li>
+    <li>💬 <strong>Razgovor o posljedicama:</strong> Objasnite što se može dogoditi zbog određene odluke i potaknite dijete da razmisli.</li>
+    <li>🤝 <strong>Povjerenje:</strong> Dopustite djetetu da samostalno donosi odluku i doživi prirodne posljedice.</li>
+    <li>🌱 <strong>Refleksija:</strong> Nakon odluke razgovarajte što je dobro prošlo i što bi moglo biti bolje.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Neka dijete odluči kojim redoslijedom će odraditi zadatke ili igru.</li>
+    <li>✔️ Kada dijete bira među različitim opcijama za ručak ili slobodnu aktivnost, raspravite moguće posljedice.</li>
+    <li>✔️ Pohvalite ga za dobre odluke i konstruktivno razgovarajte o greškama.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Odluke i odgovornost trebaju se uvoditi postupno, a roditelj treba biti podrška, a ne kontrolor.
+  </div>
+</div>
+
+<!-- 21 -->
+<div id="stilovi_roditeljstva" class="section">
+  <h2>Kako uskladiti različite stilove roditeljstva unutar jedne obitelji?</h2>
+  <p>Kada roditelji imaju različite pristupe odgoju, važno je pronaći zajednički okvir i strategiju kako dijete ne bi bilo zbunjeno ili opterećeno kontradiktornim pravilima. Usklađenost ne znači identičnost, već zajednički dogovor i dosljednost u osnovnim vrijednostima.</p>
+
+  <h3>Načini usklađivanja stilova roditeljstva</h3>
+  <ul>
+    <li>🤝 <strong>Zajednički dogovor:</strong> Roditelji trebaju razgovarati o važnim pravilima i vrijednostima koje žele prenijeti djetetu.</li>
+    <li>💬 <strong>Dosljednost:</strong> Pravila i granice trebaju biti jasna i jednaka, bez obzira na stil odgoja.</li>
+    <li>🌱 <strong>Fleksibilnost:</strong> Različiti pristupi mogu se primijeniti u situacijama koje roditelji dogovore kao primjerene.</li>
+    <li>👂 <strong>Otvorena komunikacija:</strong> Redovno razgovarajte o tome što funkcionira i što treba prilagoditi.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako jedan roditelj preferira striktnija pravila, a drugi fleksibilnija, dogovorite zajedničke granice koje će dijete razumjeti.</li>
+    <li>✔️ Razgovarajte s djetetom o razlozima različitih pristupa i objasnite da roditelji rade zajedno za njegovu dobrobit.</li>
+    <li>✔️ Pohvalite dijete kada pravilno reagira u situacijama koje odražavaju oba stila roditeljstva.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Usklađeni roditeljski pristup stvara sigurnost i dosljednost, a različiti stilovi mogu biti prednost ako se primjenjuju svjesno i ujednačeno.
+  </div>
+</div>
+
+
+<!-- 22 -->
+<div id="granice_disciplina" class="section">
+  <h2>Kako razgovarati o granicama i pravilima bez vike i kažnjavanja?</h2>
+  <p>Djeca najbolje uče o granicama kada su one jasno postavljene i objašnjene mirno i dosljedno. Vika i kažnjavanje mogu stvoriti strah, a ne razumijevanje. Cilj je pomoći djetetu da razumije zašto su pravila važna i kako ih može slijediti.</p>
+
+  <h3>Načini uspostavljanja granica</h3>
+  <ul>
+    <li>💬 <strong>Jasna objašnjenja:</strong> Objasnite zašto pravilo postoji i koje su posljedice nepoštivanja.</li>
+    <li>🤝 <strong>Mirna komunikacija:</strong> Koristite smiren ton, bez prijetnji i vikanja.</li>
+    <li>📋 <strong>Dosljednost:</strong> Pravila se primjenjuju uvijek, kako bi dijete razumjelo što se očekuje.</li>
+    <li>🌱 <strong>Prirodne posljedice:</strong> Dopustite djetetu da osjeti posljedice svojih odluka kada je to sigurno i prikladno.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Umjesto vikanja: „Znam da ti se ne da pospremiti sobu, ali sada to moraš učiniti da bi igračke bile spremne za sutra.“</li>
+    <li>✔️ Umjesto kazne: dogovorite zajedničke posljedice, npr. „Ako ne pospremiš igračke, sutra nećeš imati vremena za igru prije domaće zadaće.“</li>
+    <li>✔️ Umjesto prijetnje: ponudite izbor: „Možeš sada pospremiti ili nakon večere – ti biraš.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kombinacija jasnoće, dosljednosti i topline čini granice razumljivima i prihvatljivima za dijete.
+  </div>
+</div>
+
+<!-- 23 -->
+<div id="praćenje_interesa" class="section">
+  <h2>Kako pratiti djetetove interese i talente bez da ga opteretimo?</h2>
+  <p>Pratiti interese i talente djeteta pomaže mu u razvoju samopouzdanja i motivacije. Važno je pratiti ih pažljivo, bez pretjeranog pritiska ili natjecanja, kako bi dijete uživalo u procesu učenja i igre.</p>
+
+  <h3>Strategije praćenja interesa</h3>
+  <ul>
+    <li>🌱 <strong>Promatranje:</strong> Obratite pažnju na aktivnosti u kojima dijete pokazuje zadovoljstvo i angažman.</li>
+    <li>🤝 <strong>Poticaj, ne prisila:</strong> Ponudite resurse i prilike, ali ne forsirajte.</li>
+    <li>💬 <strong>Razgovor o iskustvima:</strong> Pitajte dijete što mu se sviđa i zašto, i podržite njegovu odluku.</li>
+    <li>🎯 <strong>Postavljanje realnih ciljeva:</strong> Fokusirajte se na napredak, ne samo na uspjeh ili rezultat.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete voli crtanje, osigurajte papir i boje i pohvalite trud, a ne samo rezultat.</li>
+    <li>✔️ Ako pokazuje interes za sport, omogućite igru i rekreaciju bez stalnog natjecanja ili pritiska na pobjedu.</li>
+    <li>✔️ Razgovarajte o izboru hobija i aktivnosti, poštujte djetetove odluke i ritam.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prava podrška prati djetetove talente i interese, ali ostavlja prostor za igru, učenje i samostalno otkrivanje.
+  </div>
+</div>
+
+<!-- 24 -->
+<div id="strucna_podrska" class="section">
+  <h2>Kako prepoznati kada roditelj treba tražiti podršku ili savjet stručnjaka?</h2>
+  <p>Roditelj nije uvijek u mogućnosti riješiti sve izazove sam. Traženje stručne podrške pokazuje odgovornost i brigu za dijete. Pravovremeno uključivanje stručnjaka može spriječiti dugoročne probleme i pomoći roditelju da bolje razumije potrebe djeteta.</p>
+
+  <h3>Situacije kada je potrebna stručna podrška</h3>
+  <ul>
+    <li>⚠️ <strong>Emocionalne poteškoće:</strong> Dijete često pokazuje strah, tugu ili ljutnju koja ometa svakodnevni život.</li>
+    <li>📚 <strong>Problemi u školi:</strong> Dugotrajne poteškoće u učenju, socijalizaciji ili ponašanju.</li>
+    <li>💬 <strong>Roditeljski izazovi:</strong> Kada roditelj ne zna kako reagirati ili se osjeća preopterećenim.</li>
+    <li>🩺 <strong>Specifične potrebe:</strong> Savjeti pedijatra, psihologa, logopeda ili terapeuta prema preporuci.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Ako dijete stalno izbjegava školu ili društvene aktivnosti, konzultirajte stručnjaka za ponašanje.</li>
+    <li>✔️ Ako roditelj osjeća kronični stres i ne zna kako podržati dijete, potražite savjet psihologa.</li>
+    <li>✔️ Redovito pratite razvoj i ponašanje djeteta i nemojte čekati dok problem eskalira.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Traženje stručne pomoći nije znak slabosti, već odgovornog roditeljstva i brige za zdrav razvoj djeteta.
+  </div>
+</div>
+
+
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

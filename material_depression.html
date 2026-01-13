@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Depresija</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+<nav>
+
+
+<!-- Left Side List -->
+<button onclick="showSection('sta_je_depresija')">Šta je depresija?</button>
+<button onclick="showSection('simptomi_depresija')">Koji su najčešći simptomi depresije?</button>
+<button onclick="showSection('kako_znati_depresija')">Kako da znam da li imam depresiju ili sam samo tužan/na?</button>
+<button onclick="showSection('trajanje_depresija')">Koliko dugo traje depresija?</button>
+<button onclick="showSection('nestaje_sama')">Da li depresija može da nestane sama od sebe?</button>
+<button onclick="showSection('fizicka_ili_mentalna')">Da li je depresija fizička ili mentalna bolest?</button>
+<button onclick="showSection('uticaj_depresija_na_telo')">Kako depresija utiče na telo?</button>
+<button onclick="showSection('gubitak_interesa')">Da li je normalno da osoba s depresijom izgubi interesovanje za sve?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('genetika_depresija')">Da li genetika igra ulogu u depresiji?</button>
+<button onclick="showSection('stres_depresija')">Može li stres izazvati depresiju?</button>
+<button onclick="showSection('trauma_detinjstvo')">Da li trauma iz detinjstva može da dovede do depresije kasnije u životu?</button>
+<button onclick="showSection('dijagnoza_depresija')">Kako se postavlja dijagnoza depresije?</button>
+<button onclick="showSection('ko_diagnostikuje')">Ko može da dijagnostikuje depresiju?</button>
+<button onclick="showSection('depresija_vs_anksioznost')">Koja je razlika između depresije i anksioznosti?</button>
+<button onclick="showSection('vrste_depresija')">Da li postoji više vrsta depresije?</button>
+<button onclick="showSection('lecenje_depresija')">Kako se leči depresija?</button>
+
+
+</nav>
+
+<!-- 1. Šta je depresija? -->
+<div id="sta_je_depresija" class="section">
+  <h2>Šta je depresija?</h2>
+  <p>Depresija je ozbiljno mentalno stanje koje utiče na raspoloženje, mišljenje i svakodnevno funkcionisanje. Nije samo prolazna tuga; to je dugotrajniji gubitak interesa i motivacije koji ometa normalan život. Depresija može uključivati emocionalne, fizičke i kognitivne simptome.</p>
+  <ul>
+    <li> Osjećaj stalne tuge, praznine ili beznade.</li>
+    <li> Gubitak interesa ili zadovoljstva u aktivnostima koje su ranije bile ugodne.</li>
+    <li> Promjene u razmišljanju, koncentraciji i donošenju odluka.</li>
+    <li> Fizički simptomi poput umora, problema sa spavanjem ili promjena apetita.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Depresija je ozbiljno stanje i zaslužuje stručnu pažnju, a ne samo ignoriranje ili čekanje da "prođe samo od sebe".</div>
+</div>
+
+<!-- 2. Koji su najčešći simptomi depresije? -->
+<div id="simptomi_depresija" class="section">
+  <h2>Koji su najčešći simptomi depresije?</h2>
+  <p>Simptomi depresije mogu varirati od osobe do osobe, ali postoje uobičajeni znaci koje treba pratiti:</p>
+  <ul>
+    <li> Konstantna tuga ili osjećaj praznine.</li>
+    <li> Gubitak interesa za aktivnosti i hobije.</li>
+    <li> Promjene u spavanju – nesanica ili previše spavanja.</li>
+    <li>🍽️ Promjene u apetitu – gubitak ili povećanje težine.</li>
+    <li>⚡ Umor, manjak energije ili osjećaj bezvoljnosti.</li>
+    <li> Osjećaj krivice ili bezvrijednosti.</li>
+    <li>💭 Teške koncentracija i donošenje odluka.</li>
+    <li> Fizički simptomi poput glavobolja, bolova u stomaku ili bolova u mišićima bez jasnog razloga.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Ako simptomi traju više od dvije nedelje i ometaju svakodnevni život, preporučuje se konsultacija sa stručnjakom.</div>
+</div>
+
+<!-- 3. Kako da znam da li imam depresiju ili sam samo tužan/na? -->
+<div id="kako_znati_depresija" class="section">
+  <h2>Kako da znam da li imam depresiju ili sam samo tužan/na?</h2>
+  <p>Tuga je normalna reakcija na životne izazove i obično prolazi s vremenom. Depresija je dugotrajnija i ometa svakodnevno funkcionisanje.</p>
+  <ul>
+    <li>⏳ Tuga je prolazna, depresija traje najmanje dve nedelje i često duže.</li>
+    <li>💤 Depresija može uzrokovati umor i gubitak energije koji ometa svakodnevne aktivnosti.</li>
+    <li> Pojavljuju se promjene u razmišljanju – osjećaj krivice, bezvrijednosti ili bespomoćnosti.</li>
+    <li>🍽️ Promjene apetita i spavanja koje traju duže vrijeme.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Ako niste sigurni, važno je potražiti stručnu procjenu jer rana intervencija pomaže u bržem oporavku.</div>
+</div>
+
+<!-- 4. Koliko dugo traje depresija? -->
+<div id="trajanje_depresija" class="section">
+  <h2>Koliko dugo traje depresija?</h2>
+  <p>Trajanje depresije varira. Može trajati nekoliko nedelja do nekoliko mjeseci, a kod nekih osoba i duže. Bez adekvatnog liječenja, simptomi često postaju dugotrajni ili se ponavljaju.</p>
+  <ul>
+    <li>🗓️ Blaga depresija može trajati nekoliko nedelja.</li>
+    <li>⏳ Umjerena do teška depresija često traje nekoliko mjeseci ili više.</li>
+    <li>🔄 Neke osobe dožive ponavljajuće epizode depresije tokom života.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Pravovremeno liječenje i podrška mogu skratiti trajanje simptoma i spriječiti recidive.</div>
+</div>
+
+<!-- 5. Da li depresija može da nestane sama od sebe? -->
+<div id="nestaje_sama" class="section">
+  <h2>Da li depresija može da nestane sama od sebe?</h2>
+  <p>U nekim slučajevima blaga depresija može prolaziti bez tretmana, ali teža ili dugotrajna depresija obično zahtijeva stručnu pomoć. Ignorisanje simptoma može pogoršati stanje i produžiti oporavak.</p>
+  <ul>
+    <li>⚠️ Blaga depresija ponekad prolazi prirodno, ali simptomi se mogu ponavljati.</li>
+    <li>💊 Srednje do teške epizode često zahtijevaju terapiju, savjetovanje ili lijekove.</li>
+    <li> Psihološka podrška i promjena životnog stila mogu ubrzati oporavak.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Nemojte čekati da depresija „prođe sama od sebe“ ako simptomi ometaju svakodnevni život.</div>
+</div>
+
+<!-- 6. Da li je depresija fizička ili mentalna bolest? -->
+<div id="fizicka_ili_mentalna" class="section">
+  <h2>Da li je depresija fizička ili mentalna bolest?</h2>
+  <p>Depresija je mentalno stanje, ali ima i fizičke manifestacije. Utječe na mozak, hormone i neurotransmitere, što može izazvati fizičke simptome.</p>
+  <ul>
+    <li> Mentalni simptomi: tuga, bezvoljnost, smanjena koncentracija.</li>
+    <li> Fizički simptomi: umor, bolovi, promjene u apetitu i spavanju.</li>
+    <li>🔄 Mentalni i fizički simptomi su međusobno povezani i često se pojačavaju.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Liječenje depresije obično uključuje kombinaciju psihoterapije i, kod težih oblika, lijekova koji djeluju na mozak i tijelo.</div>
+</div>
+
+<!-- 7. Kako depresija utiče na telo? -->
+<div id="uticaj_depresija_na_telo" class="section">
+  <h2>Kako depresija utiče na telo?</h2>
+  <p>Depresija ne utiče samo na emocije i misli – može izazvati niz fizičkih simptoma. Često se manifestuje kroz umor, bolove, probleme sa spavanjem i opšte pogoršanje zdravlja.</p>
+  <ul>
+    <li>💤 Poremećaji spavanja: nesanica ili previše spavanja.</li>
+    <li> Kronični umor i gubitak energije.</li>
+    <li> Fizički bolovi bez jasnog uzroka, poput glavobolja ili bolova u mišićima.</li>
+    <li>🍽️ Promjene u apetitu i težini.</li>
+    <li>🫀 Povećan rizik od srčanih problema i oslabljen imunološki sistem kod dugotrajne depresije.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Praćenje fizičkih simptoma i njihovo liječenje u kombinaciji sa psihološkom terapijom pomaže u cjelovitom oporavku.</div>
+</div>
+
+<!-- 8. Da li je normalno da osoba s depresijom izgubi interesovanje za sve? -->
+<div id="gubitak_interesa" class="section">
+  <h2>Da li je normalno da osoba s depresijom izgubi interesovanje za sve?</h2>
+  <p>Da, gubitak interesa ili užitka u aktivnostima koje su ranije bile ugodne je jedan od ključnih simptoma depresije. To se naziva anhedonija.</p>
+  <ul>
+    <li>🎨 Hobi ili aktivnosti koje su ranije bile zabavne više ne izazivaju zadovoljstvo.</li>
+    <li>💬 Socijalni život može patiti jer osoba izbjegava prijatelje i porodicu.</li>
+    <li> Motivacija za svakodnevne zadatke je značajno smanjena.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Gubitak interesa je znak da osoba treba podršku i potencijalno profesionalnu pomoć. Ovo stanje se često poboljšava terapijom i aktivnim angažmanom u životu.
+  </div>
+</div>
+
+<!-- 9. Da li genetika igra ulogu u depresiji? -->
+<div id="genetika_depresija" class="section">
+  <h2>Da li genetika igra ulogu u depresiji?</h2>
+  <p>Genetika može povećati rizik od depresije, ali nije jedini faktor. Ako u porodici postoje članovi s depresijom, šansa da se bolest razvije je veća, ali okolina i životni događaji također igraju ključnu ulogu.</p>
+  <ul>
+    <li> Nasljedni faktori mogu utjecati na osjetljivost mozga na stres i emocionalne izazove.</li>
+    <li> Genetika nije sudbina – i osobe s genetskom predispozicijom mogu izgraditi otpornost kroz životne strategije.</li>
+    <li> Okolina, podrška i zdrav stil života mogu značajno smanjiti rizik.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Poznavanje porodične historije može pomoći u ranom prepoznavanju i prevenciji depresije.</div>
+</div>
+
+<!-- 10. Može li stres izazvati depresiju? -->
+<div id="stres_depresija" class="section">
+  <h2>Može li stres izazvati depresiju?</h2>
+  <p>Stres je čest okidač depresije. Dugotrajni, hronični stres može iscrpiti mentalne resurse i dovesti do razvoja depresivnih simptoma.</p>
+  <ul>
+    <li>📈 Stres uzrokuje promjene u mozgu i hormonskom sistemu koje povećavaju ranjivost na depresiju.</li>
+    <li>⏳ Kombinacija hroničnog stresa i nedostatka podrške povećava rizik od dugotrajnih simptoma.</li>
+    <li> Učenje tehnika za upravljanje stresom može značajno smanjiti šanse za depresiju.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Identifikovanje stresora i aktivno upravljanje njima je ključno za prevenciju depresije.</div>
+</div>
+
+<!-- 11. Da li trauma iz detinjstva može da dovede do depresije kasnije u životu? -->
+<div id="trauma_detinjstvo" class="section">
+  <h2>Da li trauma iz detinjstva može da dovede do depresije kasnije u životu?</h2>
+  <p>Da, trauma u ranom periodu života može povećati rizik od depresije u odrasloj dobi. Traumatska iskustva mijenjaju način na koji mozak obrađuje emocije i stres.</p>
+  <ul>
+    <li> Trauma može uključivati emocionalno zanemarivanje, zlostavljanje ili gubitak bliskih osoba.</li>
+    <li> Može dovesti do dugotrajne osjetljivosti na stres i emocionalne probleme.</li>
+    <li> Rana terapija i podrška mogu značajno smanjiti utjecaj trauma na kasniji život.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Ako osoba prepoznaje da prošle traume utiču na trenutno mentalno stanje, stručna pomoć je vrlo važna.</div>
+</div>
+
+<!-- 12. Kako se postavlja dijagnoza depresije? -->
+<div id="dijagnoza_depresija" class="section">
+  <h2>Kako se postavlja dijagnoza depresije?</h2>
+  <p>Dijagnoza depresije se postavlja kroz kliničku procjenu psihijatra ili psihologa. Proces uključuje razgovor, procjenu simptoma, trajanje i intenzitet problema.</p>
+  <ul>
+    <li>📝 Stručnjak prikuplja detaljne informacije o simptomima, trajanju i utjecaju na život.</li>
+    <li>🧪 Ponekad se rade testovi i upitnici koji pomažu u procjeni težine depresije.</li>
+    <li>🔄 Diferencijalna dijagnoza: važno je isključiti druge medicinske ili psihijatrijske uzroke simptoma.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Samostalno postavljanje dijagnoze nije preporučljivo; stručna procjena je ključna za adekvatno liječenje.</div>
+</div>
+
+<!-- 13. Ko može da dijagnostikuje depresiju? -->
+<div id="ko_diagnostikuje" class="section">
+  <h2>Ko može da dijagnostikuje depresiju?</h2>
+  <p>Dijagnozu depresije mogu postaviti kvalifikovani stručnjaci u mentalnom zdravlju:</p>
+  <ul>
+    <li> Psihijatri – liječnici specijalizovani za mentalno zdravlje; mogu propisivati lijekove.</li>
+    <li> Psiholozi – stručnjaci za procjenu i terapiju depresije putem razgovora i psihoterapije.</li>
+    <li> Savjetnici i psihoterapeuti – nude terapijske metode, ali ne mogu propisivati lijekove.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Prvi korak je često razgovor sa psihologom ili savjetnikom, a po potrebi upućivanje psihijatru za medicinsku procjenu.</div>
+</div>
+
+<!-- 14. Koja je razlika između depresije i anksioznosti? -->
+<div id="depresija_vs_anksioznost" class="section">
+  <h2>Koja je razlika između depresije i anksioznosti?</h2>
+  <p>Depresija i anksioznost su različita stanja, ali se mogu pojaviti zajedno. Razlike su u simptomima i načinu na koji utiču na svakodnevni život.</p>
+  <ul>
+    <li> Depresija – primarno uključuje tugu, gubitak interesa, osjećaj bezvrijednosti i umor.</li>
+    <li> Anksioznost – obilježena stalnom brigom, napetošću, strahom i fizičkim simptomima poput ubrzanog srca.</li>
+    <li>🔄 Često se preklapaju; osoba može imati depresivne i anksiozne simptome istovremeno.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Stručna procjena pomaže u razlikovanju i odabiru odgovarajućeg tretmana.</div>
+</div>
+
+<!-- 15. Da li postoji više vrsta depresije? -->
+<div id="vrste_depresija" class="section">
+  <h2>Da li postoji više vrsta depresije?</h2>
+  <p>Da, depresija se pojavljuje u različitim oblicima, svaki sa specifičnim simptomima i težinom.</p>
+  <ul>
+    <li>🟢 Blaga depresija – simptomi su prisutni, ali osoba može funkcionisati u svakodnevnom životu.</li>
+    <li>🟡 Umjerena depresija – simptomi ometaju svakodnevne aktivnosti i zahtijevaju intervenciju.</li>
+    <li>🔴 Teška depresija – značajno utiče na život, često zahtijeva kombinaciju terapije i lijekova.</li>
+    <li>🔄 Ponekad postoje sezonski ili bipolarni oblici depresije koji zahtijevaju specifičan pristup.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Prepoznavanje vrste depresije pomaže u odabiru najučinkovitijeg tretmana.</div>
+</div>
+
+<!-- 16. Kako se leči depresija? -->
+<div id="lecenje_depresija" class="section">
+  <h2>Kako se leči depresija?</h2>
+  <p>Liječenje depresije uključuje kombinaciju terapije, lijekova i promjena životnog stila. Cilj je smanjiti simptome i pomoći osobi da povrati kvalitet života.</p>
+  <ul>
+    <li> Psihoterapija – razgovorna terapija pomaže u razumijevanju emocija i promjeni negativnih obrazaca mišljenja.</li>
+    <li>💊 Lijekovi – antidepresivi mogu pomoći u regulaciji hemijskih procesa u mozgu kod teže depresije.</li>
+    <li> Promjena životnog stila – fizička aktivnost, zdrav san, pravilna ishrana i socijalna podrška.</li>
+    <li>📈 Praćenje napretka – redovni kontakti sa stručnjakom pomažu u prilagođavanju tretmana.</li>
+  </ul>
+  <div class="tip"><strong>✔️ Savjet:</strong> Najefikasniji rezultati često dolaze iz kombinacije različitih metoda liječenja i kontinuirane podrške.</div>
+</div>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

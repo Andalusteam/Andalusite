@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kemija</title>
+  <style>
+html, body 
+html, body {    
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.side-list {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  width: 230px;
+  padding: 5px 0;
+  overflow-y: auto;
+}
+.left-list { left: 50px; }
+.right-list { right: 50px; }
+
+.side-list a {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 8px;
+  border-radius: 6px;
+  margin: 5px 0;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.side-list a:hover {
+  color: #333;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.center-messages {
+  margin-top: 70px;
+  text-align: center;
+  max-width: 60%;
+}
+
+.help-suggestion-text {
+  text-align: center;
+  font-size: 14.5px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.rectangle-link { display: inline-block; text-decoration: none; }
+.rectangle-box {
+  width: 190px;
+  height: 27px;
+  line-height: 24px;
+  background-color: goldenrod;
+  border: 2px solid goldenrod;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: -17px;
+  margin-left: 200px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.rectangle-box p {
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  margin: 0;
+}
+
+.inline-question-box textarea {
+  resize: none;
+  padding: 9px;
+  font-size: 14px;
+  height: 60px;
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+}
+.inline-question-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0px;
+  width: 100%;
+  max-width: 600px;
+}
+.inline-question-box button {
+  align-self: flex-start;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: goldenrod;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.inline-question-box button:hover { background-color: #daa520; }
+
+.question-box-scrollable {
+  margin-top: 18px;
+  width: 900px;
+  max-width: 100%;
+  min-height: 100px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  padding: 12px;
+}
+.question-box-scrollable p {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 12px 0;
+}
+.question-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 4px;
+}
+.line { flex-grow: 1; }
+.answer-inline { margin-left: 8px; color: #444; font-size: 14px; }
+.answer-btn {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+.delete-btn {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.andalushr {
+  position: absolute;
+  bottom: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 23px;
+  color: black;
+  font-family: sans-serif;
+  z-index: 3;
+  white-space: nowrap;
+}
+.kompjuter {
+  position:absolute;
+  bottom: 620px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 51px;
+  color: goldenrod;
+  font-family: sans-serif;
+  z-index: 3;
+  white-space: nowrap;
+}
+.fixed-note {
+  position: fixed;
+  bottom: 12px;
+  right: 10px;
+  font-size: 0.75rem;
+  color: #555;
+  font-style: italic;
+  z-index: 1000;
+}
+
+
+  </style>
+</head>
+
+    </style>
+</head>
+<body>
+<h1><span class="andalushr">Andalus</span></h1>
+   <h1><span class="kompjuter">Kemija</span></h1>
+    <!-- Left Side List -->
+<!-- Left Column Links -->
+<div class="side-list left-list">
+  <a href="material_chem.html#chemistry_atoms_molecules">Atomi i molekule, jednostavne kemijske tvari</a>
+  <a href="material_chem.html#chemistry_periodic_table">Periodni sustav elemenata</a>
+  <a href="material_chem.html#chemistry_symbols_formulas">Pisanje kemijskih simbola i formula</a>
+  <a href="material_chem.html#chemistry_molecules_ionic">Razlikovanje molekula i ionskih spojeva</a>
+  <a href="material_chem.html#chemistry_reaction_types">Osnovni tipovi kemijskih reakcija</a>
+  <a href="material_chem.html#chemistry_law_mass_conservation">Zakon očuvanja mase</a>
+  <a href="material_chem.html#chemistry_properties">Fizikalna i kemijska svojstva tvari</a>
+  <a href="material_chem.html#chemistry_acids_bases_salts">Razlikovanje kiselina, baza i soli</a>
+  <a href="material_chem.html#chemistry_ph_balance">Osnove pH skale i kiselinsko-bazna ravnoteža</a>
+  <a href="material_chem.html#chemistry_reaction_laws">Zakoni kemijskih reakcija</a>
+  <a href="material_chem.html#chemistry_energy_changes">Energetske promjene u kemijskim reakcijama</a>
+  <a href="material_chem.html#chemistry_compounds_types">Kemijski spojevi i njihove vrste</a>
+  <a href="material_chem.html#chemistry_natural_processes">Osnovni kemijski procesi u prirodi</a>
+</div>
+
+<!-- Right Column Links -->
+<div class="side-list right-list">
+  <a href="material_chem.html#chemistry_atoms_molecules">Atomi i molekule, jednostavne kemijske tvari</a>
+  <a href="material_chem.html#chemistry_periodic_table">Periodni sustav elemenata</a>
+  <a href="material_chem.html#chemistry_symbols_formulas">Pisanje kemijskih simbola i formula</a>
+  <a href="material_chem.html#chemistry_molecules_ionic">Razlikovanje molekula i ionskih spojeva</a>
+  <a href="material_chem.html#chemistry_reaction_types">Osnovni tipovi kemijskih reakcija</a>
+  <a href="material_chem.html#chemistry_law_mass_conservation">Zakon očuvanja mase</a>
+  <a href="material_chem.html#chemistry_properties">Fizikalna i kemijska svojstva tvari</a>
+  <a href="material_chem.html#chemistry_acids_bases_salts">Razlikovanje kiselina, baza i soli</a>
+  <a href="material_chem.html#chemistry_ph_balance">Osnove pH skale i kiselinsko-bazna ravnoteža</a>
+  <a href="material_chem.html#chemistry_reaction_laws">Zakoni kemijskih reakcija</a>
+  <a href="material_chem.html#chemistry_energy_changes">Energetske promjene u kemijskim reakcijama</a>
+  <a href="material_chem.html#chemistry_compounds_types">Kemijski spojevi i njihove vrste</a>
+  <a href="material_chem.html#chemistry_natural_processes">Osnovni kemijski procesi u prirodi</a>
+</div>
+<div class="center-messages">
+    <p class="help-note">Ako pomoć koja vam je potrebna nije navedena, slobodno napišite konkretno pitanje ili zahtjev.</p>
+
+    <div class="inline-question-box">
+      <textarea id="new-question" placeholder="Postavite svoje pitanje ovdje..."></textarea>
+      <button id="add-question">Pošalji</button>
+    </div>
+
+    <p class="help-suggestion-text">Provjeri postoje li pitanja u vezi s softverima na koja bi mogao odgovoriti.</p>
+
+    <div class="rectangle-link">
+      <div class="rectangle-box"><p>Pitanja</p></div>
+    </div>
+  </div>
+
+  <div class="question-box-scrollable" id="questions-list"></div>
+
+  <div class="fixed-note">Više kategorija uskoro dolazi</div>
+<script>
+const isAdmin = true; // set to false if you don’t want delete option
+
+// Load saved questions & answers
+let savedQuestions = JSON.parse(localStorage.getItem("questions")) || [];
+let savedAnswers = JSON.parse(localStorage.getItem("answers")) || {}; // { question: [ { text: "answer", mine: true }, ... ] }
+
+const qList = document.getElementById("questions-list");
+
+// Render questions
+function renderQuestions() {
+  qList.innerHTML = "";
+
+  if (savedQuestions.length === 0) {
+    qList.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
+    return;
+  }
+
+  savedQuestions.forEach((q, index) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "question-wrapper";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "flex-start";
+    wrapper.style.marginBottom = "16px";
+    wrapper.style.padding = "8px";
+    wrapper.style.borderBottom = "1px dashed #ccc";
+
+    // Question text
+    const text = document.createElement("div");
+    text.className = "question-text";
+    text.textContent = q;
+    text.style.marginBottom = "6px";
+    text.style.wordWrap = "break-word";
+    text.style.whiteSpace = "normal";
+    wrapper.appendChild(text);
+
+    // Answers container
+    const ansDiv = document.createElement("div");
+    ansDiv.style.display = "flex";
+    ansDiv.style.alignItems = "center";
+    ansDiv.style.flexWrap = "wrap";
+    ansDiv.style.marginBottom = "6px";
+
+    if (savedAnswers[q] && savedAnswers[q].length > 0) {
+      const label = document.createElement("span");
+      label.textContent = "Odgovori: ";
+      label.style.fontWeight = "bold";
+      label.style.marginRight = "6px";
+      ansDiv.appendChild(label);
+
+      savedAnswers[q].forEach((ansObj, i) => {
+        const ansEl = document.createElement("span");
+        ansEl.textContent = ansObj.text;
+        ansEl.style.color = ansObj.mine ? "green" : "#333";
+        ansEl.style.fontWeight = ansObj.mine ? "bold" : "normal";
+        ansEl.style.marginRight = "6px";
+        ansEl.style.wordWrap = "break-word";
+        ansEl.style.whiteSpace = "normal";
+        ansDiv.appendChild(ansEl);
+
+        if (i < savedAnswers[q].length - 1) {
+          const comma = document.createTextNode(", ");
+          ansDiv.appendChild(comma);
+        }
+      });
+    }
+
+    wrapper.appendChild(ansDiv);
+
+    // Answer button
+    const answerBtn = document.createElement("button");
+    answerBtn.className = "answer-btn";
+    answerBtn.textContent = "Odgovori";
+    answerBtn.onclick = () => {
+      answerBtn.style.display = "none";
+
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "answer-input";
+      input.placeholder = "Upiši odgovor ovdje...";
+      input.style.marginRight = "6px";
+      input.style.flexGrow = "1";
+
+      const sendBtn = document.createElement("button");
+      sendBtn.className = "send-answer-btn";
+      sendBtn.textContent = "Pošalji";
+      sendBtn.onclick = () => {
+        const answer = input.value.trim();
+        if (answer) {
+          if (!savedAnswers[q]) savedAnswers[q] = [];
+          savedAnswers[q].push({ text: answer, mine: true });
+          localStorage.setItem("answers", JSON.stringify(savedAnswers));
+
+          // Insert coin BEFORE re-rendering
+          const coinImg = document.createElement("img");
+          coinImg.src = "Screenshot_68.png"; // your coin image
+          coinImg.style.width = "22px";
+          coinImg.style.height = "22px";
+          coinImg.style.marginLeft = "6px";
+          coinImg.style.transition = "opacity 2s ease-out, transform 2s ease-out";
+
+          // Insert coin **next to the new answer**
+          ansDiv.appendChild(coinImg);
+
+          // Smooth disappearance
+          setTimeout(() => {
+            coinImg.style.opacity = "0";
+            coinImg.style.transform = "scale(0.5)";
+          }, 1500);
+
+          setTimeout(() => coinImg.remove(), 13250);
+
+          // Re-render questions after coin is added
+          setTimeout(renderQuestions, 1503); 
+        }
+      };
+
+      ansDiv.appendChild(input);
+      ansDiv.appendChild(sendBtn);
+    };
+
+    wrapper.appendChild(answerBtn);
+
+    // Delete button for admin
+    if (isAdmin) {
+      const deleteBtn = document.createElement("button");
+      deleteBtn.className = "delete-btn";
+      deleteBtn.textContent = "Obriši";
+      deleteBtn.onclick = () => {
+        if (confirm("Jeste li sigurni da želite obrisati ovo pitanje?")) {
+          savedQuestions.splice(index, 1);
+          delete savedAnswers[q];
+          localStorage.setItem("questions", JSON.stringify(savedQuestions));
+          localStorage.setItem("answers", JSON.stringify(savedAnswers));
+          renderQuestions();
+        }
+      };
+      deleteBtn.style.alignSelf = "flex-end";
+      wrapper.appendChild(deleteBtn);
+    }
+
+    qList.appendChild(wrapper);
+  });
+}
+
+// Add new question
+document.getElementById("add-question").addEventListener("click", () => {
+  const input = document.getElementById("new-question");
+  const question = input.value.trim();
+  if (question) {
+    savedQuestions.push(question);
+    localStorage.setItem("questions", JSON.stringify(savedQuestions));
+    renderQuestions();
+    input.value = "";
+  }
+});
+
+renderQuestions();
+</script>

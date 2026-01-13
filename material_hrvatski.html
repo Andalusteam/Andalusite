@@ -1,0 +1,636 @@
+ <!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hrvatski</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hrvatski</h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('croatian_name')">Ime</button>
+<button onclick="showSection('croatian_verb')">Glagol</button>
+<button onclick="showSection('croatian_adjective')">Pridjev</button>
+<button onclick="showSection('croatian_pronoun')">Zamjenica</button>
+<button onclick="showSection('croatian_syntax_exercises')">Zadaće u sintaksi</button>
+<button onclick="showSection('croatian_oral_written')">Usmena i pisana komunikacija</button>
+<button onclick="showSection('croatian_intro_literature')">Uvođenje u književnost</button>
+<button onclick="showSection('croatian_short_stories')">Kratke priče i bajke</button>
+<button onclick="showSection('croatian_poetry_children')">Poezija za djecu</button>
+<button onclick="showSection('croatian_animal_stories')">Priče o životinjama</button>
+<button onclick="showSection('croatian_articles_prepositions_conjunctions')">Član, prijedlog, veznik</button>
+<button onclick="showSection('croatian_sentence_types')">Vrste rečenica</button>
+<button onclick="showSection('croatian_lit_origins')">Početci književnosti</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('croatian_verb_forms')">Glagolski oblici</button>
+<button onclick="showSection('croatian_cases')">Upotreba padeža</button>
+<button onclick="showSection('croatian_complex_sentences')">Složene rečenice</button>
+<button onclick="showSection('croatian_style_speech')">Stil i govor</button>
+<button onclick="showSection('croatian_medieval_lit')">Književnost srednjeg vijeka</button>
+<button onclick="showSection('croatian_ep_lyric_drama')">Ep, lirika, drama</button>
+<button onclick="showSection('croatian_lit_16_18_century')">Književnost 16.–18. stoljeća</button>
+<button onclick="showSection('croatian_lit_works_authors')">Djela i autori</button>
+<button onclick="showSection('croatian_orthography_punctuation')">Pravopis i interpunkcija</button>
+<button onclick="showSection('croatian_official_language')">Službeni jezik</button>
+<button onclick="showSection('croatian_realism_romanticism')">Realizam i romantizam</button>
+<button onclick="showSection('croatian_lit_forms')">Drama, roman, pjesma</button>
+</nav>
+
+<!-- Ime -->
+<div id="croatian_name" class="section">
+  <h2>Ime (imenica)</h2>
+  <p>Imenica je osnovna vrsta riječi koja označava bića, predmete, pojave, mjesta ili ideje. U hrvatskom jeziku razlikujemo muški, ženski i srednji rod, jedninu i množinu. Imenice se dekliniraju kroz sedam padeža.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Primjeri imenica: stol, kuća, ljubav, Ivan, Zagreb.</li>
+    <li>Padeži: nominativ, genitiv, dativ, akuzativ, vokativ, instrumental, lokativ.</li>
+    <li>Imenice mogu biti vlastita (Ivan, Zagreb) ili zajednička (stol, kuća).</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši 5 imenica iz svog okruženja i odredi njihov rod i broj.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('name_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="name_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> stol (m, j), kuća (ž, j), Ivan (m, j), mačka (ž, j), knjige (ž, m).</p>
+  </div>
+</div>
+
+<!-- Glagol -->
+<div id="croatian_verb" class="section">
+  <h2>Glagol</h2>
+  <p>Glagol označava radnju, stanje ili zbivanje. Glagoli se u hrvatskom jeziku mijenjaju po osobama, vremenima, načinu i broju. Osnovna vremena su sadašnje, prošlo i buduće.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Primjeri: trčati, jesti, pisati, spavati, biti.</li>
+    <li>Način: indikativ (stvarno), imperativ (zapovjedno), kondicional (uvjetno), potencijal (moguće).</li>
+    <li>Glagoli su ključni za pravilno slaganje rečenice i izražavanje vremena.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši glagole “ići” i “pisati” u svim osobama u sadašnjem vremenu.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('verb_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="verb_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> ići – idem, ideš, ide, idemo, idete, idu; pisati – pišem, pišeš, piše, pišemo, pišete, pišu.</p>
+  </div>
+</div>
+
+<!-- Pridjev -->
+<div id="croatian_adjective" class="section">
+  <h2>Pridjev</h2>
+  <p>Pridjev opisuje imenicu i označava osobine, stanje ili pripadnost. U hrvatskom jeziku pridjevi se slažu s imenicom u rodu, broju i padežu.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Primjeri: lijep, crvena, visok, pametan, zanimljiv.</li>
+    <li>Postoji komparacija pridjeva: pozitiv (lijep), komparativ (ljepši), superlativ (najljepši).</li>
+    <li>Pridjevi pomažu u preciznijem opisu i obogaćuju jezik.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši tri pridjeva za opis svog prijatelja i promijeni ih u komparativ i superlativ.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('adjective_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="adjective_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> pametan → pametniji → najpametniji; visok → viši → najviši; lijep → ljepši → najljepši.</p>
+  </div>
+</div>
+
+<!-- Zamjenica -->
+<div id="croatian_pronoun" class="section">
+  <h2>Zamjenica</h2>
+  <p>Zamjenica zamjenjuje imenicu ili pridjev u rečenici kako bi se izbjeglo ponavljanje riječi. U hrvatskom jeziku razlikujemo osobne, pokazne, povratne, upitne i prisvojne zamjenice.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Primjeri: ja, ti, on, ona, ono, mi, vi, oni.</li>
+    <li>Pokazne: ovaj, ona, ono; povratne: se, sebe; upitne: tko, što.</li>
+    <li>Zamjenice pomažu u povezivanju rečenica i sažimanju izraza.</li>
+  </ul>
+  <p><b>Zadatak:</b> Zamijeni imenice u rečenici: “Ivan voli psa. Ivan često šeta psa.” s odgovarajućim zamjenicama.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('pronoun_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="pronoun_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> On voli psa. On često šeta ga.</p>
+  </div>
+</div>
+
+<!-- Zadaće u sintaksi -->
+<div id="croatian_syntax_exercises" class="section">
+  <h2>Zadaće u sintaksi</h2>
+  <p>Sintaksa proučava način na koji se riječi spajaju u rečenice i njihove međusobne odnose. Razumijevanje sintakse ključno je za pravilno izražavanje i pisanje.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Glavne vrste rečenica: jednostavne, složene, upitne, odrične, zapovjedne.</li>
+    <li>Subjekt i predikat su temeljni dijelovi rečenice.</li>
+    <li>Pravilno slaganje riječi pomaže u razumijevanju i preciznom izražavanju misli.</li>
+  </ul>
+  <p><b>Zadatak:</b> Rastavi rečenicu na subjekt i predikat: “Djevojka čita knjigu u knjižnici.”</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('syntax_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="syntax_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Subjekt: Djevojka; Predikat: čita knjigu u knjižnici.</p>
+  </div>
+</div>
+
+<!-- Usmena i pisana komunikacija -->
+<div id="croatian_oral_written" class="section">
+  <h2>Usmena i pisana komunikacija</h2>
+  <p>Usmena komunikacija uključuje razgovor, prezentacije i dijalog, dok pisana komunikacija obuhvaća pisma, sastavke, članke i bilješke. Obje vrste komunikacije razvijaju sposobnost izražavanja i razumijevanja.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Usmeno: važno je intonacija, tempo govora i neverbalna komunikacija.</li>
+    <li>Pisano: važno je pravilno slaganje rečenica, pravopis i stil.</li>
+    <li>Dobra komunikacija jača međuljudske odnose i olakšava učenje i suradnju.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratak sastavak (5-6 rečenica) o svom omiljenom danu i pročitaj ga naglas roditeljima ili prijatelju.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('oral_written_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="oral_written_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> "Danas sam išao u školu, učio sam matematiku i hrvatski. Nakon škole sam se igrao s prijateljima i kasnije čitao knjigu. Bio je to vrlo zabavan i poučan dan."</p>
+  </div>
+</div>
+
+<!-- Uvođenje u književnost -->
+<div id="croatian_intro_literature" class="section">
+  <h2>Uvođenje u književnost</h2>
+  <p>Književnost je umjetnost koja se izražava riječima i pričama, kroz prozu, poeziju i dramu. Proučavanje književnosti razvija maštu, kritičko mišljenje i jezične vještine.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Književni žanrovi: ep, lirika, drama, novela, bajka, priča.</li>
+    <li>Književnost se dijeli prema vremenskim razdobljima i stilu.</li>
+    <li>Proučavanje književnosti omogućuje bolje razumijevanje kulture i povijesti.</li>
+  </ul>
+  <p><b>Zadatak:</b> Pročitaj kratku bajku i napiši tko su glavni likovi i koji je poučak priče.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('intro_lit_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="intro_lit_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Likovi: Snjeguljica, zla maćeha, sedam patuljaka. Poučak: Zlo se ne isplati, a dobrota i hrabrost se nagrađuju.</p>
+  </div>
+</div>
+
+<!-- Kratke priče i bajke -->
+<div id="croatian_short_stories" class="section">
+  <h2>Kratke priče i bajke</h2>
+  <p>Kratke priče i bajke prenose poruke i pouke na jednostavan i razumljiv način. U njima se često javljaju moralne lekcije, fantastični elementi i simbolika.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Bajke su često namijenjene djeci i sadrže jasne pouke.</li>
+    <li>Kratke priče mogu biti realistične, humoristične ili s neobičnim obratom.</li>
+    <li>Simboli u bajkama i pričama često predstavljaju ljudske vrline i mane.</li>
+  </ul>
+  <p><b>Zadatak:</b> Pročitaj priču "Crvenkapica" i napiši tri simbola iz priče i što predstavljaju.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('short_stories_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="short_stories_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Crvenkapica – nevina djevojka; vuk – opasnost/ prevara; šuma – nepoznato i prijetnja.</p>
+  </div>
+</div>
+
+<!-- Poezija za djecu -->
+<div id="croatian_poetry_children" class="section">
+  <h2>Poezija za djecu</h2>
+  <p>Poezija za djecu koristi rimu, ritam i slike kako bi zadržala pažnju i razvijala jezične sposobnosti. Pomaže u učenju riječi, razumijevanju emocija i kreativnosti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Rima pomaže pamćenju i čini stihove zanimljivijima.</li>
+    <li>Djeca kroz poeziju razvijaju izražavanje emocija i osjećaj za jezik.</li>
+    <li>Primjeri: "Večernja pjesma" ili "Mačak u čizmama".</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratku pjesmicu od 4 stiha o svom omiljenom godišnjem dobu koristeći rimu.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('poetry_children_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="poetry_children_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Ljeto sunce sja,  
+    more svima daje dra,  
+    plaža, pijesak, veselje svima,  
+    uživamo svi do kasna vremena.</p>
+  </div>
+</div>
+
+<!-- Priče o životinjama -->
+<div id="croatian_animal_stories" class="section">
+  <h2>Priče o životinjama</h2>
+  <p>Priče o životinjama koriste životinje kao likove koji simboliziraju ljudske osobine. Ove priče prenose pouke i razvijaju moralni osjećaj kod djece.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Životinje su antropomorfizirane – imaju ljudske osobine.</li>
+    <li>Pouke su često jasne: iskrenost, hrabrost, prijateljstvo.</li>
+    <li>Primjeri: "Lisica i grožđe", "Žabac i orao".</li>
+  </ul>
+  <p><b>Zadatak:</b> Pročitaj priču "Lisica i grožđe" i napiši što priča poučava o ljudskoj naravi.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('animal_stories_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="animal_stories_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Priča poučava da ljudi često omalovažavaju ono što ne mogu postići i izgovaraju racionalizacije (kako lisica kaže da grožđe nije zrelo).</p>
+  </div>
+</div>
+
+<!-- Član, prijedlog, veznik -->
+<div id="croatian_articles_prepositions_conjunctions" class="section">
+  <h2>Član, prijedlog, veznik</h2>
+  <p>U hrvatskom jeziku ne postoji član, ali postoje prijedlozi i veznici koji povezuju riječi i rečenice. Prijedlozi označavaju odnos između riječi, a veznici povezuju rečenice ili dijelove rečenice.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Prijedlozi: u, na, pod, iz, prema, s.</li>
+    <li>Veznici: i, ali, nego, ili, da, jer.</li>
+    <li>Pravilna upotreba prijedloga i veznika čini jezik jasnim i razumljivim.</li>
+  </ul>
+  <p><b>Zadatak:</b> Spoji rečenice koristeći odgovarajuće veznike: “Ivan voli čitati. Ana voli crtati. Oni često zajedno provode vrijeme.”</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('articles_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="articles_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Ivan voli čitati, a Ana voli crtati, i oni često zajedno provode vrijeme.</p>
+  </div>
+</div>
+
+<!-- Vrste rečenica -->
+<div id="croatian_sentence_types" class="section">
+  <h2>Vrste rečenica</h2>
+  <p>Rečenice se u hrvatskom jeziku dijele prema svrsi i obliku. Postoje izjavne, upitne, usklične i zapovjedne rečenice. Poznavanje vrste rečenice pomaže u pravilnom pisanju i razumijevanju teksta.</p>
+  <ul>
+    <li>Izjavne: Ivan ide u školu.</li>
+    <li>Upitne: Ide li Ivan u školu?</li>
+    <li>Usklične: Kakav predivan dan!</li>
+    <li>Zapovjedne: Pođi u školu!</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši po jednu rečenicu za svaku vrstu rečenice koristeći svoje ime.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('sentence_types_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="sentence_types_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Izjavna: Ana uči hrvatski.  
+    Upitna: Uči li Ana hrvatski?  
+    Usklična: Bravo, Ana!  
+    Zapovjedna: Ana, pročitaj knjigu!</p>
+  </div>
+</div>
+
+<!-- Početci književnosti -->
+<div id="croatian_lit_origins" class="section">
+  <h2>Početci književnosti</h2>
+  <p>Književnost počinje usmenim pripovijedanjem, bajkama i epovima. U Hrvatskoj su najstariji tekstovi pisani glagoljicom. Proučavanje početaka pomaže razumjeti razvoj jezika i kulture.</p>
+  <ul>
+    <li>Glagoljica – prvo pismo Hrvata.</li>
+    <li>Epska djela – najraniji oblici književnosti.</li>
+    <li>Usmena predaja – način očuvanja povijesti i običaja.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratak sažetak bajke ili priče koju ti je pričala baka ili djed, i istakni glavni događaj.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('lit_origins_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="lit_origins_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Bajka o zlatnoj ribici – glavni događaj: ribič pušta ribicu i ona mu ispunjava želje.</p>
+  </div>
+</div>
+
+<!-- Glagolski oblici -->
+<div id="croatian_verb_forms" class="section">
+  <h2>Glagolski oblici</h2>
+  <p>Glagoli imaju različite oblike: vremena (sadašnje, prošlo, buduće), načine (indikativ, imperativ, kondicional) i osobe. Poznavanje glagolskih oblika pomaže u izražavanju radnje točno u vremenu.</p>
+  <ul>
+    <li>Sadašnje vrijeme: Ja učim, ti učiš.</li>
+    <li>Prošlo vrijeme: Ja sam učio, ti si učio.</li>
+    <li>Buduće vrijeme: Ja ću učiti, ti ćeš učiti.</li>
+    <li>Načini: imperativ – Uči!; kondicional – Učio bih.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši tri rečenice koristeći isti glagol u različitim vremenima.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('verb_forms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="verb_forms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Sadašnje: Učim matematiku.  
+    Prošlo: Učio sam matematiku.  
+    Buduće: Učit ću matematiku.</p>
+  </div>
+</div>
+
+<!-- Upotreba padeža -->
+<div id="croatian_cases" class="section">
+  <h2>Upotreba padeža</h2>
+  <p>Padeži u hrvatskom jeziku označavaju odnose među riječima u rečenici. Postoji sedam padeža: nominativ, genitiv, dativ, akuzativ, vokativ, instrumental i lokativ.</p>
+  <ul>
+    <li>Nominativ – tko/što: Dječak uči.</li>
+    <li>Genitiv – koga/čega: Knjiga dječaka.</li>
+    <li>Dativ – kome/čemu: Dajem knjigu dječaku.</li>
+    <li>Akuzativ – koga/što: Vidim dječaka.</li>
+    <li>Vokativ – oslovljavanje: Dječak!  
+    <li>Instrumental – s kim/čime: S dječakom igram nogomet.</li>
+    <li>Lokativ – o kome/čem: Pričamo o dječaku.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši rečenicu za svaki padež koristeći riječ "mačka".</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('cases_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="cases_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Nominativ: Mačka spava.  
+    Genitiv: Igračka mačke je na stolu.  
+    Dativ: Dajem igračku mački.  
+    Akuzativ: Vidim mačku.  
+    Vokativ: Mačko!  
+    Instrumental: Igram se s mačkom.  
+    Lokativ: Pričamo o mački.</p>
+  </div>
+</div>
+
+<!-- Složene rečenice -->
+<div id="croatian_complex_sentences" class="section">
+  <h2>Složene rečenice</h2>
+  <p>Složene rečenice se sastoje od glavne i jedne ili više zavisnih rečenica. Korištenjem složenih rečenica izražavamo odnos među radnjama i događajima u tekstu.</p>
+  <ul>
+    <li>Primjeri zavisnih rečenica: uzročna, vremenska, svrhovna, uvjetna.</li>
+    <li>Veze: da, jer, kada, ako, iako.</li>
+    <li>Složene rečenice obogaćuju stil i jasnoću izraza.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši jednu složenu rečenicu koja opisuje što radiš nakon škole koristeći veznik "kada".</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('complex_sentences_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="complex_sentences_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Nakon škole igram nogomet s prijateljima kada završim domaću zadaću.</p>
+  </div>
+</div>
+
+<!-- Stil i govor -->
+<div id="croatian_style_speech" class="section">
+  <h2>Stil i govor</h2>
+  <p>Stil i govor u jeziku odnosi se na način izražavanja misli i emocija. Postoje različiti stilovi: književni, publicistički, službeni i razgovorni. Razumijevanje stila pomaže u pravilnom izboru riječi ovisno o situaciji.</p>
+  <ul>
+    <li>Književni stil – bogat opisima i figurativnim izražajima.</li>
+    <li>Publicistički stil – informativan i jasan, koristi se u novinama.</li>
+    <li>Službeni stil – formalan, koristi se u dokumentima.</li>
+    <li>Razgovorni stil – neformalna komunikacija, dijalozi.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši jednu rečenicu u književnom i jednu u razgovornom stilu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('style_speech_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="style_speech_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Književni: Sunce je polako zalazilo iza brda, obasjavajući selo zlatnom svjetlošću.  
+    Razgovorni: Danas je stvarno lijepo vani!</p>
+  </div>
+</div>
+
+<!-- Književnost srednjeg vijeka -->
+<div id="croatian_medieval_lit" class="section">
+  <h2>Književnost srednjeg vijeka</h2>
+  <p>Srednjovjekovna književnost u Hrvatskoj i Europi imala je religiozni i viteški karakter. Najpoznatiji oblici su epovi, legende i kronike. Poznavanje ovog razdoblja pomaže razumjeti povijesni kontekst i kulturne vrijednosti.</p>
+  <ul>
+    <li>Religiozna književnost – molitve, himne, životopisi svetaca.</li>
+    <li>Viteški epovi – opis junačkih djela i bitki.</li>
+    <li>Kronike – zapis povijesnih događaja.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratak sažetak viteškog epa ili legende koju znaš.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('medieval_lit_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="medieval_lit_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Ep o Marku Kraljeviću – Marko spašava selo od neprijatelja, pokazujući hrabrost i čast.</p>
+  </div>
+</div>
+
+<!-- Ep, lirika, drama -->
+<div id="croatian_ep_lyric_drama" class="section">
+  <h2>Ep, lirika, drama</h2>
+  <p>Književni oblici ep, lirika i drama razlikuju se po svrsi i obliku:</p>
+  <ul>
+    <li>Ep – dug pjesnički tekst koji opisuje junačka djela.</li>
+    <li>Lirika – kratki tekst izražava osjećaje i raspoloženja.</li>
+    <li>Drama – tekst za izvođenje, dijalozi i akcija na sceni.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjer jedne rečenice za svaki oblik: ep, lirika, drama.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('ep_lyric_drama_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="ep_lyric_drama_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Ep: Junak hrabro izlazi na bojno polje.  
+    Lirika: Srce mi brže kuca kad mislim na tebe.  
+    Drama: – Uđi! – viknuo je Marko.</p>
+  </div>
+</div>
+
+<!-- Književnost 16.–18. stoljeća -->
+<div id="croatian_lit_16_18_century" class="section">
+  <h2>Književnost 16.–18. stoljeća</h2>
+  <p>Ovo razdoblje obilježeno je renesansom, barokom i klasicizmom. Tekstovi su imali edukativnu, religioznu i estetsku funkciju. Učenjem o ovom razdoblju razumijevamo kulturne i povijesne promjene.</p>
+  <ul>
+    <li>Renesansa – povratak klasičnoj kulturi i ljudskoj individualnosti.</li>
+    <li>Barok – naglašena emocija, bogati opis i ornamentalni stil.</li>
+    <li>Klasicizam – jasnoća, jednostavnost i pravila forme.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odaberi jedan tekst iz ovog razdoblja i napiši kratak sažetak.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('lit_16_18_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="lit_16_18_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Barokna pjesma “Putnik” – opisuje putovanje kroz život s naglaskom na prolaznost i osjećaje.</p>
+  </div>
+</div>
+
+<!-- Djela i autori -->
+<div id="croatian_lit_works_authors" class="section">
+  <h2>Djela i autori</h2>
+  <p>Poznavanje važnih djela i autora hrvatske književnosti pomaže u razumijevanju kulturne povijesti i razvoja jezika. Upoznajemo se s najvažnijim piscima i njihovim stilom.</p>
+  <ul>
+    <li>Marko Marulić – “Judita”, ep o hrabrosti i vjeri.</li>
+    <li>Andrija Kačić Miošić – “Razgovor ugodni naroda slovinskoga”, narodne pjesme i pouke.</li>
+    <li>Petar Zoranić – “Planine”, prvi hrvatski roman.</li>
+  </ul>
+  <p><b>Zadatak:</b> Odaberi jednog autora i napiši par rečenica o njegovom najpoznatijem djelu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('works_authors_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="works_authors_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Marko Marulić – u epu “Judita” opisuje hrabrost Judite koja spašava svoj narod od neprijatelja.</p>
+  </div>
+</div>
+
+<!-- Pravopis i interpunkcija -->
+<div id="croatian_orthography_punctuation" class="section">
+  <h2>Pravopis i interpunkcija</h2>
+  <p>Pravopis i interpunkcija su temelj pravilnog pisanja. Pravopis određuje ispravno korištenje slova i riječi, dok interpunkcija upravlja ritmom i značenjem rečenica.</p>
+  <ul>
+    <li>Pravopis – velika i mala slova, pisanje čestica i skraćenica.</li>
+    <li>Interpunkcija – točka, zarez, upitnik, uskličnik, dvotočje, zagrade.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratki tekst od 3 rečenice i pravilno upotrijebi zarez i točku.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('orthography_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="orthography_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Danas je sunčano, ptice pjevaju, a djeca se igraju u parku.</p>
+  </div>
+</div>
+
+<!-- Službeni jezik -->
+<div id="croatian_official_language" class="section">
+  <h2>Službeni jezik</h2>
+  <p>Službeni jezik u Hrvatskoj je hrvatski. Njegova pravilna upotreba ključna je za komunikaciju u školama, institucijama i medijima.</p>
+  <ul>
+    <li>Pravilna gramatika i pravopis su obavezni u službenim dokumentima.</li>
+    <li>Razumijevanje službenog jezika pomaže u obrazovanju i profesionalnoj komunikaciji.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši pismo upućeno školi koristeći službeni jezik.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('official_language_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="official_language_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Poštovani, molim Vas da mi omogućite pristup knjižnici u popodnevnim satima zbog izrade školskog projekta.</p>
+  </div>
+</div>
+
+<!-- Realizam i romantizam -->
+<div id="croatian_realism_romanticism" class="section">
+  <h2>Realizam i romantizam</h2>
+  <p>Realizam i romantizam su dvije važne književne struje 19. stoljeća:</p>
+  <ul>
+    <li>Romantizam – naglašava emocije, maštu, prirodu i individualizam.</li>
+    <li>Realizam – prikazuje stvarni život, socijalne probleme i svakodnevicu.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši kratki opis događaja u stilu romantizma, a zatim isti događaj u stilu realizma.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('realism_romanticism_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="realism_romanticism_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Romantizam: Zalazak sunca obasjavao je cvjetni vrt, dok su ptice pjevale melodiju ljubavi.  
+    Realizam: Sunce je zalazilo iza kuća, a ljudi su spremali povrće u dvorištima.</p>
+  </div>
+</div>
+
+<!-- Drama, roman, pjesma -->
+<div id="croatian_lit_forms" class="section">
+  <h2>Drama, roman, pjesma</h2>
+  <p>Ovo su tri osnovna književna oblika:</p>
+  <ul>
+    <li>Drama – tekst za izvođenje, dijalozi i scena.</li>
+    <li>Roman – opsežan narativni tekst, likovi i radnja detaljno opisani.</li>
+    <li>Pjesma – ritmičan i često rimujući tekst koji izražava osjećaje.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši primjer kratkog dijaloga, kratki narativni opis i stih.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('lit_forms_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="lit_forms_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b>  
+    Drama: – Gdje si bio? – Kod prijatelja.  
+    Roman: Ana je hodala ulicom, promatrajući ljude koji su žurili na posao.  
+    Pjesma: Sunce sja, ptice pjevaju, dan je novi i vrijedan svega.</p>
+  </div>
+</div>
+
+<!-- Upotreba padeža -->
+<div id="croatian_cases" class="section">
+  <h2>Upotreba padeža</h2>
+  <p>Padeži određuju funkciju riječi u rečenici i ključni su za pravilnu sintaksu u hrvatskom jeziku. Glavni padeži su: nominativ, genitiv, dativ, akuzativ, vokativ, instrumental i lokativ.</p>
+  <ul>
+    <li>Nominativ – subjekt rečenice.</li>
+    <li>Genitiv – pripadnost, odsutnost ili količina.</li>
+    <li>Dativ – označava kome ili čemu.</li>
+    <li>Akuzativ – objekt radnje.</li>
+    <li>Vokativ – dozivanje.</li>
+    <li>Instrumental – sredstvo ili način.</li>
+    <li>Lokativ – mjesto ili tema.</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši rečenicu koristeći nominativ, genitiv i akuzativ.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('cases_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="cases_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Mačka (nominativ) je jela ribu (akuzativ) iz kuće susjeda (genitiv).</p>
+  </div>
+</div>
+
+<!-- Složene rečenice -->
+<div id="croatian_complex_sentences" class="section">
+  <h2>Složene rečenice</h2>
+  <p>Složene rečenice sastoje se od više prostih rečenica povezanim veznicima ili znakovima interpunkcije. Razumijevanje složenih rečenica pomaže u jasnom i preciznom izražavanju misli.</p>
+  <ul>
+    <li>Veznici: i, te, ali, no, jer, dok, kad.</li>
+    <li>Složene rečenice mogu biti koordinirane (jednake) i subordinirane (jedna ovisi o drugoj).</li>
+  </ul>
+  <p><b>Zadatak:</b> Napiši složenu rečenicu koja sadrži koordinaciju i subordinaciju.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('complex_sentences_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="complex_sentences_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Marko je otišao u trgovinu jer mu je ponestalo kruha, i kupio je mlijeko dok je bio tamo.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

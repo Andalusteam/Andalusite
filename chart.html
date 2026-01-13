@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grafikon</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Remove default margin/padding and prevent scrolling inside iframe */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background-color: #1e1e1e;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffa500;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chart-box {
+      width: 660px;
+      height: 400px;
+      padding: 20px;
+      background-color: #2b2b2b;
+      border-radius: 15px;
+      border: 2px solid #ffa500;
+      box-shadow: 0 0 20px #000;
+      box-sizing: border-box;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 355px !important;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-box">
+    <canvas id="gaohChart"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('gaohChart').getContext('2d');
+
+    const now = new Date();
+    const formatTime = date => date.toTimeString().slice(0, 5);
+    const labels = [];
+
+    for (let i = 0; i < 10; i++) {
+      const time = new Date(now.getTime() + i * 60000);
+      labels.push(formatTime(time));
+    }
+
+    const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Questions Posed',
+          data: Array(10).fill(0),
+          borderColor: '#ffa500',
+          backgroundColor: 'rgba(255,165,0,0.1)',
+          tension: 0.3,
+          yAxisID: 'yLeft',
+          pointRadius: 0
+        },
+        {
+          label: 'Questions Answered',
+          data: Array(10).fill(0),
+          borderColor: '#00bfff',
+          backgroundColor: 'rgba(0,191,255,0.1)',
+          tension: 0.3,
+          yAxisID: 'yLeft',
+          pointRadius: 0
+        },
+        {
+          label: 'Points Collected',
+          data: Array(10).fill(0),
+          borderColor: '#32cd32',
+          backgroundColor: 'rgba(50,205,50,0.1)',
+          tension: 0.3,
+          yAxisID: 'yRight',
+          pointRadius: 0
+        }
+      ]
+    };
+
+    const config = {
+      type: 'line',
+      data,
+      options: {
+        responsive: false,
+        animation: false,
+        scales: {
+          x: {
+            ticks: { color: '#aaa' },
+            grid: { color: '#333' }
+          },
+          yLeft: {
+            position: 'left',
+            beginAtZero: true,
+            ticks: {
+              stepSize: 10,
+              color: '#ffa500'
+            },
+            grid: { color: '#333' },
+            title: {
+              display: true,
+              text: 'Questions (Posed & Answered)',
+              color: '#ffa500'
+            }
+          },
+          yRight: {
+            position: 'right',
+            beginAtZero: true,
+            ticks: {
+              stepSize: 50,
+              color: '#32cd32'
+            },
+            grid: {
+              drawOnChartArea: false
+            },
+            title: {
+              display: true,
+              text: 'Points Collected',
+              color: '#32cd32'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#ffa500'
+            }
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>
+</body>
+</html>

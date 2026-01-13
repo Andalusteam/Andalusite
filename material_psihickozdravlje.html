@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Psihičko zdravlje</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emocionalna podrška</h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('prepoznati_psihicko')">Kako prepoznati kada je psihičko zdravlje narušeno?</button>
+<button onclick="showSection('dobro_mentalno')">Što znači imati dobro mentalno zdravlje?</button>
+<button onclick="showSection('briga_blagostanje')">Kako svakodnevno brinuti o svom psihičkom blagostanju?</button>
+<button onclick="showSection('razgovor_dijete')">Kako razgovarati s djetetom o njegovim osjećajima i mislima?</button>
+<button onclick="showSection('pomoc_povuceno')">Kako pomoći nekome tko se povukao, tjeskoban je ili stalno tužan?</button>
+<button onclick="showSection('vaznost_razgovora')">Zašto je važno poticati razgovor o emocijama i mentalnom zdravlju?</button>
+<button onclick="showSection('ravnoteza_skola_posao')">Kako održavati ravnotežu između škole/posla i odmora?</button>
+<button onclick="showSection('pozitivna_slika_sebe')">Kako graditi pozitivnu sliku o sebi i samopouzdanje?</button>
+<button onclick="showSection('sprečiti_stres_problemi')">Kako spriječiti da svakodnevni stres naraste u ozbiljnije probleme?</button>
+<button onclick="showSection('sigurno_okruzenje')">Kako stvoriti okruženje u kojem se ljudi osjećaju sigurno i podržano?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('emocije_obitelj')">Kako se nositi sa emocijama u obitelji?</button>
+<button onclick="showSection('dijete_izrazi_skola')">Kako pomoći djetetu da se izražava emocionalno u školi?</button>
+<button onclick="showSection('dijete_stres_situacije')">Kako pomoći djetetu da izdrži stresne situacije?</button>
+<button onclick="showSection('vaznost_ei_djete')">Zašto je emocionalna inteligencija važna za djetetov razvoj?</button>
+<button onclick="showSection('razvoj_svijesti_djece')">Kako djeca razvijaju emocionalnu svijest?</button>
+<button onclick="showSection('emocije_trauma')">Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume?</button>
+<button onclick="showSection('prepoznati_potrebe_djeteta')">Kako prepoznati emocionalne potrebe djeteta?</button>
+<button onclick="showSection('emocionalna_otpornost')">Kako pomoći djetetu da izgradi emocionalnu otpornost?</button>
+<button onclick="showSection('smanjenje_stresa_djece')">Koji su načini za smanjenje emocionalnog stresa kod djece?</button>
+<button onclick="showSection('motivacija_neg_emocije')">Kako motivirati dijete da se nosi sa negativnim emocijama?</button>
+
+
+</nav>
+
+
+
+<!-- 1. Kako prepoznati kada je psihičko zdravlje narušeno -->
+<div id="prepoznati_psihicko" class="section">
+  <h2>Kako prepoznati kada je psihičko zdravlje narušeno?</h2>
+  <p>Psihičko zdravlje može biti narušeno kada osoba dulje vrijeme osjeća intenzivan stres, tjeskobu, tugu ili gubi interes za aktivnosti koje je ranije voljela. To se može manifestirati kroz promjene raspoloženja, poteškoće u koncentraciji, poremećaje spavanja ili socijalnu izolaciju.</p>
+
+  <h3>Znakovi potencijalnog narušenog psihičkog zdravlja</h3>
+  <ul>
+    <li> <strong>Trajna tuga ili razdražljivost:</strong> Osjećaji tuge, bespomoćnosti ili ljutnje koji traju više tjedana.</li>
+    <li> <strong>Poremećaji spavanja:</strong> Nesanica, prekomjerno spavanje ili noćne more.</li>
+    <li>📉 <strong>Pad energije i motivacije:</strong> Osjećaj umora bez vidljivog razloga i gubitak interesa za hobije ili školu/posao.</li>
+    <li>💭 <strong>Teškoće u koncentraciji:</strong> Nemogućnost fokusiranja na zadatke ili donošenja odluka.</li>
+    <li> <strong>Socijalna izolacija:</strong> Povlačenje iz društvenih aktivnosti i izbjegavanje kontakta s prijateljima i obitelji.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako prepoznate više ovih znakova kod sebe ili bližnjih, važno je potražiti pomoć stručnjaka i otvoreno razgovarati o emocijama.
+  </div>
+</div>
+
+<!-- 2. Što znači imati dobro mentalno zdravlje -->
+<div id="dobro_mentalno" class="section">
+  <h2>Što znači imati dobro mentalno zdravlje?</h2>
+  <p>Dobro mentalno zdravlje znači sposobnost osobe da se nosi sa svakodnevnim stresom, razvija pozitivne međuljudske odnose i ostvaruje osobne ciljeve. To uključuje ravnotežu između emocionalnog, socijalnog i profesionalnog aspekta života.</p>
+
+  <h3>Ključni pokazatelji dobrog mentalnog zdravlja</h3>
+  <ul>
+    <li> <strong>Emocionalna otpornost:</strong> Sposobnost brzog oporavka od negativnih događaja i stresa.</li>
+    <li>💬 <strong>Otvorenost za komunikaciju:</strong> Razgovor o osjećajima s obitelji, prijateljima ili stručnjacima.</li>
+    <li> <strong>Aktivno suočavanje:</strong> Traženje rješenja umjesto povlačenja ili izbjegavanja problema.</li>
+    <li><strong>Ravnoteža života:</strong> Upravljanje vremenom za rad, školu, obitelj, prijatelje i slobodne aktivnosti.</li>
+    <li> <strong>Samosvijest i samoprihvaćanje:</strong> Poznavanje svojih snaga i slabosti te rad na osobnom razvoju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dobro mentalno zdravlje ne znači da nikada ne osjećate tugu ili stres, već da imate alate i podršku za učinkovito suočavanje s izazovima.
+  </div>
+</div>
+
+<!-- 3. Kako svakodnevno brinuti o svom psihičkom blagostanju -->
+<div id="briga_blagostanje" class="section">
+  <h2>Kako svakodnevno brinuti o svom psihičkom blagostanju?</h2>
+  <p>Svakodnevna briga o mentalnom zdravlju pomaže smanjiti stres, povećati energiju i poboljšati opću kvalitetu života. To uključuje male, ali dosljedne navike koje pomažu održavanju ravnoteže između emocija, tijela i uma.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Opuštanje:</strong> Svakodnevno odvojite vrijeme za meditaciju, disanje ili tihe aktivnosti koje smiruju um.</li>
+    <li> <strong>Fizička aktivnost:</strong> Redovno kretanje smanjuje napetost i potiče lučenje hormona sreće.</li>
+    <li>💬 <strong>Razgovor i podrška:</strong> Dijelite osjećaje s pouzdanim osobama, prijateljima ili stručnjacima.</li>
+    <li>📖 <strong>Učenje novih vještina:</strong> Aktivnosti poput hobija ili novih znanja povećavaju samopouzdanje i osjećaj postignuća.</li>
+    <li>🛌 <strong>Briga o snu i prehrani:</strong> Kvalitetan san i uravnotežena prehrana snažno utječu na psihičko blagostanje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Male dnevne navike dugoročno grade otpornost i smanjuju rizik od emocionalnog sagorijevanja.
+  </div>
+</div>
+
+<!-- 4. Kako razgovarati s djetetom o njegovim osjećajima i mislima -->
+<div id="razgovor_dijete" class="section">
+  <h2>Kako razgovarati s djetetom o njegovim osjećajima i mislima?</h2>
+  <p>Otvoreni razgovori o emocijama pomažu djeci razviti samosvijest, izražavanje osjećaja i emocionalnu otpornost. Ključno je slušati bez osude i pružati sigurnost da dijete može slobodno izražavati što osjeća.</p>
+
+  <h3>Praktični savjeti</h3>
+  <ul>
+    <li>💬 <strong>Aktivno slušanje:</strong> Potvrdite djetetove osjećaje riječima poput „Razumijem da ti je teško“.</li>
+    <li>⏱️ <strong>Redovni razgovori:</strong> Postavljajte pitanja o danu i osjećajima, ne samo kada nastanu problemi.</li>
+    <li> <strong>Kreativno izražavanje:</strong> Crtanje, pisanje ili igranje uloga pomažu djeci da izraze osjećaje na siguran način.</li>
+    <li> <strong>Modeliranje zdravih emocija:</strong> Pokazujte kako vi sami konstruktivno rješavate stres i frustracije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Djeca koja uče otvoreno komunicirati o osjećajima razvijaju emocionalnu inteligenciju i bolje se nose s izazovima.
+  </div>
+</div>
+
+<!-- 5. Kako pomoći nekome tko se povukao, tjeskoban je ili stalno tužan -->
+<div id="pomoc_povuceno" class="section">
+  <h2>Kako pomoći nekome tko se povukao, tjeskoban je ili stalno tužan?</h2>
+  <p>Osobe koje se povlače ili su stalno tužne često se bore s unutarnjim stresom ili niskim samopouzdanjem. Podrška i pažnja okoline mogu značajno pomoći u prevladavanju tih osjećaja.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Otvoreni razgovor:</strong> Pitajte kako se osjeća i pokažite da ste tu za njega/nju bez osuđivanja.</li>
+    <li> strong>Prisutnost i podrška:</strong> Ponekad dovoljno biti prisutan i pokazati da nije sam/a.</li>
+    <li>🌱 <strong>Poticanje aktivnosti:</strong> Lagane šetnje, hobi ili socijalne aktivnosti pomažu u prevladavanju izolacije.</li>
+    <li>📞 <strong>Stručna pomoć:</strong> Ako tuga ili tjeskoba traju dulje ili ometaju svakodnevni život, potražite stručnjaka za mentalno zdravlje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Empatija, slušanje i poticanje malih koraka pozitivno utječu na emocionalno stanje osobe.
+  </div>
+</div>
+
+<!-- 6. Zašto je važno poticati razgovor o emocijama i mentalnom zdravlju -->
+<div id="vaznost_razgovora" class="section">
+  <h2>Zašto je važno poticati razgovor o emocijama i mentalnom zdravlju?</h2>
+  <p>Otvoreni razgovori smanjuju stigmu, povećavaju emocionalnu svijest i pomažu u ranom prepoznavanju problema. Razgovor pruža priliku za podršku i dijeljenje strategija za suočavanje sa stresom i emocijama.</p>
+
+  <h3>Prednosti otvorene komunikacije</h3>
+  <ul>
+    <li>💬 <strong>Rana intervencija:</strong> Problemi se lakše rješavaju kada se prepoznaju u ranoj fazi.</li>
+    <li> <strong>Jačanje veza:</strong> Razgovor povećava osjećaj bliskosti i povjerenja među članovima obitelji ili prijateljima.</li>
+    <li> <strong>Razvoj emocionalne inteligencije:</strong> Djeca i odrasli uče prepoznavati, razumjeti i kontrolirati vlastite emocije.</li>
+    <li> <strong>Smanjenje stresa:</strong> Dijeljenje problema i osjećaja smanjuje napetost i olakšava emocionalno pražnjenje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovni razgovori o mentalnom zdravlju grade emocionalnu otpornost i jačaju međuljudske odnose.
+  </div>
+</div>
+
+<!-- 7. Kako održavati ravnotežu između škole/posla i odmora -->
+<div id="ravnoteza_skola_posao" class="section">
+  <h2>Kako održavati ravnotežu između škole/posla i odmora?</h2>
+  <p>Ravnoteža između obaveza i odmora ključna je za dugoročno psihičko zdravlje. Prekomjerni rad ili stres dovode do sagorijevanja, dok redovan odmor i slobodno vrijeme povećavaju produktivnost i zadovoljstvo životom.</p>
+
+  <h3>Strategije za ravnotežu</h3>
+  <ul>
+    <li>📅 <strong>Planiranje aktivnosti:</strong> Uvrstite vrijeme za rad, učenje, ali i za hobije, prijatelje i odmor.</li>
+    <li>⏱️ <strong>Pauze tijekom dana:</strong> Kratke pauze za kretanje, hidrataciju ili meditaciju smanjuju stres i povećavaju fokus.</li>
+    <li>🎯 <strong>Postavljanje granica:</strong> Naučite reći „ne“ zadacima koji prelaze vaše kapacitete.</li>
+    <li> <strong>Redovna tjelovježba:</strong> Pomaže tijelu i umu da se opuste i smanje napetost.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ravnoteža između rada i odmora nije luksuz, već ključ za dugoročno zdravlje i emocionalno blagostanje.
+  </div>
+</div>
+
+<!-- 8. Kako graditi pozitivnu sliku o sebi i samopouzdanje -->
+<div id="pozitivna_slika_sebe" class="section">
+  <h2>Kako graditi pozitivnu sliku o sebi i samopouzdanje?</h2>
+  <p>Pozitivna slika o sebi pomaže u emocionalnoj otpornosti, smanjuje tjeskobu i potiče motivaciju. Samopouzdanje se gradi kroz iskustvo, podršku i prepoznavanje vlastitih vrijednosti i postignuća.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Samopohvala:</strong> Prepoznajte vlastite uspjehe, čak i male korake naprijed.</li>
+    <li>💬 <strong>Pozitivni razgovor:</strong> Izbjegavajte negativno samopouzdanje i zamijenite kritiku konstruktivnim mislima.</li>
+    <li> <strong>Postavljanje realnih ciljeva:</strong> Mala dostignuća grade osjećaj kompetentnosti i samopouzdanja.</li>
+    <li> <strong>Okruženje podrške:</strong> Provodite vrijeme s ljudima koji vas ohrabruju i podržavaju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Samopouzdanje nije nešto s čim se rađamo – ono se kontinuirano gradi kroz iskustvo i pozitivan pristup.
+  </div>
+</div>
+
+<!-- 9. Kako spriječiti da svakodnevni stres naraste u ozbiljnije probleme -->
+<div id="sprečiti_stres_problemi" class="section">
+  <h2>Kako spriječiti da svakodnevni stres naraste u ozbiljnije probleme?</h2>
+  <p>Redovno prepoznavanje i upravljanje stresom ključno je za sprječavanje razvoja kroničnog stresa, anksioznosti ili depresije. Mala, dosljedna svakodnevna rješenja mogu spriječiti da stres eskalira.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>📝 <strong>Dnevnik stresa:</strong> Zapišite što vas opterećuje i kako reagirate, to pomaže u prepoznavanju obrazaca.</li>
+    <li> <strong>Tehnike opuštanja:</strong> Kratke meditacije, disanje i vježbe istezanja smanjuju napetost.</li>
+    <li>⏱️ <strong>Organizacija vremena:</strong> Planiranje zadataka sprječava osjećaj preopterećenosti.</li>
+    <li>💬 <strong>Razgovor i podrška:</strong> Dijeljenje problema s bliskim osobama smanjuje psihički teret.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovito upravljanje stresom i svjesnost vlastitih granica sprječava razvoj ozbiljnijih problema s mentalnim zdravljem.
+  </div>
+</div>
+
+<!-- 10. Kako stvoriti okruženje u kojem se ljudi osjećaju sigurno i podržano -->
+<div id="sigurno_okruzenje" class="section">
+  <h2>Kako stvoriti okruženje u kojem se ljudi osjećaju sigurno i podržano?</h2>
+  <p>Sigurno i podržavajuće okruženje omogućava ljudima da izraze svoje osjećaje, dijele mišljenja i traže pomoć bez straha od osude. To je ključno za razvoj emocionalne stabilnosti, kreativnosti i međuljudskih odnosa.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Otvorena komunikacija:</strong> Potičite izražavanje mišljenja i osjećaja, bez kritike ili ismijavanja.</li>
+    <li> <strong>Empatija i podrška:</strong> Aktivno slušajte i potvrdite tuđe osjećaje, čak i ako se razlikuju od vaših.</li>
+    <li>🏠 <strong>Sigurna fizička i emocionalna atmosfera:</strong> Stvaranje prostora u kojem se ljudi osjećaju dobrodošlo i poštovano.</li>
+    <li>📚 <strong>Obrazovanje o mentalnom zdravlju:</strong> Edukacija članova obitelji, škole ili radnog mjesta o važnosti mentalnog zdravlja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ljudi najbolje funkcioniraju kada osjećaju sigurnost i podršku; investicija u ovakvu atmosferu dugoročno jača zajednicu ili obitelj.
+  </div>
+</div>
+
+<!-- 11. Kako se nositi sa emocijama u obitelji -->
+<div id="emocije_obitelj" class="section">
+  <h2>Kako se nositi sa emocijama u obitelji?</h2>
+  <p>Obitelj je često prvi izvor emocionalne podrške, ali i mjesto gdje stres i konflikti mogu eskalirati. Učenje kako prepoznati i pravilno izraziti emocije unutar obitelji pomaže u smanjenju napetosti i jačanju međuljudskih veza.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Redovni razgovori:</strong> Potičite članove obitelji da otvoreno dijele osjećaje, strahove i frustracije.</li>
+    <li> <strong>Aktivno slušanje:</strong> Slušajte bez prekidanja i prosuđivanja, kako bi svi osjećali da su shvaćeni.</li>
+    <li> <strong>Postavljanje granica:</strong> Jasne i poštovane granice smanjuju sukobe i pružaju osjećaj sigurnosti.</li>
+    <li> <strong>Zajedničke aktivnosti:</strong> Provodite vrijeme zajedno kroz hobije, igre ili obiteljske obroke za jačanje povezanosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Snažno emocionalno povezivanje unutar obitelji gradi otpornost i osjećaj pripadnosti.
+  </div>
+</div>
+
+<!-- 12. Kako pomoći djetetu da se izražava emocionalno u školi -->
+<div id="dijete_izrazi_skola" class="section">
+  <h2>Kako pomoći djetetu da se izražava emocionalno u školi?</h2>
+  <p>Škola može biti izazovno okruženje u kojem djeca često potiskuju osjećaje zbog straha od osude. Pružanje alata i podrške za izražavanje emocija pomaže djetetu da bolje razumije sebe i izgradi zdrave odnose s vršnjacima i učiteljima.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Otvoreni razgovori kod kuće:</strong> Potičite dijete da podijeli iskustva iz škole i osjećaje koje je doživjelo.</li>
+    <li> <strong>Kreativno izražavanje:</strong> Crtanje, pisanje dnevnika ili kratke priče mogu pomoći djetetu da izrazi što osjeća.</li>
+    <li> <strong>Modeliranje ponašanja:</strong> Pokazujte kako se konstruktivno izražavaju emocije u različitim situacijama.</li>
+    <li> <strong>Suradnja s učiteljima:</strong> Informirajte učitelje o emocionalnim potrebama djeteta kako bi mogli pružiti dodatnu podršku.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dijete koje zna kako prepoznati i izraziti osjećaje u školi razvija emocionalnu inteligenciju i bolje se prilagođava socijalnim situacijama.
+  </div>
+</div>
+
+<!-- 13. Kako pomoći djetetu da izdrži stresne situacije -->
+<div id="dijete_stres_situacije" class="section">
+  <h2>Kako pomoći djetetu da izdrži stresne situacije?</h2>
+  <p>Djeca mogu doživjeti stres zbog školskih obaveza, vršnjaka ili promjena u obitelji. Pomoć u razvijanju strategija suočavanja s tim situacijama ključno je za izgradnju emocionalne otpornosti.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Tehnike smirivanja:</strong> Učenje disanja, kratkih meditacija i vizualizacija koje dijete može primijeniti u stresnim trenucima.</li>
+    <li>💬 <strong>Razgovor i potvrda osjećaja:</strong> Pomozite djetetu da imenuje emocije i osjetite empatiju prema njihovim iskustvima.</li>
+    <li>📅 <strong>Organizacija zadataka:</strong> Razbijanje velikih zadataka na manje korake smanjuje osjećaj preopterećenosti.</li>
+    <li> <strong>Fizička aktivnost:</strong> Igra, sport ili kratke šetnje pomažu u otpustu napetosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedna podrška i alati za smirivanje pomažu djetetu da izdrži stres i razvije otpornost.
+  </div>
+</div>
+
+<!-- 14. Zašto je emocionalna inteligencija važna za djetetov razvoj -->
+<div id="vaznost_ei_djete" class="section">
+  <h2>Zašto je emocionalna inteligencija važna za djetetov razvoj?</h2>
+  <p>Emocionalna inteligencija (EI) omogućava djeci da prepoznaju i upravljaju vlastitim emocijama, razumiju osjećaje drugih i grade zdrave međuljudske odnose. Visoka EI povezana je s većim akademskim uspjehom, boljim prijateljstvima i boljom psihičkom otpornosti.</p>
+
+  <h3>Komponente emocionalne inteligencije</h3>
+  <ul>
+    <li>💭 <strong>Samosvijest:</strong> Prepoznavanje vlastitih emocija i njihovih uzroka.</li>
+    <li> <strong>Samoregulacija:</strong> Sposobnost kontroliranja impulsa i emocionalnih reakcija.</li>
+    <li> <strong>Empatija:</strong> Razumijevanje i poštovanje osjećaja drugih.</li>
+    <li>💬 <strong>Socijalne vještine:</strong> Uspješno komuniciranje i rješavanje sukoba.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razvijanje EI od malih nogu pomaže djeci da postanu emocionalno zdrave i otpornije osobe.
+  </div>
+</div>
+
+<!-- 15. Kako djeca razvijaju emocionalnu svijest -->
+<div id="razvoj_svijesti_djece" class="section">
+  <h2>Kako djeca razvijaju emocionalnu svijest?</h2>
+  <p>Emocionalna svijest je sposobnost prepoznavanja i razumijevanja vlastitih emocija. Djeca je razvijaju kroz interakciju s roditeljima, vršnjacima i okolinom, učeći imenovati osjećaje i povezivati ih s ponašanjem.</p>
+
+  <h3>Načini razvoja emocionalne svijesti</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o osjećajima:</strong> Roditelji i učitelji trebaju postavljati pitanja poput „Kako se osjećaš?“ i poticati dijete da imenuje emocije.</li>
+    <li> <strong>Kreativne aktivnosti:</strong> Crtanje, igre uloga i pisanje dnevnika pomažu u izražavanju osjećaja.</li>
+    <li> <strong>Empatijsko modeliranje:</strong> Djeca uče promatrajući kako odrasli upravljaju vlastitim emocijama i reagiraju na tuđe osjećaje.</li>
+    <li>📚 <strong>Priče i knjige:</strong> Priče koje uključuju emocionalne situacije pomažu djeci da razumiju različite emocije i perspektive.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kontinuirana podrška i vođenje kroz emocionalne situacije pomaže djeci da postanu samosvjesna i emocionalno inteligentna.
+  </div>
+</div>
+
+<!-- 16. Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume -->
+<div id="emocije_trauma" class="section">
+  <h2>Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume?</h2>
+  <p>Djeca koja doživljavaju traumu mogu osjećati strah, tugu ili krivnju. Pružanje emocionalne podrške, sigurnosti i rutine pomaže im da se oporave i razviju otpornost.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>🏠 <strong>Stabilno i sigurno okruženje:</strong> Redovita rutina i predvidljivost smanjuju osjećaj nesigurnosti.</li>
+    <li>💬 <strong>Otvoreni razgovori:</strong> Pustite dijete da govori o događaju svojim riječima, bez pritiska.</li>
+    <li> <strong>Tehnike smirivanja:</strong> Disanje, meditacija i fizičke aktivnosti pomažu u smanjenju napetosti.</li>
+    <li>📞 <strong>Stručna pomoć:</strong> Psiholozi i terapeuti mogu pružiti profesionalnu podršku u obradi traume.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strpljenje, prisutnost i stalna podrška ključni su za emocionalni oporavak djeteta.
+  </div>
+</div>
+
+<!-- 17. Kako prepoznati emocionalne potrebe djeteta -->
+<div id="prepoznati_potrebe_djeteta" class="section">
+  <h2>Kako prepoznati emocionalne potrebe djeteta?</h2>
+  <p>Djeca imaju različite emocionalne potrebe, uključujući potrebu za ljubavlju, sigurnošću, pažnjom i priznanjem. Prepoznavanje i zadovoljenje tih potreba pomaže u njihovom zdravom emocionalnom razvoju.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Aktivno slušanje:</strong> Obratite pažnju na riječi, geste i ponašanje djeteta kako biste razumjeli njegove potrebe.</li>
+    <li> <strong>Validacija osjećaja:</strong> Potvrdite što dijete osjeća i pružite empatiju.</li>
+    <li> <strong>Sigurno okruženje:</strong> Stvaranje okruženja u kojem dijete može slobodno izražavati osjećaje.</li>
+    <li>🎯 <strong>Redovni rituali i pažnja:</strong> Kvalitetno provedeno vrijeme pomaže u prepoznavanju potreba i jačanju emocionalne povezanosti.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Djeca čija su emocionalne potrebe prepoznate i zadovoljene razvijaju samopouzdanje i emocionalnu stabilnost.
+  </div>
+</div>
+
+<!-- 18. Kako pomoći djetetu da izgradi emocionalnu otpornost -->
+<div id="emocionalna_otpornost" class="section">
+  <h2>Kako pomoći djetetu da izgradi emocionalnu otpornost?</h2>
+  <p>Emocionalna otpornost omogućava djetetu da se nosi sa stresom, izazovima i neuspjesima bez dugotrajnog emocionalnog narušavanja. Razvija se kroz iskustva, podršku i modeliranje zdravog reagiranja na emocije.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Postavljanje izazova:</strong> Lagani izazovi pomažu djetetu da nauči rješavati probleme i prevladavati prepreke.</li>
+    <li>💬 <strong>Podrška i ohrabrenje:</strong> Pohvalite trud, ne samo rezultat, i pokažite da je u redu pogriješiti.</li>
+    <li> <strong>Modeliranje otpornosti:</strong> Djeca uče promatrajući odrasle kako konstruktivno rješavaju stres i frustraciju.</li>
+    <li> <strong>Tehnike opuštanja:</strong> Disanje, meditacija i fizičke aktivnosti jačaju kontrolu nad emocijama.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedna podrška i vođenje kroz izazove pomaže djeci da razviju otpornost koja traje cijeli život.
+  </div>
+</div>
+
+<!-- 19. Koji su načini za smanjenje emocionalnog stresa kod djece -->
+<div id="smanjenje_stresa_djece" class="section">
+  <h2>Koji su načini za smanjenje emocionalnog stresa kod djece?</h2>
+  <p>Smanjenje emocionalnog stresa kod djece povećava njihovu sposobnost koncentracije, kreativnost i opću dobrobit. To uključuje praktične alate i podršku koja pomaže djeci da se smire i izraze emocije na zdrav način.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li> <strong>Tehnike opuštanja:</strong> Disanje, meditacija, joga ili vođene vizualizacije pomažu djeci da se smire.</li>
+    <li> <strong>Kreativne aktivnosti:</strong> Crtanje, glazba ili igre izražavanja pomažu u oslobađanju napetosti.</li>
+    <li>💬 <strong>Razgovor i potvrda:</strong> Potičite dijete da dijeli osjećaje i misli s odraslima ili vršnjacima koje povjereno doživljava.</li>
+    <li> <strong>Fizička aktivnost:</strong> Redovno kretanje smanjuje napetost i pomaže regulirati emocije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kombinacija podrške, kreativnih i fizičkih aktivnosti pomaže djeci da smanje emocionalni stres i razviju zdrav emocionalni život.
+  </div>
+</div>
+
+<!-- 20. Kako motivirati dijete da se nosi sa negativnim emocijama -->
+<div id="motivacija_neg_emocije" class="section">
+  <h2>Kako motivirati dijete da se nosi sa negativnim emocijama?</h2>
+  <p>Negativne emocije poput tuge, ljutnje ili frustracije su prirodan dio odrastanja. Motiviranje djeteta da konstruktivno reagira pomaže mu da razvije emocionalnu inteligenciju i otpornost.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Razgovor i validacija:</strong> Pokažite djetetu da razumijete njegove osjećaje i da je u redu osjećati se negativno.</li>
+    <li> <strong>Poticanje rješenja:</strong> Pomozite djetetu da razmišlja o načinima kako konstruktivno reagirati i prevladati osjećaje.</li>
+    <li> <strong>Podrška i ohrabrenje:</strong> Pohvalite napore i postignute korake u nošenju s emocijama, ne samo rezultat.</li>
+    <li> <strong>Tehnike smirivanja:</strong> Učite dijete jednostavne vježbe disanja ili opuštanja kada se osjeti preplavljeno.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedna podrška i pozitivno modeliranje pomažu djetetu da razvije vještine za suočavanje s negativnim emocijama i stresom.
+  </div>
+</div>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

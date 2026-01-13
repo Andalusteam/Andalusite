@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomoć</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('sta_je_pomnost')">Što je pomnost i kako se razlikuje od drugih tehnika opuštanja?</button>
+<button onclick="showSection('pocetak_pomnost')">Kako započeti s vježbama pomnosti ako ih nikada prije nisam prakticirao/la?</button>
+<button onclick="showSection('prednosti_pomnost')">Koje su prednosti prakticiranja pomnosti za mentalno zdravlje?</button>
+<button onclick="showSection('vrijeme_pomnost')">Koliko vremena dnevno trebam posvetiti pomnosti da bih osjetio/la promjene?</button>
+<button onclick="showSection('pomnost_stres')">Kako pomnost može pomoći u smanjenju stresa i tjeskobe?</button>
+<button onclick="showSection('pomnost_koncentracija')">Može li pomnost poboljšati moju koncentraciju i produktivnost?</button>
+<button onclick="showSection('pomnost_svakodnevno')">Kako se pomnost koristi u svakodnevnim situacijama poput jedenja ili hodanja?</button>
+<button onclick="showSection('pomnost_odnosi')">Kako pomnost može poboljšati odnose s drugim ljudima?</button>
+<button onclick="showSection('lakse_vjezbe_pomnost')">Koje su najlakše vježbe pomnosti koje mogu odmah isprobati?</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('izazovi_pomnost')">Koji su najčešći izazovi u praksi pomnosti?</button>
+<button onclick="showSection('ometanja_pomnost')">Kako se nositi s ometanjima tijekom vježbi pomnosti?</button>
+<button onclick="showSection('disanje_pomnost')">Koja je uloga disanja u praksi pomnosti?</button>
+<button onclick="showSection('otpor_pomnost')">Kako prevladati otpor prema praksi pomnosti?</button>
+<button onclick="showSection('emocije_pomnost')">Kako pomnost utječe na regulaciju emocija?</button>
+<button onclick="showSection('dugorocne_prednosti_pomnost')">Koje su dugoročne prednosti redovite prakse pomnosti?</button>
+<button onclick="showSection('mentalna_jasnoća')">Kako pomnost može pomoći u poboljšanju mentalne jasnoće?</button>
+<button onclick="showSection('pomnost_depresija')">Može li pomnost smanjiti simptome depresije?</button>
+<button onclick="showSection('pomnost_samosuosjecanje')">Koja je povezanost između pomnosti i samosuosjećanja?</button>
+<button onclick="showSection('pomnost_strah_tjeskoba')">Može li praksa pomnosti pomoći u prevladavanju straha i tjeskobe?</button>
+<button onclick="showSection('emocionalna_otpornost')">Kako pomnost može podržati emocionalnu otpornost u teškim vremenima?</button>
+
+
+</nav>
+
+<!-- 1. Što je pomnost i kako se razlikuje od drugih tehnika opuštanja -->
+<div id="sta_je_pomnost" class="section">
+  <h2>Što je pomnost i kako se razlikuje od drugih tehnika opuštanja?</h2>
+  <p>Pomnost je praksa usmjeravanja pažnje na trenutni trenutak, bez osuđivanja. Za razliku od drugih tehnika opuštanja koje mogu uključivati vođenu vizualizaciju ili progresivno opuštanje mišića, pomnost se fokusira na svjesno promatranje misli, osjećaja i senzacija u tijelu.</p>
+
+  <h3>Ključne karakteristike pomnosti</h3>
+  <ul>
+    <li> <strong>Svjesna prisutnost:</strong> Usredotočite se na sadašnji trenutak, umjesto da brinete o prošlosti ili budućnosti.</li>
+    <li>💭 <strong>Neosuđivanje:</strong> Posmatrajte misli i osjećaje bez etiketiranja ili prosuđivanja.</li>
+    <li> <strong>Prihvaćanje:</strong> Omogućuje prihvaćanje trenutnih iskustava onakvima kakva jesu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pomnost nije samo tehnika za opuštanje, već način življenja koji pomaže u boljem razumijevanju i regulaciji vlastitih misli i emocija.
+  </div>
+</div>
+
+<!-- 2. Kako započeti s vježbama pomnosti ako ih nikada prije nisam prakticirao/la -->
+<div id="pocetak_pomnost" class="section">
+  <h2>Kako započeti s vježbama pomnosti ako ih nikada prije nisam prakticirao/la?</h2>
+  <p>Započeti s pomnosti može biti jednostavno i prilagodljivo svima. Ključno je početi s malim, redovitim koracima i postepeno produbljivati praksu.</p>
+
+  <h3>Praktični savjeti za početnike</h3>
+  <ul>
+    <li>🕒 <strong>Počnite s kratkim vježbama:</strong> 5-10 minuta dnevno je dovoljno za početak.</li>
+    <li> <strong>Fokus na disanju:</strong> Obratite pažnju na ritam disanja i osjetite svaki udisaj i izdisaj.</li>
+    <li>💬 <strong>Vježbe tijela:</strong> Skoncentirajte se na senzacije u tijelu, od glave do pete.</li>
+    <li>📱 <strong>Vođene meditacije:</strong> Isprobajte aplikacije ili audio snimke koje pružaju vođene pomnost vježbe.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljednost je važnija od duljine vježbe – redovno, čak i kratko prakticiranje, donosi vidljive rezultate.
+  </div>
+</div>
+
+<!-- 3. Koje su prednosti prakticiranja pomnosti za mentalno zdravlje -->
+<div id="prednosti_pomnost" class="section">
+  <h2>Koje su prednosti prakticiranja pomnosti za mentalno zdravlje?</h2>
+  <p>Redovna praksa pomnosti donosi brojne mentalne i emocionalne koristi, uključujući smanjenje stresa, povećanje koncentracije i bolje reguliranje emocija.</p>
+
+  <h3>Ključne prednosti</h3>
+  <ul>
+    <li> <strong>Smanjenje stresa:</strong> Svjesno promatranje misli smanjuje automatske reakcije i napetost.</li>
+    <li>💭 <strong>Povećana koncentracija:</strong> Fokusiranje na sadašnji trenutak poboljšava pažnju i učinkovitost u svakodnevnim zadacima.</li>
+    <li> <strong>Bolja regulacija emocija:</strong> Pomnost pomaže u smirivanju impulzivnih reakcija i jača emocionalnu otpornost.</li>
+    <li>🛌 <strong>Poboljšan san:</strong> Smiren um prije spavanja može olakšati uspavljivanje i kvalitetu sna.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pomnost nije magična metoda, ali redovita praksa znatno poboljšava mentalnu jasnoću i emocionalnu stabilnost.
+  </div>
+</div>
+
+<!-- 4. Koliko vremena dnevno trebam posvetiti pomnosti da bih osjetio/la promjene -->
+<div id="vrijeme_pomnost" class="section">
+  <h2>Koliko vremena dnevno trebam posvetiti pomnosti da bih osjetio/la promjene?</h2>
+  <p>Vrijeme potrebno za osjećanje benefita pomnosti može varirati, ali dosljednost je ključna. Čak i kratke, svakodnevne vježbe mogu donijeti značajne promjene tijekom nekoliko tjedana.</p>
+
+  <h3>Preporuke</h3>
+  <ul>
+    <li>🕒 <strong>Početnici:</strong> 5-10 minuta dnevno, postupno povećavajući na 20-30 minuta.</li>
+    <li>📆 <strong>Redovitost:</strong> Bolje je vježbati 5 minuta svaki dan nego 1 sat jednom tjedno.</li>
+    <li> <strong>Integracija u rutinu:</strong> Povežite praksu s nekom svakodnevnom aktivnošću poput jutarnje kave ili večernje šetnje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ne fokusirajte se na vrijeme, već na kvalitetu pažnje i prisutnosti tijekom vježbe.
+  </div>
+</div>
+
+<!-- 5. Kako pomnost može pomoći u smanjenju stresa i tjeskobe -->
+<div id="pomnost_stres" class="section">
+  <h2>Kako pomnost može pomoći u smanjenju stresa i tjeskobe?</h2>
+  <p>Pomnost pomaže prepoznati misli i osjećaje koji izazivaju stres, omogućujući smireniju reakciju umjesto impulzivnog reagiranja. Redovna praksa smanjuje anksiozne misli i pomaže u opuštanju tijela i uma.</p>
+
+  <h3>Načini djelovanja</h3>
+  <ul>
+    <li>💭 <strong>Prepoznavanje misli:</strong> Svjesno primjećivanje tjeskobnih misli smanjuje njihovu snagu.</li>
+    <li> <strong>Smirivanje tijela:</strong> Fokus na disanju i senzacijama tijela smanjuje fizičke znakove stresa poput napetosti mišića.</li>
+    <li> <strong>Neosuđivanje:</strong> Prihvaćanje misli i osjećaja bez kritike smanjuje emocionalni teret.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pomnost ne uklanja stres izvana, ali mijenja način kako reagiramo na njega, što dugoročno smanjuje anksioznost.
+  </div>
+</div>
+
+<!-- 6. Može li pomnost poboljšati moju koncentraciju i produktivnost -->
+<div id="pomnost_koncentracija" class="section">
+  <h2>Može li pomnost poboljšati moju koncentraciju i produktivnost?</h2>
+  <p>Da! Pomnost trenira mozak da se fokusira na jedan zadatak u sadašnjem trenutku, smanjujući distrakcije i multitasking koji iscrpljuju pažnju.</p>
+
+  <h3>Načini poboljšanja koncentracije</h3>
+  <ul>
+    <li>💻 <strong>Fokusirane pauze:</strong> Kratke vježbe pomnosti tijekom rada povećavaju mentalnu jasnoću i fokus.</li>
+    <li>📋 <strong>Svjesno obavljanje zadataka:</strong> Potpuno se posvetite jednoj aktivnosti umjesto da radite više zadataka istovremeno.</li>
+    <li> <strong>Opuštanje prije rada:</strong> Pomnost smanjuje mentalni nered i priprema mozak za fokusirano djelovanje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovna praksa pomaže smanjiti „mentalni šum“ i poboljšava efikasnost u svakodnevnim zadacima.
+  </div>
+</div>
+
+<!-- 7. Kako se pomnost koristi u svakodnevnim situacijama poput jedenja ili hodanja -->
+<div id="pomnost_svakodnevno" class="section">
+  <h2>Kako se pomnost koristi u svakodnevnim situacijama poput jedenja ili hodanja?</h2>
+  <p>Pomnost nije samo sjedilačka praksa – može se primijeniti u svim aktivnostima. Svjesno jedenje ili hodanje povećava osjećaj zadovoljstva i prisutnosti u sadašnjem trenutku.</p>
+
+  <h3>Primjeri primjene</h3>
+  <ul>
+    <li>🥗 <strong>Svjesno jedenje:</strong> Obratite pažnju na okus, miris i teksturu hrane, jedite polako i bez distrakcija.</li>
+    <li> <strong>Hodanjem s pažnjom:</strong> Osjetite dodir stopala o tlo, ritam disanja i zvukove oko sebe.</li>
+    <li>💧 <strong>Svjesne rutine:</strong> Pranje ruku, tuširanje ili pospremanje mogu postati meditativne aktivnosti ako im se pristupi s punom pažnjom.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Integriranjem pomnosti u svakodnevne aktivnosti, praksa postaje prirodan i neprimjetan dio života.
+  </div>
+</div>
+
+<!-- 8. Kako pomnost može poboljšati odnose s drugim ljudima -->
+<div id="pomnost_odnosi" class="section">
+  <h2>Kako pomnost može poboljšati odnose s drugim ljudima?</h2>
+  <p>Pomnost povećava empatiju, sposobnost slušanja i smanjuje impulzivne reakcije. Redovna praksa pomaže razumjeti tuđe osjećaje i reagirati svjesno, što vodi do kvalitetnijih i skladnijih odnosa.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💬 <strong>Aktivno slušanje:</strong> Fokusirajte se na sugovornika bez prekidanja ili prosuđivanja.</li>
+    <li> <strong>Empatija:</strong> Svjesno primjećivanje emocija drugih pomaže u razumijevanju njihovih potreba.</li>
+    <li> <strong>Smirene reakcije:</strong> Pomnost pomaže kontrolirati impulzivne reakcije u konfliktima.</li>
+    <li> <strong>Prisustvo u komunikaciji:</strong> Dajte potpunu pažnju osobi s kojom razgovarate, umjesto da razmišljate o sljedećem odgovoru.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovna praksa pomnosti može dugoročno poboljšati emocionalnu povezanost i kvalitetu odnosa.
+  </div>
+</div>
+
+<!-- 9. Koje su najlakše vježbe pomnosti koje mogu odmah isprobati -->
+<div id="lakse_vjezbe_pomnost" class="section">
+  <h2>Koje su najlakše vježbe pomnosti koje mogu odmah isprobati?</h2>
+  <p>Početnici mogu odmah primijeniti jednostavne vježbe koje ne zahtijevaju posebnu opremu ni iskustvo. One pomažu razviti pažnju i prisutnost u svakodnevnom životu.</p>
+
+  <h3>Primjeri jednostavnih vježbi</h3>
+  <ul>
+    <li> <strong>Pažljivo disanje:</strong> Usredotočite se na udisaj i izdisaj, brojite disanje ili osjećajte protok zraka kroz nos.</li>
+    <li> <strong>Skeniranje tijela:</strong> Polako "prođite" kroz tijelo, obraćajući pažnju na senzacije u svakom dijelu.</li>
+    <li>🍽️ <strong>Svjesno jedenje:</strong> Jedite polako, obraćajući pažnju na okus, teksturu i miris hrane.</li>
+    <li><strong>Hodanjem u pomnosti:</strong> Osjetite dodir stopala o tlo i ritam koraka dok hodate.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Počnite s jednom ili dvije vježbe dnevno i postupno produbljujte praksu.
+  </div>
+</div>
+
+<!-- 10. Koji su najčešći izazovi u praksi pomnosti -->
+<div id="izazovi_pomnost" class="section">
+  <h2>Koji su najčešći izazovi u praksi pomnosti?</h2>
+  <p>Praksa pomnosti može biti izazovna zbog nemira uma, dosade, ili osjećaja "pogrešnog" prakticiranja. Prepoznavanje i razumijevanje tih izazova pomaže ih prevladati i ustrajati u praksi.</p>
+
+  <h3>Najčešći izazovi</h3>
+  <ul>
+    <li>💭 <strong>Skakanje misli:</strong> Um stalno lutajući i ometanje koncentracije.</li>
+    <li>⏳ <strong>Nestrpljenje:</strong> Očekivanje trenutnih rezultata i frustracija ako se promjene ne događaju odmah.</li>
+    <li> <strong>Umor ili dosada:</strong> Mogu se pojaviti tijekom dužih sjednica meditacije.</li>
+    <li>❌ <strong>Samoprocjena:</strong> Kritiziranje vlastitih sposobnosti i "pogrešnog" prakticiranja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Svi izazovi su normalni; važno je prepoznati ih bez osuđivanja i nastaviti praksu.
+  </div>
+</div>
+
+<!-- 11. Kako se nositi s ometanjima tijekom vježbi pomnosti -->
+<div id="ometanja_pomnost" class="section">
+  <h2>Kako se nositi s ometanjima tijekom vježbi pomnosti?</h2>
+  <p>Ometanja su prirodan dio svakog treninga pažnje. Ključno je uočiti ometanje, prihvatiti ga i nježno vratiti fokus na odabranu vježbu.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💭 <strong>Primijetite misli:</strong> Ne pokušavajte ih ukloniti, samo ih svjesno promatrajte.</li>
+    <li> <strong>Vraćanje fokusa:</strong> Lagano vratite pažnju na disanje, tijelo ili aktivnost.</li>
+    <li>⏳ <strong>Krute granice:</strong> Postavite vremenski okvir i mjesto za vježbu bez ometanja (telefon, buka).</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Svjesno suočavanje s ometanjima jača sposobnost koncentracije i strpljenja.
+  </div>
+</div>
+
+<!-- 12. Koja je uloga disanja u praksi pomnosti -->
+<div id="disanje_pomnost" class="section">
+  <h2>Koja je uloga disanja u praksi pomnosti?</h2>
+  <p>Disanje je osnovni fokus pomnosti jer povezuje tijelo i um. Svjesno disanje pomaže smiriti um, regulirati emocije i povećati koncentraciju.</p>
+
+  <h3>Ključne koristi</h3>
+  <ul>
+    <li> <strong>Smirivanje uma:</strong> Fokus na ritam disanja smanjuje umne distrakcije.</li>
+    <li> <strong>Regulacija stresa:</strong> Duboko i svjesno disanje smanjuje napetost u tijelu.</li>
+    <li>💭 <strong>Trening pažnje:</strong> Svaki udisaj i izdisaj pruža anker za prisutnost u sadašnjem trenutku.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Disanje je uvijek dostupno i lako integrirano u svakodnevne aktivnosti za trenutačno smirivanje.
+  </div>
+</div>
+
+<!-- 13. Kako prevladati otpor prema praksi pomnosti -->
+<div id="otpor_pomnost" class="section">
+  <h2>Kako prevladati otpor prema praksi pomnosti?</h2>
+  <p>Otpor prema pomnosti često dolazi iz straha od suočavanja sa sobom, dosade ili osjećaja da „nemamo vremena“. Prepoznavanje tog otpora i lagani pristup pomažu u prevladavanju.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li> <strong>Mali koraci:</strong> Počnite s kratkim vježbama od 2-5 minuta.</li>
+    <li>💭 <strong>Prihvaćanje otpora:</strong> Primijetite osjećaje otpora bez osuđivanja i vratite fokus na praksu.</li>
+    <li>⏳ <strong>Integracija u rutinu:</strong> Pronađite trenutke u danu kada je lakše prakticirati (jutro, prije spavanja).</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljednost, strpljenje i prihvaćanje otpora pomažu razviti trajnu praksu pomnosti.
+  </div>
+</div>
+
+<!-- 14. Kako pomnost utječe na regulaciju emocija -->
+<div id="emocije_pomnost" class="section">
+  <h2>Kako pomnost utječe na regulaciju emocija?</h2>
+  <p>Pomnost pomaže prepoznati i razumjeti emocije u trenutku dok se javljaju, što smanjuje impulzivne reakcije i povećava emocionalnu kontrolu.</p>
+
+  <h3>Načini djelovanja</h3>
+  <ul>
+    <li>💭 <strong>Prepoznavanje emocija:</strong> Svjesno imenujte emocije bez prosuđivanja.</li>
+    <li> <strong>Odmak od impulsa:</strong> Pauza između emocije i reakcije pomaže u donošenju svjesnih odluka.</li>
+    <li> <strong>Prihvaćanje:</strong> Prihvaćanje osjećaja smanjuje unutarnji otpor i emocionalnu napetost.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovna praksa pomaže u dugoročnom smanjenju reaktivnosti i povećanju emocionalne stabilnosti.
+  </div>
+</div>
+
+<!-- 15. Koje su dugoročne prednosti redovite prakse pomnosti -->
+<div id="dugorocne_prednosti_pomnost" class="section">
+  <h2>Koje su dugoročne prednosti redovite prakse pomnosti?</h2>
+  <p>Redovita praksa pomnosti donosi trajne promjene u mozgu i ponašanju, poboljšavajući emocionalnu otpornost, koncentraciju i kvalitetu života.</p>
+
+  <h3>Dugoročne koristi</h3>
+  <ul>
+    <li> <strong>Povećana emocionalna otpornost:</strong> Bolje se nosite sa stresom i izazovima.</li>
+    <li>💭 <strong>Poboljšana pažnja i koncentracija:</strong> Sposobnost fokusiranja na zadatke raste s vremenom.</li>
+    <li> <strong>Veća emocionalna stabilnost:</strong> Smanjena reaktivnost i bolje reguliranje osjećaja.</li>
+    <li> <strong>Dublja povezanost s drugima:</strong> Empatija i socijalna inteligencija se poboljšavaju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dugoročna predanost vodi do trajnih promjena u mentalnom zdravlju i kvaliteti života.
+  </div>
+</div>
+
+<!-- 16. Kako pomnost može pomoći u poboljšanju mentalne jasnoće -->
+<div id="mentalna_jasnoća" class="section">
+  <h2>Kako pomnost može pomoći u poboljšanju mentalne jasnoće?</h2>
+  <p>Pomnost smanjuje „mentalni šum“, pomaže filtrirati nepotrebne misli i povećava fokus. To vodi do bolje odluke, učinkovitijeg rješavanja problema i osjećaja jasnoće.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💭 <strong>Svjesno opažanje misli:</strong> Promatrajte misli bez identifikacije s njima.</li>
+    <li> <strong>Fokus na sadašnji trenutak:</strong> Pomaže u smanjenju distrakcija i mentalnog preopterećenja.</li>
+    <li> <strong>Redovita praksa:</strong> Svakodnevne kratke vježbe povećavaju mentalnu jasnoću tijekom vremena.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Mentalna jasnoća nije trenutna; redovita praksa postupno „čisti“ um od nepotrebnih misli.
+  </div>
+</div>
+
+<!-- 17. Može li pomnost smanjiti simptome depresije -->
+<div id="pomnost_depresija" class="section">
+  <h2>Može li pomnost smanjiti simptome depresije?</h2>
+  <p>Istraživanja pokazuju da redovita praksa pomnosti može smanjiti simptome depresije, smanjiti negativne misli i povećati osjećaj emocionalne dobrobiti.</p>
+
+  <h3>Načini djelovanja</h3>
+  <ul>
+    <li>💭 <strong>Promatranje misli:</strong> Identifikacija negativnih obrazaca bez prosuđivanja smanjuje njihovu snagu.</li>
+    <li> <strong>Fokus na sadašnji trenutak:</strong> Smanjuje ruminaciju i prekomjerno razmišljanje o prošlosti.</li>
+    <li> <strong>Razvijanje samosuosjećanja:</strong> Pomaže prihvatiti vlastite emocije i greške s manje kritike.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pomnost nije zamjena za profesionalnu terapiju, ali može biti vrijedan dodatak u upravljanju simptomima depresije.
+  </div>
+</div>
+
+<!-- 18. Koja je povezanost između pomnosti i samosuosjećanja -->
+<div id="pomnost_samosuosjecanje" class="section">
+  <h2>Koja je povezanost između pomnosti i samosuosjećanja?</h2>
+  <p>Pomnost pomaže razviti samosuosjećanje jer omogućava prihvaćanje vlastitih misli i osjećaja bez kritike. Ovo smanjuje samoprocjenu, povećava emocionalnu otpornost i potiče ljubaznost prema sebi.</p>
+
+  <h3>Praktične strategije</h3>
+  <ul>
+    <li>💭 <strong>Prepoznavanje unutarnjeg dijaloga:</strong> Svjesno uočite samokritične misli i zamijenite ih podržavajućim mislima.</li>
+    <li> <strong>Vježbe ljubaznosti prema sebi:</strong> Ponavljanje afirmacija ili vođene meditacije usmjerene na samoprihvaćanje.</li>
+    <li> <strong>Integracija u svakodnevni život:</strong> Primjena samosuosjećanja u situacijama stresa ili neuspjeha.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razvijanjem samosuosjećanja putem pomnosti povećava se emocionalna otpornost i smanjuje stres u svakodnevnom životu.
+  </div>
+</div>
+
+<!-- 19. Može li praksa pomnosti pomoći u prevladavanju straha i tjeskobe -->
+<div id="pomnost_strah_tjeskoba" class="section">
+  <h2>Može li praksa pomnosti pomoći u prevladavanju straha i tjeskobe?</h2>
+  <p>Da, redovita praksa pomnosti može značajno smanjiti osjećaj tjeskobe i pomoći u upravljanju strahom. Fokusiranje na sadašnji trenutak smanjuje prekomjerno brinjenje o budućnosti, a svjesno promatranje misli sprječava ruminaciju.</p>
+
+  <h3>Načini djelovanja</h3>
+  <ul>
+    <li>💭 <strong>Promatranje misli i emocija:</strong> Umjesto da se borite protiv straha, uočite ga i priznajte njegovo postojanje.</li>
+    <li> <strong>Fokus na sadašnji trenutak:</strong> Svjesna pažnja na tijelo, disanje ili okolinu smanjuje „mentalni vrtlog“ tjeskobe.</li>
+    <li> <strong>Razvijanje strpljenja i samosuosjećanja:</strong> Prihvaćanje vlastitih reakcija umjesto kritike pomaže smanjiti emocionalni teret.</li>
+    <li>⏳ <strong>Postupno izlaganje:</strong> Pomnost pomaže svjesno suočavanje s neugodnim situacijama bez preplavljivanja emocijama.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pomnost nije instant rješenje, ali redovitim praksama strah i tjeskoba postaju lakše podnošljivi i manje intenzivni.
+  </div>
+</div>
+
+<!-- 20. Kako pomnost može podržati emocionalnu otpornost u teškim vremenima -->
+<div id="emocionalna_otpornost" class="section">
+  <h2>Kako pomnost može podržati emocionalnu otpornost u teškim vremenima?</h2>
+  <p>Pomnost jača emocionalnu otpornost jer trenira um da ostane prisutan, smiren i svjestan svojih reakcija čak i u stresnim i izazovnim situacijama. Ovo omogućuje bolje suočavanje s izazovima i brže oporavak od emocionalnih udara.</p>
+
+  <h3>Načini djelovanja</h3>
+  <ul>
+    <li>💭 <strong>Svjesno prepoznavanje emocija:</strong> Prepoznavanje i prihvaćanje osjećaja bez osude smanjuje emocionalnu napetost.</li>
+    <li> <strong>Regulacija reakcija:</strong> Pomnost pomaže napraviti „pauzu“ između emocije i reakcije, što omogućuje svjesno i promišljeno djelovanje.</li>
+    <li> <strong>Razvijanje unutarnje stabilnosti:</strong> Redovita praksa povećava sposobnost održavanja smirenosti i fokusa pod pritiskom.</li>
+    <li> <strong>Podrška empatijom:</strong> Svjesna prisutnost omogućuje bolju povezanost s drugima i razumijevanje, što dodatno jača emocionalnu otpornost kroz socijalnu podršku.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Uključivanjem pomnosti u svakodnevni život, osoba razvija trajnu emocionalnu otpornost koja pomaže u suočavanju s nesigurnošću, gubicima i životnim izazovima.
+  </div>
+</div>
+
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Povijest Kviz</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .side-list {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 1.25rem;
+      width: 200px;
+      padding: 5px 0;
+    }
+
+    .left-list {
+      left: 50px;
+    }
+
+    .right-list {
+      right: 50px;
+    }
+
+    .side-list a {
+      text-decoration: none;
+      color: gray;
+      font-weight: bold;
+      text-align: center;
+      padding: 6px;
+      margin: 2px 0;
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #quiz-container {
+      margin-top: 60px;
+      background: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .answer-btn {
+      display: block;
+      background: #eee;
+      border: none;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .answer-btn:hover {
+      background: #ddd;
+    }
+
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #next-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Side List -->
+  <div class="side-list left-list">
+    <a href="#">Prvi ljudi i prapovijest</a>
+    <a href="#">Stari Egipat</a>
+    <a href="#">Mezopotamija</a>
+    <a href="#">Stari Grci</a>
+    <a href="#">Stari Rim</a>
+    <a href="#">Propast Rimskog Carstva</a>
+    <a href="#">Širenje kršćanstva i islam</a>
+    <a href="#">Franačka, Bizant</a>
+    <a href="#">Hrvatska u srednjem vijeku</a>
+    <a href="#">Feudalizam i križarski ratovi</a>
+    <a href="#">Renesansa</a>
+  </div>
+
+  <!-- Right Side List -->
+  <div class="side-list right-list">
+    <a href="#">Velika geografska otkrića</a>
+    <a href="#">Reformacija</a>
+    <a href="#">Apsolutizam</a>
+    <a href="#">Habsburgovci i Osmanlije</a>
+    <a href="#">Industrijska revolucija</a>
+    <a href="#">Francuska revolucija</a>
+    <a href="#">Nacionalni pokreti</a>
+    <a href="#">Svjetski ratovi</a>
+    <a href="#">Hladni rat</a>
+    <a href="#">Hrvatska 21. st.</a>
+    <a href="#">Ekonomska povijest</a>
+  </div>
+
+  <!-- Quiz -->
+  <div id="quiz-container">
+    <div class="question" id="question">Loading...</div>
+    <div id="answer-buttons"></div>
+    <button id="next-btn">Next</button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Koji je glavni grad starog Egipta?",
+        answers: [
+          { text: "Teba", correct: true },
+          { text: "Atena", correct: false },
+          { text: "Rim", correct: false },
+          { text: "Bagdad", correct: false }
+        ]
+      },
+      {
+        question: "Koji je narod stvorio pismo klinasto?",
+        answers: [
+          { text: "Egipćani", correct: false },
+          { text: "Mezopotamci", correct: true },
+          { text: "Grci", correct: false },
+          { text: "Rimljani", correct: false }
+        ]
+      },
+      {
+        question: "Kada je počeo Prvi svjetski rat?",
+        answers: [
+          { text: "1914.", correct: true },
+          { text: "1939.", correct: false },
+          { text: "1920.", correct: false },
+          { text: "1918.", correct: false }
+        ]
+      }
+    ];
+
+    const questionElement = document.getElementById("question");
+    const answerButtons = document.getElementById("answer-buttons");
+    const nextButton = document.getElementById("next-btn");
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function startQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      nextButton.innerText = "Dalje";
+      showQuestion();
+    }
+
+    function showQuestion() {
+      resetState();
+      let currentQuestion = questions[currentQuestionIndex];
+      questionElement.innerText = currentQuestion.question;
+
+      currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerText = answer.text;
+        button.classList.add("answer-btn");
+        if (answer.correct) {
+          button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+        answerButtons.appendChild(button);
+      });
+    }
+
+    function resetState() {
+      nextButton.style.display = "none";
+      while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+      }
+    }
+
+    function selectAnswer(e) {
+      const selectedBtn = e.target;
+      const isCorrect = selectedBtn.dataset.correct === "true";
+      if (isCorrect) {
+        selectedBtn.style.backgroundColor = "lightgreen";
+        score++;
+      } else {
+        selectedBtn.style.backgroundColor = "salmon";
+      }
+
+      Array.from(answerButtons.children).forEach(button => {
+        button.disabled = true;
+        if (button.dataset.correct === "true") {
+          button.style.backgroundColor = "lightgreen";
+        }
+      });
+
+      nextButton.style.display = "inline-block";
+    }
+
+    function showScore() {
+      resetState();
+      questionElement.innerText = `Kviz gotov! Osvojio si ${score} od ${questions.length} bodova.`;
+      nextButton.innerText = "Pokušaj ponovno";
+      nextButton.style.display = "inline-block";
+    }
+
+    function handleNextButton() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        showQuestion();
+      } else {
+        showScore();
+      }
+    }
+
+    nextButton.addEventListener("click", () => {
+      if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+      } else {
+        startQuiz();
+      }
+    });
+
+    startQuiz();
+  </script>
+
+</body>
+</html>

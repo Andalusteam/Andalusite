@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o softveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fizika</h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('physics_basic_concepts')">Osnovni pojmovi u fizici</button>
+<button onclick="showSection('physics_quantities_units')">Razlikovanje fizičkih veličina i jedinica</button>
+<button onclick="showSection('physics_measurement_instruments')">Mjerenje i instrumenti u fizici</button>
+<button onclick="showSection('physics_motion_basics')">Osnove gibanja</button>
+<button onclick="showSection('physics_types_of_motion')">Vrste gibanja</button>
+<button onclick="showSection('physics_force_effect')">Sila i njezin učinak</button>
+<button onclick="showSection('physics_energy_types')">Energija i njene vrste</button>
+<button onclick="showSection('physics_energy_conservation')">Zakon očuvanja energije</button>
+<button onclick="showSection('physics_uniform_acceleration')">Ravnomjerno ubrzano gibanje</button>
+<button onclick="showSection('physics_gravity_motion_laws')">Gravitacija i zakoni gibanja</button>
+<button onclick="showSection('physics_motion_under_force')">Kretanje predmeta pod utjecajem sile</button>
+<button onclick="showSection('physics_forces_daily_life')">Sile u svakodnevnom životu</button>
+<button onclick="showSection('physics_friction_elasticity_weight')">Trenje, elastičnost, težina</button>
+<button onclick="showSection('physics_newton_laws')">Newtonovi zakoni gibanja</button>
+<button onclick="showSection('physics_electric_charge_field')">Električni naboj, električno polje</button>
+<button onclick="showSection('physics_electric_potential_energy')">Električni potencijal i električna energija</button>
+<button onclick="showSection('physics_electrostatic_forces_laws')">Elektrostatičke sile i zakoni</button>
+<button onclick="showSection('physics_properties_of_light')">Svojstva svjetlosti</button>
+<button onclick="showSection('physics_lenses_optics')">Leće i optički instrumenti</button>
+<button onclick="showSection('physics_energy_processes')">Energija u fizičkim procesima</button>
+<button onclick="showSection('physics_heat_temperature')">Toplina i temperatura</button>
+<button onclick="showSection('physics_steam_engines')">Parni strojevi i motorna energija</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('physics_basic_concepts')">Osnovni pojmovi u fizici</button>
+<button onclick="showSection('physics_quantities_units')">Razlikovanje fizičkih veličina i jedinica</button>
+<button onclick="showSection('physics_measurement_instruments')">Mjerenje i instrumenti u fizici</button>
+<button onclick="showSection('physics_motion_basics')">Osnove gibanja</button>
+<button onclick="showSection('physics_types_of_motion')">Vrste gibanja</button>
+<button onclick="showSection('physics_force_effect')">Sila i njezin učinak</button>
+<button onclick="showSection('physics_energy_types')">Energija i njene vrste</button>
+<button onclick="showSection('physics_energy_conservation')">Zakon očuvanja energije</button>
+<button onclick="showSection('physics_uniform_acceleration')">Ravnomjerno ubrzano gibanje</button>
+<button onclick="showSection('physics_gravity_motion_laws')">Gravitacija i zakoni gibanja</button>
+<button onclick="showSection('physics_motion_under_force')">Kretanje predmeta pod utjecajem sile</button>
+<button onclick="showSection('physics_forces_daily_life')">Sile u svakodnevnom životu</button>
+<button onclick="showSection('physics_friction_elasticity_weight')">Trenje, elastičnost, težina</button>
+<button onclick="showSection('physics_newton_laws')">Newtonovi zakoni gibanja</button>
+<button onclick="showSection('physics_electric_charge_field')">Električni naboj, električno polje</button>
+<button onclick="showSection('physics_electric_potential_energy')">Električni potencijal i električna energija</button>
+<button onclick="showSection('physics_electrostatic_forces_laws')">Elektrostatičke sile i zakoni</button>
+<button onclick="showSection('physics_properties_of_light')">Svojstva svjetlosti</button>
+<button onclick="showSection('physics_lenses_optics')">Leće i optički instrumenti</button>
+<button onclick="showSection('physics_energy_processes')">Energija u fizičkim procesima</button>
+<button onclick="showSection('physics_heat_temperature')">Toplina i temperatura</button>
+<button onclick="showSection('physics_steam_engines')">Parni strojevi i motorna energija</button>
+
+
+</nav>
+
+
+<!-- 1. Osnovni pojmovi u fizici -->
+<div id="physics_basic_concepts" class="section">
+  <h2>Osnovni pojmovi u fizici</h2>
+  <p>
+    Fizika je prirodna znanost koja proučava materiju, energiju i njihovo međudjelovanje u prostoru i vremenu. 
+    Osnovni pojmovi uključuju <b>prostor</b> (mjesto gdje se događaju fizikalne pojave), 
+    <b>vrijeme</b> (trajanje pojava), <b>materiju</b> (sve što ima masu i zauzima prostor) 
+    i <b>energiju</b> (sposobnost obavljanja rada). 
+    Fizika postavlja temelj za razumijevanje prirodnih zakona i objašnjava ponašanje svijeta od subatomskih čestica do svemira.
+  </p>
+  <p><b>Primjer 1:</b> Kada ispuštamo olovku s visine, ona pada zbog gravitacije – to je fizička pojava gibanja pod utjecajem sile.</p>
+  <p><b>Primjer 2:</b> Kad trljamo dlanove, oni se zagrijavaju – tu se mehanička energija pretvara u toplinsku energiju.</p>
+  <p><b>Zadatak:</b> Navedite 5 fizikalnih pojava koje susrećete u svakodnevnom životu.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_basic_concepts_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_basic_concepts_answer" style="display:none;">
+    <p><b>Rješenje:</b> Primjeri fizikalnih pojava: (1) pad kiše, (2) svjetlost žarulje, (3) otapanje leda, 
+    (4) rad električnog ventilatora, (5) širenje zvuka kad govorimo.</p>
+  </div>
+</div>
+
+<!-- 2. Razlikovanje fizičkih veličina i jedinica -->
+<div id="physics_quantities_units" class="section">
+  <h2>Razlikovanje fizičkih veličina i jedinica</h2>
+  <p>
+    <b>Fizičke veličine</b> su mjerljive osobine prirodnih pojava, tijela ili procesa. 
+    Primjeri: duljina, masa, vrijeme, električna struja, temperatura. 
+    Da bi se one mogle uspoređivati i koristiti u znanstvenim istraživanjima, potrebno ih je izražavati pomoću <b>jedinica</b>. 
+    Jedinice su standardizirani brojevni izrazi veličina.  
+    Najčešće se koristi <b>SI sustav jedinica</b>, u kojem su osnovne veličine: metar (m), kilogram (kg), sekunda (s), amper (A), kelvin (K), mol (mol) i kandela (cd).
+  </p>
+  <p><b>Primjer 1:</b> Duljina stola je fizička veličina, a izražava se u metrima (jedinica).</p>
+  <p><b>Primjer 2:</b> Vrijeme trajanja školske lekcije mjeri se u minutama, a osnovna jedinica je sekunda.</p>
+  <p><b>Zadatak:</b> Napiši osnovnu jedinicu za silu, energiju i električnu struju.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_quantities_units_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_quantities_units_answer" style="display:none;">
+    <p><b>Rješenje:</b> Sila – newton (N), Energija – džul (J), Električna struja – amper (A).</p>
+  </div>
+</div>
+
+<!-- 3. Mjerenje i instrumenti u fizici -->
+<div id="physics_measurement_instruments" class="section">
+  <h2>Mjerenje i instrumenti u fizici</h2>
+  <p>
+    <b>Mjerenje</b> je postupak uspoređivanja nepoznate veličine s poznatom jedinicom. 
+    Svako mjerenje zahtijeva <b>instrument</b> koji omogućava određivanje vrijednosti veličine. 
+    Rezultat mjerenja uvijek je izražen brojem i jedinicom, npr. 25 °C, 5 kg, 2 m. 
+    U fizici razlikujemo jednostavne mjere (ravnalo, štoperica) i složene instrumente (osciloskop, spektroskop).
+  </p>
+  <p><b>Primjer 1:</b> Termometar se koristi za mjerenje temperature zraka.</p>
+  <p><b>Primjer 2:</b> Električna struja mjeri se ampermetrom spojenim u strujni krug.</p>
+  <p><b>Zadatak:</b> Koje instrumente koristimo za mjerenje napona i sile?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_measurement_instruments_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_measurement_instruments_answer" style="display:none;">
+    <p><b>Rješenje:</b> Napon – voltmetar, Sila – dinamometar.</p>
+  </div>
+</div>
+
+<!-- 4. Osnove gibanja -->
+<div id="physics_motion_basics" class="section">
+  <h2>Osnove gibanja</h2>
+  <p>
+    <b>Gibanje</b> je promjena položaja tijela u odnosu na drugo tijelo tijekom vremena. 
+    Da bismo opisali gibanje, trebamo odabrati <b>referentno tijelo</b> ili sustav. 
+    Ako se položaj tijela mijenja u odnosu na referentno tijelo, kažemo da se tijelo giba. 
+    Ako se ne mijenja – tijelo miruje. Gibanje može biti ravno ili zakrivljeno, jednoliko ili nejednoliko.
+  </p>
+  <p><b>Primjer 1:</b> Automobil na autocesti ujednačeno mijenja svoj položaj – jednoliko pravocrtno gibanje.</p>
+  <p><b>Primjer 2:</b> Lopta bačena prema gore prvo usporava, zatim se zaustavlja i počinje padati – nejednoliko gibanje.</p>
+  <p><b>Zadatak:</b> Objasni razliku između mirovanja i gibanja u odnosu na referentno tijelo.</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_motion_basics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_motion_basics_answer" style="display:none;">
+    <p><b>Rješenje:</b> Tijelo može istovremeno biti u mirovanju u odnosu na jedno tijelo (putnik u autobusu) 
+    i u gibanju u odnosu na drugo (isti putnik u odnosu na cestu). Sve ovisi o odabiru referentnog sustava.</p>
+  </div>
+</div>
+
+<!-- 5. Vrste gibanja -->
+<div id="physics_types_of_motion" class="section">
+  <h2>Vrste gibanja</h2>
+  <p>
+    Gibanje se klasificira prema obliku putanje i prema promjeni brzine:  
+    - <b>Pravocrtno gibanje</b>: tijelo se giba po ravnoj liniji.  
+    - <b>Krivocrtno gibanje</b>: putanja je zakrivljena (npr. kružno gibanje).  
+    - <b>Jednoliko gibanje</b>: brzina se ne mijenja.  
+    - <b>Nejednoliko gibanje</b>: brzina se mijenja (ubrzanje ili usporavanje).
+  </p>
+  <p><b>Primjer 1:</b> Satna kazaljka se giba jednoliko kružno.</p>
+  <p><b>Primjer 2:</b> Pad automobila nizbrdo – ubrzano pravocrtno gibanje.</p>
+  <p><b>Zadatak:</b> Navedi jedan primjer iz života za svaku vrstu gibanja (pravocrtno jednoliko, pravocrtno nejednoliko, kružno jednoliko).</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_types_of_motion_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_types_of_motion_answer" style="display:none;">
+    <p><b>Rješenje:</b> Pravocrtno jednoliko – vlak vozi stalnom brzinom, 
+    Pravocrtno nejednoliko – automobil ubrzava, 
+    Kružnopravocrtno jednoliko – vrtnja kotača bicikla.</p>
+  </div>
+</div>
+
+<!-- 6. Sila i njezin učinak -->
+<div id="physics_force_effect" class="section">
+  <h2>Sila i njezin učinak</h2>
+  <p>
+    <b>Sila</b> je vektorska veličina koja opisuje međudjelovanje tijela. 
+    Sila može promijeniti stanje gibanja tijela (brzinu i smjer) ili njegov oblik. 
+    Sila se mjeri u <b>newtonima (N)</b>. Prema Newtonovim zakonima gibanja, 
+    tijelo u mirovanju ili jednolikom gibanju nastavit će tako dok na njega ne djeluje vanjska sila.
+  </p>
+  <p><b>Primjer 1:</b> Guranjem kutije primjenjujemo silu koja je pokreće.</p>
+  <p><b>Primjer 2:</b> Zemljina gravitacija djeluje na jabuku i uzrokuje njezin pad.</p>
+  <p><b>Zadatak:</b> Ako na tijelo mase 2 kg djeluje sila od 10 N, koliko iznosi ubrzanje tijela?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_force_effect_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_force_effect_answer" style="display:none;">
+    <p><b>Rješenje:</b> Prema drugom Newtonovom zakonu: F = m · a → a = F / m = 10 / 2 = 5 m/s².</p>
+  </div>
+</div>
+
+<!-- 7. Energija i njene vrste -->
+<div id="physics_energy_types" class="section">
+  <h2>Energija i njene vrste</h2>
+  <p>
+    <b>Energija</b> je sposobnost tijela ili sustava da obavi rad ili izazove promjene. 
+    Vrste energije:  
+    - <b>Kinetička</b> (zbog gibanja),  
+    - <b>Potencijalna</b> (zbog položaja u polju sile),  
+    - <b>Toplinska</b>,  
+    - <b>Električna</b>,  
+    - <b>Kemijska</b>,  
+    - <b>Nuklearna</b>.  
+    Energija se ne može stvoriti niti uništiti, već samo pretvarati iz jednog oblika u drugi.
+  </p>
+  <p><b>Primjer 1:</b> U električnoj žarulji električna energija pretvara se u svjetlosnu i toplinsku.</p>
+  <p><b>Primjer 2:</b> U hidroelektrani potencijalna energija vode pretvara se u električnu.</p>
+  <p><b>Zadatak:</b> Kamen mase 3 kg podignut je na visinu 5 m. Kolika je njegova potencijalna energija? (g = 9,81 m/s²)</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_energy_types_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_energy_types_answer" style="display:none;">
+    <p><b>Rješenje:</b> Ep = m · g · h = 3 · 9,81 · 5 = 147,15 J.</p>
+  </div>
+</div>
+
+<!-- 8. Zakon očuvanja energije -->
+<div id="physics_energy_conservation" class="section">
+  <h2>Zakon očuvanja energije</h2>
+  <p>
+    Zakon očuvanja energije kaže da se <b>energija ne može stvoriti niti uništiti, već samo pretvarati iz jednog oblika u drugi</b>. 
+    Ukupna količina energije u zatvorenom sustavu ostaje konstantna. 
+    To je jedan od temeljnih prirodnih zakona i vrijedi u svim granama fizike: od mehanike, preko elektriciteta, do nuklearnih procesa. 
+    Ovaj zakon omogućava da se proračunavaju i predviđaju fizikalni procesi u prirodi i tehnici.
+  </p>
+  <p><b>Primjer 1:</b> Kada klatno ljulja, njegova potencijalna energija se pretvara u kinetičku i obrnuto, ali ukupna energija ostaje ista (osim gubitaka zbog trenja).</p>
+  <p><b>Primjer 2:</b> U hidroelektrani potencijalna energija vode pretvara se u kinetičku, zatim u mehaničku (turbina), a na kraju u električnu energiju.</p>
+  <p><b>Zadatak:</b> Kuglica mase 0,2 kg pada s visine od 2 m. Kolika je njezina kinetička energija neposredno prije udara o tlo? (g = 9,81 m/s²)</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_energy_conservation_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_energy_conservation_answer" style="display:none;">
+    <p><b>Rješenje:</b> Potencijalna energija na visini: Ep = m·g·h = 0,2·9,81·2 = 3,924 J. 
+    Neposredno prije udara, sva energija je pretvorena u kinetičku → Ek = 3,924 J.</p>
+  </div>
+</div>
+
+<!-- 9. Ravnomjerno ubrzano gibanje -->
+<div id="physics_uniform_acceleration" class="section">
+  <h2>Ravnomjerno ubrzano gibanje</h2>
+  <p>
+    Ravnomjerno ubrzano gibanje je gibanje pri kojem se brzina tijela povećava ili smanjuje za isti iznos u jednakim vremenskim intervalima. 
+    Ključne formule su:  
+    - v = v₀ + a·t  
+    - s = v₀·t + ½·a·t²  
+    gdje su v brzina, v₀ početna brzina, a ubrzanje, t vrijeme, s prijeđeni put.  
+    Ako tijelo ubrzava, a > 0, ako usporava, a < 0.
+  </p>
+  <p><b>Primjer 1:</b> Automobil ubrzava s mjesta konstantnim ubrzanjem dok ne dostigne određenu brzinu.</p>
+  <p><b>Primjer 2:</b> Slobodni pad tijela je posebno ubrzano gibanje s konstantnim ubrzanjem g.</p>
+  <p><b>Zadatak:</b> Automobil kreće iz mirovanja i ubrzava 2 m/s² tijekom 5 s. Koliku brzinu postiže i koliki put prijeđe?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_uniform_acceleration_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_uniform_acceleration_answer" style="display:none;">
+    <p><b>Rješenje:</b> v = v₀ + a·t = 0 + 2·5 = 10 m/s.  
+    s = v₀·t + ½·a·t² = 0 + 0,5·2·25 = 25 m.</p>
+  </div>
+</div>
+
+<!-- 10. Gravitacija i zakoni gibanja -->
+<div id="physics_gravity_motion_laws" class="section">
+  <h2>Gravitacija i zakoni gibanja</h2>
+  <p>
+    <b>Gravitacija</b> je privlačna sila između svih tijela koja imaju masu. 
+    Nju je prvi matematički opisao Isaac Newton u svom <i>Zakonu opće gravitacije</i>: 
+    F = G·(m₁·m₂)/r².  
+    Gravitacija određuje kretanje planeta, padanje tijela na Zemlju, te kretanje satelita i svemirskih tijela. 
+    Newton je također postavio zakone gibanja koji objašnjavaju odnos između sile i gibanja tijela.
+  </p>
+  <p><b>Primjer 1:</b> Zemlja privlači Mjesec, što uzrokuje njegove orbite i plimu/oseku na Zemlji.</p>
+  <p><b>Primjer 2:</b> Jabuka koja pada sa stabla pada zbog Zemljine gravitacije.</p>
+  <p><b>Zadatak:</b> Dvije kuglice mase 1 kg udaljene su 1 m. Kolika je gravitacijska sila među njima? (G = 6,67·10⁻¹¹ N·m²/kg²)</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_gravity_motion_laws_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_gravity_motion_laws_answer" style="display:none;">
+    <p><b>Rješenje:</b> F = G·m₁·m₂/r² = 6,67·10⁻¹¹·1·1 / 1² = 6,67·10⁻¹¹ N.</p>
+  </div>
+</div>
+
+<!-- 11. Kretanje predmeta pod utjecajem sile -->
+<div id="physics_motion_under_force" class="section">
+  <h2>Kretanje predmeta pod utjecajem sile</h2>
+  <p>
+    Kada na tijelo djeluje sila, mijenja se njegovo gibanje u skladu s Newtonovim zakonima. 
+    Ako sila djeluje stalno, tijelo će ravnomjerno ubrzavati. 
+    Ako na tijelo djeluje više sila, potrebno je izračunati rezultantnu silu (vektorski zbroj).
+  </p>
+  <p><b>Primjer 1:</b> Kada gurnemo kutiju na podu, ona se kreće dok sila ruku i sila trenja ne dođu u ravnotežu.</p>
+  <p><b>Primjer 2:</b> Lopta udarena nogom kreće se naprijed dok na nju djeluje sila noge, zatim je usporava otpor zraka i trenje s podlogom.</p>
+  <p><b>Zadatak:</b> Na tijelo mase 4 kg djeluje sila od 20 N. Koliko ubrzanje postiže tijelo?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_motion_under_force_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_motion_under_force_answer" style="display:none;">
+    <p><b>Rješenje:</b> a = F/m = 20 / 4 = 5 m/s².</p>
+  </div>
+</div>
+
+<!-- 12. Sile u svakodnevnom životu -->
+<div id="physics_forces_daily_life" class="section">
+  <h2>Sile u svakodnevnom životu</h2>
+  <p>
+    Sile djeluju stalno oko nas – bez njih ne bi bilo kretanja, niti stabilnosti. 
+    Najčešće susrećemo gravitacijsku silu, silu trenja, elastičnu silu i silu otpora zraka. 
+    Razumijevanje ovih sila omogućava nam bolje shvaćanje svakodnevnih pojava i tehničkih rješenja.
+  </p>
+  <p><b>Primjer 1:</b> Kada hodamo, trenje između obuće i tla sprječava klizanje.</p>
+  <p><b>Primjer 2:</b> Kada sjedimo na stolici, sila reakcije podloge drži nas u ravnoteži s težinom tijela.</p>
+  <p><b>Zadatak:</b> Koje dvije sile djeluju na automobil koji se kreće po ravnoj cesti i zašto se ipak zaustavlja kada prestanemo dodavati gas?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_forces_daily_life_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_forces_daily_life_answer" style="display:none;">
+    <p><b>Rješenje:</b> Na automobil djeluje sila motora (naprijed) i sila trenja/otpora zraka (nazad). 
+    Kada motor prestane davati silu, trenje i otpor zraka zaustavljaju automobil.</p>
+  </div>
+</div>
+
+<!-- 13. Trenje, elastičnost, težina -->
+<div id="physics_friction_elasticity_weight" class="section">
+  <h2>Trenje, elastičnost, težina</h2>
+  <p>
+    <b>Trenje</b> je sila koja se suprotstavlja kretanju i nastaje pri dodiru površina.  
+    <b>Elastičnost</b> je sposobnost tijela da se vrati u prvobitni oblik nakon deformacije.  
+    <b>Težina</b> je sila kojom Zemlja privlači tijelo (težina = masa · g).  
+    Sve ove pojave igraju veliku ulogu u našim životima – od hodanja, preko korištenja opruga, do izračunavanja mase tijela.
+  </p>
+  <p><b>Primjer 1:</b> Kada vozač pritisne kočnicu, automobil se zaustavlja zahvaljujući sili trenja između guma i ceste.</p>
+  <p><b>Primjer 2:</b> Kada rastegnemo gumicu i pustimo je, ona se vrati u početni oblik zbog elastičnosti.</p>
+  <p><b>Zadatak:</b> Kolika je težina tijela mase 12 kg na Zemlji? (g = 9,81 m/s²)</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_friction_elasticity_weight_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_friction_elasticity_weight_answer" style="display:none;">
+    <p><b>Rješenje:</b> G = m·g = 12·9,81 = 117,72 N.</p>
+  </div>
+</div>
+
+<!-- 14. Newtonovi zakoni gibanja -->
+<div id="physics_newton_laws" class="section">
+  <h2>Newtonovi zakoni gibanja</h2>
+  <p>
+    Isaac Newton je formulirao tri temeljna zakona gibanja:  
+    1. <b>Prvi zakon (inercije)</b>: Tijelo ostaje u mirovanju ili se giba jednoliko pravocrtno dok na njega ne djeluje sila.  
+    2. <b>Drugi zakon</b>: Ubrzanje tijela proporcionalno je sili koja djeluje i obrnuto proporcionalno masi (F = m·a).  
+    3. <b>Treći zakon (akcije i reakcije)</b>: Svaka sila djelovanja ima jednaku suprotnu silu reakcije.  
+    Ovi zakoni su osnova klasične mehanike i objašnjavaju sve oblike gibanja u svakodnevnom životu i tehnici.
+  </p>
+  <p><b>Primjer 1:</b> Kada hokejaška pak pločica klizi po ledu, ona bi se nastavila kretati vječno da nema trenja (prvi zakon).</p>
+  <p><b>Primjer 2:</b> Kada skočimo s čamca, čamac se pomakne unatrag – posljedica trećeg Newtonovog zakona.</p>
+  <p><b>Zadatak:</b> Ako na tijelo mase 5 kg djeluje sila 15 N, koliki je iznos ubrzanja?</p>
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_newton_laws_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_newton_laws_answer" style="display:none;">
+    <p><b>Rješenje:</b> Prema drugom zakonu: a = F/m = 15/5 = 3 m/s².</p>
+  </div>
+</div>
+
+<!-- 15. Električni naboj, električno polje -->
+<div id="physics_electric_charge_field" class="section">
+  <h2>Električni naboj i električno polje</h2>
+  <p>
+    Sva tijela mogu posjedovati <b>električni naboj</b>, koji može biti pozitivan ili negativan. 
+    Tijela s istim nabojima se odbijaju, a s različitim se privlače. 
+    Prostor oko naboja u kojem djeluje sila naziva se <b>električno polje</b>. 
+    Polje se prikazuje silnicama koje idu od pozitivnog prema negativnom naboju.
+  </p>
+  <p><b>Primjer 1:</b> Kada trljamo balon o kosu, balon se elektrizira i privlači papirnate komadiće.</p>
+  <p><b>Primjer 2:</b> Munja u prirodi nastaje pražnjenjem velikih količina naboja između oblaka i tla.</p>
+  <p><b>Zadatak:</b> Dva naboja q₁ = 2·10⁻⁶ C i q₂ = –3·10⁻⁶ C udaljena su 0,2 m. Kolika je sila među njima? (k = 9·10⁹ N·m²/C²)</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_electric_charge_field_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_electric_charge_field_answer" style="display:none;">
+    <p><b>Rješenje:</b> F = k·q₁·q₂ / r² = 9·10⁹·(2·10⁻⁶·3·10⁻⁶)/0,04 = 1,35 N (privlačna sila).</p>
+  </div>
+</div>
+
+<!-- 16. Električni potencijal i električna energija -->
+<div id="physics_electric_potential_energy" class="section">
+  <h2>Električni potencijal i električna energija</h2>
+  <p>
+    <b>Električni potencijal</b> je količina električne potencijalne energije po jediničnom naboju. 
+    Mjeri se u voltima (V). 
+    <b>Električna energija</b> je energija koju naboj ima u električnom polju i koja se koristi u električnim uređajima. 
+    Električna struja prenosi tu energiju kroz vodiče.
+  </p>
+  <p><b>Primjer 1:</b> Baterija od 1,5 V ima potencijalnu razliku od 1,5 J po kulonu naboja.</p>
+  <p><b>Primjer 2:</b> Električna energija pokreće žarulju, računalo ili motor.</p>
+  <p><b>Zadatak:</b> Koliko energije prenese 2 C naboja kroz napon od 12 V?</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_electric_potential_energy_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_electric_potential_energy_answer" style="display:none;">
+    <p><b>Rješenje:</b> W = Q·U = 2·12 = 24 J.</p>
+  </div>
+</div>
+
+<!-- 17. Elektrostatičke sile i zakoni -->
+<div id="physics_electrostatic_forces_laws" class="section">
+  <h2>Elektrostatičke sile i zakoni</h2>
+  <p>
+    Elektrostatičke sile su sile između mirujućih električnih naboja. 
+    Njih opisuje <b>Coulombov zakon</b>: F = k·q₁·q₂ / r². 
+    Sile mogu biti privlačne ili odbojne. 
+    Intenzitet ovisi o količini naboja i udaljenosti.
+  </p>
+  <p><b>Primjer 1:</b> Papirnati komadići privučeni nabijene plastične olovke.</p>
+  <p><b>Primjer 2:</b> Elektrizacija odjeće pri sušenju u sušilici.</p>
+  <p><b>Zadatak:</b> Kolika je sila između naboja od 5·10⁻⁶ C i 4·10⁻⁶ C udaljenih 0,5 m? (k = 9·10⁹ N·m²/C²)</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_electrostatic_forces_laws_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_electrostatic_forces_laws_answer" style="display:none;">
+    <p><b>Rješenje:</b> F = 9·10⁹·(5·10⁻⁶·4·10⁻⁶)/0,25 = 0,72 N.</p>
+  </div>
+</div>
+
+<!-- 18. Svojstva svjetlosti -->
+<div id="physics_properties_of_light" class="section">
+  <h2>Svojstva svjetlosti</h2>
+  <p>
+    Svjetlost ima <b>valna</b> i <b>čestična</b> svojstva (dualizam). 
+    Valna svojstva uključuju refleksiju, refrakciju, interferenciju i difrakciju. 
+    Čestična svojstva opisuju fotoni – kvante svjetlosne energije. 
+    Brzina svjetlosti u vakuumu je 3·10⁸ m/s.
+  </p>
+  <p><b>Primjer 1:</b> Duga nastaje lomom i refleksijom svjetlosti u kapljicama vode.</p>
+  <p><b>Primjer 2:</b> Ogledalo reflektira svjetlost u smjeru zakona refleksije.</p>
+  <p><b>Zadatak:</b> Koliko vremena treba svjetlosti da prijeđe udaljenost od 300 000 km?</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_properties_of_light_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_properties_of_light_answer" style="display:none;">
+    <p><b>Rješenje:</b> t = s/v = 300 000·10³ / (3·10⁸) = 1 s.</p>
+  </div>
+</div>
+
+<!-- 19. Leće i optički instrumenti -->
+<div id="physics_lenses_optics" class="section">
+  <h2>Leće i optički instrumenti</h2>
+  <p>
+    <b>Leće</b> su prozirna tijela koja lome svjetlost. 
+    Konveksne leće skupljaju zrake (fokus), dok konkavne raspršuju. 
+    Načela rada leća koriste se u <b>mikroskopima, teleskopima, kamerama, naočalama</b>. 
+    Slike mogu biti stvarne ili prividne, povećane ili umanjene.
+  </p>
+  <p><b>Primjer 1:</b> Povećalo koristi konveksnu leću za povećanje predmeta.</p>
+  <p><b>Primjer 2:</b> Naočale s konkavnim lećama ispravljaju kratkovidnost.</p>
+  <p><b>Zadatak:</b> Kolika je žarišna daljina leće ako zraka svjetlosti paralelna s optičkom osi prolazi kroz nju i fokusira se 10 cm iza leće?</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_lenses_optics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_lenses_optics_answer" style="display:none;">
+    <p><b>Rješenje:</b> Žarišna daljina f = 10 cm.</p>
+  </div>
+</div>
+
+<!-- 20. Energija u fizičkim procesima -->
+<div id="physics_energy_processes" class="section">
+  <h2>Energija u fizičkim procesima</h2>
+  <p>
+    Energija se u prirodi stalno pretvara iz jednog oblika u drugi. 
+    U mehaničkim procesima pretvara se potencijalna ↔ kinetička, 
+    u električnim pretvara se električna ↔ toplinska, 
+    u nuklearnim reakcijama oslobađa se golema energija. 
+    Zakon očuvanja energije vrijedi u svim procesima.
+  </p>
+  <p><b>Primjer 1:</b> Električna energija pretvara se u toplinu u električnom grijaču.</p>
+  <p><b>Primjer 2:</b> Kemijska energija u hrani pretvara se u mehaničku energiju mišića.</p>
+  <p><b>Zadatak:</b> Ako dizalica podigne teret od 200 kg na visinu od 5 m, koliki je rad izvršen?</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_energy_processes_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_energy_processes_answer" style="display:none;">
+    <p><b>Rješenje:</b> W = m·g·h = 200·9,81·5 = 9810 J.</p>
+  </div>
+</div>
+
+<!-- 21. Toplina i temperatura -->
+<div id="physics_heat_temperature" class="section">
+  <h2>Toplina i temperatura</h2>
+  <p>
+    <b>Temperatura</b> je mjera prosječne kinetičke energije čestica u tvari. 
+    Mjeri se u kelvinima (K), Celzijusima (°C) ili Fahrenheitima (°F). 
+    <b>Toplina</b> je energija koja prelazi s jednog tijela na drugo zbog razlike u temperaturi. 
+    Prenosi se na tri načina: <b>vođenjem (kondukcija)</b>, <b>strujanjem (konvekcija)</b> i <b>zračenjem (radijacija)</b>.
+  </p>
+  <p>
+    Važno je razlikovati: toplina nije ista stvar kao temperatura. 
+    Tijelo može imati visoku temperaturu, ali malu količinu topline (npr. iskra). 
+    S druge strane, veliko tijelo s nižom temperaturom može imati ogromnu toplinsku energiju (npr. more).
+  </p>
+  <p><b>Primjer 1:</b> Metalna žlica u vrućem čaju brzo se zagrije vođenjem topline.</p>
+  <p><b>Primjer 2:</b> Radijatori griju prostoriju prijenosom topline konvekcijom i zračenjem.</p>
+  <p><b>Zadatak:</b> Koliko topline (u J) treba dovesti da se 500 g vode zagrije s 20 °C na 80 °C? (c = 4180 J/kg·K)</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_heat_temperature_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_heat_temperature_answer" style="display:none;">
+    <p><b>Rješenje:</b> Q = m·c·ΔT = 0,5·4180·60 = 125 400 J.</p>
+  </div>
+</div>
+
+<!-- 22. Parni strojevi i motorna energija -->
+<div id="physics_steam_engines" class="section">
+  <h2>Parni strojevi i motorna energija</h2>
+  <p>
+    <b>Parni stroj</b> bio je ključan za industrijsku revoluciju. 
+    On pretvara toplinsku energiju pare u mehanički rad. 
+    Osnovni princip rada: voda se zagrijava → stvara se para pod tlakom → para pokreće klip ili turbinu → mehanička energija pokreće stroj.
+  </p>
+  <p>
+    <b>Motorna energija</b> odnosi se na sve oblike energije koji pokreću strojeve i vozila, bilo da dolazi iz pare, goriva, električne energije ili nuklearne energije. 
+    Moderni motori (benzinski, dizelski, električni) koriste različite principe, ali svi rade na pretvaranju jedne vrste energije u mehanički rad.
+  </p>
+  <p><b>Primjer 1:</b> Lokomotiva na paru koristila je parne strojeve za vuču vagona.</p>
+  <p><b>Primjer 2:</b> Današnje električne lokomotive koriste elektromotore za pretvaranje električne energije u gibanje.</p>
+  <p><b>Zadatak:</b> Parni stroj koristi 1 kg vode da proizvede paru na 100 °C. Ako je latentna toplina isparavanja vode L = 2,26·10⁶ J/kg, kolika količina energije se pretvara u paru?</p>
+  <button style="background-color:goldenrod;color:white;padding:10px 20px;margin:10px;cursor:pointer;"
+    onclick="document.getElementById('physics_steam_engines_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="physics_steam_engines_answer" style="display:none;">
+    <p><b>Rješenje:</b> Q = m·L = 1·2,26·10⁶ = 2,26·10⁶ J.</p>
+  </div>
+</div>
+
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

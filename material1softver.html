@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sve o softveru</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sve o softveru</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showSection('osnove')">Osnove softvera</button>
+    <button onclick="showSection('vrste-Softvera')">Vrste softvera</button>
+    <button onclick="showSection('instalacija-izvedba')">O instalaciji i izvedba</button>
+    <button onclick="showSection('koji-Softver')">Koji softver koristiti?</button>
+     <button onclick="showSection('ažuriranje-softvera')">Ažuriranje softvera</button>
+<button onclick="showSection('opensource')">Šta znači open-source softver?</button>
+<button onclick="showSection('freeware')">Koja je razlika između besplatnog (freeware) i probnog (trial) softvera?</button>
+<button onclick="showSection('licenca')">Šta znači licenca za softver?</button>
+<button onclick="showSection('verzija')">Šta je softverska verzija (npr. v1.2.3) i šta označava?</button>
+<button onclick="showSection('uklanjanje')">Kako ukloniti softver bezbedno sa računara?</button>
+<button onclick="showSection('os')">Kako funkcioniše operativni sistem kao softver?</button>
+<button onclick="showSection('aplikacije')">Kako se aplikacije pokreću i komuniciraju sa operativnim sistemom?</button>
+<button onclick="showSection('zahtevi')">Zašto neki softveri zahtevaju specifične sistemske zahteve?</button>
+<button onclick="showSection('zamrzavanje')">Zašto se softver ponekad "zamrzne" ili prestane da radi?</button>
+<button onclick="showSection('internet')">Kako softver komunicira sa internetom?</button>
+
+<button onclick="showSection('aplikacijeVrste')">Koja je razlika između desktop, web i mobilnih aplikacija?</button>
+<button onclick="showSection('pravljenje')">Kako se pravi softver?</button>
+<button onclick="showSection('jezici')">Koji programski jezici se koriste za razvoj softvera?</button>
+<button onclick="showSection('sdlc')">Šta je softverski životni ciklus (SDLC)?</button>
+<button onclick="showSection('uloge')">Koja je uloga programera, testera i softverskog inženjera?</button>
+<button onclick="showSection('beta')">Šta je beta verzija softvera i čemu služi?</button>
+<button onclick="showSection('testiranje')">Kako funkcioniše softversko testiranje i otkrivanje grešaka?</button>
+<button onclick="showSection('virusi')">Može li softver sadržavati viruse ili zlonamerni kod?</button>
+<button onclick="showSection('bezbednost')">Kako proveriti da li je softver bezbedan za instalaciju?</button>
+<button onclick="showSection('piraterija')">Kako se štiti softver od piraterije i neovlašćene upotrebe?</button>
+<button onclick="showSection('neRadi')">Šta da radim ako mi softver ne radi kako treba?</button>
+<button onclick="showSection('podrska')">Kako da se obratim tehničkoj podršci?</button>
+<button onclick="showSection('backup')">Kako sačuvati podatke ako softver prestane da funkcioniše?</button>
+<button onclick="showSection('usporava')">Zašto mi softver usporava računar?</button>
+<button onclick="showSection('ucenje')">Kako mogu naučiti da koristim novi softver?</button>
+
+  </nav>
+
+<div id="osnove" class="section active">
+  <h2>Osnove softvera</h2>
+  <p><strong>Što je softver?</strong><br>
+  Softver je skup uputa i podataka koji omogućuju računalu izvršavanje zadataka. Nematerijalan je i funkcionalan, za razliku od hardvera, koji je fizički. Softver čini hardver korisnim, bilo da se radi o jednostavnim aplikacijama poput kalkulatora ili složenim sustavima poput operativnih sustava.</p>
+
+  <h3>Ključne karakteristike</h3>
+  <ul>
+    <li>Nematerijalnost – sastoji se od koda i podataka.</li>
+    <li>Prilagodljivost – može se mijenjati, ažurirati i prilagođavati potrebama korisnika.</li>
+    <li>Neograničen broj kopija – može se distribuirati bez fizičkih ograničenja.</li>
+    <li>Brza evolucija – nadograđuje se radi novih funkcija i optimizacije.</li>
+  </ul>
+
+  <h3>Vrste softvera</h3>
+  <ul>
+    <li><strong>Sistemski softver:</strong> Upravljanje hardverom i osnovnim funkcijama računala (operativni sustavi, upravljački programi).</li>
+    <li><strong>Aplikativni softver:</strong> Programi za obavljanje specifičnih zadataka (tekst, grafika, računovodstvo, igre, web preglednici).</li>
+    <li><strong>Programski alati:</strong> Softver za razvoj drugog softvera (kompajleri, IDE, alati za testiranje i kontrolu verzija).</li>
+  </ul>
+
+  <h3>Razlike softver vs. hardver</h3>
+  <ul>
+    <li>Fizička vs. logička priroda: hardver je opipljiv, softver digitalan.</li>
+    <li>Funkcionalnost: hardver izvršava zadatke, softver određuje što i kako.</li>
+    <li>Promjene: softver se nadograđuje bez fizičkog dodira hardvera.</li>
+    <li>Ovisnost: softver ne radi bez hardvera, hardver bez softvera nema svrhu.</li>
+  </ul>
+
+  <h3>Primjeri</h3>
+  <ul>
+    <li>Microsoft Word – aplikacija za obradu teksta</li>
+    <li>Windows 10 – operativni sustav</li>
+    <li>VLC Media Player – reprodukcija multimedijalnih sadržaja</li>
+  </ul>
+
+  <h3>Pojmovi</h3>
+  <ul>
+    <li>Izvorni kod – upute koje programer piše.</li>
+    <li>Izvršni program – softver spreman za korištenje.</li>
+    <li>Ažuriranje / patch – poboljšanje softvera ili ispravak grešaka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Razmišljaj o softveru u kontekstu interakcije s hardverom. Prati verzije, ažuriranja i koristi pouzdane izvore za instalaciju.
+  </div>
+</div>
+
+<div id="vrste-softvera" class="section">
+  <h2>Vrste softvera</h2>
+  <p>Softver se dijeli prema funkciji:</p>
+  <ul>
+    <li><strong>Sistemski softver:</strong> Upravljanje računalom, primjerice operativni sustavi i upravljački programi.</li>
+    <li><strong>Aplikativni softver:</strong> Programi za korisničke zadatke, npr. obrada teksta, grafika, računovodstvo, igre, preglednici.</li>
+    <li><strong>Programski alati:</strong> Softver za razvoj drugog softvera, poput kompajlera, IDE-a i alata za kontrolu verzija.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Sistemski softver upravlja računalom, aplikativni služi korisniku, a programski alati pomažu u razvoju novoga softvera.
+  </div>
+</div>
+
+<div id="koji-softver" class="section">
+  <h2>Koji softver koristiti i kada</h2>
+  <p>Odabir pravog softvera ovisi o vrsti zadatka, operativnom sustavu i razini korisnika. Evo preporuka po kategorijama:</p>
+
+  <h3>1. Obrada teksta i dokumenti</h3>
+  <ul>
+    <li>Microsoft Word – profesionalna obrada dokumenata, najbolje za poslovnu upotrebu.</li>
+    <li>LibreOffice Writer – besplatan i open-source alat za osnovnu i srednje naprednu obradu dokumenata.</li>
+    <li>Google Docs – online alat za suradnju u stvarnom vremenu.</li>
+  </ul>
+
+  <h3>2. Tablični proračuni</h3>
+  <ul>
+    <li>Microsoft Excel – profesionalni alat za analize podataka, grafove i makroe.</li>
+    <li>LibreOffice Calc – besplatna alternativa za osnovne i srednje napredne funkcije.</li>
+    <li>Google Sheets – online kolaboracija i jednostavni proračuni.</li>
+  </ul>
+
+  <h3>3. Grafika i dizajn</h3>
+  <ul>
+    <li>Adobe Photoshop – profesionalna obrada fotografija i dizajn.</li>
+    <li>GIMP – besplatna alternativa za osnovnu i srednje naprednu obradu grafike.</li>
+    <li>Adobe Illustrator / Inkscape – vektorska grafika, logotipi i ilustracije.</li>
+  </ul>
+
+  <h3>4. Programiranje i razvoj softvera</h3>
+  <ul>
+    <li>Visual Studio / VS Code – IDE i editor za razne programske jezike.</li>
+    <li>IntelliJ IDEA / PyCharm – IDE za Java, Python i druge jezike.</li>
+    <li>Git – verzioniranje koda i suradnja u timu.</li>
+  </ul>
+
+  <h3>5. Multimedija i video</h3>
+  <ul>
+    <li>VLC Media Player – reprodukcija većine audio i video formata.</li>
+    <li>Adobe Premiere Pro / DaVinci Resolve – profesionalna obrada i montaža videa.</li>
+    <li>Audacity – besplatan softver za obradu zvuka i snimanje.</li>
+  </ul>
+
+  <h3>6. Sigurnost i održavanje</h3>
+  <ul>
+    <li>Windows Update / macOS Update – redovita nadogradnja sustava.</li>
+    <li>Antivirusni programi (Avast, Bitdefender, Kaspersky) – zaštita od virusa i malwarea.</li>
+    <li>CCleaner / BleachBit – čišćenje sustava i optimizacija performansi.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Prilikom odabira softvera razmotri namjenu (posao, škola, zabava), kompatibilnost, cijenu i razinu znanja korisnika. Tako ćeš koristiti softver koji najbolje odgovara tvojoj situaciji.
+  </div>
+</div>
+
+<div id="instalacija-izvedba" class="section">
+  <h2>Instalacija i pokretanje softvera</h2>
+  <p>Instalacija i pokretanje softvera obuhvaća postavljanje programa na računalo i njegovo korištenje za obavljanje zadataka.</p>
+
+  <h3>Instalacija softvera</h3>
+  <ul>
+    <li>Preuzimanje / priprema – softver se preuzima s interneta ili instalira s medija, provjerava se kompatibilnost.</li>
+    <li>Instalacijski program – vodi kroz korake instalacije, uključujući direktorij, jezik, komponente i licencne uvjete.</li>
+    <li>Licenca i aktivacija – neki programi zahtijevaju unos ključa ili prijavu na račun za punu funkcionalnost.</li>
+  </ul>
+
+  <h3>Pokretanje softvera</h3>
+  <ul>
+    <li>Pokretanje programa – dvostrukim klikom na ikonu ili putem izbornika. OS učitava datoteke i dodjeljuje resurse.</li>
+    <li>Izvršni proces – softver koristi CPU, memoriju i disk za izvršenje funkcija, pristupa podacima i hardveru te po potrebi sprema rezultate.</li>
+    <li>Ažuriranja i nadogradnje – radi novih funkcija, sigurnosti ili optimizacije. Mogu biti automatska ili ručna.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Prilikom instalacije i pokretanja provjeri pouzdanost izvora, kompatibilnost i sigurnosne postavke. Redovito ažuriraj softver.
+  </div>
+</div>
+
+<div id="odrzavanje-azuriranje" class="section">
+  <h2>Održavanje i ažuriranje softvera</h2>
+  <p>Održavanje softvera osigurava pravilno, sigurno i učinkovito funkcioniranje. Redovita ažuriranja poboljšavaju performanse i dodaju nove funkcionalnosti.</p>
+
+  <h3>Zašto održavati softver?</h3>
+  <ul>
+    <li>Sigurnost – uklanja ranjivosti i štiti od napadača.</li>
+    <li>Stabilnost i performanse – popravak bugova i optimizacija koda.</li>
+    <li>Kompatibilnost – prilagodba novim verzijama OS-a ili hardvera.</li>
+    <li>Nove funkcionalnosti – dodavanje alata i opcija za bolje korisničko iskustvo.</li>
+  </ul>
+
+  <h3>Vrste održavanja</h3>
+  <ul>
+    <li>Ispravljanje pogrešaka – popravak grešaka koje ometaju rad softvera.</li>
+    <li>Preventivno – redovito provjeravanje i optimizacija sustava.</li>
+    <li>Prilagodba i nadogradnja – dodavanje funkcionalnosti i prilagodba novim standardima.</li>
+  </ul>
+
+  <h3>Alati za održavanje</h3>
+  <ul>
+    <li>Windows – Windows Update, CCleaner, Patch My PC</li>
+    <li>macOS – App Store, CleanMyMac X</li>
+    <li>Linux – apt / dnf, BleachBit</li>
+    <li>Cross-platform – FileZilla / WinSCP, Git</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Redovito koristi provjerene alate, provjeri izvor i sigurnosne postavke. Prvo sigurnost i stabilnost, zatim nove funkcije.
+  </div>
+</div>
+
+<div id="azuriranje-softvera" class="section">
+  <h2>Ažuriranje softvera</h2>
+  <p>Ažuriranje softvera podrazumijeva instaliranje novih verzija programa radi poboljšanja funkcionalnosti, sigurnosti i stabilnosti.</p>
+
+  <h3>Zašto ažurirati softver?</h3>
+  <ul>
+    <li><strong>Sigurnost:</strong> Ispravlja ranjivosti koje napadači mogu iskoristiti.</li>
+    <li><strong>Popravak grešaka:</strong> Rješava bugove i probleme koji ometaju normalan rad.</li>
+    <li><strong>Nove funkcionalnosti:</strong> Dodaje alate, opcije i poboljšava korisničko sučelje.</li>
+    <li><strong>Kompatibilnost:</strong> Osigurava rad softvera s novim verzijama OS-a i drugim aplikacijama.</li>
+  </ul>
+
+  <h3>Vrste ažuriranja</h3>
+  <ul>
+    <li><strong>Automatska:</strong> Softver sam prepoznaje i instalira nove verzije.</li>
+    <li><strong>Ručno:</strong> Korisnik sam preuzima i instalira novu verziju.</li>
+    <li><strong>Patch:</strong> Manja ispravka ili dodatak postojećoj verziji radi popravka grešaka ili sigurnosnih problema.</li>
+  </ul>
+
+  <h3>Preporučeni alati</h3>
+  <ul>
+    <li>Windows Update – automatska nadogradnja OS-a i Microsoft softvera.</li>
+    <li>macOS Software Update / App Store – nadogradnja aplikacija i OS-a.</li>
+    <li>Linux paketni menadžeri (apt, dnf) – upravljanje paketima i ažuriranja.</li>
+    <li>Patch My PC / Ninite – upravljanje i ažuriranje trećih aplikacija na Windowsu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovito ažuriraj softver kako bi računalo bilo sigurno i stabilno. Provjeri izvore instalacije i sigurnosne postavke prije nadogradnje.
+  </div>
+</div>
+
+<div id="opensource" class="section">
+  <h2>Što znači open-source softver?</h2>
+  <p>Open-source softver ima javno dostupan izvorni kod, što omogućuje pregled, izmjenu i distribuciju softvera prema uvjetima licence. Za razliku od zatvorenog softvera, open-source stavlja naglasak na transparentnost i suradnju.</p>
+
+  <h3>Ključne karakteristike</h3>
+  <ul>
+    <li>Javni izvorni kod</li>
+    <li>Prilagodljivost i fleksibilnost</li>
+    <li>Besplatna distribucija (većina slučajeva)</li>
+    <li>Suradnja zajednice</li>
+    <li>Transparentnost i sigurnost</li>
+  </ul>
+
+  <h3>Prednosti i nedostaci</h3>
+  <ul>
+    <li>Prednosti: sloboda korištenja, niži troškovi, sigurnost, podrška zajednice, učenje i eksperimentiranje.</li>
+    <li>Nedostaci: ponekad manje intuitivno sučelje, ograničena službena podrška, zahtjeva više tehničkog znanja.</li>
+  </ul>
+
+  <h3>Primjeri</h3>
+  <ul>
+    <li>Linux (Ubuntu, Fedora, Debian)</li>
+    <li>Mozilla Firefox</li>
+    <li>LibreOffice</li>
+    <li>GIMP</li>
+    <li>VLC Media Player</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Open-source softver je idealan za učenje, prilagodbu i kontrolu nad softverom. Obrati pažnju na licencu i sigurnosna ažuriranja.
+  </div>
+</div>
+
+<div id="freeware" class="section">
+  <h2>Freeware vs Trial softver</h2>
+  <p>Softver se često distribuira kao <strong>freeware</strong> ili <strong>trial</strong>. Oba omogućuju korištenje bez početne kupnje, ali se razlikuju u trajanju i funkcionalnosti.</p>
+
+  <h3>Freeware</h3>
+  <ul>
+    <li>Besplatan, neograničeno korištenje</li>
+    <li>Moguće ograničene funkcije ili reklame</li>
+    <li>Primjeri: VLC Media Player, Adobe Acrobat Reader</li>
+  </ul>
+
+  <h3>Trial</h3>
+  <ul>
+    <li>Privremeno besplatan, obično 7–30 dana</li>
+    <li>Nakon isteka potrebna kupnja licence</li>
+    <li>Primjeri: Adobe Photoshop trial, Microsoft Office trial</li>
+  </ul>
+
+  <h3>Ključne razlike</h3>
+  <table>
+    <tr><th>Karakteristika</th><th>Freeware</th><th>Trial</th></tr>
+    <tr><td>Cijena</td><td>Besplatno</td><td>Privremeno besplatno, potom kupnja</td></tr>
+    <tr><td>Vrijeme korištenja</td><td>Neograničeno</td><td>Ograničeno</td></tr>
+    <tr><td>Funkcionalnost</td><td>Puna ili ograničena</td><td>Moguće blokirane funkcije</td></tr>
+  </table>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Freeware je dugoročno rješenje, trial služi za testiranje prije kupnje.
+  </div>
+</div>
+
+<div id="licenca" class="section">
+  <h2>Što znači licenca za softver?</h2>
+  <p>Licenca je pravni ugovor koji definira kako softver može biti korišten, distribuiran i modificiran.</p>
+
+  <h3>Vrste licenci</h3>
+  <ul>
+    <li>Proprietary / zatvoreni softver – ograničena prava, ne može se mijenjati izvorni kod</li>
+    <li>Freeware – besplatan, kod nije uvijek dostupan</li>
+    <li>Shareware / trial – ograničeno vrijeme ili funkcionalnosti</li>
+    <li>Open-source – kod dostupan javnosti, moguće modifikacije i distribucija</li>
+    <li>Commercial – prodajni softver, zahtijeva kupnju licence</li>
+  </ul>
+
+  <h3>Što licenca definira?</h3>
+  <ul>
+    <li>Broj instalacija i uređaja</li>
+    <li>Pravo na ažuriranja i podršku</li>
+    <li>Mogućnost modifikacije i redistribucije</li>
+    <li>Ograničenja komercijalne upotrebe</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Poštuj licencu softvera – štiti tebe i prava autora.
+  </div>
+</div>
+
+<div id="verzija" class="section">
+  <h2>Softverska verzija (npr. v1.2.3)</h2>
+  <p>Verzija označava iteraciju softvera i služi za praćenje promjena, poboljšanja i ispravaka.</p>
+
+  <h3>Struktura</h3>
+  <ul>
+    <li>Major (prvi broj) – velike promjene ili novi dizajn</li>
+    <li>Minor (drugi broj) – manja poboljšanja i dodaci</li>
+    <li>Patch (treći broj) – ispravci grešaka i sigurnosna ažuriranja</li>
+  </ul>
+
+  <h3>Dodatne oznake</h3>
+  <ul>
+    <li>Alpha / Beta – testne verzije</li>
+    <li>RC (Release Candidate) – kandidat za stabilnu verziju</li>
+    <li>Hotfix – hitna ispravka greške</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Stabilne verzije su najbolje za svakodnevnu upotrebu; beta i alpha služe za testiranje i učenje.
+  </div>
+</div>
+
+<div id="uklanjanje" class="section">
+  <h2>Kako sigurno ukloniti softver?</h2>
+  <ul>
+    <li>Korištenje ugrađenih alata (Windows: Control Panel / Settings, macOS: Trash, Linux: apt/yum)</li>
+    <li>Većina programa ima vlastiti uninstaller</li>
+    <li>Specijalizirani alati: Revo Uninstaller, IObit Uninstaller, CCleaner</li>
+  </ul>
+
+  <h3>Što izbjegavati</h3>
+  <ul>
+    <li>Ne brisati samo folder programa</li>
+    <li>Ne brisati nasumične datoteke u sistemskim folderima</li>
+  </ul>
+
+  <h3>Nakon uklanjanja</h3>
+  <ul>
+    <li>Restart računala</li>
+    <li>Pokreni alat za čišćenje diska</li>
+    <li>Provjeri i očisti preostale datoteke</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako često testiraš softver, koristi uninstaller koji prati instalaciju i briše sve povezane datoteke.
+  </div>
+</div>
+
+<div id="os" class="section">
+  <h2>Kako funkcioniše operativni sistem?</h2>
+  <p>OS omogućava komunikaciju između hardvera i aplikacija. Bez OS-a, računar ne bi mogao obavljati korisne zadatke.</p>
+
+  <h3>Glavne funkcije</h3>
+  <ul>
+    <li>Upravljanje resursima (CPU, memorija, disk)</li>
+    <li>Upravljanje procesima i multitasking</li>
+    <li>Upravljanje datotekama i sigurnost</li>
+    <li>Komunikacija između hardvera i softvera</li>
+    <li>Korisničko sučelje (GUI ili CLI)</li>
+  </ul>
+
+  <h3>Komponente</h3>
+  <ul>
+    <li>Kernel – jezgra OS-a</li>
+    <li>Drivers – upravljački programi hardvera</li>
+    <li>Sistemske biblioteke – funkcije za aplikacije</li>
+    <li>Korisničko okruženje – GUI ili komandna linija</li>
+  </ul>
+
+  <h3>Primjeri OS-a</h3>
+  <ul>
+    <li>Windows – desktop, široka kompatibilnost</li>
+    <li>macOS – stabilnost i optimizacija za Apple hardver</li>
+    <li>Linux – open-source, serveri, razvoj</li>
+    <li>Android / iOS – mobilni OS</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Odaberi OS prema potrebama: Windows za igre i poslovne aplikacije, macOS za kreativni rad, Linux za fleksibilnost i kontrolu.
+  </div>
+</div>
+
+
+<div id="aplikacije" class="section">
+  <h2>Kako se aplikacije pokreću i komuniciraju s operativnim sustavom?</h2>
+  <p>Aplikacije ne rade direktno s hardverom – one komuniciraju s <strong>operativnim sustavom (OS)</strong>, koji zatim upravlja svim resursima računala. Ovaj proces omogućuje da programi budu stabilni, sigurni i funkcionalni, bez obzira na složenost hardverske arhitekture.</p>
+
+  <h3>Proces pokretanja aplikacije</h3>
+  <ul>
+    <li><strong>Pokretanje:</strong> Kada dvaput klikneš na ikonu ili pokreneš aplikaciju iz naredbenog retka, OS kreira <em>proces</em> u memoriji i učitava potrebne datoteke.</li>
+    <li><strong>Dodjela resursa:</strong> OS dodjeljuje aplikaciji dio procesorske snage (CPU), memoriju (RAM), kao i pristup disku i mreži.</li>
+    <li><strong>Komunikacija s kernelom:</strong> Aplikacija koristi <em>sistemske pozive</em> (system calls) da traži usluge od jezgre OS-a (npr. otvori datoteku, poveži se na internet).</li>
+    <li><strong>Pokretanje korisničkog sučelja:</strong> Ako je aplikacija grafička, OS kreira prozor, gumbe i druge elemente pomoću grafičkog podsustava.</li>
+  </ul>
+
+  <h3>Kako aplikacije komuniciraju s OS-om?</h3>
+  <ul>
+    <li><strong>Sistemski pozivi (System Calls):</strong> Standardizirane funkcije koje aplikacija koristi da bi zatražila uslugu od OS-a – npr. otvaranje datoteke ili pokretanje mrežne veze.</li>
+    <li><strong>API (Application Programming Interface):</strong> Programsko sučelje koje OS i aplikacije koriste za međusobnu komunikaciju. Primjer: Windows API, POSIX standard na Unix/Linux sustavima.</li>
+    <li><strong>Drajveri (Drivers):</strong> Ako aplikacija treba koristiti specifičan hardver (npr. grafičku karticu), komunicira s njim preko drajvera, a drajver prenosi zahtjeve OS-u.</li>
+  </ul>
+
+  <h3>Primjeri komunikacije aplikacija i OS-a</h3>
+  <ul>
+    <li>Kada otvoriš dokument u Microsoft Wordu – aplikacija šalje zahtjev OS-u da pronađe i pročita datoteku s diska.</li>
+    <li>Kada koristiš web preglednik – aplikacija traži od OS-a da uspostavi mrežnu vezu putem TCP/IP protokola.</li>
+    <li>Kada igraš videoigru – aplikacija koristi grafičke API-je (DirectX, OpenGL, Vulkan) kako bi OS upravljao GPU-om i prikazao sliku na ekranu.</li>
+  </ul>
+
+  <h3>Zašto je ova komunikacija važna?</h3>
+  <ul>
+    <li>Omogućuje da isti softver radi na različitim uređajima i konfiguracijama.</li>
+    <li>Pruža sigurnost – aplikacije ne mogu direktno upravljati hardverom bez dozvole OS-a.</li>
+    <li>Poboljšava stabilnost – ako se aplikacija sruši, OS sprječava da to utječe na ostatak sustava.</li>
+    <li>Omogućuje višezadaćnost – OS koordinira više aplikacija koje rade istovremeno.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Kada aplikacija ne radi pravilno, problem može biti u samom softveru, ali često je povezan s operativnim sustavom (nedostatak resursa, stari drajveri, nekompatibilne biblioteke).
+  </div>
+</div>
+
+<div id="zahtevi" class="section">
+  <h2>Zašto neki softveri zahtijevaju specifične sistemske zahtjeve?</h2>
+  <p>Sistemski zahtjevi određuju <strong>minimalne</strong> i <strong>preporučene</strong> resurse koje računalo treba imati kako bi softver radio ispravno. To uključuje procesor, memoriju (RAM), grafičku karticu, prostor na disku i verziju operativnog sustava. Ako softver ne dobije potrebne resurse, može raditi sporo, nestabilno ili uopće se ne može pokrenuti.</p>
+
+  <h3>Glavni razlozi zašto softver ima sistemske zahtjeve</h3>
+  <ul>
+    <li><strong>Procesorska snaga (CPU):</strong> Softver koji izvodi složene proračune (npr. 3D modeliranje, video montaža, igre) zahtijeva brze procesore s više jezgri.</li>
+    <li><strong>Memorija (RAM):</strong> Programi čuvaju podatke u RAM-u dok rade. Ako RAM-a nema dovoljno, sustav koristi disk kao zamjenu, što usporava rad.</li>
+    <li><strong>Grafička kartica (GPU):</strong> Softver za igre, animaciju i grafiku ovisi o snažnim grafičkim karticama s vlastitom video memorijom (VRAM).</li>
+    <li><strong>Prostor na disku:</strong> Neki programi, posebno igre i multimedijski softver, zauzimaju desetine gigabajta podataka.</li>
+    <li><strong>Operativni sustav:</strong> Softver je često razvijen za određenu verziju Windows-a, Linux-a ili macOS-a. Ako OS nije podržan, program se neće instalirati ili raditi ispravno.</li>
+  </ul>
+
+  <h3>Minimalni vs. preporučeni zahtjevi</h3>
+  <ul>
+    <li><strong>Minimalni zahtjevi:</strong> Najniža konfiguracija na kojoj softver može se pokrenuti, ali uz smanjen kvalitet i performanse.</li>
+    <li><strong>Preporučeni zahtjevi:</strong> Konfiguracija koja omogućuje nesmetan rad, dobar kvalitet prikaza i stabilnost.</li>
+  </ul>
+
+  <h3>Primjeri</h3>
+  <ul>
+    <li><em>Video igre:</em> Zahtijevaju moćne GPU-e (npr. NVIDIA RTX serija), brze procesore i veliki RAM da bi prikazivale realističnu grafiku.</li>
+    <li><em>Softver za obradu videa (Adobe Premiere, DaVinci Resolve):</em> Potrebni su snažni CPU i mnogo RAM-a, jer se obrađuje više gigabajta podataka u realnom vremenu.</li>
+    <li><em>Virtualne mašine:</em> Da bi radile, zahtijevaju dodatne resurse jer emuliraju cijeli operativni sustav unutar postojećeg.</li>
+  </ul>
+
+  <h3>Zašto je važno poštovati zahtjeve?</h3>
+  <ul>
+    <li>Ako hardver ne ispunjava zahtjeve, softver se može srušiti ili se uopće neće pokrenuti.</li>
+    <li>Korištenje preporučenih zahtjeva daje stabilnost, sigurnost i najbolje performanse.</li>
+    <li>Programeri definiraju zahtjeve na temelju testiranja i optimizacije – oni nisu slučajno odabrani.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Uvijek provjeri sistemske zahtjeve prije instalacije programa. Ako tvoje računalo ispunjava samo <em>minimalne</em> uvjete, program će raditi, ali možda sporo. Ako ispunjava <em>preporučene</em>, imat ćeš optimalno iskustvo.
+  </div>
+</div>
+
+<div id="zamrzavanje" class="section">
+  <h2>Zašto se softver ponekad "zamrzne" ili prestane raditi?</h2>
+  <p>Sigurno ti se barem jednom dogodilo da se neki program iznenada zaustavi, ne reagira na naredbe i pojavi se poruka <em>"Not Responding"</em> ili jednostavno sve stane. Takva situacija naziva se <strong>zamrzavanje softvera</strong> i može nastati iz više razloga koji su povezani s resursima računala, greškama u kodu ili vanjskim faktorima.</p>
+
+  <h3>Najčešći uzroci zamrzavanja softvera</h3>
+  <ul>
+    <li><strong>Nedostatak resursa:</strong> Ako program zahtijeva više RAM-a, procesorske snage ili grafičke obrade nego što je dostupno, može prestati reagirati.</li>
+    <li><strong>Greške u softveru (bugovi):</strong> Programerske greške mogu uzrokovati situacije u kojima se program zaglavi u beskonačnoj petlji ili ne može obraditi neki podatak.</li>
+    <li><strong>Sukobi između programa:</strong> Dva ili više programa koji pokušavaju koristiti iste resurse (npr. kameru, disk ili mrežu) mogu izazvati zamrzavanje.</li>
+    <li><strong>Oštećene datoteke:</strong> Ako je program oštećen ili neki važan fajl nedostaje (npr. nakon neispravne instalacije), može prestati raditi.</li>
+    <li><strong>Virusi ili zlonamjerni kod:</strong> Maliciozni softver može ometati normalan rad aplikacija.</li>
+    <li><strong>Problemi s operativnim sustavom:</strong> Ako OS ima greške ili nije ažuriran, to može utjecati na stabilnost svih aplikacija.</li>
+  </ul>
+
+  <h3>Kako reagirati kada softver prestane raditi?</h3>
+  <ul>
+    <li><strong>Pričekaj nekoliko sekundi:</strong> Ponekad program samo privremeno obrađuje veliku količinu podataka.</li>
+    <li><strong>Zatvori program:</strong> Ako ne reagira dulje vrijeme, koristi <em>Task Manager (Windows)</em> ili <em>Activity Monitor (macOS)</em> da ga isključiš.</li>
+    <li><strong>Provjeri resurse sustava:</strong> Pogledaj zauzetost CPU-a, RAM-a i diska – ako su na maksimumu, to je vjerojatno uzrok.</li>
+    <li><strong>Restartaj računalo:</strong> Ovo često oslobađa zauzete resurse i vraća stabilnost.</li>
+  </ul>
+
+  <h3>Kako spriječiti zamrzavanje u budućnosti?</h3>
+  <ul>
+    <li><strong>Redovito ažuriraj softver:</strong> Programeri često ispravljaju bugove i optimiziraju rad.</li>
+    <li><strong>Koristi preporučene sistemske zahtjeve:</strong> Ako je računalo preslabo, programi će se češće zamrzavati.</li>
+    <li><strong>Izbjegavaj pokretanje previše programa odjednom:</strong> Multitasking troši resurse.</li>
+    <li><strong>Koristi antivirus:</strong> Da bi spriječio zlonamjerni softver koji može usporiti ili zamrznuti aplikacije.</li>
+    <li><strong>Čuvaj disk i sustav:</strong> Redovito defragmentiraj disk (HDD), oslobađaj prostor i vodi računa o stabilnosti OS-a.</li>
+  </ul>
+
+  <h3>Primjer iz prakse</h3>
+  <p>Program za obradu videa može se zamrznuti ako pokušavaš renderirati 4K video na računalu sa samo 4 GB RAM-a. U ovom slučaju, problem nije u softveru, već u nedostatku resursa. S druge strane, ako se softver zamrzava i na snažnom računalu, vjerojatno je riječ o bug-u koji treba riješiti ažuriranjem.</p>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Ako se program često zamrzava, provjeri postoji li nova verzija, reinstaliraj ga ili kontaktiraj tehničku podršku. Ako se više različitih programa zamrzava, problem je vjerojatno u operativnom sustavu ili hardveru.
+  </div>
+</div>
+
+<div id="internet" class="section">
+  <h2>Kako softver komunicira s internetom?</h2>
+  <p>Skoro svaki moderni program koristi internet za razmjenu podataka. Bilo da je to <strong>web preglednik</strong> koji prikazuje stranice, <strong>aplikacija</strong> koja preuzima ažuriranja ili <strong>igra</strong> koja omogućuje online povezivanje – svi oni komuniciraju putem mrežnih protokola i posredstvom operativnog sustava.</p>
+
+  <h3>Način komunikacije</h3>
+  <ul>
+    <li><strong>Protokoli:</strong> Softver koristi protokole kao što su <em>HTTP/HTTPS</em> (za web stranice), <em>FTP</em> (za prijenos datoteka), <em>SMTP/IMAP</em> (za e-poštu), <em>TCP/IP</em> (osnova interneta).</li>
+    <li><strong>Portovi:</strong> Svaka aplikacija koristi određene mrežne portove za slanje i primanje podataka (npr. web preglednik koristi port 80 ili 443).</li>
+    <li><strong>Klijent-server model:</strong> Većina softvera je klijent koji se povezuje na server preko interneta i razmjenjuje podatke (npr. kada šalješ poruku na WhatsApp-u).</li>
+    <li><strong>API komunikacija:</strong> Mnoge aplikacije koriste API-je (Application Programming Interface) za komunikaciju sa servisima u oblaku.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li><em>Web preglednik (Chrome, Firefox):</em> Koristi HTTPS protokol za prijenos i primanje sadržaja sa servera.</li>
+    <li><em>Video streaming aplikacije (YouTube, Netflix):</em> Preko interneta šalju zahtjev serveru, a zauzvrat primaju video podatke u stvarnom vremenu.</li>
+    <li><em>Online igre:</em> Konstantno šalju i primaju podatke o kretanju i akcijama igrača kako bi sinhronizirale sve korisnike u mreži.</li>
+    <li><em>Cloud servisi (Google Drive, Dropbox):</em> Sinhroniziraju datoteke između računala i servera u oblaku.</li>
+  </ul>
+
+  <h3>Sigurnosni aspekti</h3>
+  <ul>
+    <li><strong>Šifriranje:</strong> HTTPS i VPN osiguravaju da podaci budu zaštićeni tijekom prijenosa.</li>
+    <li><strong>Firewall:</strong> Operativni sustav kontrolira koji programi imaju dopuštenje za korištenje interneta.</li>
+    <li><strong>Antivirus:</strong> Sprječava maliciozni softver da tajno komunicira sa zlonamjernim serverima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Savjet:</strong> Uvijek koristi aplikacije koje komuniciraju preko sigurnih protokola (<em>HTTPS, TLS</em>) i pazi koje dozvole daješ softveru. Ako primijetiš da neki program koristi internet bez tvoje dozvole, provjeri ga antivirusom.
+  </div>
+</div>
+
+<div id="aplikacijeVrste" class="section">
+  <h2>Koja je razlika između desktop, web i mobilnih aplikacija?</h2>
+  <p>Aplikacije mogu postojati u više oblika – kao <strong>desktop programi</strong> koje instaliraš na računalo, <strong>web aplikacije</strong> kojima pristupaš preko preglednika i <strong>mobilne aplikacije</strong> koje koristiš na telefonu ili tabletu. Svaka od njih ima svoje prednosti, mane i namjenu.</p>
+
+  <h3>Desktop aplikacije</h3>
+  <ul>
+    <li><strong>Definicija:</strong> Programi koji se instaliraju i pokreću direktno na računalu (Windows, macOS, Linux).</li>
+    <li><strong>Primjeri:</strong> Microsoft Word, Photoshop, AutoCAD, VLC Media Player.</li>
+    <li><strong>Prednosti:</strong> Brže, koriste punu snagu hardvera, dostupne i bez interneta.</li>
+    <li><strong>Nedostaci:</strong> Potrebna instalacija, zauzimaju prostor na disku, zahtijevaju redovita ažuriranja.</li>
+  </ul>
+
+  <h3>Web aplikacije</h3>
+  <ul>
+    <li><strong>Definicija:</strong> Aplikacije kojima pristupaš putem web preglednika (Chrome, Firefox, Edge) bez instalacije.</li>
+    <li><strong>Primjeri:</strong> Gmail, Google Docs, Canva, Trello.</li>
+    <li><strong>Prednosti:</strong> Nema instalacije, dostupne s bilo kojeg uređaja, automatski se ažuriraju.</li>
+    <li><strong>Nedostaci:</strong> Potrebna internetska ve
+
+<div id="uloge" class="section">
+  <h2>Koja je uloga programera, testera i softverskog inženjera?</h2>
+  <p>Razvoj softvera nije posao jedne osobe. U timu postoje različite uloge koje zajedno osiguravaju da softver bude funkcionalan, stabilan i bezbedan. Najvažnije uloge su <strong>programer</strong>, <strong>tester</strong> i <strong>softverski inženjer</strong>.</p>
+
+  <h3>Programer (Developer)</h3>
+  <ul>
+    <li>Piše i održava <strong>izvorni kod</strong> softvera koristeći odgovarajući programski jezik.</li>
+    <li>Razvija funkcionalnosti prema specifikacijama iz faze analize.</li>
+    <li>Popravlja greške (bugove) koje se otkriju tokom testiranja ili korišćenja.</li>
+    <li>Može biti specijalizovan za <em>frontend</em> (interfejs), <em>backend</em> (server) ili <em>full-stack</em> (obuhvata oba dela).</li>
+    <li>Primeri alata: Visual Studio, IntelliJ IDEA, PyCharm.</li>
+  </ul>
+
+  <h3>Tester (QA – Quality Assurance)</h3>
+  <ul>
+    <li>Proverava da li softver radi ispravno i da li funkcionalnosti rade prema specifikacijama.</li>
+    <li>Pronalazi bugove, greške i sigurnosne propuste pre nego što softver dođe do korisnika.</li>
+    <li>Koristi manuelno testiranje ili automatizovane alate (npr. Selenium, JUnit, TestNG).</li>
+    <li>Dokumentuje probleme i sarađuje sa programerima na njihovom rešavanju.</li>
+    <li>Osigurava da softver bude stabilan, bezbedan i user-friendly.</li>
+  </ul>
+
+  <h3>Softverski inženjer</h3>
+  <ul>
+    <li>Planira arhitekturu softvera i odlučuje kako će različiti delovi programa međusobno komunicirati.</li>
+    <li>Primenjuje principe inženjerskog pristupa – modularnost, skalabilnost, održivost i efikasnost.</li>
+    <li>Saradjuje sa programerima i testerima da bi osigurao kvalitet i dugovečnost softvera.</li>
+    <li>Odlučuje o korišćenju tehnologija, framework-a i alata u projektu.</li>
+    <li>Često vodi tim i koordinira razvojne procese.</li>
+  </ul>
+
+  <h3>Kako ove uloge rade zajedno</h3>
+  <ul>
+    <li>Programer razvija funkcionalnosti i piše kod.</li>
+    <li>Tester proverava kod, pronalazi greške i šalje povratne informacije programeru.</li>
+    <li>Softverski inženjer nadgleda proces i odlučuje kako se kod integriše i kako sistem funkcioniše.</li>
+    <li>Ova saradnja obezbeđuje stabilan, kvalitetan i bezbedan softver.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savet:</strong> Ako želiš da radiš u IT industriji, razumi razliku između ovih uloga. Počni sa programiranjem da stekneš iskustvo, ali uvek uči i o testiranju i arhitekturi softvera.
+  </div>
+</div>
+
+<div id="beta" class="section">
+  <h2>Šta je beta verzija softvera i čemu služi?</h2>
+  <p><strong>Beta verzija</strong> je testna verzija softvera koja se objavljuje pre zvaničnog izlaska (release). Njena svrha je da korisnici ili odabrani tester timovi isprobaju softver u realnom okruženju i prijave greške ili probleme koje programeri možda nisu uočili tokom internog testiranja.</p>
+
+  <h3>Karakteristike beta verzije</h3>
+  <ul>
+    <li>Softver je funkcionalan, ali može sadržavati bagove i nedovršene funkcionalnosti.</li>
+    <li>Korisnici mogu testirati nove funkcije pre zvaničnog izlaska.</li>
+    <li>Beta verzija pomaže programerima da unaprede stabilnost, performanse i korisnički interfejs softvera.</li>
+    <li>Često se beta verzija ograničava na određen broj korisnika ili vremenski period.</li>
+  </ul>
+
+  <h3>Vrste beta verzija</h3>
+  <ul>
+    <li><strong>Closed beta:</strong> Ograničen broj korisnika, pozvani su testeri ili fanovi koji prijave svoje probleme.</li>
+    <li><strong>Open beta:</strong> Dostupna široj javnosti, svi zainteresovani mogu preuzeti i testirati softver.</li>
+    <li><strong>Public beta:</strong> Beta verzija dostupna svima, često uz naglasak da softver još uvek nije potpuno stabilan.</li>
+  </ul>
+
+  <h3>Zašto softver ima beta verziju?</h3>
+  <ul>
+    <li>Pronalazi greške koje nisu uočene u internim testovima.</li>
+    <li>Sakuplja povratne informacije o upotrebljivosti i funkcionalnosti softvera.</li>
+    <li>Omogućava programerima da unaprede performanse i stabilnost pre zvanične objave.</li>
+    <li>Smanjuje rizik od negativnih komentara kada softver izađe u javnost.</li>
+  </ul>
+
+  <h3>Primjer iz prakse</h3>
+  <ul>
+    <li>Microsoft često objavljuje beta verzije Windows operativnog sistema za odabrane korisnike kroz Windows Insider program.</li>
+    <li>Video igre kao što su Fortnite ili PUBG objavljuju open beta testove da igrači prijave bugove i balans problema.</li>
+    <li>Mobilne aplikacije često imaju beta verzije dostupne putem TestFlight-a (iOS) ili Google Play Beta (Android).</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savet:</strong> Ako koristiš beta verziju softvera, uvek pravi backup podataka i budi spreman na moguće greške. Beta verzije su odličan način da prvi isprobaš nove funkcije, ali nisu uvek stabilne.
+  </div>
+</div>
+
+<div id="testiranje" class="section">
+  <h2>Kako funkcioniše softversko testiranje i otkrivanje grešaka?</h2>
+  <p>Softversko testiranje je proces kojim se proverava da li softver radi ispravno, da li zadovoljava zahteve korisnika i da li je bezbedan za korišćenje. Testiranje pomaže da se pronađu greške (bugovi) pre nego što softver dođe do krajnjih korisnika.</p>
+
+  <h3>Vrste testiranja softvera</h3>
+  <ul>
+    <li><strong>Manuelno testiranje:</strong> Tester ručno koristi softver i proverava funkcionalnosti, interfejs i rad programa.</li>
+    <li><strong>Automatizovano testiranje:</strong> Korišćenje alata i skripti (npr. Selenium, JUnit, Jest) za automatsko testiranje funkcija softvera.</li>
+    <li><strong>Jedinično testiranje (Unit testing):</strong> Testiranje pojedinačnih delova koda (funkcija, metoda) da rade ispravno.</li>
+    <li><strong>Integraciono testiranje:</strong> Proverava kako različiti delovi softvera rade zajedno.</li>
+    <li><strong>Sistemsko testiranje:</strong> Testira celokupan softver u okruženju koje simulira stvarnog korisnika.</li>
+    <li><strong>Prihvatanje od strane korisnika (UAT – User Acceptance Testing):</strong> Krajnji korisnici testiraju softver i daju povratne informacije.</li>
+    <li><strong>Testiranje performansi:</strong> Proverava brzinu, stabilnost i otpornost softvera pod opterećenjem.</li>
+    <li><strong>Sigurnosno testiranje:</strong> Proverava ranjivosti softvera na napade i zlonamerni kod.</li>
+  </ul>
+
+  <h3>Proces otkrivanja grešaka</h3>
+  <ol>
+    <li>Tester koristi softver i identifikuje nepravilnosti ili neočekivano ponašanje.</li>
+    <li>Greška se dokumentuje – opis problema, koraci za reprodukciju i screenshot ako je potrebno.</li>
+    <li>Programer dobija izveštaj o grešci i popravlja kod.</li>
+    <li>Softver se ponovo testira da se potvrdi da je greška ispravljena i da popravka nije izazvala nove probleme.</li>
+  </ol>
+
+  <h3>Alati za testiranje softvera</h3>
+  <ul>
+    <li>Selenium – automatizovano testiranje web aplikacija.</li>
+    <li>JUnit – testiranje Java aplikacija.</li>
+    <li>TestNG – napredni framework za testiranje Java softvera.</li>
+    <li>Postman – testiranje API-ja.</li>
+    <li>Jira / Bugzilla – praćenje grešaka i zadataka u razvoju softvera.</li>
+  </ul>
+
+  <h3>Primer iz prakse</h3>
+  <p>Ako tim razvija aplikaciju za online kupovinu:</p>
+  <ul>
+    <li>Jedinično testiranje proverava funkcije kao što je obračun ukupne cene u korpi.</li>
+    <li>Integraciono testiranje proverava da li plaćanje funkcioniše sa sistemom fakturacije.</li>
+    <li>Sistemsko testiranje proverava čitav proces kupovine – od izbora proizvoda do potvrde narudžbine.</li>
+    <li>UAT omogućava pravim korisnicima da prijave probleme sa interfejsom ili funkcionalnostima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savet:</strong> Testiranje je ključno za kvalitet softvera. Bez testera ili automatizovanih testova, softver može biti pun grešaka i nesiguran za korisnike.
+  </div>
+</div>
+
+<div id="virusi" class="section">
+  <h2>Može li softver sadržavati viruse ili zlonamjerni kod?</h2>
+  <p>Da, softver može sadržavati <strong>viruse</strong>, <strong>malware</strong> ili druge oblike zlonamernog koda. To se obično dešava kada se program preuzme sa nepouzdanih izvora ili ako je sam softver kompromitovan od strane hakera. Takav softver može oštetiti računar, ukrasti podatke ili ometati rad sistema.</p>
+
+  <h3>Vrste zlonamjernog softvera</h3>
+  <ul>
+    <li><strong>Virus:</strong> Program koji se sam replicira i širi, često oštećuje fajlove ili sistem.</li>
+    <li><strong>Trojanac:</strong> Softver koji se predstavlja kao legitimna aplikacija, ali obavlja zlonamerne radnje u pozadini.</li>
+    <li><strong>Spyware:</strong> Prati aktivnosti korisnika i šalje podatke trećim stranama.</li>
+    <li><strong>Ransomware:</strong> Zaključava fajlove ili sistem i traži otkupninu da bi korisnik mogao ponovo da pristupi svojim podacima.</li>
+    <li><strong>Adware:</strong> Prikazuje neželjene reklame i može usporiti rad sistema.</li>
+  </ul>
+
+  <h3>Kako prepoznati rizičan softver</h3>
+  <ul>
+    <li>Softver preuzet sa nepouzdanih web sajtova ili P2P mreža.</li>
+    <li>Nepoznati ili sumnjivi email attachment-i.</li>
+    <li>Programi koji traže nepotrebne administratorske privilegije.</li>
+    <li>Neobjašnjivo usporavanje računara ili čudno ponašanje sistema nakon instalacije.</li>
+  </ul>
+
+  <h3>Prevencija i zaštita</h3>
+  <ul>
+    <li>Koristi antivirus i antimalware softver, redovno ga ažuriraj.</li>
+    <li>Preuzimaj softver samo sa zvaničnih ili pouzdanih izvora.</li>
+    <li>Proveravaj digitalni potpis softvera ako je dostupan.</li>
+    <li>Redovno ažuriraj operativni sistem i aplikacije radi sigurnosnih zakrpa.</li>
+    <li>Koristi firewall i obrati pažnju na dozvole koje softver traži.</li>
+  </ul>
+
+  <h3>Primer iz prakse</h3>
+  <ul>
+    <li>Maliciozni programi ponekad se kriju u “crack-ovanim” verzijama popularnog softvera.</li>
+    <li>Trojanac može izgledati kao besplatna igra, ali u pozadini krade lozinke.</li>
+    <li>Ransomware napadi, kao što je WannaCry, šire se preko nezaštićenih sistema i blokiraju pristup podacima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savet:</strong> Nikada ne preuzimaj softver sa sumnjivih sajtova. Koristi antivirus, proveravaj izvore i instaliraj samo softver koji ima dobru reputaciju. Redovan backup podataka također smanjuje rizik od gubitka podataka.
+  </div>
+</div>
+
+<div id="bezbednost" class="section">
+  <h2>Kako provjeriti je li softver siguran za instalaciju?</h2>
+  <p>Prije instalacija softvera važno je provjeriti njegovu sigurnost kako bi se izbjegli virusi, malware ili drugi zlonamjerni kod. Siguran softver štiti tvoje podatke, sustav i privatnost.</p>
+
+  <h3>Koraci za provjeru sigurnosti softvera</h3>
+  <ul>
+    <li><strong>Preuzimanje sa pouzdanih izvora:</strong> Softver uvijek preuzimaj sa službenih web stranica proizvođača ili ovlaštenih trgovina aplikacijama (Google Play, App Store, Microsoft Store).</li>
+    <li><strong>Provjera digitalnog potpisa:</strong> Pouzdani softver često ima digitalni potpis koji potvrđuje njegovu autentičnost.</li>
+    <li><strong>Provjera recenzija i reputacije:</strong> Prije instalacije, pročitaj recenzije i provjeri reputaciju softvera na forumima ili web stranicama posvećenim IT sigurnosti.</li>
+    <li><strong>Skeneri i antivirus:</strong> Upotrijebi antivirusni program da skeniraš instalacijski paket prije pokretanja.</li>
+    <li><strong>Pažljivo s privilegijama:</strong> Provjeri koje dozvole softver traži i budi oprezan s programima koji zahtijevaju nepotrebne administratorske ovlasti.</li>
+    <li><strong>Provjera verzija i ažuriranja:</strong> Koristi najnoviju službenu verziju softvera jer često sadrži sigurnosne zakrpe.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Prije instalacije besplatnog PDF čitača, provjeri web stranicu proizvođača i skini službenu verziju.</li>
+    <li>Ne preuzimaj „crack-ovane“ verzije igara jer često sadrže trojance ili ransomware.</li>
+    <li>Provjeri recenzije i ocjene na App Store ili Google Play prije instalacije mobilnih aplikacija.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako nisi siguran u softver, nemoj ga instalirati. Redovno ažuriraj antivirusni program i operativni sustav, i uvijek koristi samo provjerene izvore. Sigurnost računala i podataka uvijek je prioritet.
+  </div>
+</div>
+
+<div id="piraterija" class="section">
+  <h2>Kako se štiti softver od piraterije i neovlaštene upotrebe?</h2>
+  <p>Softver se može ilegalno kopirati, dijeliti ili koristiti bez licence, što se naziva piraterija. Proizvođači softvera koriste različite metode kako bi spriječili neovlaštenu upotrebu i zaštitili svoj intelektualni rad.</p>
+
+  <h3>Metode zaštite softvera</h3>
+  <ul>
+    <li><strong>Licencni ključevi:</strong> Svaki softver dolazi s jedinstvenim ključem ili serijskim brojem koji se mora unijeti prilikom instalacije ili aktivacije.</li>
+    <li><strong>Online aktivacija:</strong> Softver provjerava vašu licencu putem interneta kako bi se osiguralo da je originalan.</li>
+    <li><strong>Digitalni potpis:</strong> Softver se potpisuje digitalnim certifikatom koji potvrđuje autentičnost i integritet datoteka.</li>
+    <li><strong>DRM (Digital Rights Management):</strong> Tehnologija koja kontrolira pristup softveru i sprječava ilegalno kopiranje ili dijeljenje.</li>
+    <li><strong>Uparivanje s hardverom:</strong> Neki softveri vežu licencu uz specifične komponente računala kako bi spriječili korištenje na drugim uređajima.</li>
+  </ul>
+
+  <h3>Kako prepoznati piratski softver</h3>
+  <ul>
+    <li>Nema licencnog ključa ili traži nelegalne serijske brojeve.</li>
+    <li>Dolazi s „crack-ovima“ ili aktivatorima koji zaobilaze zaštitu.</li>
+    <li>Preuzet je s neslužbenih web stranica ili torrent servisa.</li>
+    <li>Može sadržavati viruse ili zlonamjerni softver.</li>
+  </ul>
+
+  <h3>Zašto je legalni softver važan</h3>
+  <ul>
+    <li>Sigurnost – piratski softver često sadrži malware ili spyware.</li>
+    <li>Podrška – legalni softver omogućuje pristup ažuriranjima i tehničkoj podršci.</li>
+    <li>Zakonska zaštita – korištenje ilegalnog softvera je protivno zakonu i može imati pravne posljedice.</li>
+    <li>Kvaliteta – legalni softver je testiran, stabilan i pouzdan.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Microsoft Office zahtijeva aktivaciju putem licencnog ključa i online provjere.</li>
+    <li>Adobe Creative Cloud koristi DRM i online provjeru kako bi spriječio pirateriju.</li>
+    <li>Video igre često zahtijevaju online login (Steam, Epic Games) kako bi se provjerila licenca.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Uvijek koristi legalni softver. To osigurava sigurnost, stabilnost i pristup podršci. Piraterija nije samo nezakonita, već može ugroziti i tvoje podatke i uređaj.
+  </div>
+</div>
+
+<div id="neRadi" class="section">
+  <h2>Što učiniti ako softver ne radi kako treba?</h2>
+  <p>Ponekad softver ne radi ispravno zbog grešaka, sukoba s drugim programima, nekompatibilnosti s operativnim sustavom ili problema s konfiguracijom. Postoje koraci koje možeš poduzeti da riješiš problem ili ga minimaliziraš.</p>
+
+  <h3>Koraci za rješavanje problema</h3>
+  <ul>
+    <li><strong>Provjeri sistemske zahtjeve:</strong> Uvjeri se da tvoj računalni sustav zadovoljava minimalne zahtjeve softvera (RAM, procesor, grafička kartica).</li>
+    <li><strong>Ažuriranje softvera:</strong> Provjeri ima li dostupnih ažuriranja koja ispravljaju poznate bugove.</li>
+    <li><strong>Restart računala:</strong> Ponekad je jednostavno ponovno pokretanje sustava dovoljno da softver ponovno radi ispravno.</li>
+    <li><strong>Provjera konflikata:</strong> Isključi druge programe koji mogu ometati rad softvera (antivirus, firewall ili drugi procesi).</li>
+    <li><strong>Reinstalacija:</strong> Deinstaliraj softver i ponovno ga instaliraj, po mogućnosti iz službenog izvora.</li>
+    <li><strong>Provjeri logove i poruke o grešci:</strong> Softver često prikazuje poruke koje mogu pomoći u dijagnostici problema.</li>
+  </ul>
+
+  <h3>Kada kontaktirati tehničku podršku</h3>
+  <ul>
+    <li>Ako softver i dalje ne radi nakon osnovnih koraka rješavanja problema.</li>
+    <li>Ako ne možeš pronaći rješenje u dokumentaciji ili forumima.</li>
+    <li>Ako se problem ponavlja ili uzrokuje gubitak podataka.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Microsoft Word ne otvara dokument – provjeri ažuriranja ili ponovno instaliraj Office.</li>
+    <li>Video igra se ruši pri pokretanju – provjeri kompatibilnost s grafičkom karticom i drajverima.</li>
+    <li>Mobilna aplikacija ne sinkronizira podatke – provjeri internetsku vezu i ažuriranja aplikacije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prvo isprobaj jednostavne korake kao restart ili ažuriranje. Ako problem i dalje postoji, zabilježi detalje (poruke o grešci, verzija softvera, OS) i obrati se službenoj podršci.
+  </div>
+</div>
+
+<div id="podrska" class="section">
+  <h2>Kako se obratiti tehničkoj podršci?</h2>
+  <p>Tehnička podrška pomaže korisnicima da riješe probleme s softverom, dobiju savjete o instalaciji, konfiguraciji ili nadogradnji te osiguraju pravilno korištenje programa. Pravilan pristup podršci može značajno ubrzati rješavanje problema.</p>
+
+  <h3>Koraci za kontaktiranje tehničke podrške</h3>
+  <ul>
+    <li><strong>Provjeri dokumentaciju:</strong> Prije nego kontaktiraš podršku, pogledaj u priručnik, FAQ ili online dokumentaciju softvera.</li>
+    <li><strong>Prikupi informacije:</strong> Zabilježi verziju softvera, operativni sustav, opis problema, poruke o grešci i korake koji su doveli do problema.</li>
+    <li><strong>Kontaktiranje putem e-maila:</strong> Pošalji detaljan opis problema službenoj podršci. Priloži screenshotove ako je potrebno.</li>
+    <li><strong>Kontaktiranje putem chata ili telefona:</strong> Neki proizvođači nude live chat ili telefonsku podršku. Pripremi sve informacije prije razgovora.</li>
+    <li><strong>Korištenje foruma i zajednice:</strong> Mnoge aplikacije imaju korisničke forume ili zajednice gdje iskusni korisnici mogu pomoći.</li>
+  </ul>
+
+  <h3>Savjeti za efikasnu podršku</h3>
+  <ul>
+    <li>Opisi problem što detaljnije i preciznije.</li>
+    <li>Nemoj pretpostavljati rješenje – pruži sve informacije tehničkom timu.</li>
+    <li>Budi strpljiv – neki problemi zahtijevaju analizu ili testiranje od strane podrške.</li>
+    <li>Prati upute i korake koje ti tehnička podrška daje točno kako su napisane.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Problemi s instalacijom Office-a – kontaktiraš Microsoft podršku putem e-maila i dobiješ korake za rješavanje.</li>
+    <li>Greška u video igri – koristiš live chat na Steam-u za pomoć i prijavu bugova.</li>
+    <li>Mobilna aplikacija se ruši – upotrebljavaš Apple ili Google podršku za provjeru ažuriranja ili reinstalaciju.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dobro pripremljen zahtjev za podršku ubrzava rješavanje problema. Uvijek priloži sve potrebne informacije i slijedi upute tehničkog tima.
+  </div>
+</div>
+
+<div id="backup" class="section">
+  <h2>Kako sačuvati podatke ako softver prestane raditi?</h2>
+  <p>Kada softver prestane raditi ili se sruši, podaci mogu biti izgubljeni. Pravovremeno i pravilno čuvanje podataka ključno je za sigurnost i kontinuitet rada.</p>
+
+  <h3>Metode zaštite i čuvanja podataka</h3>
+  <ul>
+    <li><strong>Redovno spremanje:</strong> Često spremaj svoj rad unutar softvera (npr. Ctrl+S) kako bi minimalizirao gubitak podataka.</li>
+    <li><strong>Automatsko spremanje:</strong> Uključi opciju automatskog spremanja ako softver to podržava.</li>
+    <li><strong>Backup na vanjski uređaj:</strong> Kopiraj važne datoteke na USB, eksterni hard disk ili mrežno spremište (NAS).</li>
+    <li><strong>Cloud backup:</strong> Koristi servise kao što su Google Drive, OneDrive ili Dropbox za pohranu podataka online.</li>
+    <li><strong>Versijska kontrola:</strong> Za dokumente ili projekte koristi sustave verzija (npr. Git) kako bi mogao vratiti prethodne verzije datoteka.</li>
+  </ul>
+
+  <h3>Što učiniti kada softver prestane raditi</h3>
+  <ul>
+    <li>Nemoj odmah zatvarati softver – ponekad se može oporaviti ili spasiti nespremljene podatke.</li>
+    <li>Provjeri da li softver nudi oporavak datoteka (npr. opcija “Recover Unsaved Documents”).</li>
+    <li>Koristi backup datoteke da ponovno učitaš izgubljene podatke.</li>
+    <li>Ako je softver kritičan za posao, odmah prijavi problem tehničkoj podršci.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>U Wordu se dokument može automatski oporaviti putem funkcije AutoRecover.</li>
+    <li>Excel ili Google Sheets često nude verzijsku kontrolu kako bi se vratile prethodne verzije datoteka.</li>
+    <li>Softver za grafički dizajn kao što je Photoshop može imati “recovery” datoteke nakon pada programa.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Uvijek koristi kombinaciju lokalnog i cloud backup-a. Čak i ako softver prestane raditi, tvoji podaci će biti sigurni i dostupni.
+  </div>
+</div>
+
+<div id="usporava" class="section">
+  <h2>Zašto mi softver usporava računalo?</h2>
+  <p>Softver može usporavati računalo iz različitih razloga, uključujući zahtjeve programa, sukobe s drugim aplikacijama ili probleme s hardverom. Razumijevanje uzroka može pomoći u rješavanju problema i optimizaciji sustava.</p>
+
+  <h3>Glavni uzroci usporavanja</h3>
+  <ul>
+    <li><strong>Visoka potrošnja resursa:</strong> Neki softveri koriste puno RAM-a ili procesorske snage, što usporava cijeli sustav.</li>
+    <li><strong>Veliki broj pokrenutih programa:</strong> Ako istovremeno radi mnogo aplikacija, računalo može postati sporo.</li>
+    <li><strong>Stariji ili spor hardver:</strong> Softver nove generacije može zahtijevati više resursa nego što stariji hardver može pružiti.</li>
+    <li><strong>Nedovoljno optimiziran softver:</strong> Bugovi ili loš dizajn softvera mogu uzrokovati nepotrebno zauzimanje memorije ili procesora.</li>
+    <li><strong>Pozadinski procesi i servisni programi:</strong> Antivirus, ažuriranja ili drugi alati mogu usporavati računalo dok rade u pozadini.</li>
+    <li><strong>Fragmentacija diska ili nedostatak slobodnog prostora:</strong> Na starijim HDD-ovima nedostatak prostora ili fragmentacija može usporiti rad softvera.</li>
+  </ul>
+
+  <h3>Kako ubrzati softver i računalo</h3>
+  <ul>
+    <li>Zatvori programe koje trenutno ne koristiš.</li>
+    <li>Provjeri zahtjeve softvera i usporedi ih sa svojim hardverom.</li>
+    <li>Redovito ažuriraj softver i drajvere.</li>
+    <li>Koristi SSD diskove za brži rad aplikacija i sustava.</li>
+    <li>Provjeri pozadinske procese i onemogući nepotrebne aplikacije pri pokretanju sustava.</li>
+    <li>Defragmentiraj HDD ili očisti prostor na disku.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Video editor poput Adobe Premiere Pro zahtijeva puno RAM-a i procesorske snage – stari računalni sustavi mogu raditi sporo.</li>
+    <li>Pokretanje previše web preglednika s mnogim otvorenim tabovima može usporiti rad cijelog sustava.</li>
+    <li>Starija verzija antivirusa koja stalno skenira datoteke može privremeno usporiti druge aplikacije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prati resurse računala putem Task Manager-a ili sličnih alata. Redovito optimiziraj sustav i koristi softver prilagođen mogućnostima tvog računala.
+  </div>
+</div>
+
+<div id="ucenje" class="section">
+  <h2>Kako mogu naučiti koristiti novi softver?</h2>
+  <p>Učenje novog softvera može biti izazovno, ali uz prave metode i resurse možeš brzo savladati osnovne i napredne funkcije. Cilj je postati produktivan i koristiti softver efikasno bez frustracija.</p>
+
+  <h3>Koraci za učenje novog softvera</h3>
+  <ul>
+    <li><strong>Prouči dokumentaciju i priručnike:</strong> Većina softvera dolazi s korisničkim vodičima, FAQ sekcijama i uputama koje objašnjavaju osnovne funkcije.</li>
+    <li><strong>Pogledaj tutorijale:</strong> Video tutorijali na YouTube-u, Coursera-i ili Udemy-u mogu vizualno objasniti korake i trikove korištenja softvera.</li>
+    <li><strong>Praktično korištenje:</strong> Najbolje učenje dolazi kroz praksu. Isprobavaj različite funkcije i projekte dok učiš.</li>
+    <li><strong>Kratki vodiči i cheat sheet-ovi:</strong> Koristi brze reference za prečace i često korištene funkcije softvera.</li>
+    <li><strong>Pridruži se zajednici:</strong> Forumi, grupe na društvenim mrežama i online zajednice korisnika softvera mogu pomoći u rješavanju problema i razmjeni savjeta.</li>
+    <li><strong>Redovito ponavljanje:</strong> Prakticiraj i ponavljaj funkcije dok ih ne savladaš bez pomoći.</li>
+  </ul>
+
+  <h3>Alati i resursi za učenje softvera</h3>
+  <ul>
+    <li>Online tečajevi: Coursera, Udemy, LinkedIn Learning.</li>
+    <li>Video tutorijali: YouTube kanali specijalizirani za softver koji želiš naučiti.</li>
+    <li>Zvanična dokumentacija softvera: Microsoft, Adobe, AutoDesk i slični.</li>
+    <li>Forumi i zajednice: Stack Overflow, Reddit, službeni forumi softverskih proizvođača.</li>
+    <li>Praktični projekti: Izrada vlastitih projekata ili vježbi kako bi primijenio naučeno.</li>
+  </ul>
+
+  <h3>Primjeri iz prakse</h3>
+  <ul>
+    <li>Učenje Microsoft Excel-a: prati tutorijale za formule, pivot tablice i grafove, a zatim vježbaj na vlastitim podacima.</li>
+    <li>Učenje Photoshop-a: isprobavaj alate za obradu fotografija i koristi video vodiče za kreativne tehnike.</li>
+    <li>Učenje programskih jezika: prati tutorijale, rješavaj zadatke i koristi online zajednice za savjete i rješenja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ne pokušavaj naučiti sve odjednom. Postavi ciljeve, fokusiraj se na osnovne funkcije, a zatim polako istražuj napredne mogućnosti softvera.
+  </div>
+</div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body> 
+</html>

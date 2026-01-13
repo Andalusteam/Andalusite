@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomoć s roditeljstvom</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      overflow: hidden; /* fix page so no scrolling */
+      text-align: center;
+      position: relative;
+    }
+
+    .title-container {
+      margin-top: 20px;
+    }
+
+    .title-container h1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .title-container h2 {
+      font-size: 50px;
+      font-weight: bold;
+      color: goldenrod;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .categories-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .category {
+      background-color: white;
+      padding: 14px 22px;
+      border-radius: 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      min-width: 140px;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: gray;
+      font-weight: bold;
+    }
+
+    .category:hover {
+      background-color: #f2f2f2;
+      transform: translateY(-4px);
+      color: gray;
+    }
+
+    .swing-background {
+      position: fixed;
+      top: 0;
+      left: 70%;
+      transform: translateX(-50%);
+      width: 350px;
+      opacity: 0.3;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .help-text {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #555;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .help-question-box {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .help-question-box textarea {
+      width: 300px;
+      height: 80px;
+      resize: none;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .help-question-box button {
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .help-question-box button:hover {
+      background-color: #daa520;
+    }
+
+    /* Lower-left corner container for user questions */
+    .questions-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      max-width: 300px;
+      max-height: 50%;
+      overflow-y: auto;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      font-size: 14px;
+      z-index: 999;
+    }
+
+ .question-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 15px;
+      background-color: #e0e0e0; /* smooth grey */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .question-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    .question-item span {
+      flex: 1;
+      margin-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .answer-btn {
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .answer-btn:hover {
+      background-color: #daa520;
+    }
+.quiz-text {
+      position: fixed;
+      bottom: 510px;
+      left: 17px;
+      max-width: 320px;
+      max-height: 50%;
+      overflow-y: auto;
+      padding: 10px;
+      font-size: 16px;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="swing.png" alt="Swing" class="swing-background">
+
+  <div class="title-container">
+    <h1>Dobrodošli na dio stranice s pruženom pomoći u:</h1>
+    <h2>Roditeljstvo</h2>
+  </div>
+
+  <div class="categories-container">
+    <a href="children-help.html" class="category">Ponašanje djeteta</a>
+    <a href="parenting-tips.html" class="category">Savjeti</a>
+    <a href="school-support.html" class="category">Školska podrška</a>
+    <a href="emotional-guidance.html" class="category">Emocionalna podrška</a>
+  </div>
+
+  <div class="help-text">
+    Ako pomoć koja vam je potrebna nije nigdje navedena, napišite konkretno pitanje ili zadatak u vezi nečega zašto biste željeli da vam se pomogne.
+  </div>
+
+  <div class="help-question-box">
+    <textarea id="user-question" placeholder="Postavite svoje pitanje ovdje..."></textarea>
+    <button onclick="addQuestion()">Pošalji</button>
+  </div>
+
+  <!-- Lower-left Questions Container -->
+  <div class="questions-container" id="questions-container">
+    <!-- User questions will appear here -->
+  </div>
+<script>
+  const isAdmin = true; // admin can delete
+
+  function addQuestion() {
+    const textarea = document.getElementById('user-question');
+    const questionText = textarea.value.trim();
+    if (!questionText) return;
+
+    const container = document.getElementById('questions-container');
+
+    const questionItem = document.createElement('div');
+    questionItem.className = 'question-item';
+    questionItem.style.flexDirection = 'column';
+
+    const topRow = document.createElement('div');
+    topRow.style.display = 'flex';
+    topRow.style.alignItems = 'center';
+    topRow.style.justifyContent = 'space-between';
+    topRow.style.width = '100%';
+
+    const span = document.createElement('div');
+    span.textContent = questionText;
+    span.style.whiteSpace = 'pre-wrap'; // wrap long text
+    span.style.wordBreak = 'break-word'; // break long words
+    span.style.flex = '1';
+
+    const btnBox = document.createElement('div');
+    btnBox.style.display = 'flex';
+    btnBox.style.gap = '6px';
+
+    const answerBtn = document.createElement('button');
+    answerBtn.className = 'answer-btn';
+    answerBtn.textContent = 'Odgovori';
+    answerBtn.onclick = () => showAnswerBox(questionItem);
+
+    btnBox.appendChild(answerBtn);
+
+    if (isAdmin) {
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.textContent = 'Obriši';
+      deleteBtn.style.background = 'red';
+      deleteBtn.style.color = 'white';
+      deleteBtn.style.border = 'none';
+      deleteBtn.style.borderRadius = '6px';
+      deleteBtn.style.padding = '6px 10px';
+      deleteBtn.style.cursor = 'pointer';
+      deleteBtn.onclick = () => {
+        if (confirm('Jeste li sigurni da želite obrisati ovo pitanje?')) {
+          questionItem.remove();
+        }
+      };
+      btnBox.appendChild(deleteBtn);
+    }
+
+    topRow.appendChild(span);
+    topRow.appendChild(btnBox);
+    questionItem.appendChild(topRow);
+
+    container.appendChild(questionItem);
+    textarea.value = ''; // clear textarea
+  }
+
+  function showAnswerBox(questionItem) {
+    if (questionItem.querySelector('.answer-box')) return;
+
+    const answerBox = document.createElement('div');
+    answerBox.className = 'answer-box';
+    answerBox.style.marginTop = '6px';
+    answerBox.style.display = 'flex';
+    answerBox.style.flexDirection = 'column';
+
+    const textarea = document.createElement('textarea');
+    textarea.rows = 2;
+    textarea.style.resize = 'none';
+    textarea.style.marginBottom = '4px';
+    textarea.style.width = '100%';
+    textarea.style.wordBreak = 'break-word';
+    textarea.style.whiteSpace = 'pre-wrap';
+
+    const submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Pošalji odgovor';
+    submitBtn.className = 'answer-btn';
+    submitBtn.style.alignSelf = 'flex-start';
+
+    submitBtn.onclick = () => {
+      const answerText = textarea.value.trim();
+      if (!answerText) return;
+
+      // answer container with coin
+      const answerContainer = document.createElement('div');
+      answerContainer.style.display = 'flex';
+      answerContainer.style.alignItems = 'center';
+      answerContainer.style.gap = '6px';
+      answerContainer.style.marginTop = '4px';
+      answerContainer.style.flexWrap = 'wrap';
+
+      // coin image
+      const coin = document.createElement('img');
+      coin.src = 'Screenshot_68.png';
+      coin.style.width = '20px';
+      coin.style.height = '20px';
+      coin.style.transition = 'transform 1.2s ease-out, opacity 1.2s ease-out';
+      answerContainer.appendChild(coin);
+
+      // answer text
+      const answerDiv = document.createElement('div');
+      answerDiv.textContent = answerText;
+      answerDiv.style.color = 'green';
+      answerDiv.style.fontWeight = 'bold';
+      answerDiv.style.whiteSpace = 'pre-wrap'; // wrap
+      answerDiv.style.wordBreak = 'break-word';
+      answerDiv.style.flex = '1';
+
+      answerContainer.appendChild(answerDiv);
+
+      questionItem.appendChild(answerContainer);
+      answerBox.remove();
+
+      // animate coin
+      setTimeout(() => {
+        coin.style.transform = 'translateY(-10px)';
+        coin.style.opacity = '0';
+        setTimeout(() => coin.remove(), 1200);
+      }, 50);
+    };
+
+    answerBox.appendChild(textarea);
+    answerBox.appendChild(submitBtn);
+
+    questionItem.appendChild(answerBox);
+  }
+</script>
+
+</body>
+</html>

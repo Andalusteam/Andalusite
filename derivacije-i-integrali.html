@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Derivacije i integrali – Učenje Matematike</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    a {
+      color: #daa520;
+      text-decoration: none;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .example, .task, .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+
+    .example {
+      background-color: #fff8dc;
+    }
+
+    .task {
+      background-color: #fff3b0;
+    }
+
+    .tip {
+      background-color: #faf0e6;
+    }
+
+    .task strong, .example strong, .tip strong {
+      color: #b8860b;
+    }
+
+    code {
+      background-color: #fff7e6;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Derivacije i integrali</h1>
+
+  <div class="section">
+    <p><strong>Uvod:</strong><br>
+      Derivacija i integral su osnovni koncepti računa promjena i površina ispod krivulja.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Derivacija</h2>
+    <p>
+      Derivacija funkcije <code>f(x)</code> označava brzinu promjene funkcije u točki.<br>
+      Definicija: <code>f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}</code>
+    </p>
+    <ul>
+      <li>Derivacija konstante je 0</li>
+      <li>Derivacija <code>x^n</code> je <code>nx^{n-1}</code></li>
+      <li>Derivacija zbroja je zbroj derivacija</li>
+      <li>Derivacija produkta i kvocijenta slijedi pravila produkta i kvocijenta</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Integral</h2>
+    <p>
+      Integral funkcije <code>f(x)</code> predstavlja površinu ispod krivulje.<br>
+      Označava se kao <code>∫ f(x) dx</code>.
+    </p>
+    <ul>
+      <li>Neodređeni integral daje obitelj funkcija plus konstanta integracije</li>
+      <li>Određeni integral izračunava površinu između dviju točaka</li>
+      <li>Osnovne formule za integrale:<br>
+        <code>∫ x^n dx = \frac{x^{n+1}}{n+1} + C</code> (za <code>n ≠ -1</code>)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Primjeri</h2>
+
+    <div class="example">
+      <strong>Primjer 1:</strong><br>
+      Izračunaj derivaciju funkcije <code>f(x) = x^3 + 2x</code><br>
+      Rješenje: <code>f'(x) = 3x^2 + 2</code>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 2:</strong><br>
+      Izračunaj neodređeni integral <code>∫ (3x^2 + 4) dx</code><br>
+      Rješenje: <code>x^3 + 4x + C</code>
+    </div>
+
+    <div class="example">
+      <strong>Primjer 3:</strong><br>
+      Izračunaj određeni integral <code>∫_0^2 x dx</code><br>
+      Rješenje: <code>[ \frac{x^2}{2} ]_0^2 = \frac{2^2}{2} - \frac{0^2}{2} = 2</code>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadaci za vježbu</h2>
+
+    <div class="task"><strong>Zadatak 1:</strong> Izračunaj derivaciju funkcije <code>f(x) = 5x^4 - 3x + 7</code></div>
+    <div class="task"><strong>Zadatak 2:</strong> Izračunaj neodređeni integral <code>∫ (6x^3 - 2x) dx</code></div>
+    <div class="task"><strong>Zadatak 3:</strong> Izračunaj određeni integral <code>∫_1^3 (2x + 1) dx</code></div>
+    <div class="task"><strong>Zadatak 4:</strong> Izračunaj derivaciju funkcije <code>f(x) = \sin x</code></div>
+    <div class="task"><strong>Zadatak 5:</strong> Izračunaj integral funkcije <code>f(x) = \cos x</code></div>
+  </div>
+
+  <div class="section">
+    <h2>Savjeti</h2>
+
+    <div class="tip">
+      <strong>✔️ Korisni savjeti:</strong><br>
+      • Vježbaj osnovne formule derivacija i integrala<br>
+      • Nauči pravila za deriviranje i integriranje složenijih funkcija<br>
+      • Koristi grafove za razumijevanje funkcija<br>
+      • Vježbaj rješavanje zadataka korak po korak
+    </div>
+  </div>
+
+</body>
+</html>

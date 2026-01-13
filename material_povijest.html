@@ -1,0 +1,478 @@
+  <!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Povijest</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Povijest</h1>
+<nav>
+
+<!-- Left Side List -->
+<button onclick="showSection('history_egypt')">Stari Egipat</button>
+<button onclick="showSection('history_mesopotamia')">Mezopotamija</button>
+<button onclick="showSection('history_greeks')">Stari Grci</button>
+<button onclick="showSection('history_rome')">Stari Rim</button>
+<button onclick="showSection('history_fall_west_rome')">Propast Zapadnog Rimskog Carstva</button>
+<button onclick="showSection('history_franks_byzant_carol')">Franačka, Bizant, Karolinzi</button>
+<button onclick="showSection('history_croatia_early_middle')">Hrvatska u ranom srednjem vijeku</button>
+<button onclick="showSection('history_feudal_crusades')">Feudalizam, križarski ratovi</button>
+<button onclick="showSection('history_late_middle_ages')">Kasni srednji vijek</button>
+<button onclick="showSection('history_renaissance_humanism')">Renesansa, humanizam</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('history_age_of_discoveries')">Velika geografska otkrića</button>
+<button onclick="showSection('history_absolutism')">Apsolutizam</button>
+<button onclick="showSection('history_croatia_habsburgs')">Hrvatska pod Habsburgovcima</button>
+<button onclick="showSection('history_industrial_revolution')">Industrijska revolucija</button>
+<button onclick="showSection('history_french_revolution')">Francuska revolucija</button>
+<button onclick="showSection('history_national_movements')">Nacionalni pokreti</button>
+<button onclick="showSection('history_world_wars')">Prvi i Drugi svjetski rat</button>
+<button onclick="showSection('history_cold_war_croatia')">Hladni rat i Hrvatska do osamostaljenja</button>
+<button onclick="showSection('history_croatia_21_century')">Hrvatska u 21. stoljeću</button>
+
+</nav>
+
+<!-- Stari Egipat -->
+<div id="history_egypt" class="section">
+  <h2>Stari Egipat</h2>
+  <p>Stari Egipat bio je jedna od najdugovječnijih civilizacija u povijesti, koja je trajala više od 3000 godina. Smješten uz rijeku Nil, Egipat je razvio naprednu poljoprivredu zahvaljujući redovitim poplavama Nila, što je omogućilo plodno tlo i obilne žetve. Egipćani su poznati po piramidama, hramovima, faraonima i hijeroglifskom pismu.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Piramide u Gizi, uključujući Veliku piramidu Khufu, izgrađene su kao grobnice za faraone.</li>
+    <li>Mumifikacija je omogućavala očuvanje tijela za život poslije smrti, što je bilo povezano s religijskim vjerovanjima.</li>
+    <li>Egipćani su razvili matematičke tehnike za izgradnju piramida i medicinske metode za liječenje bolesnih.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratak esej (5-7 rečenica) o tome kako je Nil utjecao na razvoj Egipta i poljoprivredu. <i>Primjer: Dođi do zaključka da bez Nila Egipat ne bi mogao postati moćna civilizacija.</i></p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('egypt_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="egypt_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Nil je redovitim poplavama donosio plodno tlo, omogućavao navodnjavanje i transport. Time je podržavao poljoprivredu i trgovinu, što je omogućilo stabilnu civilizaciju s razvijenom kulturom, umjetnošću i arhitekturom.</p>
+  </div>
+</div>
+
+<!-- Mezopotamija -->
+<div id="history_mesopotamia" class="section">
+  <h2>Mezopotamija</h2>
+  <p>Mezopotamija, "zemlja između rijeka" Eufrata i Tigra, smatra se kolijevkom civilizacije. Tu su nastale prve grad-države i pismo, poznato kao klinasto pismo. Mezopotamija je dala značajan doprinos pravnom sustavu, matematici, astronomiji i književnosti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Sumerski gradovi uključuju Ur, Uruk i Lagash, gdje se razvijala kultura i trgovina.</li>
+    <li>Hammurabijev zakonik iz 18. stoljeća pr. Kr. bio je prvi pisani pravni sustav i temelj moderne pravne misli.</li>
+    <li>Mezopotamci su prvi koristili kotač i razvili kalendar temeljen na lunarnim i sunčevim ciklusima.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratki sastavak (5 rečenica) o tome kako je pismo utjecalo na društvenu organizaciju i administraciju gradova. <i>Primjer: Pismo je omogućilo zapisivanje zakona i vođenje administrativnih evidencija.</i></p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('mesopotamia_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="mesopotamia_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Pisanje je omogućilo zapisivanje zakona, vođenje administracije i trgovinskih evidencija, što je povećalo organizaciju i stabilnost društava te omogućilo učinkovitije upravljanje gradovima-državama.</p>
+  </div>
+</div>
+
+<!-- Stari Grci -->
+<div id="history_greeks" class="section">
+  <h2>Stari Grci</h2>
+  <p>Grčka civilizacija razvila se oko Egejskog mora i dala temelj zapadnoj filozofiji, umjetnosti, znanosti i demokraciji. Gradovi-države (polis) poput Atene i Sparte imali su različite političke sustave, a Grci su dali doprinos u matematici, astronomiji i sportu.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Filozofi poput Sokrata, Platona i Aristotela oblikovali su temelje filozofskog mišljenja i etike.</li>
+    <li>Demokracija u Ateni 5. stoljeća pr. Kr. omogućila je građanima sudjelovanje u političkom životu.</li>
+    <li>Olimpijske igre počele su 776. pr. Kr. u Olimpiji i slavile tjelesnu spretnost i timski duh.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Odaberi jednog grčkog filozofa i napiši ukratko njegovu ideju ili doprinos znanosti. <i>Primjer: Platon je razvijao ideju idealnih država i važnost obrazovanja.</i></p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('greeks_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="greeks_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Platon je razvio ideju idealne države i naglašavao važnost obrazovanja i etike, dok je Aristotel razvio logiku i sustave klasifikacije prirode i društva.</p>
+  </div>
+</div>
+
+<!-- Stari Rim -->
+<div id="history_rome" class="section">
+  <h2>Stari Rim</h2>
+  <p>Rimska civilizacija bila je jedna od najutjecajnijih u povijesti. Rim je kontrolirao veći dio Europe, Bliskog istoka i Sjeverne Afrike. Rimljani su poznati po zakonodavstvu, vojnim osvajanjima, urbanom planiranju i inženjerskim dostignućima.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Rim je osnovan 753. pr. Kr. i od monarhije prerastao u republiku, a zatim u carstvo.</li>
+    <li>Rimski zakon (Corpus Juris Civilis) oblikovao je pravne sustave mnogih europskih zemalja.</li>
+    <li>Rimski inženjeri gradili su ceste, mostove, akvadukte i javne zgrade.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kako su rimske ceste i akvadukti utjecali na svakodnevni život, trgovinu i vojnu strategiju.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('rome_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="rome_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Rimske ceste olakšavale su trgovinu i kretanje vojske, dok su akvadukti osiguravali opskrbu vodom, higijenu i zdravlje stanovnika, što je omogućilo stabilan i prosperitetan život u gradovima.</p>
+  </div>
+</div>
+
+<!-- Propast Zapadnog Rimskog Carstva -->
+<div id="history_fall_west_rome" class="section">
+  <h2>Propast Zapadnog Rimskog Carstva</h2>
+  <p>Zapadno Rimsko Carstvo prestalo je postojati 476. godine. Dugo razdoblje unutarnje nestabilnosti, ekonomske poteškoće, slabljenje vojne moći i napadi barbarskih plemena doveli su do kraja carstva. Taj događaj označava početak Srednjeg vijeka u Europi.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Posljednji car Zapadnog Rimskog Carstva bio je Romul Augustul.</li>
+    <li>Gotska, vandalska i hunska plemena izvršila su česte invazije na rimske teritorije.</li>
+    <li>Pad Rimskog Carstva doveo je do fragmentacije Europe u manje kraljevine i feudalne države.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši tri glavna razloga zbog kojih je Zapadno Rimsko Carstvo propalo i objasni kako je taj događaj utjecao na povijest Europe.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('fall_rome_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="fall_rome_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> 1) Unutarnja politička nestabilnost oslabila je centralnu vlast; 2) Ekonomske krize i inflacija smanjile su financijsku snagu carstva; 3) Napadi barbarskih plemena doveli su do gubitka teritorija i resursa. Posljedica je fragmentacija Europe i početak srednjovjekovne strukture društva.</p>
+  </div>
+</div>
+
+<!-- Franačka, Bizant, Karolinzi -->
+<div id="history_franks_byzant_carol" class="section">
+  <h2>Franačka, Bizant, Karolinzi</h2>
+  <p>U ranom srednjem vijeku Franačka (frankovska država) bila je jedno od najvažnijih kraljevstava u Europi. Karlo Veliki, poznat kao Karolinški car, proširio je teritorij i učvrstio kršćanstvo. Bizantsko carstvo, istočni nastavak Rimskog Carstva, bilo je poznato po jakom centraliziranom upravljanju i očuvanju klasične kulture.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Karlo Veliki krunisan je 800. godine u Rimu za cara Svetog Rimskog Carstva.</li>
+    <li>Bizantsko carstvo razvilo je složene pravne kodekse, uključujući Zakonik Justinijana.</li>
+    <li>Franačka kultura utjecala je na politički razvoj srednjovjekovne Europe i širenje kršćanstva.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Nacrtaj kartu Europe i označi teritorije Franačke, Karolinškog carstva i Bizanta. <i>Primjer: Obilježi glavni grad Bizanta (Carigrad) i Aachene.</i></p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('franks_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="franks_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Franačka je obuhvaćala teritorije današnje Francuske i Njemačke, Karolinško carstvo se protezalo i na Italiju, dok je Bizant dominirao Balkanskim i Malom Azijom, s glavnim gradom Carigradom.</p>
+  </div>
+</div>
+
+<!-- Hrvatska u ranom srednjem vijeku -->
+<div id="history_croatia_early_middle" class="section">
+  <h2>Hrvatska u ranom srednjem vijeku</h2>
+  <p>Hrvatski teritorij u ranom srednjem vijeku bio je podijeljen na kneževine i kasnije kraljevine. Prvi pisani izvori spominju dolazak Hrvata na ove prostore u 7. stoljeću. Formirana su prva središta vlasti i crkvene institucije koje su oblikovale kulturu i društveni život.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Prvi hrvatski kralj, Tomislav, okrunjen je oko 925. godine.</li>
+    <li>Hrvatska je bila pod utjecajem Bizanta, Franka i kasnije Ugarske, što je oblikovalo političku i kulturnu strukturu.</li>
+    <li>Razvijala se glagoljaška pismenost i crkveni život, što je imalo velik utjecaj na obrazovanje i kulturu.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratak sastavak (5 rečenica) o tome kako je dolazak Hrvata i prvi kraljevi oblikovali ranu hrvatsku državu.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('croatia_early_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="croatia_early_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Dolazak Hrvata i stvaranje kneževina postavili su temelje hrvatske državnosti, prvi kraljevi učvrstili su vlast i organizirali društvo, a kulturni utjecaji Bizanta i Franka oblikovali su politiku i crkveni život.</p>
+  </div>
+</div>
+
+<!-- Feudalizam i križarski ratovi -->
+<div id="history_feudal_crusades" class="section">
+  <h2>Feudalizam i križarski ratovi</h2>
+  <p>Feudalizam je bio društveni i ekonomski sustav srednjeg vijeka u kojem su zemlja i vlast bili podijeljeni između kraljeva, vazala i kmetova. Križarski ratovi (11.–13. stoljeće) pokrenuti su u cilju oslobađanja Svetih zemalja, ali su imali veliki utjecaj na trgovinu, kulturu i politiku Europe.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Feudalni sustav temelji se na međusobnim obvezama i lojalnosti između gospodara i vazala.</li>
+    <li>Križarski ratovi potaknuli su kulturnu razmjenu između Europe i Bliskog istoka.</li>
+    <li>Razvijala se trgovina i gradovi su počeli jačati svoj utjecaj unutar feudalnog sustava.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši primjer feudalne strukture u tvojoj zemlji ili imaginarnoj zemlji. <i>Primjer: kralj → vojvoda → grof → kmet.</i></p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('feudal_crusades_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="feudal_crusades_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Kralj daje zemlju vojvodi, vojvoda je odgovoran za lokalnu obranu i vojsku, grof upravlja manjim područjem, a kmetovi obrađuju zemlju u zamjenu za zaštitu i sigurnost.</p>
+  </div>
+</div>
+
+<!-- Kasni srednji vijek -->
+<div id="history_late_middle_ages" class="section">
+  <h2>Kasni srednji vijek</h2>
+  <p>Kasni srednji vijek (14.–15. stoljeće) obilježen je ekonomskim promjenama, porastom gradova, sve većom trgovinom i pojavom univerziteta. Ovo razdoblje također je obilježeno crnom kugom (pandemija kuge) i ratovima poput Stogodišnjeg rata, što je utjecalo na demografiju i društvo.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Pojava gradskih komuna i sve jača uloga trgovaca dovela je do postupnog slabljenja feudalnog sustava.</li>
+    <li>Crna kuga smanjila je populaciju Europe za trećinu u 14. stoljeću.</li>
+    <li>Univerziteti su počeli oblikovati obrazovanje i intelektualni život.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Istraži i napiši kratak tekst o utjecaju crne kuge na društvo i ekonomiju Europe.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('late_middle_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="late_middle_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Crna kuga smanjila je radnu snagu, izazvala pad proizvodnje hrane i poremetila feudalne odnose. Gradovi su počeli tražiti nove radnike, a društvene i ekonomske promjene ubrzale su prijelaz prema novovjekovnoj Europi.</p>
+  </div>
+</div>
+
+<!-- Renesansa i humanizam -->
+<div id="history_renaissance_humanism" class="section">
+  <h2>Renesansa i humanizam</h2>
+  <p>Renesansa (14.–17. stoljeće) bila je razdoblje obnove umjetnosti, znanosti i kulture u Europi. Humanizam je filozofski pokret koji naglašava vrijednost čovjeka, obrazovanja i kritičkog mišljenja. Renesansa je dovela do velikih otkrića u umjetnosti, arhitekturi, književnosti i znanosti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Leonardo da Vinci i Michelangelo su neki od najpoznatijih umjetnika renesanse.</li>
+    <li>Humanisti su proučavali klasične tekstove i razvijali ideje o ljudskoj prirodi i obrazovanju.</li>
+    <li>Renesansa je potaknula izume i tehnološki napredak, uključujući tiskarski stroj.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Odaberi jednog renesansnog umjetnika i napiši kratak opis njegovog najpoznatijeg djela.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('renaissance_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="renaissance_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Leonardo da Vinci stvorio je "Mona Lisu", poznatu po detaljnom prikazu izraza lica i korištenju sfumato tehnike. Michelangelo je naslikao strop Sikstinske kapele i izradio kip David, simbol snage i ljepote ljudskog tijela.</p>
+  </div>
+</div>
+
+<!-- Velika geografska otkrića -->
+<div id="history_age_of_discoveries" class="section">
+  <h2>Velika geografska otkrića</h2>
+  <p>Velika geografska otkrića (15.–17. stoljeće) bila su razdoblje kada europski pomorci i istraživači putuju širom svijeta, otkrivajući nova kopna i trgovačke rute. Portugal i Španjolska predvodili su istraživanja, a Kristofor Kolumbo, Vasco da Gama i Ferdinand Magellan postali su poznati po svojim putovanjima.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Krikolov Kolumbo je 1492. otkrio Ameriku misleći da je stigao do Indije.</li>
+    <li>Vasco da Gama je prvi put doplovio morem do Indije, otvarajući trgovačke rute za začine.</li>
+    <li>Ferdinand Magellan započeo je prvo putovanje oko svijeta, iako je preminuo tijekom ekspedicije.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Nacrtaj kartu svijeta i označi putanje Kolumba, Vaska da Game i Magellana.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('discoveries_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="discoveries_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Kolumbo: Španjolska → Karibi, Vasco da Gama: Portugal → Indija, Magellan: Portugal → okoliš svijeta (start Španjolska, prolazak kroz Atlantski ocean, Tihi ocean).</p>
+  </div>
+</div>
+
+<!-- Apsolutizam -->
+<div id="history_absolutism" class="section">
+  <h2>Apsolutizam</h2>
+  <p>Apsolutizam je politički sustav u kojem vladar ima neograničenu vlast, bez kontrole od strane parlamenta ili drugih institucija. Najpoznatiji apsolutni vladar bio je francuski kralj Luj XIV, poznat kao "Kralj Sunce". Apsolutizam je obilježen centralizacijom vlasti, jakom vojskom i simboličnim prikazima moći.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Luj XIV izgradio je raskošni dvorac u Versaillesu kao simbol svoje moći.</li>
+    <li>Apsolutizam je bio prisutan i u Španjolskoj, Rusiji (Petar Veliki) i Pruskoj (Friedrich Veliki).</li>
+    <li>Vladari su često koristili birokraciju i poreze za održavanje centralizirane vlasti.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratki tekst (5–6 rečenica) o tome kako apsolutizam utječe na društvo i obične ljude.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('absolutism_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="absolutism_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Apsolutizam centralizira vlast kod kralja, smanjuje utjecaj lokalnih plemića, uvodi stroge poreze, a obični ljudi imaju malo političkog prava. Kultura i umjetnost često se koriste za prikaz moći vladara.</p>
+  </div>
+</div>
+
+<!-- Hrvatska pod Habsburgovcima -->
+<div id="history_croatia_habsburgs" class="section">
+  <h2>Hrvatska pod Habsburgovcima</h2>
+  <p>Nakon 1527. godine, kada je hrvatski sabor izabrao Ferdinanda Habsburškog za kralja, Hrvatska je postala dio Habsburške Monarhije. Tijekom ovog razdoblja Hrvatska je bila pod stalnom prijetnjom Osmanskog Carstva, a vojna obrana postala je ključna zadaća države.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Usprkos ratovima, Habsburzi su donijeli administrativne reforme i razvijali vojnu organizaciju.</li>
+    <li>Gradnja fortifikacija poput Karlovca i drugih gradskih zidina bila je od velikog značaja.</li>
+    <li>Kultura i obrazovanje su se razvijali pod crkvenim i plemićkim utjecajem.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Nacrtaj kartu Hrvatske s označenim utvrđenim gradovima i područjima pod prijetnjom Osmanskog Carstva.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('habsburgs_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="habsburgs_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Utvrđeni gradovi: Karlovac, Sisak, Virovitica; područja prijetnje: južna i istočna Hrvatska blizu granice s Osmanlijama.</p>
+  </div>
+</div>
+
+<!-- Industrijska revolucija -->
+<div id="history_industrial_revolution" class="section">
+  <h2>Industrijska revolucija</h2>
+  <p>Industrijska revolucija (18.–19. stoljeće) obilježila je prijelaz s ručne proizvodnje na strojeve, što je drastično promijenilo društvo, ekonomiju i život ljudi. Prve tvornice nastale su u Velikoj Britaniji, a nova tehnologija omogućila je masovnu proizvodnju tekstila, čelika i ugljena.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Izumi poput parne lokomotive i stroja za tkanje ubrzali su proizvodnju.</li>
+    <li>Gradovi su se brzo širili, a radnici su često živjeli u teškim uvjetima.</li>
+    <li>Industrijska revolucija dovela je do nastanka radničkog pokreta i sindikata.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratak sastavak o tome kako je industrijska revolucija promijenila svakodnevni život ljudi.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('industrial_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="industrial_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Industrijska revolucija omogućila je masovnu proizvodnju, ubrzala gradnju i transport, ali radnici su radili duge sate u tvornicama s lošim uvjetima. Nastali su prvi sindikati i poboljšanja radničkih prava.</p>
+  </div>
+</div>
+
+<!-- Francuska revolucija -->
+<div id="history_french_revolution" class="section">
+  <h2>Francuska revolucija</h2>
+  <p>Francuska revolucija (1789.–1799.) označila je kraj apsolutističke monarhije i početak modernih demokratskih ideja u Europi. Revolucija je nastala zbog društvene nepravde, poreznog opterećenja i gladi. Ludvig XVI. i Marija Antoaneta postali su simboli despotske vlasti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Usvojena je Deklaracija o pravima čovjeka i građanina.</li>
+    <li>Revolucija je dovela do stvaranja Prve Francuske Republike i guillotine postala simbol revolucije.</li>
+    <li>Napoleonske vojne akcije bile su izravna posljedica revolucije.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši tko su bili ključni vođe revolucije i koje su promjene u društvu uspjeli ostvariti.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('french_revolution_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="french_revolution_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Ključni vođe: Robespierre, Danton, Marat. Promjene: ukidanje apsolutizma, uspostava republike, Deklaracija o pravima čovjeka i građanina, reforma poreza i prava građana.</p>
+  </div>
+</div>
+
+<!-- Nacionalni pokreti -->
+<div id="history_national_movements" class="section">
+  <h2>Nacionalni pokreti</h2>
+  <p>Nacionalni pokreti u 19. stoljeću bili su usmjereni na buđenje nacionalne svijesti i težnju za političkom samostalnošću naroda unutar velikih carevina. U Hrvatskoj je to razdoblje poznato kao Hrvatski narodni preporod, kada su se razvijali jezik, kultura i politički pokreti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Voditelji Hrvatskog narodnog preporoda: Ljudevit Gaj, Ivan Mažuranić, Ante Starčević.</li>
+    <li>Razvijala se tiskarska djelatnost, časopisi i knjige na hrvatskom jeziku.</li>
+    <li>Cilj nacionalnih pokreta bio je očuvanje identiteta i borba za prava unutar Habsburške Monarhije.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratak sastavak o jednom vođi Hrvatskog narodnog preporoda i njegovim djelima.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('national_movements_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="national_movements_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Ljudevit Gaj: osnivač časopisa “Danica”, razvija hrvatski jezik i alfabet, vodi borbu za kulturni i nacionalni identitet Hrvata.</p>
+  </div>
+</div>
+
+<!-- Prvi i Drugi svjetski rat -->
+<div id="history_world_wars" class="section">
+  <h2>Prvi i Drugi svjetski rat</h2>
+  <p>Prvi svjetski rat (1914.–1918.) i Drugi svjetski rat (1939.–1945.) dramatično su oblikovali povijest Europe i svijeta. Ratovi su doveli do promjena granica, političkih sustava i društvenih struktura, ali i do velikih ljudskih gubitaka.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Prvi svjetski rat započeo je atentatom u Sarajevu 1914. godine.</li>
+    <li>Drugi svjetski rat doveo je do Holokausta i stvaranja Ujedinjenih naroda.</li>
+    <li>Hrvatska je bila uključena u oba rata kroz Austro-Ugarsku, Kraljevinu SHS, NDH i partizanski pokret.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Nacrtaj vremensku liniju događaja u Hrvatskoj tijekom Prvog i Drugog svjetskog rata s označenim važnim događajima.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('world_wars_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="world_wars_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Prvi svjetski rat: 1914. atentat u Sarajevu → 1918. završetak rata. Drugi svjetski rat: 1939. početak rata → 1945. kraj rata, oslobođenje Hrvatske i formiranje Jugoslavije.</p>
+  </div>
+</div>
+
+<!-- Hladni rat i Hrvatska do osamostaljenja -->
+<div id="history_cold_war_croatia" class="section">
+  <h2>Hladni rat i Hrvatska do osamostaljenja</h2>
+  <p>Hladni rat (1947.–1991.) bio je razdoblje političke, ideološke i vojne napetosti između SAD-a i SSSR-a, poznat i kao sukob kapitalizma i komunizma. Hrvatska je u to vrijeme bila dio Socijalističke Federativne Republike Jugoslavije pod vodstvom Josipa Broza Tita.</p>
+  <p><b>Zanimljivosti:</b></p>
+  <ul>
+    <li>Jugoslavija se razlikovala od drugih komunističkih zemalja jer je imala nesvrstani položaj.</li>
+    <li>Ekonomija je bila planska, ali s elementima tržišne ekonomije.</li>
+    <li>Hrvatska je 1991. proglasila samostalnost i započeo je Domovinski rat.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši kratak tekst o tome kako je Hladni rat utjecao na život ljudi u Hrvatskoj i jugoslavenskoj politici.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('cold_war_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="cold_war_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hladni rat doveo je do politike nesvrstanosti, ograničene slobode putovanja i kontrole medija u Jugoslaviji. Hrvatska je kroz političke promjene i napetosti pripremala teren za osamostaljenje 1991.</p>
+  </div>
+</div>
+
+<!-- Hrvatska u 21. stoljeću -->
+<div id="history_croatia_21_century" class="section">
+  <h2>Hrvatska u 21. stoljeću</h2>
+  <p>Hrvatska u 21. stoljeću suočava se s izazovima moderne države, članstvom u Europskoj uniji (od 2013.), ekonomskim razvojem, demografskim problemima i očuvanjem kulturne baštine. Politički sustav je demokratski, a zemlja sudjeluje u globalnim pitanjima poput klimatskih promjena i sigurnosti.</p>
+  <p><b>Zanimljivosti:</b></p>
+  
+
+  <ul>
+    <li>Hrvatska je domaćin Europskog nogometnog prvenstva 2021. (koje je odgođeno zbog pandemije).</li>
+    <li>Pristup EU fondovima pomaže u modernizaciji infrastrukture i obrazovanja.</li>
+    <li>Hrvatska je postala važan turistički i kulturni centar u regiji.</li>
+  </ul>
+  <p><b>Zadatak za učenike:</b> Napiši sastavak o glavnim promjenama i izazovima Hrvatske u 21. stoljeću te kako EU članstvo utječe na život građana.</p>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('croatia_21_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="croatia_21_answer" style="display:none;">
+    <p><b>Primjer rješenja:</b> Hrvatska je modernizirala infrastrukturu, obrazovni sustav i ekonomiju. Članstvo u EU omogućuje pristup fondovima, slobodno kretanje građana i bolju suradnju u sigurnosti i turizmu. Glavni izazovi su depopulacija i ekonomske razlike unutar zemlje.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

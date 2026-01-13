@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matematika</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Matematika</h1>
+<nav>
+
+
+
+
+
+
+<!-- Left Side List -->
+<button onclick="showSection('math_roman_numerals')">Rimski brojevi</button>
+<button onclick="showSection('math_fractions')">Razlomci</button>
+<button onclick="showSection('math_decimals')">Decimalni brojevi</button>
+<button onclick="showSection('math_percentages')">Postotci</button>
+<button onclick="showSection('math_equations')">Jednadžbe</button>
+<button onclick="showSection('math_geometry')">Geometrija</button>
+<button onclick="showSection('math_area_perimeter')">Opseg i površina</button>
+<button onclick="showSection('math_measurements')">Zbrajanje mjera</button>
+<button onclick="showSection('math_statistics')">Statistika</button>
+
+<!-- Right Side List -->
+<button onclick="showSection('math_algebra')">Algebra</button>
+<button onclick="showSection('math_functions')">Funkcije</button>
+<button onclick="showSection('math_polynomials')">Polinomi</button>
+<button onclick="showSection('math_trigonometry')">Trigonometrija</button>
+<button onclick="showSection('math_matrices')">Matrice</button>
+<button onclick="showSection('math_vectors')">Vektori</button>
+<button onclick="showSection('math_3d_geometry')">Geometrija u prostoru</button>
+<button onclick="showSection('math_calculus')">Derivacije i integrali</button>
+<button onclick="showSection('math_combinatorics')">Kombinatorika</button>
+<button onclick="showSection('math_advanced_statistics')">Napredna statistika</button>
+
+</nav>
+
+<!-- Rimski brojevi -->
+<div id="math_roman_numerals" class="section">
+  <h2>Rimski brojevi</h2>
+  <p>Rimski brojevi su starorimski sustav zapisivanja brojeva pomoću slova: I, V, X, L, C, D i M. 
+     Oni se koriste i danas, npr. na satovima, u knjigama, za stoljeća ili kraljeve.</p>
+  <p>Osnovna pravila:</p>
+  <ul>
+    <li>I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000</li>
+    <li>Manji broj ispred većeg se oduzima (IX = 9), manji broj iza većeg se zbraja (XVI = 16)</li>
+    <li>Ne smiju se ponavljati više od tri puta za redom (III = 3, IIII nije dozvoljeno)</li>
+  </ul>
+  <p>Primjeri: 1987 = MCMLXXXVII, 44 = XLIV</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Napiši broj 47 i broj 2024 u rimskim brojevima.</li>
+    <li>Napiši broj 99 i broj 165 u rimskim brojevima.</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('roman_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="roman_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>47 = XLVII</li>
+      <li>2024 = MMXXIV</li>
+      <li>99 = XCIX</li>
+      <li>165 = CLXV</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Razlomci -->
+<div id="math_fractions" class="section">
+  <h2>Razlomci</h2>
+  <p>Razlomak prikazuje dio cjeline. Zapisuje se kao a/b, gdje je <b>a</b> brojnik, a <b>b</b> nazivnik. 
+     Nazivnik govori na koliko dijelova je cijela cjeline podijeljena, a brojnik koliko dijelova uzimamo.</p>
+  <p>Vrste razlomaka:</p>
+  <ul>
+    <li>Pravi razlomci: brojnik < nazivnik (npr. 3/4)</li>
+    <li>Nepravi razlomci: brojnik ≥ nazivnik (npr. 7/4)</li>
+    <li>Mješoviti brojevi: kombinacija cijelog broja i pravog razlomka (npr. 1 3/4)</li>
+  </ul>
+  <p>Za zbrajanje ili oduzimanje razlomaka s različitim nazivnicima, potrebno ih je svesti na zajednički nazivnik.</p>
+  <p>Primjeri: 1/2 + 1/3 = 3/6 + 2/6 = 5/6; 2/5 + 3/10 = 4/10 + 3/10 = 7/10</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj: 2/3 + 1/4 i 5/6 - 1/3</li>
+    <li>Izračunaj: 7/8 + 3/16 i 3/5 - 1/2</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('fractions_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="fractions_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>2/3 + 1/4 = 8/12 + 3/12 = 11/12</li>
+      <li>5/6 - 1/3 = 5/6 - 2/6 = 3/6 = 1/2</li>
+      <li>7/8 + 3/16 = 14/16 + 3/16 = 17/16 = 1 1/16</li>
+      <li>3/5 - 1/2 = 6/10 - 5/10 = 1/10</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Decimalni brojevi -->
+<div id="math_decimals" class="section">
+  <h2>Decimalni brojevi</h2>
+  <p>Decimalni brojevi su brojevi koji imaju decimalnu točku ili zarez koji odvaja cijeli dio od decimalnog dijela. 
+     Primjer: 3,75 znači 3 cijela dijela i 75 stotinki.</p>
+  <p>Osnovne operacije:</p>
+  <ul>
+    <li>Zbrajanje i oduzimanje: poravnajte decimalne točke i zatim zbrajajte/oduzimajte.</li>
+    <li>Množenje: zanemarite decimalnu točku, pomnožite kao cijele brojeve, pa vratite decimalnu točku prema zbroju decimalnih mjesta.</li>
+    <li>Podjela: pomaknite decimalu kako bi nazivnik bio cijeli broj, zatim podijelite.</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj: 3,25 + 4,7 i 5,6 - 2,35</li>
+    <li>Izračunaj: 2,5 × 0,4 i 7,2 ÷ 0,6</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('decimals_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="decimals_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>3,25 + 4,7 = 7,95</li>
+      <li>5,6 - 2,35 = 3,25</li>
+      <li>2,5 × 0,4 = 1,0</li>
+      <li>7,2 ÷ 0,6 = 12</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Postotci -->
+<div id="math_percentages" class="section">
+  <h2>Postotci</h2>
+  <p>Postotci prikazuju dio od 100. Npr. 25% znači 25 od 100, ili 1/4.</p>
+  <p>Osnovne formule:</p>
+  <ul>
+    <li>Postotak broja: (postotak ÷ 100) × broj</li>
+    <li>Broj iz postotka: postotak × ukupno ÷ 100</li>
+    <li>Povećanje/smanjenje za postotak: novi broj = stari broj × (1 ± postotak/100)</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Pronađi 20% od 150 i 35% od 200</li>
+    <li>Povećaj 120 za 15% i smanji 250 za 10%</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('percentages_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="percentages_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>20% od 150 = 30</li>
+      <li>35% od 200 = 70</li>
+      <li>120 povećano za 15% = 120 × 1,15 = 138</li>
+      <li>250 smanjeno za 10% = 250 × 0,9 = 225</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Jednadžbe -->
+<div id="math_equations" class="section">
+  <h2>Jednadžbe</h2>
+  <p>Jednadžba je matematički izraz koji sadrži nepoznanice i znak jednakosti. Cilj je pronaći vrijednost nepoznanice.</p>
+  <p>Osnovna pravila:</p>
+  <ul>
+    <li>Možete dodavati ili oduzimati istu vrijednost s obje strane jednadžbe.</li>
+    <li>Možete množiti ili dijeliti obje strane istom vrijednošću (osim 0).</li>
+    <li>Cilj je izolirati nepoznanicu na jednoj strani jednadžbe.</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Riješi: 2x + 5 = 13 i 3y - 7 = 8</li>
+    <li>Riješi: 5z/2 + 3 = 13 i 4a - 9 = 7</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('equations_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="equations_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>2x + 5 = 13 → 2x = 8 → x = 4</li>
+      <li>3y - 7 = 8 → 3y = 15 → y = 5</li>
+      <li>5z/2 + 3 = 13 → 5z/2 = 10 → z = 4</li>
+      <li>4a - 9 = 7 → 4a = 16 → a = 4</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Geometrija -->
+<div id="math_geometry" class="section">
+  <h2>Geometrija</h2>
+  <p>Geometrija proučava oblike, veličine, položaje i svojstva prostora i figura. 
+     Osnovne figure uključuju trokute, četverokute, krugove i mnogokute.</p>
+  <p>Važne formule:</p>
+  <ul>
+    <li>Trokut: zbroj unutarnjih kutova = 180°</li>
+    <li>Pravokutnik: suprotni stranice jednake</li>
+    <li>Krug: opseg = 2πr, površina = πr²</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Nacrtaj pravokutnik sa stranicama 5 cm i 8 cm i izračunaj opseg.</li>
+    <li>Nacrtaj jednakostranični trokut sa stranicom 6 cm i izračunaj unutarnje kutove.</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('geometry_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="geometry_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Opseg pravokutnika: 2 × (5 + 8) = 26 cm</li>
+      <li>Unutarnji kutovi jednakostraničnog trokuta: 60° svaki</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Opseg i površina -->
+<div id="math_area_perimeter" class="section">
+  <h2>Opseg i površina</h2>
+  <p>Opseg je ukupna duljina granice figure, a površina je veličina unutarnjeg prostora figure.</p>
+  <ul>
+    <li>Pravokutnik: opseg = 2(a + b), površina = a × b</li>
+    <li>Trokut: površina = 1/2 × baza × visina</li>
+    <li>Krug: opseg = 2πr, površina = πr²</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Pravokutnik stranica 7 cm i 10 cm – izračunaj opseg i površinu.</li>
+    <li>Krug polumjera 5 cm – izračunaj opseg i površinu (π = 3,14).</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('area_perimeter_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="area_perimeter_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Opseg pravokutnika: 2 × (7 + 10) = 34 cm</li>
+      <li>Površina pravokutnika: 7 × 10 = 70 cm²</li>
+      <li>Opseg kruga: 2 × 3,14 × 5 = 31,4 cm</li>
+      <li>Površina kruga: 3,14 × 5² = 78,5 cm²</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Zbrajanje mjera -->
+<div id="math_measurements" class="section">
+  <h2>Zbrajanje mjera</h2>
+  <p>Zbrajanje mjernih jedinica zahtijeva da jedinice budu iste (npr. cm sa cm, kg s kg).</p>
+  <ul>
+    <li>Duži: 2 m + 75 cm = ? → pretvori u iste jedinice: 2 m = 200 cm → 200 + 75 = 275 cm</li>
+    <li>Težina: 1,5 kg + 750 g = ? → pretvori u iste jedinice: 1,5 kg = 1500 g → 1500 + 750 = 2250 g = 2,25 kg</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Zbroji 3 m 25 cm + 1 m 40 cm i 2 kg 300 g + 1 kg 450 g</li>
+    <li>Izračunaj koliko je ukupno 5 l 250 ml + 2 l 750 ml i 7 h 45 min + 2 h 20 min</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('measurements_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="measurements_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>3 m 25 cm + 1 m 40 cm = 4 m 65 cm</li>
+      <li>2 kg 300 g + 1 kg 450 g = 3 kg 750 g</li>
+      <li>5 l 250 ml + 2 l 750 ml = 8 l</li>
+      <li>7 h 45 min + 2 h 20 min = 10 h 5 min</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Statistika -->
+<div id="math_statistics" class="section">
+  <h2>Statistika</h2>
+  <p>Statistika proučava prikupljanje, analiziranje i interpretaciju podataka.</p>
+  <ul>
+    <li>Prosjek: zbroj svih vrijednosti ÷ broj vrijednosti</li>
+    <li>Medijan: srednja vrijednost nakon poretka podataka</li>
+    <li>Moda: vrijednost koja se najčešće pojavljuje</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Pronađi prosjek, medijan i modu skupa brojeva: 4, 6, 4, 8, 10</li>
+    <li>Skup brojeva: 12, 15, 12, 18, 20 – izračunaj prosjek, medijan i modu</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('statistics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="statistics_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Skup 4,6,4,8,10 → prosjek = 32/5 = 6,4; medijan = 6; moda = 4</li>
+      <li>Skup 12,15,12,18,20 → prosjek = 77/5 = 15,4; medijan = 15; moda = 12</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Algebra -->
+<div id="math_algebra" class="section">
+  <h2>Algebra</h2>
+  <p>Algebra se bavi proučavanjem simbola i pravila za njihovu manipulaciju. Osnovni pojmovi uključuju izraze, jednadžbe i nejednadžbe.</p>
+  <p>Primjer izraza: 3x + 5, 2a² - b</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Riješi jednadžbu: 2x + 5 = 13</li>
+    <li>Pojednostavi izraz: 3a + 5a - 2</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('algebra_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="algebra_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>2x + 5 = 13 → 2x = 8 → x = 4</li>
+      <li>3a + 5a - 2 = 8a - 2</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Funkcije -->
+<div id="math_functions" class="section">
+  <h2>Funkcije</h2>
+  <p>Funkcija je pravilo koje svakom elementu iz skupa ulaznih vrijednosti pridružuje točno jednu izlaznu vrijednost.</p>
+  <p>Primjer: f(x) = 2x + 3</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj f(4) za f(x) = 2x + 3</li>
+    <li>Odredi vrijednost x ako je f(x) = 11, a f(x) = 2x + 3</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('functions_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="functions_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>f(4) = 2×4 + 3 = 11</li>
+      <li>2x + 3 = 11 → 2x = 8 → x = 4</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Polinomi -->
+<div id="math_polynomials" class="section">
+  <h2>Polinomi</h2>
+  <p>Polinom je algebraički izraz sastavljen od sume članova, gdje svaki član sadrži varijablu podignutu na nenegativnu cijelu potenciju i koeficijent.</p>
+  <p>Primjer: 3x² + 2x - 5</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Pojednostavi polinom: (2x² + 3x) + (x² - x)</li>
+    <li>Izračunaj vrijednost polinoma za x = 2: 3x² + 2x - 5</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('polynomials_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="polynomials_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>(2x² + 3x) + (x² - x) = 3x² + 2x</li>
+      <li>3×2² + 2×2 - 5 = 12 + 4 - 5 = 11</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Trigonometrija -->
+<div id="math_trigonometry" class="section">
+  <h2>Trigonometrija</h2>
+  <p>Trigonometrija proučava odnose između kutova i stranica trokuta, posebno pravokutnih trokuta.</p>
+  <ul>
+    <li>sin(θ) = nasuprotna/hipotenuza</li>
+    <li>cos(θ) = susjedna/hipotenuza</li>
+    <li>tan(θ) = nasuprotna/susjedna</li>
+  </ul>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Pronađi sin(30°) i cos(60°)</li>
+    <li>U pravokutnom trokutu gdje je susjedna stranica 4 cm, nasuprotna 3 cm – izračunaj tan(θ)</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('trigonometry_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="trigonometry_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>sin(30°) = 0,5; cos(60°) = 0,5</li>
+      <li>tan(θ) = nasuprotna/susjedna = 3/4 = 0,75</li>
+    </ul>
+  </div>
+</div>
+ 
+<!-- Matrice -->
+<div id="math_matrices" class="section">
+  <h2>Matrice</h2>
+  <p>Matrica je pravokutna tablica brojeva, simbola ili izraza raspoređenih u redove i stupce. Koristi se za rješavanje sustava jednadžbi, transformacije u geometriji i u računalnim znanostima.</p>
+  <p>Primjer matrice 2x2: [[1, 2], [3, 4]]</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj zbroj matrica: [[1,2],[3,4]] + [[5,6],[7,8]]</li>
+    <li>Pomnoži skalarom 3:  [[2,1],[0,4]] × 3</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('matrices_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="matrices_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>[[1+5, 2+6],[3+7, 4+8]] = [[6,8],[10,12]]</li>
+      <li>[[2×3, 1×3],[0×3, 4×3]] = [[6,3],[0,12]]</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Vektori -->
+<div id="math_vectors" class="section">
+  <h2>Vektori</h2>
+  <p>Vektor je usmjereni segment u prostoru ili ravnini. Predstavlja se koordinatama i koristi se za opisivanje veličine i smjera.</p>
+  <p>Primjer: v = (3,4)</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj duljinu vektora v = (3,4)</li>
+    <li>Saberi vektore: a = (1,2), b = (3,1)</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('vectors_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="vectors_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>|v| = √(3² + 4²) = √25 = 5</li>
+      <li>a + b = (1+3, 2+1) = (4,3)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Geometrija u prostoru -->
+<div id="math_3d_geometry" class="section">
+  <h2>Geometrija u prostoru</h2>
+  <p>Geometrija u prostoru bavi se proučavanjem tijela u tri dimenzije, uključujući kocke, kvadra, kugle i prizme.</p>
+  <p>Primjer: volumen kocke s rubom a = a³</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj volumen kocke s rubom a = 4 cm</li>
+    <li>Izračunaj površinu kvadra s dimenzijama 3 cm × 4 cm × 5 cm</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('3d_geometry_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="3d_geometry_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Volumen kocke = 4³ = 64 cm³</li>
+      <li>Površina kvadra = 2(3×4 + 3×5 + 4×5) = 2(12 + 15 + 20) = 94 cm²</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Derivacije i integrali -->
+<div id="math_calculus" class="section">
+  <h2>Derivacije i integrali</h2>
+  <p>Derivacija funkcije opisuje brzinu promjene funkcije u određenoj točki, dok integral funkcije predstavlja površinu ispod krivulje funkcije.</p>
+  <p>Primjer derivacije: f(x) = x² → f'(x) = 2x</p>
+  <p>Primjer integrala: ∫x dx = x²/2 + C</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj derivaciju funkcije f(x) = 3x³ + 2x</li>
+    <li>Izračunaj ∫ (2x + 1) dx</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('calculus_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="calculus_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>f'(x) = 9x² + 2</li>
+      <li>∫(2x + 1) dx = x² + x + C</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Kombinatorika -->
+<div id="math_combinatorics" class="section">
+  <h2>Kombinatorika</h2>
+  <p>Kombinatorika je grana matematike koja se bavi brojanjem i rasporedom objekata prema određenim pravilima. Koristi se za izračunavanje broja mogućih kombinacija i permutacija.</p>
+  <p>Primjer: Koliko različitih kombinacija od 2 slova možemo napraviti od slova A, B, C?</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Koliko različitih permutacija slova A, B, C postoji?</li>
+    <li>Koliko načina možemo odabrati 2 učenika iz grupe od 5 učenika?</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('combinatorics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="combinatorics_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Permutacije A, B, C = 3! = 6 (ABC, ACB, BAC, BCA, CAB, CBA)</li>
+      <li>Odabir 2 učenika od 5 = C(5,2) = 10</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Napredna statistika -->
+<div id="math_advanced_statistics" class="section">
+  <h2>Napredna statistika</h2>
+  <p>Napredna statistika uključuje metode za analizu podataka, poput regresije, korelacije, varijance i standardnih devijacija. Koristi se za donošenje zaključaka iz velikih skupova podataka.</p>
+  <p>Primjer: Ako imamo skup podataka {2, 4, 6, 8}, srednja vrijednost je (2+4+6+8)/4 = 5</p>
+
+  <p><b>Zadatci:</b></p>
+  <ol>
+    <li>Izračunaj srednju vrijednost skupa podataka: {3, 5, 7, 9}</li>
+    <li>Izračunaj varijancu istog skupa podataka</li>
+  </ol>
+
+  <button style="background-color:goldenrod;color:white;border:none;padding:10px 20px;margin:5px;cursor:pointer;"
+          onclick="document.getElementById('advanced_statistics_answer').style.display='block'">Pokaži rješenje</button>
+  <div id="advanced_statistics_answer" style="display:none;">
+    <p><b>Rješenja:</b></p>
+    <ul>
+      <li>Srednja vrijednost = (3+5+7+9)/4 = 6</li>
+      <li>Varijanca = [(3-6)² + (5-6)² + (7-6)² + (9-6)²] / 4 = (9+1+1+9)/4 = 5</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>

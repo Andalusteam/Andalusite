@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pitanja</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+    }
+
+    header {
+      background-color: white;
+      text-align: center;
+      padding: 25px 7px 7px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: goldenrod;
+      text-shadow: 1px 1px 2px #ccc, 2px 2px 4px rgba(218, 165, 32, 0.3);
+      margin: 0;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 25px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      color: #999;
+      background-color: #f5f5f5;
+    }
+
+    .question-lines {
+      margin-top: 12px;
+      width: 180%;
+      max-width: 900px;
+      margin-left: auto;     
+      margin-right: auto;    
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 32px;
+      background-color: #fff;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .question-lines .line {
+      border-bottom: 1px dashed #aaa;
+      padding: 6px 0;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Andalus overlay */
+    .andalus-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      font-weight: bold;
+      color: goldenrod;
+      opacity: 0.25; /* transparent effect */
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: lightgray;
+      text-align: center;
+      font-size: 14px;
+      padding: 8px 0;
+      color: #555;
+      border-top: 1px solid #ccc;
+      z-index: 999;
+    }
+
+    .info-message {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .info-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .info-image {
+      width: 200px;
+      height: 195px;
+    }
+
+    .leaderboard {
+      position: absolute;
+      top: 45px;
+      left: 60px;
+      width:250px;
+      background-color: #fff;
+      border: 2px grey;
+      border-radius: 12px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      padding: 16px;
+      font-family: 'Segoe UI', sans-serif;
+      z-index: 1000;
+    }
+
+    .leaderboard h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: goldenrod;
+      text-align: center;
+    }
+
+    .leaderboard ol {
+      list-style: decimal inside;
+      margin: 0;
+      padding: 0;
+    }
+
+    .leaderboard li {
+      font-size: 14px;
+      padding: 4px 0;
+      color: #444;
+    }
+
+    /* Answer button styling */
+    .answer-btn {
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-left: 10px;
+    }
+
+    .answer-btn:hover {
+      background-color: #daa520;
+    }
+    .delete-btn {
+  float: right; /* moves delete button to the right of the question */
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 2px 6px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.question-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* question left, delete right */
+  margin-bottom: 6px;
+  padding: 4px;
+}
+
+.line {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.reward-popup {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  color: goldenrod;
+  font-size: 14px;
+  margin-left: 8px;
+  opacity: 1;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.reward-popup img {
+  width: 22px;
+  height: 22px;
+}
+.answer-inline {
+  display: inline-block;
+  margin-left: 8px;
+  max-width: 80%;          /* keep it within question container */
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+  line-height: 1.4em;
+}
+.line {
+  display: flex;
+  flex-direction: column; /* stack question and answers vertically */
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-weight: bold;
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.answer-inline {
+  color: green;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;  /* stay within container */
+  line-height: 1.4em;
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="leaderboard">
+  <h3>Top odgovarači</h3>
+  <ol id="leaderboard-list">
+    <li><em>Učitavanje...</em></li>
+  </ol>
+</div>
+
+<header>
+  <img src="Screenshot.png" alt="Coins" class="info-image" />
+  <div>
+    Ovdje su sva postavljena pitanja na stranici... <br>
+    <strong>Odgovori na pitanja i prikupi kovanice.</strong>
+  </div>
+</header>
+
+<div class="question-box-scrollable">
+  <div class="andalus-title">Andalus</div> <!-- ✨ Goldenrod overlay -->
+<div class="question-lines" id="questions-list">
+  <!-- Pitanja će se puniti ovdje -->
+</div>
+<script>
+  const isAdmin = true; // admin can delete
+
+  let savedQuestions = JSON.parse(localStorage.getItem("questions")) || [];
+  let savedAnswers = JSON.parse(localStorage.getItem("answers")) || {}; 
+
+  const qList = document.getElementById("questions-list");
+
+  function renderQuestions() {
+    qList.innerHTML = "";
+
+    if (savedQuestions.length === 0) {
+      qList.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
+    } else {
+      savedQuestions.forEach((q, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "question-wrapper";
+
+        const div = document.createElement("div");
+        div.className = "line";
+
+        // question block
+        const text = document.createElement("div");
+        text.className = "question-text";
+        text.textContent = q;
+        div.appendChild(text);
+
+        // answers block
+        if (savedAnswers[q] && savedAnswers[q].length > 0) {
+          const ansDiv = document.createElement("div");
+          ansDiv.className = "answer-inline";
+          ansDiv.textContent = "Odgovori: ";
+
+          savedAnswers[q].forEach((ansObj, i) => {
+            const ansWrapper = document.createElement("span");
+            ansWrapper.style.display = "inline-flex";
+            ansWrapper.style.alignItems = "center";
+            ansWrapper.style.gap = "4px"; // space between coin and answer
+
+            // reward coin for user's own answer
+            if (ansObj.mine) {
+              const coin = document.createElement("img");
+              coin.src = "Screenshot_68.png";
+              coin.style.width = "18px";
+              coin.style.height = "18px";
+              coin.style.transition = "transform 1.2s ease-out, opacity 1.2s ease-out";
+              ansWrapper.appendChild(coin);
+
+              // animate coin
+              setTimeout(() => {
+                coin.style.transform = "translateX(-10px) translateY(-5px)";
+                coin.style.opacity = "0";
+                setTimeout(() => coin.remove(), 500);
+              }, 200);
+            }
+
+            const ansEl = document.createElement("span");
+            ansEl.textContent = ansObj.text;
+            if (ansObj.mine) {
+              ansEl.style.color = "green";
+              ansEl.style.fontWeight = "bold";
+            }
+
+            ansWrapper.appendChild(ansEl);
+            ansDiv.appendChild(ansWrapper);
+
+            if (i < savedAnswers[q].length - 1) {
+              ansDiv.appendChild(document.createTextNode(", "));
+            }
+          });
+
+          div.appendChild(ansDiv);
+        }
+
+        // Answer button
+        const answerBtn = document.createElement("button");
+        answerBtn.className = "answer-btn";
+        answerBtn.textContent = "Odgovori";
+        answerBtn.onclick = () => {
+          answerBtn.style.display = "none";
+
+          const input = document.createElement("input");
+          input.type = "text";
+          input.className = "answer-input";
+          input.placeholder = "Upiši odgovor ovdje...";
+
+          const sendBtn = document.createElement("button");
+          sendBtn.className = "send-answer-btn";
+          sendBtn.textContent = "Pošalji";
+          sendBtn.onclick = () => {
+            const answer = input.value.trim();
+            if (answer) {
+              if (!savedAnswers[q]) savedAnswers[q] = [];
+              savedAnswers[q].push({ text: answer, mine: true });
+              localStorage.setItem("answers", JSON.stringify(savedAnswers));
+              renderQuestions();
+            }
+          };
+
+          div.appendChild(input);
+          div.appendChild(sendBtn);
+        };
+
+        div.appendChild(answerBtn);
+        wrapper.appendChild(div);
+
+        // Admin delete
+        if (isAdmin) {
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "delete-btn";
+          deleteBtn.textContent = "Obriši";
+          deleteBtn.onclick = () => {
+            if (confirm("Jeste li sigurni da želite obrisati ovo pitanje?")) {
+              savedQuestions.splice(index, 1);
+              delete savedAnswers[q];
+              localStorage.setItem("questions", JSON.stringify(savedQuestions));
+              localStorage.setItem("answers", JSON.stringify(savedAnswers));
+              renderQuestions();
+            }
+          };
+          wrapper.appendChild(deleteBtn);
+        }
+
+        qList.appendChild(wrapper);
+      });
+    }
+  }
+
+  renderQuestions();
+</script>

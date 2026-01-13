@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emocionalna podrška</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #b8860b;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff3b0;
+      border: 1px solid #daa520;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #fff8dc;
+    }
+
+    .section {
+      display: none; /* hidden by default */
+      margin-bottom: 2rem;
+    }
+
+    .active {
+      display: block; /* only active section is visible */
+    }
+
+    .tip {
+      border-left: 5px solid #daa520;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      background-color: #faf0e6;
+    }
+
+    .tip strong {
+      color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emocionalna podrška</h1>
+<nav>
+
+
+<button onclick="showSection('prepoznati_emocije')">Kako prepoznati vlastite emocije i što one znače?</button>
+<button onclick="showSection('preplavljen_emocijama')">Zašto se ponekad osjećamo preplavljeni emocijama?</button>
+<button onclick="showSection('emocije_problem')">Kako prepoznati kada emocije postanu problem (npr. anksioznost, depresija)?</button>
+<button onclick="showSection('dijete_emocije')">Kako naučiti dijete da prepozna i izrazi svoje emocije na zdrav način?</button>
+<button onclick="showSection('negativne_emocije')">Kako se nositi s negativnim emocijama poput ljutnje, tuge ili straha?</button>
+<button onclick="showSection('pomoc_djetetu_emocije')">Kako pomoći djetetu sa problemima u upravljanju emocijama?</button>
+<button onclick="showSection('vaznost_izraza_emocija')">Zašto je važno izraziti emocije, a ne ih potiskivati?</button>
+<button onclick="showSection('emocije_utjecaj')">Kako emocije utječu na naše ponašanje i odnose s drugim ljudima?</button>
+<button onclick="showSection('reakcija_snazna_emocija')">Kako reagirati u trenutku kada osjetimo snažnu emociju (npr. bijes ili frustraciju)?</button>
+<button onclick="showSection('emocionalna_samoregulacija')">Kako pomoći djetetu da nauči emocionalnu samoregulaciju?</button>
+
+<button onclick="showSection('emocije_obitelj')">Kako se nositi s emocijama u obitelji?</button>
+<button onclick="showSection('dijete_izrazi_skola')">Kako pomoći djetetu da se izražava emocionalno u školi?</button>
+<button onclick="showSection('dijete_stres_situacije')">Kako pomoći djetetu da izdrži stresne situacije?</button>
+<button onclick="showSection('vaznost_ei_djete')">Zašto je emocionalna inteligencija važna za djetetov razvoj?</button>
+<button onclick="showSection('razvoj_svijesti_djece')">Kako djeca razvijaju emocionalnu svijest?</button>
+<button onclick="showSection('emocije_trauma')">Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume?</button>
+<button onclick="showSection('prepoznati_potrebe_djeteta')">Kako prepoznati emocionalne potrebe djeteta?</button>
+<button onclick="showSection('reakcija_snazna_emocija2')">Kako reagirati u trenutku kada osjetimo snažnu emociju (npr. bijes ili frustraciju)?</button>
+<button onclick="showSection('emocionalna_samoregulacija2')">Kako pomoći djetetu naučiti emocionalnu samoregulaciju?</button>
+
+</nav>
+
+<!-- 1. Kako prepoznati vlastite emocije i što one znače -->
+<div id="prepoznati_emocije" class="section">
+  <h2>Kako prepoznati vlastite emocije i što one znače?</h2>
+  <p>Prepoznavanje vlastitih emocija znači svjesno uočavanje što osjećamo u određenom trenutku i razumijevanje razloga tih osjećaja. Emocije su signali koji nam pomažu shvatiti naše potrebe i reakcije na okolinu.</p>
+
+  <h3>Strategije prepoznavanja emocija</h3>
+  <ul>
+    <li>📝 <strong>Dnevnik emocija:</strong> Zapisujte dnevno što osjećate, kada i zbog čega.</li>
+    <li> <strong>Razlikovanje tjelesnih znakova:</strong> Primijetite fizičke reakcije (npr. ubrzano disanje, napetost mišića) povezane s emocijama.</li>
+    <li>💬 <strong>Imenovanje osjećaja:</strong> Naučite imenovati emocije – ljutnja, tuga, frustracija, radost – kako biste ih lakše razumjeli.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Osjetite napetost u ramenima kada razgovarate s nadređenim – moguće je da osjećate nervozu ili strah.</li>
+    <li>✔️ Kada ste uzbuđeni zbog nečega, zabilježite u dnevnik: „Danas sam osjetio radost jer sam završio važan zadatak.“</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Prepoznavanje emocija prvi je korak ka njihovom zdravom upravljanju.
+  </div>
+</div>
+
+<!-- 2. Zašto se ponekad osjećamo preplavljeni emocijama -->
+<div id="preplavljen_emocijama" class="section">
+  <h2>Zašto se ponekad osjećamo preplavljeni emocijama?</h2>
+  <p>Preplavljenost emocijama nastaje kada osjećaji postanu intenzivni ili se nagomilaju bez adekvatnog izražavanja. To može uzrokovati stres, tjeskobu ili fizičke simptome poput glavobolje i umora.</p>
+
+  <h3>Razlozi preplavljenosti</h3>
+  <ul>
+    <li>🌪️ <strong>Previše obaveza ili zahtjeva:</strong> Kada smo pod pritiskom, emocije lako eskaliraju.</li>
+    <li>💭 <strong>Potisnute emocije:</strong> Neraščišćeni osjećaji iz prošlih situacija mogu se nagomilati.</li>
+    <li> <strong>Intenzivne situacije:</strong> Neočekivane promjene ili konflikti mogu uzrokovati trenutnu emocionalnu preplavljenost.</li>
+  </ul>
+
+  <h3>Strategije smirivanja</h3>
+  <ul>
+    <li> <strong>Tehnike disanja:</strong> Duboko disanje ili brojanje do 10 smiruje tijelo i um.</li>
+    <li>📝 <strong>Izražavanje u dnevnik:</strong> Pisanje misli i osjećaja pomaže razjasniti emocije.</li>
+    <li>💬 <strong>Razgovor s povjerljivom osobom:</strong> Dijeljenje osjećaja smanjuje emocionalni pritisak.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Redovno izražavanje emocija sprječava preplavljenost i pomaže u zdravoj emocionalnoj regulaciji.
+  </div>
+</div>
+
+<!-- 3. Kako prepoznati kada emocije postanu problem -->
+<div id="emocije_problem" class="section">
+  <h2>Kako prepoznati kada emocije postanu problem (npr. anksioznost, depresija)?</h2>
+  <p>Emocije postaju problem ako su stalno intenzivne, ometaju svakodnevno funkcioniranje ili dugotrajno negativno utječu na raspoloženje. Rano prepoznavanje znakova olakšava pravovremenu podršku i intervenciju.</p>
+
+  <h3>Znakovi problematičnih emocija</h3>
+  <ul>
+    <li> <strong>Stalna tuga ili zabrinutost:</strong> Osjećaj tuge, bezvoljnosti ili straha koji ne prolazi.</li>
+    <li>💢 <strong>Intenzivna ljutnja ili frustracija:</strong> Često se javlja iznenadno ili u neprikladnim situacijama.</li>
+    <li>💤 <strong>Promjene u energiji ili spavanju:</strong> Umor, nesanica ili pretjerano spavanje.</li>
+    <li>📉 <strong>Ometanje svakodnevnog života:</strong> Problemi u školi, poslu ili odnosima.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete stalno izbjegava društvene aktivnosti jer osjeća strah ili tjeskobu.</li>
+    <li>✔️ Osoba često reagira pretjerano ljutito na male frustracije.</li>
+    <li>✔️ Dugotrajna tuga i gubitak interesa za hobije ili prijatelje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Ako prepoznate ove znakove, razgovarajte s djetetom i razmotrite profesionalnu podršku.
+  </div>
+</div>
+
+<!-- 4. Kako naučiti dijete da prepozna i izrazi svoje emocije na zdrav način -->
+<div id="dijete_emocije" class="section">
+  <h2>Kako naučiti dijete da prepozna i izrazi svoje emocije na zdrav način?</h2>
+  <p>Djeca trebaju podršku da nauče prepoznavati i izražavati emocije riječima i ponašanjem koje nije štetno za njih ili druge. To jača emocionalnu inteligenciju i socijalne vještine.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Imenovanje emocija:</strong> Pomozite djetetu da kaže „osjećam se ljuto/tužno/uzbuđeno“.</li>
+    <li> <strong>Umjetnički izrazi:</strong> Crtanje, igra ili pisanje omogućuju zdrav izraz emocija.</li>
+    <li> <strong>Smirivanje i refleksija:</strong> Naučite dijete tehnike disanja ili kratke pauze prije reakcije.</li>
+    <li> <strong>Pohvala:</strong> Pohvalite dijete kada izrazi emocije mirno i primjereno.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete je ljuto jer je izgubilo igru – potaknite ga: „Reci mi što osjećaš, pa ćemo smisliti rješenje.“</li>
+    <li>✔️ Dijete crta tugu ili frustraciju – razgovarajte o crtežu i osjećajima koje predstavlja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kontinuirana praksa i modeliranje zdravog izražavanja pomažu djetetu u razvoju emocionalne svijesti.
+  </div>
+</div>
+
+<!-- 5. Kako se nositi s negativnim emocijama poput ljutnje, tuge ili straha -->
+<div id="negativne_emocije" class="section">
+  <h2>Kako se nositi s negativnim emocijama poput ljutnje, tuge ili straha?</h2>
+  <p>Negativne emocije su prirodan dio života i služe nam kao signali da nešto zahtijeva pažnju. Ključno je naučiti ih prepoznati, izraziti i regulirati, a ne potiskivati.</p>
+
+  <h3>Strategije nošenja</h3>
+  <ul>
+    <li> <strong>Tehnike smirivanja:</strong> Disanje, meditacija ili kratke pauze.</li>
+    <li>💬 <strong>Razgovor i imenovanje:</strong> Identificirajte emociju i uzrok: „Osjećam strah jer…“</li>
+    <li> <strong>Pisanje ili crtanje:</strong> Omogućava sigurno izražavanje osjećaja.</li>
+    <li> <strong>Podrška drugih:</strong> Dijeljenje emocija s prijateljima, obitelji ili terapeutom.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete je tužno zbog nesporazuma s prijateljem – potaknite ga da izrazi osjećaje riječima, a ne vikanjem.</li>
+    <li>✔️ Osoba osjeća strah pred javni nastup – priprema i smirivanje disanjem smanjuju tjeskobu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Regulacija negativnih emocija razvija otpornost i sposobnost rješavanja problema.
+  </div>
+</div>
+
+<!-- 6. Kako pomoći djetetu sa problemima u upravljanju emocijama -->
+<div id="pomoc_djetetu_emocije" class="section">
+  <h2>Kako pomoći djetetu sa problemima u upravljanju emocijama?</h2>
+  <p>Djeca ponekad ne znaju kontrolirati ljutnju, tugu ili frustraciju. Rodi teljska podrška, učenje strategija i modeliranje zdravog izražavanja pomažu im razviti emocionalnu regulaciju.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o emocijama:</strong> Pomozite djetetu prepoznati osjećaje i uzroke.</li>
+    <li> <strong>Tehnike smirivanja:</strong> Disanje, brojanje do 10, kratka pauza.</li>
+    <li> <strong>Siguran izraz emocija:</strong> Crtanje, igra ili pisanje.</li>
+    <li> <strong>Podrška i pohvala:</strong> Pohvalite svaki napor u upravljanju emocijama.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete udara igračke kad je frustrirano – naučite ga uzeti pauzu i objasniti osjećaj riječima.</li>
+    <li>✔️ Dijete se povlači kada je tužno – potaknite razgovor ili crtanje osjećaja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedna podrška i praksa pomažu djetetu da razvije trajne vještine upravljanja emocijama.
+  </div>
+</div>
+
+<!-- 7. Zašto je važno izraziti emocije, a ne ih potiskivati -->
+<div id="vaznost_izraza_emocija" class="section">
+  <h2>Zašto je važno izraziti emocije, a ne ih potiskivati?</h2>
+  <p>Potiskivanje emocija može dovesti do stresa, tjeskobe, zdravstvenih problema i problema u odnosima. Izražavanje emocija pomaže razumjeti sebe, druge i razvija emocionalnu inteligenciju.</p>
+
+  <h3>Benefiti izražavanja emocija</h3>
+  <ul>
+    <li>💬 <strong>Bolje razumijevanje sebe:</strong> Prepoznavanje i imenovanje emocija olakšava donošenje odluka.</li>
+    <li> <strong>Poboljšani odnosi:</strong> Otvorena komunikacija smanjuje konflikte i jača povjerenje.</li>
+    <li> <strong>Smanjenje stresa:</strong> Izražavanje oslobađa emocionalni teret.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete se osjeća ljuto – umjesto da šuti i taloži frustraciju, razgovor s roditeljem pomaže smirivanju.</li>
+    <li>✔️ Osoba zapisuje u dnevnik osjećaje tuge ili stresa, što olakšava rješavanje problema.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Izražavanje emocija ključno je za mentalno zdravlje i kvalitetne odnose.
+  </div>
+</div>
+
+<!-- 8. Kako emocije utječu na naše ponašanje i odnose s drugim ljudima -->
+<div id="emocije_utjecaj" class="section">
+  <h2>Kako emocije utječu na naše ponašanje i odnose s drugim ljudima?</h2>
+  <p>Emocije oblikuju naše reakcije, odluke i komunikaciju s drugima. Svjesno upravljanje emocijama omogućava bolje međuljudske odnose i smanjenje konflikata.</p>
+
+  <h3>Utjecaj emocija</h3>
+  <ul>
+    <li>💢 <strong>Bijes:</strong> Može uzrokovati konflikt ili impulsivne odluke.</li>
+    <li> <strong>Radost i zahvalnost:</strong> Povećava suradnju i pozitivne interakcije.</li>
+    <li> <strong>Tuga:</strong> Može smanjiti motivaciju, ali također potiče introspekciju i empatiju.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete reagira ljutito na kritiku – razumijevanje i smirivanje pomaže održati dobre odnose.</li>
+    <li>✔️ Osoba osjeća zahvalnost – dijeljenje osjećaja jača međuljudske veze.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Svjesno upravljanje emocijama poboljšava komunikaciju i kvalitetu odnosa.
+  </div>
+</div>
+
+<!-- 9. Kako reagirati u trenutku kada osjetimo snažnu emociju (npr. bijes ili frustraciju) -->
+<div id="reakcija_snazna_emocija" class="section">
+  <h2>Kako reagirati u trenutku kada osjetimo snažnu emociju (npr. bijes ili frustraciju)?</h2>
+  <p>Intenzivne emocije mogu dovesti do impulzivnih reakcija. Učenje zaustavljanja, smirivanja i promišljene reakcije ključno je za emocionalnu kontrolu i kvalitetnu komunikaciju.</p>
+
+  <h3>Strategije reakcije</h3>
+  <ul>
+    <li> <strong>Duboko disanje:</strong> 3–5 dubokih udaha smiruje tijelo i um.</li>
+    <li>⏸️ <strong>Krata pauza:</strong> Odmaknite se na trenutak prije nego reagirate.</li>
+    <li>💬 <strong>Traženje rješenja:</strong> Nakon smirivanja, razmotrite konstruktivan odgovor.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete viče jer je izgubilo igru – naučite ga prvo duboko disati, zatim opisati osjećaje.</li>
+    <li>✔️ Osoba osjeti frustraciju u prometu – brojenje do 10 i smireno vođenje riječi smanjuje rizik od impulzivnih postupaka.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pauza i refleksija prije reakcije pomažu kontrolirati impulzivna ponašanja.
+  </div>
+</div>
+
+<!-- 10. Kako pomoći djetetu da nauči emocionalnu samoregulaciju -->
+<div id="emocionalna_samoregulacija" class="section">
+  <h2>Kako pomoći djetetu da nauči emocionalnu samoregulaciju?</h2>
+  <p>Emocionalna samoregulacija je sposobnost prepoznati i kontrolirati svoje emocije, impulzivne reakcije i ponašanja. Razvija se kroz podršku, učenje strategija i dosljedno modeliranje ponašanja odraslih.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li> <strong>Tehnike smirivanja:</strong> Disanje, kratka pauza, vizualizacija mirne scene.</li>
+    <li>💬 <strong>Razgovor o emocijama:</strong> Pomaže djetetu prepoznati emocije i izabrati prikladnu reakciju.</li>
+    <li> <strong>Siguran izraz:</strong> Crtanje, pisanje ili igranje uloga omogućuje zdravo pražnjenje emocija.</li>
+    
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Pauza i refleksija prije reakcije pomažu kontrolirati impulzivna ponašanja.
+  </div>
+</div>
+
+
+<!-- 11. Kako se nositi s emocijama u obitelji -->
+<div id="emocije_obitelj" class="section">
+  <h2>Kako se nositi s emocijama u obitelji?</h2>
+  <p>Obiteljski odnosi često uključuju raznolike i intenzivne emocije – ljubav, frustraciju, tugu, radost, strah i ljutnju. Sposobnost prepoznavanja i konstruktivnog izražavanja tih emocija ključna je za zdravu obiteljsku dinamiku. Kada članovi obitelji potiskuju emocije ili ih izražavaju destruktivno, to može dovesti do nesporazuma, konflikata i emocionalnog udaljavanja.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Otvoreni razgovori:</strong> Redovito razgovarajte o osjećajima svih članova obitelji. Postavljajte pitanja poput: „Kako si se osjećao danas?“ ili „Što te uzrujalo?“</li>
+    <li> <strong>Empatija i prihvaćanje:</strong> Pokažite razumijevanje i prihvaćanje osjećaja bez osuđivanja. Na primjer, recite: „Razumijem da si ljut jer si izgubio igru.“</li>
+    <li> <strong>Smirivanje prije konflikta:</strong> Ako se pojavi intenzivna svađa ili neslaganje, uzmite kratku pauzu prije nego reagirate. To omogućuje racionalnije i mirnije izražavanje osjećaja.</li>
+    <li>🎨 <strong>Obiteljske aktivnosti:</strong> Zajedničke aktivnosti poput crtanja, kuhanja, sporta ili igre pomažu članovima da izraze emocije na nenasilan način i povežu se emocionalno.</li>
+    <li>📝 <strong>Dnevnik obiteljskih emocija:</strong> Svaki član može zapisivati svoja osjećanja i refleksije. Kasnije se to može zajedno komentirati, što povećava međusobno razumijevanje.</li>
+  </ul>
+
+  <h3>Primjeri u praksi</h3>
+  <ul>
+    <li>✔️ Dijete je tužno jer ga vršnjaci nisu pozvali na igru – roditelj razgovara, izražava razumijevanje i zajedno pronalaze rješenje ili alternativnu aktivnost.</li>
+    <li>✔️ Supružnici se svađaju oko kućnih zadataka – umjesto vikanja, koriste tehniku pauze i zatim mirno razgovaraju o potrebama i osjećajima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedna komunikacija i modeliranje zdravog izražavanja emocija smanjuju konflikte, jačaju povjerenje i emocionalnu povezanost unutar obitelji.
+  </div>
+</div>
+
+<!-- 12. Kako pomoći djetetu da se izražava emocionalno u školi -->
+<div id="dijete_izrazi_skola" class="section">
+  <h2>Kako pomoći djetetu da se izražava emocionalno u školi?</h2>
+  <p>Školsko okruženje može biti izvor različitih emocija – od radosti i uzbuđenja do stresa i frustracije. Djeca koja znaju verbalno ili kreativno izraziti emocije bolje se prilagođavaju, rješavaju konflikte i grade pozitivne odnose s vršnjacima i učiteljima.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Razgovor kod kuće:</strong> Nakon škole pitajte dijete kako se osjećalo tijekom dana. Potičite ga da opiše situacije i emocije riječima.</li>
+    <li> <strong>Kreativni izrazi:</strong> Crtanje, pisanje dnevnika ili kratke priče pomažu djetetu da izrazi osjećaje koje možda teško verbalizira.</li>
+    <li> <strong>Tehnike smirivanja:</strong> Naučite dijete jednostavnim tehnikama disanja ili kratkim pauzama kada osjeti ljutnju, frustraciju ili tugu.</li>
+    <li> <strong>Rješavanje sukoba:</strong> Podučite dijete strategijama rješavanja konflikata, poput izražavanja osjećaja bez optuživanja i traženja kompromisa.</li>
+    <li>📚 <strong>Učenje emocionalnih izraza kroz priče:</strong> Čitanje priča s emocionalnim sadržajem pomaže djetetu prepoznati emocije i moguće reakcije u različitim situacijama.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedno poticanje verbalnog i kreativnog izražavanja emocija pomaže djetetu razviti emocionalnu otpornost, socijalne vještine i samopouzdanje u školskom okruženju.
+  </div>
+</div>
+
+<!-- 13. Kako pomoći djetetu da izdrži stresne situacije -->
+<div id="dijete_stres_situacije" class="section">
+  <h2>Kako pomoći djetetu da izdrži stresne situacije?</h2>
+  <p>Stresne situacije su neizbježne u životu, uključujući ispite, socijalne konflikte ili promjene u životu. Učenje djece strategijama suočavanja razvija otpornost, emocionalnu stabilnost i samopouzdanje.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li> <strong>Tehnike smirivanja:</strong> Učite dijete dubokom disanju, vizualizaciji smirene scene ili kratkim pauzama kada osjeti napetost.</li>
+    <li>💬 <strong>Razgovor o osjećajima:</strong> Pomozite djetetu prepoznati i imenovati emocije povezane sa stresom. Primjer: „Primijetio sam da si uzrujan zbog testa. Što te najviše brine?“</li>
+    <li>🎯 <strong>Fokus na kontrolu:</strong> Naučite dijete razlikovati što može kontrolirati i na što ne može utjecati. To pomaže smanjiti osjećaj nemoći.</li>
+    <li> <strong>Podrška i pohvala:</strong> Pohvalite dijete za svaki korak u suočavanju sa stresom, čak i male uspjehe.</li>
+    <li>📅 <strong>Rutine i predvidljivost:</strong> Stabilne dnevne rutine smanjuju anksioznost i osjećaj kaosa.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Praksa i podrška u stresnim situacijama povećavaju emocionalnu otpornost i pomažu djetetu da razvije učinkovite strategije suočavanja koje će koristiti kroz cijeli život.
+  </div>
+</div>
+
+<!-- 14. Zašto je emocionalna inteligencija važna za djetetov razvoj -->
+<div id="vaznost_ei_djete" class="section">
+  <h2>Zašto je emocionalna inteligencija važna za djetetov razvoj?</h2>
+  <p>Emocionalna inteligencija (EI) omogućuje djeci da razumiju vlastite emocije, prepoznaju emocije drugih, upravljaju impulzivnim ponašanjima i grade kvalitetne odnose. Djeca s visokom EI bolje se prilagođavaju školskim i društvenim situacijama, pokazuju veće samopouzdanje i lakše rješavaju konflikte.</p>
+
+  <h3>Komponente EI</h3>
+  <ul>
+    <li>💬 <strong>Samosvijest:</strong> Prepoznavanje vlastitih osjećaja i njihovog utjecaja na ponašanje.</li>
+    <li> <strong>Samoregulacija:</strong> Kontroliranje impulzivnih reakcija i sposobnost smirivanja u stresnim situacijama.</li>
+    <li> <strong>Empatija:</strong> Razumijevanje i suosjećanje s emocijama drugih.</li>
+    <li>🎯 <strong>Socijalne vještine:</strong> Kvalitetna komunikacija, suradnja i rješavanje konflikata.</li>
+    <li>📚 <strong>Motivacija:</strong> Sposobnost prepoznavanja unutarnjih motivacija i postavljanje ciljeva unatoč emocionalnim izazovima.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Razvijanjem EI djeca postaju emocionalno otpornija, grade kvalitetne odnose, bolje se nose sa stresom i postaju samostalnija u donošenju odluka.
+  </div>
+</div>
+
+<!-- 15. Kako djeca razvijaju emocionalnu svijest -->
+<div id="razvoj_svijesti_djece" class="section">
+  <h2>Kako djeca razvijaju emocionalnu svijest?</h2>
+  <p>Emocionalna svijest je sposobnost prepoznavanja, razumijevanja i imenovanja vlastitih emocija. Djeca razvijaju ovu svijest kroz svakodnevna iskustva, igru, interakciju s vršnjacima i promatranje odraslih.</p>
+
+  <h3>Načini razvoja</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o osjećajima:</strong> Redovito pitajte dijete kako se osjeća i pomozite mu imenovati emocije. Primjer: „Primijetio sam da si se danas ljutio. Što te točno uzrujalo?“</li>
+    <li>🎨 <strong>Kreativni izrazi:</strong> Crtanje, pisanje, dramatizacija i igra omogućuju istraživanje i izražavanje emocija na siguran način.</li>
+    <li> <strong>Modeliranje odraslih:</strong> Djeca uče promatrajući odrasle – kako oni prepoznaju, izražavaju i reguliraju emocije.</li>
+    <li>📚 <strong>Priče i slikovnice:</strong> Kroz likove i situacije djeca prepoznaju emocije i uče kako ih izraziti ili kontrolirati.</li>
+    <li> <strong>Mindfulness i svjesnost:</strong> Jednostavne vježbe prisutnosti pomažu djeci postati svjesna svojih unutarnjih stanja.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Kontinuirano vođenje i podrška u prepoznavanju emocija ključno je za razvijanje emocionalne svijesti i kasnije emocionalne inteligencije.
+  </div>
+</div>
+
+<!-- 16. Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume -->
+<div id="emocije_trauma" class="section">
+  <h2>Kako pomoći djetetu da izdrži negativne emocije nakon nesreće ili traume?</h2>
+  <p>Djeca koja dožive traumatske situacije mogu osjećati strah, tugu, krivnju ili zbunjenost. Pravilna emocionalna podrška pomaže im da procesuiraju iskustvo, razviju otpornost i ponovno uspostave osjećaj sigurnosti.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Otvoreni razgovor:</strong> Pitajte dijete kako se osjeća i omogućite mu da slobodno izrazi emocije bez kritike ili minimiziranja.</li>
+    <li> <strong>Tehnike smirivanja:</strong> Duboko disanje, meditacija ili sigurno okruženje pomažu djetetu da se nosi s anksioznošću i stresom.</li>
+    <li> <strong>Podrška i prisutnost:</strong> Budite fizički i emocionalno prisutni. Njihova sigurnost i vaša pažnja smanjuju osjećaj izoliranosti.</li>
+    <li>📚 <strong>Priče i simbolične igre:</strong> Omogućite djetetu da kroz priče, crtanje ili igru obradi emocije i traumatske događaje.</li>
+    <li>🎯 <strong>Postepena izloženost:</strong> Ako se trauma odnosi na određene situacije, postepeno ih izlažite i učite strategijama suočavanja.</li>
+    <li> <strong>Stručna pomoć:</strong> Ako simptomi potraju ili se pogoršaju, obratite se psihologu ili stručnjaku za traumu.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Strpljenje, dosljedna podrška i sigurno okruženje ključni su za emocionalno ozdravljenje i otpornost djeteta nakon traume.
+  </div>
+</div>
+
+<!-- 17. Kako prepoznati emocionalne potrebe djeteta -->
+<div id="prepoznati_potrebe_djeteta" class="section">
+  <h2>Kako prepoznati emocionalne potrebe djeteta?</h2>
+  <p>Svako dijete ima jedinstvene emocionalne potrebe koje uključuju ljubav, sigurnost, priznanje, podršku i osjećaj pripadnosti. Prepoznavanje tih potreba pomaže roditeljima i odgajateljima u oblikovanju podržavajuće i zdrave okoline.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Promatranje ponašanja:</strong> Obratite pažnju na promjene u ponašanju – povlačenje, ljutnju ili tugu mogu ukazivati na neispunjene potrebe.</li>
+    <li><strong>Empatično slušanje:</strong> Redovito razgovarajte s djetetom, slušajte njihove brige i osigurajte osjećaj sigurnosti.</li>
+    <li> <strong>Potvrda osjećaja:</strong> Recite: „Razumijem da si tužan jer nisi pozvan na igru.“ To pokazuje da su njihove emocije važne i prihvaćene.</li>
+    <li>🎯 <strong>Redovita pažnja:</strong> Provodite kvalitetno vrijeme s djetetom i pružajte pozitivne povratne informacije za trud i ponašanje.</li>
+    <li>📚 <strong>Učenje samosvijesti:</strong> Pomozite djetetu imenovati vlastite emocije i potrebe, čime se jača emocionalna inteligencija i samopouzdanje.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedno prepoznavanje i zadovoljenje emocionalnih potreba pomaže djetetu da se osjeća sigurno, voljeno i sposobno nositi s izazovima.
+  </div>
+</div>
+
+<!-- 18. Kako reagirati u trenutku kada osjetimo snažnu emociju -->
+<div id="reakcija_snazna_emocija2" class="section">
+  <h2>Kako reagirati u trenutku kada osjetimo snažnu emociju (npr. bijes ili frustraciju)?</h2>
+  <p>Snažne emocije poput bijesa, frustracije ili straha mogu izazvati impulzivne reakcije. Učenje kako ih prepoznati i kontrolirati ključno je za emocionalnu stabilnost i kvalitetne odnose s drugima.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li> <strong>Svjesno disanje:</strong> U trenutku intenzivne emocije duboko udahnite i izdahnite 3–5 puta prije nego reagirate.</li>
+    <li>💬 <strong>Imenovanje emocije:</strong> Recite sebi: „Osjećam bijes zbog ove situacije.“ Imenovanje emocije smiruje mozak i omogućuje racionalniju reakciju.</li>
+    <li> <strong>Privremeno povlačenje:</strong> Ako je moguće, napravite kratku pauzu prije nego izrazite emociju.</li>
+    <li>🎯 <strong>Usmjeravanje energije:</strong> Iskoristite fizičku aktivnost ili kreativni izraz (crtanje, pisanje) kako biste otpustili napetost.</li>
+    <li>📚 <strong>Analiza situacije nakon smirivanja:</strong> Razmislite o uzroku emocije i konstruktivnom načinu rješavanja situacije.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Vježbanje svjesnog reagiranja na snažne emocije razvija emocionalnu otpornost i smanjuje impulsivnost u svim životnim situacijama.
+  </div>
+</div>
+
+<!-- 19. Kako pomoći djetetu naučiti emocionalnu samoregulaciju -->
+<div id="emocionalna_samoregulacija2" class="section">
+  <h2>Kako pomoći djetetu naučiti emocionalnu samoregulaciju?</h2>
+  <p>Emocionalna samoregulacija je sposobnost prepoznavanja, kontrole i izražavanja emocija na primjeren način. Djeca koja razviju ovu vještinu bolje se nose s frustracijom, stresom i socijalnim situacijama.</p>
+
+  <h3>Strategije</h3>
+  <ul>
+    <li>💬 <strong>Razgovor o emocijama:</strong> Redovito pitajte dijete kako se osjeća i pomozite mu imenovati emocije. Na primjer: „Primijetio sam da si uzrujan. Što te točno uznemiruje?“</li>
+    <li> <strong>Tehnike smirivanja:</strong> Naučite dijete dubokom disanju, brojanju do 10 ili vizualizaciji smirenih scena kada osjeti ljutnju ili tjeskobu.</li>
+    <li> <strong>Kreativni izrazi:</strong> Crtanje, igra i pisanje dnevnika pomažu u izražavanju emocija i smanjenju unutarnje napetosti.</li>
+    <li> <strong>Modeliranje odraslih:</strong> Djeca uče promatrajući odrasle kako reagiraju na vlastite emocije. Pokažite smirene, konstruktivne načine suočavanja.</li>
+    <li>📚 <strong>Postepena vježba:</strong> Potičite dijete da u sigurnim situacijama vježba kontrolu impulsa i izražavanje osjećaja primjereno situaciji.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>✔️ Savjet:</strong> Dosljedno podučavanje i praksa emocionalne samoregulacije pomaže djetetu da razvije otpornost, socijalne vještine i zdrav odnos prema vlastitim emocijama.
+  </div>
+</div>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        showSection(hash);
+    } else {
+        showSection('ssd_vs_hdd'); // default first section
+    }
+});
+</script>
+
+</body>
+</html>
