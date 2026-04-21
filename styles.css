@@ -641,42 +641,41 @@ body {
 }
 
 
+/* === FIXED 1425px MEDIA QUERY (STABILIZED VERSION) === */
 @media (max-width: 1425px) {
 
-  /* Body adjustments */
   body {
-    height: auto; /* allow vertical scrolling */
+    height: auto;
     padding: 0 5px;
+    overflow-x: hidden;
   }
 
-  /* Header & main title */
   .gold-a {
     font-size: 66px;
     margin-top: 31px;
-
   }
-header {
-  position: relative;
-}
 
   header {
+    position: relative;
     margin-top: -385px;
   }
-header h1 {
+
+  header h1 {
     position: relative;
     left: 13px;
   }
-  /* Top right links */
+
+  /* Top right links (prevent drift) */
   .top-right {
+    position: absolute;
     top: 50px;
-    right: -60px;
+    right: 20px; /* FIXED from -60px */
     gap: 15px;
   }
 
   .top-right a {
     font-size: 16px;
   }
-
 
   /* Help Section */
   .help-section {
@@ -703,21 +702,21 @@ header h1 {
     max-width: 160px;
   }
 
- /* Symbols */
-.symbol-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 40px 60px; /* row gap / column gap */
-  margin-top: 20px;
-  justify-items: center;
-}
+  /* Symbols */
+  .symbol-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin-top: 20px;
+    justify-items: center;
+  }
 
-.symbol-container {
-  width: 90%;
-  max-width: 120px;
-  padding: 0;
-  text-align: center;
-}
+  .symbol-container {
+    width: 90%;
+    max-width: 120px;
+    padding: 0;
+    text-align: center;
+  }
 
   .symbol {
     height: 50px;
@@ -731,7 +730,7 @@ header h1 {
   }
 
   .symbol-img {
-    max-width: 110%;
+    max-width: 100%;
     margin-bottom: 25px;
   }
 
@@ -744,25 +743,28 @@ header h1 {
     font-size: 15px;
   }
 
-  /* Design image */
+  /* Design image (CENTER FIXED) */
   .design-image {
     top: 165px;
-    left: 46.5%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 270px;
   }
 
-  /* Help suggestion text */
+  /* Help suggestion text (CENTER FIXED) */
   .help-suggestion-text {
     top: 315px;
-    left: 56%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 14px;
+    white-space: nowrap;
   }
 
-  /* Rectangle link */
+  /* Rectangle link (CENTER FIXED) */
   .rectangle-link {
     top: 26.7%;
-    left: 55%;
-    transform: translate(-50%, -50%) translateX(20px);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .rectangle-box {
@@ -770,24 +772,22 @@ header h1 {
     height: 25px;
   }
 
-  /* Background watermark */
   .background-question {
     width: 150px;
   }
 
   /* Feature box */
- .second-box {
+  .second-box {
     width: 100%;
-    margin: 145px auto 0; /* 20px below previous content */
+    margin: 145px auto 0;
     height: auto;
     padding: 10px;
-    right: 1.8%;
-    flex-direction: column;
+    right: auto;
     display: flex;
-}
+    flex-direction: column;
+    position: relative;
+  }
 
-
-  /* Make chart inside feature box responsive */
   .second-box canvas,
   .second-box .chart {
     width: 100% !important;
@@ -802,135 +802,116 @@ header h1 {
     font-size: 15px;
   }
 
-  /* Doznaj-vise button */
+  /* Button fix */
   .doznaj-vise {
     top: 305px;
-    left: 56.3%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 13px;
     padding: 5px 10px;
   }
 
-#send-arrow {
-  position: absolute;
-  top: 15px;
-  right: -80px;
-  width: 28px;
-  z-index: 10;
-}
-
-  /* GAOH frame */
- 
-  .gaoh-frame {
-    position: relative;  /* was fixed before */
-    bottom: -1560px;        /* remove bottom positioning */
-    right: -355px;         /* remove right positioning */
-    width: 100%;         /* fill width of container */
-    max-width: 560px;    /* optional max width */
-    height: 345.5px;       /* keep height as you want */
-    margin: 26px auto 0; /* spacing below second-box, centered */
+  /* Send arrow fix */
+  #send-arrow {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 28px;
   }
- /* Profile circle */
-.profile-circle {
-  width: 33px;
-  height: 32px;
-  font-size: 15px;
-}
-.top-left-auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+
+  /* GAOH frame (STOP BIG OFFSETS) */
+  .gaoh-frame {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    height: 345px;
+    margin: 26px auto 0;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* Profile */
+  .profile-circle {
+    width: 33px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .top-left-auth-links {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+  }
+
   .top-left-auth-links a {
     font-size: 16px;
   }
 
-
-
+  /* Chart note FIX */
   .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 1050px;           /* move up/down */
-  left: 46.5%;            /* move left/right */
-
-  color: black;
-  font-weight: bold;
-  font-size:13px;
-  z-index: 20;
-}
- /* Footer container */
-  footer {
-    width: 100% !important;
-    padding: 10px 20px !important;
-    background: lightgray;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    margin-top: 1430px !important; /* space from content */
-    position: relative !important; /* flow with page */
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 20px auto;
+    text-align: center;
   }
 
-  /* Bottom links inside footer */
+  /* Footer FIX (IMPORTANT) */
+  footer {
+    width: 100%;
+    padding: 10px 20px;
+    background: lightgray;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+  }
+
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none !important;           /* remove previous floats */
-    display: inline-block !important; /* horizontal alignment */
-    margin: 0 10px !important;        /* spacing */
-    position: static !important;      /* not fixed/absolute */
-    text-align: inherit !important;
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: static;
   }
 
-  footer .bottom-left {
-    text-align: left !important;
-  }
-
-  footer .bottom-right,
-  footer .bottom-right1 {
-    text-align: right !important;
-  }
-
-  /* Copyright centered */
   footer p {
-    margin: 19px 0 0 0 !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    text-align: center !important;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
   }
 
-  /* Clear floats inside footer */
   footer::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
+    content: "";
+    display: table;
+    clear: both;
   }
-    #cookie-banner {
-    flex-direction: row;          /* side-by-side buttons */
+
+  /* Cookie banner */
+  #cookie-banner {
+    flex-direction: row;
     align-items: center;
     gap: 12px;
   }
 
   #cookie-banner span {
-    max-width: 70%;               /* text takes less width */
-    font-size: 14px;              /* slightly larger for bigger screens */
+    max-width: 70%;
+    font-size: 14px;
     line-height: 1.4;
   }
 
   .cookie-buttons {
-    width: auto;
-    flex-direction: row;          /* buttons side-by-side */
+    flex-direction: row;
     gap: 10px;
   }
 
   .cookie-btn {
-    width: auto;                  /* allow buttons to size naturally */
-    padding: 8px 14px;            /* slightly bigger for readability */
-    text-align: center;
+    width: auto;
+    padding: 8px 14px;
   }
 }
-
 @media (max-width: 1024px) {
 
   /* Body adjustments */
