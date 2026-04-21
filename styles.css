@@ -813,7 +813,7 @@ header h1 {
 #send-arrow {
   position: absolute;
   top: 15px;
-  right: 30px;
+  right: -80px;
   width: 28px;
   z-index: 10;
 }
@@ -822,8 +822,8 @@ header h1 {
  
   .gaoh-frame {
     position: relative;  /* was fixed before */
-    bottom: -1060px;        /* remove bottom positioning */
-    right: -385px;         /* remove right positioning */
+    bottom: -1560px;        /* remove bottom positioning */
+    right: -355px;         /* remove right positioning */
     width: 100%;         /* fill width of container */
     max-width: 560px;    /* optional max width */
     height: 345.5px;       /* keep height as you want */
