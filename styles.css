@@ -1557,3 +1557,281 @@ header h1 {
 .reject-btn:hover {
   background: #d6d6d6;
 }
+/* =========================
+   RESET & BASE STRUCTURE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.gold-a {
+  font-size: 62px;
+  color: goldenrod;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+/* =========================
+   TOP RIGHT LINKS
+========================= */
+
+.top-right {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-right a {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.top-right a:hover {
+  color: #555;
+}
+
+/* =========================
+   BOTTOM LEFT LINKS
+========================= */
+
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.bottom-left a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+}
+
+.bottom-left a:hover {
+  color: #555;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  padding: 10px 0;
+  margin-top: 60px;
+  position: relative;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+/* =========================
+   HELP SECTION
+========================= */
+
+.help-section {
+  position: absolute;
+  top: 96px;
+  left: 20px;
+  background: #f0f0f0;
+  color: grey;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 250px;
+}
+
+.help-section p {
+  margin: 5px 0;
+}
+
+.help-section .help-title {
+  font-size: 16px;
+}
+
+.help-section .help-item {
+  font-size: 22px;
+  margin: 10px 0;
+  color: black;
+  text-decoration: none;
+}
+
+.help-section .help-item:hover {
+  color: #333;
+}
+
+.help-section .help-note {
+  font-size: 14px;
+  color: grey;
+}
+
+.help-section .help-intro {
+  font-size: 15px;
+  color: darkgoldenrod;
+}
+
+/* =========================
+   INLINE QUESTION BOX
+========================= */
+
+.inline-question-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+
+.inline-question-box textarea {
+  resize: none;
+  padding: 6px;
+  font-size: 14px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.inline-question-box button {
+  margin-top: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  background: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.inline-question-box button:hover {
+  background: #daa520;
+}
+
+/* =========================
+   SYMBOLS
+========================= */
+
+.symbol {
+  max-height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.symbol1 { width: 90px; filter: drop-shadow(2px 2px 2px gray); }
+.symbol2 { width: 90px; opacity: 0.8; }
+.symbol3 { width: 80px; transform: rotate(10deg); border: 2px solid goldenrod; border-radius: 10px; }
+.symbol4 { width: 85px; filter: drop-shadow(0 0 5px goldenrod); }
+
+.symbol:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   FIXED BOTTOM / FOOTER LINKS
+========================= */
+
+.bottom-left,
+.bottom-right,
+.bottom-right1 {
+  position: fixed;
+  bottom: 20px;
+}
+
+/* =========================
+   RESPONSIVE SYSTEM
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .gold-a { font-size: 55px; }
+
+  .help-section {
+    max-width: 220px;
+    top: 90px;
+    left: 10px;
+  }
+
+  .top-right {
+    right: 15px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 768px) {
+
+  .gold-a { font-size: 48px; }
+
+  .top-right a {
+    font-size: 18px;
+  }
+
+  .help-section {
+    max-width: 200px;
+  }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+
+  .gold-a {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .help-section {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    max-width: 180px;
+  }
+
+  .bottom-left {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+}
