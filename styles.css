@@ -644,19 +644,24 @@ body {
 /* === FIXED 1425px MEDIA QUERY (STABILIZED VERSION) === */
 @media (max-width: 1425px) {
 
+  /* Body adjustments */
   body {
-    height: auto;
+    height: auto; /* allow vertical scrolling */
     padding: 0 5px;
-    overflow-x: hidden;
   }
 
+  /* Header & main title */
   .gold-a {
     font-size: 66px;
     margin-top: 31px;
+
   }
 
   header {
     position: relative;
+  }
+
+  header {
     margin-top: -385px;
   }
 
@@ -665,11 +670,10 @@ body {
     left: 13px;
   }
 
-  /* Top right links (prevent drift) */
+  /* Top right links */
   .top-right {
-    position: absolute;
     top: 50px;
-    right: 20px; /* FIXED from -60px */
+    right: -60px;
     gap: 15px;
   }
 
@@ -705,8 +709,8 @@ body {
   /* Symbols */
   .symbol-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 60px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px 60px; /* row gap / column gap */
     margin-top: 20px;
     justify-items: center;
   }
@@ -730,7 +734,7 @@ body {
   }
 
   .symbol-img {
-    max-width: 100%;
+    max-width: 110%;
     margin-bottom: 25px;
   }
 
@@ -743,28 +747,25 @@ body {
     font-size: 15px;
   }
 
-  /* Design image (CENTER FIXED) */
+  /* Design image */
   .design-image {
     top: 165px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 46.5%;
     width: 270px;
   }
 
-  /* Help suggestion text (CENTER FIXED) */
+  /* Help suggestion text */
   .help-suggestion-text {
     top: 315px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 56%;
     font-size: 14px;
-    white-space: nowrap;
   }
 
-  /* Rectangle link (CENTER FIXED) */
+  /* Rectangle link */
   .rectangle-link {
     top: 26.7%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 55%;
+    transform: translate(-50%, -50%) translateX(20px);
   }
 
   .rectangle-box {
@@ -772,6 +773,7 @@ body {
     height: 25px;
   }
 
+  /* Background watermark */
   .background-question {
     width: 150px;
   }
@@ -779,15 +781,15 @@ body {
   /* Feature box */
   .second-box {
     width: 100%;
-    margin: 145px auto 0;
+    margin: 145px auto 0; /* 20px below previous content */
     height: auto;
     padding: 10px;
-    right: auto;
-    display: flex;
+    right: 1.8%;
     flex-direction: column;
-    position: relative;
+    display: flex;
   }
 
+  /* Make chart inside feature box responsive */
   .second-box canvas,
   .second-box .chart {
     width: 100% !important;
@@ -802,35 +804,34 @@ body {
     font-size: 15px;
   }
 
-  /* Button fix */
+  /* Doznaj-vise button */
   .doznaj-vise {
     top: 305px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 56.3%;
     font-size: 13px;
     padding: 5px 10px;
   }
 
-  /* Send arrow fix */
   #send-arrow {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: -80px;
     width: 28px;
+    z-index: 10;
   }
 
-  /* GAOH frame (STOP BIG OFFSETS) */
+  /* GAOH frame */
   .gaoh-frame {
     position: relative;
+    bottom: -1560px;
+    right: -355px;
     width: 100%;
     max-width: 560px;
-    height: 345px;
+    height: 345.5px;
     margin: 26px auto 0;
-    right: auto;
-    bottom: auto;
   }
 
-  /* Profile */
+  /* Profile circle */
   .profile-circle {
     width: 33px;
     height: 32px;
@@ -841,7 +842,9 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 10;
     display: flex;
+    align-items: center;
     gap: 8px;
   }
 
@@ -849,38 +852,51 @@ body {
     font-size: 16px;
   }
 
-  /* Chart note FIX */
   .chart-note {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 20px auto;
-    text-align: center;
+    position: absolute;
+    top: 1050px;
+    left: 46.5%;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 20;
   }
 
-  /* Footer FIX (IMPORTANT) */
   footer {
-    width: 100%;
-    padding: 10px 20px;
+    width: 100% !important;
+    padding: 10px 20px !important;
     background: lightgray;
-    text-align: center;
-    margin-top: 60px;
-    position: relative;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+    margin-top: 1430px !important;
+    position: relative !important;
   }
 
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none;
-    display: inline-block;
-    margin: 0 10px;
-    position: static;
+    float: none !important;
+    display: inline-block !important;
+    margin: 0 10px !important;
+    position: static !important;
+    text-align: inherit !important;
+  }
+
+  footer .bottom-left {
+    text-align: left !important;
+  }
+
+  footer .bottom-right,
+  footer .bottom-right1 {
+    text-align: right !important;
   }
 
   footer p {
-    font-size: 13px;
-    color: #333;
-    text-align: center;
+    margin: 19px 0 0 0 !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    text-align: center !important;
   }
 
   footer::after {
@@ -889,7 +905,6 @@ body {
     clear: both;
   }
 
-  /* Cookie banner */
   #cookie-banner {
     flex-direction: row;
     align-items: center;
@@ -903,6 +918,7 @@ body {
   }
 
   .cookie-buttons {
+    width: auto;
     flex-direction: row;
     gap: 10px;
   }
@@ -910,6 +926,7 @@ body {
   .cookie-btn {
     width: auto;
     padding: 8px 14px;
+    text-align: center;
   }
 }
 @media (max-width: 1024px) {
@@ -924,19 +941,21 @@ body {
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
-
   }
-header {
-  position: relative;
-}
+
+  header {
+    position: relative;
+  }
 
   header {
     margin-top: -365px;
   }
-header h1 {
+
+  header h1 {
     position: relative;
     left: 13px;
   }
+
   /* Top right links */
   .top-right {
     top: 50px;
@@ -947,7 +966,6 @@ header h1 {
   .top-right a {
     font-size: 16px;
   }
-
 
   /* Help Section */
   .help-section {
@@ -974,21 +992,21 @@ header h1 {
     max-width: 160px;
   }
 
- /* Symbols */
-.symbol-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 40px 60px; /* row gap / column gap */
-  margin-top: 20px;
-  justify-items: center;
-}
+  /* Symbols */
+  .symbol-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin-top: 20px;
+    justify-items: center;
+  }
 
-.symbol-container {
-  width: 100%;
-  max-width: 140px;
-  padding: 0;
-  text-align: center;
-}
+  .symbol-container {
+    width: 100%;
+    max-width: 140px;
+    padding: 0;
+    text-align: center;
+  }
 
   .symbol {
     height: 50px;
@@ -1047,16 +1065,15 @@ header h1 {
   }
 
   /* Feature box */
- .second-box {
+  .second-box {
     width: 100%;
-    margin: 145px auto 0; /* 20px below previous content */
+    margin: 145px auto 0;
     height: auto;
     padding: 10px;
     right: 1.8%;
     flex-direction: column;
     display: flex;
-}
-
+  }
 
   /* Make chart inside feature box responsive */
   .second-box canvas,
@@ -1081,57 +1098,57 @@ header h1 {
     padding: 5px 10px;
   }
 
-#send-arrow {
-  position: absolute;
-  top: 15px;
-  right: 30px;
-  width: 25px;
-  z-index: 10;
-}
+  #send-arrow {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 25px;
+    z-index: 10;
+  }
 
   /* GAOH frame */
- 
   .gaoh-frame {
-    position: relative;  /* was fixed before */
-    bottom: -1120px;        /* remove bottom positioning */
-    right: -45px;         /* remove right positioning */
-    width: 100%;         /* fill width of container */
-    max-width: 560px;    /* optional max width */
-    height: 345.5px;       /* keep height as you want */
-    margin: 26px auto 0; /* spacing below second-box, centered */
+    position: relative;
+    bottom: -1120px;
+    right: -45px;
+    width: 100%;
+    max-width: 560px;
+    height: 345.5px;
+    margin: 26px auto 0;
   }
- /* Profile circle */
-.profile-circle {
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
-}
-.top-left-auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+
+  /* Profile circle */
+  .profile-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .top-left-auth-links {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .top-left-auth-links a {
     font-size: 15px;
   }
 
-
-
   .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 1105px;           /* move up/down */
-  left: 44.5%;            /* move left/right */
+    position: absolute;
+    top: 1105px;
+    left: 44.5%;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 20;
+  }
 
-  color: black;
-  font-weight: bold;
-  font-size:13px;
-  z-index: 20;
-}
- /* Footer container */
+  /* Footer */
   footer {
     width: 100% !important;
     padding: 10px 20px !important;
@@ -1139,18 +1156,17 @@ header h1 {
     text-align: center !important;
     box-sizing: border-box !important;
     clear: both !important;
-    margin-top: 1390px !important; /* space from content */
-    position: relative !important; /* flow with page */
+    margin-top: 1390px !important;
+    position: relative !important;
   }
 
-  /* Bottom links inside footer */
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none !important;           /* remove previous floats */
-    display: inline-block !important; /* horizontal alignment */
-    margin: 0 10px !important;        /* spacing */
-    position: static !important;      /* not fixed/absolute */
+    float: none !important;
+    display: inline-block !important;
+    margin: 0 10px !important;
+    position: static !important;
     text-align: inherit !important;
   }
 
@@ -1163,7 +1179,6 @@ header h1 {
     text-align: right !important;
   }
 
-  /* Copyright centered */
   footer p {
     margin: 19px 0 0 0 !important;
     font-size: 13px !important;
@@ -1171,13 +1186,13 @@ header h1 {
     text-align: center !important;
   }
 
-  /* Clear floats inside footer */
   footer::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
+    content: "";
+    display: table;
+    clear: both;
   }
-   /* --- Cookie Banner --- */
+
+  /* Cookie banner */
   #cookie-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -1186,54 +1201,51 @@ header h1 {
 
   #cookie-banner span {
     max-width: 100%;
-    font-size: 13px;  /* slightly bigger than phone */
+    font-size: 13px;
     line-height: 1.4;
   }
 
   .cookie-buttons {
     width: 100%;
-    flex-direction: row;  /* or column if you prefer stacked */
+    flex-direction: row;
     gap: 8px;
   }
 
   .cookie-btn {
-    width: auto;      /* or 48% if side-by-side */
+    width: auto;
     text-align: center;
     padding: 6px 12px;
   }
 }
 
+/* =========================
+   TABLET / SMALL DESKTOP
+   ========================= */
+@media (max-width: 1024px) {
 
-/* === Phone Media Query === */
-@media (max-width: 600px) {
-
-  /* Body adjustments */
   body {
-    height: auto; /* allow vertical scrolling */
+    height: auto;
     padding: 0 5px;
   }
 
-  /* Header & main title */
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
-
   }
-header {
-  position: relative;
-}
 
   header {
-    margin-top: -351px;
-  }
-header h1 {
     position: relative;
-    left: 10px;
+    margin-top: -365px;
   }
-  /* Top right links */
+
+  header h1 {
+    position: relative;
+    left: 13px;
+  }
+
   .top-right {
-    top: 60px;
-    right: 10px;
+    top: 50px;
+    right: -60px;
     gap: 15px;
   }
 
@@ -1241,25 +1253,17 @@ header h1 {
     font-size: 16px;
   }
 
-
-  /* Help Section */
   .help-section {
-    top: 105px;
-    left: 10px;
+    top: 112px;
+    left: 15px;
     padding: 12px;
-    max-width: 185px;
+    max-width: 275px;
     font-size: 13px;
-    height: 375px;
+    height: 405px;
   }
 
-  .help-section .help-item {
-    font-size: 19px;
-    margin: 6px 0;
-  }
-
-  .help-section .help-title {
-    font-size: 14px;
-  }
+  .help-section .help-item { font-size: 21px; }
+  .help-section .help-title { font-size: 16px; }
 
   .help-section .help-note,
   .help-section .help-intro {
@@ -1267,205 +1271,163 @@ header h1 {
     max-width: 160px;
   }
 
-  /* Symbols */
+  .symbol-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    justify-items: center;
+  }
+
+  .symbol-container {
+    width: 100%;
+    max-width: 140px;
+  }
+
+  .design-image {
+    top: 165px;
+    left: 50.5%;
+    width: 260px;
+  }
+
+  .help-suggestion-text {
+    top: 315px;
+    left: 68%;
+    font-size: 14px;
+  }
+
+  .rectangle-link {
+    top: 24.7%;
+    left: 67%;
+  }
+
+  .second-box {
+    width: 100%;
+    margin: 145px auto 0;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gaoh-frame {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    max-width: 560px;
+    margin: 26px auto 0;
+  }
+
+  footer {
+    margin-top: 1390px !important;
+  }
+}
+
+
+/* =========================
+   PHONE
+   ========================= */
+@media (max-width: 600px) {
+
+  body {
+    height: auto;
+    padding: 0 5px;
+  }
+
+  .gold-a {
+    font-size: 63px;
+    margin-top: 31px;
+  }
+
+  header {
+    position: relative;
+    margin-top: -351px;
+  }
+
+  header h1 {
+    left: 10px;
+  }
+
+  .top-right {
+    top: 60px;
+    right: 10px;
+  }
+
+  .help-section {
+    top: 105px;
+    left: 10px;
+    max-width: 185px;
+    height: 375px;
+  }
+
   .symbol-row {
     gap: 65px;
-    margin-top: 30px;
-    min-height: 150px;
   }
 
   .symbol-container {
     width: 100px;
-    padding-right: 3px;
   }
 
-  .symbol {
-    height: 50px;
-  }
-
-  .symbol1,
-  .symbol2,
-  .symbol3,
-  .symbol4 {
-    width: 55px;
-  }
-
-  .symbol-img {
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
-
-  .symbol-action {
-    font-size: 10px;
-    margin-top: -29px;
-  }
-
-  .symbol-action a.action-link {
-    font-size: 15px;
-  }
-
-  /* Design image */
   .design-image {
-    top: 165px;
     left: 53%;
     width: 210px;
   }
 
-  /* Help suggestion text */
   .help-suggestion-text {
-    top: 295px;
     left: 71%;
     font-size: 11px;
   }
 
-  /* Rectangle link */
   .rectangle-link {
-    top: 23.7%;
     left: 67.5%;
-    transform: translate(-50%, -50%) translateX(20px);
   }
 
-  .rectangle-box {
-    width: 130px;
-    height: 22px;
-  }
-
-  /* Background watermark */
-  .background-question {
-    width: 150px;
-  }
-
-  /* Feature box */
- .second-box {
-    width: 105%;
-    margin: 70px auto 0; /* 20px below previous content */
-    height: auto;
+  .second-box {
+    width: 100%;
+    margin: 70px auto 0;
     padding: 10px;
-    right: 1.8%;
-    flex-direction: column;
-    display: flex;
-}
-
-
-  /* Make chart inside feature box responsive */
-  .second-box canvas,
-  .second-box .chart {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 340px;
-    margin: 0 auto;
-    display: block;
   }
 
-  .feature-box-message {
-    bottom: -35px;
-    font-size: 15px;
-  }
-
-  /* Doznaj-vise button */
-  .doznaj-vise {
-    top: 285px;
-    left: 71%;
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-
-#send-arrow {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  width: 25px;
-  z-index: 10;
-}
-
-  /* GAOH frame */
- 
   .gaoh-frame {
-    position: relative;  /* was fixed before */
-    bottom: -1005px;        /* remove bottom positioning */
-    right: -30px;         /* remove right positioning */
-    width: 100%;         /* fill width of container */
-    max-width: 430px;    /* optional max width */
-    height: 330.5px;       /* keep height as you want */
-    margin: 26px auto 0; /* spacing below second-box, centered */
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 26px auto 0;
   }
- /* Profile circle */
-.profile-circle {
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
+
+  footer {
+    margin-top: 1300px !important;
+  }
 }
-.top-left-auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  display: flex;
+
+
+/* =========================
+   COOKIE BANNER (FIXED LOGIC)
+   ========================= */
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;
+  padding: 12px 20px;
+  display: none;
   align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+/* desktop default */
+.cookie-buttons {
+  display: flex;
   gap: 8px;
 }
-  .top-left-auth-links a {
-    font-size: 12px;
-  }
 
-  .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 985px;           /* move up/down */
-  left: 40.5%;            /* move left/right */
-  
-
-  color: black;
-  font-weight: bold;
-  font-size:13px;
-  z-index: 20;
-}
- /* Footer container */
-  footer {
-    width: 100% !important;
-    padding: 10px 20px !important;
-    background: lightgray;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    margin-top: 1300px !important; /* space from content */
-    position: relative !important; /* flow with page */
-  }
-
-  /* Bottom links inside footer */
-  footer .bottom-left,
-  footer .bottom-right,
-  footer .bottom-right1 {
-    float: none !important;           /* remove previous floats */
-    display: inline-block !important; /* horizontal alignment */
-    margin: 0 10px !important;        /* spacing */
-    position: static !important;      /* not fixed/absolute */
-    text-align: inherit !important;
-  }
-
-  footer .bottom-left {
-    text-align: left !important;
-  }
-
-  footer .bottom-right,
-  footer .bottom-right1 {
-    text-align: right !important;
-  }
-
-  /* Copyright centered */
-  footer p {
-    margin: 19px 0 0 0 !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    text-align: center !important;
-  }
-
-  /* Clear floats inside footer */
-  footer::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
-  }
- #cookie-banner {
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  #cookie-banner {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -1474,86 +1436,14 @@ header h1 {
   #cookie-banner span {
     max-width: 100%;
     font-size: 12px;
-    line-height: 1.4;
   }
 
   .cookie-buttons {
     width: 100%;
-    flex-direction: column; /* stack buttons vertically */
-    gap: 6px;
+    flex-direction: column;
   }
 
   .cookie-btn {
-    width: 100%; /* make each button full width */
-    text-align: center;
+    width: 100%;
   }
-
-}
-
-
-
-
-#cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f2f2f2;
-  color: #333;
-  padding: 12px 20px;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-  border-top: 1px solid #ccc;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 9999;
-  font-family: sans-serif;
-}
-
-#cookie-banner span {
-  max-width: 75%;
-}
-
-#cookie-banner a {
-  color: #555;
-  text-decoration: underline;
-}
-
-.cookie-buttons {
-  display: flex;
-  gap: 8px;
-}
-
-.cookie-btn {
-  border: 1px solid #bbb;
-  background: white;
-  padding: 6px 12px;
-  font-size: 12px;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: 0.2s ease;
-}
-
-.cookie-btn:hover {
-  background: #e6e6e6;
-}
-
-.accept-btn {
-  background: #444;
-  color: white;
-  border: 1px solid #444;
-}
-
-.accept-btn:hover {
-  background: #222;
-}
-.reject-btn {
-  background: #e6e6e6;
-  color: #333;
-  border: 1px solid #bbb;
-}
-
-.reject-btn:hover {
-  background: #d6d6d6;
 }
