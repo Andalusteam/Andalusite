@@ -9,9 +9,10 @@ body {
   background-color: white;
 }
 
+/* FIX: header negative margin can shift differently across browsers */
 header {
   text-align: center;
-  margin-top: -28px;
+  margin-top: 0; /* was -28px (causes inconsistent rendering) */
 }
 
 .gold-a {
@@ -19,7 +20,7 @@ header {
   color: goldenrod;
   font-family: 'Georgia', serif;
   font-weight: bold;
-  margin-top: 80px; /* Adjust as needed */
+  margin-top: 80px; /* unchanged */
 }
 
 /* === Top Right Links === */
@@ -68,7 +69,7 @@ header {
 /* === Footer === */
 footer {
   position: fixed;
-  bottom: -8px;
+  bottom: 0;              /* FIX: negative bottom causes browser inconsistency */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -124,9 +125,8 @@ footer p {
   font-size: 14px;
   color: grey;
   max-width: 220px;
-   font-weight: lighter;
+  font-weight: lighter;
 }
-
 
 .help-section .help-intro {
   font-size: 15px;
@@ -185,7 +185,7 @@ footer p {
 }
 
 .symbol {
-  height: auto; /* use auto for better scaling in media queries */
+  height: auto;
   max-height: 100px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -203,6 +203,7 @@ footer p {
   border-color: goldenrod;
 }
 
+/* === SYMBOL ROW === */
 .symbol-row {
   display: flex;
   justify-content: center;
@@ -211,9 +212,10 @@ footer p {
   margin-top: 60px;
   position: relative;
   min-height: 210px;
-  flex-wrap: wrap; /* better for small screens */
+  flex-wrap: wrap;
 }
 
+/* FIX: prevent uneven height stretching across browsers */
 .symbol-container {
   position: relative;
   display: flex;
@@ -222,26 +224,30 @@ footer p {
   align-items: center;
   width: 140px;
   padding-right: 10px;
-  height: 100%;
   box-sizing: border-box;
 }
+
+/* FIX: divider line overflow issue in some browsers */
 .symbol-container:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -15px; /* slightly closer, safer for responsiveness */
+  top: 10px;
+  bottom: 10px;
+  right: -15px;
   width: 1px;
   background-color: #ccc;
+  opacity: 0.9;
 }
 
+/* SYMBOL IMAGE */
 .symbol-img {
-  max-width: 100%; /* safer than 150% to avoid huge symbols */
+  max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 10px; /* reduced from 60px for better alignment */
+  margin-bottom: 10px;
 }
 
+/* ACTION TEXT */
 .symbol-action {
   margin-top: 6px;
   font-size: 14px;
@@ -257,15 +263,14 @@ footer p {
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 14px; /* changed from 17px → scales better on smaller screens */
-  cursor: pointer;
+  font-size: 14px;
 }
 
 .symbol-action a.action-link:hover {
   color: #b8860b;
 }
 
-/* === Popup & Overlay === */
+/* === DROPDOWN === */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -278,7 +283,7 @@ footer p {
   right: 0;
   background-color: white;
   min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 1000;
   border-radius: 6px;
   overflow: hidden;
@@ -300,42 +305,21 @@ footer p {
   display: block;
 }
 
-/* Overlay for popup */
+/* FIX: overlay stacking issue on Safari/Firefox */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0,0,0,0.5);
   display: none;
   z-index: 1000;
 }
 
-
-/* Top-left signup */
-.top-left-signup {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-}
-
-.top-left-signup a {
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.top-left-signup a:hover {
-  color: goldenrod;
-}
-
+/* === AUTH LINKS (IMPORTANT FIX) === */
 .top-left-auth-links {
   position: absolute;
   top: 16px;
-  left: 1310px;      /* original desktop position, adjust slightly if needed */
+  left: auto;
+  right: 20px;   /* FIX: replaces unsafe left: 1310px */
   display: flex;
   align-items: center;
   gap: 15px;
@@ -353,7 +337,7 @@ footer p {
   color: goldenrod;
 }
 
-
+/* === PROFILE === */
 .profile-circle {
   width: 39px;
   height: 31px;
@@ -374,7 +358,7 @@ footer p {
   background-color: #daa520;
 }
 
-/* Custom PNG */
+/* === CUSTOM IMAGE === */
 .custom-png {
   position: absolute;
   top: 80px;
@@ -385,20 +369,27 @@ footer p {
   z-index: 999;
 }
 
-/* Design image */
+/* === DESIGN IMAGE === */
 .design-image {
   position: absolute;
   top: 189px;
-  left: 28%;           /* similar to your original 27.8% */
-  transform: none;     /* remove centering transform */
+  left: 28%;
   width: 205px;
-  height: auto;        /* keeps aspect ratio */
+  height: auto;
+  z-index: 10;
 }
 
+/* FIX: prevents overlap issues on smaller screens */
+@media (max-width: 1200px) {
+  .design-image {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .help-suggestion-text {
   position: absolute;
   top: 286px;
-  left: 34.9%;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 14.5px;
   font-weight: bold;
@@ -422,9 +413,9 @@ footer p {
 
 .rectangle-link {
   position: absolute;
-  left: 27.4%;
+  left: 50%;
   top: 46%;
-  transform: translate(-50%, -50%) translateX(100px); /* keep original offset */
+  transform: translate(-50%, -50%);
   text-decoration: none;
   font-family: sans-serif;
   color: white;
@@ -444,7 +435,7 @@ footer p {
 
 .rectangle-box p {
   margin: 0;
-  pointer-events: none; /* clicks go ONLY through the box */
+  pointer-events: none;
 }
 
 /* Box sizing for predictable layout */
@@ -456,15 +447,15 @@ footer p {
 
 /* Image */
 .symbol-img {
-  max-width: 100%; /* safer for responsive behavior */
+  max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 6px; /* reduce spacing for better alignment */
+  margin-bottom: 6px;
 }
 
 /* Action text / link */
 .symbol-action {
-  margin-top:-2px;
+  margin-top: -2px;
   font-size: 14px;
   font-weight: bold;
   color: goldenrod;
@@ -479,12 +470,12 @@ footer p {
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 14px; /* unified size for responsiveness */
+  font-size: 14px;
   cursor: pointer;
 }
 
 .symbol-action a.action-link:hover {
-  color: #b8860b; /* darker hover color */
+  color: #b8860b;
 }
 
 /* Background question watermark */
@@ -495,7 +486,7 @@ footer p {
   transform: translate(-50%, -50%);
   opacity: 0.08;
   width: 250px;
-  max-width: 90%; /* safer for small screens */
+  max-width: 90%;
   z-index: 0;
   pointer-events: none;
 }
@@ -504,11 +495,12 @@ footer p {
 .second-box {
   position: absolute;
   top: 455px;
-  right: 340px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 750px;
-  max-width: 90%; /* responsive max-width */
+  max-width: 90%;
   height: 254px;
-  background-color:#EEEEEE;
+  background-color: #EEEEEE;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -544,7 +536,7 @@ footer p {
   cursor: pointer;
   z-index: 1000;
   transition: transform 0.2s ease;
-   color: #EEEEEE;
+  color: #EEEEEE;
 }
 
 #send-arrow:hover {
@@ -557,7 +549,7 @@ footer p {
   bottom: 300px;
   right: 150px;
   width: 560px;
-  max-width: 90%; /* responsive max-width */
+  max-width: 90%;
   height: 343px;
   border: none;
   border-radius: 10px;
@@ -568,10 +560,11 @@ footer p {
   pointer-events: auto;
 }
 
+/* FIX: prevent browser shift */
 .doznaj-vise {
   position: absolute;
   top: 272px;
-  left: 34%;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
   font-weight: bold;
@@ -584,32 +577,22 @@ footer p {
   transition: 0.3s;
 }
 
+/* FIX: unstable 90% positioning */
 .bottom-right {
-  position: fixed;      /* 👈 key change */
-  bottom: 13px;         /* distance from bottom */
-  left: 90%;           /* distance from left */
+  position: fixed;
+  bottom: 13px;
+  right: 20px;
   text-align: left;
-  z-index: 10;          /* stays above background */
+  z-index: 10;
 }
 
-.bottom-right a {
-  color: black;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  display: block;
-}
-
-.bottom-right a:hover {
-  color: #555;
-}
-
+/* FIX: unstable 90% positioning */
 .bottom-right1 {
-  position: fixed;      /* 👈 key change */
-  bottom: 50px;         /* distance from bottom */
-  left: 90%;           /* distance from left */
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
   text-align: left;
-  z-index: 10;          /* stays above background */
+  z-index: 10;
 }
 
 .bottom-right1 a {
@@ -624,22 +607,22 @@ footer p {
   color: #555;
 }
 
-  .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 66px;           /* move up/down */
-  left: 69.5%;            /* move left/right */
-  transform: translateX(-50%); /* keeps it centered by default */
-
-  color: black;
- 
+/* FIX: unstable % positioning */
+.chart-note {
+  position: absolute;
+  top: 66px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 16px;
+  color: black;
 }
 
+/* safer body constraint */
 body {
   max-width: 1600px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
-
 
 /* === FIXED 1425px MEDIA QUERY (STABILIZED VERSION) === */
 @media (max-width: 1425px) {
@@ -665,11 +648,11 @@ body {
     left: 13px;
   }
 
-  /* Top right links (prevent drift) */
+  /* FIX: prevent browser drift */
   .top-right {
     position: absolute;
     top: 50px;
-    right: 20px; /* FIXED from -60px */
+    right: 20px;
     gap: 15px;
   }
 
@@ -677,7 +660,6 @@ body {
     font-size: 16px;
   }
 
-  /* Help Section */
   .help-section {
     top: 112px;
     left: 15px;
@@ -702,7 +684,6 @@ body {
     max-width: 160px;
   }
 
-  /* Symbols */
   .symbol-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -717,109 +698,114 @@ body {
     padding: 0;
     text-align: center;
   }
+}
 
   .symbol {
-    height: 50px;
-  }
+  height: 50px;
+}
 
-  .symbol1,
-  .symbol2,
-  .symbol3,
-  .symbol4 {
-    width: 55px;
-  }
+.symbol1,
+.symbol2,
+.symbol3,
+.symbol4 {
+  width: 55px;
+}
 
-  .symbol-img {
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
+.symbol-img {
+  max-width: 100%;
+  margin-bottom: 25px;
+  display: block;
+}
 
-  .symbol-action {
-    font-size: 10px;
-    margin-top: -29px;
-  }
+.symbol-action {
+  font-size: 10px;
+  margin-top: -29px;
+}
 
-  .symbol-action a.action-link {
-    font-size: 15px;
-  }
+.symbol-action a.action-link {
+  font-size: 15px;
+}
 
-  /* Design image (CENTER FIXED) */
-  .design-image {
-    top: 165px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 270px;
-  }
+/* Design image (CENTER FIXED) */
+.design-image {
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 270px;
+  position: absolute;
+}
 
-  /* Help suggestion text (CENTER FIXED) */
-  .help-suggestion-text {
-    top: 315px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    white-space: nowrap;
-  }
+/* Help suggestion text (CENTER FIXED) */
+.help-suggestion-text {
+  top: 315px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  white-space: nowrap;
+  position: absolute;
+}
 
-  /* Rectangle link (CENTER FIXED) */
-  .rectangle-link {
-    top: 26.7%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+/* Rectangle link (CENTER FIXED) */
+.rectangle-link {
+  top: 26.7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
 
-  .rectangle-box {
-    width: 150px;
-    height: 25px;
-  }
+.rectangle-box {
+  width: 150px;
+  height: 25px;
+}
 
-  .background-question {
-    width: 150px;
-  }
+.background-question {
+  width: 150px;
+}
 
-  /* Feature box */
-  .second-box {
-    width: 100%;
-    margin: 145px auto 0;
-    height: auto;
-    padding: 10px;
-    right: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+/* Feature box */
+.second-box {
+  width: 100%;
+  margin: 145px auto 0;
+  height: auto;
+  padding: 10px;
+  right: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  .second-box canvas,
-  .second-box .chart {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 340px;
-    margin: 0 auto;
-    display: block;
-  }
+.second-box canvas,
+.second-box .chart {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 340px;
+  margin: 0 auto;
+  display: block;
+}
 
-  .feature-box-message {
-    bottom: -35px;
-    font-size: 15px;
-  }
+.feature-box-message {
+  bottom: -35px;
+  font-size: 15px;
+}
 
-  /* Button fix */
-  .doznaj-vise {
-    top: 305px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 13px;
-    padding: 5px 10px;
-  }
+/* Button fix */
+.doznaj-vise {
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  padding: 5px 10px;
+  position: absolute;
+}
 
-  /* Send arrow fix */
-  #send-arrow {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 28px;
-  }
-
-  /* GAOH frame (STOP BIG OFFSETS) */
+/* Send arrow fix */
+#send-arrow {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 28px;
+}
+   /* GAOH frame (STOP BIG OFFSETS) */
   .gaoh-frame {
     position: relative;
     width: 100%;
@@ -828,6 +814,7 @@ body {
     margin: 26px auto 0;
     right: auto;
     bottom: auto;
+    left: auto;
   }
 
   /* Profile */
@@ -843,6 +830,7 @@ body {
     left: 10px;
     display: flex;
     gap: 8px;
+    align-items: center;
   }
 
   .top-left-auth-links a {
@@ -856,6 +844,7 @@ body {
     left: auto;
     margin: 20px auto;
     text-align: center;
+    display: block;
   }
 
   /* Footer FIX (IMPORTANT) */
@@ -866,6 +855,7 @@ body {
     text-align: center;
     margin-top: 60px;
     position: relative;
+    box-sizing: border-box;
   }
 
   footer .bottom-left,
@@ -881,6 +871,7 @@ body {
     font-size: 13px;
     color: #333;
     text-align: center;
+    margin: 10px 0 0;
   }
 
   footer::after {
@@ -916,7 +907,7 @@ body {
 
   /* Body adjustments */
   body {
-    height: auto; /* allow vertical scrolling */
+    height: auto;
     padding: 0 5px;
   }
 
@@ -924,30 +915,29 @@ body {
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
-
   }
-header {
-  position: relative;
-}
 
   header {
+    position: relative;
     margin-top: -365px;
   }
-header h1 {
+
+  header h1 {
     position: relative;
     left: 13px;
   }
+
   /* Top right links */
   .top-right {
+    position: absolute;
     top: 50px;
-    right: -60px;
+    right: 20px; /* FIX: removed negative drift */
     gap: 15px;
   }
 
   .top-right a {
     font-size: 16px;
   }
-
 
   /* Help Section */
   .help-section {
@@ -974,21 +964,21 @@ header h1 {
     max-width: 160px;
   }
 
- /* Symbols */
-.symbol-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 40px 60px; /* row gap / column gap */
-  margin-top: 20px;
-  justify-items: center;
-}
+  /* Symbols */
+  .symbol-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin-top: 20px;
+    justify-items: center;
+  }
 
-.symbol-container {
-  width: 100%;
-  max-width: 140px;
-  padding: 0;
-  text-align: center;
-}
+  .symbol-container {
+    width: 100%;
+    max-width: 140px;
+    padding: 0;
+    text-align: center;
+  }
 
   .symbol {
     height: 50px;
@@ -1002,84 +992,93 @@ header h1 {
   }
 
   .symbol-img {
-    max-width: 110%;
+    max-width: 100%;
     margin-bottom: 25px;
   }
-
-  .symbol-action {
-    font-size: 10px;
-    margin-top: -29px;
-  }
-
-  .symbol-action a.action-link {
-    font-size: 15px;
-  }
-
-  /* Design image */
-  .design-image {
-    top: 165px;
-    left: 50.5%;
-    width: 260px;
-  }
-
-  /* Help suggestion text */
-  .help-suggestion-text {
-    top: 315px;
-    left: 68%;
-    font-size: 14px;
-  }
-
-  /* Rectangle link */
-  .rectangle-link {
-    top: 24.7%;
-    left: 67%;
-    transform: translate(-50%, -50%) translateX(20px);
-  }
-
-  .rectangle-box {
-    width: 150px;
-    height: 25px;
-  }
-
-  /* Background watermark */
-  .background-question {
-    width: 150px;
-  }
-
-  /* Feature box */
- .second-box {
-    width: 100%;
-    margin: 145px auto 0; /* 20px below previous content */
-    height: auto;
-    padding: 10px;
-    right: 1.8%;
-    flex-direction: column;
-    display: flex;
 }
 
+ .symbol-action {
+  font-size: 10px;
+  margin-top: -29px;
+}
 
-  /* Make chart inside feature box responsive */
-  .second-box canvas,
-  .second-box .chart {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 340px;
-    margin: 0 auto;
-    display: block;
-  }
+.symbol-action a.action-link {
+  font-size: 15px;
+}
 
-  .feature-box-message {
-    bottom: -35px;
-    font-size: 15px;
-  }
+/* Design image */
+.design-image {
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 260px;
+}
 
-  /* Doznaj-vise button */
-  .doznaj-vise {
-    top: 305px;
-    left: 69.9%;
-    font-size: 13px;
-    padding: 5px 10px;
-  }
+/* Help suggestion text */
+.help-suggestion-text {
+  top: 315px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Rectangle link */
+.rectangle-link {
+  top: 24.7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.rectangle-box {
+  width: 150px;
+  height: 25px;
+}
+
+/* Background watermark */
+.background-question {
+  width: 150px;
+}
+
+/* Feature box */
+.second-box {
+  width: 100%;
+  margin: 145px auto 0;
+  height: auto;
+  padding: 10px;
+  right: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Make chart inside feature box responsive */
+.second-box canvas,
+.second-box .chart {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 340px;
+  margin: 0 auto;
+  display: block;
+}
+
+.feature-box-message {
+  bottom: -35px;
+  font-size: 15px;
+}
+
+/* Doznaj-vise button */
+.doznaj-vise {
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  padding: 5px 10px;
+  position: absolute;
+}
 
 #send-arrow {
   position: absolute;
@@ -1089,23 +1088,24 @@ header h1 {
   z-index: 10;
 }
 
-  /* GAOH frame */
- 
-  .gaoh-frame {
-    position: relative;  /* was fixed before */
-    bottom: -1120px;        /* remove bottom positioning */
-    right: -45px;         /* remove right positioning */
-    width: 100%;         /* fill width of container */
-    max-width: 560px;    /* optional max width */
-    height: 345.5px;       /* keep height as you want */
-    margin: 26px auto 0; /* spacing below second-box, centered */
-  }
- /* Profile circle */
+/* GAOH frame */
+.gaoh-frame {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  width: 100%;
+  max-width: 560px;
+  height: 345.5px;
+  margin: 26px auto 0;
+}
+
+/* Profile circle */
 .profile-circle {
   width: 28px;
   height: 28px;
   font-size: 14px;
 }
+
 .top-left-auth-links {
   position: absolute;
   top: 10px;
@@ -1115,122 +1115,117 @@ header h1 {
   align-items: center;
   gap: 8px;
 }
-  .top-left-auth-links a {
-    font-size: 15px;
-  }
+
+.top-left-auth-links a {
+  font-size: 15px;
+}
 
 
 
   .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 1105px;           /* move up/down */
-  left: 44.5%;            /* move left/right */
-
+  position: absolute;
+  top: 1105px;
+  left: 50%;
+  transform: translateX(-50%);
   color: black;
   font-weight: bold;
-  font-size:13px;
+  font-size: 13px;
   z-index: 20;
 }
- /* Footer container */
-  footer {
-    width: 100% !important;
-    padding: 10px 20px !important;
-    background: lightgray;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    margin-top: 1390px !important; /* space from content */
-    position: relative !important; /* flow with page */
-  }
 
-  /* Bottom links inside footer */
-  footer .bottom-left,
-  footer .bottom-right,
-  footer .bottom-right1 {
-    float: none !important;           /* remove previous floats */
-    display: inline-block !important; /* horizontal alignment */
-    margin: 0 10px !important;        /* spacing */
-    position: static !important;      /* not fixed/absolute */
-    text-align: inherit !important;
-  }
-
-  footer .bottom-left {
-    text-align: left !important;
-  }
-
-  footer .bottom-right,
-  footer .bottom-right1 {
-    text-align: right !important;
-  }
-
-  /* Copyright centered */
-  footer p {
-    margin: 19px 0 0 0 !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    text-align: center !important;
-  }
-
-  /* Clear floats inside footer */
-  footer::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
-  }
-   /* --- Cookie Banner --- */
-  #cookie-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  #cookie-banner span {
-    max-width: 100%;
-    font-size: 13px;  /* slightly bigger than phone */
-    line-height: 1.4;
-  }
-
-  .cookie-buttons {
-    width: 100%;
-    flex-direction: row;  /* or column if you prefer stacked */
-    gap: 8px;
-  }
-
-  .cookie-btn {
-    width: auto;      /* or 48% if side-by-side */
-    text-align: center;
-    padding: 6px 12px;
-  }
+/* Footer container */
+footer {
+  width: 100% !important;
+  padding: 10px 20px !important;
+  background: lightgray;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  clear: both !important;
+  margin-top: 1390px !important;
+  position: relative !important;
 }
 
+/* Bottom links inside footer */
+footer .bottom-left,
+footer .bottom-right,
+footer .bottom-right1 {
+  float: none !important;
+  display: inline-block !important;
+  margin: 0 10px !important;
+  position: static !important;
+  text-align: inherit !important;
+}
+
+/* These two were conflicting → stabilized */
+footer .bottom-left,
+footer .bottom-right,
+footer .bottom-right1 {
+  text-align: center !important;
+}
+
+/* Copyright centered */
+footer p {
+  margin: 19px 0 0 0 !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  text-align: center !important;
+}
+
+/* Clear floats inside footer */
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Cookie Banner */
+#cookie-banner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#cookie-banner span {
+  max-width: 100%;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.cookie-buttons {
+  width: 100%;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.cookie-btn {
+  width: auto;
+  text-align: center;
+  padding: 6px 12px;
+}
 
 /* === Phone Media Query === */
 @media (max-width: 600px) {
 
-  /* Body adjustments */
   body {
-    height: auto; /* allow vertical scrolling */
+    height: auto;
     padding: 0 5px;
   }
 
-  /* Header & main title */
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
-
   }
-header {
-  position: relative;
-}
 
   header {
+    position: relative;
     margin-top: -351px;
   }
-header h1 {
+
+  header h1 {
     position: relative;
     left: 10px;
   }
-  /* Top right links */
+
   .top-right {
     top: 60px;
     right: 10px;
@@ -1241,8 +1236,6 @@ header h1 {
     font-size: 16px;
   }
 
-
-  /* Help Section */
   .help-section {
     top: 105px;
     left: 10px;
@@ -1267,7 +1260,6 @@ header h1 {
     max-width: 160px;
   }
 
-  /* Symbols */
   .symbol-row {
     gap: 65px;
     margin-top: 30px;
@@ -1304,25 +1296,27 @@ header h1 {
     font-size: 15px;
   }
 
-  /* Design image */
+  /* FIXED: avoid browser drift */
   .design-image {
     top: 165px;
-    left: 53%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 210px;
   }
 
-  /* Help suggestion text */
+   /* Help suggestion text */
   .help-suggestion-text {
     top: 295px;
-    left: 71%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 11px;
   }
 
   /* Rectangle link */
   .rectangle-link {
     top: 23.7%;
-    left: 67.5%;
-    transform: translate(-50%, -50%) translateX(20px);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .rectangle-box {
@@ -1336,16 +1330,15 @@ header h1 {
   }
 
   /* Feature box */
- .second-box {
+  .second-box {
     width: 105%;
-    margin: 70px auto 0; /* 20px below previous content */
+    margin: 70px auto 0;
     height: auto;
     padding: 10px;
-    right: 1.8%;
+    right: auto;
     flex-direction: column;
     display: flex;
-}
-
+  }
 
   /* Make chart inside feature box responsive */
   .second-box canvas,
@@ -1365,61 +1358,59 @@ header h1 {
   /* Doznaj-vise button */
   .doznaj-vise {
     top: 285px;
-    left: 71%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 11px;
     padding: 5px 10px;
   }
 
-#send-arrow {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  width: 25px;
-  z-index: 10;
-}
+  #send-arrow {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 25px;
+    z-index: 10;
+  }
 
   /* GAOH frame */
- 
   .gaoh-frame {
-    position: relative;  /* was fixed before */
-    bottom: -1005px;        /* remove bottom positioning */
-    right: -30px;         /* remove right positioning */
-    width: 100%;         /* fill width of container */
-    max-width: 430px;    /* optional max width */
-    height: 330.5px;       /* keep height as you want */
-    margin: 26px auto 0; /* spacing below second-box, centered */
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    max-width: 430px;
+    height: 330px;
+    margin: 26px auto 0;
   }
- /* Profile circle */
-.profile-circle {
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
-}
-.top-left-auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+
+  /* Profile circle */
+  .profile-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .top-left-auth-links {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+  }
+
   .top-left-auth-links a {
     font-size: 12px;
   }
 
   .chart-note {
-  position: absolute;   /* allows free positioning */
-  top: 985px;           /* move up/down */
-  left: 40.5%;            /* move left/right */
-  
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 10px auto;
+    text-align: center;
+  }
 
-  color: black;
-  font-weight: bold;
-  font-size:13px;
-  z-index: 20;
-}
- /* Footer container */
   footer {
     width: 100% !important;
     padding: 10px 20px !important;
@@ -1427,71 +1418,68 @@ header h1 {
     text-align: center !important;
     box-sizing: border-box !important;
     clear: both !important;
-    margin-top: 1300px !important; /* space from content */
-    position: relative !important; /* flow with page */
+    margin-top: 1300px !important;
+    position: relative !important;
   }
 
   /* Bottom links inside footer */
-  footer .bottom-left,
-  footer .bottom-right,
-  footer .bottom-right1 {
-    float: none !important;           /* remove previous floats */
-    display: inline-block !important; /* horizontal alignment */
-    margin: 0 10px !important;        /* spacing */
-    position: static !important;      /* not fixed/absolute */
-    text-align: inherit !important;
-  }
+footer .bottom-left,
+footer .bottom-right,
+footer .bottom-right1 {
+  float: none !important;
+  display: inline-block !important;
+  margin: 0 10px !important;
+  position: static !important;
+  text-align: center !important;
+}
 
-  footer .bottom-left {
-    text-align: left !important;
-  }
+/* IMPORTANT FIX:
+   Your previous version tried to align left/right inside centered inline-blocks.
+   That causes inconsistent rendering across browsers. */
 
-  footer .bottom-right,
-  footer .bottom-right1 {
-    text-align: right !important;
-  }
+footer p {
+  margin: 19px 0 0 0 !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  text-align: center !important;
+}
 
-  /* Copyright centered */
-  footer p {
-    margin: 19px 0 0 0 !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    text-align: center !important;
-  }
-
-  /* Clear floats inside footer */
-  footer::after {
-    content: "" !important;
-    display: table !important;
-    clear: both !important;
-  }
- #cookie-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  #cookie-banner span {
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-  .cookie-buttons {
-    width: 100%;
-    flex-direction: column; /* stack buttons vertically */
-    gap: 6px;
-  }
-
-  .cookie-btn {
-    width: 100%; /* make each button full width */
-    text-align: center;
-  }
-
+/* Clear floats */
+footer::after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
 }
 
 
+/* === COOKIE MOBILE FIX === */
+#cookie-banner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
 
+#cookie-banner span {
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.cookie-buttons {
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cookie-btn {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* ===========================
+   MAIN COOKIE BANNER BASE
+   =========================== */
 
 #cookie-banner {
   position: fixed;
@@ -1548,6 +1536,7 @@ header h1 {
 .accept-btn:hover {
   background: #222;
 }
+
 .reject-btn {
   background: #e6e6e6;
   color: #333;
@@ -1556,282 +1545,4 @@ header h1 {
 
 .reject-btn:hover {
   background: #d6d6d6;
-}
-/* =========================
-   RESET & BASE STRUCTURE
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-  background: white;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-  text-align: center;
-  position: relative;
-  margin-top: 0;
-}
-
-.gold-a {
-  font-size: 62px;
-  color: goldenrod;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  margin-top: 80px;
-}
-
-/* =========================
-   TOP RIGHT LINKS
-========================= */
-
-.top-right {
-  position: absolute;
-  top: 90px;
-  right: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.top-right a {
-  color: black;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.top-right a:hover {
-  color: #555;
-}
-
-/* =========================
-   BOTTOM LEFT LINKS
-========================= */
-
-.bottom-left {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 10;
-}
-
-.bottom-left a {
-  color: black;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  display: block;
-}
-
-.bottom-left a:hover {
-  color: #555;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  width: 100%;
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  padding: 10px 0;
-  margin-top: 60px;
-  position: relative;
-}
-
-footer p {
-  font-size: 12px;
-}
-
-/* =========================
-   HELP SECTION
-========================= */
-
-.help-section {
-  position: absolute;
-  top: 96px;
-  left: 20px;
-  background: #f0f0f0;
-  color: grey;
-  font-weight: bold;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  max-width: 250px;
-}
-
-.help-section p {
-  margin: 5px 0;
-}
-
-.help-section .help-title {
-  font-size: 16px;
-}
-
-.help-section .help-item {
-  font-size: 22px;
-  margin: 10px 0;
-  color: black;
-  text-decoration: none;
-}
-
-.help-section .help-item:hover {
-  color: #333;
-}
-
-.help-section .help-note {
-  font-size: 14px;
-  color: grey;
-}
-
-.help-section .help-intro {
-  font-size: 15px;
-  color: darkgoldenrod;
-}
-
-/* =========================
-   INLINE QUESTION BOX
-========================= */
-
-.inline-question-box {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  max-width: 220px;
-}
-
-.inline-question-box textarea {
-  resize: none;
-  padding: 6px;
-  font-size: 14px;
-  height: 60px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.inline-question-box button {
-  margin-top: 6px;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: bold;
-  background: goldenrod;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.inline-question-box button:hover {
-  background: #daa520;
-}
-
-/* =========================
-   SYMBOLS
-========================= */
-
-.symbol {
-  max-height: 100px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.symbol1 { width: 90px; filter: drop-shadow(2px 2px 2px gray); }
-.symbol2 { width: 90px; opacity: 0.8; }
-.symbol3 { width: 80px; transform: rotate(10deg); border: 2px solid goldenrod; border-radius: 10px; }
-.symbol4 { width: 85px; filter: drop-shadow(0 0 5px goldenrod); }
-
-.symbol:hover {
-  transform: scale(1.2);
-}
-
-/* =========================
-   FIXED BOTTOM / FOOTER LINKS
-========================= */
-
-.bottom-left,
-.bottom-right,
-.bottom-right1 {
-  position: fixed;
-  bottom: 20px;
-}
-
-/* =========================
-   RESPONSIVE SYSTEM
-========================= */
-
-/* Tablet */
-@media (max-width: 1024px) {
-
-  .gold-a { font-size: 55px; }
-
-  .help-section {
-    max-width: 220px;
-    top: 90px;
-    left: 10px;
-  }
-
-  .top-right {
-    right: 15px;
-  }
-}
-
-/* Small tablet */
-@media (max-width: 768px) {
-
-  .gold-a { font-size: 48px; }
-
-  .top-right a {
-    font-size: 18px;
-  }
-
-  .help-section {
-    max-width: 200px;
-  }
-}
-
-/* Phone */
-@media (max-width: 600px) {
-
-  .gold-a {
-    font-size: 40px;
-    margin-top: 40px;
-  }
-
-  header {
-    margin-top: 0;
-  }
-
-  .top-right {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    gap: 10px;
-  }
-
-  .help-section {
-    position: relative;
-    top: 20px;
-    left: 10px;
-    max-width: 180px;
-  }
-
-  .bottom-left {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-  }
 }
