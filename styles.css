@@ -1218,115 +1218,6 @@ body {
   }
 }
 
-/* =========================
-   TABLET / SMALL DESKTOP
-   ========================= */
-@media (max-width: 1024px) {
-
-  body {
-    height: auto;
-    padding: 0 5px;
-  }
-
-  .gold-a {
-    font-size: 63px;
-    margin-top: 31px;
-  }
-
-  header {
-    position: relative;
-    margin-top: -365px;
-  }
-
-  header h1 {
-    position: relative;
-    left: 13px;
-  }
-
-  .top-right {
-    top: 50px;
-    right: -60px;
-    gap: 15px;
-  }
-
-  .top-right a {
-    font-size: 16px;
-  }
-
-  .help-section {
-    top: 112px;
-    left: 15px;
-    padding: 12px;
-    max-width: 275px;
-    font-size: 13px;
-    height: 405px;
-  }
-
-  .help-section .help-item { font-size: 21px; }
-  .help-section .help-title { font-size: 16px; }
-
-  .help-section .help-note,
-  .help-section .help-intro {
-    font-size: 11.5px;
-    max-width: 160px;
-  }
-
-  .symbol-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 60px;
-    justify-items: center;
-  }
-
-  .symbol-container {
-    width: 100%;
-    max-width: 140px;
-  }
-
-  .design-image {
-    top: 165px;
-    left: 50.5%;
-    width: 260px;
-  }
-
-  .help-suggestion-text {
-    top: 315px;
-    left: 68%;
-    font-size: 14px;
-  }
-
-  .rectangle-link {
-    top: 24.7%;
-    left: 67%;
-  }
-
-  .second-box {
-    width: 100%;
-    margin: 145px auto 0;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .gaoh-frame {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: 100%;
-    max-width: 560px;
-    margin: 26px auto 0;
-  }
-
-  footer {
-    margin-top: 1390px !important;
-  }
-}
-
-
-/* =========================
-   PHONE
-   ========================= */
 @media (max-width: 600px) {
 
   body {
@@ -1345,88 +1236,220 @@ body {
   }
 
   header h1 {
+    position: relative;
     left: 10px;
   }
 
   .top-right {
     top: 60px;
     right: 10px;
+    gap: 15px;
+  }
+
+  .top-right a {
+    font-size: 16px;
   }
 
   .help-section {
     top: 105px;
     left: 10px;
+    padding: 12px;
     max-width: 185px;
+    font-size: 13px;
     height: 375px;
+  }
+
+  .help-section .help-item {
+    font-size: 19px;
+    margin: 6px 0;
+  }
+
+  .help-section .help-title {
+    font-size: 14px;
+  }
+
+  .help-section .help-note,
+  .help-section .help-intro {
+    font-size: 11.5px;
+    max-width: 160px;
   }
 
   .symbol-row {
     gap: 65px;
+    margin-top: 30px;
+    min-height: 150px;
   }
 
   .symbol-container {
     width: 100px;
+    padding-right: 3px;
+  }
+
+  .symbol {
+    height: 50px;
+  }
+
+  .symbol1,
+  .symbol2,
+  .symbol3,
+  .symbol4 {
+    width: 55px;
+  }
+
+  .symbol-img {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .symbol-action {
+    font-size: 10px;
+    margin-top: -29px;
+  }
+
+  .symbol-action a.action-link {
+    font-size: 15px;
   }
 
   .design-image {
+    top: 165px;
     left: 53%;
     width: 210px;
   }
 
   .help-suggestion-text {
+    top: 295px;
     left: 71%;
     font-size: 11px;
   }
 
   .rectangle-link {
+    top: 23.7%;
     left: 67.5%;
+    transform: translate(-50%, -50%) translateX(20px);
+  }
+
+  .rectangle-box {
+    width: 130px;
+    height: 22px;
+  }
+
+  .background-question {
+    width: 150px;
   }
 
   .second-box {
-    width: 100%;
+    width: 105%;
     margin: 70px auto 0;
+    height: auto;
     padding: 10px;
+    right: 1.8%;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .second-box canvas,
+  .second-box .chart {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 340px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .feature-box-message {
+    bottom: -35px;
+    font-size: 15px;
+  }
+
+  .doznaj-vise {
+    top: 285px;
+    left: 71%;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  #send-arrow {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 25px;
+    z-index: 10;
   }
 
   .gaoh-frame {
     position: relative;
+    bottom: -1005px;
+    right: -30px;
     width: 100%;
     max-width: 430px;
+    height: 330.5px;
     margin: 26px auto 0;
   }
 
-  footer {
-    margin-top: 1300px !important;
+  .profile-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
   }
-}
 
+  .top-left-auth-links {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-/* =========================
-   COOKIE BANNER (FIXED LOGIC)
-   ========================= */
+  .top-left-auth-links a {
+    font-size: 12px;
+  }
 
-#cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f2f2f2;
-  padding: 12px 20px;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 13px;
-  z-index: 9999;
-}
+  .chart-note {
+    position: absolute;
+    top: 985px;
+    left: 40.5%;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 20;
+  }
 
-/* desktop default */
-.cookie-buttons {
-  display: flex;
-  gap: 8px;
-}
+  footer {
+    width: 100% !important;
+    padding: 10px 20px !important;
+    background: lightgray;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+    margin-top: 1300px !important;
+    position: relative !important;
+  }
 
-/* MOBILE FIX */
-@media (max-width: 600px) {
+  footer .bottom-left,
+  footer .bottom-right,
+  footer .bottom-right1 {
+    float: none !important;
+    display: inline-block !important;
+    margin: 0 10px !important;
+    position: static !important;
+    text-align: inherit !important;
+  }
+
+  footer p {
+    margin: 19px 0 0 0 !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    text-align: center !important;
+  }
+
+  footer::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   #cookie-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -1436,14 +1459,134 @@ body {
   #cookie-banner span {
     max-width: 100%;
     font-size: 12px;
+    line-height: 1.4;
   }
 
   .cookie-buttons {
     width: 100%;
     flex-direction: column;
+    gap: 6px;
   }
 
   .cookie-btn {
     width: 100%;
+    text-align: center;
+  }
+
+
+ 
+/* ===== GAOH FRAME (FIXED MOBILE BEHAVIOR) ===== */
+.gaoh-frame {
+  position: relative;
+  bottom: auto;       /* FIX: stop offset hacking */
+  right: auto;        /* FIX */
+  width: 100%;
+  max-width: 430px;
+  height: 330.5px;
+  margin: 26px auto 0;
+}
+
+/* ===== PROFILE ===== */
+.profile-circle {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+.top-left-auth-links {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-left-auth-links a {
+  font-size: 12px;
+}
+
+/* ===== CHART NOTE ===== */
+.chart-note {
+  position: absolute;
+  top: 985px;
+  left: 40.5%;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  z-index: 20;
+}
+
+/* ===== FOOTER (SIMPLIFIED STABLE LAYOUT) ===== */
+footer {
+  width: 100% !important;
+  padding: 10px 20px !important;
+  background: lightgray;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  margin-top: 1300px !important;
+  position: relative !important;
+}
+
+footer .bottom-left,
+footer .bottom-right,
+footer .bottom-right1 {
+  display: inline-block !important;
+  margin: 0 10px !important;
+  position: static !important;
+  float: none !important;
+}
+
+/* REMOVE conflicting alignment */
+footer .bottom-left,
+footer .bottom-right,
+footer .bottom-right1 {
+  text-align: center !important;
+}
+
+/* ===== COOKIE BANNER (KEEP ONLY ONE SYSTEM) ===== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;
+  color: #333;
+  padding: 12px 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+/* MOBILE OVERRIDE (THIS ONE ACTUALLY MATTERS) */
+@media (max-width: 600px) {
+
+  #cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #cookie-banner span {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cookie-btn {
+    width: 100%;
+    text-align: center;
   }
 }
