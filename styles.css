@@ -644,24 +644,19 @@ body {
 /* === FIXED 1425px MEDIA QUERY (STABILIZED VERSION) === */
 @media (max-width: 1425px) {
 
-  /* Body adjustments */
   body {
-    height: auto; /* allow vertical scrolling */
+    height: auto;
     padding: 0 5px;
+    overflow-x: hidden;
   }
 
-  /* Header & main title */
   .gold-a {
     font-size: 66px;
     margin-top: 31px;
-
   }
 
   header {
     position: relative;
-  }
-
-  header {
     margin-top: -385px;
   }
 
@@ -670,10 +665,11 @@ body {
     left: 13px;
   }
 
-  /* Top right links */
+  /* Top right links (prevent drift) */
   .top-right {
+    position: absolute;
     top: 50px;
-    right: -60px;
+    right: 20px; /* FIXED from -60px */
     gap: 15px;
   }
 
@@ -709,8 +705,8 @@ body {
   /* Symbols */
   .symbol-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 40px 60px; /* row gap / column gap */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
     margin-top: 20px;
     justify-items: center;
   }
@@ -734,7 +730,7 @@ body {
   }
 
   .symbol-img {
-    max-width: 110%;
+    max-width: 100%;
     margin-bottom: 25px;
   }
 
@@ -747,25 +743,28 @@ body {
     font-size: 15px;
   }
 
-  /* Design image */
+  /* Design image (CENTER FIXED) */
   .design-image {
     top: 165px;
-    left: 46.5%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 270px;
   }
 
-  /* Help suggestion text */
+  /* Help suggestion text (CENTER FIXED) */
   .help-suggestion-text {
     top: 315px;
-    left: 56%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 14px;
+    white-space: nowrap;
   }
 
-  /* Rectangle link */
+  /* Rectangle link (CENTER FIXED) */
   .rectangle-link {
     top: 26.7%;
-    left: 55%;
-    transform: translate(-50%, -50%) translateX(20px);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .rectangle-box {
@@ -773,7 +772,6 @@ body {
     height: 25px;
   }
 
-  /* Background watermark */
   .background-question {
     width: 150px;
   }
@@ -781,15 +779,15 @@ body {
   /* Feature box */
   .second-box {
     width: 100%;
-    margin: 145px auto 0; /* 20px below previous content */
+    margin: 145px auto 0;
     height: auto;
     padding: 10px;
-    right: 1.8%;
-    flex-direction: column;
+    right: auto;
     display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
-  /* Make chart inside feature box responsive */
   .second-box canvas,
   .second-box .chart {
     width: 100% !important;
@@ -804,34 +802,35 @@ body {
     font-size: 15px;
   }
 
-  /* Doznaj-vise button */
+  /* Button fix */
   .doznaj-vise {
     top: 305px;
-    left: 56.3%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 13px;
     padding: 5px 10px;
   }
 
+  /* Send arrow fix */
   #send-arrow {
     position: absolute;
     top: 15px;
-    right: -80px;
+    right: 20px;
     width: 28px;
-    z-index: 10;
   }
 
-  /* GAOH frame */
+  /* GAOH frame (STOP BIG OFFSETS) */
   .gaoh-frame {
     position: relative;
-    bottom: -1560px;
-    right: -355px;
     width: 100%;
     max-width: 560px;
-    height: 345.5px;
+    height: 345px;
     margin: 26px auto 0;
+    right: auto;
+    bottom: auto;
   }
 
-  /* Profile circle */
+  /* Profile */
   .profile-circle {
     width: 33px;
     height: 32px;
@@ -842,9 +841,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 10;
     display: flex;
-    align-items: center;
     gap: 8px;
   }
 
@@ -852,51 +849,38 @@ body {
     font-size: 16px;
   }
 
+  /* Chart note FIX */
   .chart-note {
-    position: absolute;
-    top: 1050px;
-    left: 46.5%;
-    color: black;
-    font-weight: bold;
-    font-size: 13px;
-    z-index: 20;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 20px auto;
+    text-align: center;
   }
 
+  /* Footer FIX (IMPORTANT) */
   footer {
-    width: 100% !important;
-    padding: 10px 20px !important;
+    width: 100%;
+    padding: 10px 20px;
     background: lightgray;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    margin-top: 1430px !important;
-    position: relative !important;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
   }
 
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none !important;
-    display: inline-block !important;
-    margin: 0 10px !important;
-    position: static !important;
-    text-align: inherit !important;
-  }
-
-  footer .bottom-left {
-    text-align: left !important;
-  }
-
-  footer .bottom-right,
-  footer .bottom-right1 {
-    text-align: right !important;
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: static;
   }
 
   footer p {
-    margin: 19px 0 0 0 !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    text-align: center !important;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
   }
 
   footer::after {
@@ -905,6 +889,7 @@ body {
     clear: both;
   }
 
+  /* Cookie banner */
   #cookie-banner {
     flex-direction: row;
     align-items: center;
@@ -918,7 +903,6 @@ body {
   }
 
   .cookie-buttons {
-    width: auto;
     flex-direction: row;
     gap: 10px;
   }
@@ -926,7 +910,6 @@ body {
   .cookie-btn {
     width: auto;
     padding: 8px 14px;
-    text-align: center;
   }
 }
 @media (max-width: 1024px) {
@@ -941,21 +924,19 @@ body {
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
-  }
 
-  header {
-    position: relative;
   }
+header {
+  position: relative;
+}
 
   header {
     margin-top: -365px;
   }
-
-  header h1 {
+header h1 {
     position: relative;
     left: 13px;
   }
-
   /* Top right links */
   .top-right {
     top: 50px;
@@ -966,6 +947,7 @@ body {
   .top-right a {
     font-size: 16px;
   }
+
 
   /* Help Section */
   .help-section {
@@ -992,21 +974,21 @@ body {
     max-width: 160px;
   }
 
-  /* Symbols */
-  .symbol-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 60px;
-    margin-top: 20px;
-    justify-items: center;
-  }
+ /* Symbols */
+.symbol-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 40px 60px; /* row gap / column gap */
+  margin-top: 20px;
+  justify-items: center;
+}
 
-  .symbol-container {
-    width: 100%;
-    max-width: 140px;
-    padding: 0;
-    text-align: center;
-  }
+.symbol-container {
+  width: 100%;
+  max-width: 140px;
+  padding: 0;
+  text-align: center;
+}
 
   .symbol {
     height: 50px;
@@ -1065,15 +1047,16 @@ body {
   }
 
   /* Feature box */
-  .second-box {
+ .second-box {
     width: 100%;
-    margin: 145px auto 0;
+    margin: 145px auto 0; /* 20px below previous content */
     height: auto;
     padding: 10px;
     right: 1.8%;
     flex-direction: column;
     display: flex;
-  }
+}
+
 
   /* Make chart inside feature box responsive */
   .second-box canvas,
@@ -1098,57 +1081,57 @@ body {
     padding: 5px 10px;
   }
 
-  #send-arrow {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    width: 25px;
-    z-index: 10;
-  }
+#send-arrow {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 25px;
+  z-index: 10;
+}
 
   /* GAOH frame */
+ 
   .gaoh-frame {
-    position: relative;
-    bottom: -1120px;
-    right: -45px;
-    width: 100%;
-    max-width: 560px;
-    height: 345.5px;
-    margin: 26px auto 0;
+    position: relative;  /* was fixed before */
+    bottom: -1120px;        /* remove bottom positioning */
+    right: -45px;         /* remove right positioning */
+    width: 100%;         /* fill width of container */
+    max-width: 560px;    /* optional max width */
+    height: 345.5px;       /* keep height as you want */
+    margin: 26px auto 0; /* spacing below second-box, centered */
   }
-
-  /* Profile circle */
-  .profile-circle {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
-
-  .top-left-auth-links {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
+ /* Profile circle */
+.profile-circle {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+.top-left-auth-links {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
   .top-left-auth-links a {
     font-size: 15px;
   }
 
-  .chart-note {
-    position: absolute;
-    top: 1105px;
-    left: 44.5%;
-    color: black;
-    font-weight: bold;
-    font-size: 13px;
-    z-index: 20;
-  }
 
-  /* Footer */
+
+  .chart-note {
+  position: absolute;   /* allows free positioning */
+  top: 1105px;           /* move up/down */
+  left: 44.5%;            /* move left/right */
+
+  color: black;
+  font-weight: bold;
+  font-size:13px;
+  z-index: 20;
+}
+ /* Footer container */
   footer {
     width: 100% !important;
     padding: 10px 20px !important;
@@ -1156,17 +1139,18 @@ body {
     text-align: center !important;
     box-sizing: border-box !important;
     clear: both !important;
-    margin-top: 1390px !important;
-    position: relative !important;
+    margin-top: 1390px !important; /* space from content */
+    position: relative !important; /* flow with page */
   }
 
+  /* Bottom links inside footer */
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none !important;
-    display: inline-block !important;
-    margin: 0 10px !important;
-    position: static !important;
+    float: none !important;           /* remove previous floats */
+    display: inline-block !important; /* horizontal alignment */
+    margin: 0 10px !important;        /* spacing */
+    position: static !important;      /* not fixed/absolute */
     text-align: inherit !important;
   }
 
@@ -1179,6 +1163,7 @@ body {
     text-align: right !important;
   }
 
+  /* Copyright centered */
   footer p {
     margin: 19px 0 0 0 !important;
     font-size: 13px !important;
@@ -1186,13 +1171,13 @@ body {
     text-align: center !important;
   }
 
+  /* Clear floats inside footer */
   footer::after {
-    content: "";
-    display: table;
-    clear: both;
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
   }
-
-  /* Cookie banner */
+   /* --- Cookie Banner --- */
   #cookie-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -1201,45 +1186,51 @@ body {
 
   #cookie-banner span {
     max-width: 100%;
-    font-size: 13px;
+    font-size: 13px;  /* slightly bigger than phone */
     line-height: 1.4;
   }
 
   .cookie-buttons {
     width: 100%;
-    flex-direction: row;
+    flex-direction: row;  /* or column if you prefer stacked */
     gap: 8px;
   }
 
   .cookie-btn {
-    width: auto;
+    width: auto;      /* or 48% if side-by-side */
     text-align: center;
     padding: 6px 12px;
   }
 }
 
+
+/* === Phone Media Query === */
 @media (max-width: 600px) {
 
+  /* Body adjustments */
   body {
-    height: auto;
+    height: auto; /* allow vertical scrolling */
     padding: 0 5px;
   }
 
+  /* Header & main title */
   .gold-a {
     font-size: 63px;
     margin-top: 31px;
+
   }
+header {
+  position: relative;
+}
 
   header {
-    position: relative;
     margin-top: -351px;
   }
-
-  header h1 {
+header h1 {
     position: relative;
     left: 10px;
   }
-
+  /* Top right links */
   .top-right {
     top: 60px;
     right: 10px;
@@ -1250,6 +1241,8 @@ body {
     font-size: 16px;
   }
 
+
+  /* Help Section */
   .help-section {
     top: 105px;
     left: 10px;
@@ -1274,6 +1267,7 @@ body {
     max-width: 160px;
   }
 
+  /* Symbols */
   .symbol-row {
     gap: 65px;
     margin-top: 30px;
@@ -1310,18 +1304,21 @@ body {
     font-size: 15px;
   }
 
+  /* Design image */
   .design-image {
     top: 165px;
     left: 53%;
     width: 210px;
   }
 
+  /* Help suggestion text */
   .help-suggestion-text {
     top: 295px;
     left: 71%;
     font-size: 11px;
   }
 
+  /* Rectangle link */
   .rectangle-link {
     top: 23.7%;
     left: 67.5%;
@@ -1333,20 +1330,24 @@ body {
     height: 22px;
   }
 
+  /* Background watermark */
   .background-question {
     width: 150px;
   }
 
-  .second-box {
+  /* Feature box */
+ .second-box {
     width: 105%;
-    margin: 70px auto 0;
+    margin: 70px auto 0; /* 20px below previous content */
     height: auto;
     padding: 10px;
     right: 1.8%;
     flex-direction: column;
     display: flex;
-  }
+}
 
+
+  /* Make chart inside feature box responsive */
   .second-box canvas,
   .second-box .chart {
     width: 100% !important;
@@ -1361,6 +1362,7 @@ body {
     font-size: 15px;
   }
 
+  /* Doznaj-vise button */
   .doznaj-vise {
     top: 285px;
     left: 71%;
@@ -1368,54 +1370,56 @@ body {
     padding: 5px 10px;
   }
 
-  #send-arrow {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    width: 25px;
-    z-index: 10;
-  }
+#send-arrow {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 25px;
+  z-index: 10;
+}
 
+  /* GAOH frame */
+ 
   .gaoh-frame {
-    position: relative;
-    bottom: -1005px;
-    right: -30px;
-    width: 100%;
-    max-width: 430px;
-    height: 330.5px;
-    margin: 26px auto 0;
+    position: relative;  /* was fixed before */
+    bottom: -1005px;        /* remove bottom positioning */
+    right: -30px;         /* remove right positioning */
+    width: 100%;         /* fill width of container */
+    max-width: 430px;    /* optional max width */
+    height: 330.5px;       /* keep height as you want */
+    margin: 26px auto 0; /* spacing below second-box, centered */
   }
-
-  .profile-circle {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
-
-  .top-left-auth-links {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
+ /* Profile circle */
+.profile-circle {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+.top-left-auth-links {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
   .top-left-auth-links a {
     font-size: 12px;
   }
 
   .chart-note {
-    position: absolute;
-    top: 985px;
-    left: 40.5%;
-    color: black;
-    font-weight: bold;
-    font-size: 13px;
-    z-index: 20;
-  }
+  position: absolute;   /* allows free positioning */
+  top: 985px;           /* move up/down */
+  left: 40.5%;            /* move left/right */
+  
 
+  color: black;
+  font-weight: bold;
+  font-size:13px;
+  z-index: 20;
+}
+ /* Footer container */
   footer {
     width: 100% !important;
     padding: 10px 20px !important;
@@ -1423,20 +1427,31 @@ body {
     text-align: center !important;
     box-sizing: border-box !important;
     clear: both !important;
-    margin-top: 1300px !important;
-    position: relative !important;
+    margin-top: 1300px !important; /* space from content */
+    position: relative !important; /* flow with page */
   }
 
+  /* Bottom links inside footer */
   footer .bottom-left,
   footer .bottom-right,
   footer .bottom-right1 {
-    float: none !important;
-    display: inline-block !important;
-    margin: 0 10px !important;
-    position: static !important;
+    float: none !important;           /* remove previous floats */
+    display: inline-block !important; /* horizontal alignment */
+    margin: 0 10px !important;        /* spacing */
+    position: static !important;      /* not fixed/absolute */
     text-align: inherit !important;
   }
 
+  footer .bottom-left {
+    text-align: left !important;
+  }
+
+  footer .bottom-right,
+  footer .bottom-right1 {
+    text-align: right !important;
+  }
+
+  /* Copyright centered */
   footer p {
     margin: 19px 0 0 0 !important;
     font-size: 13px !important;
@@ -1444,13 +1459,13 @@ body {
     text-align: center !important;
   }
 
+  /* Clear floats inside footer */
   footer::after {
-    content: "";
-    display: table;
-    clear: both;
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
   }
-
-  #cookie-banner {
+ #cookie-banner {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -1464,88 +1479,20 @@ body {
 
   .cookie-buttons {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column; /* stack buttons vertically */
     gap: 6px;
   }
 
   .cookie-btn {
-    width: 100%;
+    width: 100%; /* make each button full width */
     text-align: center;
   }
 
-
- 
-/* ===== GAOH FRAME (FIXED MOBILE BEHAVIOR) ===== */
-.gaoh-frame {
-  position: relative;
-  bottom: auto;       /* FIX: stop offset hacking */
-  right: auto;        /* FIX */
-  width: 100%;
-  max-width: 430px;
-  height: 330.5px;
-  margin: 26px auto 0;
 }
 
-/* ===== PROFILE ===== */
-.profile-circle {
-  width: 28px;
-  height: 28px;
-  font-size: 14px;
-}
 
-.top-left-auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.top-left-auth-links a {
-  font-size: 12px;
-}
 
-/* ===== CHART NOTE ===== */
-.chart-note {
-  position: absolute;
-  top: 985px;
-  left: 40.5%;
-  color: black;
-  font-weight: bold;
-  font-size: 13px;
-  z-index: 20;
-}
-
-/* ===== FOOTER (SIMPLIFIED STABLE LAYOUT) ===== */
-footer {
-  width: 100% !important;
-  padding: 10px 20px !important;
-  background: lightgray;
-  text-align: center !important;
-  box-sizing: border-box !important;
-  margin-top: 1300px !important;
-  position: relative !important;
-}
-
-footer .bottom-left,
-footer .bottom-right,
-footer .bottom-right1 {
-  display: inline-block !important;
-  margin: 0 10px !important;
-  position: static !important;
-  float: none !important;
-}
-
-/* REMOVE conflicting alignment */
-footer .bottom-left,
-footer .bottom-right,
-footer .bottom-right1 {
-  text-align: center !important;
-}
-
-/* ===== COOKIE BANNER (KEEP ONLY ONE SYSTEM) ===== */
 #cookie-banner {
   position: fixed;
   bottom: 0;
@@ -1559,34 +1506,54 @@ footer .bottom-right1 {
   justify-content: space-between;
   font-size: 13px;
   border-top: 1px solid #ccc;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
   z-index: 9999;
   font-family: sans-serif;
 }
 
-/* MOBILE OVERRIDE (THIS ONE ACTUALLY MATTERS) */
-@media (max-width: 600px) {
+#cookie-banner span {
+  max-width: 75%;
+}
 
-  #cookie-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+#cookie-banner a {
+  color: #555;
+  text-decoration: underline;
+}
 
-  #cookie-banner span {
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.4;
-  }
+.cookie-buttons {
+  display: flex;
+  gap: 8px;
+}
 
-  .cookie-buttons {
-    width: 100%;
-    flex-direction: column;
-    gap: 6px;
-  }
+.cookie-btn {
+  border: 1px solid #bbb;
+  background: white;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease;
+}
 
-  .cookie-btn {
-    width: 100%;
-    text-align: center;
-  }
+.cookie-btn:hover {
+  background: #e6e6e6;
+}
+
+.accept-btn {
+  background: #444;
+  color: white;
+  border: 1px solid #444;
+}
+
+.accept-btn:hover {
+  background: #222;
+}
+.reject-btn {
+  background: #e6e6e6;
+  color: #333;
+  border: 1px solid #bbb;
+}
+
+.reject-btn:hover {
+  background: #d6d6d6;
 }
