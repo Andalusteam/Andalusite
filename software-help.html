@@ -76,7 +76,7 @@ html, body {
   margin-top: -17px;
   margin-left: 200px;
   transition: background-color 0.3s, transform 0.3s;
-  cursor: pointer;
+  cursor: none;
   color: white;
   font-weight: bold;
   font-family: sans-serif;
@@ -203,28 +203,247 @@ html, body {
   font-style: italic;
   z-index: 1000;
 }
+
+.answer-btn,
+.send-answer-btn {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.answer-btn:hover,
+.send-answer-btn:hover {
+  background-color: #b8860b; /* darker golden brown */
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1490px) {
+
+ html, body {
+  height: auto; /* allow vertical scrolling */
+  padding: 10px;
+  overflow-y: auto;
+  display: block; /* reset flex for mobile */
+}
+
+.left-list {
+    position: relative;
+    top: 130px;
+    left: 4%;          /* adjust distance from left side individually */
+    width: 40%;        /* adjustable width */
+    height: auto;
+    overflow-y: auto;
+    font-size: 1.6rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Right list */
+  .right-list {
+    position: relative;
+    top: 130px;
+    left: 20%;         /* adjust distance from left side individually */
+    width: 40%;        /* adjustable width */
+    height: auto;
+    overflow-y: auto;
+    font-size: 1.6rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+/* Titles / header text */
+.andalushr {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.kompjuter {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 5px;
+}
+
+/* Center messages */
+.center-messages {
+  max-width: 90%;
+  margin: 150px auto 0 auto;
+  text-align: center;
+}
+
+/* Rectangle boxes */
+.rectangle-box {
+  width: 150px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+/* Question boxes */
+.inline-question-box {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.question-box-scrollable {
+  width: 110%;
+  max-width: 100%;
+  min-height: 100px;       /* optional minimum height */
+  max-height: 300px;       /* fixed maximum height */
+  margin: 1px 0;
+  overflow-y: auto;        /* vertical scrollbar */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  padding: 12px;
+}
+
+/* Buttons full width for touch */
+.answer-btn,
+.send-answer-btn,
+.inline-question-box button {
+  width: 15%;
+  box-sizing: border-box;
+}
+
+/* Fixed note at bottom */
+.fixed-note {
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+} 
+
+/* === Phone Media Query === */
+@media (max-width: 600px) {
+
+ html, body {
+  height: auto; /* allow vertical scrolling */
+  padding: 10px;
+  overflow-y: auto;
+  display: block; /* reset flex for mobile */
+}
+
+.left-list {
+    position: relative;
+    top: 130px;
+    left: 4%;          /* adjust distance from left side individually */
+    width: 40%;        /* adjustable width */
+    height: auto;
+    overflow-y: auto;
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Right list */
+  .right-list {
+    position: relative;
+    top: 130px;
+    left: 20%;         /* adjust distance from left side individually */
+    width: 40%;        /* adjustable width */
+    height: auto;
+    overflow-y: auto;
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+/* Titles / header text */
+.andalushr {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.kompjuter {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 5px;
+}
+
+/* Center messages */
+.center-messages {
+  max-width: 90%;
+  margin: 150px auto 0 auto;
+  text-align: center;
+}
+
+/* Rectangle boxes */
+.rectangle-box {
+  width: 150px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+/* Question boxes */
+.inline-question-box {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.question-box-scrollable {
+  width: 110%;
+  max-width: 100%;
+  min-height: 100px;       /* optional minimum height */
+  max-height: 300px;       /* fixed maximum height */
+  margin: 1px 0;
+  overflow-y: auto;        /* vertical scrollbar */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  padding: 12px;
+}
+
+/* Buttons full width for touch */
+.answer-btn,
+.send-answer-btn,
+.inline-question-box button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fixed note at bottom */
+.fixed-note {
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+
 </style>
 </head>
 <body>
-  <h1><span class="andalushr">Andalus</span></h1>
+  <h1><span class="andalushr">Andaluz</span></h1>
   <h1><span class="kompjuter">Softver pomoć</span></h1>
 
   <!-- ✅ Left Side List -->
   <div class="side-list left-list">
-    <a href="material1softver.html#osnove">Šta je softver i kako se razlikuje od hardvera?</a>
+    <a href="material1softver.html#osnove">Što je softver i kako se razlikuje od hardvera?</a>
     <a href="material1softver.html#vrste-Softvera">Koje su glavne vrste softvera?</a>
-    <a href="material1softver.html#instalacija-izvedba">Šta znači instalacija softvera?</a>
+    <a href="material1softver.html#instalacija-izvedba">Što znači instalacija softvera?</a>
     <a href="material1softver.html#koji-Softver">Kako da znam koji softver mi je potreban?</a>
     <a href="material1softver.html#ažuriranje-softvera">Kako ažurirati softver?</a>
-    <a href="material1softver.html#opensource">Šta znači open-source softver?</a>
+    <a href="material1softver.html#opensource">Što znači open-source softver?</a>
     <a href="material1softver.html#freeware">Razlika freeware i trial softvera?</a>
-    <a href="material1softver.html#licenca">Šta znači licenca?</a>
-    <a href="material1softver.html#verzija">Šta je softverska verzija?</a>
+    <a href="material1softver.html#licenca">Što znači licenca?</a>
+    <a href="material1softver.html#verzija">Što je softverska verzija?</a>
     <a href="material1softver.html#uklanjanje">Kako ukloniti softver?</a>
-    <a href="material1softver.html#os">Kako funkcioniše operativni sistem?</a>
+    <a href="material1softver.html#os">Kako funkcionira operativni sistem?</a>
     <a href="material1softver.html#aplikacije">Kako se aplikacije pokreću?</a>
-    <a href="material1softver.html#zahtevi">Zašto softver traži zahteve?</a>
-    <a href="material1softver.html#zamrzavanje">Zašto softver "zamrzne"?</a>
+    <a href="material1softver.html#zahtevi">Zašto softver traži zahtjeve?</a>
+    <a href="material1softver.html#zamrzavanje">Zašto se softver "zamrzne"?</a>
     <a href="material1softver.html#internet">Kako softver koristi internet?</a>
   </div>
 
@@ -233,17 +452,17 @@ html, body {
     <a href="material1softver.html#aplikacijeVrste">Desktop, web i mobilne aplikacije?</a>
     <a href="material1softver.html#pravljenje">Kako se pravi softver?</a>
     <a href="material1softver.html#jezici">Koji jezici se koriste?</a>
-    <a href="material1softver.html#sdlc">Šta je SDLC?</a>
-    <a href="material1softver.html#uloge">Uloge programera/testera?</a>
-    <a href="material1softver.html#beta">Šta je beta verzija?</a>
+    <a href="material1softver.html#sdlc">Što je SDLC?</a>
+    <a href="material1softver.html#uloge">Uloge programera?</a>
+    <a href="material1softver.html#beta">Što je beta verzija?</a>
     <a href="material1softver.html#testiranje">Kako se testira softver?</a>
     <a href="material1softver.html#virusi">Može li softver imati viruse?</a>
-    <a href="material1softver.html#bezbednost">Kako proveriti sigurnost?</a>
-    <a href="material1softver.html#piraterija">Zaštita od piraterije?</a>
-    <a href="material1softver.html#neRadi">Šta ako softver ne radi?</a>
+    <a href="material1softver.html#bezbednost">Kako provjeriti sigurnost?</a>
+    <a href="material1softver.html#piraterija">Zaštita od "pirata"?</a>
+    <a href="material1softver.html#neRadi">Što ako softver ne radi?</a>
     <a href="material1softver.html#podrska">Kako kontaktirati podršku?</a>
     <a href="material1softver.html#backup">Kako sačuvati podatke?</a>
-    <a href="material1softver.html#usporava">Zašto usporava računar?</a>
+    <a href="material1softver.html#usporava">Zašto usporava kompjuter?</a>
     <a href="material1softver.html#ucenje">Kako naučiti softver?</a>
   </div>
 
@@ -265,162 +484,176 @@ html, body {
   <div class="question-box-scrollable" id="questions-list"></div>
 
   <div class="fixed-note">Više kategorija uskoro dolazi</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const isAdmin = true; // set to false if you don’t want delete option
+  // ================== SUPABASE CLIENT ==================
+  const supabaseUrl = "https://zflomxninkvluwnepwfd.supabase.co";
+  const supabaseKey = "sb_publishable_FUPjxd0xSVjMbVqzXm-k6w_gfCxLWCC";
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-// Load saved questions & answers
-let savedQuestions = JSON.parse(localStorage.getItem("questions")) || [];
-let savedAnswers = JSON.parse(localStorage.getItem("answers")) || {}; // { question: [ { text: "answer", mine: true }, ... ] }
+  // ================== USER INFO ==================
+  let currentUser = null;
+  const subcategoryId = "44f90861-d91f-4e87-b126-83e5ca78869a"; // ← Replace with UUID of 'Softver' subcategory
 
-const qList = document.getElementById("questions-list");
+  async function checkUser() {
+    const { data: { user }, error } = await supabase.auth.getUser();
+    currentUser = user;
 
-// Render questions
-function renderQuestions() {
-  qList.innerHTML = "";
-
-  if (savedQuestions.length === 0) {
-    qList.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
-    return;
+    if (!currentUser) {
+      // Show login or default user
+      currentUser = { id: null, email: "Guest" };
+    }
   }
 
-  savedQuestions.forEach((q, index) => {
-    const wrapper = document.createElement("div");
-    wrapper.className = "question-wrapper";
-    wrapper.style.flexDirection = "column";
-    wrapper.style.alignItems = "flex-start";
-    wrapper.style.marginBottom = "16px";
-    wrapper.style.padding = "8px";
-    wrapper.style.borderBottom = "1px dashed #ccc";
+  await checkUser();
 
-    // Question text
-    const text = document.createElement("div");
-    text.className = "question-text";
-    text.textContent = q;
-    text.style.marginBottom = "6px";
-    text.style.wordWrap = "break-word";
-    text.style.whiteSpace = "normal";
-    wrapper.appendChild(text);
+  const qList = document.getElementById("questions-list");
 
-    // Answers container
-    const ansDiv = document.createElement("div");
-    ansDiv.style.display = "flex";
-    ansDiv.style.alignItems = "center";
-    ansDiv.style.flexWrap = "wrap";
-    ansDiv.style.marginBottom = "6px";
+  // ================== RENDER QUESTIONS & ANSWERS ==================
+  async function renderQuestions() {
+    qList.innerHTML = "";
 
-    if (savedAnswers[q] && savedAnswers[q].length > 0) {
-      const label = document.createElement("span");
-      label.textContent = "Odgovori: ";
-      label.style.fontWeight = "bold";
-      label.style.marginRight = "6px";
-      ansDiv.appendChild(label);
+    const { data: questions, error } = await supabase
+      .from('questions')
+      .select(`*, answers(*)`)
+      .eq('subcategory_id', subcategoryId)
+      .order('created_at', { ascending: true });
 
-      savedAnswers[q].forEach((ansObj, i) => {
-        const ansEl = document.createElement("span");
-        ansEl.textContent = ansObj.text;
-        ansEl.style.color = ansObj.mine ? "green" : "#333";
-        ansEl.style.fontWeight = ansObj.mine ? "bold" : "normal";
-        ansEl.style.marginRight = "6px";
-        ansEl.style.wordWrap = "break-word";
-        ansEl.style.whiteSpace = "normal";
-        ansDiv.appendChild(ansEl);
-
-        if (i < savedAnswers[q].length - 1) {
-          const comma = document.createTextNode(", ");
-          ansDiv.appendChild(comma);
-        }
-      });
+    if (error) {
+      console.error(error);
+      qList.innerHTML = "<p><em>Greška pri učitavanju pitanja.</em></p>";
+      return;
     }
 
-    wrapper.appendChild(ansDiv);
+    if (!questions || questions.length === 0) {
+      qList.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
+      return;
+    }
 
-    // Answer button
-    const answerBtn = document.createElement("button");
-    answerBtn.className = "answer-btn";
-    answerBtn.textContent = "Odgovori";
-    answerBtn.onclick = () => {
-      answerBtn.style.display = "none";
+    questions.forEach(qObj => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "question-wrapper";
+      wrapper.style.borderBottom = "1px dashed #ccc";
+      wrapper.style.marginBottom = "16px";
+      wrapper.style.padding = "8px";
 
-      const input = document.createElement("input");
-      input.type = "text";
-      input.className = "answer-input";
-      input.placeholder = "Upiši odgovor ovdje...";
-      input.style.marginRight = "6px";
-      input.style.flexGrow = "1";
+      // QUESTION AUTHOR
+      const qAuthor = document.createElement("div");
+      qAuthor.textContent = `Postavio: ${qObj.user_id || "Guest"}`;
+      qAuthor.style.fontSize = "12px";
+      qAuthor.style.color = "#666";
 
-      const sendBtn = document.createElement("button");
-      sendBtn.className = "send-answer-btn";
-      sendBtn.textContent = "Pošalji";
-      sendBtn.onclick = () => {
-        const answer = input.value.trim();
-        if (answer) {
-          if (!savedAnswers[q]) savedAnswers[q] = [];
-          savedAnswers[q].push({ text: answer, mine: true });
-          localStorage.setItem("answers", JSON.stringify(savedAnswers));
+      const qText = document.createElement("div");
+      qText.textContent = qObj.question;
+      qText.style.margin = "4px 0 8px";
+      qText.style.wordBreak = "break-word";
 
-          // Insert coin BEFORE re-rendering
-          const coinImg = document.createElement("img");
-          coinImg.src = "Screenshot_68.png"; // your coin image
-          coinImg.style.width = "22px";
-          coinImg.style.height = "22px";
-          coinImg.style.marginLeft = "6px";
-          coinImg.style.transition = "opacity 2s ease-out, transform 2s ease-out";
+      wrapper.appendChild(qAuthor);
+      wrapper.appendChild(qText);
 
-          // Insert coin **next to the new answer**
-          ansDiv.appendChild(coinImg);
+      // ANSWERS
+      const ansDiv = document.createElement("div");
+      ansDiv.style.display = "flex";
+      ansDiv.style.flexDirection = "column";
+      ansDiv.style.gap = "8px";
 
-          // Smooth disappearance
-          setTimeout(() => {
-            coinImg.style.opacity = "0";
-            coinImg.style.transform = "scale(0.5)";
-          }, 1500);
+      if (qObj.answers && qObj.answers.length > 0) {
+        qObj.answers.forEach(ansObj => {
+          const ansRow = document.createElement("div");
+          ansRow.style.display = "flex";
+          ansRow.style.flexDirection = "column";
 
-          setTimeout(() => coinImg.remove(), 13250);
+          const aAuthor = document.createElement("div");
+          aAuthor.textContent = `Odgovorio: ${ansObj.user_id || "Guest"}`;
+          aAuthor.style.fontSize = "12px";
+          aAuthor.style.color = "#666";
 
-          // Re-render questions after coin is added
-          setTimeout(renderQuestions, 1503); 
-        }
-      };
+          const aText = document.createElement("div");
+          aText.textContent = ansObj.answer;
+          aText.style.wordBreak = "break-word";
 
-      ansDiv.appendChild(input);
-      ansDiv.appendChild(sendBtn);
-    };
+          ansRow.appendChild(aAuthor);
+          ansRow.appendChild(aText);
+          ansDiv.appendChild(ansRow);
+        });
+      }
 
-    wrapper.appendChild(answerBtn);
+      wrapper.appendChild(ansDiv);
 
-    // Delete button for admin
-    if (isAdmin) {
-      const deleteBtn = document.createElement("button");
-      deleteBtn.className = "delete-btn";
-      deleteBtn.textContent = "Obriši";
-      deleteBtn.onclick = () => {
-        if (confirm("Jeste li sigurni da želite obrisati ovo pitanje?")) {
-          savedQuestions.splice(index, 1);
-          delete savedAnswers[q];
-          localStorage.setItem("questions", JSON.stringify(savedQuestions));
-          localStorage.setItem("answers", JSON.stringify(savedAnswers));
+      // ANSWER BUTTON
+      const answerBtn = document.createElement("button");
+      answerBtn.textContent = "Odgovori";
+
+      answerBtn.onclick = async () => {
+        answerBtn.style.display = "none";
+
+        const input = document.createElement("textarea");
+        input.rows = 2;
+        input.placeholder = "Upiši odgovor...";
+        input.style.width = "100%";
+
+        const sendBtn = document.createElement("button");
+        sendBtn.textContent = "Pošalji";
+
+        const cancelBtn = document.createElement("button");
+        cancelBtn.textContent = "Odustani";
+
+        cancelBtn.onclick = () => {
+          input.remove();
+          sendBtn.remove();
+          cancelBtn.remove();
+          answerBtn.style.display = "inline-block";
+        };
+
+        sendBtn.onclick = async () => {
+          const val = input.value.trim();
+          if (!val) return;
+
+          const { data, error } = await supabase
+            .from('answers')
+            .insert([{
+              question_id: qObj.id,
+              user_id: currentUser.id,
+              answer: val,
+              points_awarded: 0
+            }]);
+
+          if (error) return alert("Greška pri spremanju odgovora: " + error.message);
+
           renderQuestions();
-        }
+        };
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(sendBtn);
+        wrapper.appendChild(cancelBtn);
       };
-      deleteBtn.style.alignSelf = "flex-end";
-      wrapper.appendChild(deleteBtn);
-    }
 
-    qList.appendChild(wrapper);
-  });
-}
+      wrapper.appendChild(answerBtn);
 
-// Add new question
-document.getElementById("add-question").addEventListener("click", () => {
-  const input = document.getElementById("new-question");
-  const question = input.value.trim();
-  if (question) {
-    savedQuestions.push(question);
-    localStorage.setItem("questions", JSON.stringify(savedQuestions));
-    renderQuestions();
-    input.value = "";
+      qList.appendChild(wrapper);
+    });
   }
-});
 
-renderQuestions();
+  // ================== ADD QUESTION ==================
+  document.getElementById("add-question").onclick = async () => {
+    const input = document.getElementById("new-question");
+    const val = input.value.trim();
+    if (!val) return;
+
+    const { data, error } = await supabase
+      .from('questions')
+      .insert([{
+        user_id: currentUser.id,
+        subcategory_id: subcategoryId,
+        question: val
+      }]);
+
+    if (error) return alert("Greška pri spremanju pitanja: " + error.message);
+
+    input.value = "";
+    renderQuestions();
+  };
+
+  renderQuestions();
 </script>

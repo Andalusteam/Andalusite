@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vaš profil</title>
   <link rel="stylesheet" href="styles.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,11 +53,12 @@
     }
 
     .edit-btn, .home-btn {
+      display: inline-block;
+      text-decoration: none;
       margin-top: 10px;
       padding: 8px 16px;
       background-color: goldenrod;
       color: white;
-      border: none;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
@@ -67,51 +69,66 @@
       background-color: #daa520;
     }
   </style>
-</head>
 <body>
-  <div class="profile-container">
-    <div class="profile-initial" id="profile-initial">U</div>
-    <div class="profile-info">
-      <p><label>Ime:</label> <span id="user-name">user</span></p>
-      <p><label>Email:</label> <span id="user-email">user@example.com</span></p>
-      <p><label>Starost računa:</label> <span id="account-age">2 weeks</span></p>
-      <p><label>Bodovi:</label> <span id="user-points">0</span></p> <!-- NEW -->
-    </div>
-    <!-- Buttons -->
-    <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
-    <br/>
-    <button class="home-btn" onclick="goHome()">Go Home</button>
+
+<div class="profile-container">
+  <div class="profile-initial" id="profile-initial">U</div>
+
+  <div class="profile-info">
+    <p><label>Ime:</label> <span id="user-name"></span></p>
+    <p><label>Email:</label> <span id="user-email"></span></p>
+    <p><label>Starost računa:</label> <span id="account-age"></span></p>
+    <p><label>Bodovi:</label> <span id="user-points"></span></p>
   </div>
 
-  <script>
-    // Placeholder user data (can be fetched from backend later)
-    const user = {
-      name: "user",
-      email: "user@example.com",
-      joined: new Date("2024-05-01"), // simulate account creation
-      points: 2000 // 🔹 Example: user collected points
-    };
+  <!-- Buttons -->
+  <a href="changeprofile.html" class="edit-btn">Uredi profil</a>
+  <br/>
+  <a href="index.html" class="home-btn">Vrati se</a>
+</div>
 
-    // Set UI content
-    document.getElementById("profile-initial").textContent = user.name.charAt(0).toUpperCase();
-    document.getElementById("user-name").textContent = user.name;
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = "https://zflomxninkvluwnepwfd.supabase.co";
+  const supabaseKey = "sb_publishable_FUPjxd0xSVjMbVqzXm-k6w_gfCxLWCC";
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  async function loadProfile() {
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+      alert("Niste prijavljeni!");
+      window.location.href = "login.html";
+      return;
+    }
+
+    // Fetch profile from "profiles" table
+    const { data: profile, error } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    // Fill in profile data
+    document.getElementById("profile-initial").textContent =
+      profile.username.charAt(0).toUpperCase();
+    document.getElementById("user-name").textContent = profile.username;
     document.getElementById("user-email").textContent = user.email;
-    document.getElementById("user-points").textContent = user.points;
+    document.getElementById("user-points").textContent = profile.points;
 
     // Calculate account age
-    const daysSince = Math.floor((new Date() - user.joined) / (1000 * 60 * 60 * 24));
-    document.getElementById("account-age").textContent = 
-      daysSince < 30 ? `${daysSince} days` : `${Math.floor(daysSince / 30)} months`;
+    const joinedDate = new Date(user.created_at);
+    const daysSince = Math.floor((new Date() - joinedDate) / (1000*60*60*24));
+    document.getElementById("account-age").textContent =
+      daysSince < 30 ? daysSince + " dana" : Math.floor(daysSince/30) + " mjeseci";
+  }
 
-    // Redirect to changeprofile.html when clicking Edit
-    function editProfile() {
-      window.location.href = "changeprofile.html";
-    }
+  loadProfile();
+</script>
 
-    // Go Home button function
-    function goHome() {
-      window.location.href = "index.html";
-    }
-  </script>
 </body>
-</html>

@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       position: relative;
-      overflow-x: hidden;
+      overflow-x: auto;
     }
 
     /* Background image */
@@ -29,7 +29,7 @@
     /* Titles */
     h1 {
       font-size: 20px;
-      margin-top: 80px;
+      margin-top: 25px;
       margin-bottom: 5px;
       color: #444;
       z-index: 1;
@@ -130,8 +130,8 @@
 .questions-container {
       position: fixed;
       bottom: 20px;
-      left: 20px;
-      max-width: 300px;
+      left: 2px;
+      max-width: 455px;
       max-height: 50%;
       overflow-y: auto;
       background-color: #f9f9f9;
@@ -206,11 +206,155 @@
    background-color: rgba(194, 190, 222, 0.4);
   z-index: 2000;
 }
+.imageza {
+  position: fixed;      /* or absolute */
+  top: 660px;
+  left: 1350px;
+  width: 8%;
+  padding: 10px;
+  z-index: 1000;        /* keeps it above everything */
+  border-radius: 2px;
+  cursor: default;
+}
 
+ body {
+  max-width: 1600px;
+  margin: 0 auto;
+
+}
+
+@media (max-width: 1505px) {
+  .questions-container {
+    position: static;
+    max-height: 50vh;
+    width: 55%;
+    overflow-y: auto;
+    margin-top: 130px;
+  }
+  .background-image {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+.quiz-text {
+      position: absolute;
+      bottom: 77px;
+      left: 476px;
+      max-width: 250px;
+      max-height: 100%;
+   
+      padding: 10px;
+      font-size: 14px;
+  
+    }
+.cover-blocker {
+  position: absolute;
+  top: 20px;
+  left: -12px;
+  width: 355px;
+  height: 4.5%;
+   background-color: rgba(194, 190, 222, 0.0);
+  z-index: 2000;
+}
+   h1 {
+      font-size: 15px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #444;
+      z-index: 1;
+      position: relative;
+    }
+
+
+.imageza {
+  position: fixed;      /* or absolute */
+  top: 660px;
+  left: 500px;
+  width: 8%;
+  padding: 10px;
+  z-index: 1000;        /* keeps it above everything */
+  border-radius: 2px;
+  cursor: default;
+}
+
+
+}
+
+
+
+    
+    @media (max-width: 600px) {
+  .questions-container {
+    position: static;
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-top: 130px;
+  }
+  .background-image {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+.quiz-text {
+      position: static;
+      bottom: 92px;
+      left: 17px;
+      max-width: 320px;
+      max-height: 50%;
+   
+      padding: 10px;
+      font-size: 14px;
+     
+    }
+.cover-blocker {
+  position: absolute;
+  top: 20px;
+  left: -12px;
+  width: 355px;
+  height: 4.5%;
+   background-color: rgba(194, 190, 222, 0.0);
+  z-index: 2000;
+}
+   h1 {
+      font-size: 15px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #444;
+      z-index: 1;
+      position: relative;
+    }
+
+    .imageza {
+  position: absolute;      /* or absolute */
+  top: 760px;
+  left: 36%;
+  width: 25%;
+  padding: 10px;
+  z-index: 1000;        /* keeps it above everything */
+  border-radius: 2px;
+  cursor: default;
+}
+
+}
 
   </style>
 </head>
 <body>
+  <img src="imageza.png" alt="Design1 Idea" class="imageza" />
+
+
 <!-- COVER BLOCKER -->
 <div class="cover-blocker">
   
@@ -255,140 +399,150 @@
    
   </div>
 
-  <script>
-  const isAdmin = true; // admin can delete
+<script>
+const isAdmin = true; // set true if admin can delete
+const CURRENT_USER = "Admin"; // change later to actual logged-in user
 
-  function addQuestion() {
-    const textarea = document.getElementById('user-question');
-    const questionText = textarea.value.trim();
-    if (!questionText) return;
+// Storage
+let savedQuestions = JSON.parse(localStorage.getItem("questions")) || [];
+let savedAnswers = JSON.parse(localStorage.getItem("answers")) || {};
 
-    const container = document.getElementById('questions-container');
+const container = document.getElementById("questions-container");
+const addBtn = document.getElementById("add-question");
+const questionInput = document.getElementById("user-question");
 
-    const questionItem = document.createElement('div');
-    questionItem.className = 'question-item';
-    questionItem.style.flexDirection = 'column';
+// Add question
+function addQuestion() {
+  const text = questionInput.value.trim();
+  if (!text) return;
 
-    const topRow = document.createElement('div');
-    topRow.style.display = 'flex';
-    topRow.style.alignItems = 'center';
-    topRow.style.justifyContent = 'space-between';
-    topRow.style.width = '100%';
+  const qObj = { text: text, author: CURRENT_USER };
+  savedQuestions.push(qObj);
+  localStorage.setItem("questions", JSON.stringify(savedQuestions));
 
-    const span = document.createElement('div');
-    span.textContent = questionText;
-    span.style.whiteSpace = 'pre-wrap'; // wrap long text
-    span.style.wordBreak = 'break-word'; // break long words
-    span.style.flex = '1';
+  questionInput.value = "";
+  renderQuestions();
+}
 
-    const btnBox = document.createElement('div');
-    btnBox.style.display = 'flex';
-    btnBox.style.gap = '6px';
+// Render questions & answers
+function renderQuestions() {
+  container.innerHTML = "";
 
-    const answerBtn = document.createElement('button');
-    answerBtn.className = 'answer-btn';
-    answerBtn.textContent = 'Odgovori';
-    answerBtn.onclick = () => showAnswerBox(questionItem);
+  if (savedQuestions.length === 0) {
+    container.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
+    return;
+  }
 
-    btnBox.appendChild(answerBtn);
+  savedQuestions.forEach((qObj, qIndex) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "question-item";
+    wrapper.style.marginBottom = "12px";
+    wrapper.style.borderBottom = "1px dashed #ccc";
+    wrapper.style.padding = "8px";
 
-    if (isAdmin) {
-      const deleteBtn = document.createElement('button');
-      deleteBtn.className = 'delete-btn';
-      deleteBtn.textContent = 'Obriši';
-      deleteBtn.style.background = 'red';
-      deleteBtn.style.color = 'white';
-      deleteBtn.style.border = 'none';
-      deleteBtn.style.borderRadius = '6px';
-      deleteBtn.style.padding = '6px 10px';
-      deleteBtn.style.cursor = 'pointer';
-      deleteBtn.onclick = () => {
-        if (confirm('Jeste li sigurni da želite obrisati ovo pitanje?')) {
-          questionItem.remove();
+    // Question text & author
+    const qText = document.createElement("div");
+    qText.textContent = qObj.text;
+    qText.style.fontWeight = "bold";
+
+    const qAuthor = document.createElement("div");
+    qAuthor.textContent = `Postavio: ${qObj.author}`;
+    qAuthor.style.fontSize = "12px";
+    qAuthor.style.color = "#666";
+
+    wrapper.appendChild(qText);
+    wrapper.appendChild(qAuthor);
+
+    // Answers container
+    const ansDiv = document.createElement("div");
+    ansDiv.style.marginTop = "6px";
+    if (savedAnswers[qObj.text]) {
+      savedAnswers[qObj.text].forEach(ansObj => {
+        const aWrapper = document.createElement("div");
+        aWrapper.textContent = `Odgovorio: ${ansObj.author} - ${ansObj.text}`;
+        aWrapper.style.color = ansObj.mine ? "green" : "#333";
+
+        // Delete answer button (only owner or admin)
+        if (ansObj.author === CURRENT_USER || isAdmin) {
+          const delBtn = document.createElement("button");
+          delBtn.textContent = "Obriši odgovor";
+          delBtn.style.marginLeft = "6px";
+          delBtn.onclick = () => {
+            savedAnswers[qObj.text] = savedAnswers[qObj.text].filter(a => a !== ansObj);
+            if (savedAnswers[qObj.text].length === 0) delete savedAnswers[qObj.text];
+            localStorage.setItem("answers", JSON.stringify(savedAnswers));
+            renderQuestions();
+          };
+          aWrapper.appendChild(delBtn);
         }
-      };
-      btnBox.appendChild(deleteBtn);
+
+        ansDiv.appendChild(aWrapper);
+      });
     }
 
-    topRow.appendChild(span);
-    topRow.appendChild(btnBox);
-    questionItem.appendChild(topRow);
+    wrapper.appendChild(ansDiv);
 
-    container.appendChild(questionItem);
-    textarea.value = ''; // clear textarea
-  }
+    // Answer button
+    const answerBtn = document.createElement("button");
+    answerBtn.textContent = "Odgovori";
+    answerBtn.onclick = () => {
+      answerBtn.style.display = "none";
 
-  function showAnswerBox(questionItem) {
-    if (questionItem.querySelector('.answer-box')) return;
+      const input = document.createElement("input");
+      input.type = "text";
+      input.placeholder = "Upiši odgovor ovdje...";
+      input.style.marginRight = "6px";
 
-    const answerBox = document.createElement('div');
-    answerBox.className = 'answer-box';
-    answerBox.style.marginTop = '6px';
-    answerBox.style.display = 'flex';
-    answerBox.style.flexDirection = 'column';
+      const sendBtn = document.createElement("button");
+      sendBtn.textContent = "Pošalji";
+      sendBtn.onclick = () => {
+        const val = input.value.trim();
+        if (!val) return;
+        if (!savedAnswers[qObj.text]) savedAnswers[qObj.text] = [];
+        savedAnswers[qObj.text].push({ text: val, author: CURRENT_USER, mine: true });
+        localStorage.setItem("answers", JSON.stringify(savedAnswers));
+        renderQuestions();
+      };
 
-    const textarea = document.createElement('textarea');
-    textarea.rows = 2;
-    textarea.style.resize = 'none';
-    textarea.style.marginBottom = '4px';
-    textarea.style.width = '100%';
-    textarea.style.wordBreak = 'break-word';
-    textarea.style.whiteSpace = 'pre-wrap';
+      const cancelBtn = document.createElement("button");
+      cancelBtn.textContent = "Odustani";
+      cancelBtn.onclick = () => {
+        input.remove();
+        sendBtn.remove();
+        cancelBtn.remove();
+        answerBtn.style.display = "inline-block";
+      };
 
-    const submitBtn = document.createElement('button');
-    submitBtn.textContent = 'Pošalji odgovor';
-    submitBtn.className = 'answer-btn';
-    submitBtn.style.alignSelf = 'flex-start';
-
-    submitBtn.onclick = () => {
-      const answerText = textarea.value.trim();
-      if (!answerText) return;
-
-      // answer container with coin
-      const answerContainer = document.createElement('div');
-      answerContainer.style.display = 'flex';
-      answerContainer.style.alignItems = 'center';
-      answerContainer.style.gap = '6px';
-      answerContainer.style.marginTop = '4px';
-      answerContainer.style.flexWrap = 'wrap';
-
-      // coin image
-      const coin = document.createElement('img');
-      coin.src = 'Screenshot_68.png';
-      coin.style.width = '20px';
-      coin.style.height = '20px';
-      coin.style.transition = 'transform 1.2s ease-out, opacity 1.2s ease-out';
-      answerContainer.appendChild(coin);
-
-      // answer text
-      const answerDiv = document.createElement('div');
-      answerDiv.textContent = answerText;
-      answerDiv.style.color = 'green';
-      answerDiv.style.fontWeight = 'bold';
-      answerDiv.style.whiteSpace = 'pre-wrap'; // wrap
-      answerDiv.style.wordBreak = 'break-word';
-      answerDiv.style.flex = '1';
-
-      answerContainer.appendChild(answerDiv);
-
-      questionItem.appendChild(answerContainer);
-      answerBox.remove();
-
-      // animate coin
-      setTimeout(() => {
-        coin.style.transform = 'translateY(-10px)';
-        coin.style.opacity = '0';
-        setTimeout(() => coin.remove(), 1200);
-      }, 50);
+      wrapper.appendChild(input);
+      wrapper.appendChild(sendBtn);
+      wrapper.appendChild(cancelBtn);
     };
 
-    answerBox.appendChild(textarea);
-    answerBox.appendChild(submitBtn);
+    wrapper.appendChild(answerBtn);
 
-    questionItem.appendChild(answerBox);
-  }
+    // Delete question (admin only)
+    if (isAdmin) {
+      const delQ = document.createElement("button");
+      delQ.textContent = "Obriši pitanje";
+      delQ.style.marginTop = "6px";
+      delQ.onclick = () => {
+        if (confirm("Obrisati pitanje?")) {
+          savedQuestions.splice(qIndex, 1);
+          delete savedAnswers[qObj.text];
+          localStorage.setItem("questions", JSON.stringify(savedQuestions));
+          localStorage.setItem("answers", JSON.stringify(savedAnswers));
+          renderQuestions();
+        }
+      };
+      wrapper.appendChild(delQ);
+    }
+
+    container.appendChild(wrapper);
+  });
+}
+
+addBtn.onclick = addQuestion;
+renderQuestions();
 </script>
 
-
 </body>
-</html>

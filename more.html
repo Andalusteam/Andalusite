@@ -118,19 +118,230 @@
       font-weight: bold;
       margin-top: -290px;
     }
+.back-link {
+  margin-top: 250px;
+  text-align: center;
+}
+
+.back-link a {
+  color: black;           /* grey */
+  text-decoration: none; /* remove underline */
+  font-size: 20px;
+}
+
+.back-link a:hover {
+  color: #aaa;           /* optional hover */
+}
+
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1250px) {
+
+  header {
+    margin-top: 0px;
+  }
+
+  .gold-a {
+    font-size: 60px;
+    margin-top: 40px;
+  }
+
+  .title-divider {
+    width: 90%;
+    margin: 10px auto 30px;
+  }
+
+  .content {
+    max-width: 95%;
+    font-size: 20px;
+    padding: 0 15px 80px;
+  }
+
+  /* Remove absolute positioning for images */
+  .images {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .img1 {
+      position: absolute;
+      top: 310px;
+      left: 250px;
+      width: 550px;
+    }
+
+    .img2 {
+      position: absolute;
+      top: 650px;
+      right: 650px;
+      width: 200px;
+    }
+     .img3 {
+      position: absolute;
+      top: 680px;
+      right: 450px;
+      width: 200px;
+       border: 5px grey;
+      border-radius: 12px;
+    }
+
+
+  /* Bottom text section */
+  .bottom-text {
+    position: static;
+    transform: none;
+    max-width: 95%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .korak1 {
+      position: absolute;
+      top: 355px;
+      right: 520px;
+      width: 295px;
+    }
+    
+     .korak2 {
+      position: absolute;
+      top: 205px;
+      right:-10px;
+      width: 299px;
+    } 
+
+
+  .back-link {
+    margin-top: 500px;
+  }
+
+  .back-link a {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  header {
+    margin-top: 0;
+  }
+
+  .gold-a {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+  .title-divider {
+    width: 90%;
+    margin: 10px auto 30px;
+  }
+
+  .content {
+    max-width: 95%;
+    font-size: 18px;
+    padding: 0 15px 80px;
+  }
+
+  /* Remove absolute positioning for images */
+  .images {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .img1 {
+      position: absolute;
+      top: 380px;
+      left: 10px;
+      width: 550px;
+    }
+
+    .img2 {
+      position: absolute;
+      top: 680px;
+      right: 300px;
+      width: 200px;
+    }
+     .img3 {
+      position: absolute;
+      top: 680px;
+      right: 60px;
+      width: 200px;
+       border: 5px grey;
+      border-radius: 12px;
+    }
+
+
+  /* Bottom text section */
+  .bottom-text {
+    position: static;
+    transform: none;
+    max-width: 95%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .korak1 {
+      position: absolute;
+      top: 415px;
+      right: 120px;
+      width: 295px;
+    }
+    
+     .korak2 {
+      position: absolute;
+      top: 205px;
+      right:-10px;
+      width: 299px;
+    } 
+
+  /* O bodovima section */
+  .o-bodovima {
+    position: static;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .O-bodovima {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .back-link {
+    margin-top: 500px;
+  }
+
+  .back-link a {
+    font-size: 16px;
+  }
+
+}
+
 
   </style>
 </head>
 <body>
   <header>
-    <h1><span class="gold-a">Andalus</span></h1>
+    <h1><span class="gold-a">Andaluz</span></h1>
     <hr class="title-divider" />
   </header>
 
   <div class="content">
     <p>
-      Ovaj dio stranice je namijenjen za odgovaranje i postavjanje pitanja od drugih korisnika ove stranice. Pitanja nisu vezana za jednu specifičnu temu, već možeju biti raznih narava. Ideja ovog je bila da ljudi možeju potražiti pomoć od drugih.. i da će drugi onda pomoći, kao što i samo širenje dobra. Također, nudimo i sakupljanje bodova pomaganjem, tako da kad netko odgovori na pitanje dobije bodove koje će u budućnosti moći prenijeti u oblik pravog novca (za detalje pogledaj "O bodovima i novcu") ..dopustite da vam pokušamo objasniti ukratko putem samo nekoliko slika ispod...
-    
+Pitanja mogu biti raznih narava.
+
+Stranica omogućuje korist i korisniku koji postavlja pitanje i onome koji odgovara, pri čemu se za sudjelovanje dobivaju bodovi.
+
+Bodovi nemaju novčanu vrijednost.
+U budućnosti, u slučaju rasta platforme, planirano je omogućiti dodatne mogućnosti korisnicima s određenim brojem bodova. Način prikupljanja bodova je objašnjen i prikazan uz slike, ispod. 
     <div class="images">
       <img src="more1.jpg" alt="More slika 1" class="img1">
       <img src="more2.jpg" alt="More slika 2" class="img2">
@@ -141,7 +352,7 @@
   <!-- Bottom fixed text -->
   <div class="bottom-text">
     <p>
-      Nadamo se da je pomoglo u shvaćanju.. a sad, želimo naglasiti da ti bodovi, niti odgovaranje na pitanja ili postavljanje pitanja nije ni u kojem obliku rizično/sklono opasnosti od strane nas. Voditelji stranice ne uzimaju nikakve osobne podatke, osim onih koje ste dali za neku svrhu (prijava ili slično). Bankovni podaci se nikad ne uzimaju. Za svako postavljeno pitanje na stranici, bilo vaše ili tuđe..stisnite na " SVA PITANJA" na početnoj stranici.
+    
     </p>
      <div class="korak1">
     <p> 1. Stisni na "Odgovori"..te odgovori na postavljeno pitanje..
@@ -150,13 +361,10 @@
      <div class="korak2">
     <p>  2. Pridobi bodove..i to je to..bodovi se bilježe na vašem profilu...         (pogledaj profil)
 
-<div class="o-bodovima">
-    <p> Bodovi koje imate na profilu su trenutno bezvrijedni, naime planiramo omogućiti da postanu vrijedni u skoroj budućnosoti. Broj korisnika je važan, kad govorimo o tome..puno korisnika znači puno više prilika..bez toga uvjeta nema i bodova koji bi vrijedili nešto. Bodovi bi se mogli prenijeti u novčani oblik koji bi podigli isključivo(za sad) na Pay-Pal-u.
-      Davanje bankovnih podataka, kao i-ban i slično nije potrebno.
-
-      <div class="O-bodovima">
-    <p> O bodovima i novcu
-
       </div>
+        <div class="back-link">
+  <a href="index.html">← Natrag</a>
+</div>
+
 </body>
 </html>

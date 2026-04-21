@@ -67,23 +67,111 @@
     .login-link a:hover {
       text-decoration: underline;
     }
-  </style>
-</head>
+
+    .imageza{
+      width: 16%;
+      padding: 10px;
+     
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: none;
+      margin-top: 10px;
+    }
+  .message{
+  position: absolute;
+  left: 43.2%;
+  top: 79%;
+  transform: translate(-50%, -50%) translateX(100px); /* keep original offset */
+  text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+}
+
+
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+ </style>
 <body>
 
-  <div class="signup-box">
-    <h2>Stvori račun</h2>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Registriraj se</button>
-    </form>
+<img src="imageza.png" alt="Design1 Idea" class="imageza" />
 
-    <div class="login-link">
-      Već imaš račun? <a href="login.html">Prijavi se</a>
+<div class="signup-box">
+  <h2>Stvori račun</h2>
+  <form id="signup-form">
+    <input type="text" id="username" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <!-- Terms & Conditions checkbox -->
+    <div class="terms">
+      <label>
+        <input type="checkbox" id="termsCheckbox" required>
+        Prihvaćam <a href="terms.html" target="_blank">Uvjete i pravila korištenja</a>
+      </label>
     </div>
+
+    <button type="submit">Registriraj se</button>
+  </form>
+
+  <div class="login-link">
+    Već imaš račun? <a href="login.html">Prijavi se</a>
   </div>
+</div>
+
+<p class="message">Ova stranica koristi kolačiće za osnovnu analitiku</p>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = "https://zflomxninkvluwnepwfd.supabase.co";
+  const supabaseKey = "sb_publishable_FUPjxd0xSVjMbVqzXm-k6w_gfCxLWCC";
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  const signupForm = document.getElementById("signup-form");
+  const usernameInput = document.getElementById("username");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const termsCheckbox = document.getElementById("termsCheckbox");
+
+  signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!termsCheckbox.checked) {
+      alert("Morate prihvatiti Uvjete i pravila korištenja prije registracije.");
+      return;
+    }
+
+    // Sign up with Supabase
+    const { data, error } = await supabase.auth.signUp({
+      email: emailInput.value,
+      password: passwordInput.value
+    });
+
+    if (error) {
+      alert(error.message);
+      return;
+    }
+
+    alert("Provjerite svoj email za potvrdu računa!");
+
+    // Create a profile row in "profiles" table
+    await supabase.from("profiles").insert([
+      {
+        id: data.user.id,
+        username: usernameInput.value,
+        points: 0,
+        role: "user"
+      }
+    ]);
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  });
+</script>
 
 </body>
-</html>

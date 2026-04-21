@@ -65,7 +65,7 @@
     /* Andalus overlay */
     .andalus-title {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 80px;
@@ -207,8 +207,8 @@
 }
 
 .reward-popup img {
-  width: 22px;
-  height: 22px;
+  width: 62px;
+  height: 62px;
 }
 .answer-inline {
   display: inline-block;
@@ -241,6 +241,272 @@
   line-height: 1.4em;
 }
 
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* =============================== */
+/* 📱 PHONE MEDIA QUERY (≤ 600px) */
+/* =============================== */
+@media (max-width: 1000px) {
+
+body {
+  overflow-x: hidden;
+}
+
+  /* Header */
+  header {
+    padding: 20px 10px 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  /* Main content text */
+  .content {
+    padding: 25px 15px;
+    font-size: 18px;
+  }
+
+  /* Remove huge width */
+  .question-lines {
+    width: 95%;
+    max-width: 95%;
+    padding: 16px;
+    margin-top: 20px;
+  }
+
+  /* Each question block */
+  .question-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0;
+  }
+
+  .line {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .question-text {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .answer-inline {
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 4px;
+    max-width: 100%;
+  }
+
+  /* Buttons */
+  .answer-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+    padding: 4px 6px;
+    margin-top: 6px;
+  }
+
+  /* Reward popup */
+  .reward-popup {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .reward-popup img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Info container */
+  .info-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .info-image {
+    width: 150px;
+    height: auto;
+  }
+
+  .info-message {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  /* Leaderboard becomes normal block */
+  .leaderboard {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px;
+    margin-bottom: 60px;
+
+  }
+
+  .leaderboard h3 {
+    font-size: 16px;
+  }
+
+  .leaderboard li {
+    font-size: 13px;
+  }
+
+  /* Andalus background text */
+  .andalus-title {
+    font-size: 42px;
+    top: 40%;
+    opacity: 0.15;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+}
+
+/* =============================== */
+/* 📱 PHONE MEDIA QUERY (≤ 600px) */
+/* =============================== */
+@media (max-width: 600px) {
+
+body {
+  overflow-x: hidden;
+}
+
+  /* Header */
+  header {
+    padding: 20px 10px 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  /* Main content text */
+  .content {
+    padding: 25px 15px;
+    font-size: 18px;
+  }
+
+  /* Remove huge width */
+  .question-lines {
+    width: 95%;
+    max-width: 95%;
+    padding: 16px;
+    margin-top: 20px;
+  }
+
+  /* Each question block */
+  .question-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0;
+  }
+
+  .line {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .question-text {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .answer-inline {
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 4px;
+    max-width: 100%;
+  }
+
+  /* Buttons */
+  .answer-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+    padding: 4px 6px;
+    margin-top: 6px;
+  }
+
+  /* Reward popup */
+  .reward-popup {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .reward-popup img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Info container */
+  .info-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .info-image {
+    width: 150px;
+    height: auto;
+  }
+
+  .info-message {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  /* Leaderboard becomes normal block */
+  .leaderboard {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px;
+    margin-bottom: 60px;
+
+  }
+
+  .leaderboard h3 {
+    font-size: 16px;
+  }
+
+  .leaderboard li {
+    font-size: 13px;
+  }
+
+  /* Andalus background text */
+  .andalus-title {
+    font-size: 42px;
+    top: 40%;
+    opacity: 0.15;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+}
 
   </style>
 </head>
@@ -254,7 +520,7 @@
 </div>
 
 <header>
-  <img src="Screenshot.png" alt="Coins" class="info-image" />
+  <img src="Screenshot_68-.png" alt="Coins" class="info-image" />
   <div>
     Ovdje su sva postavljena pitanja na stranici... <br>
     <strong>Odgovori na pitanja i prikupi kovanice.</strong>
@@ -262,136 +528,192 @@
 </header>
 
 <div class="question-box-scrollable">
-  <div class="andalus-title">Andalus</div> <!-- ✨ Goldenrod overlay -->
+  <div class="andalus-title">Andaluz</div> <!-- ✨ Goldenrod overlay -->
 <div class="question-lines" id="questions-list">
   <!-- Pitanja će se puniti ovdje -->
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-  const isAdmin = true; // admin can delete
+  // ================== SUPABASE CLIENT SETUP ==================
+  const supabaseUrl = "https://zflomxninkvluwnepwfd.supabase.co";
+  const supabaseKey = "sb_publishable_FUPjxd0xSVjMbVqzXm-k6w_gfCxLWCC";
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-  let savedQuestions = JSON.parse(localStorage.getItem("questions")) || [];
-  let savedAnswers = JSON.parse(localStorage.getItem("answers")) || {}; 
+  // ================== LOGGED-IN USER ==================
+  let currentUser = null;
+  const isAdmin = true; // you can adjust dynamically
+
+  async function checkUser() {
+    const { data: { user } } = await supabase.auth.getUser();
+    currentUser = user;
+  }
+
+  checkUser();
+
+  // ================== FETCH QUESTIONS + ANSWERS ==================
+  async function fetchQuestions() {
+    const { data: questions, error: qError } = await supabase
+      .from('questions')
+      .select('id, question, user_id, created_at')
+      .order('created_at', { ascending: false });
+
+    if (qError) {
+      console.error(qError);
+      return [];
+    }
+
+    const { data: answers, error: aError } = await supabase
+      .from('answers')
+      .select('id, question_id, user_id, answer, created_at');
+
+    if (aError) {
+      console.error(aError);
+      return questions.map(q => ({ ...q, answers: [] }));
+    }
+
+    // Combine questions + answers
+    return questions.map(q => ({
+      ...q,
+      answers: answers.filter(a => a.question_id === q.id)
+    }));
+  }
 
   const qList = document.getElementById("questions-list");
 
-  function renderQuestions() {
+  async function renderQuestions() {
+    const questions = await fetchQuestions();
     qList.innerHTML = "";
 
-    if (savedQuestions.length === 0) {
+    if (!questions.length) {
       qList.innerHTML = "<p><em>Nema još postavljenih pitanja.</em></p>";
-    } else {
-      savedQuestions.forEach((q, index) => {
-        const wrapper = document.createElement("div");
-        wrapper.className = "question-wrapper";
+      return;
+    }
 
-        const div = document.createElement("div");
-        div.className = "line";
+    questions.forEach(qObj => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "question-wrapper";
 
-        // question block
-        const text = document.createElement("div");
-        text.className = "question-text";
-        text.textContent = q;
-        div.appendChild(text);
+      const div = document.createElement("div");
+      div.className = "line";
 
-        // answers block
-        if (savedAnswers[q] && savedAnswers[q].length > 0) {
-          const ansDiv = document.createElement("div");
-          ansDiv.className = "answer-inline";
-          ansDiv.textContent = "Odgovori: ";
+      // QUESTION TEXT
+      const text = document.createElement("div");
+      text.className = "question-text";
+      text.textContent = qObj.question;
+      div.appendChild(text);
 
-          savedAnswers[q].forEach((ansObj, i) => {
-            const ansWrapper = document.createElement("span");
-            ansWrapper.style.display = "inline-flex";
-            ansWrapper.style.alignItems = "center";
-            ansWrapper.style.gap = "4px"; // space between coin and answer
+      // ANSWERS
+      if (qObj.answers.length) {
+        const ansDiv = document.createElement("div");
+        ansDiv.className = "answer-inline";
+        ansDiv.textContent = "Odgovori: ";
 
-            // reward coin for user's own answer
-            if (ansObj.mine) {
-              const coin = document.createElement("img");
-              coin.src = "Screenshot_68.png";
-              coin.style.width = "18px";
-              coin.style.height = "18px";
-              coin.style.transition = "transform 1.2s ease-out, opacity 1.2s ease-out";
-              ansWrapper.appendChild(coin);
+        qObj.answers.forEach(ansObj => {
+          const ansWrapper = document.createElement("span");
+          ansWrapper.style.display = "inline-flex";
+          ansWrapper.style.alignItems = "center";
+          ansWrapper.style.gap = "4px";
 
-              // animate coin
-              setTimeout(() => {
-                coin.style.transform = "translateX(-10px) translateY(-5px)";
-                coin.style.opacity = "0";
-                setTimeout(() => coin.remove(), 500);
-              }, 200);
-            }
+          // Coin if answer belongs to current user
+          if (currentUser && ansObj.user_id === currentUser.id) {
+            const coin = document.createElement("img");
+            coin.src = "d3iza1j7n.png";
+            coin.style.width = "41px";
+            coin.style.height = "41px";
+            ansWrapper.appendChild(coin);
+          }
 
-            const ansEl = document.createElement("span");
-            ansEl.textContent = ansObj.text;
-            if (ansObj.mine) {
-              ansEl.style.color = "green";
-              ansEl.style.fontWeight = "bold";
-            }
+          const ansEl = document.createElement("span");
+          ansEl.textContent = ansObj.answer;
+          if (currentUser && ansObj.user_id === currentUser.id) {
+            ansEl.style.color = "green";
+            ansEl.style.fontWeight = "bold";
+          }
+          ansWrapper.appendChild(ansEl);
 
-            ansWrapper.appendChild(ansEl);
-            ansDiv.appendChild(ansWrapper);
-
-            if (i < savedAnswers[q].length - 1) {
-              ansDiv.appendChild(document.createTextNode(", "));
-            }
-          });
-
-          div.appendChild(ansDiv);
-        }
-
-        // Answer button
-        const answerBtn = document.createElement("button");
-        answerBtn.className = "answer-btn";
-        answerBtn.textContent = "Odgovori";
-        answerBtn.onclick = () => {
-          answerBtn.style.display = "none";
-
-          const input = document.createElement("input");
-          input.type = "text";
-          input.className = "answer-input";
-          input.placeholder = "Upiši odgovor ovdje...";
-
-          const sendBtn = document.createElement("button");
-          sendBtn.className = "send-answer-btn";
-          sendBtn.textContent = "Pošalji";
-          sendBtn.onclick = () => {
-            const answer = input.value.trim();
-            if (answer) {
-              if (!savedAnswers[q]) savedAnswers[q] = [];
-              savedAnswers[q].push({ text: answer, mine: true });
-              localStorage.setItem("answers", JSON.stringify(savedAnswers));
+          // DELETE ANSWER button (owner or admin)
+          if ((currentUser && ansObj.user_id === currentUser.id) || isAdmin) {
+            const delAns = document.createElement("button");
+            delAns.textContent = "Obriši odgovor";
+            delAns.style.fontSize = "11px";
+            delAns.onclick = async () => {
+              if (!confirm("Obrisati ovaj odgovor?")) return;
+              await supabase.from('answers').delete().eq('id', ansObj.id);
               renderQuestions();
-            }
-          };
+            };
+            ansWrapper.appendChild(delAns);
+          }
 
-          div.appendChild(input);
-          div.appendChild(sendBtn);
+          ansDiv.appendChild(ansWrapper);
+          ansDiv.appendChild(document.createTextNode(", "));
+        });
+
+        div.appendChild(ansDiv);
+      }
+
+      // ANSWER BUTTON
+      const answerBtn = document.createElement("button");
+      answerBtn.className = "answer-btn";
+      answerBtn.textContent = "Odgovori";
+      answerBtn.onclick = () => {
+        answerBtn.style.display = "none";
+
+        const input = document.createElement("input");
+        input.type = "text";
+        input.className = "answer-input";
+        input.placeholder = "Upiši odgovor ovdje...";
+
+        const sendBtn = document.createElement("button");
+        sendBtn.textContent = "Pošalji";
+        sendBtn.onclick = async () => {
+          const val = input.value.trim();
+          if (!val) return;
+          if (!currentUser) {
+            alert("Morate biti prijavljeni za odgovor.");
+            return;
+          }
+
+          await supabase.from('answers').insert([{
+            question_id: qObj.id,
+            user_id: currentUser.id,
+            answer: val
+          }]);
+          renderQuestions();
         };
 
-        div.appendChild(answerBtn);
-        wrapper.appendChild(div);
+        const cancelBtn = document.createElement("button");
+        cancelBtn.textContent = "Odustani";
+        cancelBtn.onclick = () => {
+          input.remove();
+          sendBtn.remove();
+          cancelBtn.remove();
+          answerBtn.style.display = "inline-block";
+        };
 
-        // Admin delete
-        if (isAdmin) {
-          const deleteBtn = document.createElement("button");
-          deleteBtn.className = "delete-btn";
-          deleteBtn.textContent = "Obriši";
-          deleteBtn.onclick = () => {
-            if (confirm("Jeste li sigurni da želite obrisati ovo pitanje?")) {
-              savedQuestions.splice(index, 1);
-              delete savedAnswers[q];
-              localStorage.setItem("questions", JSON.stringify(savedQuestions));
-              localStorage.setItem("answers", JSON.stringify(savedAnswers));
-              renderQuestions();
-            }
-          };
-          wrapper.appendChild(deleteBtn);
-        }
+        div.appendChild(input);
+        div.appendChild(sendBtn);
+        div.appendChild(cancelBtn);
+      };
 
-        qList.appendChild(wrapper);
-      });
-    }
+      div.appendChild(answerBtn);
+      wrapper.appendChild(div);
+
+      // DELETE QUESTION (owner or admin)
+      if ((currentUser && qObj.user_id === currentUser.id) || isAdmin) {
+        const deleteBtn = document.createElement("button");
+        deleteBtn.className = "delete-btn";
+        deleteBtn.textContent = "Obriši pitanje";
+        deleteBtn.onclick = async () => {
+          if (!confirm("Jeste li sigurni da želite obrisati ovo pitanje?")) return;
+          await supabase.from('answers').delete().eq('question_id', qObj.id);
+          await supabase.from('questions').delete().eq('id', qObj.id);
+          renderQuestions();
+        };
+        wrapper.appendChild(deleteBtn);
+      }
+
+      qList.appendChild(wrapper);
+    });
   }
 
   renderQuestions();

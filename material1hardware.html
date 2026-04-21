@@ -56,6 +56,10 @@
     .tip strong {
       color: #b8860b;
     }
+    body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
   </style>
 </head>
 <body>
@@ -91,7 +95,7 @@
 <button onclick="showSection('pcie_slotovi')">Šta su PCIe slotovi i kako se koriste?</button>
 <button onclick="showSection('ssd_radi')">Kako radi SSD i kako se razlikuje od tradicionalnog hard diska?</button>
 <button onclick="showSection('neodgovarajuci_hardver')">Koje su posledice korišćenja neodgovarajućih hardverskih komponenti?</button>
-<button onclick="showSection('praćenje_hardvera')">Kako da pratimo zdravlje i performanse hardvera u realnom vremenu?</button>
+<button onclick="showSection('hardver-monitoring')">Kako da pratimo zdravlje i performanse hardvera u realnom vremenu?</button>
 </nav>
 
 <div id="ssd_vs_hdd" class="section">
@@ -861,36 +865,33 @@
   </div>
 </div>
 
-<div id="neodgovarajuci_hardver" class="section">
-  <h2>Koje su posledice korišćenja neodgovarajućih hardverskih komponenti?</h2>
-  <p>Korištenje neodgovarajućih ili nespojivih hardverskih komponenti može uzrokovati niz problema, od sporog rada računara do trajnog oštećenja dijelova. Važno je razumjeti kompatibilnost i preporuke proizvođača prilikom nadogradnje ili sastavljanja računara.</p>
+<div id="hardver-monitoring" class="section">
+  <h2>Kako pratimo zdravlje i performanse hardvera u stvarnom vremenu?</h2>
 
-  <h3>Moguće posljedice</h3>
+  <p>
+    Praćenje zdravlja i performansi hardvera omogućava uvid u rad računara dok je uključen,
+    kako bi se na vreme uočili problemi poput pregrevanja, preopterećenja ili kvarova.
+  </p>
+
+  <h3>Šta možemo pratiti u stvarnom vremenu?</h3>
   <ul>
-    <li><strong>Neučinkovit rad:</strong> Procesor, RAM ili grafička kartica ne mogu raditi optimalno, što uzrokuje sporo izvođenje programa i igara.</li>
-    <li><strong>Nestabilnost sustava:</strong> Računar se neočekivano restartuje, zamrzava ili pokazuje plavi ekran (BSOD) zbog nespojivih komponenti.</li>
-    <li><strong>Oštećenje hardvera:</strong> Preveliko napajanje, nepravilno hlađenje ili nekompatibilna matična ploča može trajno oštetiti CPU, GPU ili memoriju.</li>
-    <li><strong>Problemi s drajverima:</strong> Neodgovarajući hardver može uzrokovati konflikte drajvera i softverske greške.</li>
-    <li><strong>Nemogućnost nadogradnje:</strong> Neodgovarajuće komponente ograničavaju buduće nadogradnje i smanjuju fleksibilnost sistema.</li>
+    <li>Temperaturu procesora (CPU) i grafičke kartice (GPU).</li>
+    <li>Opterećenje procesora, memorije (RAM) i diska.</li>
+    <li>Brzinu ventilatora i napon komponenti.</li>
+    <li>Zdravlje hard diska ili SSD-a.</li>
   </ul>
 
-  <h3>Kako izbjeći probleme</h3>
+  <h3>Alati za praćenje hardvera</h3>
   <ul>
-    <li>Provjeri kompatibilnost komponenti s matičnom pločom i napajanjem.</li>
-    <li>Koristi preporučene specifikacije proizvođača prilikom kupnje GPU-a, RAM-a i procesora.</li>
-    <li>Provjeri snagu i certifikate napajanja (PSU) da podrži sve komponente.</li>
-    <li>Redovito nadograđuj drajvere i prati temperaturu komponenti kako bi izbjegao pregrijavanje.</li>
-  </ul>
-
-  <h3>Primjeri iz prakse</h3>
-  <ul>
-    <li>Student instalira RAM koji nije kompatibilan s matičnom pločom – računar se ne pokreće ili pokazuje greške pri radu.</li>
-    <li>Gamer koristi GPU koji prema napajanju ili kućištu nije podržan – dolazi do nestabilnosti i oštećenja komponenti.</li>
-    <li>Korisnik nadograđuje procesor, ali matična ploča ne podržava taj model – računar ne prepoznaje CPU.</li>
+    <li><strong>Task Manager</strong> – osnovni pregled performansi u Windowsu.</li>
+    <li><strong>HWMonitor</strong> – detaljan prikaz temperatura i napona.</li>
+    <li><strong>MSI Afterburner</strong> – praćenje GPU performansi u realnom vremenu.</li>
+    <li><strong>CrystalDiskInfo</strong> – proverava stanje i zdravlje diska.</li>
   </ul>
 
   <div class="tip">
-    <strong>✔️ Savjet:</strong> Prije nadogradnje uvijek provjeri kompatibilnost komponenti, koristi kvalitetan hardver i prati upute proizvođača kako bi osigurao stabilan i dugotrajan rad računara.
+    <strong>✔️ Savet:</strong> Redovno praćenje hardvera pomaže da sprečiš pregrevanje,
+    pad performansi i iznenadne kvarove računara.
   </div>
 </div>
 

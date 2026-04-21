@@ -26,7 +26,7 @@
     }
 
     /* Popup box */
-    .share-popup {
+    .podijeli-popup {
       background: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -36,7 +36,7 @@
       animation: fadeIn 0.3s ease-in-out;
     }
 
-    .share-popup h2 {
+    .podijeli-popup h2 {
       margin: 0 0 10px;
       color: goldenrod;
     }
@@ -60,7 +60,7 @@
       outline: none;
     }
 
-    .copy-btn {
+    .kopiraj-btn {
       background: goldenrod;
       color: white;
       border: none;
@@ -69,11 +69,11 @@
       cursor: pointer;
       font-size: 14px;
     }
-    .copy-btn:hover {
+    .kopiraj-btn:hover {
       background: darkgoldenrod;
     }
 
-    .close-btn {
+    .zatvori-btn {
       margin-top: 15px;
       background: #ccc;
       border: none;
@@ -81,7 +81,7 @@
       border-radius: 6px;
       cursor: pointer;
     }
-    .close-btn:hover {
+    .zatvori-btn:hover {
       background: #aaa;
     }
 
@@ -89,20 +89,57 @@
       from {opacity: 0; transform: scale(0.9);}
       to {opacity: 1; transform: scale(1);}
     }
-    
+    .imageza {
+  position: fixed;      /* or absolute */
+  top: 10px;
+  left: 20px;
+  width: 8%;
+  padding: 10px;
+  z-index: 1000;        /* keeps it above everything */
+  border-radius: 2px;
+  cursor: default;
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Phone media query: up to 600px width */
+@media (max-width: 600px) {
+  .imageza {
+  position: fixed;      /* or absolute */
+  top: 10px;
+  left: 20px;
+  width: 20%;
+  padding: 10px;
+  z-index: 1000;        /* keeps it above everything */
+  border-radius: 2px;
+  cursor: default;
+}
+}
+
+
+/* Phone media query: up to 600px width */
+@media (max-width: 600px) {
+  .andalus-title {
+    font-size: 120px; /* bigger for phones */
+  }
+}
+
   </style>
 </head>
 <body>
-
+<img src="imageza.png" alt="Design1 Idea" class="imageza" />
   <!-- Overlay and Popup -->
   <div class="overlay" id="overlay">
-    <div class="share-popup">
+    <div class="podijeli-popup">
       <h2>Podijeli ovu stranicu</h2>
       <div class="share-link-box">
         <input type="text" id="shareLink" readonly>
-        <button class="copy-btn" onclick="copyLink()">Copy</button>
+        <button class="kopiraj-btn" onclick="copyLink()">Kopiraj</button>
       </div>
-      <button class="close-btn" onclick="goBack()">Close</button>
+      <button class="zatvori-btn" onclick="goBack()">Zatvori</button>
     </div>
   </div>
 
@@ -114,10 +151,10 @@
     function copyLink() {
       const link = document.getElementById("shareLink").value;
       navigator.clipboard.writeText(link).then(() => {
-        alert("Link copied: " + link);
+        alert("Link kopiran: " + link);
       }).catch(err => {
-        console.error("Failed to copy: ", err);
-        alert("Failed to copy link. Please copy manually.");
+        console.error("Neuspješno kopiran link: ", err);
+        alert("Neuspješno kopiran link. Molim kopirajte ručno.");
       });
     }
 

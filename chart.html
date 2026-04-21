@@ -25,7 +25,7 @@
       height: 400px;
       padding: 20px;
       background-color: #2b2b2b;
-      border-radius: 15px;
+      border-radius: 18px;
       border: 2px solid #ffa500;
       box-shadow: 0 0 20px #000;
       box-sizing: border-box;
@@ -43,104 +43,100 @@
     <canvas id="gaohChart"></canvas>
   </div>
 
-  <script>
-    const ctx = document.getElementById('gaohChart').getContext('2d');
+<script>
+const ctx = document.getElementById('gaohChart').getContext('2d');
 
-    const now = new Date();
-    const formatTime = date => date.toTimeString().slice(0, 5);
-    const labels = [];
+/* ===== LAST 10 DAYS (TODAY ON RIGHT) ===== */
+const now = new Date();
 
-    for (let i = 0; i < 10; i++) {
-      const time = new Date(now.getTime() + i * 60000);
-      labels.push(formatTime(time));
-    }
+function formatDay(date) {
+  return date.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit' }); // e.g. 04/02
+}
 
-    const data = {
-      labels,
-      datasets: [
-        {
-          label: 'Questions Posed',
-          data: Array(10).fill(0),
-          borderColor: '#ffa500',
-          backgroundColor: 'rgba(255,165,0,0.1)',
-          tension: 0.3,
-          yAxisID: 'yLeft',
-          pointRadius: 0
+function toKey(date) {
+  return date.toISOString().slice(0, 10); // YYYY-MM-DD
+}
+
+const days = [];
+for (let i = 9; i >= 0; i--) {
+  const d = new Date(now);
+  d.setDate(now.getDate() - i);
+  days.push(d);
+}
+
+const labels = days.map(d => formatDay(d));
+
+/* ===== REAL DAILY POINTS (REPLACE WITH YOUR BACKEND DATA) ===== */
+const pointsPerDay = {
+  "2026-01-26": 120,
+  "2026-01-27": 80,
+  "2026-01-28": 200,
+  "2026-01-29": 150,
+  "2026-01-30": 90,
+  "2026-01-31": 300,
+  "2026-02-01": 50,
+  "2026-02-02": 220,
+  "2026-02-03": 400,
+  "2026-02-04": 180
+};
+
+const pointsData = days.map(d => {
+  const key = toKey(d);
+  return pointsPerDay[key] || 0;
+});
+
+/* ===== CHART ===== */
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: 'Prikupljeni bodovi (po danu)',
+        data: pointsData,
+        borderColor: '#32cd32',
+        backgroundColor: 'rgba(50,205,50,0.1)',
+        tension: 0.3,
+        yAxisID: 'yRight',
+        pointRadius: 4
+      }
+    ]
+  },
+  options: {
+    responsive: false,
+    animation: false,
+    scales: {
+      x: {
+        ticks: {
+          color: '#aaa',
+          maxRotation: 0, // no tilt
+          minRotation: 0
         },
-        {
-          label: 'Questions Answered',
-          data: Array(10).fill(0),
-          borderColor: '#00bfff',
-          backgroundColor: 'rgba(0,191,255,0.1)',
-          tension: 0.3,
-          yAxisID: 'yLeft',
-          pointRadius: 0
+        grid: { color: '#333' }
+      },
+      yRight: {
+        position: 'right',
+        beginAtZero: true,
+        ticks: {
+          stepSize: 50,
+          color: 'lightgrey'
         },
-        {
-          label: 'Points Collected',
-          data: Array(10).fill(0),
-          borderColor: '#32cd32',
-          backgroundColor: 'rgba(50,205,50,0.1)',
-          tension: 0.3,
-          yAxisID: 'yRight',
-          pointRadius: 0
-        }
-      ]
-    };
-
-    const config = {
-      type: 'line',
-      data,
-      options: {
-        responsive: false,
-        animation: false,
-        scales: {
-          x: {
-            ticks: { color: '#aaa' },
-            grid: { color: '#333' }
-          },
-          yLeft: {
-            position: 'left',
-            beginAtZero: true,
-            ticks: {
-              stepSize: 10,
-              color: '#ffa500'
-            },
-            grid: { color: '#333' },
-            title: {
-              display: true,
-              text: 'Questions (Posed & Answered)',
-              color: '#ffa500'
-            }
-          },
-          yRight: {
-            position: 'right',
-            beginAtZero: true,
-            ticks: {
-              stepSize: 50,
-              color: '#32cd32'
-            },
-            grid: {
-              drawOnChartArea: false
-            },
-            title: {
-              display: true,
-              text: 'Points Collected',
-              color: '#32cd32'
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            labels: {
-              color: '#ffa500'
-            }
-          }
+        title: {
+          display: true,
+          text: 'Prikupljeni bodovi',
+          color: '#32cd32'
         }
       }
-    };
+    },
+    plugins: {
+      legend: {
+        labels: { color: '#32cd32' }
+      }
+    }
+  }
+});
+</script>
 
-    new Chart(ctx, config);
-  </script>
+
 </body>
 </html>
