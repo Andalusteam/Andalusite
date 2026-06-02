@@ -40,7 +40,11 @@
 
 </style>
 </head>
-
+<script>
+function closeImage() {
+    document.getElementById("popupImage").style.display = "none";
+}
+</script>
 <body>
 <p class="help-suggestion-text"> Provjeri postoje li pitanja koja bi mogao odgovoriti </p>
 <a href="more.html" class="doznaj-vise">doznaj više</a>
@@ -53,7 +57,10 @@
   <a href="share.html">
     <img src="sendd.png" alt="Pošalji" id="send-arrow" style="cursor:pointer;" />
   </a>
-
+ <div class="popup-image-container" id="popupImage">
+    <button class="close-btn" onclick="closeImage()">✕</button>
+    <img src="555.png" alt="My PNG" class="popup-image">
+</div>
   <!-- Top-left auth links -->
   <div class="top-left-auth-links">
     <div class="profile-circle" onclick="window.location.href='profile.html'">U</div>
@@ -140,6 +147,7 @@
 
   <!-- Footer -->
   <footer>
+   
     <div class="bottom-left">
       <a href="about.html">O ovoj stranici</a>
     </div>
